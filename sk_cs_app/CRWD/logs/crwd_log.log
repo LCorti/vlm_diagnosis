@@ -1,0 +1,110 @@
+[2024-10-02 13:14:18,593] INFO in main: Opened prepareDB/datasets/mmbench/sampled_questions.json
+[2024-10-02 13:14:18,594] INFO in main: {'question_id': 3001783, 'question': 'Which of the following captions best describes this image?', 'class': 'image_scene', 'img': '219.jpg', 'img_path': 'mmbench/imgs/dev/image_scene/219.jpg', 'is_open': False, 'options': {'A': 'A woman walking her dog on a beach', 'B': 'A man riding a bicycle on a mountain trail', 'C': 'A child playing with a ball in a park', 'D': 'A group of people playing soccer in a field'}, 'answer': 'B'}
+[2024-10-02 13:14:18,594] INFO in main: A man riding a bicycle on a mountain trail
+[2024-10-02 13:14:32,658] INFO in main: {'question_id': 3001783, 'question': 'Which of the following captions best describes this image?', 'class': 'image_scene', 'img': '219.jpg', 'img_path': 'mmbench/imgs/dev/image_scene/219.jpg', 'is_open': False, 'options': {'A': 'A woman walking her dog on a beach', 'B': 'A man riding a bicycle on a mountain trail', 'C': 'A child playing with a ball in a park', 'D': 'A group of people playing soccer in a field'}, 'answer': 'B'}
+[2024-10-02 13:14:32,658] INFO in main: A man riding a bicycle on a mountain trail
+[2024-10-02 13:15:42,145] INFO in main: Opened prepareDB/datasets/llava-bench/sampled_questions.json
+[2024-10-02 13:15:42,146] INFO in main: {'question_id': 27, 'question': 'What fruit is in the left part of the fridge?', 'img': '011.jpg', 'img_path': 'llava-bench/imgs/011.jpg', 'is_open': True, 'options': None, 'answer': 'In the left part of the fridge, there is a plastic box of strawberries.', 'class': 'main'}
+[2024-10-02 13:15:42,146] INFO in main: In the left part of the fridge, there is a plastic box of strawberries.
+[2024-10-02 13:16:54,513] INFO in main: {'question_id': 27, 'question': 'What fruit is in the left part of the fridge?', 'img': '011.jpg', 'img_path': 'llava-bench/imgs/011.jpg', 'is_open': True, 'options': None, 'answer': 'In the left part of the fridge, there is a plastic box of strawberries.', 'class': 'main'}
+[2024-10-02 13:16:54,514] INFO in main: In the left part of the fridge, there is a plastic box of strawberries.[2024-10-25 11:11:31,396]
+[2024-10-31 14:03:15,809] INFO in main: Assigned image 333538006
+[2024-10-31 14:23:57,114] INFO in main: Retrieve image already assigned 333538006
+[2024-10-31 14:28:02,043] INFO in main: Assigned image 498453002
+[2024-10-31 14:30:57,019] INFO in main: Retrieve image already assigned 498453002
+[2024-10-31 14:33:05,370] INFO in main: Assigned image 249046004
+[2024-10-31 14:41:09,576] INFO in main: Retrieve image already assigned 249046004
+[2024-10-31 14:43:00,497] INFO in main: Assigned image 557812014
+[2024-10-31 15:03:25,133] INFO in main: Retrieve image already assigned 557812014
+[2024-10-31 15:39:25,881] INFO in main: Assigned image 525616003
+[2024-10-31 15:42:34,709] INFO in main: Retrieve image already assigned 525616003
+[2024-10-31 15:51:20,786] INFO in main: Assigned image 471893003
+[2024-10-31 15:54:07,961] INFO in main: Retrieve image already assigned 471893003
+[2024-10-31 16:02:57,183] INFO in main: Assigned image 67551001
+[2024-10-31 16:05:21,913] INFO in main: Retrieve image already assigned 67551001
+[2024-10-31 16:07:00,738] INFO in main: Assigned image 378538003
+[2024-10-31 16:15:37,770] INFO in main: Retrieve image already assigned 378538003
+[2024-10-31 16:17:29,976] INFO in main: Assigned image 240275006
+[2024-11-01 10:55:16,716] INFO in main: Retrieve image already assigned 240275006
+[2024-11-01 10:56:53,881] INFO in main: Assigned image 218189017
+[2024-11-01 11:55:43,993] INFO in main: Retrieve image already assigned 218189017
+[2024-11-01 12:04:03,242] INFO in main: Assigned image 322194007
+[2024-11-01 12:05:51,323] INFO in main: Retrieve image already assigned 322194007
+[2024-11-01 12:48:03,988] INFO in main: Assigned image 326664003
+[2024-11-01 12:49:38,627] INFO in main: Retrieve image already assigned 326664003
+[2024-11-01 12:53:10,081] INFO in main: Assigned image 380711001
+[2024-11-01 12:57:58,445] INFO in main: Retrieve image already assigned 380711001
+[2024-11-01 12:59:59,946] INFO in main: Assigned image 50100018
+[2024-11-02 18:29:01,902] INFO in main: Assigned image 147179002
+[2024-11-02 19:05:31,675] INFO in main: Retrieve image already assigned 147179002
+[2024-11-02 20:39:06,642] INFO in main: Assigned image 415798005
+[2024-11-02 20:47:28,915] INFO in main: Retrieve image already assigned 415798005
+[2024-11-02 21:07:52,053] INFO in main: Assigned image 399744002
+[2024-11-02 21:22:03,196] INFO in main: Retrieve image already assigned 399744002
+[2024-11-02 21:25:35,051] INFO in main: Assigned image 154520019
+[2024-11-02 21:27:30,110] INFO in main: Retrieve image already assigned 154520019
+[2024-11-02 21:28:35,237] INFO in main: Assigned image 517612003
+[2024-11-02 21:30:53,509] INFO in main: Retrieve image already assigned 517612003
+[2024-11-02 21:38:22,899] INFO in main: Retrieve image already assigned 572900010
+[2024-11-02 21:43:01,359] INFO in main: Retrieve image already assigned 18699006
+[2024-11-02 21:46:41,083] INFO in main: Retrieve image already assigned 18699006
+[2024-11-02 22:03:16,571] INFO in main: Retrieve image already assigned 6719002
+[2024-11-02 22:04:16,881] INFO in main: Retrieve image already assigned 6719002
+[2024-11-02 22:05:34,396] INFO in main: Assigned image 405740009
+[2024-11-05 10:49:19,028] INFO in main: Assigned image 504
+[2024-11-05 10:52:44,287] INFO in main: Retrieve image already assigned 504
+[2024-11-05 10:56:41,594] INFO in main: Assigned image 4027
+[2024-11-05 15:10:06,666] INFO in main: Retrieve image already assigned 4027
+[2024-11-05 15:12:14,176] INFO in main: Assigned image 1963
+[2024-11-05 15:13:58,181] INFO in main: Retrieve image already assigned 1963
+[2024-11-05 15:17:25,794] INFO in main: Assigned image 2608
+[2024-11-05 15:19:41,859] INFO in main: Retrieve image already assigned 2608
+[2024-11-05 15:22:36,182] INFO in main: Assigned image 4017
+[2024-11-05 15:41:06,919] INFO in main: Retrieve image already assigned 4017
+[2024-11-05 15:48:37,320] INFO in main: Assigned image 4004
+[2024-11-05 15:56:58,838] INFO in main: Retrieve image already assigned 4004
+[2024-11-05 15:58:54,195] INFO in main: Assigned image 3985
+[2024-11-05 16:02:13,947] INFO in main: Retrieve image already assigned 3985
+[2024-11-05 16:06:53,440] INFO in main: Assigned image 4085
+[2024-11-05 16:08:49,897] INFO in main: Retrieve image already assigned 4085
+[2024-11-05 16:11:09,796] INFO in main: Assigned image 3872
+[2024-11-05 16:18:34,908] INFO in main: Retrieve image already assigned 3872
+[2024-11-05 16:20:44,726] INFO in main: Assigned image 2387
+[2024-11-05 16:23:20,225] INFO in main: Retrieve image already assigned 2387
+[2024-11-05 16:27:09,250] INFO in main: Assigned image 1646
+[2024-11-05 16:33:56,714] INFO in main: Retrieve image already assigned 1646
+[2024-11-05 16:35:33,008] INFO in main: Assigned image 651
+[2024-11-05 16:42:10,952] INFO in main: Retrieve image already assigned 651
+[2024-11-05 16:45:40,790] INFO in main: Assigned image 3869
+[2024-11-05 16:47:00,424] INFO in main: Retrieve image already assigned 3869
+[2024-11-05 16:49:34,355] INFO in main: Assigned image 4073
+[2024-11-06 10:18:47,927] INFO in main: Retrieve image already assigned 4073
+[2024-11-06 10:21:11,774] INFO in main: Assigned image 3859
+[2024-11-06 10:22:43,021] INFO in main: Retrieve image already assigned 3859
+[2024-11-06 10:27:14,334] INFO in main: Assigned image 471893003
+[2024-11-06 10:48:14,665] INFO in main: Retrieve image already assigned 404780001
+[2024-11-06 10:50:15,192] INFO in main: Retrieve image already assigned 404780001
+[2024-11-06 11:04:30,520] INFO in main: Assigned image 92644002
+[2024-11-06 11:07:27,687] INFO in main: Retrieve image already assigned 60596019
+[2024-11-06 11:14:17,828] INFO in main: Retrieve image already assigned 60596019
+[2024-11-06 11:15:20,976] INFO in main: Assigned image 18519002
+[2024-11-06 13:23:42,657] INFO in main: Assigned image 3826
+[2024-11-06 13:24:57,885] INFO in main: Retrieve image already assigned 3826
+[2024-11-06 13:26:52,345] INFO in main: Assigned image 155
+[2024-11-06 13:34:13,921] INFO in main: Retrieve image already assigned 155
+[2024-11-06 13:36:54,026] INFO in main: Assigned image 2357
+[2024-11-06 13:49:18,939] INFO in main: Retrieve image already assigned 2357
+[2024-11-06 13:57:50,093] INFO in main: Assigned image 1570
+[2024-11-06 14:02:30,882] INFO in main: Retrieve image already assigned 1570
+[2024-11-06 14:06:04,990] INFO in main: Assigned image 1657
+[2024-11-06 14:44:58,569] INFO in main: Retrieve image already assigned 1657
+[2024-11-29 15:47:28,807] INFO in main: Assigned image 1000090
+[2024-11-29 15:48:57,758] INFO in main: Retrieve image already assigned 1000090
+[2024-11-29 15:56:25,953] INFO in main: Assigned image 2000039
+[2024-12-02 09:12:33,569] INFO in main: Retrieve image already assigned 2000039
+[2024-12-02 09:26:54,132] INFO in main: Retrieve image already assigned 2000039
+[2024-12-02 09:29:10,012] INFO in main: Assigned image 3000065
+[2024-12-02 09:30:03,019] INFO in main: Retrieve image already assigned 3000065
+[2024-12-02 09:31:46,106] INFO in main: Assigned image 3000102
+[2024-12-02 09:35:07,071] INFO in main: Retrieve image already assigned 3000102
+[2024-12-02 09:36:42,053] INFO in main: Assigned image 3000083

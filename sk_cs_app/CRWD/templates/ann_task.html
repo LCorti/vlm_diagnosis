@@ -1,0 +1,1144 @@
+{% extends 'base.html' %}
+
+{% block title %} Annotation Step {% endblock %}
+
+{% block css %}
+
+{% endblock %}
+
+{% block body %}
+
+<div class="d-flex">
+  <h2 class="mt-4 mb-2 col-12 text-center">Annotation Step</h2>
+</div>
+<hr>
+<div class="d-flex flex-column">
+  <div class="d-flex">
+    <h4 class="mt-2 mb-2 col-12" style="padding-left: 1em;">Overview</h4>
+  </div>
+  <hr>
+  <div class="d-flex col-12 justify-content-between">
+    <div style="width: 30%; padding-left: 3em;">
+      <p>Progress: {{ progress }}%</p>
+      <div class="progress">
+        {% if progress|float <= 20.0 %}
+          <div class="progress-bar bg-danger" role="progressbar" style="width: {{ progress }}%;" aria-valuenow="{{ progress }}" aria-valuemin="0" aria-valuemax="100"></div>
+        {% endif %}
+        {% if progress|float > 20.0 and progress|float < 50.0 %}
+          <div class="progress-bar bg-warning" role="progressbar" style="width: {{ progress }}%;" aria-valuenow="{{ progress }}" aria-valuemin="0" aria-valuemax="100"></div>
+        {% endif %}
+        {% if progress|float >= 50.0 and progress|float < 80.0 %}
+          <div class="progress-bar bg-info" role="progressbar" style="width: {{ progress }}%;" aria-valuenow="{{ progress }}" aria-valuemin="0" aria-valuemax="100"></div>
+        {% endif %}
+        {% if progress|float >= 80.0 %}
+          <div class="progress-bar bg-success" role="progressbar" style="width: {{ progress }}%;" aria-valuenow="{{ progress }}" aria-valuemin="0" aria-valuemax="100"></div>
+        {% endif %}
+      </div>
+    </div>
+    <div class="mt-4 mb-2 col-4 text-center">
+      <button class="btn btn-info" id="ann_info_button">Instructions for Annotation Step</button>
+    </div>
+    <div class="mt-4 mb-2 col-2" style="padding-right: 3em;">
+      <button class="btn btn-danger" id="opt_out_button">Opt Out</button>
+    </div>
+  </div>
+  <br>
+  <div class="d-flex flex-column">
+    <div class="d-flex" style="padding-left: 2em;">
+      <p>
+        <i>For viewing images and concepts in the best way possible, please do not resize this window.</i>
+      </p>
+    </div>
+    <div style="padding-left: 2em;">
+      <p>
+        Click on the <span style="color: mediumblue;">'New Annotation'</span> button to provide additional new annotations for the question-image pair.
+      </p>
+      <p>
+        Once you are done with the current image-question pair, click on the <span style="color: green;">'Submit Annotations'</span> button to proceed.
+      </p>
+      <p>
+        <b>Remember: your task is NOT to answer the question, nor to confirm where the answer shown is correct. You are asked instead to create new triples, like the ones you have seen in the previous step, that indicate how to answer the question posed for the image shown below.</b>
+      </p>
+    </div>
+  </div>
+</div>
+<hr>
+<div class="d-flex flex-column mx-4 mb-2">
+  <div class="d-flex flex-row justify-content-between">
+    <div class="d-flex flex-column col-8">
+      <h4>Question:</h4>
+      <h5>{{ question }}</h5>
+      {% if answer_option %}
+        <p><b>The answer could be:</b> {{ answer_option }}</p>
+      {% endif %}
+    </div>
+    <div class="col-3">
+      <button class="btn btn-success w-100 mb-2" id="crowdsourcing_post_button" data-toggle="modal" data-target="#crowdsourcing_post_modal">Submit Annotations</button>
+      <button class="btn btn-primary w-100" id="new_annotation_button">New Annotation</button>
+    </div>
+  </div>
+</div>
+<hr>
+<!-- <div class="d-flex justify-content-center my-4" id="btn_bottom_line">
+  <button class="btn btn-primary" id="crowdsourcing_post_button" data-toggle="modal"
+    data-target="#crowdsourcing_post_modal">Submit Annotations</button>
+  <button class="btn btn-success mx-5" id="new_annotation_button">New Annotation</button>
+</div> -->
+<div class="d-flex">
+  <div class="mx-4" style="width: 50%; position: relative;">
+    <canvas id="box_text_overlay" style="position: absolute; max-width: 100%; padding-bottom: 50px;"></canvas>
+    <canvas id="image_overlay" style="position: absolute; max-width: 100%; outline: 2px solid green;"></canvas>
+    <canvas id="overlay" style="position: absolute; max-width: 100%;"></canvas>
+    <!-- <img src="{{ url_for('app.static', filename='/img/' + imgname) }}" style="max-width: 100%;"></img> -->
+  </div>
+  <div class="mx-4" style="width: 50%;">
+    <div style="max-height: 600px; overflow: scroll;" class="accordion" id="triples_accordion">
+      
+      {% for i in range(1, max_assigned_ann_triples_per_task + 1) %}
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="new_annotation_heading_{{loop.index}}">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#new_annotation_{{loop.index}}" aria-expanded="false" aria-controls="new_annotation_{{loop.index}}" id="collapse_button_{{loop.index}}">
+            <b style="color: red; padding-right: 5px;" id="collapse_status_{{loop.index}}">[TO DO]</b> New annotation #{{ loop.index }}: <code id="collapse_code_{{loop.index}}" style="padding-left:5px;
+            ">&lt;&gt;</code>
+          </button>
+        </h2>
+        <div id="new_annotation_{{loop.index}}" class="accordion-collapse collapse" aria-labelledby="new_annotation_heading_{{loop.index}}" data-bs-parent="#triples_accordion">
+          <div class="accordion-body">
+            <div><span><b><u>New Entity #1</u></b></span>
+              <div class="d-flex flex-column">
+                <div class="d-flex my-1"><span class="col-3"><b>Label: </b></span><input type="search" list="entities"
+                    placeholader="Label Entity #1" class="col-9" id="label_entity_1_{{loop.index}}" autocomplete="off">
+                </div>
+                <div class="d-flex my-1 justify-content-between">
+                  <p><a href="" id="change_bounding_box_entity_1_{{loop.index}}">Click here to crete the Bounding Box.</a><br>
+                    Then, click and drag over the image to draw.</p>
+                  <a href="" id="reset_bounding_box_entity_1_{{loop.index}}" class="d-none">Reset Bounding Box</a>
+                </div>
+              </div>
+              <hr>
+              <!-- <span><b><u>New Predicate:</u></b></span> -->
+              <div class="d-flex">
+                <span class="col-3"><b><u>New Predicate:</u></b></span>
+                <input id="predicate_{{loop.index}}" type="search" list="predicates" placeholader="Predicate" class="col-9" autocomplete="off">
+              </div>
+              <hr><span><b><u>New Entity #2</u></b></span>
+              <div class="d-flex flex-column">
+                <div class="d-flex my-1"><span class="col-3"><b>Label: </b></span><input type="search" list="entities"
+                    placeholader="Label Entity #2" class="col-9" id="label_entity_2_{{loop.index}}" autocomplete="off">
+                </div>
+                <div class="d-flex my-1 justify-content-between">
+                  <p><a href="" id="change_bounding_box_entity_2_{{loop.index}}">Click here to crete the Bounding Box.</a><br>
+                    Then, click and drag over the image to draw.</p>
+                  <a href="" id="reset_bounding_box_entity_2_{{loop.index}}" class="d-none">Reset Bounding Box</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+
+      <datalist id='entities'></datalist>
+      <datalist id='predicates'></datalist>
+    </div>
+    <p class="p-2">(Make sure that all triples are marked as <b style="color: green;">[OK]</b> by scrolling through the list.)</p>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block modals %}
+
+<div class="modal" tabindex="-1" role="dialog" aria-hidden="true" id="crowdsourcing_post_modal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Submit Annotations</h5>
+      </div>
+      <div class="modal-body">
+        <span>Would you like to submit your annotations?</span>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" id="crowdsourcing_post_yes">Yes</button>
+        <button type="button" class="btn btn-danger" id="crowdsourcing_post_no" data-dismiss="modal">No</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" tabindex="-1" role="dialog" aria-hidden="true" id="opt_out_modal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Opt Out</h5>
+      </div>
+      <div class="modal-body">
+        <span>Are you sure you want to opt out from our study?</span>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" id="opt_out_yes">Yes</button>
+        <button type="button" class="btn btn-danger" id="opt_out_no" data-dismiss="modal">No</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Displays task instructions (shorter version of tutorial) -->
+<div class="modal" tabindex="-1" role="dialog" aria-hidden="true" id="ann_info_modal">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Instructions for Annotation Step</h5>
+      </div>
+      <div class="modal-body">
+        <div class="d-flex flex-column">
+          <p>
+            Given the image and question below, you are asked to create a series of triples <code>&lt;concept, predicate, concept&gt;</code> which include useful information to answer to a given <b>question</b>.
+          </p>
+          <p>Note that in some cases, you might see an <b>answer</b> for the given question. If that is the case, you should <b>also</b> take into account the answer when creating new relevant triples in this step of the task.</p>
+          <p><i>Beware, different questions (and answers) can occur for the same image.</i></p>
+          <p>The procedure is similar to one of the validation task. For each triple,</p>
+          <ol>
+            <li>You need to specify the labels for the concepts (suggestions will be displayed as you type);</li>
+            <li>You need to draw the bounding boxes by clicking on <span style="color: mediumblue;">'Create Bounding Box'</span> and clicking and dragging over the image. The new bounding box will appear automatically. If you are unhappy with this, or want to revert the annotation, click on <span style="color: mediumblue;">'Reset Bounding Box'</span>.</li>
+            <li>You need to specify the predicate that places the two concepts into a relationship.</li>
+          </ol>
+          <hr>
+          <p>
+            In some cases, you might want to add additional triples to better answer the given question. You can provide more annotations by clicking on the <span style="color: mediumblue;">'New Annotation'</span> button. Then, you can follow again the steps above.
+          </p>
+          <p>
+            New triples can be discarded by clicking on <span style="color: mediumblue;">'Remove Annotation'</span>.
+          </p>
+          <hr>
+          <p>
+            Triples that need to be created are marked as <b style="color: red;">[TO DO]</b>. <br>
+            Otherwise, new triples are marked as  <b style="color: green;">[OK]</b> automatically.
+          </p>
+          <p>
+            Once you are done with the current image-question pair, click on the <span style="color: green;">'Submit Annotations'</span> button to proceed.
+          </p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="close_ann_info_modal" data-bs-dismiss="modal">Got it!</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block custom_js %}
+
+<script type="text/javascript">
+  // Update titles of the triples on input change
+  $(document).on('input', '[id^=label_entity_], [id^=predicate_]', function() {
+    var id_last_digit = $(this).attr('id').split('_').pop();
+    // var button = $('#collapse_button_' + id_last_digit);
+    // var status_tag = $('#collapse_status_' + id_last_digit);
+
+    entity_1_val = $('#label_entity_1_' + id_last_digit).val();
+    entity_2_val = $('#label_entity_2_' + id_last_digit).val();
+    predicate_val = $('#predicate_' + id_last_digit).val();
+
+    text = "<" + entity_1_val + ", " + predicate_val + ", " + entity_2_val + ">";
+    $('#collapse_code_' + id_last_digit).text(text);
+    
+    // button.contents().filter(function() {
+    //   return this.nodeType === 3;
+    // }).first().replaceWith(text + ' ');
+  });
+
+  $(document).on('click', '#ann_info_button', function () {
+    $('#ann_info_modal').modal("show");
+  });
+
+  $(document).on('click', '#close_ann_info_modal', function () {
+    $('#ann_info_modal').modal("hide");
+  });
+  
+  $(document).on('click', '#crowdsourcing_post_button', function () {
+    $('#crowdsourcing_post_modal').modal("show");
+  });
+
+  $(document).on('click', '#crowdsourcing_post_no', function () {
+    $('#crowdsourcing_post_modal').modal("hide");
+  });
+
+  $(document).on('click', '#crowdsourcing_post_yes', function () {
+    $('#crowdsourcing_post_modal').modal("hide");
+    
+  // FIRST VERSION WITHOUT CHECKS
+    for (var i = 0; i < triples.length; i++) {
+      error_msg = "";
+      if (i < reset_triples.length) {
+        all_questions = false;
+        questions = [null, null, null];
+        if ($('#answer_question_yes_' + (i + 1)).is(':checked')) {
+          questions[0] = true;
+          all_questions = true;
+        } else if ($('#answer_question_no_' + (i + 1)).is(':checked')) {
+          questions[0] = false;
+        } else {
+          error_msg = "Please, answer the first question for triple #" + (i + 1);
+          alert(error_msg);
+          break;
+        }
+
+        if (all_questions) {
+          if ($('#entities_properly_identified_yes_' + (i + 1)).is(':checked')) {
+            questions[1] = true;
+          } else if ($('#entities_properly_identified_no_' + (i + 1)).is(':checked')) {
+            changed = 0;
+            questions[1] = false;
+            if ($('#label_entity_1_' + (i + 1)).val() != "") {
+              if ($('#label_entity_1_' + (i + 1)).val() != reset_triples[i][0][0]) {
+                triples[i][0][0] = $('#label_entity_1_' + (i + 1)).val();
+                changed = changed + 1;
+              }
+            } else {
+              error_msg = "Please, assign the first entity label to triple #" + (i + 1);
+              alert(error_msg);
+              break;
+            }
+
+            if (triples[i][1][2] == 0 && triples[i][1][3] == 0) {
+              error_msg = "Please, assign the coordinates for the first entity label to triple #" + (i + 1);
+              alert(error_msg);
+              break;
+            } else if (triples[i][1][0] != reset_triples[i][1][0] || triples[i][1][1] != reset_triples[i][1][1] || triples[i][1][2] != reset_triples[i][1][2] || triples[i][1][3] != reset_triples[i][1][3]) {
+              changed = changed + 1;
+            }
+
+            if ($('#label_entity_2_' + (i + 1)).val() != "") {
+              if ($('#label_entity_2_' + (i + 1)).val() != reset_triples[i][0][2]) {
+                triples[i][0][2] = $('#label_entity_2_' + (i + 1)).val();
+                changed = changed + 1;
+              }
+            } else {
+              error_msg = "Please, assign the second entity label to triple #" + (i + 1);
+              alert(error_msg);
+              break;
+            }
+
+            if (triples[i][2][2] == 0 && triples[i][2][3] == 0) {
+              error_msg = "Please, assign the coordinates for the second entity label to triple #" + (i + 1);;
+              alert(error_msg);
+              break;
+            } else if (triples[i][2][0] != reset_triples[i][2][0] || triples[i][2][1] != reset_triples[i][2][1] || triples[i][2][2] != reset_triples[i][2][2] || triples[i][2][3] != reset_triples[i][2][3]) {
+              changed = changed + 1;
+            }
+
+            if (changed == 0) {
+              error_msg = "Please, assign new labels or coordinates for the second question for triple #" + (i + 1);;
+              alert(error_msg);
+              break;
+            }
+          } else {
+            error_msg = "Please, answer the second question for triple #" + (i + 1);
+            alert(error_msg);
+            break;
+          }
+
+          if ($('#relationship_properly_defined_yes_' + (i + 1)).is(':checked')) {
+            questions[2] = "true";
+          } else if ($('#relationship_properly_defined_inc_rel_' + (i + 1)).is(':checked')) {
+            questions[2] = "incorrect_relationship";
+            
+            if ($('#predicate_' + (i + 1)).val() != "") {
+              if ($('#predicate_' + (i + 1)).val() != reset_triples[i][0][1]) {
+                triples[i][0][1] = $('#predicate_' + (i + 1)).val();
+              } else {
+                error_msg = "Please, assign a new predicate to triple #" + (i + 1);
+                alert(error_msg);
+                break;
+              }
+            } else {
+              error_msg = "Please, assign a predicate to triple #" + (i + 1);
+              alert(error_msg);
+              break;
+            }
+
+          } else if ($('#relationship_properly_defined_no_' + (i + 1)).is(':checked')) {
+            questions[2] = "false";
+          } else {
+            error_msg = "Please, answer the third question for triple #" + (i + 1);
+            alert(error_msg);
+            break;
+          }
+        }
+
+        if (error_msg == "") {
+          triples[i].push(questions)
+        }
+      } else {
+        if ($('#label_entity_1_' + (i + 1)).val() != "") {
+          triples[i][0][0] = $('#label_entity_1_' + (i + 1)).val();
+        } else {
+          error_msg = "Please, assign the first entity label to triple #" + (i + 1);
+          alert(error_msg);
+          break;
+        }
+
+        if (triples[i][1][2] == 0 && triples[i][1][3] == 0) {
+          error_msg = "Please, assign the coordinates for the first entity label to triple #" + (i + 1);
+          alert(error_msg);
+          break;
+        }
+
+        if ($('#predicate_' + (i + 1)).val() != "") {
+          triples[i][0][1] = $('#predicate_' + (i + 1)).val();
+        } else {
+          error_msg = "Please, assign a predicate to triple #" + (i + 1);
+          alert(error_msg);
+          break;
+        }
+
+        if ($('#label_entity_2_' + (i + 1)).val() != "") {
+          triples[i][0][2] = $('#label_entity_2_' + (i + 1)).val();
+        } else {
+          error_msg = "Please, assign the second entity label to triple #" + (i + 1);
+          alert(error_msg);
+          break;
+        }
+
+        if (triples[i][2][2] == 0 && triples[i][2][3] == 0) {
+          error_msg = "Please, assign the coordinates for the second entity label to triple #" + (i + 1);
+          alert(error_msg);
+          break;
+        }
+      }
+    }
+
+    if (error_msg == "") {
+      $.ajax({
+        url: '{{ url|safe }}',
+        type: 'POST',
+        contentType: 'application/json;charset=UTF-8',
+        data: JSON.stringify({ triples: triples, img_id: {{ img_id| safe}}
+      }),
+        success: function(url_ajax) {
+          window.location.href = url_ajax
+        }
+      });
+    }
+
+  });
+
+  const image_overlay = document.getElementById("box_text_overlay");
+  const overlay = document.getElementById("overlay");
+  const box_overlay = document.getElementById("image_overlay");
+  const ctx = image_overlay.getContext("2d");
+  const ctxo = overlay.getContext("2d");
+  const ctxb = box_overlay.getContext("2d");
+
+  const img_url = '{{ url_for('app.static', filename='/img/' + imgname) }}';
+  const img = new Image;
+
+  var triples = [];
+  const reset_triples = [];
+  var max_assigned_ann_triples_per_task = {{ max_assigned_ann_triples_per_task|safe }};
+  var selected_triple = null;
+  var lineW = 0;
+
+  for (var i = 0; i < max_assigned_ann_triples_per_task; i++) {
+    triples.push([["", "", ""], [0, 0, 0, 0], [0, 0, 0, 0]]);
+  }
+
+  function drawRectangle(label, coords, color) {
+    ctxb.beginPath();
+    ctxb.rect(coords[0], coords[1], coords[2], coords[3]);
+    ctxb.strokeStyle = color;
+    ctxb.closePath();
+    ctxb.stroke();
+
+    let text_measures = ctxb.measureText(label);
+    let text_width = Math.ceil(text_measures.width);
+    let text_height = Math.ceil(text_measures.actualBoundingBoxAscent + text_measures.actualBoundingBoxDescent);
+    let padding = 3
+
+    // Base case - bounding box drawn from top-left -- width and height are positive
+    // Bounding box drawn from bottom-left -- width is positive and height is negative
+    let r_begin_x = coords[0];
+    let r_begin_y = coords[1] - text_height < 0 ? coords[1] : coords[1] - text_height;
+    let text_x = r_begin_x;
+    let text_y = r_begin_y + text_height;
+
+    // Bounding box drawn from top-right -- width is negative and height is positive
+    // Bounding box drawn from bottom-right -- width and height are negative
+    if (coords[2] < 0) {
+      r_begin_x += coords[2];
+      text_x = r_begin_x;
+    }
+
+    // label, x, y
+    ctxb.fillText(label, text_x, text_y);
+    ctx.fillStyle = color;
+    // x, y, width, height
+    ctx.fillRect(r_begin_x, r_begin_y, text_width, text_height);
+
+  }
+
+  function drawImageReady() {
+
+    img.onload = function () {
+      image_overlay.width = this.naturalWidth;
+      image_overlay.height = this.naturalHeight;
+      box_overlay.width = this.naturalWidth;
+      box_overlay.height = this.naturalHeight;
+      ctx.drawImage(this, 0, 0);
+      lineW = Math.round(Math.max(this.naturalWidth, this.naturalHeight) / 1000 * 4, 0);
+
+      // Setup canvas and overlay
+      $('#overlay').width($('#box_text_overlay').width()).height($('#box_text_overlay').height());
+      ctxb.strokeStyle = "red";
+      ctxb.fillStyle = "white";
+      ctxb.lineWidth = lineW;
+      ctxb.font = String(lineW * 10) + "px serif";
+      // ctx.fillStyle = "red"
+    };
+
+    img.src = img_url;
+  }
+
+  $(document).ready(function () {
+    drawImageReady();
+  });
+
+  last_opened = 0;
+
+  $(document).on('hidden.bs.collapse', '[id^=collapse_]', function (e) {
+    if (e.target.id.length > 16) {
+      return false;
+    }
+
+    var collapsing_index = Number(e.target.id.slice(9)) - 1;
+
+    if (last_opened == collapsing_index) {
+      img.onload = function () {
+        ctx.drawImage(this, 0, 0);
+        ctxb.clearRect(0, 0, box_overlay.width, box_overlay.height);
+      };
+
+      img.src = img_url;
+    }
+  });
+
+  $(document).on('hidden.bs.collapse', '[id^=new_annotation_]', function (e) {
+    if (e.target.id.length > 16) {
+      return false;
+    }
+
+    var collapsing_index = Number(e.target.id.slice(15)) - 1;
+
+    if (last_opened == collapsing_index) {
+      img.onload = function () {
+        ctx.drawImage(this, 0, 0);
+        ctxb.clearRect(0, 0, box_overlay.width, box_overlay.height);
+      };
+
+      img.src = img_url;
+    }
+  });
+
+  $(document).on('click', '[id^=collapse_button_]', function (e) {
+    if (e.target.id.length < 16) {
+      return false;
+    }
+
+    img.onload = function () {
+      var index = Number(e.target.id.slice(16)) - 1;
+      last_opened = index;
+
+      ctx.drawImage(this, 0, 0);
+      ctxb.clearRect(0, 0, box_overlay.width, box_overlay.height);
+      drawRectangle(triples[index][0][0], triples[index][1], "red");
+      drawRectangle(triples[index][0][2], triples[index][2], "blue");
+
+      selected_triple = triples[index];
+    };
+
+    img.src = img_url;
+  });
+
+  $(document).on('click', '#opt_out_button', function (e) {
+    e.preventDefault();
+
+    $('#opt_out_modal').modal("show");
+  });
+
+  $(document).on('click', '#opt_out_no', function () {
+    $('#opt_out_modal').modal("hide");
+  });
+
+  $(document).on('click', '#opt_out_yes', function () {
+    $('#opt_out_modal').modal("hide");
+
+    $.ajax({
+      url: '{{ opt_out_url|safe }}',
+      type: 'POST',
+      contentType: 'application/json;charset=UTF-8',
+      success: function (url_ajax) {
+        window.location.href = url_ajax
+      }
+    });
+  });
+
+  function show_question(q) {
+    $(q).each(function () {
+      if ($(this).hasClass('d-none')) {
+        $(this).removeClass('d-none');
+        $(this).addClass('d-block');
+      }
+    })
+  }
+
+  function hide_question(q) {
+    $(q).each(function () {
+      if ($(this).hasClass('d-block')) {
+        $(this).removeClass('d-block');
+        $(this).addClass('d-none');
+      }
+    })
+  }
+
+  $(document).on('click', '[id^=answer_question_yes_]', function (e) {
+    var index = Number(e.target.id.slice(20));
+
+    show_question('.q2_' + index);
+    show_question('.q3_' + index);
+    check_accordions()
+  });
+
+  $(document).on('click', '[id^=answer_question_no_]', function (e) {
+    var index = Number(e.target.id.slice(19));
+
+    hide_question('.q2_' + index);
+    hide_question('.q3_' + index);
+    check_accordions()
+  });
+
+
+  $(document).on('click', '[id^=entities_properly_identified_no_]', function (e) {
+    var index = Number(e.target.id.slice(32));
+    show_question('.q2_extra_' + index);
+    check_accordions()
+  });
+
+  $(document).on('click', '[id^=entities_properly_identified_yes_]', function (e) {
+    var index = Number(e.target.id.slice(33));
+    hide_question('.q2_extra_' + index);
+
+    img.onload = function () {
+      // Reset Changes
+      updating_triple_index = index - 1;
+      triples[updating_triple_index][0][0] = reset_triples[updating_triple_index][0][0];
+      triples[updating_triple_index][0][2] = reset_triples[updating_triple_index][0][2];
+      triples[updating_triple_index][1] = reset_triples[updating_triple_index][1];
+      triples[updating_triple_index][2] = reset_triples[updating_triple_index][2];
+
+      $("#label_entity_1_" + index).val(triples[updating_triple_index][0][0]);
+      $("#label_entity_2_" + index).val(triples[updating_triple_index][0][2]);
+
+      ctx.drawImage(this, 0, 0);
+      ctxb.clearRect(0, 0, box_overlay.width, box_overlay.height);
+      drawRectangle(triples[updating_triple_index][0][0], triples[updating_triple_index][1], "red");
+      drawRectangle(triples[updating_triple_index][0][2], triples[updating_triple_index][2], "blue");
+    };
+
+    img.src = img_url;
+
+    if ($('#reset_bounding_box_entity_1_' + (index)).hasClass('d-block')) {
+      $('#reset_bounding_box_entity_1_' + (index)).removeClass('d-block');
+      $('#reset_bounding_box_entity_1_' + (index)).addClass('d-none');
+    }
+
+    if ($('#reset_bounding_box_entity_2_' + (index)).hasClass('d-block')) {
+      $('#reset_bounding_box_entity_2_' + (index)).removeClass('d-block');
+      $('#reset_bounding_box_entity_2_' + (index)).addClass('d-none');
+    }
+
+    check_accordions();
+  });
+
+  $(document).on('click', '[id^=relationship_properly_defined_inc_rel_]', function (e) {
+    var index = Number(e.target.id.slice(38));
+    show_question('.q3_extra_' + index);
+    check_accordions();
+  });
+
+  $(document).on('click', '[id^=relationship_properly_defined_no_]', function (e) {
+    var index = Number(e.target.id.slice(33));
+    hide_question('.q3_extra_' + index);
+    $("#predicate_" + index).val("");
+    check_accordions();
+  });
+
+  $(document).on('click', '[id^=relationship_properly_defined_yes_]', function (e) {
+    var index = Number(e.target.id.slice(34));
+    hide_question('.q3_extra_' + index);
+    $("#predicate_" + index).val("");
+    check_accordions();
+  });
+
+  var updating_triple_index = 0;
+  var entity_index = 0;
+
+  $(document).on('click', '[id^=change_bounding_box_entity_1_]', function (e) {
+    e.preventDefault();
+
+    updating_triple_index = Number(e.target.id.slice(29)) - 1;
+    entity_index = 1;
+
+    img.onload = function () {
+      ctx.drawImage(this, 0, 0);
+      ctxb.clearRect(0, 0, box_overlay.width, box_overlay.height);
+      drawRectangle(triples[updating_triple_index][0][2], triples[updating_triple_index][2], "blue");
+
+      enable_draw = true;
+      $("html").css("cursor", "crosshair");
+    };
+
+    img.src = img_url;
+  })
+
+  $(document).on('click', '[id^=change_bounding_box_entity_2_]', function (e) {
+    e.preventDefault();
+
+    updating_triple_index = Number(e.target.id.slice(29)) - 1;
+    entity_index = 2;
+
+    img.onload = function () {
+      ctx.drawImage(this, 0, 0);
+      ctxb.clearRect(0, 0, box_overlay.width, box_overlay.height);
+      drawRectangle(triples[updating_triple_index][0][0], triples[updating_triple_index][1], "red");
+
+      enable_draw = true;
+      $("html").css("cursor", "crosshair");
+    };
+
+    img.src = img_url;
+  })
+
+  $(document).on('click', '[id^=reset_bounding_box_entity_1_]', function (e) {
+    e.preventDefault();
+
+    updating_triple_index = Number(e.target.id.slice(28)) - 1;
+
+    img.onload = function () {
+      if (reset_triples.length > updating_triple_index) {
+        triples[updating_triple_index][1] = reset_triples[updating_triple_index][1];
+      } else {
+        triples[updating_triple_index][1] = [0, 0, 0, 0]
+      }
+
+      check_accordions()
+
+      ctx.drawImage(this, 0, 0);
+      ctxb.clearRect(0, 0, box_overlay.width, box_overlay.height);
+      drawRectangle(triples[updating_triple_index][0][0], triples[updating_triple_index][1], "red");
+      drawRectangle(triples[updating_triple_index][0][2], triples[updating_triple_index][2], "blue");
+    };
+
+    img.src = img_url;
+
+    if ($('#reset_bounding_box_entity_1_' + (updating_triple_index + 1)).hasClass('d-block')) {
+      $('#reset_bounding_box_entity_1_' + (updating_triple_index + 1)).removeClass('d-block');
+      $('#reset_bounding_box_entity_1_' + (updating_triple_index + 1)).addClass('d-none');
+    }
+  })
+
+  $(document).on('click', '[id^=reset_bounding_box_entity_2_]', function (e) {
+    e.preventDefault();
+
+    updating_triple_index = Number(e.target.id.slice(28)) - 1;
+
+    img.onload = function () {
+      if (reset_triples.length > updating_triple_index) {
+        triples[updating_triple_index][2] = reset_triples[updating_triple_index][2];
+      } else {
+        triples[updating_triple_index][2] = [0, 0, 0, 0]
+      }
+
+      check_accordions()
+
+      ctx.drawImage(this, 0, 0);
+      ctxb.clearRect(0, 0, box_overlay.width, box_overlay.height);
+      drawRectangle(triples[updating_triple_index][0][0], triples[updating_triple_index][1], "red");
+      drawRectangle(triples[updating_triple_index][0][2], triples[updating_triple_index][2], "blue");
+    };
+
+    img.src = img_url;
+
+    if ($('#reset_bounding_box_entity_2_' + (updating_triple_index + 1)).hasClass('d-block')) {
+      $('#reset_bounding_box_entity_2_' + (updating_triple_index + 1)).removeClass('d-block');
+      $('#reset_bounding_box_entity_2_' + (updating_triple_index + 1)).addClass('d-none');
+    }
+  })
+
+  // enable draw on image
+  var enable_draw = false;
+
+  // calculate where the canvas is on the window
+  // (used to help calculate mouseX/mouseY)
+  var offsetX = $("#box_text_overlay").offset().left;
+  var offsetY = $("#box_text_overlay").offset().top;
+
+  // this flage is true when the user is dragging the mouse
+  var isDown = false;
+
+  // these vars will hold the starting mouse position
+  var startX = 0;
+  var startY = 0;
+
+  var prevStartX = 0;
+  var prevStartY = 0;
+
+  var prevWidth = 0;
+  var prevHeight = 0;
+
+  function handleMouseDown(e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    if (!enable_draw) {
+
+    }
+
+    // save the starting x/y of the rectangle
+    startX = parseInt($(window).scrollLeft() + e.clientX - offsetX);
+    startY = parseInt($(window).scrollTop() + e.clientY - offsetY);
+
+    // set a flag indicating the drag has begun
+    isDown = true;
+  }
+
+  function handleMouseMove(e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    // if we're not dragging, just return
+    if (!isDown || !enable_draw) {
+      return;
+    }
+
+    // get the current mouse position
+    mouseX = parseInt($(window).scrollLeft() + e.clientX - offsetX);
+    mouseY = parseInt($(window).scrollTop() + e.clientY - offsetY);
+
+    prevStartX = startX;
+    prevStartY = startY;
+
+    prevWidth = mouseX - startX;
+    prevHeight = mouseY - startY;
+  }
+
+  function handleMouseUp(e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    if (!enable_draw) {
+      return;
+    }
+
+    // the drag is over, clear the dragging flag
+    isDown = false;
+    enable_draw = false;
+    $("html").css("cursor", "auto");
+
+    var ratioC = img.naturalWidth / $('#overlay').width();
+    //ctx.strokeRect(prevStartX * ratioC, prevStartY * ratioC, prevWidth * ratioC, prevHeight * ratioC);
+
+    triples[updating_triple_index][entity_index] = [prevStartX * ratioC, prevStartY * ratioC, prevWidth * ratioC, prevHeight * ratioC];
+    show_question('#reset_bounding_box_entity_' + entity_index + '_' + (updating_triple_index + 1));
+
+    if (entity_index == 1) {
+      drawRectangle(triples[updating_triple_index][0][0], triples[updating_triple_index][1], "red");
+    } else if (entity_index == 2) {
+      drawRectangle(triples[updating_triple_index][0][2], triples[updating_triple_index][2], "blue");
+    }
+
+    check_accordions()
+  }
+
+  function handleMouseOut(e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    if (!enable_draw) {
+      return;
+    }
+
+    // the drag is over, clear the dragging flag
+    isDown = false;
+    enable_draw = false;
+    $("html").css("cursor", "auto");
+  }
+
+  // listen for mouse events
+  $("#overlay").mousedown(function (e) {
+    handleMouseDown(e);
+  });
+
+  $("#overlay").mousemove(function (e) {
+    handleMouseMove(e);
+  });
+
+  $("#overlay").mouseup(function (e) {
+    handleMouseUp(e);
+  });
+
+  $("#overlay").mouseout(function (e) {
+    handleMouseOut(e);
+  });
+
+  window.onresize = function () {
+    $('#overlay').width($('#box_text_overlay').width()).height($('#box_text_overlay').height());
+  }
+
+  var count = {{ max_assigned_ann_triples_per_task | safe }};
+  $(document).on('click', '#new_annotation_button', function (e) {
+    e.preventDefault();
+
+    count = count + 1;
+
+    $.ajax({
+      url: '{{ generate_new_annotation_url|safe }}',
+      type: 'POST',
+      contentType: 'application/json;charset=UTF-8',
+      data: JSON.stringify({ count: count }),
+      success: function (annotation_html) {
+        if (annotation_html[0] != '<') {
+          window.location.href = annotation_html
+        }
+        $('#triples_accordion').append(annotation_html);
+        triples.push([["", "", ""], [0, 0, 0, 0], [0, 0, 0, 0]])
+      }
+    });
+  })
+
+  $(document).on('click', '[id^=remove_annotation_]', function (e) {
+    e.preventDefault();
+    remove_annotation = Number(e.target.id.slice(18)) - 1;
+
+    $('#new_annotation_heading_' + (remove_annotation + 1)).parent().remove()
+    triples.splice(remove_annotation);
+
+    count = count - 1;
+  })
+
+  last_chosen_letter = "";
+  entities_list_suggestion = {{ entities_list_suggestion | safe }}
+  predicates_list_suggestion = {{ predicates_list_suggestion | safe }}
+
+  // ENTITIES SUGGESTIONS
+  let last_chosen_letter_entity = "";
+  $(document).on('input', '[id^=label_entity_]', function (e) {
+    let input_val_entity = $("#" + e.target.id).val()
+    
+    if(input_val_entity == "") {
+      check_accordions();
+    }
+
+    if(!(/[a-zA-Z]/).test(input_val_entity)) {
+      return;
+    }
+
+    let first_letter_entity = input_val_entity[0].toLowerCase();
+
+    // Ensure the first letter is a valid character (a-z)
+    if (first_letter_entity < 'a' || first_letter_entity > 'z') {
+      return;
+    }
+
+    if(last_chosen_letter_entity != first_letter_entity && first_letter_entity != "") {
+      last_chosen_letter_entity = first_letter_entity;
+
+      let options_html_entities = "";
+      let suggestions_entities = entities_list_suggestion[first_letter_entity.charCodeAt(0) - 97];  // Get suggestions for the letter
+      
+      for (let j = 0; j < suggestions_entities.length; j++) {
+        options_html_entities += "<option value='" + suggestions_entities[j] + "'/>";
+      }
+
+      // Update the entities list with the new options in one DOM operation
+      $("#entities").html(options_html_entities);
+    }
+
+    updating_triple_index = Number(e.target.id.slice(15)) - 1;
+    updating_label_index = Number(String(e.target.id.slice(13))[0]);
+
+    img.onload = function () {
+      if (updating_label_index == 1) {
+        triples[updating_triple_index][0][0] = $('#' + e.target.id).val();
+      } else if (updating_label_index == 2) {
+        triples[updating_triple_index][0][2] = $('#' + e.target.id).val();
+      }
+
+      ctx.drawImage(this, 0, 0);
+      ctxb.clearRect(0, 0, box_overlay.width, box_overlay.height);
+      drawRectangle(triples[updating_triple_index][0][0], triples[updating_triple_index][1], "red");
+      drawRectangle(triples[updating_triple_index][0][2], triples[updating_triple_index][2], "blue");
+    };
+
+    img.src = img_url;
+
+    check_accordions()
+  })
+
+  let last_chosen_letter_predicate = "";
+  $(document).on('input', '[id^=predicate_]', function (e) {
+    let input_val_predicate = $("#" + e.target.id).val();   
+
+    // If input does not contain letters, exit early
+    if(!(/[a-zA-Z]/).test(input_val_predicate)) {
+      return;
+    }
+
+    // Get the first letter in lowercase
+    let first_letter_predicate = input_val_predicate[0].toLowerCase();
+
+    // Ensure the first letter is a valid character (a-z)
+    if (first_letter_predicate < 'a' || first_letter_predicate > 'z') {
+      return;
+    }
+
+    if(last_chosen_letter_predicate != first_letter_predicate && first_letter_predicate != "") {
+      last_chosen_letter_predicate = first_letter_predicate;
+
+      let options_html_predicate = "";
+      let suggestions_predicate = predicates_list_suggestion[first_letter_predicate.charCodeAt(0) - 97];  // Get suggestions for the letter
+      
+      for (let j = 0; j < suggestions_predicate.length; j++) {
+        options_html_predicate += "<option value='" + suggestions_predicate[j] + "'/>";
+      }
+
+      // Update the predicates list with the new options in one DOM operation
+      $("#predicates").html(options_html_predicate);
+      }
+
+    check_accordions()
+  })
+
+  function check_accordions() {
+    completed_array = [];
+    
+    for (var i = 0; i < triples.length; i++) {
+      completed = true;
+      if (i < reset_triples.length) {
+        all_questions = false;
+        if ($('#answer_question_yes_' + (i + 1)).is(':checked')) {
+          all_questions = true;
+        } else if ($('#answer_question_no_' + (i + 1)).is(':checked')) {
+
+        } else {
+          completed = false;
+        }
+
+        if (all_questions) {
+          if ($('#entities_properly_identified_yes_' + (i + 1)).is(':checked')) {
+
+          } else if ($('#entities_properly_identified_no_' + (i + 1)).is(':checked')) {
+            changed = 0;
+
+            if ($('#label_entity_1_' + (i + 1)).val() != "") {
+              if ($('#label_entity_1_' + (i + 1)).val() != reset_triples[i][0][0]) {
+                changed = changed + 1;
+              }
+            } else {
+              completed = false;
+            }
+
+            if (triples[i][1][2] == 0 && triples[i][1][3] == 0) {
+
+            } else if (triples[i][1][0] != reset_triples[i][1][0] || triples[i][1][1] != reset_triples[i][1][1] || triples[i][1][2] != reset_triples[i][1][2] || triples[i][1][3] != reset_triples[i][1][3]) {
+              changed = changed + 1;
+            }
+
+            if ($('#label_entity_2_' + (i + 1)).val() != "") {
+              if ($('#label_entity_2_' + (i + 1)).val() != reset_triples[i][0][2]) {
+                changed = changed + 1;
+              }
+            } else {
+              completed = false;
+            }
+
+            if (triples[i][2][2] == 0 && triples[i][2][3] == 0) {
+
+            } else if (triples[i][2][0] != reset_triples[i][2][0] || triples[i][2][1] != reset_triples[i][2][1] || triples[i][2][2] != reset_triples[i][2][2] || triples[i][2][3] != reset_triples[i][2][3]) {
+              changed = changed + 1;
+            }
+
+            if (changed == 0) {
+              completed = false;
+            }
+          } else {
+            completed = false;
+          }
+
+          if ($('#relationship_properly_defined_yes_' + (i + 1)).is(':checked')) {
+
+          } else if ($('#relationship_properly_defined_inc_rel_' + (i + 1)).is(':checked')) {
+
+            if ($('#predicate_' + (i + 1)).val() != "") {
+              if ($('#predicate_' + (i + 1)).val() != reset_triples[i][0][1]) {
+
+              } else {
+                completed = false;
+              }
+            } else {
+              completed = false;
+            }
+
+          } else if ($('#relationship_properly_defined_no_' + (i + 1)).is(':checked')) {
+
+          } else {
+            completed = false;
+          }
+        }
+      } else {
+        if ($('#label_entity_1_' + (i + 1)).val() != "") {
+
+        } else {
+          completed = false;
+        }
+
+        if (triples[i][1][2] == 0 && triples[i][1][3] == 0) {
+          completed = false;
+        }
+
+        if ($('#predicate_' + (i + 1)).val() != "") {
+
+        } else {
+          completed = false;
+        }
+
+        if ($('#label_entity_2_' + (i + 1)).val() != "") {
+
+        } else {
+          completed = false;
+        }
+
+        if (triples[i][2][2] == 0 && triples[i][2][3] == 0) {
+          completed = false;
+        }
+      }
+
+      completed_array.push(completed)
+    }
+
+    for (var i = 0; i < completed_array.length; i++) {
+      if (completed_array[i]) {
+        $("#collapse_status_" + (i + 1)).text("[OK]");
+        $("#collapse_status_" + (i + 1)).css("color", "green");
+      } else {
+        $("#collapse_status_" + (i + 1)).text("[TO DO]");
+        $("#collapse_status_" + (i + 1)).css("color", "red");
+      }
+    }
+  }
+
+</script>
+
+{% endblock %}

@@ -1,0 +1,213 @@
+{% extends 'base.html' %}
+
+{% block title %} Crowdsourcing Activity {% endblock %}
+
+{% block css %}
+
+{% endblock %}
+
+{% block body %}
+
+  <div class="d-flex">
+    <h2 class="mt-4 mb-2 col-10 text-center">Tutorial for Crowdsourcing Activity</h2>
+    <button class="btn btn-danger mt-4 mb-2 col-1 text-center" id="opt_out_button">Opt Out</button>
+  </div>
+  <hr>
+  <div class="d-flex flex-column mx-4 mb-2">
+    <div class="d-flex flex-column">
+        <h3>Task Description</h3>
+        <p>Thanks for taking part in our study! In this page, we will go over what you are asked to do as a participant.</p>
+        <p>Each task is made of two steps: a <b>validation</b> step and an <b>annotation</b> step.</p>
+        <!-- <hr>
+        <h5>Data</h5>
+        <p>
+            The data you will be dealing with is the following: a <b>question</b> (or request) at the top (1), an image on the left (2), and a set of triples of <code>&lt;concept, predicate, concept&gt;</code> on the right (3).
+        </p> -->
+    </div>
+
+    <hr>
+    <h3>Validation step</h3>
+    <div class="d-flex flex-row justify-content-between">
+        <div class="d-flex flex-column">
+            <p>
+                You are asked to verify that a series of triples <code>&lt;concept, predicate, concept&gt;</code> (3, on the right) based on an image (2, on the left) include useful information to answer the given <span style="font-weight: bold;">question</span> (1, at the top).
+                <br>
+                Useful triples can directly help answering a question or provide additional, contextual information that helps answering the question.
+            </p>
+            <p>
+                To do this, you will need to go through several steps which are shown for each triple. These steps will cover whether the triple is useful (<b>Q1</b>), whether the concepts are identified correctly (<b>Q2</b>), and whether the predicate is correct (<b>Q3</b>). <span style="font-style: italic;">Depending on your answers, some options might be deactivated or not visible</span>.
+            </p>
+            <p>
+                Some questions might be more complicated than others. To help with that, we broke down the operations you will carry out. <b>Keep reading and go through the information in this page.</b>
+            </p>
+            <img src="{{ url_for('app.static', filename='img/tutorial/main_val.jpg') }}" class="col-9 py-1 align-self-center">
+            <!-- <p>If needed, you can also add new triples by clicking the <span style="color: green;">'New Annotation'</span> button. More on this later on in the tutorial.</p> -->
+        </div>
+    </div>
+
+    <hr>
+    <div class="d-flex flex-column">
+        <h3>Answering the Questions in the Validation Step</h3>
+        <div class="d-flex flex-row pb-2 justify-content-between">
+            <div class="d-flex flex-column col-5 px-1">
+                <h5>Q1 - Is the triple useful to answer the question?</h5>
+                <p>This is a yes-no question that helps us understand whether a triple is necessary to answer the given question.</p>
+            </div>
+            <div class="d-flex flex-column col-7 px-1">
+                <img src="{{ url_for('app.static', filename='img/tutorial/triple_empty.jpg') }}" class="col-11 align-self-center">
+            </div>
+        </div>
+        <hr>
+
+        <h5>Q2 - Are the concepts in the triple properly identified in the picture?</h5>
+        <div class="d-flex flex-column">
+            <p>If your answer to Q2 is 'no', you will be asked to provide your annotation for the concepts. You can do this in various ways.</p>
+            <div class="d-flex flex-row justify-content-between pb-3">
+                <div class="d-flex flex-column col-5 px-1">
+                    <b>Incorrect concept label</b>
+                    <p>
+                        First, if the concepts are localised correctly (see red and blue rectangles drawn on the image) but the label (that is, the name of the concept) is incorrect, you can type in the text box the label you think is correct. While you type, you will also see some suggested options (in orange) as you type; some generic, some more specific. Please, pick the one you think is the most appropriate for the image and question.
+                    </p>
+                </div>
+                <div class="d-flex flex-column col-7 px-1">
+                    <img src="{{ url_for('app.static', filename='img/tutorial/q2.jpg') }}">
+                </div>
+            </div>
+
+            <div class="d-flex flex-row justify-content-between pb-1">
+                <div class="d-flex flex-column col-5 px-1">
+                    <b>Incorrect position of a concept</b>
+                    <p>
+                        Second, if the concept has the correct label but the position is incorrect, you can click on <span style="color: mediumblue;">'Change Bounding Box'</span> and directly draw over the image. To do so, you simply, click and drag over the object as shown in this short video. If you make mistakes at any time, click on <span style="color: mediumblue;">'Reset Bounding Box'</span>.
+                    </p>
+                </div>
+                <div class="d-flex flex-column col-7 px-1">
+                    <video controls>
+                        <source src="{{ url_for('app.static', filename='img/tutorial/video_annotation.mp4') }}" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <h5>Q3 - Is the predicate between the two concepts properly identified?</h5>
+        <div class="d-flex flex-row justify-content-between">
+            <div class="d-flex flex-column col-5 px-1">
+                <p>
+                    If your answer to Q3 is 'The predicate is incorrect', you will be asked to provide your annotation for the predicate. Similar to how you provide annotations for incorrect concept labels, suggestions for the predicates will be shown as you type. Please, pick the one you think is the most appropriate for the image and question.
+                </p>
+            </div>
+            <div class="d-flex flex-column col-7 px-1">
+                <img src="{{ url_for('app.static', filename='img/tutorial/q3.jpg') }}">
+            </div>
+        </div>
+    </div>
+    
+    <hr>
+    <h3>Annotation Step</h3>
+    <div class="d-flex flex-column">
+        <p>
+            Unfortunately, the triples that you will see might be <b>insufficient to answer the question</b> given a certain image. For this reason, in this second step we ask you to contribute with new relevant triples (4).
+        </p>
+        <div class="d-flex flex-row justify-content-between">
+            <div class="d-flex flex-column col-5 px-1">
+                <p>The procedure is similar to the one of the validation step. For each triple,</p>
+                <ol>
+                    <li>You need to specify the labels for the concepts (suggestions will be displayed as you type);</li>
+                    <li>You need to draw the bounding boxes by clicking on <span style="color: mediumblue;">'Set Bounding Box'</span> and clicking and dragging over the image. The new bounding box will appear automatically. If you are unhappy with this, or want to revert the annotation, click on <span style="color: mediumblue;">'Reset Bounding Box'</span>.</li>
+                    <li>You need to specify the predicate that places the two concepts into a relationship.</li>
+                </ol>
+                <p>
+                    In some cases, you might want to add additional triples to better answer the given question. You can provide more annotations by clicking on the <span style="color: mediumblue;">'New Annotation'</span> button. Then, you can follow again the steps above.
+                </p>
+                <p>
+                    New triples can be discarded by clicking on <span style="color: mediumblue;">'Remove Annotation'</span>.
+                </p>
+            </div>
+            <div class="d-flex flex-column col-7 px-1">
+                <img src="{{ url_for('app.static', filename='img/tutorial/main_ann.jpg') }}">
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <h3>Submitting</h3>
+    <div class="d-flex flex-column">
+        <p>Once you are done with the current set of triples, click on the <span style="color: mediumblue;">'Submit Annotations'</span> button to proceed to the step, the next image, or complete your submission and return to Prolific. You will be prompted to confirm your choice of submitting the validated and annotated triples.</p>
+        <p>Triple that have not been validated or annotated are marked as <b style="color: red;">[TO DO]</b>. Otherwise, triples are marked as <b style="color: green;">[OK]</b> automatically as you progress through the task.</p>
+    </div>
+
+    <hr>
+    <div class="d-flex flex-column">
+        <h3>Do not worry if this looks like a lot of information!</h3>
+        <p>At any point in time, you can access a summary of these instruction while doing the task.</p>
+        <div class="d-flex flex-row px-1 justify-content-between">
+            <div class="d-flex flex-column col-6">
+                <img src="{{ url_for('app.static', filename='img/tutorial/val_instructions.png') }}" class="col-10 py-1 align-self-center">
+                <i class="align-self-center">Instruction summary for the Validation Step.</i>
+            </div>
+            <div class="d-flex flex-column col-6">
+                <img src="{{ url_for('app.static', filename='img/tutorial/ann_instructions.png') }}" class="col-9 py-1 align-self-center">
+                <i class="align-self-center">Instruction summary for the Annotation Step.</i>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <div class="d-flex justify-content-center my-4" id="btn_bottom_line">
+        <form action="{{ url_for('main.tutorial_post', PROLIFIC_PID = PROLIFIC_PID, STUDY_ID = STUDY_ID) }}" method="POST">
+            <button class="btn btn-success mx-5" id="complete_tutorial">Complete tutorial and proceed to task</button>
+        </form>
+    </div>
+  </div>
+
+{% endblock %}
+
+{% block modals %}
+  <div class="modal" tabindex="-1" role="dialog" aria-hidden="true" id="opt_out_modal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Opt Out</h5>
+        </div>
+        <div class="modal-body">
+          <span>Are you sure you want to opt out from our study?</span>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" id="opt_out_yes">Yes</button>
+          <button type="button" class="btn btn-danger" id="opt_out_no" data-dismiss="modal">No</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
+
+{% block custom_js %}
+    <script type="text/javascript">
+
+        $(document).on('click', '#opt_out_button', function(e){
+            e.preventDefault();
+
+            $('#opt_out_modal').modal("show");
+        });
+
+        $(document).on('click', '#opt_out_no', function() {
+            $('#opt_out_modal').modal("hide");
+        });
+
+        $(document).on('click', '#opt_out_yes', function() {
+            $('#opt_out_modal').modal("hide");
+
+            $.ajax({
+                url: '{{ opt_out_url|safe }}',
+                type: 'POST',
+                contentType: 'application/json;charset=UTF-8',
+                success: function(url_ajax) {
+                window.location.href = url_ajax
+                }
+            });
+        });
+    </script>
+
+{% endblock %}

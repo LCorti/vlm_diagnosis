@@ -1,0 +1,35 @@
+version: '3'
+
+services:
+  crwd_mysql:
+      image: mysql
+      build:
+        context: .
+        dockerfile: ./CRWD/mysql/Dockerfile-llava.mysql
+      environment:
+        MYSQL_ROOT_PASSWORD: crwd_pwd
+        MYSQL_DATABASE: CRWD_DB
+        MYSQL_USER: crwd_user
+        MYSQL_PASSWORD: crwd_pwd
+        MYSQL_TCP_PORT: 3307
+      volumes:
+        - ./CRWD/mysql/initdb_llava-bench.sql:/docker-entrypoint-initdb.d/initdb.sql
+      ports:
+        - "3307:3306"
+      command: --bind-address=0.0.0.0 --innodb-strict-mode=OFF --character-set-server=utf8mb4 --collation-server=utf8mb4_general_ci
+      healthcheck:
+        test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+        interval: 10s
+        timeout: 5s
+        retries: 5
+
+  flask-app-llava:
+    build:
+      context: ./CRWD
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    depends_on:
+      - crwd_mysql
+    volumes:
+      - ./CRWD:/app

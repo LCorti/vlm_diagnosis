@@ -1,0 +1,1266 @@
+{% extends 'base.html' %}
+
+{% block title %} Validation Step {% endblock %}
+
+{% block css %}
+
+{% endblock %}
+
+{% block body %}
+
+  <div class="d-flex">
+    <h2 class="mt-4 mb-2 col-12 text-center">Validation Step</h2>
+  </div>
+  <hr>
+  <div class="d-flex flex-column">
+    <div class="d-flex">
+      <h4 class="mt-2 mb-2 col-12" style="padding-left: 1em;">Overview</h4>
+    </div>
+    <hr>
+    <div class="d-flex col-12 justify-content-between">
+      <div style="width: 30%; padding-left: 3em;">
+        <p>Progress: {{ progress }}%</p>
+        <div class="progress">
+          {% if progress|float <= 20.0 %}
+            <div class="progress-bar bg-danger" role="progressbar" style="width: {{ progress }}%;" aria-valuenow="{{ progress }}" aria-valuemin="0" aria-valuemax="100"></div>
+          {% endif %}
+          {% if progress|float > 20.0 and progress|float < 50.0 %}
+            <div class="progress-bar bg-warning" role="progressbar" style="width: {{ progress }}%;" aria-valuenow="{{ progress }}" aria-valuemin="0" aria-valuemax="100"></div>
+          {% endif %}
+          {% if progress|float >= 50.0 and progress|float < 80.0 %}
+            <div class="progress-bar bg-info" role="progressbar" style="width: {{ progress }}%;" aria-valuenow="{{ progress }}" aria-valuemin="0" aria-valuemax="100"></div>
+          {% endif %}
+          {% if progress|float >= 80.0 %}
+            <div class="progress-bar bg-success" role="progressbar" style="width: {{ progress }}%;" aria-valuenow="{{ progress }}" aria-valuemin="0" aria-valuemax="100"></div>
+          {% endif %}
+        </div>
+      </div>
+      <div class="mt-4 mb-2 col-4 text-center">
+        <button class="btn btn-info" id="val_info_button">Instructions for Validation Step</button>
+      </div>
+      <div class="mt-4 mb-2 col-2" style="padding-right: 3em;">
+        <button class="btn btn-danger" id="opt_out_button">Opt Out</button>
+      </div>
+    </div>
+    <br>
+    <div class="d-flex flex-column">
+      <div class="d-flex" style="padding-left: 2em;">
+        <p>
+          <i>For viewing images and concepts in the best way possible, please do not resize this window.</i>
+        </p>
+      </div>
+      <div class="d-flex" style="padding-left: 2em;">
+        <p>
+          Once you are done with the current image-question pair, click on the <span style="color: green;">'Submit Annotations'</span> button to proceed.
+        </p>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="d-flex flex-column mx-4 mb-2">
+    <div class="d-flex flex-row justify-content-between">
+      <div class="d-flex flex-column col-8">
+        <h4>Question:</h4>
+        <h5>{{ question }}</h5>
+        {% if answer_option %}
+          <p><b>The answer could be:</b> {{ answer_option }}</p>
+        {% endif %}
+      </div>
+      <div class="d-flex flex-column col-3">
+        <button class="btn btn-success" id="crowdsourcing_post_button" data-toggle="modal" data-target="#crowdsourcing_post_modal">Submit Annotations</button>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <!-- <div class="d-flex justify-content-center my-4" id="btn_bottom_line">
+    <button class="btn btn-primary" id="crowdsourcing_post_button" data-toggle="modal" data-target="#crowdsourcing_post_modal">Submit Annotations</button>
+    <button class="btn btn-success mx-5" id="new_annotation_button">New Annotation</button>
+  </div> -->
+  <div class="d-flex">
+    <div class="mx-4" style="width: 50%; position: relative;">
+      <canvas id="image_overlay" style="position: absolute; max-width: 100%; outline: 2px solid green;"></canvas>
+      <canvas id="box_text_overlay" style="position: absolute; max-width: 100%; padding-bottom: 50px;"></canvas>
+      <canvas id="overlay" style="position: absolute; max-width: 100%;"></canvas>
+      <!-- <img src="{{ url_for('app.static', filename='/img/' + imgname) }}" style="max-width: 100%;"></img> -->
+    </div>
+    <div class="mx-4" style="width: 50%;">
+      <div style="max-height: 600px; overflow: scroll;" class="accordion" id="triples_accordion">
+        {% for triple in triples %}
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading_{{loop.index}}">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_{{loop.index}}" aria-expanded="false" aria-controls="collapse_{{loop.index}}" id="collapse_button_{{loop.index}}">
+                <b style="color: red; padding-right: 10px;" id="collapse_status_{{loop.index}}">[TO DO]</b> Triple #{{ loop.index }}: <code id="collapse_code_{{loop.index}}" style="padding-left: 10px;">&lt;{{ triple[0][0] }}, {{ triple[0][1] }}, {{ triple[0][2] }}&gt;</code>
+              </button>
+            </h2>
+            <div id="collapse_{{loop.index}}" class="accordion-collapse collapse" aria-labelledby="heading_{{loop.index}}" data-bs-parent="#triples_accordion">
+              <div class="accordion-body">
+                <div>
+                  <p><b>Q1 - </b>Is the triple useful to answer the <b>Question</b>?</p>
+                  <div class="d-flex">
+                    <div class="form-check col-3">
+                      <input class="form-check-input" type="radio" name="answer_question_{{loop.index}}" id="answer_question_yes_{{loop.index}}">
+                      <label class="form-check-label" for="answer_question_yes_{{loop.index}}">
+                        Yes
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="answer_question_{{loop.index}}" id="answer_question_no_{{loop.index}}">
+                      <label class="form-check-label" for="answer_question_no_{{loop.index}}">
+                        No
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <hr class="q2_{{loop.index}} d-none">
+                <div class="q2_{{loop.index}} d-none">
+                  <p><b>Q2 - </b>Are the concepts in the triple properly identified in the picture?</p>
+                  <div class="d-flex">
+                    <div class="form-check col-3">
+                      <input class="form-check-input" type="radio" name="entities_properly_identified_{{loop.index}}" id="entities_properly_identified_yes_{{loop.index}}">
+                      <label class="form-check-label" for="entities_properly_identified_yes_{{loop.index}}">
+                        Yes
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="entities_properly_identified_{{loop.index}}" id="entities_properly_identified_no_{{loop.index}}">
+                      <label class="form-check-label" for="entities_properly_identified_no_{{loop.index}}">
+                        No
+                      </label>
+                    </div>
+                  </div>
+                  <hr class="q2_extra_{{loop.index}} d-none">
+                  <div class="q2_extra_{{loop.index}} d-none">
+                    <span><b><u>Concept #1</u></b></span>
+                    <div class="d-flex flex-column">
+                      <div class="d-flex my-1">
+                        <span class="col-3"><b>Label: </b></span><input type="search" list="entities" value="{{ triple[0][0] }}" placeholader="Label Concept #1" class="col-9 entities" id="label_entity_1_{{loop.index}}" autocomplete="off">
+                      </div>
+                      <div class="d-flex my-1 justify-content-between">
+                        <p><a href="" id="change_bounding_box_entity_1_{{loop.index}}">Click here to change the Bounding Box.</a><br>Then, click and drag over the image to draw.</p>
+                        <a href="" id="reset_bounding_box_entity_1_{{loop.index}}" class="d-none">Reset Bounding Box</a>
+                      </div>
+                    </div>
+                    <hr>
+                    <span><b><u>Concept #2</u></b></span>
+                    <div class="d-flex flex-column">
+                      <div class="d-flex my-1">
+                        <span class="col-3"><b>Label: </b></span><input type="search" list="entities" value="{{ triple[0][2] }}" placeholader="Label Concept #2" class="col-9" id="label_entity_2_{{loop.index}}" autocomplete="off">
+                      </div>
+                      <div class="d-flex my-1 justify-content-between">
+                        <p><a href="" id="change_bounding_box_entity_2_{{loop.index}}">Click here to change the Bounding Box.</a><br>Then, click and drag over the image to draw.</p>
+                        <a href="" id="reset_bounding_box_entity_2_{{loop.index}}" class="d-none">Reset Bounding Box</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr class="q3_{{loop.index}} d-none">
+                <div class="q3_{{loop.index}} d-none">
+                  <p><b>Q3 - </b>Is the predicate between the two concepts properly defined?</p>
+                  <div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="relationship_properly_defined_{{loop.index}}" id="relationship_properly_defined_yes_{{loop.index}}">
+                      <label class="form-check-label" for="relationship_properly_defined_yes_{{loop.index}}">
+                        The predicate is correct
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="relationship_properly_defined_{{loop.index}}" id="relationship_properly_defined_inc_rel_{{loop.index}}">
+                      <label class="form-check-label" for="relationship_properly_defined_inc_rel_{{loop.index}}">
+                        The predicate is incorrect
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="relationship_properly_defined_{{loop.index}}" id="relationship_properly_defined_no_{{loop.index}}">
+                      <label class="form-check-label" for="relationship_properly_defined_no_{{loop.index}}">
+                        They should not be related
+                      </label>
+                    </div>
+                  </div>
+                  <hr class="q3_extra_{{loop.index}} d-none">
+                  <div class="q3_extra_{{loop.index}} d-none d-flex">
+                    <span class="col-3"><b>Predicate: </b></span><input type="search" list="predicates" placeholader="Predicate" class="col-9" id="predicate_{{loop.index}}" autocomplete="off" value="{{ triple[0][1] }}">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+        <datalist id='entities'>
+
+        </datalist>
+        <datalist id='predicates'>
+
+        </datalist>
+      </div>
+      <p class="p-2">(Make sure that all triples are marked as <b style="color: green;">[OK]</b> by scrolling through the list.)</p>
+    </div>
+  </div>
+
+{% endblock %}
+
+{% block modals %}
+
+  <!-- Confirm submission of annotations -->
+  <div class="modal" tabindex="-1" role="dialog" aria-hidden="true" id="crowdsourcing_post_modal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Submit Annotations</h5>
+        </div>
+        <div class="modal-body">
+          <span>Would you like to submit your annotations?</span>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" id="crowdsourcing_post_yes">Yes</button>
+          <button type="button" class="btn btn-danger" id="crowdsourcing_post_no" data-dismiss="modal">No</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Confirm output of study (then redirects to opt-out page with return link to Prolific) -->
+  <div class="modal" tabindex="-1" role="dialog" aria-hidden="true" id="opt_out_modal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Opt Out</h5>
+        </div>
+        <div class="modal-body">
+          <span>Are you sure you want to opt out from our study?</span>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" id="opt_out_yes">Yes</button>
+          <button type="button" class="btn btn-danger" id="opt_out_no" data-dismiss="modal">No</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Displays task instructions (shorter version of tutorial) -->
+  <div class="modal" tabindex="-1" role="dialog" aria-hidden="true" id="val_info_modal">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Instructions for Validation Step</h5>
+        </div>
+        <div class="modal-body">
+          <div class="d-flex flex-column">
+            <p>
+              Given the image and question below, you are asked to verify that a series of triples <code>&lt;concept, predicate, concept&gt;</code> include useful information to answer to a given <b>question</b>.
+            </p>
+            <p>Note that in some cases, you might see an <b>answer</b> for the given question. If that is the case, you should <b>also</b> take into account the answer when validating the triples shown in this step of the task.</p>
+            <p>
+              <i>Beware, different questions (and answers) can occur for the same image.</i>
+            </p>
+            <p>The validation will include the following aspects:</p>
+            <ol>
+              <li>The usefulness of the triple to answer the question;</li>
+              <li>The correctness of the concepts identified in the image;</li>
+                <ul>
+                  <li> If incorrect, you can change a concept's label or re-draw its bounding box by clicking on <span style="color: mediumblue;">'Change Bounding Box'</span> and clicking and dragging over the image. The new bounding box will appear automatically. If you are unhappy with this, or want to revert the annotation, click on <span style="color: mediumblue;">'Reset Bounding Box'</span>.</li>
+                </ul>
+              <li>The correctness of the predicate.</li>
+                <ul>
+                  <li> If incorrect, you can change a predicate's label by typing the new one.</li>
+                </ul>
+            </ol>
+            <hr>
+            <p>
+              Triples without validation are marked as <b style="color: red;">[TO DO]</b>. <br>
+              Otherwise, triples that have been validated, are marked as  <b style="color: green;">[OK]</b> automatically.
+            </p>
+            <p>
+              Once you are done with the current image-question pair, click on the <span style="color: green;">'Submit Annotations'</span> button to proceed.
+            </p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" id="close_val_info_modal" data-bs-dismiss="modal">Got it!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
+
+{% block custom_js %}
+
+  <script type="text/javascript">
+    $(document).on('input', '[id^=label_entity_], [id^=predicate_]', function() {
+      var id_last_digit = $(this).attr('id').split('_').pop();
+      update_labels(id_last_digit);
+    });
+
+    function update_labels(id_last_digit) {
+      var code_element = $('#collapse_code_' + id_last_digit);
+
+      entity_1_val = $('#label_entity_1_' + id_last_digit).val();
+      entity_2_val = $('#label_entity_2_' + id_last_digit).val();
+      predicate_val = $('#predicate_' + id_last_digit).val();
+
+      code_element.text('<' + entity_1_val + ', ' + predicate_val + ', ' + entity_2_val + '>');
+    }
+    
+    // Toggle instruction modal
+    $(document).on('click', '#val_info_button', function(){
+      $('#val_info_modal').modal("show");
+    });
+
+    $(document).on('click', '#close_val_info_modal', function(){
+      $('#val_info_modal').modal("hide");
+    })
+
+    // Toggle annotation submit modal
+    $(document).on('click', '#crowdsourcing_post_button', function(){
+        $('#crowdsourcing_post_modal').modal("show");
+    });
+
+    $(document).on('click', '#crowdsourcing_post_no', function() {
+      $('#crowdsourcing_post_modal').modal("hide");
+    });
+
+    var triples = {{ triples|safe }};
+    const reset_triples = {{ triples|safe }}; // Copy of triples; for reset options
+    var selected_triple = null;
+
+    // Confirmed submit of annotations
+    $(document).on('click', '#crowdsourcing_post_yes', function() {
+      $('#crowdsourcing_post_modal').modal("hide");
+
+      // Check answers for all triples for a given image
+      for(var i = 0; i < triples.length; i++) {
+        error_msg = "";
+        // Check answers for the original triples
+        if(i < reset_triples.length) {
+          all_questions = false; // flag to show other questions
+          answers = [null, null, null];
+          // Checks for Q1 (relevance of the triple for the image-question pair)
+          if($('#answer_question_yes_' + (i+1)).is(':checked')) {
+            answers[0] = true;
+            all_questions = true;
+          } else if($('#answer_question_no_' + (i+1)).is(':checked')) {
+            // If the triple is not relevant, the other questions are not shown.
+            answers[0] = false;
+          } else {
+            // Error if Q1 has not been answered
+            error_msg = "Please, answer Q1 for triple #" + (i+1) + ".";
+            alert(error_msg);
+            break;
+          }
+
+          // If the other questions need to be shown...
+          if(all_questions) {
+            // Checking for Q2 (correct identification of the concepts within the image)
+            if($('#entities_properly_identified_yes_' + (i+1)).is(':checked')) {
+              answers[1] = true;
+            } else if($('#entities_properly_identified_no_' + (i+1)).is(':checked')) {
+              changed = 0;
+              answers[1] = false;
+
+              // Checking label and bbox coordinates for concept #1
+              if($('#label_entity_1_' + (i+1)).val() != "") {
+                // if the label field for concept 1 is different from the original value,
+                // record the new value in the triples array.
+                if($('#label_entity_1_' + (i+1)).val() != reset_triples[i][0][0]) {
+                  triples[i][0][0] = $('#label_entity_1_' + (i+1)).val();
+                  changed = changed + 1;
+                }
+              } else {
+                // Error of the field has been left empty
+                error_msg = "Please, assign the label to Concept #1 for triple #" + (i+1) + ".";
+                alert(error_msg);
+                break;
+              }
+
+              // If the bounding box for entity 1 has width and height = 0
+              if(triples[i][1][2] == 0 && triples[i][1][3] == 0) {
+                error_msg = "Please, assign the bounding box for Concept #1 for triple #" + (i+1) + ".";
+                alert(error_msg);
+                break;
+              } else if(triples[i][1][0] != reset_triples[i][1][0] || 
+                        triples[i][1][1] != reset_triples[i][1][1] || 
+                        triples[i][1][2] != reset_triples[i][1][2] || 
+                        triples[i][1][3] != reset_triples[i][1][3]) {
+                // if any of the initial x, y, width, or height have been changed
+                changed = changed + 1;
+              }
+
+              // Checking label and bbox coordinates for concept #2
+              if($('#label_entity_2_' + (i+1)).val() != "") {
+                if($('#label_entity_2_' + (i+1)).val() != reset_triples[i][0][2]) {
+                  triples[i][0][2] = $('#label_entity_2_' + (i+1)).val();
+                  changed = changed + 1;
+                }
+              } else {
+                error_msg = "Please, assign the label to Concept #2 for triple #" + (i+1) + ".";
+                alert(error_msg);
+                break;
+              }
+
+              if(triples[i][2][2] == 0 && triples[i][2][3] == 0) {
+                error_msg = "Please, assign the bounding box for Concept #2 for triple #" + (i+1);
+                alert(error_msg);
+                break;
+              } else if(triples[i][2][0] != reset_triples[i][2][0] || 
+                        triples[i][2][1] != reset_triples[i][2][1] || 
+                        triples[i][2][2] != reset_triples[i][2][2] || 
+                        triples[i][2][3] != reset_triples[i][2][3]) {
+                changed = changed + 1;
+              }
+
+              // If the answer to Q2 is 'no' but no changes have been made
+              if(changed == 0) {
+                error_msg = "Please, assign new labels or coordinates for Q2 for triple #" + (i+1) + ". ";
+                error_msg += "Otherwise, change you answer to Q2 to 'yes' if nothing needs to be changed."
+                alert(error_msg);
+                break;
+              }
+            } else {
+              // If there is no answer for Q2
+              error_msg = "Please, answer Q2 for triple #" + (i+1) + ".";
+              alert(error_msg);
+              break;
+            }
+
+            // Checking answers for Q3 (appropriateness of the predicate)
+            if($('#relationship_properly_defined_yes_' + (i+1)).is(':checked')) {
+              // If the predicate is correct
+              answers[2] = "true";
+            } else if($('#relationship_properly_defined_inc_rel_' + (i+1)).is(':checked')) {
+              // If the predicate is incorrect
+              answers[2] = "incorrect_relationship";
+
+              if($('#predicate_' + (i+1)).val() != "") {
+                // If the new predicate is different from the original one, store it
+                if($('#predicate_' + (i+1)).val() != reset_triples[i][0][1]) {
+                  triples[i][0][1] = $('#predicate_' + (i+1)).val();
+                } else {
+                  // Otherwise, ask for a new predicate or change the answer
+                  error_msg = "Please, assign a new predicate to triple #" + (i+1) + ". ";
+                  error_msg += "Otherwise, change your answer to Q3."
+                  alert(error_msg);
+                  break;
+                }
+              } else {
+                // If the predicate field is left empty
+                error_msg = "Please, assign a predicate to triple #" + (i+1) + ". ";
+                error_msg += "Otherwise, change your answer to Q3."
+                alert(error_msg);
+                break;
+              }
+
+            } else if($('#relationship_properly_defined_no_' + (i+1)).is(':checked')) {
+              // If the concepts should not be related together
+              answers[2] = "false";
+            } else {
+              // If Q3 was left empty 
+              error_msg = "Please, answer Q3 for triple #" + (i+1) + ".";
+              alert(error_msg);
+              break;
+            }
+          }
+
+          // If no error messages were created, append the answers
+          if(error_msg == "") {
+            triples[i].push(answers)
+          }
+        } else {
+          // Check values for the newly added triples
+
+          // Checks label for concept #1
+          if($('#label_entity_1_' + (i+1)).val() != "") {
+            triples[i][0][0] = $('#label_entity_1_' + (i+1)).val();
+          } else {
+            error_msg = "Please, assign the label to Concept #1 for triple #" + (i+1) + ".";
+            alert(error_msg);
+            break;
+          }
+
+          if(triples[i][1][2] == 0 && triples[i][1][3] == 0) {
+            error_msg = "Please, assign the bounding box for Concept #1 for triple #" + (i+1) + ".";
+            alert(error_msg);
+            break;
+          }
+
+          if($('#predicate_' + (i+1)).val() != "") {
+            triples[i][0][1] = $('#predicate_' + (i+1)).val();
+          } else {
+            error_msg = "Please, assign a predicate to triple #" + (i+1) + ".";
+            alert(error_msg);
+            break;
+          }
+
+          if($('#label_entity_2_' + (i+1)).val() != "") {
+            triples[i][0][2] = $('#label_entity_2_' + (i+1)).val();
+          } else {
+            error_msg = "Please, assign the label to Concept #1 for triple #" + (i+1) + ".";
+            alert(error_msg);
+            break;
+          }
+
+          if(triples[i][2][2] == 0 && triples[i][2][3] == 0) {
+            error_msg = "Please, assign the bounding box for Concept #1 for triple #" + (i+1) + ".";
+            alert(error_msg);
+            break;
+          }
+        }
+      }
+
+      // If no error messages have been created for the original or new triples,
+      // Send data to backend and save.
+      if(error_msg == "") {
+        $.ajax({
+          url: '{{ url|safe }}',
+          type: 'POST',
+          contentType: 'application/json;charset=UTF-8',
+          data: JSON.stringify({ triples: triples, img_id: {{img_id|safe}} }),
+          success: function(url_ajax) {
+            window.location.href = url_ajax
+          }
+        });
+      }
+
+    });
+
+    // Logic to print images and bounding boxes
+    const image_overlay = document.getElementById("image_overlay");
+    const overlay = document.getElementById("overlay");
+    const box_overlay = document.getElementById("box_text_overlay");
+    const ctx = image_overlay.getContext("2d");
+    const ctxo = overlay.getContext("2d");
+    const ctxb = box_overlay.getContext("2d");
+
+    const img_url = '{{ url_for('app.static', filename='/img/' + imgname) }}';
+    const img = new Image;
+
+    var lineW = 0;
+
+    function drawRectangle(label, coords, color) {
+      ctxb.beginPath();
+      ctxb.rect(coords[0], coords[1], coords[2], coords[3]);
+      ctxb.strokeStyle = color;
+      ctxb.closePath();
+      ctxb.stroke();
+
+      let text_measures = ctxb.measureText(label);
+      let text_width = Math.ceil(text_measures.width);
+      let text_height = Math.ceil(text_measures.actualBoundingBoxAscent + text_measures.actualBoundingBoxDescent);
+      let padding = 3
+
+      // Base case - bounding box drawn from top-left -- width and height are positive
+      // Bounding box drawn from bottom-left -- width is positive and height is negative
+      let r_begin_x = coords[0];
+      let r_begin_y = coords[1] - text_height < 0 ? coords[1] : coords[1] - text_height;
+      let text_x = r_begin_x;
+      let text_y = r_begin_y + text_height;
+
+      // Bounding box drawn from top-right -- width is negative and height is positive
+      // Bounding box drawn from bottom-right -- width and height are negative
+      if (coords[2] < 0) {
+        r_begin_x += coords[2];
+        text_x = r_begin_x;
+      }
+
+      ctxb.fillStyle = color;
+      // x, y, width, height
+      ctxb.fillRect(r_begin_x, r_begin_y, text_width, text_height);
+      // label, x, y
+      ctxb.fillStyle = "white";
+      ctxb.fillText(label, text_x, text_y);
+    }
+
+    // When document is loaded, load the image
+    function drawImageReady() {
+      img.onload = function(){
+        image_overlay.width = this.naturalWidth;
+        image_overlay.height = this.naturalHeight;
+        box_overlay.width = this.naturalWidth;
+        box_overlay.height = this.naturalHeight;
+        ctx.drawImage(this, 0, 0);
+        lineW = Math.round(Math.max(this.naturalWidth, this.naturalHeight) / 1000 * 4, 0);
+
+        // Setup canvas and overlay.
+        // Adjust the size of the overlay for bounding boxes to be the same size as the image.
+        $('#overlay').width($('#box_text_overlay').width()).height($('#box_text_overlay').height());
+        // ctx.fillStyle = "red"
+        
+        // Parameters for the bboxes overlay
+        ctxb.strokeStyle = "red";   // color of the bounding boxes
+        ctxb.fillStyle = "white";   // color of the text fill
+        ctxb.lineWidth = lineW;
+        ctxb.font = String(lineW * 10) + "px serif";
+      };
+      img.src = img_url;
+    }
+
+    $(document).ready(function(){
+      drawImageReady();
+    });
+
+    last_opened = 0;
+
+    $(document).on('hidden.bs.collapse', '[id^=collapse_]', function (e) {
+      if(e.target.id.length > 16) {
+        return false;
+      }
+
+      var collapsing_index = Number(e.target.id.slice(9)) - 1;
+
+      if(last_opened == collapsing_index) {
+        img.onload = function(){
+          ctx.drawImage(this, 0, 0);
+          ctxb.clearRect(0, 0, box_overlay.width, box_overlay.height);
+        };
+
+        img.src = img_url;
+      }
+    });
+
+    $(document).on('hidden.bs.collapse', '[id^=new_annotation_]', function (e) {
+      if(e.target.id.length > 16) {
+        return false;
+      }
+
+      var collapsing_index = Number(e.target.id.slice(15)) - 1;
+
+      if(last_opened == collapsing_index) {
+        img.onload = function(){
+          ctx.drawImage(this, 0, 0);
+          ctxb.clearRect(0, 0, box_overlay.width, box_overlay.height);
+        };
+
+        img.src = img_url;
+      }
+    });
+
+    // Switching among different triples
+    $(document).on('click', '[id^=collapse_button_], button > code', function(e) {
+      let target;
+      if(e.target.nodeName.toLowerCase() == 'code'){
+        target = e.target.parentElement;
+      } else {
+        target = e.target;
+      }
+
+      // Avoid weird patterns being matched??
+      if(target.id.length < 16) {
+        return false;
+      }
+
+      img.onload = function() {
+        var index = Number(target.id.slice(16)) - 1;
+        last_opened = index;
+
+        ctx.drawImage(this, 0, 0);
+        ctxb.clearRect(0, 0, box_overlay.width, box_overlay.height);
+        drawRectangle(triples[index][0][0], triples[index][1], "red");
+        drawRectangle(triples[index][0][2], triples[index][2], "blue");
+
+        selected_triple = triples[index];
+      };
+
+      img.src = img_url;
+    });
+
+    // Opt out logic
+    $(document).on('click', '#opt_out_button', function(e){
+        e.preventDefault();
+        $('#opt_out_modal').modal("show");
+    });
+
+    $(document).on('click', '#opt_out_no', function() {
+      $('#opt_out_modal').modal("hide");
+    });
+
+    $(document).on('click', '#opt_out_yes', function() {
+      $('#opt_out_modal').modal("hide");
+
+      $.ajax({
+        url: '{{ opt_out_url|safe }}',
+        type: 'POST',
+        contentType: 'application/json;charset=UTF-8',
+        success: function(url_ajax) {
+          window.location.href = url_ajax
+        }
+      });
+    });
+
+    // == == Logic to hide and show questions based on the answers == ==
+    function show_question(q) {
+      $(q).each(function() {
+        if($(this).hasClass('d-none')) {
+          $(this).removeClass('d-none');
+          $(this).addClass('d-block');
+        }
+      })
+    }
+
+    function hide_question(q) {
+      $(q).each(function() {
+        if($(this).hasClass('d-block')) {
+          $(this).removeClass('d-block');
+          $(this).addClass('d-none');
+        }
+      })
+    }
+
+    $(document).on('click', '[id^=answer_question_yes_]', function(e) {
+      var index = Number(e.target.id.slice(20));
+
+      show_question('.q2_' + index);
+      show_question('.q3_' + index);
+      check_accordions();
+    });
+
+    $(document).on('click', '[id^=answer_question_no_]', function(e) {
+      var index = Number(e.target.id.slice(19));
+
+      hide_question('.q2_' + index);
+      hide_question('.q3_' + index);
+      check_accordions();
+    });
+
+
+    $(document).on('click', '[id^=entities_properly_identified_no_]', function(e) {
+      var index = Number(e.target.id.slice(32));
+      show_question('.q2_extra_' + index);
+      check_accordions();
+    });
+
+    $(document).on('click', '[id^=entities_properly_identified_yes_]', function(e) {
+      var index = $(this).attr('id').split('_').pop();
+      hide_question('.q2_extra_' + index);
+
+      img.onload = function() {
+        // Reset Changes
+        updating_triple_index = index - 1;
+        triples[updating_triple_index][0][0] = reset_triples[updating_triple_index][0][0];
+        triples[updating_triple_index][0][2] = reset_triples[updating_triple_index][0][2];
+        triples[updating_triple_index][1] = reset_triples[updating_triple_index][1];
+        triples[updating_triple_index][2] = reset_triples[updating_triple_index][2];
+
+        $("#label_entity_1_" + index).val(triples[updating_triple_index][0][0]);
+        $("#label_entity_2_" + index).val(triples[updating_triple_index][0][2]);
+        update_labels(index);
+
+        ctx.drawImage(this, 0, 0);
+        ctxb.clearRect(0, 0, box_overlay.width, box_overlay.height);
+        drawRectangle(triples[updating_triple_index][0][0], triples[updating_triple_index][1], "red");
+        drawRectangle(triples[updating_triple_index][0][2], triples[updating_triple_index][2], "blue");
+      };
+
+      img.src = img_url;
+
+      if($('#reset_bounding_box_entity_1_' + (index)).hasClass('d-block')) {
+        $('#reset_bounding_box_entity_1_' + (index)).removeClass('d-block');
+        $('#reset_bounding_box_entity_1_' + (index)).addClass('d-none');
+      }
+
+      if($('#reset_bounding_box_entity_2_' + (index)).hasClass('d-block')) {
+        $('#reset_bounding_box_entity_2_' + (index)).removeClass('d-block');
+        $('#reset_bounding_box_entity_2_' + (index)).addClass('d-none');
+      }
+
+      check_accordions();
+    });
+
+    $(document).on('click', '[id^=relationship_properly_defined_inc_rel_]', function(e) {
+      var index = Number(e.target.id.slice(38));
+      show_question('.q3_extra_' + index);
+      check_accordions();
+    });
+
+    $(document).on('click', '[id^=relationship_properly_defined_no_]', function(e) {
+      var index = Number(e.target.id.slice(33));
+      hide_question('.q3_extra_' + index);
+      $("#predicate_" + index).val("");
+      check_accordions();
+    });
+
+    $(document).on('click', '[id^=relationship_properly_defined_yes_]', function(e) {
+      var index = $(this).attr('id').split('_').pop();
+      var old_predicate_value = reset_triples[index - 1][0][1];
+      hide_question('.q3_extra_' + index);
+      $("#predicate_" + index).val(old_predicate_value);
+      check_accordions();
+      update_labels(index);
+    });
+
+    // ==================================================================
+
+    // == == == == == Logic for drawing new bounding boxes == == == == == 
+    var updating_triple_index = 0;
+    var entity_index = 0;
+
+    $(document).on('click', '[id^=change_bounding_box_entity_1_]', function(e) {
+      e.preventDefault();
+
+      updating_triple_index = Number(e.target.id.slice(29)) - 1;
+      entity_index = 1;
+
+      img.onload = function(){
+        ctx.drawImage(this, 0, 0);
+        ctxb.clearRect(0, 0, box_overlay.width, box_overlay.height);
+        drawRectangle(triples[updating_triple_index][0][2], triples[updating_triple_index][2], "blue");
+
+        enable_draw = true;
+        $("html").css("cursor", "crosshair");
+      };
+
+      img.src = img_url;
+    })
+
+    $(document).on('click', '[id^=change_bounding_box_entity_2_]', function(e) {
+      e.preventDefault();
+
+      updating_triple_index = Number(e.target.id.slice(29)) - 1;
+      entity_index = 2;
+
+      img.onload = function(){
+        ctx.drawImage(this, 0, 0);
+        ctxb.clearRect(0, 0, box_overlay.width, box_overlay.height);
+        drawRectangle(triples[updating_triple_index][0][0], triples[updating_triple_index][1], "red");
+
+        enable_draw = true;
+        $("html").css("cursor", "crosshair");
+      };
+
+      img.src = img_url;
+    })
+
+    $(document).on('click', '[id^=reset_bounding_box_entity_1_]', function(e) {
+      e.preventDefault();
+
+      updating_triple_index = Number(e.target.id.slice(28)) - 1;
+
+      img.onload = function(){
+        if(reset_triples.length > updating_triple_index) {
+          triples[updating_triple_index][1] = reset_triples[updating_triple_index][1];
+        } else {
+          triples[updating_triple_index][1] = [0, 0, 0, 0]
+        }
+
+        check_accordions()
+
+        ctx.drawImage(this, 0, 0);
+        ctxb.clearRect(0, 0, box_overlay.width, box_overlay.height);
+        drawRectangle(triples[updating_triple_index][0][0], triples[updating_triple_index][1], "red");
+        drawRectangle(triples[updating_triple_index][0][2], triples[updating_triple_index][2], "blue");
+      };
+
+      img.src = img_url;
+
+      if($('#reset_bounding_box_entity_1_' + (updating_triple_index + 1)).hasClass('d-block')) {
+        $('#reset_bounding_box_entity_1_' + (updating_triple_index + 1)).removeClass('d-block');
+        $('#reset_bounding_box_entity_1_' + (updating_triple_index + 1)).addClass('d-none');
+      }
+    })
+
+    $(document).on('click', '[id^=reset_bounding_box_entity_2_]', function(e) {
+      e.preventDefault();
+
+      updating_triple_index = Number(e.target.id.slice(28)) - 1;
+
+      img.onload = function(){
+        if(reset_triples.length > updating_triple_index) {
+          triples[updating_triple_index][2] = reset_triples[updating_triple_index][2];
+        } else {
+          triples[updating_triple_index][2] = [0, 0, 0, 0]
+        }
+
+        check_accordions()
+
+        ctx.drawImage(this, 0, 0);
+        ctxb.clearRect(0, 0, box_overlay.width, box_overlay.height);
+        drawRectangle(triples[updating_triple_index][0][0], triples[updating_triple_index][1], "red");
+        drawRectangle(triples[updating_triple_index][0][2], triples[updating_triple_index][2], "blue");
+      };
+
+      img.src = img_url;
+
+      if($('#reset_bounding_box_entity_2_' + (updating_triple_index + 1)).hasClass('d-block')) {
+        $('#reset_bounding_box_entity_2_' + (updating_triple_index + 1)).removeClass('d-block');
+        $('#reset_bounding_box_entity_2_' + (updating_triple_index + 1)).addClass('d-none');
+      }
+    })
+
+    // enable draw on image
+    var enable_draw = false;
+
+    // calculate where the canvas is on the window
+    // (used to help calculate mouseX/mouseY)
+    var offsetX = $("#box_text_overlay").offset().left;
+    var offsetY = $("#box_text_overlay").offset().top;
+
+    // this flage is true when the user is dragging the mouse
+    var isDown = false;
+
+    // these vars will hold the starting mouse position
+    var startX = 0;
+    var startY = 0;
+
+    var prevStartX = 0;
+    var prevStartY = 0;
+
+    var prevWidth = 0;
+    var prevHeight = 0;
+
+    function handleMouseDown(e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        if (!enable_draw) {
+
+        }
+
+        // save the starting x/y of the rectangle
+        startX = parseInt($(window).scrollLeft() + e.clientX - offsetX);
+        startY = parseInt($(window).scrollTop() + e.clientY - offsetY);
+
+        // set a flag indicating the drag has begun
+        isDown = true;
+    }
+
+    function handleMouseMove(e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        // if we're not dragging, just return
+        if (!isDown || !enable_draw) {
+            return;
+        }
+
+        // get the current mouse position
+        mouseX = parseInt($(window).scrollLeft() + e.clientX - offsetX);
+        mouseY = parseInt($(window).scrollTop() + e.clientY - offsetY);
+
+        prevStartX = startX;
+    		prevStartY = startY;
+
+    		prevWidth  = mouseX - startX;
+    		prevHeight = mouseY - startY;
+    }
+
+    function handleMouseUp(e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        if (!enable_draw) {
+          return;
+        }
+
+        // the drag is over, clear the dragging flag
+        isDown = false;
+        enable_draw = false;
+        $("html").css("cursor", "auto");
+
+        var ratioC = img.naturalWidth/$('#overlay').width();
+        //ctx.strokeRect(prevStartX * ratioC, prevStartY * ratioC, prevWidth * ratioC, prevHeight * ratioC);
+
+        triples[updating_triple_index][entity_index] = [prevStartX * ratioC, prevStartY * ratioC, prevWidth * ratioC, prevHeight * ratioC];
+        show_question('#reset_bounding_box_entity_' + entity_index + '_' + (updating_triple_index + 1));
+
+        if(entity_index == 1) {
+          drawRectangle(triples[updating_triple_index][0][0], triples[updating_triple_index][1], "red");
+        } else if(entity_index == 2) {
+          drawRectangle(triples[updating_triple_index][0][2], triples[updating_triple_index][2], "blue");
+        }
+
+        check_accordions()
+    }
+
+    function handleMouseOut(e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        if (!enable_draw) {
+          return;
+        }
+
+        // the drag is over, clear the dragging flag
+        isDown = false;
+        enable_draw = false;
+        $("html").css("cursor", "auto");
+    }
+
+    // listen for mouse events
+    $("#overlay").mousedown(function (e) {
+        handleMouseDown(e);
+    });
+
+    $("#overlay").mousemove(function (e) {
+        handleMouseMove(e);
+    });
+
+    $("#overlay").mouseup(function (e) {
+        handleMouseUp(e);
+    });
+
+    $("#overlay").mouseout(function (e) {
+        handleMouseOut(e);
+    });
+
+    window.onresize = function () {
+      $('#overlay').width($('#box_text_overlay').width()).height($('#box_text_overlay').height());
+    }
+
+    var count = triples.length;
+    $(document).on('click', '#new_annotation_button', function(e) {
+      e.preventDefault();
+
+      count = count + 1;
+
+      $.ajax({
+        url: '{{ generate_new_annotation_url|safe }}',
+        type: 'POST',
+        contentType: 'application/json;charset=UTF-8',
+        data: JSON.stringify({ count: count }),
+        success: function(annotation_html) {
+          if(annotation_html[0] != '<') {
+            window.location.href = annotation_html
+          }
+          $('#triples_accordion').append(annotation_html);
+          triples.push([["", "", ""], [0, 0, 0, 0], [0, 0, 0, 0]])
+        }
+      });
+    })
+
+    $(document).on('click', '[id^=remove_annotation_]', function(e) {
+      e.preventDefault();
+      remove_annotation = Number(e.target.id.slice(18)) - 1;
+
+      $('#new_annotation_heading_' + (remove_annotation + 1)).parent().remove()
+      triples.splice(remove_annotation);
+
+      count = count - 1;
+    })
+
+    last_chosen_letter = "";
+    entities_list_suggestion = {{ entities_list_suggestion|safe }}
+    predicates_list_suggestion = {{ predicates_list_suggestion|safe }}
+
+    // == == == == == Loading and handling entity suggestions == == == == ==
+    let last_chosen_letter_entity = "";
+    $(document).on('input', '[id^=label_entity_]', function(e) {
+      let input_val_entity = $("#" + e.target.id).val()
+      
+      if(input_val_entity == "") {
+        check_accordions();
+      }
+
+      if(!(/[a-zA-Z]/).test(input_val_entity)) {
+        return;
+      }
+
+      let first_letter_entity = input_val_entity[0].toLowerCase();
+
+      // Ensure the first letter is a valid character (a-z)
+      if (first_letter_entity < 'a' || first_letter_entity > 'z') {
+        return;
+      }
+
+      if(last_chosen_letter_entity != first_letter_entity && first_letter_entity != "") {
+        last_chosen_letter_entity = first_letter_entity;
+
+        let options_html_entities = "";
+        let suggestions_entities = entities_list_suggestion[first_letter_entity.charCodeAt(0) - 97];  // Get suggestions for the letter
+        
+        for (let j = 0; j < suggestions_entities.length; j++) {
+          options_html_entities += "<option value='" + suggestions_entities[j] + "'/>";
+        }
+
+        // Update the entities list with the new options in one DOM operation
+        $("#entities").html(options_html_entities);
+      }
+
+      updating_triple_index = Number(e.target.id.slice(15)) - 1;
+      updating_label_index = Number(String(e.target.id.slice(13))[0]);
+
+      img.onload = function(){
+        if(updating_label_index == 1) {
+          triples[updating_triple_index][0][0] = $('#' + e.target.id).val();
+        } else if(updating_label_index == 2) {
+          triples[updating_triple_index][0][2] = $('#' + e.target.id).val();
+        }
+
+        ctx.drawImage(this, 0, 0);
+        ctxb.clearRect(0, 0, box_overlay.width, box_overlay.height);
+        drawRectangle(triples[updating_triple_index][0][0], triples[updating_triple_index][1], "red");
+        drawRectangle(triples[updating_triple_index][0][2], triples[updating_triple_index][2], "blue");
+      };
+
+      img.src = img_url;
+
+      check_accordions();
+    });
+    // ========================================================================
+
+    // == == == == == Loading and handling predicate suggestions == == == == ==
+    let last_chosen_letter_predicate = "";
+    $(document).on('input', '[id^=predicate_]', function(e) {
+      let input_val_predicate = $("#" + e.target.id).val();
+      
+      // If input does not contain letters, exit early
+      if(!(/[a-zA-Z]/).test(input_val_predicate)) {
+        return;
+      }
+
+      // Get the first letter in lowercase
+      let first_letter_predicate = input_val_predicate[0].toLowerCase();
+
+      // Ensure the first letter is a valid character (a-z)
+      if (first_letter_predicate < 'a' || first_letter_predicate > 'z') {
+        return;
+      }
+
+      if(last_chosen_letter_predicate != first_letter_predicate && first_letter_predicate != "") {
+        last_chosen_letter_predicate = first_letter_predicate;
+
+        let options_html_predicate = "";
+        let suggestions_predicate = predicates_list_suggestion[first_letter_predicate.charCodeAt(0) - 97];  // Get suggestions for the letter
+        
+        for (let j = 0; j < suggestions_predicate.length; j++) {
+          options_html_predicate += "<option value='" + suggestions_predicate[j] + "'/>";
+        }
+
+        // Update the predicates list with the new options in one DOM operation
+        $("#predicates").html(options_html_predicate);
+
+        // $("#predicates").focus();
+        // $("#" + e.target.id).focus();
+      }
+
+      check_accordions();
+    });
+
+    $(document).ready(function() {
+      $('[id^=predicate_]').each(function() {
+        if ($(this).val()) {
+            $(this).trigger('input');
+        }
+      });
+    });
+    // ========================================================================
+
+    // == == == == == == Live checking the content of accordions == == == == == ==
+    function check_accordions() {
+      completed_array = [];
+
+      for(var i = 0; i < triples.length; i++) {
+        completed = true;
+        if(i < reset_triples.length) {
+          all_questions = false;
+
+          if (!$('#answer_question_yes_' + (i+1)).is(':checked') && 
+              !$('#answer_question_no_' + (i+1)).is(':checked')) {
+              completed = false;
+          } else if ($('#answer_question_yes_' + (i+1)).is(':checked')) {
+            all_questions = true;
+          }
+
+          if(all_questions) {
+            if($('#entities_properly_identified_yes_' + (i+1)).is(':checked')) {
+
+            } else if($('#entities_properly_identified_no_' + (i+1)).is(':checked')) {
+              changed = 0;
+
+              if($('#label_entity_1_' + (i+1)).val() != "") {
+                if($('#label_entity_1_' + (i+1)).val() != reset_triples[i][0][0]) {
+                  changed = changed + 1;
+                }
+              } else {
+                completed = false;
+              }
+
+              if(triples[i][1][2] == 0 && triples[i][1][3] == 0) {
+
+              } else if(triples[i][1][0] != reset_triples[i][1][0] ||
+                        triples[i][1][1] != reset_triples[i][1][1] ||
+                        triples[i][1][2] != reset_triples[i][1][2] ||
+                        triples[i][1][3] != reset_triples[i][1][3]) {
+                changed = changed + 1;
+              }
+
+              if($('#label_entity_2_' + (i+1)).val() != "") {
+                if($('#label_entity_2_' + (i+1)).val() != reset_triples[i][0][2]) {
+                  changed = changed + 1;
+                }
+              } else {
+                completed = false;
+              }
+
+              if(triples[i][2][2] == 0 && triples[i][2][3] == 0) {
+
+              } else if(triples[i][2][0] != reset_triples[i][2][0] ||
+                        triples[i][2][1] != reset_triples[i][2][1] ||
+                        triples[i][2][2] != reset_triples[i][2][2] ||
+                        triples[i][2][3] != reset_triples[i][2][3]) {
+                changed = changed + 1;
+              }
+
+              if(changed == 0) {
+                completed = false;
+              }
+            } else {
+              completed = false;
+            }
+
+            if($('#relationship_properly_defined_yes_' + (i+1)).is(':checked')) {
+
+            } else if($('#relationship_properly_defined_inc_rel_' + (i+1)).is(':checked')) {
+
+              if($('#predicate_' + (i+1)).val() != "") {
+                if($('#predicate_' + (i+1)).val() != reset_triples[i][0][1]) {
+
+                } else {
+                  completed = false;
+                }
+              } else {
+                completed = false;
+              }
+
+            } else if($('#relationship_properly_defined_no_' + (i+1)).is(':checked')) {
+
+            } else {
+              completed = false;
+            }
+          }
+        } else {
+          if($('#label_entity_1_' + (i+1)).val() == "") {
+            completed = false;
+          }
+
+          if(triples[i][1][2] == 0 && triples[i][1][3] == 0) {
+            completed = false;
+          }
+
+          if($('#predicate_' + (i+1)).val() == "") {
+            completed = false;
+          }
+
+          if($('#label_entity_2_' + (i+1)).val() == "") {
+            completed = false;
+          }
+
+          if(triples[i][2][2] == 0 && triples[i][2][3] == 0) {
+            completed = false;
+          }
+        }
+
+        completed_array.push(completed)
+      }
+
+      for(var i = 0; i < completed_array.length; i++) {
+        if(completed_array[i]) {
+          $("#collapse_status_" + (i+1)).text("[OK]");
+          $("#collapse_status_" + (i+1)).css("color", "green");
+        } else {
+          $("#collapse_status_" + (i+1)).text("[TO DO]");
+          $("#collapse_status_" + (i+1)).css("color", "red");
+        }
+      }
+    }
+
+  </script>
+
+{% endblock %}

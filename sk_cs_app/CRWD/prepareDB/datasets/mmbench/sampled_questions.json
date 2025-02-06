@@ -1,0 +1,2087 @@
+[
+    {
+        "question_id": 2001830,
+        "question": "Which of the following captions best describes this image?",
+        "class": "image_scene",
+        "img": "187.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/187.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A woman sculpting a statue from clay.",
+            "B": "A person taking photographs of a cityscape.",
+            "C": "A person painting a landscape on a canvas.",
+            "D": "A group of people watching a play in a theater."
+        },
+        "answer": "D"
+    },
+    {
+        "question_id": 2001816,
+        "question": "Which of the following captions best describes this image?",
+        "class": "image_scene",
+        "img": "178.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/178.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A person skiing down a mountain",
+            "B": "A woman doing yoga in a park",
+            "C": "A person swimming in a pool",
+            "D": "A group of people sunbathing on a beach"
+        },
+        "answer": "B"
+    },
+    {
+        "question_id": 3001801,
+        "question": "Which of the following captions best describes this image?",
+        "class": "image_scene",
+        "img": "231.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/231.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A person kayaking on a lake",
+            "B": "A family having a picnic in a park",
+            "C": "A person hiking on a mountain trail",
+            "D": "A group of people sitting around a campfire"
+        },
+        "answer": "D"
+    },
+    {
+        "question_id": 1824,
+        "question": "Which of the following captions best describes this image?",
+        "class": "image_scene",
+        "img": "54.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/54.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A group of people camping in a forest",
+            "B": "A person riding a horse in a field",
+            "C": "A woman fishing on a riverbank",
+            "D": "A person rock climbing on a mountain"
+        },
+        "answer": "D"
+    },
+    {
+        "question_id": 91,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_scene",
+        "img": "24.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/24.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A drivers side rear view mirror on an auto waiting at a red traffic light.",
+            "B": "Two horses gaze out from among the trees.",
+            "C": "Surfer riding on decent sized wave as it breaks in ocean.",
+            "D": "A man in a suite sits at a table."
+        },
+        "answer": "B"
+    },
+    {
+        "question_id": 3001815,
+        "question": "Which of the following captions best describes this image?",
+        "class": "image_scene",
+        "img": "240.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/240.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A group of people sunbathing on a beach",
+            "B": "A person skiing down a mountain",
+            "C": "A woman doing yoga in a park",
+            "D": "A person swimming in a pool"
+        },
+        "answer": "B"
+    },
+    {
+        "question_id": 2000078,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_scene",
+        "img": "148.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/148.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A man is throwing a frisbee in a sandy area.",
+            "B": "A mother and son elephant walking through a green grass field.",
+            "C": "A woman standing in front of a horse.",
+            "D": "A man standing next to a red motorcycle on a stone walkway."
+        },
+        "answer": "B"
+    },
+    {
+        "question_id": 47,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_scene",
+        "img": "7.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/7.jpg",
+        "is_open": false,
+        "options": {
+            "A": "People in a horse drawn buggy on a city street.",
+            "B": "A fire hydrant with a pair of eye stickers making a face on it.",
+            "C": "a large food truck is parked on the side of the street",
+            "D": "Neither one of these people had a good flight."
+        },
+        "answer": "B"
+    },
+    {
+        "question_id": 3001793,
+        "question": "Which of the following captions best describes this image?",
+        "class": "image_scene",
+        "img": "224.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/224.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A train traveling through a tunnel",
+            "B": "A plane flying through clouds",
+            "C": "A boat sailing on a lake",
+            "D": "A car driving on a highway at night"
+        },
+        "answer": "D"
+    },
+    {
+        "question_id": 2000070,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_scene",
+        "img": "144.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/144.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A vehicle is shown transporting a shipment of bicycles.",
+            "B": "a laptop a mouse a desk and some wires",
+            "C": "some clouds a traffic light and some buildings",
+            "D": "A man walks through the ocean water with a surfboard under his arm."
+        },
+        "answer": "A"
+    },
+    {
+        "question_id": 74,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_scene",
+        "img": "18.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/18.jpg",
+        "is_open": false,
+        "options": {
+            "A": "an elephant is in some brown grass and some trees",
+            "B": "The two pieces of abandoned luggage are waiting to be claimed.",
+            "C": "A large polar bear playing with two balls.",
+            "D": "A large crowd of people huddling under umbrellas."
+        },
+        "answer": "A"
+    },
+    {
+        "question_id": 3001816,
+        "question": "Which of the following captions best describes this image?",
+        "class": "image_scene",
+        "img": "241.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/241.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A group of people sunbathing on a beach",
+            "B": "A person skiing down a mountain",
+            "C": "A woman doing yoga in a park",
+            "D": "A person swimming in a pool"
+        },
+        "answer": "C"
+    },
+    {
+        "question_id": 3000074,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_scene",
+        "img": "209.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/209.jpg",
+        "is_open": false,
+        "options": {
+            "A": "The two pieces of abandoned luggage are waiting to be claimed.",
+            "B": "A large polar bear playing with two balls.",
+            "C": "A large crowd of people huddling under umbrellas.",
+            "D": "an elephant is in some brown grass and some trees"
+        },
+        "answer": "D"
+    },
+    {
+        "question_id": 2000082,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_scene",
+        "img": "149.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/149.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A large city bus is parked on the side of a street.",
+            "B": "A man holding a frisbee in the field close to some buildings",
+            "C": "Five people stand on a shoreline, with woods in the background.",
+            "D": "THERE IS A COMMUTER TRAIN ON THE TRACKS"
+        },
+        "answer": "C"
+    },
+    {
+        "question_id": 2001802,
+        "question": "Which of the following captions best describes this image?",
+        "class": "image_scene",
+        "img": "169.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/169.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A family having a picnic in a park",
+            "B": "A person hiking on a mountain trail",
+            "C": "A group of people sitting around a campfire",
+            "D": "A person kayaking on a lake"
+        },
+        "answer": "D"
+    },
+    {
+        "question_id": 2000058,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_scene",
+        "img": "141.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/141.jpg",
+        "is_open": false,
+        "options": {
+            "A": "An elephant walking through a lake near land.",
+            "B": "A black cat and a black bird in front of a blue door to a red building.",
+            "C": "A couple of elephants walking around a body of water.",
+            "D": "A red and blue train on a bridge during a cloudy day."
+        },
+        "answer": "D"
+    },
+    {
+        "question_id": 3001808,
+        "question": "Which of the following captions best describes this image?",
+        "class": "image_scene",
+        "img": "234.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/234.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A group of people eating at a restaurant",
+            "B": "A person playing with a pet dog",
+            "C": "A woman getting a pedicure at a salon",
+            "D": "A person holding a bouquet of flowers"
+        },
+        "answer": "C"
+    },
+    {
+        "question_id": 3001809,
+        "question": "Which of the following captions best describes this image?",
+        "class": "image_scene",
+        "img": "235.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/235.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A group of people watching a movie in a theater",
+            "B": "A person reading a book in a library",
+            "C": "A woman applying makeup in front of a mirror",
+            "D": "A person taking a photo with a camera"
+        },
+        "answer": "D"
+    },
+    {
+        "question_id": 58,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_scene",
+        "img": "13.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/13.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A couple of elephants walking around a body of water.",
+            "B": "A red and blue train on a bridge during a cloudy day.",
+            "C": "An elephant walking through a lake near land.",
+            "D": "A black cat and a black bird in front of a blue door to a red building."
+        },
+        "answer": "B"
+    },
+    {
+        "question_id": 2001809,
+        "question": "Which of the following captions best describes this image?",
+        "class": "image_scene",
+        "img": "172.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/172.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A person reading a book in a library",
+            "B": "A woman applying makeup in front of a mirror",
+            "C": "A person taking a photo with a camera",
+            "D": "A group of people watching a movie in a theater"
+        },
+        "answer": "C"
+    },
+    {
+        "question_id": 3001805,
+        "question": "Which of the following captions best describes this image?",
+        "class": "image_scene",
+        "img": "233.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/233.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A group of people eating at a restaurant",
+            "B": "A person playing with a pet dog",
+            "C": "A woman getting a pedicure at a salon",
+            "D": "A person holding a bouquet of flowers"
+        },
+        "answer": "D"
+    },
+    {
+        "question_id": 1000055,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_scene",
+        "img": "75.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/75.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A big billboard is painted onto the side of a brick building.",
+            "B": "A man on a skateboard on a concrete lip.",
+            "C": "Hand holding an electronic component with a clock on it.",
+            "D": "Young woman lying face down on a large bed with a book."
+        },
+        "answer": "A"
+    },
+    {
+        "question_id": 2000053,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_scene",
+        "img": "138.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/138.jpg",
+        "is_open": false,
+        "options": {
+            "A": "An empty kitchen with a window and a refrigerators.",
+            "B": "A bowl of bananas sitting on the kitchen table.",
+            "C": "A group of giraffes and zebras in a wildlife exhibit.",
+            "D": "A man wearing a black hat while talking on a phone."
+        },
+        "answer": "C"
+    },
+    {
+        "question_id": 3000047,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_scene",
+        "img": "198.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/198.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A fire hydrant with a pair of eye stickers making a face on it.",
+            "B": "a large food truck is parked on the side of the street",
+            "C": "Neither one of these people had a good flight.",
+            "D": "People in a horse drawn buggy on a city street."
+        },
+        "answer": "A"
+    },
+    {
+        "question_id": 1000049,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_scene",
+        "img": "73.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/73.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A yellow and blue fire hydrant sitting on a sidewalk.",
+            "B": "a woman a sign and a tan teddy bear",
+            "C": "An old building with a steeple and two clocks is surrounded by gray clouds.",
+            "D": "a girl in shorts and shoes kicking a soccer ball in a stadium"
+        },
+        "answer": "A"
+    },
+    {
+        "question_id": 1001802,
+        "question": "Which of the following captions best describes this image?",
+        "class": "image_scene",
+        "img": "105.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/105.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A person hiking on a mountain trail",
+            "B": "A group of people sitting around a campfire",
+            "C": "A person kayaking on a lake",
+            "D": "A family having a picnic in a park"
+        },
+        "answer": "C"
+    },
+    {
+        "question_id": 3001835,
+        "question": "Which of the following captions best describes this image?",
+        "class": "image_scene",
+        "img": "252.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/252.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A group of people playing cards at a table.",
+            "B": "A woman using a computer at a desk.",
+            "C": "A person reading a magazine on a couch.",
+            "D": "A person playing video games on a console."
+        },
+        "answer": "B"
+    },
+    {
+        "question_id": 1795,
+        "question": "Which of the following captions best describes this image?",
+        "class": "image_scene",
+        "img": "35.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/35.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A car driving on a highway at night",
+            "B": "A train traveling through a tunnel",
+            "C": "A plane flying through clouds",
+            "D": "A boat sailing on a lake"
+        },
+        "answer": "C"
+    },
+    {
+        "question_id": 3000070,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_scene",
+        "img": "207.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/207.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A man walks through the ocean water with a surfboard under his arm.",
+            "B": "A vehicle is shown transporting a shipment of bicycles.",
+            "C": "a laptop a mouse a desk and some wires",
+            "D": "some clouds a traffic light and some buildings"
+        },
+        "answer": "B"
+    },
+    {
+        "question_id": 1000027,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_scene",
+        "img": "66.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/66.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A bathroom with multicolored tile, bathtub and pedestal sink.",
+            "B": "A parking meter sign points to where the meter is",
+            "C": "A woman is walking across a wooden bridge with a surfboard.",
+            "D": "A picture of a vase of flowers on a shelf."
+        },
+        "answer": "A"
+    },
+    {
+        "question_id": 1808,
+        "question": "Which of the following captions best describes this image?",
+        "class": "image_scene",
+        "img": "43.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/43.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A person holding a bouquet of flowers",
+            "B": "A group of people eating at a restaurant",
+            "C": "A person playing with a pet dog",
+            "D": "A woman getting a pedicure at a salon"
+        },
+        "answer": "D"
+    },
+    {
+        "question_id": 2000062,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_scene",
+        "img": "142.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/142.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A small cat is sitting on the wooden beam.",
+            "B": "The skaters are trying their tricks on the abandoned street.",
+            "C": "An oven sitting on the concrete outside of a building.",
+            "D": "A person is skiing down a snowy mountain."
+        },
+        "answer": "A"
+    },
+    {
+        "question_id": 1001791,
+        "question": "Which of the following captions best describes this image?",
+        "class": "image_scene",
+        "img": "95.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/95.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A woman standing on a balcony overlooking a city",
+            "B": "A couple sitting on a bench in a park",
+            "C": "A group of people walking across a bridge",
+            "D": "A person sitting on a rock near a river"
+        },
+        "answer": "D"
+    },
+    {
+        "question_id": 1001795,
+        "question": "Which of the following captions best describes this image?",
+        "class": "image_scene",
+        "img": "99.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/99.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A boat sailing on a lake",
+            "B": "A car driving on a highway at night",
+            "C": "A train traveling through a tunnel",
+            "D": "A plane flying through clouds"
+        },
+        "answer": "D"
+    },
+    {
+        "question_id": 2000091,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_scene",
+        "img": "152.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/152.jpg",
+        "is_open": false,
+        "options": {
+            "A": "Surfer riding on decent sized wave as it breaks in ocean.",
+            "B": "A man in a suite sits at a table.",
+            "C": "A drivers side rear view mirror on an auto waiting at a red traffic light.",
+            "D": "Two horses gaze out from among the trees."
+        },
+        "answer": "D"
+    },
+    {
+        "question_id": 3000078,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_scene",
+        "img": "211.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/211.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A man standing next to a red motorcycle on a stone walkway.",
+            "B": "A man is throwing a frisbee in a sandy area.",
+            "C": "A mother and son elephant walking through a green grass field.",
+            "D": "A woman standing in front of a horse."
+        },
+        "answer": "C"
+    },
+    {
+        "question_id": 3000082,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_scene",
+        "img": "212.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/212.jpg",
+        "is_open": false,
+        "options": {
+            "A": "THERE IS A COMMUTER TRAIN ON THE TRACKS",
+            "B": "A large city bus is parked on the side of a street.",
+            "C": "A man holding a frisbee in the field close to some buildings",
+            "D": "Five people stand on a shoreline, with woods in the background."
+        },
+        "answer": "D"
+    },
+    {
+        "question_id": 1000069,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_scene",
+        "img": "79.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/79.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A blender, lime, salt, and tequila on a counter.",
+            "B": "A close up of a bicycle  parked on a train platform.",
+            "C": "Cows are walking through tall grass near many trees.",
+            "D": "Beautiful silhouette of a woman holding a surfboard at a beach."
+        },
+        "answer": "C"
+    },
+    {
+        "question_id": 1830,
+        "question": "Which of the following captions best describes this image?",
+        "class": "image_scene",
+        "img": "59.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/59.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A person painting a landscape on a canvas.",
+            "B": "A group of people watching a play in a theater.",
+            "C": "A woman sculpting a statue from clay.",
+            "D": "A person taking photographs of a cityscape."
+        },
+        "answer": "B"
+    },
+    {
+        "question_id": 78,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_scene",
+        "img": "20.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/20.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A woman standing in front of a horse.",
+            "B": "A man standing next to a red motorcycle on a stone walkway.",
+            "C": "A man is throwing a frisbee in a sandy area.",
+            "D": "A mother and son elephant walking through a green grass field."
+        },
+        "answer": "D"
+    },
+    {
+        "question_id": 2001824,
+        "question": "Which of the following captions best describes this image?",
+        "class": "image_scene",
+        "img": "182.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/182.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A woman fishing on a riverbank",
+            "B": "A person rock climbing on a mountain",
+            "C": "A group of people camping in a forest",
+            "D": "A person riding a horse in a field"
+        },
+        "answer": "B"
+    },
+    {
+        "question_id": 62,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_scene",
+        "img": "14.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/14.jpg",
+        "is_open": false,
+        "options": {
+            "A": "An oven sitting on the concrete outside of a building.",
+            "B": "A person is skiing down a snowy mountain.",
+            "C": "A small cat is sitting on the wooden beam.",
+            "D": "The skaters are trying their tricks on the abandoned street."
+        },
+        "answer": "C"
+    },
+    {
+        "question_id": 3001802,
+        "question": "Which of the following captions best describes this image?",
+        "class": "image_scene",
+        "img": "232.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/232.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A person kayaking on a lake",
+            "B": "A family having a picnic in a park",
+            "C": "A person hiking on a mountain trail",
+            "D": "A group of people sitting around a campfire"
+        },
+        "answer": "A"
+    },
+    {
+        "question_id": 3000058,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_scene",
+        "img": "204.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/204.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A red and blue train on a bridge during a cloudy day.",
+            "B": "An elephant walking through a lake near land.",
+            "C": "A black cat and a black bird in front of a blue door to a red building.",
+            "D": "A couple of elephants walking around a body of water."
+        },
+        "answer": "A"
+    },
+    {
+        "question_id": 1001816,
+        "question": "Which of the following captions best describes this image?",
+        "class": "image_scene",
+        "img": "114.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/114.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A woman doing yoga in a park",
+            "B": "A person swimming in a pool",
+            "C": "A group of people sunbathing on a beach",
+            "D": "A person skiing down a mountain"
+        },
+        "answer": "A"
+    },
+    {
+        "question_id": 2001792,
+        "question": "Which of the following captions best describes this image?",
+        "class": "image_scene",
+        "img": "160.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/160.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A person sitting on a rock near a river",
+            "B": "A woman standing on a balcony overlooking a city",
+            "C": "A couple sitting on a bench in a park",
+            "D": "A group of people walking across a bridge"
+        },
+        "answer": "B"
+    },
+    {
+        "question_id": 1805,
+        "question": "Which of the following captions best describes this image?",
+        "class": "image_scene",
+        "img": "42.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/42.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A person holding a bouquet of flowers",
+            "B": "A group of people eating at a restaurant",
+            "C": "A person playing with a pet dog",
+            "D": "A woman getting a pedicure at a salon"
+        },
+        "answer": "A"
+    },
+    {
+        "question_id": 1000091,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_scene",
+        "img": "88.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/88.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A man in a suite sits at a table.",
+            "B": "A drivers side rear view mirror on an auto waiting at a red traffic light.",
+            "C": "Two horses gaze out from among the trees.",
+            "D": "Surfer riding on decent sized wave as it breaks in ocean."
+        },
+        "answer": "C"
+    },
+    {
+        "question_id": 2001793,
+        "question": "Which of the following captions best describes this image?",
+        "class": "image_scene",
+        "img": "161.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/161.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A plane flying through clouds",
+            "B": "A boat sailing on a lake",
+            "C": "A car driving on a highway at night",
+            "D": "A train traveling through a tunnel"
+        },
+        "answer": "C"
+    },
+    {
+        "question_id": 2001831,
+        "question": "Which of the following captions best describes this image?",
+        "class": "image_scene",
+        "img": "188.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/188.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A woman sculpting a statue from clay.",
+            "B": "A person taking photographs of a cityscape.",
+            "C": "A person painting a landscape on a canvas.",
+            "D": "A group of people watching a play in a theater."
+        },
+        "answer": "A"
+    },
+    {
+        "question_id": 1000115,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_scene",
+        "img": "89.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/89.jpg",
+        "is_open": false,
+        "options": {
+            "A": "Odd plant and flower arrangement in a vase.",
+            "B": "a messy bed room a bed a chair and boxes",
+            "C": "A woman laying in bed next to a large stuffed animal.",
+            "D": "A tennis player resting on the floor under a hat."
+        },
+        "answer": "B"
+    },
+    {
+        "question_id": 1828,
+        "question": "Which of the following captions best describes this image?",
+        "class": "image_scene",
+        "img": "58.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/58.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A person skateboarding in a skatepark",
+            "B": "A group of people playing basketball on a court.",
+            "C": "A woman doing gymnastics on a balance beam.",
+            "D": "A person practicing martial arts in a studio."
+        },
+        "answer": "D"
+    },
+    {
+        "question_id": 2001828,
+        "question": "Which of the following captions best describes this image?",
+        "class": "image_scene",
+        "img": "186.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/186.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A woman doing gymnastics on a balance beam.",
+            "B": "A person practicing martial arts in a studio.",
+            "C": "A person skateboarding in a skatepark",
+            "D": "A group of people playing basketball on a court."
+        },
+        "answer": "B"
+    },
+    {
+        "question_id": 1001809,
+        "question": "Which of the following captions best describes this image?",
+        "class": "image_scene",
+        "img": "108.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/108.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A woman applying makeup in front of a mirror",
+            "B": "A person taking a photo with a camera",
+            "C": "A group of people watching a movie in a theater",
+            "D": "A person reading a book in a library"
+        },
+        "answer": "B"
+    },
+    {
+        "question_id": 1001835,
+        "question": "Which of the following captions best describes this image?",
+        "class": "image_scene",
+        "img": "125.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/125.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A person reading a magazine on a couch.",
+            "B": "A person playing video games on a console.",
+            "C": "A group of people playing cards at a table.",
+            "D": "A woman using a computer at a desk."
+        },
+        "answer": "D"
+    },
+    {
+        "question_id": 1001783,
+        "question": "Which of the following captions best describes this image?",
+        "class": "image_scene",
+        "img": "92.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/92.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A child playing with a ball in a park",
+            "B": "A group of people playing soccer in a field",
+            "C": "A woman walking her dog on a beach",
+            "D": "A man riding a bicycle on a mountain trail"
+        },
+        "answer": "D"
+    },
+    {
+        "question_id": 1835,
+        "question": "Which of the following captions best describes this image?",
+        "class": "image_scene",
+        "img": "61.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/61.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A person playing video games on a console.",
+            "B": "A group of people playing cards at a table.",
+            "C": "A woman using a computer at a desk.",
+            "D": "A person reading a magazine on a couch."
+        },
+        "answer": "C"
+    },
+    {
+        "question_id": 1001793,
+        "question": "Which of the following captions best describes this image?",
+        "class": "image_scene",
+        "img": "97.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/97.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A boat sailing on a lake",
+            "B": "A car driving on a highway at night",
+            "C": "A train traveling through a tunnel",
+            "D": "A plane flying through clouds"
+        },
+        "answer": "B"
+    },
+    {
+        "question_id": 2001825,
+        "question": "Which of the following captions best describes this image?",
+        "class": "image_scene",
+        "img": "183.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/183.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A woman doing gymnastics on a balance beam.",
+            "B": "A person practicing martial arts in a studio.",
+            "C": "A person skateboarding in a skatepark",
+            "D": "A group of people playing basketball on a court."
+        },
+        "answer": "C"
+    },
+    {
+        "question_id": 1801,
+        "question": "Which of the following captions best describes this image?",
+        "class": "image_scene",
+        "img": "40.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/40.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A group of people sitting around a campfire",
+            "B": "A person kayaking on a lake",
+            "C": "A family having a picnic in a park",
+            "D": "A person hiking on a mountain trail"
+        },
+        "answer": "A"
+    },
+    {
+        "question_id": 1800,
+        "question": "Which of the following captions best describes this image?",
+        "class": "image_scene",
+        "img": "39.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/39.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A person playing a guitar on a stage",
+            "B": "A group of people dancing at a party",
+            "C": "A singer performing on a microphone",
+            "D": "A person playing a piano in a studio"
+        },
+        "answer": "D"
+    },
+    {
+        "question_id": 1000062,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_scene",
+        "img": "78.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/78.jpg",
+        "is_open": false,
+        "options": {
+            "A": "The skaters are trying their tricks on the abandoned street.",
+            "B": "An oven sitting on the concrete outside of a building.",
+            "C": "A person is skiing down a snowy mountain.",
+            "D": "A small cat is sitting on the wooden beam."
+        },
+        "answer": "D"
+    },
+    {
+        "question_id": 2001798,
+        "question": "Which of the following captions best describes this image?",
+        "class": "image_scene",
+        "img": "165.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/165.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A singer performing on a microphone",
+            "B": "A person playing a piano in a studio",
+            "C": "A person playing a guitar on a stage",
+            "D": "A group of people dancing at a party"
+        },
+        "answer": "D"
+    },
+    {
+        "question_id": 1787,
+        "question": "Which of the following captions best describes this image?",
+        "class": "image_scene",
+        "img": "30.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/30.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A bowl of fruit with apples, bananas, and oranges",
+            "B": "A plate of spaghetti with meatballs and tomato sauce",
+            "C": "A sandwich with ham, lettuce, and cheese",
+            "D": "A pizza with pepperoni, mushrooms, and olives"
+        },
+        "answer": "C"
+    },
+    {
+        "question_id": 1783,
+        "question": "Which of the following captions best describes this image?",
+        "class": "image_scene",
+        "img": "28.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/28.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A group of people playing soccer in a field",
+            "B": "A woman walking her dog on a beach",
+            "C": "A man riding a bicycle on a mountain trail",
+            "D": "A child playing with a ball in a park"
+        },
+        "answer": "C"
+    },
+    {
+        "question_id": 3001839,
+        "question": "Which of the following captions best describes this image?",
+        "class": "image_scene",
+        "img": "254.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/254.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A group of people riding bicycles on a trail.",
+            "B": "A woman taking a walk in a park.",
+            "C": "A person riding a motorcycle on a highway.",
+            "D": "A person driving a car on a road."
+        },
+        "answer": "B"
+    },
+    {
+        "question_id": 2001800,
+        "question": "Which of the following captions best describes this image?",
+        "class": "image_scene",
+        "img": "167.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/167.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A singer performing on a microphone",
+            "B": "A person playing a piano in a studio",
+            "C": "A person playing a guitar on a stage",
+            "D": "A group of people dancing at a party"
+        },
+        "answer": "B"
+    },
+    {
+        "question_id": 1000047,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_scene",
+        "img": "71.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/71.jpg",
+        "is_open": false,
+        "options": {
+            "A": "Neither one of these people had a good flight.",
+            "B": "People in a horse drawn buggy on a city street.",
+            "C": "A fire hydrant with a pair of eye stickers making a face on it.",
+            "D": "a large food truck is parked on the side of the street"
+        },
+        "answer": "C"
+    },
+    {
+        "question_id": 3001830,
+        "question": "Which of the following captions best describes this image?",
+        "class": "image_scene",
+        "img": "250.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/250.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A group of people watching a play in a theater.",
+            "B": "A woman sculpting a statue from clay.",
+            "C": "A person taking photographs of a cityscape.",
+            "D": "A person painting a landscape on a canvas."
+        },
+        "answer": "A"
+    },
+    {
+        "question_id": 2000055,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_scene",
+        "img": "139.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/139.jpg",
+        "is_open": false,
+        "options": {
+            "A": "Young woman lying face down on a large bed with a book.",
+            "B": "A big billboard is painted onto the side of a brick building.",
+            "C": "A man on a skateboard on a concrete lip.",
+            "D": "Hand holding an electronic component with a clock on it."
+        },
+        "answer": "B"
+    },
+    {
+        "question_id": 2001808,
+        "question": "Which of the following captions best describes this image?",
+        "class": "image_scene",
+        "img": "171.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/171.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A person playing with a pet dog",
+            "B": "A woman getting a pedicure at a salon",
+            "C": "A person holding a bouquet of flowers",
+            "D": "A group of people eating at a restaurant"
+        },
+        "answer": "B"
+    },
+    {
+        "question_id": 3001783,
+        "question": "Which of the following captions best describes this image?",
+        "class": "image_scene",
+        "img": "219.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/219.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A woman walking her dog on a beach",
+            "B": "A man riding a bicycle on a mountain trail",
+            "C": "A child playing with a ball in a park",
+            "D": "A group of people playing soccer in a field"
+        },
+        "answer": "B"
+    },
+    {
+        "question_id": 1798,
+        "question": "Which of the following captions best describes this image?",
+        "class": "image_scene",
+        "img": "37.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/37.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A person playing a guitar on a stage",
+            "B": "A group of people dancing at a party",
+            "C": "A singer performing on a microphone",
+            "D": "A person playing a piano in a studio"
+        },
+        "answer": "B"
+    },
+    {
+        "question_id": 3000115,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_scene",
+        "img": "216.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/216.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A woman laying in bed next to a large stuffed animal.",
+            "B": "A tennis player resting on the floor under a hat.",
+            "C": "Odd plant and flower arrangement in a vase.",
+            "D": "a messy bed room a bed a chair and boxes"
+        },
+        "answer": "D"
+    },
+    {
+        "question_id": 1001812,
+        "question": "Which of the following captions best describes this image?",
+        "class": "image_scene",
+        "img": "110.jpg",
+        "img_path": "mmbench/imgs/dev/image_scene/110.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A woman applying makeup in front of a mirror",
+            "B": "A person taking a photo with a camera",
+            "C": "A group of people watching a movie in a theater",
+            "D": "A person reading a book in a library"
+        },
+        "answer": "A"
+    },
+    {
+        "question_id": 38,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "0.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/0.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A plane sitting on a runway getting ready to be emptied.",
+            "B": "Children playing soccer in a field with other children.",
+            "C": "A man taking a selfie between two mirrors",
+            "D": "Man on skateboard with long stick in front of slotted building"
+        },
+        "answer": "A"
+    },
+    {
+        "question_id": 50,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "1.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/1.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A triangle sign with an English and foreign warning",
+            "B": "Each of the three cakes have icing flowers on them.",
+            "C": "A very old antique clock on a wall.",
+            "D": "A tv is on in the living room, but no one is in there."
+        },
+        "answer": "A"
+    },
+    {
+        "question_id": 95,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "10.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/10.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A fork, apple, orange and onion sitting on a surface.",
+            "B": "An old adobe mission with a clock tower stands behind a sparsely leaved tree.",
+            "C": "A person holding a surfboard on a beach leaning to look at a second surfboard on the sand",
+            "D": "Three horses pulling a cart with a man riding it"
+        },
+        "answer": "A"
+    },
+    {
+        "question_id": 97,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "11.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/11.jpg",
+        "is_open": false,
+        "options": {
+            "A": "The clock on the building is in the shape of a coffee cup.",
+            "B": "An orange and white kitten sleeping on a wood floor beside a shoe.",
+            "C": "A large building on a beach with umbrellas.",
+            "D": "a male tennis player in a blue shirt is playing tennis"
+        },
+        "answer": "A"
+    },
+    {
+        "question_id": 101,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "12.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/12.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A lone zebra on a cloudy day standing in grass.",
+            "B": "A foot long hot dog on top of two buns.",
+            "C": "A store room holds sinks, bathtubs and toilets",
+            "D": "Two sheep play in the middle of a rocky slope."
+        },
+        "answer": "B"
+    },
+    {
+        "question_id": 102,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "13.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/13.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A white toilet sitting inside of a bathroom.",
+            "B": "A young child is sitting at a bar and eating.",
+            "C": "Mother and young black & white cow eating in a field of grass.",
+            "D": "A skier wearing a red jacket is jumping in the air."
+        },
+        "answer": "B"
+    },
+    {
+        "question_id": 108,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "14.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/14.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A man and a young girl playing video games",
+            "B": "A baseball pitcher prepares to deliver a pitch.",
+            "C": "A birthday cake with candles and a cell phone.",
+            "D": "a couple of big airplanes that are in a tunnel"
+        },
+        "answer": "C"
+    },
+    {
+        "question_id": 114,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "15.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/15.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A dirty squat toilet surrounded by white tile.",
+            "B": "A street of a Chinese town in the afternoon",
+            "C": "A chocolate and fudge dessert on layered pastry is on a red plate.",
+            "D": "A row of vehicles sitting at a traffic light on a street."
+        },
+        "answer": "C"
+    },
+    {
+        "question_id": 1000038,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "16.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/16.jpg",
+        "is_open": false,
+        "options": {
+            "A": "Man on skateboard with long stick in front of slotted building",
+            "B": "A plane sitting on a runway getting ready to be emptied.",
+            "C": "Children playing soccer in a field with other children.",
+            "D": "A man taking a selfie between two mirrors"
+        },
+        "answer": "B"
+    },
+    {
+        "question_id": 1000050,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "17.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/17.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A tv is on in the living room, but no one is in there.",
+            "B": "A triangle sign with an English and foreign warning",
+            "C": "Each of the three cakes have icing flowers on them.",
+            "D": "A very old antique clock on a wall."
+        },
+        "answer": "B"
+    },
+    {
+        "question_id": 1000054,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "18.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/18.jpg",
+        "is_open": false,
+        "options": {
+            "A": "Three small piece of fried food on a white plate with writing.",
+            "B": "A grey and white bird with red feet and eyes perches on a branch.",
+            "C": "A broken flip phone sits, in two pieces, on the counter.",
+            "D": "pieces of kiwi and peach cut up on a plate next to a teapot"
+        },
+        "answer": "B"
+    },
+    {
+        "question_id": 1000064,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "19.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/19.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A cat and dog napping together on the couch.",
+            "B": "A green and grey helicopter in a hazy sky.",
+            "C": "A woman with a polka-dotted umbrella and a grey shirt reading a pamphlet.",
+            "D": "A blond person is using the toilet and smiling."
+        },
+        "answer": "A"
+    },
+    {
+        "question_id": 54,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "2.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/2.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A grey and white bird with red feet and eyes perches on a branch.",
+            "B": "A broken flip phone sits, in two pieces, on the counter.",
+            "C": "pieces of kiwi and peach cut up on a plate next to a teapot",
+            "D": "Three small piece of fried food on a white plate with writing."
+        },
+        "answer": "A"
+    },
+    {
+        "question_id": 1000067,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "20.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/20.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A furry cat sleeping inside a packed suitcase",
+            "B": "A white bathroom sink sitting next to a walk in shower.",
+            "C": "a dog in a field with a frisbee in its mouth",
+            "D": "A small tower that has a clock at the top."
+        },
+        "answer": "A"
+    },
+    {
+        "question_id": 1000068,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "21.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/21.jpg",
+        "is_open": false,
+        "options": {
+            "A": "Old Double Decker bus driving through heavy traffic",
+            "B": "Cooked snack item in bread on plate with condiment.",
+            "C": "A gray chair and a black chair sit in a room near a lamp.",
+            "D": "a stop sign on the corner of a street of apartments"
+        },
+        "answer": "C"
+    },
+    {
+        "question_id": 1000072,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "22.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/22.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A black kitten laying down next to two remote controls.",
+            "B": "A woman is cutting up a block of spam.",
+            "C": "A man standing near the home plate swinging a bat",
+            "D": "An older orange van is parked next to a modern mini van in front of a small shop."
+        },
+        "answer": "A"
+    },
+    {
+        "question_id": 1000089,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "23.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/23.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A house lined road with red trucks on the side of the street",
+            "B": "A little girl riding a horse next to another girl.",
+            "C": "A dark room with chairs and painting of coffee cups on the wall, and a laptop computer in the foreground.",
+            "D": "Spectators are watching a snowboard competition of the Olympics."
+        },
+        "answer": "B"
+    },
+    {
+        "question_id": 1000092,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "24.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/24.jpg",
+        "is_open": false,
+        "options": {
+            "A": "Three wild goats playing on a rocky mountainside.",
+            "B": "A standing toilet sitting inside of a stone and cement room.",
+            "C": "Two skate boarders and one of them mid-jump.",
+            "D": "A wooden table with a white plate of fresh fruit sitting on it."
+        },
+        "answer": "D"
+    },
+    {
+        "question_id": 1000094,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "25.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/25.jpg",
+        "is_open": false,
+        "options": {
+            "A": "Billboard on a commercial street corner in an oriental city",
+            "B": "A cat that is laying down on a carpet.",
+            "C": "A woman standing with a bag in a mirror.",
+            "D": "A person dressed in costume, wearing a banana hat and a banana necklace."
+        },
+        "answer": "D"
+    },
+    {
+        "question_id": 1000095,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "26.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/26.jpg",
+        "is_open": false,
+        "options": {
+            "A": "Three horses pulling a cart with a man riding it",
+            "B": "A fork, apple, orange and onion sitting on a surface.",
+            "C": "An old adobe mission with a clock tower stands behind a sparsely leaved tree.",
+            "D": "A person holding a surfboard on a beach leaning to look at a second surfboard on the sand"
+        },
+        "answer": "B"
+    },
+    {
+        "question_id": 1000097,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "27.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/27.jpg",
+        "is_open": false,
+        "options": {
+            "A": "a male tennis player in a blue shirt is playing tennis",
+            "B": "The clock on the building is in the shape of a coffee cup.",
+            "C": "An orange and white kitten sleeping on a wood floor beside a shoe.",
+            "D": "A large building on a beach with umbrellas."
+        },
+        "answer": "B"
+    },
+    {
+        "question_id": 1000101,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "28.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/28.jpg",
+        "is_open": false,
+        "options": {
+            "A": "Two sheep play in the middle of a rocky slope.",
+            "B": "A lone zebra on a cloudy day standing in grass.",
+            "C": "A foot long hot dog on top of two buns.",
+            "D": "A store room holds sinks, bathtubs and toilets"
+        },
+        "answer": "C"
+    },
+    {
+        "question_id": 1000102,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "29.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/29.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A skier wearing a red jacket is jumping in the air.",
+            "B": "A white toilet sitting inside of a bathroom.",
+            "C": "A young child is sitting at a bar and eating.",
+            "D": "Mother and young black & white cow eating in a field of grass."
+        },
+        "answer": "C"
+    },
+    {
+        "question_id": 64,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "3.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/3.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A green and grey helicopter in a hazy sky.",
+            "B": "A woman with a polka-dotted umbrella and a grey shirt reading a pamphlet.",
+            "C": "A blond person is using the toilet and smiling.",
+            "D": "A cat and dog napping together on the couch."
+        },
+        "answer": "D"
+    },
+    {
+        "question_id": 1000108,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "30.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/30.jpg",
+        "is_open": false,
+        "options": {
+            "A": "a couple of big airplanes that are in a tunnel",
+            "B": "A man and a young girl playing video games",
+            "C": "A baseball pitcher prepares to deliver a pitch.",
+            "D": "A birthday cake with candles and a cell phone."
+        },
+        "answer": "D"
+    },
+    {
+        "question_id": 1000114,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "31.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/31.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A row of vehicles sitting at a traffic light on a street.",
+            "B": "A dirty squat toilet surrounded by white tile.",
+            "C": "A street of a Chinese town in the afternoon",
+            "D": "A chocolate and fudge dessert on layered pastry is on a red plate."
+        },
+        "answer": "D"
+    },
+    {
+        "question_id": 2000038,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "32.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/32.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A man taking a selfie between two mirrors",
+            "B": "Man on skateboard with long stick in front of slotted building",
+            "C": "A plane sitting on a runway getting ready to be emptied.",
+            "D": "Children playing soccer in a field with other children."
+        },
+        "answer": "C"
+    },
+    {
+        "question_id": 2000050,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "33.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/33.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A very old antique clock on a wall.",
+            "B": "A tv is on in the living room, but no one is in there.",
+            "C": "A triangle sign with an English and foreign warning",
+            "D": "Each of the three cakes have icing flowers on them."
+        },
+        "answer": "C"
+    },
+    {
+        "question_id": 2000054,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "34.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/34.jpg",
+        "is_open": false,
+        "options": {
+            "A": "pieces of kiwi and peach cut up on a plate next to a teapot",
+            "B": "Three small piece of fried food on a white plate with writing.",
+            "C": "A grey and white bird with red feet and eyes perches on a branch.",
+            "D": "A broken flip phone sits, in two pieces, on the counter."
+        },
+        "answer": "C"
+    },
+    {
+        "question_id": 2000064,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "35.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/35.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A blond person is using the toilet and smiling.",
+            "B": "A cat and dog napping together on the couch.",
+            "C": "A green and grey helicopter in a hazy sky.",
+            "D": "A woman with a polka-dotted umbrella and a grey shirt reading a pamphlet."
+        },
+        "answer": "B"
+    },
+    {
+        "question_id": 2000067,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "36.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/36.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A small tower that has a clock at the top.",
+            "B": "A furry cat sleeping inside a packed suitcase",
+            "C": "A white bathroom sink sitting next to a walk in shower.",
+            "D": "a dog in a field with a frisbee in its mouth"
+        },
+        "answer": "B"
+    },
+    {
+        "question_id": 2000068,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "37.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/37.jpg",
+        "is_open": false,
+        "options": {
+            "A": "a stop sign on the corner of a street of apartments",
+            "B": "Old Double Decker bus driving through heavy traffic",
+            "C": "Cooked snack item in bread on plate with condiment.",
+            "D": "A gray chair and a black chair sit in a room near a lamp."
+        },
+        "answer": "D"
+    },
+    {
+        "question_id": 2000072,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "38.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/38.jpg",
+        "is_open": false,
+        "options": {
+            "A": "An older orange van is parked next to a modern mini van in front of a small shop.",
+            "B": "A black kitten laying down next to two remote controls.",
+            "C": "A woman is cutting up a block of spam.",
+            "D": "A man standing near the home plate swinging a bat"
+        },
+        "answer": "B"
+    },
+    {
+        "question_id": 2000089,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "39.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/39.jpg",
+        "is_open": false,
+        "options": {
+            "A": "Spectators are watching a snowboard competition of the Olympics.",
+            "B": "A house lined road with red trucks on the side of the street",
+            "C": "A little girl riding a horse next to another girl.",
+            "D": "A dark room with chairs and painting of coffee cups on the wall, and a laptop computer in the foreground."
+        },
+        "answer": "C"
+    },
+    {
+        "question_id": 67,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "4.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/4.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A white bathroom sink sitting next to a walk in shower.",
+            "B": "a dog in a field with a frisbee in its mouth",
+            "C": "A small tower that has a clock at the top.",
+            "D": "A furry cat sleeping inside a packed suitcase"
+        },
+        "answer": "D"
+    },
+    {
+        "question_id": 2000092,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "40.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/40.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A wooden table with a white plate of fresh fruit sitting on it.",
+            "B": "Three wild goats playing on a rocky mountainside.",
+            "C": "A standing toilet sitting inside of a stone and cement room.",
+            "D": "Two skate boarders and one of them mid-jump."
+        },
+        "answer": "A"
+    },
+    {
+        "question_id": 2000094,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "41.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/41.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A person dressed in costume, wearing a banana hat and a banana necklace.",
+            "B": "Billboard on a commercial street corner in an oriental city",
+            "C": "A cat that is laying down on a carpet.",
+            "D": "A woman standing with a bag in a mirror."
+        },
+        "answer": "A"
+    },
+    {
+        "question_id": 2000095,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "42.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/42.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A person holding a surfboard on a beach leaning to look at a second surfboard on the sand",
+            "B": "Three horses pulling a cart with a man riding it",
+            "C": "A fork, apple, orange and onion sitting on a surface.",
+            "D": "An old adobe mission with a clock tower stands behind a sparsely leaved tree."
+        },
+        "answer": "C"
+    },
+    {
+        "question_id": 2000097,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "43.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/43.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A large building on a beach with umbrellas.",
+            "B": "a male tennis player in a blue shirt is playing tennis",
+            "C": "The clock on the building is in the shape of a coffee cup.",
+            "D": "An orange and white kitten sleeping on a wood floor beside a shoe."
+        },
+        "answer": "C"
+    },
+    {
+        "question_id": 2000101,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "44.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/44.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A store room holds sinks, bathtubs and toilets",
+            "B": "Two sheep play in the middle of a rocky slope.",
+            "C": "A lone zebra on a cloudy day standing in grass.",
+            "D": "A foot long hot dog on top of two buns."
+        },
+        "answer": "D"
+    },
+    {
+        "question_id": 2000102,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "45.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/45.jpg",
+        "is_open": false,
+        "options": {
+            "A": "Mother and young black & white cow eating in a field of grass.",
+            "B": "A skier wearing a red jacket is jumping in the air.",
+            "C": "A white toilet sitting inside of a bathroom.",
+            "D": "A young child is sitting at a bar and eating."
+        },
+        "answer": "D"
+    },
+    {
+        "question_id": 2000108,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "46.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/46.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A birthday cake with candles and a cell phone.",
+            "B": "a couple of big airplanes that are in a tunnel",
+            "C": "A man and a young girl playing video games",
+            "D": "A baseball pitcher prepares to deliver a pitch."
+        },
+        "answer": "A"
+    },
+    {
+        "question_id": 2000114,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "47.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/47.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A chocolate and fudge dessert on layered pastry is on a red plate.",
+            "B": "A row of vehicles sitting at a traffic light on a street.",
+            "C": "A dirty squat toilet surrounded by white tile.",
+            "D": "A street of a Chinese town in the afternoon"
+        },
+        "answer": "A"
+    },
+    {
+        "question_id": 3000038,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "48.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/48.jpg",
+        "is_open": false,
+        "options": {
+            "A": "Children playing soccer in a field with other children.",
+            "B": "A man taking a selfie between two mirrors",
+            "C": "Man on skateboard with long stick in front of slotted building",
+            "D": "A plane sitting on a runway getting ready to be emptied."
+        },
+        "answer": "D"
+    },
+    {
+        "question_id": 3000050,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "49.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/49.jpg",
+        "is_open": false,
+        "options": {
+            "A": "Each of the three cakes have icing flowers on them.",
+            "B": "A very old antique clock on a wall.",
+            "C": "A tv is on in the living room, but no one is in there.",
+            "D": "A triangle sign with an English and foreign warning"
+        },
+        "answer": "D"
+    },
+    {
+        "question_id": 68,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "5.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/5.jpg",
+        "is_open": false,
+        "options": {
+            "A": "Cooked snack item in bread on plate with condiment.",
+            "B": "A gray chair and a black chair sit in a room near a lamp.",
+            "C": "a stop sign on the corner of a street of apartments",
+            "D": "Old Double Decker bus driving through heavy traffic"
+        },
+        "answer": "B"
+    },
+    {
+        "question_id": 3000054,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "50.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/50.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A broken flip phone sits, in two pieces, on the counter.",
+            "B": "pieces of kiwi and peach cut up on a plate next to a teapot",
+            "C": "Three small piece of fried food on a white plate with writing.",
+            "D": "A grey and white bird with red feet and eyes perches on a branch."
+        },
+        "answer": "D"
+    },
+    {
+        "question_id": 3000064,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "51.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/51.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A woman with a polka-dotted umbrella and a grey shirt reading a pamphlet.",
+            "B": "A blond person is using the toilet and smiling.",
+            "C": "A cat and dog napping together on the couch.",
+            "D": "A green and grey helicopter in a hazy sky."
+        },
+        "answer": "C"
+    },
+    {
+        "question_id": 3000067,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "52.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/52.jpg",
+        "is_open": false,
+        "options": {
+            "A": "a dog in a field with a frisbee in its mouth",
+            "B": "A small tower that has a clock at the top.",
+            "C": "A furry cat sleeping inside a packed suitcase",
+            "D": "A white bathroom sink sitting next to a walk in shower."
+        },
+        "answer": "C"
+    },
+    {
+        "question_id": 3000068,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "53.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/53.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A gray chair and a black chair sit in a room near a lamp.",
+            "B": "a stop sign on the corner of a street of apartments",
+            "C": "Old Double Decker bus driving through heavy traffic",
+            "D": "Cooked snack item in bread on plate with condiment."
+        },
+        "answer": "A"
+    },
+    {
+        "question_id": 3000072,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "54.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/54.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A man standing near the home plate swinging a bat",
+            "B": "An older orange van is parked next to a modern mini van in front of a small shop.",
+            "C": "A black kitten laying down next to two remote controls.",
+            "D": "A woman is cutting up a block of spam."
+        },
+        "answer": "C"
+    },
+    {
+        "question_id": 3000089,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "55.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/55.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A dark room with chairs and painting of coffee cups on the wall, and a laptop computer in the foreground.",
+            "B": "Spectators are watching a snowboard competition of the Olympics.",
+            "C": "A house lined road with red trucks on the side of the street",
+            "D": "A little girl riding a horse next to another girl."
+        },
+        "answer": "D"
+    },
+    {
+        "question_id": 3000092,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "56.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/56.jpg",
+        "is_open": false,
+        "options": {
+            "A": "Two skate boarders and one of them mid-jump.",
+            "B": "A wooden table with a white plate of fresh fruit sitting on it.",
+            "C": "Three wild goats playing on a rocky mountainside.",
+            "D": "A standing toilet sitting inside of a stone and cement room."
+        },
+        "answer": "B"
+    },
+    {
+        "question_id": 3000094,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "57.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/57.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A woman standing with a bag in a mirror.",
+            "B": "A person dressed in costume, wearing a banana hat and a banana necklace.",
+            "C": "Billboard on a commercial street corner in an oriental city",
+            "D": "A cat that is laying down on a carpet."
+        },
+        "answer": "B"
+    },
+    {
+        "question_id": 3000095,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "58.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/58.jpg",
+        "is_open": false,
+        "options": {
+            "A": "An old adobe mission with a clock tower stands behind a sparsely leaved tree.",
+            "B": "A person holding a surfboard on a beach leaning to look at a second surfboard on the sand",
+            "C": "Three horses pulling a cart with a man riding it",
+            "D": "A fork, apple, orange and onion sitting on a surface."
+        },
+        "answer": "D"
+    },
+    {
+        "question_id": 3000097,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "59.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/59.jpg",
+        "is_open": false,
+        "options": {
+            "A": "An orange and white kitten sleeping on a wood floor beside a shoe.",
+            "B": "A large building on a beach with umbrellas.",
+            "C": "a male tennis player in a blue shirt is playing tennis",
+            "D": "The clock on the building is in the shape of a coffee cup."
+        },
+        "answer": "D"
+    },
+    {
+        "question_id": 72,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "6.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/6.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A woman is cutting up a block of spam.",
+            "B": "A man standing near the home plate swinging a bat",
+            "C": "An older orange van is parked next to a modern mini van in front of a small shop.",
+            "D": "A black kitten laying down next to two remote controls."
+        },
+        "answer": "D"
+    },
+    {
+        "question_id": 3000101,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "60.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/60.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A foot long hot dog on top of two buns.",
+            "B": "A store room holds sinks, bathtubs and toilets",
+            "C": "Two sheep play in the middle of a rocky slope.",
+            "D": "A lone zebra on a cloudy day standing in grass."
+        },
+        "answer": "A"
+    },
+    {
+        "question_id": 3000102,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "61.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/61.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A young child is sitting at a bar and eating.",
+            "B": "Mother and young black & white cow eating in a field of grass.",
+            "C": "A skier wearing a red jacket is jumping in the air.",
+            "D": "A white toilet sitting inside of a bathroom."
+        },
+        "answer": "A"
+    },
+    {
+        "question_id": 3000108,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "62.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/62.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A baseball pitcher prepares to deliver a pitch.",
+            "B": "A birthday cake with candles and a cell phone.",
+            "C": "a couple of big airplanes that are in a tunnel",
+            "D": "A man and a young girl playing video games"
+        },
+        "answer": "B"
+    },
+    {
+        "question_id": 3000114,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "63.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/63.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A street of a Chinese town in the afternoon",
+            "B": "A chocolate and fudge dessert on layered pastry is on a red plate.",
+            "C": "A row of vehicles sitting at a traffic light on a street.",
+            "D": "A dirty squat toilet surrounded by white tile."
+        },
+        "answer": "B"
+    },
+    {
+        "question_id": 89,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "7.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/7.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A little girl riding a horse next to another girl.",
+            "B": "A dark room with chairs and painting of coffee cups on the wall, and a laptop computer in the foreground.",
+            "C": "Spectators are watching a snowboard competition of the Olympics.",
+            "D": "A house lined road with red trucks on the side of the street"
+        },
+        "answer": "A"
+    },
+    {
+        "question_id": 92,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "8.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/8.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A standing toilet sitting inside of a stone and cement room.",
+            "B": "Two skate boarders and one of them mid-jump.",
+            "C": "A wooden table with a white plate of fresh fruit sitting on it.",
+            "D": "Three wild goats playing on a rocky mountainside."
+        },
+        "answer": "C"
+    },
+    {
+        "question_id": 94,
+        "question": "Which one is the correct caption of this image?",
+        "class": "image_topic",
+        "img": "9.jpg",
+        "img_path": "mmbench/imgs/dev/image_topic/9.jpg",
+        "is_open": false,
+        "options": {
+            "A": "A cat that is laying down on a carpet.",
+            "B": "A woman standing with a bag in a mirror.",
+            "C": "A person dressed in costume, wearing a banana hat and a banana necklace.",
+            "D": "Billboard on a commercial street corner in an oriental city"
+        },
+        "answer": "C"
+    }
+]

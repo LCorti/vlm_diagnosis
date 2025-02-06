@@ -1,0 +1,9 @@
+# Use the official MySQL 5.7 image as the base
+FROM mysql:5.7
+
+# Set the entrypoint script
+COPY ./CRWD/mysql/initdb_mmbench.sql ./docker-entrypoint-initdb.d/initdb.sql
+
+
+# Set the default command for the container
+#CMD ["--bind-address=0.0.0.0", "--innodb-strict-mode=OFF", "--character-set-server=utf8mb4", "--collation-server=utf8mb4_general_ci"]

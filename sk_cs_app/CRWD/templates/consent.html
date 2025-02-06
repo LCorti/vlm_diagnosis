@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %} Consent {% endblock %}
+
+{% block body %}
+
+  <div>
+    <h2 class="mx-4 mt-4 mb-2 text-center">Informed Consent</h2>
+  </div>
+  <hr>
+  <div class="my-2 mx-5">
+    <p>We are a group of researchers at the Technical University of Delft in The Netherlands developing techniques that help us understand and diagnose the behaviours of artificial intelligence models — now pervasive in our society.</p>
+
+    <p>Recent advancements around large multimodal models have enabled artificial intelligence models to use external tools (e.g., text processing software) and to handle different kinds of data (text, images, videos, etc.). Yet, using those models in a responsible manner is challenging due to their opaque and unclear reasoning.</p>
+    <p>For this reason, in this project, we aim to construct descriptions of expected model behaviour by combining automatic techniques that help us describe data with human intelligence. Such descriptions will help us identify faults in existing models.</p>
+
+    <p>The task that you will carry out is part of the research project described above.</p>
+    <p>You are going to see a series of images and questions (one at a time). For each image-question pair you will be shown a set of triples of <code>&lt;concept, predicate, concept&gt;</code> that identify different concepts within an image, their relationship, and that are potentially necessary to answer the question shown. For each triple, your task is to confirm whether the triple is correct, partially correct, or incorrect and provide corrections when you see necessary.</p>
+
+    <p>The images come from publicly-available datasets which have been validated by other research groups and that we sampled ourselves. As such, you <i>should not</i> see images that are offensive or disturbing. If that is the case, you can click the 'Opt-out' button and leave the study at any time.</p>
+
+    <p>Completion of these tasks do not require any specific equipment. <i>Your participation in this task is entirely voluntary and you can withdraw at any time</i>. We do not collect any additional data aside from the information provided by Prolific (e.g., demographics and your worker ID) for the purpose of verifying your submission.</p>
+
+    <p>All data is stored in a password protected electronic format. Be aware that the data we gather with through this task might be (1) published in an anonymised form at a later date, or (2) shared with fellow colleagues in our research group for research purposes. We will keep your information confidential: no personal information (e.g., your worker ID) will be shared (either in publications or with colleagues) so that the answers will not be traceable back to you.</p>
+
+    <p>By clicking “I consent” at the bottom of this page, you confirm that you have read, understood, and consent to the above information.</p>
+  </div>
+  <div class="d-flex justify-content-center">
+    <form action="{{ url_for('auth.consent_post', PROLIFIC_PID = PROLIFIC_PID, STUDY_ID = STUDY_ID) }}" method="POST">
+      <input type="hidden" name="outcome" value="Accept">
+      <input class="btn btn-primary mb-4" type="submit" value="I consent">
+    </form>
+    <form action="{{ url_for('auth.consent_post', PROLIFIC_PID = PROLIFIC_PID, STUDY_ID = STUDY_ID) }}" method="POST">
+      <input type="hidden" name="outcome" value="Reject">
+      <input class="btn btn-danger mb-4 mx-5" type="submit" value="I do not consent">
+    </form>
+  <div>
+
+{% endblock %}
