@@ -1,0 +1,32 @@
+llava-bench:
+  main:
+    imgs: data/datasets/llava-bench/imgs/main
+    questions: data/datasets/llava-bench/q.jsonl
+mmbench:
+  image_scene:
+    imgs: data/datasets/mmbench/imgs/image_scene
+    questions: data/datasets/mmbench/q_image_scene.jsonl
+  image_topic:
+    imgs: data/datasets/mmbench/imgs/image_topic
+    questions: data/datasets/mmbench/q_image_topic.jsonl
+seed:
+  scene_understanding:
+    imgs: data/datasets/seed/imgs/scene_understanding
+    questions: data/datasets/seed/q_scene_understanding.jsonl
+  visual_reasoning:
+    imgs: data/datasets/seed/imgs/visual_reasoning
+    questions: data/datasets/seed/q_visual_reasoning.jsonl
+vqav2:
+  how_many_people_are:
+    imgs: data/datasets/vqav2/imgs/how_many_people_are
+    questions: data/datasets/vqav2/q_how_many_people_are.jsonl
+  what_is_the_person:
+    imgs: data/datasets/vqav2/imgs/what_is_the_person
+    questions: data/datasets/vqav2/q_what_is_the_person.jsonl
+vqav2_holdout:
+  is_the_person:
+    imgs: data/datasets/vqav2/holdout/imgs/is_the_person
+    questions: data/datasets/vqav2/holdout/q_is_the_person.jsonl
+  is_this_person:
+    imgs: data/datasets/vqav2/holdout/imgs/is_this_person
+    questions: data/datasets/vqav2/holdout/q_is_this_person.jsonl
