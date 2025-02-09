@@ -1,0 +1,32 @@
+llava-bench:
+  main:
+    dir: data/should_know/llava-bench/main
+    val_step: crowd_val.jsonl
+    ann_step: crowd_ann.jsonl
+mmbench:
+  image_scene:
+    dir: data/should_know/mmbench/image_scene
+    val_step: crowd_val.jsonl
+    ann_step: crowd_ann.jsonl
+  image_topic:
+    dir: data/should_know/mmbench/image_topic
+    val_step: crowd_val.jsonl
+    ann_step: crowd_ann.jsonl
+seed:
+  scene_understanding:
+    dir: data/should_know/seed/scene_understanding
+    val_step: crowd_val.jsonl
+    ann_step: crowd_ann.jsonl
+  visual_reasoning:
+    dir: data/should_know/seed/visual_reasoning
+    val_step: crowd_val.jsonl
+    ann_step: crowd_ann.jsonl
+vqav2:
+  how_many_people_are:
+    dir: data/should_know/vqav2/how_many_people_are
+    val_step: crowd_val.jsonl
+    ann_step: crowd_ann.jsonl
+  what_is_the_person:
+    dir: data/should_know/vqav2/what_is_the_person
+    val_step: crowd_val.jsonl
+    ann_step: crowd_ann.jsonl
