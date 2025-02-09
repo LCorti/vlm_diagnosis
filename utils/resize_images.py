@@ -6,7 +6,7 @@ if module_path not in sys.path:
     sys.path.append(module_path)
 
 from PIL import Image
-from config.loaders.dataset_config_loader import DatasetConfig
+from config_loaders.dataset_config_loader import DatasetConfig
 from utils.data_io import make_dir
 
 """
