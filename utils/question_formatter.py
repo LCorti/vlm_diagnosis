@@ -1,6 +1,6 @@
 import copy
 
-from config.loaders.dataset_config_loader import DatasetConfig
+from config_loaders.dataset_config_loader import DatasetConfig
 from utils.data_io import load_jsonl
 from pathlib import Path
 
