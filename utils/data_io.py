@@ -29,7 +29,6 @@ def load_vg1800_dict(data_path):
     vg1800_dict["concept_freqs"] = {
         k: concept_counts[k] / total_concept_occ for k in concept_counts
     }
-
     return vg1800_dict
 
 
@@ -97,13 +96,13 @@ def load_graph_pickle(file_path):
 def load_eval_responses(model, ds, prompt_version):
     folder_path = f"../really_knows/{model}/results_v{prompt_version}"
     file_name = f"exp_{ds}_rk.jsonl"
-    return read_jsonl(f"{folder_path}/{file_name}")
+    return load_jsonl(f"{folder_path}/{file_name}")
 
 
 def load_counter_responses(model, ds):
     folder_path = f"../really_knows/{model}/res_counter"
     file_name = f"res_{ds}_c_rk.jsonl"
-    return read_jsonl(f"{folder_path}/{file_name}")
+    return load_jsonl(f"{folder_path}/{file_name}")
 
 
 # == == == == == == == == == == == == == == == ==
