@@ -5,7 +5,6 @@ module_path = os.path.abspath(os.path.join("../"))
 if module_path not in sys.path:
     sys.path.append(module_path)
 
-from PIL import Image
 from config_loaders.dataset_config_loader import DatasetConfig
 from utils.data_io import make_dir
 from utils.image_utils import load_img, save_img, resize_img
