@@ -118,7 +118,6 @@ if __name__ == "__main__":
     # Load dataset config
     ds_config = DatasetConfig()
     ds_list = ds_config.get_ds_list()
-    ds_list.remove("vqav2_holdout")
 
     # Load SK config
     sk_config = SKConfig()
