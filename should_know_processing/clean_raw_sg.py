@@ -7,9 +7,7 @@ if module_path not in sys.path:
 
 from config_loaders.dataset_config_loader import DatasetConfig
 from config_loaders.sk_config_loader import SKConfig
-from pathlib import Path
 from utils.data_io import make_dir, load_json, save_jsonl
-from utils.image_utils import load_img
 
 
 def get_unique_concepts(raw_sg):
@@ -63,7 +61,6 @@ if __name__ == "__main__":
     # Load dataset config
     ds_config = DatasetConfig()
     ds_list = ds_config.get_ds_list()
-    ds_list.remove("vqav2_holdout")
 
     # Load SK config
     sk_config = SKConfig()
@@ -74,13 +71,6 @@ if __name__ == "__main__":
         sk_paths = sk_config.get_sk_paths(dataset)
 
         for ds_class in ds_paths:
-            # Load images
-            # base_img_dir = f"../{ds_paths[ds_class]['imgs']}"
-            # img_dict = {
-            #     Path(img_file).stem: load_img(f"{base_img_dir}/{img_file}")
-            #     for img_file in os.listdir(base_img_dir)
-            # }
-
             # Load Raw scene graphs
             base_dir = sk_paths[ds_class]["dir"]
             raw_sg_file = sk_paths[ds_class]["sg_raw"]
