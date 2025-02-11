@@ -58,3 +58,16 @@ vqav2:
     sg_crowd: scene_graphs/sg_crowd.jsonl
     val_step: crowd_val.jsonl
     ann_step: crowd_ann.jsonl
+vqav2_holdout:
+  is_the_person:
+    dir: data/should_know/vqav2/holdout/is_the_person
+    sg_raw: scene_graphs/sg_raw.json
+    sg_clean: scene_graphs/sg_clean.jsonl
+    sg_merged: scene_graphs/sg_merged.jsonl
+    sg_crowd: scene_graphs/sg_crowd.jsonl
+  is_this_person:
+    dir: data/should_know/vqav2/holdout/is_this_person
+    sg_raw: scene_graphs/sg_raw.json
+    sg_clean: scene_graphs/sg_clean.jsonl
+    sg_merged: scene_graphs/sg_merged.jsonl
+    sg_crowd: scene_graphs/sg_crowd.jsonl
