@@ -9,7 +9,7 @@ class DatasetConfig:
 
     def load_dataset_config(self):
         with open(self.CONFIG_PATH) as fp:
-            return yaml.load(fp, Loader=yaml.FullLoader)
+            return yaml.safe_load(fp)
 
     def get_ds_list(self):
         return list(self.DATASET_PATHS.keys())
