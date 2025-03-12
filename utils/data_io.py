@@ -52,7 +52,7 @@ def load_json(file_path):
 
 def save_json(data, file_path):
     with open(file_path, "w") as fp:
-        json.dump(data, fp)
+        json.dump(data, fp, indent=2)
 
 
 def load_jsonl(file_path):
