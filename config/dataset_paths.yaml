@@ -2,27 +2,34 @@ llava-bench:
   main:
     imgs: data/datasets/llava-bench/imgs/main
     questions: data/datasets/llava-bench/q.jsonl
+    sampled_questions: data/datasets/llava-bench/q_sample.jsonl
 mmbench:
   image_scene:
     imgs: data/datasets/mmbench/imgs/image_scene
     questions: data/datasets/mmbench/q_image_scene.jsonl
+    sampled_questions: data/datasets/mmbench/q_image_scene_sample.jsonl
   image_topic:
     imgs: data/datasets/mmbench/imgs/image_topic
     questions: data/datasets/mmbench/q_image_topic.jsonl
+    sampled_questions: data/datasets/mmbench/q_image_topic_sample.jsonl
 seed:
   scene_understanding:
     imgs: data/datasets/seed/imgs/scene_understanding
     questions: data/datasets/seed/q_scene_understanding.jsonl
+    sampled_questions: data/datasets/seed/q_scene_understanding_sample.jsonl
   visual_reasoning:
     imgs: data/datasets/seed/imgs/visual_reasoning
     questions: data/datasets/seed/q_visual_reasoning.jsonl
+    sampled_questions: data/datasets/seed/q_visual_reasoning_sample.jsonl
 vqav2:
   how_many_people_are:
     imgs: data/datasets/vqav2/imgs/how_many_people_are
     questions: data/datasets/vqav2/q_how_many_people_are.jsonl
+    sampled_questions: data/datasets/vqav2/q_how_many_people_are_sample.jsonl
   what_is_the_person:
     imgs: data/datasets/vqav2/imgs/what_is_the_person
     questions: data/datasets/vqav2/q_what_is_the_person.jsonl
+    sampled_questions: data/datasets/vqav2/q_what_is_the_person_sample.jsonl
 vqav2_holdout:
   is_the_person:
     imgs: data/datasets/vqav2/holdout/imgs/is_the_person
