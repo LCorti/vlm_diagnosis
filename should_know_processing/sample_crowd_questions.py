@@ -7,7 +7,7 @@ if module_path not in sys.path:
 
 from config_loaders.dataset_config_loader import DatasetConfig
 from config_loaders.sk_config_loader import SKConfig
-from utils.data_io import load_jsonl, save_jsonl
+from utils.data_io import load_jsonl, save_jsonl, save_json
 
 
 if __name__ == "__main__":
@@ -23,6 +23,7 @@ if __name__ == "__main__":
     for ds in ds_list:
         ds_paths = ds_config.get_ds_paths(ds)
         sk_paths = sk_config.get_sk_paths(ds)
+        ds_crowd_questions = []
 
         for ds_class in sk_paths:
             print(f"Dealing with {ds} + {ds_class}")
@@ -56,5 +57,11 @@ if __name__ == "__main__":
                     # if not (ds == "mmbench" and ds_class == "image_topic"):
                     #     break
 
+            # Save individual files
             out_file_path = f"../{ds_paths[ds_class]['sampled_questions']}"
+            ds_crowd_questions.extend(sampled_questions)
             save_jsonl(sampled_questions, out_file_path)
+
+        # Save single file for dataset
+        out_file_path = f"../data/datasets/{ds}/q_crowd.json"
+        save_json(ds_crowd_questions, out_file_path)
