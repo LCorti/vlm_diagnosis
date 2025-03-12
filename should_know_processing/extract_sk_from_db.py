@@ -52,6 +52,7 @@ DATABASE_PREFIX = "lmm_diag_"  # completed dynamically
 if __name__ == "__main__":
     sk_config = SKConfig()
     sk_list = sk_config.get_sk_list()
+    # Skip holdout set from VQA v2
     sk_list.remove("vqav2_holdout")
 
     for ds in sk_list:
