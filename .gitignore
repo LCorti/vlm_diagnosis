@@ -14,7 +14,6 @@ dist
 # Images
 imgs
 imgs_resized
-imgs_holdout
 
 # Huggingface Datasets
 data_backup
