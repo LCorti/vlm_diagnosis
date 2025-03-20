@@ -47,9 +47,7 @@ def get_all_concepts(unique_concepts_bbox, unique_concepts_rel):
             c for c in unique_concepts_bbox[img] if c in all_concepts_rel_img
         ]
         concepts_not_in_rel = [
-            c
-            for c in unique_concepts_bbox[img]
-            if c not in all_concepts_rel_img
+            c for c in unique_concepts_bbox[img] if c not in all_concepts_rel_img
         ]
 
         all_concepts_in_rel[img] = concepts_in_rel

@@ -96,7 +96,5 @@ class QuestionFormatter:
         return load_jsonl(ans_file_path)
 
     def get_llava_answer(self, q_idx):
-        ans = next(
-            a["text"] for a in self.LLAVA_ANS if a["question_id"] == q_idx
-        )
+        ans = next(a["text"] for a in self.LLAVA_ANS if a["question_id"] == q_idx)
         return ans

@@ -146,9 +146,7 @@ if __name__ == "__main__":
                 bboxes_list = flatten_bboxes_data(img["bboxes_rel"])
 
                 curr_clusters = compute_clusters(bboxes_list, eps)
-                len_clusters = [
-                    len(curr_clusters[bbs]) for bbs in curr_clusters
-                ]
+                len_clusters = [len(curr_clusters[bbs]) for bbs in curr_clusters]
                 max_clusters = max(len_clusters)
                 cluster_bboxes = list(curr_clusters.values())[
                     len_clusters.index(max_clusters)
@@ -218,6 +216,4 @@ if __name__ == "__main__":
                     del img["bboxes_not_rel"]
                     del img["rel_clusters"]
 
-            save_jsonl(
-                clean_sg, f"../{base_dir}/{sk_paths[ds_class]['sg_merged']}"
-            )
+            save_jsonl(clean_sg, f"../{base_dir}/{sk_paths[ds_class]['sg_merged']}")
