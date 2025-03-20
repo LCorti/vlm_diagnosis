@@ -1,14 +1,63 @@
-llava:
-  # No template here, directly ask the question over the image
-  question_template: ""
-  rationale_template: |
+question_template:
+  internvl2:
+    llava-bench: ""
+    mmbench: "Provide a concise and descriptive caption for this image."
+    seed: |
+      "Given the image, answer the following question by indicating which option is the correct one between the alternatives listed."
+      "Only provide the letter (A, B, C, or D) referring to the option you think is the correct answer."
+    vqav2: "Given the image, answer the following question by using only one word. Nothing else should be included."
+  minigpt4:
+    llava-bench: ""
+    mmbench: "Provide a concise and descriptive caption for this image."
+    seed: |
+      "Given the image, answer the following question by indicating which option is the correct one between the alternatives listed."
+      "Only provide the letter (A, B, C, or D) referring to the option you think is the correct answer."
+    vqav2: "Given the image, answer the following question by using only one word. Nothing else should be included."
+  llava-1.6:
+    llava-bench: ""
+    mmbench: "Provide a concise and descriptive caption for this image."
+    seed: |
+      "Given the image, answer the following question by indicating which option is the correct one between the alternatives listed."
+      "Only provide the letter (A, B, C, or D) referring to the option you think is the correct answer."
+    vqav2: "Given the image, answer the following question by using only one word. Nothing else should be included."
+  sharegpt4v:
+    llava-bench: ""
+    mmbench: "Provide a concise and descriptive caption for this image."
+    seed: |
+      "Given the image, answer the following question by indicating which option is the correct one between the alternatives listed."
+      "Only provide the letter (A, B, C, or D) referring to the option you think is the correct answer."
+    vqav2: "Given the image, answer the following question by using only one word. Nothing else should be included."
+rationale_template:
+  internvl2: |
     "Review the given answer and carefully analyze the image. Identify and describe the key visual elements and concepts in the image that directly support your reasoning and answer. For each point, clearly explain how that visual element contributes to the answer, and ensure every point is directly linked to the reasoning behind the answer."
     "Present your rationale in a structured, bullet-point format with the following guidelines:"
     "- Each bullet point must begin with the * character."
     "- Each point should clearly explain the connection between a specific visual element and the given answer."
     "- Avoid general descriptions of the image; focus on visual details that are relevant to the answer."
     "- Keep each point concise and ensure it directly addresses the reasoning behind the answer."
-  out_format_template: |
+  minigpt4: |
+    "Review the given answer and carefully analyze the image. Identify and describe the key visual elements and concepts in the image that directly support your reasoning and answer. For each point, clearly explain how that visual element contributes to the answer, and ensure every point is directly linked to the reasoning behind the answer."
+    "Present your rationale in a structured, bullet-point format with the following guidelines:"
+    "- Each bullet point must begin with the * character."
+    "- Each point should clearly explain the connection between a specific visual element and the given answer."
+    "- Avoid general descriptions of the image; focus on visual details that are relevant to the answer."
+    "- Keep each point concise and ensure it directly addresses the reasoning behind the answer."
+  llava-1.6: |
+    "Review the given answer and carefully analyze the image. Identify and describe the key visual elements and concepts in the image that directly support your reasoning and answer. For each point, clearly explain how that visual element contributes to the answer, and ensure every point is directly linked to the reasoning behind the answer."
+    "Present your rationale in a structured, bullet-point format with the following guidelines:"
+    "- Each bullet point must begin with the * character."
+    "- Each point should clearly explain the connection between a specific visual element and the given answer."
+    "- Avoid general descriptions of the image; focus on visual details that are relevant to the answer."
+    "- Keep each point concise and ensure it directly addresses the reasoning behind the answer."
+  sharegpt4v: |
+    "Review the given answer and carefully analyze the image. Identify and describe the key visual elements and concepts in the image that directly support your reasoning and answer. For each point, clearly explain how that visual element contributes to the answer, and ensure every point is directly linked to the reasoning behind the answer."
+    "Present your rationale in a structured, bullet-point format with the following guidelines:"
+    "- Each bullet point must begin with the * character."
+    "- Each point should clearly explain the connection between a specific visual element and the given answer."
+    "- Avoid general descriptions of the image; focus on visual details that are relevant to the answer."
+    "- Keep each point concise and ensure it directly addresses the reasoning behind the answer."
+out_format_template:
+  internvl2: |
     "Carefully analyze each point in the list above and extract distinct pairs of entities and their relationships. For each point, identify exactly two distinct entities at a time, along with a detailed and context-specific relationship between them (e.g., action, spatial position, interaction, causality, part-whole relationship, etc.). For each extraction, you must use the following format exactly: (Entity: [entity_1], Relationship: [relationship], Entity: [entity_2])."
     "Additional guidelines:"
     "- Both entities must always be present: Ensure that each extraction contains two distinct entities in the format provided."
@@ -27,17 +76,7 @@ llava:
     "  - (Entity: dog, Relationship: playing with, Entity: ball)"
     "  - (Entity: dog, Relationship: near, Entity: tree)"
     "  - (Entity: tree, Relationship: part of, Entity: landscape)"
-mmbench:
-  # MMBench contains multiple-choice questions, in this work we apply them in a generation setting
-  question_template: "Provide a concise and descriptive caption for this image."
-  rationale_template: |
-    "Review the given answer and carefully analyze the image. Identify and describe the key visual elements and concepts in the image that directly support your reasoning and answer. For each point, clearly explain how that visual element contributes to the answer, and ensure every point is directly linked to the reasoning behind the answer."
-    "Present your rationale in a structured, bullet-point format with the following guidelines:"
-    "- Each bullet point must begin with the * character."
-    "- Each point should clearly explain the connection between a specific visual element and the given answer."
-    "- Avoid general descriptions of the image; focus on visual details that are relevant to the answer."
-    "- Keep each point concise and ensure it directly addresses the reasoning behind the answer."
-  out_format_template: |
+  minigpt4: |
     "Carefully analyze each point in the list above and extract distinct pairs of entities and their relationships. For each point, identify exactly two distinct entities at a time, along with a detailed and context-specific relationship between them (e.g., action, spatial position, interaction, causality, part-whole relationship, etc.). For each extraction, you must use the following format exactly: (Entity: [entity_1], Relationship: [relationship], Entity: [entity_2])."
     "Additional guidelines:"
     "- Both entities must always be present: Ensure that each extraction contains two distinct entities in the format provided."
@@ -56,19 +95,7 @@ mmbench:
     "  - (Entity: dog, Relationship: playing with, Entity: ball)"
     "  - (Entity: dog, Relationship: near, Entity: tree)"
     "  - (Entity: tree, Relationship: part of, Entity: landscape)"
-seed:
-  # Steer the model to provide only the letter of the option corresponding to the answer
-  question_template: |
-    "Given the image, answer the following question by indicating which option is the correct one between the alternatives listed."
-    "Only provide the letter (A, B, C, or D) referring to the option you think is the correct answer."
-  rationale_template: |
-    "Review the given answer and carefully analyze the image. Identify and describe the key visual elements and concepts in the image that directly support your reasoning and answer. For each point, clearly explain how that visual element contributes to the answer, and ensure every point is directly linked to the reasoning behind the answer."
-    "Present your rationale in a structured, bullet-point format with the following guidelines:"
-    "- Each bullet point must begin with the * character."
-    "- Each point should clearly explain the connection between a specific visual element and the given answer."
-    "- Avoid general descriptions of the image; focus on visual details that are relevant to the answer."
-    "- Keep each point concise and ensure it directly addresses the reasoning behind the answer."
-  out_format_template: |
+  llava-1.6: |
     "Carefully analyze each point in the list above and extract distinct pairs of entities and their relationships. For each point, identify exactly two distinct entities at a time, along with a detailed and context-specific relationship between them (e.g., action, spatial position, interaction, causality, part-whole relationship, etc.). For each extraction, you must use the following format exactly: (Entity: [entity_1], Relationship: [relationship], Entity: [entity_2])."
     "Additional guidelines:"
     "- Both entities must always be present: Ensure that each extraction contains two distinct entities in the format provided."
@@ -87,18 +114,7 @@ seed:
     "  - (Entity: dog, Relationship: playing with, Entity: ball)"
     "  - (Entity: dog, Relationship: near, Entity: tree)"
     "  - (Entity: tree, Relationship: part of, Entity: landscape)"
-vqav2:
-  # The GT answers from this dataset are made of 1 word only. Instruct the model to answer in that way.
-  question_template: |
-    "Given the image, answer the following question by using only one word. Nothing else should be included."
-  rationale_template: |
-    "Review the given answer and carefully analyze the image. Identify and describe the key visual elements and concepts in the image that directly support your reasoning and answer. For each point, clearly explain how that visual element contributes to the answer, and ensure every point is directly linked to the reasoning behind the answer."
-    "Present your rationale in a structured, bullet-point format with the following guidelines:"
-    "- Each bullet point must begin with the * character."
-    "- Each point should clearly explain the connection between a specific visual element and the given answer."
-    "- Avoid general descriptions of the image; focus on visual details that are relevant to the answer."
-    "- Keep each point concise and ensure it directly addresses the reasoning behind the answer."
-  out_format_template: |
+  sharegpt4v: |
     "Carefully analyze each point in the list above and extract distinct pairs of entities and their relationships. For each point, identify exactly two distinct entities at a time, along with a detailed and context-specific relationship between them (e.g., action, spatial position, interaction, causality, part-whole relationship, etc.). For each extraction, you must use the following format exactly: (Entity: [entity_1], Relationship: [relationship], Entity: [entity_2])."
     "Additional guidelines:"
     "- Both entities must always be present: Ensure that each extraction contains two distinct entities in the format provided."
