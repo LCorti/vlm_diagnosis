@@ -4,7 +4,9 @@ from pathlib import Path
 
 class RKConfig:
     def __init__(self):
-        self.CONFIG_PATH = Path("../config/rk_paths.yaml").resolve()
+        self.CONFIG_PATH = (
+            Path(__file__).parent.joinpath("../config/rk_paths.yaml").resolve()
+        )
         self.RK_PATHS = self.load_rk_config()
 
     def load_rk_config(self):
