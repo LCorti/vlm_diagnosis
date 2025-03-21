@@ -3,13 +3,14 @@ import os
 import sys
 import torch
 
+from pathlib import Path
+from transformers import AutoTokenizer, AutoModel
+
 module_path = os.path.abspath(os.path.join("../../"))
 if module_path not in sys.path:
     sys.path.append(module_path)
 
 from config_loaders.rk_config_loader import RKConfig
-from pathlib import Path
-from transformers import AutoTokenizer, AutoModel
 from utils.data_io import make_dir, load_json, save_jsonl
 from utils.image_utils import load_image
 from utils.model_utils import split_model
