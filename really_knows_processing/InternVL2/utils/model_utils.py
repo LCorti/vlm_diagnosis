@@ -37,3 +37,21 @@ def split_model(model_name):
     device_map[f"language_model.model.layers.{num_layers - 1}"] = 0
 
     return device_map
+
+
+def make_message(template, question):
+    message = ""
+    # When there is a template, add new line
+    if len(template) > 0:
+        message = f"{template}\n"
+    message += question["question"]
+
+    # If multiple-choice question, include the options
+    if question["options"]:
+        for o in question["options"]:
+            message += "\n- {}: {}".format(o, question["options"][o])
+
+    # Add <image> token to message
+    message = f"<image>\n{message}"
+
+    return message
