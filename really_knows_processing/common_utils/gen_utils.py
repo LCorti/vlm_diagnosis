@@ -52,7 +52,7 @@ class GenUtils:
         return self.GEN_CONFIG
 
     def gen_response_internvl2(
-        self, model, text_input, image_tensor, tokenizer, history=None
+        self, model, tokenizer, image_tensor, text_input, history=None
     ):
         return model.chat(
             tokenizer,
