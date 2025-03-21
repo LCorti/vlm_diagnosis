@@ -8,11 +8,11 @@ if module_path not in sys.path:
     sys.path.append(module_path)
 
 from pathlib import Path
+from really_knows_processing.common_utils.gen_utils import GenUtils
 from transformers import AutoTokenizer, AutoModel
 from utils.data_io import load_json, save_jsonl
 from utils.image_utils import load_image
-from utils.model_utils import split_model
-from really_knows_processing.common_utils.gen_utils import GenUtils
+from utils.model_utils import split_model, make_message
 
 PROMPT_VERSION = 4
 MODEL_NAME = "internvl2"
@@ -52,7 +52,9 @@ if __name__ == "__main__":
     # Load generation config
     gen_utils = GenUtils(MODEL_NAME, prompt_version=PROMPT_VERSION)
     gen_config = gen_utils.get_gen_config(
-        args.do_sample, args.temperature, args.max_new_tokens
+        do_sample=args.do_sample,
+        temperature=args.temperature,
+        max_new_tokens=args.max_new_tokens,
     )
     # Get prompt templates for generation
     question_template = gen_utils.get_question_template(ds_name)
@@ -105,7 +107,7 @@ if __name__ == "__main__":
         image_tensor = load_image(img_path, max_num=12).to(torch.bfloat16).cuda()
 
         # Format text input
-        message = gen_utils.make_message(question_template, curr_q)
+        message = make_message(question_template, curr_q)
 
         response = gen_utils.gen_response_internvl2(
             model, tokenizer, image_tensor, message

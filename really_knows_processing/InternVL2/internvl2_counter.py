@@ -11,10 +11,10 @@ if module_path not in sys.path:
     sys.path.append(module_path)
 
 from config_loaders.rk_config_loader import RKConfig
+from really_knows_processing.common_utils.gen_utils import GenUtils
 from utils.data_io import make_dir, load_json, save_jsonl
 from utils.image_utils import load_image
-from utils.model_utils import split_model
-from really_knows_processing.common_utils.gen_utils import GenUtils
+from utils.model_utils import split_model, make_message
 
 PROMPT_VERSION = 4
 MODEL_NAME = "internvl2"
@@ -72,7 +72,9 @@ if __name__ == "__main__":
     # Load generation config
     gen_utils = GenUtils(MODEL_NAME, prompt_version=PROMPT_VERSION)
     gen_config = gen_utils.get_gen_config(
-        args.do_sample, args.temperature, args.max_new_tokens
+        do_sample=args.do_sample,
+        temperature=args.temperature,
+        max_new_tokens=args.max_new_tokens,
     )
 
     question_template = gen_utils.get_question_template(ds_name)
@@ -127,7 +129,7 @@ if __name__ == "__main__":
         img_path = base_dir.joinpath(curr_q["img_path"])
 
         # Format text input
-        message = gen_utils.make_message(question_template, curr_q)
+        message = make_message(question_template, curr_q)
 
         # Iterate over different sizes of constraints
         for size in rk_constraints:
