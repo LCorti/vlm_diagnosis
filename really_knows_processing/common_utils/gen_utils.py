@@ -1,5 +1,8 @@
 import os
 import sys
+import torch
+
+from transformers import GenerationConfig
 
 module_path = os.path.abspath(os.path.join("../"))
 if module_path not in sys.path:
@@ -25,29 +28,35 @@ class GenUtils:
     def get_out_format_template(self):
         return self.PROMPT_LOADER.get_out_format_template(self.MODEL_NAME)
 
-    def make_message(self, template, question):
-        message = ""
-        # When there is a template, add new line
-        if len(template) > 0:
-            message = f"{template}\n"
-        message += question["question"]
+    def get_gen_config(
+        self,
+        do_sample=False,
+        num_beams=1,
+        temperature=0.1,
+        max_new_tokens=256,
+        use_cache=True,
+    ):
+        # Return if self.GEN_CONFIG already initialised.
+        if self.GEN_CONFIG:
+            return self.GEN_CONFIG
 
-        # If multiple-choice question, include the options
-        if question["options"]:
-            for o in question["options"]:
-                message += "\n- {}: {}".format(o, question["options"][o])
-
-        # Add <image> token to message
-        message = f"<image>\n{message}"
-
-        return message
-
-    def get_gen_config(self, do_sample, temperature, max_new_tokens):
-        if not self.GEN_CONFIG:
+        # Otherwise, initialise and return it.
+        if self.MODEL_NAME == "internvl2":
             self.GEN_CONFIG = dict(
                 do_sample=do_sample,
                 temperature=temperature,
                 max_new_tokens=max_new_tokens,
+            )
+        elif self.MODEL_NAME == "llava-1.6":
+            self.GEN_CONFIG = GenerationConfig.from_dict(
+                {
+                    "do_sample": do_sample,
+                    "num_beams": num_beams,
+                    "temperature": temperature,
+                    "use_cache": use_cache,
+                    "max_new_tokens": max_new_tokens,
+                    "cache_position": None,
+                }
             )
         return self.GEN_CONFIG
 
@@ -62,3 +71,10 @@ class GenUtils:
             history=history,
             return_history=True,
         )
+
+    def gen_response_llava_next(self, model, tokenizer, image_tensor, input_ids):
+        with torch.inference_mode():
+            output_ids = model.generate(
+                input_ids, images=image_tensor, generation_config=self.GEN_CONFIG
+            )
+        return tokenizer.batch_decode(output_ids, skip_special_tokens=True)[0].strip()
