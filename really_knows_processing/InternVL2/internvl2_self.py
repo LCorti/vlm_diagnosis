@@ -3,7 +3,7 @@ import os
 import sys
 import torch
 
-module_path = os.path.abspath(os.path.join("../"))
+module_path = os.path.abspath(os.path.join("../../"))
 if module_path not in sys.path:
     sys.path.append(module_path)
 
@@ -13,7 +13,7 @@ from transformers import AutoTokenizer, AutoModel
 from utils.data_io import make_dir, load_json, save_jsonl
 from utils.image_utils import load_image
 from utils.model_utils import split_model
-from common_utils.gen_utils import GenUtils
+from really_knows_processing.common_utils.gen_utils import GenUtils
 
 PROMPT_VERSION = 4
 MODEL_NAME = "internvl2"
@@ -51,6 +51,7 @@ if __name__ == "__main__":
     # Parse args
     args = parse_args()
     ds_name = args.ds_name
+    ds_folder = args.ds_folder
     questions_file = args.questions_file
 
     # Load RK config
@@ -58,10 +59,12 @@ if __name__ == "__main__":
     # Get RK output paths and
     # (1) complete file name with prompt version
     out_file = rk_config.get_rk_paths(MODEL_NAME, ds_name)
-    out_file.format(PROMPT_VERSION)
+    out_file = out_file.format(PROMPT_VERSION)
     # (2) make directory if missing
+    base_dir = Path(__file__).parent.parent.parent
     out_dir = Path(out_file).parent
-    make_dir(out_dir)
+    full_out_path = base_dir.joinpath(out_file).parent
+    make_dir(full_out_path)
 
     # Load generation config
     gen_utils = GenUtils(MODEL_NAME, prompt_version=PROMPT_VERSION)
@@ -119,7 +122,7 @@ if __name__ == "__main__":
         model_rk = {"question_id": curr_q["question_id"]}
 
         # Loading image
-        img_path = os.path.join(args.ds_folder, curr_q["img_path"])
+        img_path = base_dir.joinpath(curr_q["img_path"])
         print("-- Loading image {}".format(img_path))
         image_tensor = load_image(img_path, max_num=12).to(torch.bfloat16).cuda()
 
@@ -142,8 +145,8 @@ if __name__ == "__main__":
             tokenizer,
             history=history,
         )
-        # print(model_rk["rationales"])
-        # print("=" * 25)
+        print(model_rk["rationales"])
+        print("=" * 25)
 
         # Third step: triple extraction and structuring from rationales
         model_rk["triples"], history = gen_utils.gen_response_internvl2(
@@ -162,6 +165,8 @@ if __name__ == "__main__":
         # Free up memory
         del image_tensor
         torch.cuda.empty_cache()
+
+        break
         # == == == == == == == == == == == == == == == == == == ==
 
         # Saving results to file
