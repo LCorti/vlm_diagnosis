@@ -24,9 +24,6 @@ def parse_args():
     parser = argparse.ArgumentParser(description="RK Generation for InternVL2.")
     parser.add_argument("--ds_name", required=True, help="Name of the dataset.")
     parser.add_argument(
-        "--ds_folder", required=True, help="Path to the dataset folder."
-    )
-    parser.add_argument(
         "--questions_file", required=True, help="Path to the file with questions."
     )
     parser.add_argument("--do_sample", default=False)
@@ -51,7 +48,6 @@ if __name__ == "__main__":
     # Parse args
     args = parse_args()
     ds_name = args.ds_name
-    ds_folder = args.ds_folder
     questions_file = args.questions_file
 
     # Load RK config
@@ -62,9 +58,9 @@ if __name__ == "__main__":
     out_file = out_file.format(PROMPT_VERSION)
     # (2) make directory if missing
     base_dir = Path(__file__).parent.parent.parent
-    out_dir = Path(out_file).parent
-    full_out_path = base_dir.joinpath(out_file).parent
-    make_dir(full_out_path)
+    full_out_file = base_dir.joinpath(out_file)
+    full_out_dir = base_dir.joinpath(Path(out_file).parent)
+    make_dir(full_out_dir)
 
     # Load generation config
     gen_utils = GenUtils(MODEL_NAME, prompt_version=PROMPT_VERSION)
@@ -131,7 +127,7 @@ if __name__ == "__main__":
 
         # First generation step: get answer from the model
         model_rk["response"], history = gen_utils.gen_response_internvl2(
-            model, message, image_tensor, gen_config, tokenizer
+            model, tokenizer, image_tensor, message
         )
         print(model_rk["response"])
         print("=" * 25)
@@ -139,10 +135,9 @@ if __name__ == "__main__":
         # Second generation step: get unstructured rationales for model output
         model_rk["rationales"], history = gen_utils.gen_response_internvl2(
             model,
-            rationale_template,
-            image_tensor,
-            gen_config,
             tokenizer,
+            image_tensor,
+            rationale_template,
             history=history,
         )
         print(model_rk["rationales"])
@@ -151,10 +146,9 @@ if __name__ == "__main__":
         # Third step: triple extraction and structuring from rationales
         model_rk["triples"], history = gen_utils.gen_response_internvl2(
             model,
-            out_format_template,
-            image_tensor,
-            gen_config,
             tokenizer,
+            image_tensor,
+            out_format_template,
             history=history,
         )
         print(model_rk["triples"])
@@ -166,10 +160,9 @@ if __name__ == "__main__":
         del image_tensor
         torch.cuda.empty_cache()
 
-        break
         # == == == == == == == == == == == == == == == == == == ==
 
         # Saving results to file
         print("... Saving data ...")
-        save_jsonl(all_model_rk, out_file)
+        save_jsonl(all_model_rk, full_out_file)
         print("Data saved.")
