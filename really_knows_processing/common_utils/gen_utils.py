@@ -1,4 +1,5 @@
 import os
+import re
 import sys
 import torch
 
@@ -18,6 +19,21 @@ class GenUtils:
         self.MODEL_NAME = model_name
         self.PROMPT_LOADER = PromptLoader(prompt_version=self.PROMPT_VERSION)
         self.GEN_CONFIG = None
+
+        # After manually inspecting the generated really-knows, these characters
+        # seem to be used by models (more or less consistently) when asked to
+        # generate a list of structured triples.
+        self.FIRST_CHARS = ["\\*", "-", "\\+", "[0-9]+\\."]
+
+        # Parsing patterns
+        if self.MODEL_NAME == "sharegpt4v":
+            self.SEARCH_PATTERN = r"\((.+), (.+), (.+)\)"
+            self.GROUP_PATTERN = (
+                r"\((?P<from_concept>.+), (?P<relationship>.+), (?P<to_concept>.+)\)"
+            )
+        else:
+            self.SEARCH_PATTERN = r"\(Entity: (.+), Relationship: (.+), Entity: (.+)\)"
+            self.GROUP_PATTERN = r"\(Entity: (?P<from_concept>.+), Relationship: (?P<relationship>.+), Entity: (?P<to_concept>.+)\)"
 
     def get_question_template(self, ds_name):
         return self.PROMPT_LOADER.get_question_template(self.MODEL_NAME, ds_name)
@@ -78,3 +94,30 @@ class GenUtils:
                 input_ids, images=image_tensor, generation_config=self.GEN_CONFIG
             )
         return tokenizer.batch_decode(output_ids, skip_special_tokens=True)[0].strip()
+
+    def parse_raw_rk(self, raw_rk):
+        # Prep new object
+        parsed_rk = {}
+        parsed_rk["question_id"] = raw_rk["question_id"]
+        parsed_rk["response"] = raw_rk["response"]
+        parsed_rk["rationales"] = raw_rk["rationales"]
+        parsed_rk["triples"] = []
+        parsed_rk["triple_objs"] = []
+
+        # Parse raw-text triples
+        # (1) Split lines
+        raw_rk_lines = [
+            line.rstrip().rstrip()
+            for line in raw_rk["triples"].split("\n")
+            if len(line) > 0
+        ]
+
+        # (2) Parse following this structure
+        # <first_char> (Entity: <x>, Relationship: <y>, Entity: <z>)
+        pattern = re.compile(self.SEARCH_PATTERN)
+        parsed_rk["triples"].extend(rl for rl in raw_rk_lines if re.search(pattern, rl))
+        if len(parsed_rk["triples"]) > 0:
+            for rk in parsed_rk["triples"]:
+                rk_match = re.search(self.GROUP_PATTERN, rk)
+                if rk_match is not None:
+                    parsed_rk["triple_objs"].append(rk_match.groupdict())
