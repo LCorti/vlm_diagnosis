@@ -24,4 +24,11 @@ class RKConfig:
             raise
         if ds_name not in self.RK_PATHS[model]:
             raise
-        return self.RK_PATHS[model][ds_name]
+        return self.RK_PATHS[model][ds_name]["raw"]
+
+    def get_parsed_rk_paths(self, model, ds_name):
+        if model not in self.RK_PATHS:
+            raise
+        if ds_name not in self.RK_PATHS[model]:
+            raise
+        return self.RK_PATHS[model][ds_name]["parsed"]
