@@ -54,13 +54,18 @@ if __name__ == "__main__":
     rk_config = RKConfig()
     # Get RK output paths and
     # (1) complete file name with prompt version
-    out_file = rk_config.get_rk_paths(MODEL_NAME, ds_name)
-    out_file = out_file.format(PROMPT_VERSION)
+    raw_out_f = rk_config.get_rk_paths(MODEL_NAME, ds_name)
+    raw_out_f = raw_out_f.format(PROMPT_VERSION)
+    parsed_out_f = rk_config.get_parsed_rk_paths(MODEL_NAME, ds_name)
+    parsed_out_f = parsed_out_f.format(PROMPT_VERSION)
     # (2) make directory if missing
     base_dir = Path(__file__).parent.parent.parent
-    full_out_file = base_dir.joinpath(out_file)
-    full_out_dir = base_dir.joinpath(Path(out_file).parent)
-    make_dir(full_out_dir)
+    full_raw_out_f = base_dir.joinpath(raw_out_f)
+    full_raw_out_dir = base_dir.joinpath(Path(raw_out_f).parent)
+    make_dir(full_raw_out_dir)
+    full_parsed_out_f = base_dir.joinpath(parsed_out_f)
+    full_parsed_out_dir = base_dir.joinpath(Path(parsed_out_f).parent)
+    make_dir(full_parsed_out_dir)
 
     # Load generation config
     gen_utils = GenUtils(MODEL_NAME, prompt_version=PROMPT_VERSION)
@@ -110,14 +115,15 @@ if __name__ == "__main__":
 
     # == == == == Get responses and self-explanations == == == ==
     print("Running inference and computing explanations...")
-    all_model_rk = []
+    all_rk = []
+    all_parsed_rk = []
 
     for curr_q in questions:
         print(f"Current question ID: {curr_q['question_id']}")
         print(f"-- Text: {curr_q['question']}")
 
         # Prepare object to store info
-        model_rk = {"question_id": curr_q["question_id"]}
+        curr_rk = {"question_id": curr_q["question_id"]}
 
         # Loading image
         img_path = base_dir.joinpath(curr_q["img_path"])
@@ -128,35 +134,36 @@ if __name__ == "__main__":
         message = make_message(question_template, curr_q)
 
         # First generation step: get answer from the model
-        model_rk["response"], history = gen_utils.gen_response_internvl2(
+        curr_rk["response"], history = gen_utils.gen_response_internvl2(
             model, tokenizer, image_tensor, message
         )
-        print(model_rk["response"])
+        print(curr_rk["response"])
         print("=" * 25)
 
         # Second generation step: get unstructured rationales for model output
-        model_rk["rationales"], history = gen_utils.gen_response_internvl2(
+        curr_rk["rationales"], history = gen_utils.gen_response_internvl2(
             model,
             tokenizer,
             image_tensor,
             rationale_template,
             history=history,
         )
-        print(model_rk["rationales"])
+        print(curr_rk["rationales"])
         print("=" * 25)
 
         # Third step: triple extraction and structuring from rationales
-        model_rk["triples"], history = gen_utils.gen_response_internvl2(
+        curr_rk["triples"], history = gen_utils.gen_response_internvl2(
             model,
             tokenizer,
             image_tensor,
             out_format_template,
             history=history,
         )
-        print(model_rk["triples"])
+        print(curr_rk["triples"])
         print("=" * 25)
 
-        all_model_rk.append(model_rk)
+        all_rk.append(curr_rk)
+        all_parsed_rk.append(gen_utils.parse_raw_rk(curr_rk))
 
         # Free up memory
         del image_tensor
@@ -165,6 +172,8 @@ if __name__ == "__main__":
         # == == == == == == == == == == == == == == == == == == ==
 
         # Saving results to file
-        print("... Saving data ...")
-        save_jsonl(all_model_rk, full_out_file)
-        print("Data saved.")
+        print("... Saving raw Really Knows ...")
+        save_jsonl(all_rk, full_raw_out_f)
+        print("... Saving parsed Really Knows ...")
+        save_jsonl(all_parsed_rk, full_parsed_out_f)
+        print("All data saved.")
