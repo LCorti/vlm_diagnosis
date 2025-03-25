@@ -1,4 +1,6 @@
-from data_io import load_json
+import itertools
+
+from utils.data_io import load_json
 
 
 # == == == == == == == == == == == == == == == ==
@@ -25,3 +27,14 @@ def load_vg1800_dict(data_path):
         k: concept_counts[k] / total_concept_occ for k in concept_counts
     }
     return vg1800_dict
+
+
+def compute_concepts_powerset(concepts):
+    return compute_powerset(concepts)
+
+
+def compute_powerset(base_set):
+    powerset = itertools.chain.from_iterable(
+        itertools.combinations(base_set, r) for r in range(1, len(base_set) + 1)
+    )
+    return list(powerset)
