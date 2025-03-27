@@ -29,8 +29,18 @@ def load_vg1800_dict(data_path):
     return vg1800_dict
 
 
-def compute_concepts_powerset(concepts):
-    return compute_powerset(concepts)
+def compute_concepts_powerset(concepts, return_dict=False):
+    powerset_list = compute_powerset(concepts)
+    if not return_dict:
+        return powerset_list
+
+    powerset_dict = {}
+    for subset in powerset_list:
+        if len(subset) not in powerset_dict:
+            powerset_dict[len(subset)] = [subset]
+        else:
+            powerset_dict[len(subset)].append(subset)
+    return powerset_dict
 
 
 def compute_powerset(base_set):
