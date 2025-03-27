@@ -1,4 +1,5 @@
 import cv2
+import json
 import numpy as np
 import os
 import sys
@@ -13,7 +14,6 @@ from shapely.geometry import Polygon, MultiPolygon
 from shapely.ops import unary_union
 from utils.data_io import load_json, load_jsonl, make_dir, save_json
 from utils.image_utils import load_img, save_img, from_array
-from utils.sg_utils import compute_concepts_powerset
 
 
 def bbox_to_polygon(bb):
@@ -124,10 +124,22 @@ if __name__ == "__main__":
         sk_paths = sk_config.get_sk_paths(dataset)
         ds_sk = {}
         summary = {}
+        powerset_details = {}
         base_dir = Path(__file__).parent.parent
-        base_path_summary = base_dir.joinpath(
+        path_summary = base_dir.joinpath(
             f"./data/datasets/{dataset}/imgs_occluded/summary.json"
         )
+        path_powerset_details = base_dir.joinpath(
+            f"./data/datasets/{dataset}/imgs_occluded/details.json"
+        )
+
+        # Try to load combination data
+        try:
+            powerset_details = load_json(path_powerset_details)
+        except Exception as _:
+            print("Unable to find file with combination details.")
+            raise
+
         # Load questions
         questions_file = f"../data/datasets/{dataset}/q_crowd.json"
         questions = load_json(questions_file)
@@ -156,20 +168,28 @@ if __name__ == "__main__":
 
             # Get list of concepts
             concept_dict = get_concept_dict(curr_sg["rel_clusters_unique"])
-            # Compute powerset
-            concept_combinations = compute_concepts_powerset(list(concept_dict.keys()))
+            # Compute powerset (+ store details)
+            print(
+                f"Question {curr_q['question_id']} -- img {curr_q['img']}: dealing with {len(concept_dict.keys())} concepts."
+            )
+            curr_powerset_detail = powerset_details[str(curr_q["question_id"])]
+
             # Run occlusion
             base_path_imgs = base_dir.joinpath(
                 f"./data/datasets/{dataset}/imgs_occluded/{ds_class}/{curr_q['question_id']}"
             )
 
             make_dir(base_path_imgs)
+            flat_list = [
+                comb for subset in curr_powerset_detail.values() for comb in subset
+            ]
             occluded_images = occlude_image(
                 img,
                 f"{base_path_imgs}/{curr_q['img']}",
                 concept_dict,
-                concept_combinations,
+                flat_list,
             )
+            occluded_images = []
 
             # Update summary
             if ds_class not in summary[dataset]:
@@ -181,6 +201,6 @@ if __name__ == "__main__":
             }
 
         # Save summary (images already saved)
-        print("... Saving dataset summary...")
-        save_json(summary[dataset], base_path_summary)
+        print("... Saving occlusion summary...")
+        save_json(summary[dataset], path_summary)
         print("Saved.")
