@@ -13,6 +13,7 @@ dist
 
 # Images
 imgs
+imgs_occluded
 imgs_resized
 
 # Huggingface Datasets
