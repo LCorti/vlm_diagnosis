@@ -7,9 +7,19 @@ from torchvision.transforms.functional import InterpolationMode
 IMAGENET_MEAN = (0.485, 0.456, 0.406)
 IMAGENET_STD = (0.229, 0.224, 0.225)
 
-# == == == == == == == ==
-# Image Processing Utils
-# == == == == == == == ==
+
+def load_image(image_file):
+    return Image.open(image_file).convert("RGB")
+
+
+def get_image_tensor(image, input_size=448, max_num=12):
+    transform = build_transform(input_size=input_size)
+    images = dynamic_preprocess(
+        image, image_size=input_size, use_thumbnail=True, max_num=max_num
+    )
+    pixel_values = [transform(image) for image in images]
+    pixel_values = torch.stack(pixel_values)
+    return pixel_values
 
 
 def build_transform(input_size):
@@ -84,14 +94,3 @@ def dynamic_preprocess(
         thumbnail_img = image.resize((image_size, image_size))
         processed_images.append(thumbnail_img)
     return processed_images
-
-
-def load_image(image_file, input_size=448, max_num=12):
-    image = Image.open(image_file).convert("RGB")
-    transform = build_transform(input_size=input_size)
-    images = dynamic_preprocess(
-        image, image_size=input_size, use_thumbnail=True, max_num=max_num
-    )
-    pixel_values = [transform(image) for image in images]
-    pixel_values = torch.stack(pixel_values)
-    return pixel_values
