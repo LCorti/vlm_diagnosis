@@ -3,20 +3,25 @@ import os
 import sys
 import torch
 
+from pathlib import Path
+from transformers import AutoTokenizer, AutoModel
+
 module_path = os.path.abspath(os.path.join("../../"))
 if module_path not in sys.path:
     sys.path.append(module_path)
 
 from config_loaders.rk_config_loader import RKConfig
-from pathlib import Path
 from really_knows_processing.common_utils.gen_utils import GenUtils
-from transformers import AutoTokenizer, AutoModel
+from really_knows_processing.common_utils.image_utils import (
+    load_image,
+    get_image_tensor,
+)
 from utils.data_io import make_dir, load_json, save_jsonl
-from utils.image_utils import load_image
 from utils.model_utils import split_model, make_message
 
 PROMPT_VERSION = 4
 MODEL_NAME = "internvl2"
+HF_MODEL_NAME = "OpenGVLab/InternVL2-8B"
 
 
 # Kwargs parser
@@ -81,14 +86,13 @@ if __name__ == "__main__":
 
     # Load model
     print("Loading model...")
-    hf_model_name = "OpenGVLab/InternVL2-8B"
-    tokenizer = AutoTokenizer.from_pretrained(hf_model_name, trust_remote_code=True)
+    tokenizer = AutoTokenizer.from_pretrained(HF_MODEL_NAME, trust_remote_code=True)
     # If more GPUs are available split, use authors' function to split the model
     if torch.cuda.device_count() > 1:
         print("Found {} GPUs; splitting model...".format(torch.cuda.device_count()))
-        device_map = split_model(Path(hf_model_name).stem)
+        device_map = split_model(Path(HF_MODEL_NAME).stem)
         model = AutoModel.from_pretrained(
-            hf_model_name,
+            HF_MODEL_NAME,
             torch_dtype=torch.bfloat16,
             low_cpu_mem_usage=True,
             trust_remote_code=True,
@@ -98,7 +102,7 @@ if __name__ == "__main__":
         print("Found 1 GPU.")
         model = (
             AutoModel.from_pretrained(
-                hf_model_name,
+                HF_MODEL_NAME,
                 torch_dtype=torch.bfloat16,
                 low_cpu_mem_usage=True,
                 trust_remote_code=True,
@@ -128,7 +132,8 @@ if __name__ == "__main__":
         # Loading image
         img_path = base_dir.joinpath(curr_q["img_path"])
         print("-- Loading image {}".format(img_path))
-        image_tensor = load_image(img_path, max_num=12).to(torch.bfloat16).cuda()
+        image = load_image(img_path)
+        image_tensor = get_image_tensor(image, max_num=12).to(torch.bfloat16).cuda()
 
         # Format text input
         message = make_message(question_template, curr_q)
