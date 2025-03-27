@@ -4,9 +4,9 @@ import sys
 import torch
 
 from llava.constants import IMAGE_TOKEN_INDEX
+from llava.mm_utils import tokenizer_image_token, get_model_name_from_path
 from llava.model.builder import load_pretrained_model
 from llava.utils import disable_torch_init
-from llava.mm_utils import tokenizer_image_token, get_model_name_from_path
 from pathlib import Path
 
 module_path = os.path.abspath(os.path.join("../../"))
@@ -14,18 +14,19 @@ if module_path not in sys.path:
     sys.path.append(module_path)
 
 from config_loaders.rk_config_loader import RKConfig
+from really_knows_processing.common_utils.gen_utils import GenUtils
+from really_knows_processing.common_utils.image_utils import load_image
 from utils.data_io import make_dir, load_json, save_jsonl
-from utils.image_utils import load_image
 from utils.model_utils import (
     set_conv_mode,
     make_message,
     get_conv_template,
     add_conv_step,
 )
-from really_knows_processing.common_utils.gen_utils import GenUtils
 
 PROMPT_VERSION = 4
 MODEL_NAME = "llava-1.6"
+HF_MODEL_NAME = "liuhaotian/llava-v1.6-vicuna-7b"
 
 
 # Kwargs parser
@@ -97,12 +98,11 @@ if __name__ == "__main__":
     print("Loading model...")
     # Kept from original implementation
     disable_torch_init()
-    hf_model_path = "liuhaotian/llava-v1.6-vicuna-7b"
     model_base = None
-    model_name = get_model_name_from_path(hf_model_path)
+    model_name = get_model_name_from_path(HF_MODEL_NAME)
     conv_mode = set_conv_mode(model_name)
     tokenizer, model, image_processor, _ = load_pretrained_model(
-        model_path=hf_model_path, model_base=model_base, model_name=model_name
+        model_path=HF_MODEL_NAME, model_base=model_base, model_name=model_name
     )
     model.half()
     # print(getattr(model.config, "image_aspect_ratio", None))
@@ -113,12 +113,10 @@ if __name__ == "__main__":
     print("Loading questions from {}".format(questions_file))
     questions = load_json(questions_file)
 
-    # == == == == Get attributions over input image == == == ==
+    # == == == == Get responses and self-explanations == == == ==
     print("Running inference and computing explanations...")
     all_rk = []
     all_parsed_rk = []
-
-    # -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 
     for curr_q in questions:
         print("Current question ID: {}".format(curr_q["question_id"]))
