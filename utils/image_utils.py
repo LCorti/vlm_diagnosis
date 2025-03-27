@@ -14,6 +14,10 @@ def save_img(pil_img, file_path):
     rgb_img.save(file_path)
 
 
+def from_array(array):
+    return Image.fromarray(array)
+
+
 def resize_img(pil_img):
     size = get_size(pil_img.size)
     pil_img = pil_img.resize(size)
