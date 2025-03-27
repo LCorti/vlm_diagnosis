@@ -20,7 +20,13 @@ if module_path not in sys.path:
 from config_loaders.rk_config_loader import RKConfig
 from really_knows_processing.common_utils.gen_utils import GenUtils
 from utils.data_io import make_dir, load_json, save_jsonl
-from utils.model_utils import ask, get_chat_state, get_response, make_message
+from utils.model_utils import (
+    ask,
+    get_chat_state,
+    get_response,
+    load_image,
+    make_message,
+)
 
 PROMPT_VERSION = 4
 MODEL_NAME = "minigpt4"
