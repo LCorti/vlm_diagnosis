@@ -66,13 +66,14 @@ def occlude_image(img, base_out_path, concept_dict, concept_combinations):
     counter = 0
     for combination in concept_combinations:
         # Prepare output object
+        full_path = f"{base_out_path}_{counter}.jpg"
         new_entry = {
-            "path": f"{base_out_path}_{counter}.jpg",
+            "path": f".{full_path.split('datasets')[1]}",
             "occluded_concepts": combination,
         }
         # Run occlusion
         occluded_img = run_occlusion(img, concept_dict, combination)
-        save_img(occluded_img, new_entry["path"])
+        save_img(occluded_img, full_path)
         occlusion_data.append(new_entry)
         counter += 1
     return occlusion_data
@@ -188,7 +189,6 @@ if __name__ == "__main__":
                 concept_dict,
                 flat_list,
             )
-            occluded_images = []
 
             # Update summary
             if ds_class not in summary[dataset]:
