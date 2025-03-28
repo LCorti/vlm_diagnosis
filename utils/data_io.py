@@ -39,6 +39,11 @@ def save_jsonl(data, file_path):
         fp.write("\n".join(map(json.dumps, data)))
 
 
+def append_to_jsonl(data, file_path):
+    with open(file_path, "a") as fp:
+        fp.write("\n".join(map(json.dumps, data)))
+
+
 # == == == == == == == == == == == == == == == ==
 # Directory management
 # == == == == == == == == == == == == == == == ==
