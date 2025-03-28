@@ -19,16 +19,18 @@ class RKConfig:
     def get_ds_list(self, model="internvl2"):
         return list(self.RK_PATHS[model].keys())
 
-    def get_rk_paths(self, model, ds_name):
+    def get_rk_paths(self, model, ds_name, rk_type):
         if model not in self.RK_PATHS:
             raise
         if ds_name not in self.RK_PATHS[model]:
             raise
-        return self.RK_PATHS[model][ds_name]["raw"]
+        return self.RK_PATHS[model][ds_name][rk_type]
+
+    def get_raw_rk_paths(self, model, ds_name):
+        return self.get_rk_paths(model, ds_name, "raw")
 
     def get_parsed_rk_paths(self, model, ds_name):
-        if model not in self.RK_PATHS:
-            raise
-        if ds_name not in self.RK_PATHS[model]:
-            raise
-        return self.RK_PATHS[model][ds_name]["parsed"]
+        return self.get_rk_paths(model, ds_name, "parsed")
+
+    def get_counterfactual_rk_paths(self, model, ds_name):
+        return self.get_rk_paths(model, ds_name, "counter")
