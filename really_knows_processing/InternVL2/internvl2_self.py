@@ -59,7 +59,7 @@ if __name__ == "__main__":
     rk_config = RKConfig()
     # Get RK output paths and
     # (1) complete file name with prompt version
-    raw_out_f = rk_config.get_rk_paths(MODEL_NAME, ds_name)
+    raw_out_f = rk_config.get_raw_rk_paths(MODEL_NAME, ds_name)
     raw_out_f = raw_out_f.format(PROMPT_VERSION)
     parsed_out_f = rk_config.get_parsed_rk_paths(MODEL_NAME, ds_name)
     parsed_out_f = parsed_out_f.format(PROMPT_VERSION)
