@@ -149,6 +149,7 @@ if __name__ == "__main__":
         occlusion_data = summary[ds_class][str(curr_q["question_id"])]["occlusion"]
         # curr_dir_imgs = curr_dir.joinpath(curr_q["question_id"])
         print(f">> Found {len(occlusion_data)} occluded images to process.")
+        curr_subset = []
 
         for curr_occ in occlusion_data:
             # Prepare object to store info
@@ -173,6 +174,7 @@ if __name__ == "__main__":
             )
 
             all_resp_counter.append(curr_occ_res)
+            curr_subset.append(curr_occ_res)
 
             # Free up memory
             del image_tensor
@@ -182,5 +184,5 @@ if __name__ == "__main__":
 
         # Saving results to file once computations for each 'size' are done
         print("... Saving data ...")
-        append_to_jsonl(all_resp_counter, full_counter_out_f)
+        append_to_jsonl(curr_subset, full_counter_out_f)
         print("Data saved.")
