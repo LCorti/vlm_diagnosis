@@ -42,6 +42,7 @@ def save_jsonl(data, file_path):
 def append_to_jsonl(data, file_path):
     with open(file_path, "a") as fp:
         fp.write("\n".join(map(json.dumps, data)))
+        fp.write("\n")
 
 
 # == == == == == == == == == == == == == == == ==
