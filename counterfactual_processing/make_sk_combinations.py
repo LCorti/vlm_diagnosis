@@ -9,7 +9,7 @@ if module_path not in sys.path:
 from config_loaders.sk_config_loader import SKConfig
 from pathlib import Path
 from utils.data_io import load_json, load_jsonl, make_dir, save_json
-from utils.sg_utils import compute_concepts_powerset
+from utils.graph_utils import compute_concepts_powerset
 
 
 def get_concept_dict(relations):
