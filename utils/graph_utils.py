@@ -3,9 +3,6 @@ import itertools
 from utils.data_io import load_json
 
 
-# == == == == == == == == == == == == == == == ==
-# Loading data dictionary VG1800
-# == == == == == == == == == == == == == == == ==
 def load_vg1800_dict(data_path):
     vg1800_data = load_json(data_path)
 
@@ -48,3 +45,17 @@ def compute_powerset(base_set):
         itertools.combinations(base_set, r) for r in range(1, len(base_set) + 1)
     )
     return list(powerset)
+
+
+def stringify_nx_graph(graph, template=True):
+    rels = []
+    for e in graph.edges:
+        from_concept = graph.nodes[e[0]]["label"]
+        to_concept = graph.nodes[e[1]]["label"]
+        rel = graph[from_concept][to_concept]["label"]
+        if template:
+            graph_str = f"* (Entity 1: {from_concept}, Relationship: {rel}, Entity 2: {to_concept})"
+        else:
+            graph_str = f"{from_concept} {rel} {to_concept}"
+        rels.append(graph_str)
+    return rels
