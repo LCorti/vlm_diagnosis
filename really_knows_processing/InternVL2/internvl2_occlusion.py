@@ -13,12 +13,12 @@ if module_path not in sys.path:
 from config_loaders.dataset_config_loader import DatasetConfig
 from config_loaders.rk_config_loader import RKConfig
 from really_knows_processing.common_utils.gen_utils import GenUtils
-from really_knows_processing.common_utils.path_utils import merge_path
-from utils.data_io import make_dir, load_json, load_jsonl, append_to_jsonl
 from really_knows_processing.common_utils.image_utils import (
     load_image,
     get_image_tensor,
 )
+from really_knows_processing.common_utils.path_utils import merge_path
+from utils.data_io import make_dir, load_json, load_jsonl, append_to_jsonl
 from utils.model_utils import split_model, make_message
 
 PROMPT_VERSION = 4
@@ -67,7 +67,7 @@ if __name__ == "__main__":
     # Load rk config to save responses
     rk_config = RKConfig()
     counter_out_f = rk_config.get_counterfactual_rk_paths(MODEL_NAME, ds_name)
-    # (2) make directory if missing
+    # Make directory if missing
     base_dir = Path(__file__).parent.parent.parent
     full_counter_out_f = base_dir.joinpath(counter_out_f)
     full_counter_out_dir = base_dir.joinpath(Path(full_counter_out_f).parent)
@@ -80,7 +80,7 @@ if __name__ == "__main__":
         temperature=args.temperature,
         max_new_tokens=args.max_new_tokens,
     )
-
+    # Get prompt templates for generation
     question_template = gen_utils.get_question_template(ds_name)
 
     # Load model
@@ -119,24 +119,17 @@ if __name__ == "__main__":
     # == == == == Get counterfactual responses on occluded images == == == ==
     print("Running inference on occluded images...")
 
-    # Check if some data is already present, if so load it
+    # Check if some data is already present, if so load it.
+    # Only keep the question ids for later checks.
     if full_counter_out_f.exists():
         all_resp_counter = load_jsonl(full_counter_out_f)
+        all_resp_counter = [curr_q["question_id"] for curr_q in all_resp_counter]
     else:
         all_resp_counter = []
 
     for curr_q in questions:
         # If data for curr_q is already present, skip it.
-        # Note: Ok since we save after all the data is processed for a question.
-        check_question = next(
-            (
-                rc
-                for rc in all_resp_counter
-                if rc["question_id"] == curr_q["question_id"]
-            ),
-            None,
-        )
-        if check_question:
+        if curr_q["question_id"] in all_resp_counter:
             continue
 
         print(f"Current question ID: {curr_q['question_id']}")
@@ -173,7 +166,7 @@ if __name__ == "__main__":
                 model, tokenizer, image_tensor, message
             )
 
-            all_resp_counter.append(curr_occ_res)
+            all_resp_counter.append(curr_q["question_id"])
             curr_subset.append(curr_occ_res)
 
             # Free up memory
