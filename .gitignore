@@ -11,6 +11,9 @@ __pycache__
 dist
 .ipynb_checkpoints
 
+# Test modules
+test_modules
+
 # Images
 imgs
 imgs_occluded
