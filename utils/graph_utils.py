@@ -1,4 +1,5 @@
 import itertools
+import networkx as nx
 
 from utils.data_io import load_json
 
@@ -59,3 +60,16 @@ def stringify_nx_graph(graph, template=True):
             graph_str = f"{from_concept} {rel} {to_concept}"
         rels.append(graph_str)
     return rels
+
+
+def make_nx_graph(raw_sk_rels):
+    nx_graph = nx.DiGraph()
+    for raw_rel in raw_sk_rels:
+        from_concept = raw_rel["from_concept"]["bb_label"]["bb_label_full"]
+        to_concept = raw_rel["to_concept"]["bb_label"]["bb_label_full"]
+        relation = raw_rel["rel_label"]["rel_label_text"]
+        nx_graph.add_node(from_concept, label=from_concept)
+        nx_graph.add_node(to_concept, label=to_concept)
+        nx_graph.add_edge(from_concept, to_concept, label=relation)
+
+    return nx_graph
