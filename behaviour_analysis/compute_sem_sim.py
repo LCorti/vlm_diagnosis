@@ -24,7 +24,7 @@ def load_sk_data(sk_data_paths):
 
         for gf in graph_files:
             g_idx = int(Path(gf).stem.split("_")[1]) - 1
-            sk_data[ds][g_idx] = data_io.load_graph_pickle(f"{sk_dp}/{gf}")
+            sk_data[ds][g_idx] = data_io.load_pickle(f"{sk_dp}/{gf}")
 
     return sk_data
 
@@ -36,7 +36,7 @@ def load_rk_data(rk_data_paths):
 
         for gf in graph_files:
             g_idx = int(Path(gf).stem.split("_")[1])
-            rk_data[model][ds][g_idx] = data_io.load_graph_pickle(f"{rk_dp}/{gf}")
+            rk_data[model][ds][g_idx] = data_io.load_pickle(f"{rk_dp}/{gf}")
 
     return rk_data
 
@@ -100,4 +100,4 @@ if __name__ == "__main__":
         out_path = f"./rk/{model}/{ds}"
         save_sim_data(sim_data[model][ds], f"{out_path}/sim_samples.json")
         save_sim_data(summary_sim, f"{out_path}/sim_summary.json")
-        print(f"Saved!")
+        print("Saved!")
