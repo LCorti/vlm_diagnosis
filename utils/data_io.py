@@ -58,15 +58,15 @@ def make_dir(dir_path):
 # == == == == == == == == == == == == == == == ==
 # Handling NX graphs
 # == == == == == == == == == == == == == == == ==
-def save_graph_pickle(graph, file_path):
+def save_pickle(data, file_path):
     with open(file_path, "wb") as fp:
-        pickle.dump(graph, fp)
+        pickle.dump(data, fp)
 
 
-def load_graph_pickle(file_path):
+def load_pickle(file_path):
     with open(file_path, "rb") as fp:
-        graph = pickle.load(fp, encoding="utf-8")
-    return graph
+        data = pickle.load(fp, encoding="utf-8")
+    return data
 
 
 # == == == == == == == == == == == == == == == ==
