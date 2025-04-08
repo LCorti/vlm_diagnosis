@@ -1,0 +1,8 @@
+llava-bench:
+  data: data/causal_effects/ca_data/llava-bench/ca_data.jsonl
+mmbench:
+  data: data/causal_effects/ca_data/mmbench/ca_data.jsonl
+seed:
+  data: data/causal_effects/ca_data/seed/ca_data.jsonl
+vqav2:
+  data: data/causal_effects/ca_data/vqav2/ca_data.jsonl

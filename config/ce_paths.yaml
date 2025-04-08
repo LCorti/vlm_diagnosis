@@ -1,0 +1,36 @@
+internvl2:
+  llava-bench:
+    estimates: data/causal_effects/estimates/internvl2/llava-bench/ce.json
+  mmbench:
+    estimates: data/causal_effects/estimates/internvl2/mmbench/ce.json
+  seed:
+    estimates: data/causal_effects/estimates/internvl2/seed/ce.json
+  vqav2:
+    estimates: data/causal_effects/estimates/internvl2/vqav2/ce.json
+llava-1.6:
+  llava-bench:
+    estimates: data/causal_effects/estimates/llava-1.6/llava-bench/ce.json
+  mmbench:
+    estimates: data/causal_effects/estimates/llava-1.6/mmbench/ce.json
+  seed:
+    estimates: data/causal_effects/estimates/llava-1.6/seed/ce.json
+  vqav2:
+    estimates: data/causal_effects/estimates/llava-1.6/vqav2/ce.json
+minigpt4:
+  llava-bench:
+    estimates: data/causal_effects/estimates/minigpt4/llava-bench/ce.json
+  mmbench:
+    estimates: data/causal_effects/estimates/minigpt4/mmbench/ce.json
+  seed:
+    estimates: data/causal_effects/estimates/minigpt4/seed/ce.json
+  vqav2:
+    estimates: data/causal_effects/estimates/minigpt4/vqav2/ce.json
+sharegpt4v:
+  llava-bench:
+    estimates: data/causal_effects/estimates/sharegpt4v/llava-bench/ce.json
+  mmbench:
+    estimates: data/causal_effects/estimates/sharegpt4v/mmbench/ce.json
+  seed:
+    estimates: data/causal_effects/estimates/sharegpt4v/seed/ce.json
+  vqav2:
+    estimates: data/causal_effects/estimates/sharegpt4v/vqav2/ce.json
