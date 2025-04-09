@@ -7,11 +7,7 @@ class CAConfig:
         self.CE_CONFIG_PATH = (
             Path(__file__).parent.joinpath("../config/ce_paths.yaml").resolve()
         )
-        # self.CA_DATA_CONFIG_PATH = (
-        #     Path(__file__).parent.joinpath("../config/ca_data_paths.yaml").resolve()
-        # )
         self.CE_PATHS = self.load_config(self.CE_CONFIG_PATH)
-        # self.CA_DATA_PATHS = self.load_config(self.CA_DATA_CONFIG_PATH)
 
     def load_config(self, path):
         with open(path) as fp:
@@ -32,6 +28,6 @@ class CAConfig:
 
     def get_ce_paths(self, model, ds_name):
         return self.get_paths(model, ds_name, "estimates")
-    
+
     def get_ca_data_paths(self, model, ds_name):
         return self.get_paths(model, ds_name, "ca_data")
