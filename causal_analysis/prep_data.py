@@ -20,6 +20,7 @@ from utils.data_io import load_jsonl, make_dir, save_jsonl
 
 warnings.filterwarnings("ignore")
 
+
 def parse_args():
     parser = argparse.ArgumentParser(description="Config for causal analysis.")
     parser.add_argument("--prompt_version", required=True)
@@ -35,6 +36,7 @@ def parse_args():
     args = parser.parse_args()
     return args
 
+
 def fix_word_numbers(parser, x):
     try:
         res = int(x)
@@ -46,6 +48,7 @@ def fix_word_numbers(parser, x):
             res = int(res)  # If parse works, make sure an int is returned
     finally:
         return res
+
 
 if __name__ == "__main__":
     print("Configuring...")
@@ -185,7 +188,7 @@ if __name__ == "__main__":
     for q_idx in df_dict:
         for idx, row in df_dict[q_idx].iterrows():
             out_data.append(row.to_dict())
-    
+
     ca_data_path = ca_config.get_ca_data_paths(model, dataset)
     out_file = base_dir.joinpath(ca_data_path).resolve()
     out_path = out_file.parent
