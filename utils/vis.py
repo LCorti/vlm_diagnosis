@@ -3,7 +3,6 @@ import networkx as nx
 import numpy as np
 
 from matplotlib.transforms import ScaledTranslation
-from utils.data_io import make_dir
 
 # Dictionary to show nice labels
 DS_MAP = {
@@ -18,36 +17,43 @@ DS_MAP = {
 # -- -- -- -- -- -- -- -- -- -- -- --
 
 
-def save_graph_to_img(id_image, graph, curr_out_dir):
+def save_graph_to_img(graph, out_file, highlight_cycles=False):
     # Plot graph
-    plt.figure(figsize=(15, 8))
+    plt.figure(figsize=(15, 15))
     plt.axis("off")
+    connection_style = "arc3,rad=0.1"
 
-    pos = nx.spring_layout(graph, k=0.8)
+    pos = nx.kamada_kawai_layout(graph)
     nx.draw(
         graph,
         pos=pos,
         with_labels=True,
-        node_size=3000,
+        node_size=800,
         node_color="skyblue",
-        font_size=10,
+        font_size=8,
         font_weight="bold",
+        connectionstyle=connection_style,
     )
 
     edge_labels = nx.get_edge_attributes(graph, "label")
     nx.draw_networkx_edge_labels(graph, pos=pos, edge_labels=edge_labels)
 
-    # Create directory if not exists
-    output_dir = f"{curr_out_dir}/graphs_img"
-    make_dir(output_dir)
+    if highlight_cycles:
+        try:
+            cycle = nx.find_cycle(graph, orientation="original")
+            nx.draw_networkx_edges(
+                graph,
+                pos,
+                arrows=True,
+                edgelist=cycle,
+                edge_color="r",
+                width=1,
+                connectionstyle=connection_style,
+            )
+        except Exception as e:
+            print(e)
 
-    image_path = f"{output_dir}/{id_image}.png"
-
-    try:
-        plt.savefig(image_path)
-    except Exception as e:
-        print(f"Error on {id_image}: {e}")
-
+    plt.savefig(out_file)
     plt.close()
 
 
