@@ -19,6 +19,7 @@ test_modules
 imgs
 imgs_occluded
 imgs_resized
+graph_plots
 
 # Huggingface Datasets
 data_backup
