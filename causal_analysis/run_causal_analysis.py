@@ -24,7 +24,6 @@ from config_loaders.ca_config_loader import CAConfig
 from config_loaders.sk_config_loader import SKConfig
 from utils.data_io import load_json, load_jsonl, load_pickle, make_dir, save_json
 from utils.measures import compute_ic_relation
-from utils.vis import save_graph_to_img
 
 warnings.filterwarnings("ignore")
 
