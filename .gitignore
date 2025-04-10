@@ -20,6 +20,7 @@ imgs
 imgs_occluded
 imgs_resized
 graph_plots
+*.pdf
 
 # Huggingface Datasets
 data_backup
