@@ -76,6 +76,7 @@ if __name__ == "__main__":
     alt_resps_path = base_dir.joinpath(alt_resps_path).resolve()
     alt_resps = load_jsonl(alt_resps_path)
 
+    print("Starting processing data...")
     # Get responses only for the max num of triplets
     # (i.e., ignore the rest of the powerset for now)
     resps_ids = set([q["question_id"] for q in resps])
@@ -108,6 +109,7 @@ if __name__ == "__main__":
                 }
             )
 
+    print("Converting to dataframe...")
     # Create dataframe out of counterfactual data and responses
     df = pd.DataFrame(all_resps)
     df.drop(["path"], axis=1, inplace=True)
@@ -122,6 +124,7 @@ if __name__ == "__main__":
         for q_idx in alt_resps_ids
     }
 
+    print("Slicing data for each question...")
     # Make dictionary with {question_id: [concepts]}.
     # This is done to extract an actual list of concepts, not any other PD objects.
     dict_concepts = {
@@ -132,6 +135,7 @@ if __name__ == "__main__":
         for q_idx in dict_max_triplets
     }
 
+    print("Cleaning up 'response' field and creating mapping to 'y'...")
     # Fix numerical answers given as words (e.g., "Three")
     w2n = Word2Num()
     df["response"] = df["response"].apply(lambda x: fix_word_numbers(w2n, x))
@@ -160,6 +164,7 @@ if __name__ == "__main__":
     # Make dictionary of dataframes w.r.t. question id
     df_dict = {q_idx: df[df["question_id"] == q_idx] for q_idx in dict_counter_resp}
 
+    print("Creating binary columns for concepts...")
     # Let us make binary columns indicating whether a concept was occluded or not.
     # By default, all concepts are present (1). Then, we zero out the ones occluded.
     # Note: done at this point because each question has a different number of concepts.
@@ -183,6 +188,7 @@ if __name__ == "__main__":
     #   - A bunch of rows with the counterfactual responses (combinations of concepts)
     #   - A series of binary columns matching 1:1 the concepts present or occluded
 
+    print("Saving data...")
     # Save different dataframes to file for causal analysis
     out_data = []
     for q_idx in df_dict:
