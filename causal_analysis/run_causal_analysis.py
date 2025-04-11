@@ -22,10 +22,15 @@ if module_path not in sys.path:
 from config_loaders.dataset_config_loader import DatasetConfig
 from config_loaders.ca_config_loader import CAConfig
 from config_loaders.sk_config_loader import SKConfig
-from utils.data_io import load_json, load_jsonl, load_pickle, make_dir, save_json
+from utils.data_io import load_json, load_jsonl, load_pickle, make_dir, append_to_jsonl
 from utils.measures import compute_ic_relation
 
 warnings.filterwarnings("ignore")
+
+TEST_SIGNIFICANCE = True
+CONF_INTERVALS = True
+STD_ERROR = False
+DO_REFUTE = False
 
 
 def parse_args():
@@ -145,14 +150,12 @@ def format_estimates(estimates, test_significance=False, std_error=False):
 
             if test_significance:
                 to_save["p-value"] = curr_est.test_stat_significance()
-                # TODO: fix this
-                to_save["significance"] = None
 
             if std_error:
                 to_save["std_error"] = curr_est.get_standard_error()
 
             out_data[q_idx][var_name] = to_save
-    return out_data
+    return [out_data]
 
 
 def make_df_dict(ca_data):
@@ -214,6 +217,11 @@ if __name__ == "__main__":
     sgg_freqs_path = base_dir.joinpath("data/common/sgg_freqs.json")
     sg_freqs = load_json(sgg_freqs_path)
 
+    # Prepare output file
+    estimates_out_file = Path(ca_config.get_ce_paths(model, dataset))
+    estimates_out_path = base_dir.joinpath(estimates_out_file).resolve()
+    make_dir(estimates_out_path.parent)
+
     # Build df_dict
     df_dict = make_df_dict(ca_data)
     print("df_dict built.")
@@ -256,15 +264,13 @@ if __name__ == "__main__":
     print(f"Loaded {len(questions)} questions from {dataset}.")
 
     # Running causal analysis
-    estimates = {}
-    refutations = {}
-
     for curr_q in questions:
         curr_idx = curr_q["question_id"]
         print(f">> Working with question # {curr_idx}")
         curr_sk_graph = copy.deepcopy(sk_graphs[curr_q["img"]])
         curr_df = df_dict[curr_idx]
-        # save_graph_to_img(curr_sk_graph, "test.png")
+        estimates = {}
+        refutations = {}
 
         if nx.is_directed_acyclic_graph(curr_sk_graph):
             print("DAG found proceeding...")
@@ -293,15 +299,17 @@ if __name__ == "__main__":
         estimates[curr_idx], refutations[curr_idx] = run_causal_inference_DML(
             curr_df,
             curr_sk_graph,
-            test_significance=False,
-            confidence_intervals=False,
-            do_refute=False,
+            test_significance=TEST_SIGNIFICANCE,
+            confidence_intervals=CONF_INTERVALS,
+            do_refute=DO_REFUTE,
         )
 
-    # Save results to file
-    estimates_out_file = Path(ca_config.get_ce_paths(model, dataset))
-    estimates_out_path = base_dir.joinpath(estimates_out_file).resolve()
-    make_dir(estimates_out_path.parent)
-
-    out_data = format_estimates(estimates, test_significance=False, std_error=False)
-    save_json(out_data, estimates_out_path)
+        print(estimates)
+        print("="*20)
+        # Save results to file
+        out_data = format_estimates(
+            estimates, test_significance=TEST_SIGNIFICANCE, std_error=STD_ERROR
+        )
+        print(out_data)
+        append_to_jsonl(out_data, estimates_out_path)
+        break
