@@ -149,7 +149,7 @@ def format_estimates(estimates, test_significance=False, std_error=False):
             to_save["interpretation"] = f.getvalue()
 
             if test_significance:
-                to_save["p-value"] = curr_est.test_stat_significance()
+                to_save["p_value"] = curr_est.test_stat_significance()["p_value"]
 
             if std_error:
                 to_save["std_error"] = curr_est.get_standard_error()
@@ -304,12 +304,8 @@ if __name__ == "__main__":
             do_refute=DO_REFUTE,
         )
 
-        print(estimates)
-        print("="*20)
         # Save results to file
         out_data = format_estimates(
             estimates, test_significance=TEST_SIGNIFICANCE, std_error=STD_ERROR
         )
-        print(out_data)
         append_to_jsonl(out_data, estimates_out_path)
-        break
