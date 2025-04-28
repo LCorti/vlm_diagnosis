@@ -231,7 +231,7 @@ def resolve_val_data(sg_data, parsed_crowd_val, sgg_dict, question):
                 rel["from_concept"]["bb_label"]["bb_label_idx"] = from_concept_idx
                 rel["from_concept"]["bb_label"]["bb_label_text"] = from_concept_label
                 rel["from_concept"]["bb_label"]["bb_label_full"] = (
-                    f"1-{from_concept_label}"
+                    f"0-{from_concept_label}"
                 )
                 # to_concept
                 to_concept_idx = get_concept_id(
@@ -240,7 +240,7 @@ def resolve_val_data(sg_data, parsed_crowd_val, sgg_dict, question):
                 to_concept_label = crowd_rel["crowd"]["new_to_concept"]
                 rel["to_concept"]["bb_label"]["bb_label_idx"] = to_concept_idx
                 rel["to_concept"]["bb_label"]["bb_label_text"] = to_concept_label
-                rel["to_concept"]["bb_label"]["bb_label_full"] = f"1-{to_concept_label}"
+                rel["to_concept"]["bb_label"]["bb_label_full"] = f"0-{to_concept_label}"
 
             # Fixing relationships if incorrect label
             if crowd_rel["answers"]["correct_relationship"] == 0:
