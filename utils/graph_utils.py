@@ -54,12 +54,18 @@ def stringify_nx_graph(graph, template=True):
         from_concept = graph.nodes[e[0]]["label"]
         to_concept = graph.nodes[e[1]]["label"]
         rel = graph[from_concept][to_concept]["label"]
-        if template:
-            graph_str = f"* (Entity 1: {from_concept}, Relationship: {rel}, Entity 2: {to_concept})"
-        else:
-            graph_str = f"{from_concept} {rel} {to_concept}"
-        rels.append(graph_str)
+        rels.append((from_concept, rel, to_concept), template=template)
     return rels
+
+
+def stringify_graph_triple(triple, template=True):
+    from_concept, rel, to_concept = triple
+    if template:
+        return (
+            f"* (Entity 1: {from_concept}, Relationship: {rel}, Entity 2: {to_concept})"
+        )
+    else:
+        return f"{from_concept} {rel} {to_concept}"
 
 
 def make_nx_graph(raw_sk_rels):
