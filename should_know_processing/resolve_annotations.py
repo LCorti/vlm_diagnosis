@@ -410,5 +410,5 @@ if __name__ == "__main__":
             save_jsonl(sg_final, out_file_path)
             print("... Saving stats to file...")
             out_file_path = f"../{base_dir}/stats.json"
-            save_json(stats, out_file_path)
+            save_json(stats[dataset][ds_class], out_file_path)
             print("Saved.")
