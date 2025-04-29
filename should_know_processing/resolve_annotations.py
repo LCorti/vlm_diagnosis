@@ -369,7 +369,7 @@ if __name__ == "__main__":
             crowd_val_file = sk_paths[ds_class]["val_step"]
             crowd_val = load_jsonl(f"../{base_dir}/{crowd_val_file}")
             # Load data from annotation step
-            crowd_ann_file = sk_paths[ds_class]["ann_step"]
+            crowd_ann_file = sk_paths[ds_class]["ann_exp"]
             crowd_ann = load_jsonl(f"../{base_dir}/{crowd_ann_file}")
 
             # Parse validation and annotation data
