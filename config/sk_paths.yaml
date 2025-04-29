@@ -7,6 +7,7 @@ llava-bench:
     sg_crowd: scene_graphs/sg_crowd.jsonl
     val_step: crowd_val.jsonl
     ann_step: crowd_ann.jsonl
+    ann_exp: crowd_ann_exp.jsonl
     sk_final: sk_final.jsonl
     pkl: pkl/sg_crowd_nx.pkl
 mmbench:
@@ -18,6 +19,7 @@ mmbench:
     sg_crowd: scene_graphs/sg_crowd.jsonl
     val_step: crowd_val.jsonl
     ann_step: crowd_ann.jsonl
+    ann_exp: crowd_ann_exp.jsonl
     sk_final: sk_final.jsonl
     pkl: pkl/sg_crowd_nx.pkl
   image_topic:
@@ -28,6 +30,7 @@ mmbench:
     sg_crowd: scene_graphs/sg_crowd.jsonl
     val_step: crowd_val.jsonl
     ann_step: crowd_ann.jsonl
+    ann_exp: crowd_ann_exp.jsonl
     sk_final: sk_final.jsonl
     pkl: pkl/sg_crowd_nx.pkl
 seed:
@@ -39,6 +42,7 @@ seed:
     sg_crowd: scene_graphs/sg_crowd.jsonl
     val_step: crowd_val.jsonl
     ann_step: crowd_ann.jsonl
+    ann_exp: crowd_ann_exp.jsonl
     sk_final: sk_final.jsonl
     pkl: pkl/sg_crowd_nx.pkl
   visual_reasoning:
@@ -49,6 +53,7 @@ seed:
     sg_crowd: scene_graphs/sg_crowd.jsonl
     val_step: crowd_val.jsonl
     ann_step: crowd_ann.jsonl
+    ann_exp: crowd_ann_exp.jsonl
     sk_final: sk_final.jsonl
     pkl: pkl/sg_crowd_nx.pkl
 vqav2:
@@ -60,6 +65,7 @@ vqav2:
     sg_crowd: scene_graphs/sg_crowd.jsonl
     val_step: crowd_val.jsonl
     ann_step: crowd_ann.jsonl
+    ann_exp: crowd_ann_exp.jsonl
     sk_final: sk_final.jsonl
     pkl: pkl/sg_crowd_nx.pkl
   what_is_the_person:
@@ -70,6 +76,7 @@ vqav2:
     sg_crowd: scene_graphs/sg_crowd.jsonl
     val_step: crowd_val.jsonl
     ann_step: crowd_ann.jsonl
+    ann_exp: crowd_ann_exp.jsonl
     sk_final: sk_final.jsonl
     pkl: pkl/sg_crowd_nx.pkl
 vqav2_holdout:
