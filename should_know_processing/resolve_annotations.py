@@ -26,10 +26,10 @@ def parse_validation_data(val_data):
 
         # val_data_dict[question_id][ann_id]["triple_id"] = entry["id_triple"]
         val_data_dict[question_id][ann_id]["original"] = {
-            "from_concept": entry["from_concept"],
+            "from_concept": entry["from_concept"].lower().strip(),
             "coords_from_concept": entry["coords_from_concept"],
-            "relationship": entry["relationship"],
-            "to_concept": entry["to_concept"],
+            "relationship": entry["relationship"].lower().strip(),
+            "to_concept": entry["to_concept"].lower().strip(),
             "coords_to_concept": entry["coords_to_concept"],
         }
         val_data_dict[question_id][ann_id]["answers"] = {
@@ -39,10 +39,10 @@ def parse_validation_data(val_data):
             "correct_relationship": entry["correct_relationship"],
         }
         val_data_dict[question_id][ann_id]["crowd"] = {
-            "new_from_concept": entry["new_label_from_concept"],
+            "new_from_concept": entry["new_label_from_concept"].lower().strip(),
             "new_coords_from_concept": entry["new_coords_from_concept"],
-            "new_relationship": entry["new_relationship"],
-            "new_to_concept": entry["new_label_to_concept"],
+            "new_relationship": entry["new_relationship"].lower().strip(),
+            "new_to_concept": entry["new_label_to_concept"].lower().strip(),
             "new_coords_to_concept": entry["new_coords_to_concept"],
         }
     return val_data_dict
@@ -64,10 +64,10 @@ def parse_annotation_data(ann_data):
             ann_data_dict[question_id][ann_id] = {}
 
         ann_data_dict[question_id][ann_id]["crowd"] = {
-            "from_concept": entry["entity1"],
+            "from_concept": entry["entity1"].lower().strip(),
             "coords_from_concept": entry["coords_entity1"],
-            "relationship": entry["relationship"],
-            "to_concept": entry["entity2"],
+            "relationship": entry["relationship"].lower().strip(),
+            "to_concept": entry["entity2"].lower().strip(),
             "coords_to_concept": entry["coords_entity2"],
             "id_json": entry["id_json"],
         }
@@ -256,7 +256,7 @@ def resolve_val_data(sg_data, parsed_crowd_val, sgg_dict, question):
             to_concept_idx = rel["to_concept"]["bb_label"]["bb_label_idx"]
             rel_idx = rel["rel_label"]["rel_label_idx"]
             rel["rel_id"] = f"{from_concept_idx}-{rel_idx}-{to_concept_idx}"
-            print(rel["rel_id"])
+            # print(rel["rel_id"])
 
             # Add to list of resolved relations
             res_val_entry["relations"].append(rel)
