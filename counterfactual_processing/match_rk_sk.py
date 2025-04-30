@@ -19,7 +19,6 @@ from utils.data_io import make_dir, load_jsonl, save_jsonl
 
 # Compute semantic similarity
 def compute_similarity(model, text_a, text_b):
-    # TODO: need to check formatting here
     text_a_emb = torch.FloatTensor(
         model.encode(text_a, normalize_embeddings=True)
     ).unsqueeze(0)
