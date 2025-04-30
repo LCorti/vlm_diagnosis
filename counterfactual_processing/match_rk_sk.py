@@ -55,9 +55,9 @@ def get_sk_rels(sk):
 if __name__ == "__main__":
     PROMPT_VERSION = 4
 
+    # Loading config files
     sk_config = SKConfig()
     rk_config = RKConfig()
-
     model_list = rk_config.get_model_list() * 4
     ds_list = sk_config.get_sk_list()
     ds_list.remove("vqav2_holdout")
@@ -74,6 +74,11 @@ if __name__ == "__main__":
 
     # Load sentence-transformers for computing embeddings
     emb_model = SentenceTransformer("sentence-transformers/all-mpnet-base-v2")
+    # Load YOLOX model for object detection
+    # Run export_onnx.py script first
+    onnx_out_path = "./yolox_checkpoint/yolox_x.onnx"
+    yolox = cv2.dnn.readNetFromONNX(onnx_out_path)
+    ln = yolox.getLayerNames()
 
     for model, ds in zip(model_list, ds_list):
         print(f"{model} -- {ds}")
@@ -102,6 +107,16 @@ if __name__ == "__main__":
             if not curr_sk:
                 print(f"Big error: SK missing for question {rk['question_id']}")
                 break
+
+            # Load image for 3rd matching step
+            img_path = f"../{curr_sk['img_path']}"
+            img = cv2.imread(img_path)
+            # scale to RBG with 1/255
+            # 640 x 640 is the image size of yolox
+            # swapRB is because OpenCV reads images as BGR
+            # more here: https://docs.opencv.org/4.x/da/d9d/tutorial_dnn_yolo.html
+            img_blob = cv2.dnn.blobFromImage(img, 1 / 255, (640, 640), swapRB=True)
+            yolox.setInput(img_blob)
 
             # Make SK into a format that can be easily compared with SK
             # RK format: {'from_concept': ..., 'relationship': ..., 'to_concept': ...}
@@ -152,6 +167,7 @@ if __name__ == "__main__":
                     continue
 
                 # Third try: run object detection on the fly to get position
+                yolox_out = yolox.forward(ln)
 
             matched_rk[rk["question_id"]] = curr_rk_matches
 
