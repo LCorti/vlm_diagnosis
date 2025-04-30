@@ -5,12 +5,12 @@ import sys
 import torch
 
 from sentence_transformers import SentenceTransformer
+from ultralytics import YOLOE
 
 module_path = os.path.abspath(os.path.join("../"))
 if module_path not in sys.path:
     sys.path.append(module_path)
 
-from config_loaders.dataset_config_loader import DatasetConfig
 from config_loaders.rk_config_loader import RKConfig
 from config_loaders.sk_config_loader import SKConfig
 from utils.graph_utils import stringify_graph_triple
@@ -52,6 +52,59 @@ def get_sk_rels(sk):
     return rels
 
 
+def parse_yoloe_res(yoloe_res, prompt_free=False):
+    label_dict = yoloe_res.names
+    all_pred_idx = yoloe_res.boxes.cls.detach().cpu().numpy()
+    all_conf = yoloe_res.boxes.conf.detach().cpu().numpy()
+    all_boxes = yoloe_res.boxes.xyxy.detach().cpu().numpy()
+    predictions = []
+
+    if prompt_free:
+        for pred_idx, conf, box in zip(all_pred_idx, all_conf, all_boxes):
+            curr_pred = {
+                "label": label_dict[pred_idx],
+                "conf": np.array(conf).item(),
+                "box": {
+                    "top_left_x": round(box[0]),
+                    "top_left_y": round(box[1]),
+                    "bottom_right_x": round(box[2]),
+                    "bottom_right_y": round(box[3]),
+                },
+            }
+            predictions.append(curr_pred)
+    else:
+        checked_pred_idx = []
+        for pred_idx in all_pred_idx:
+            if pred_idx in checked_pred_idx:
+                continue
+
+            # get positions of data for current class
+            curr_ids = [e[0] for e in enumerate(all_pred_idx) if e[1] == pred_idx]
+            # get confidence values for current class
+            curr_conf = all_conf[curr_ids]
+            # compute the max confidence values for current class
+            max_conf = np.max(curr_conf)
+            # get index of max confidence in original array
+            max_conf_idx = np.where(all_conf == max_conf)[0][0]
+            # extract bboxes data corresponding to max confidence
+            box = all_boxes[max_conf_idx]
+            curr_pred = {
+                "label": label_dict[pred_idx],
+                "conf": np.array(max_conf).item(),
+                "box": {
+                    "top_left_x": round(box[0]),
+                    "top_left_y": round(box[1]),
+                    "bottom_left_x": round(box[2]),
+                    "bottom_left_y": round(box[3]),
+                },
+            }
+
+            # update lists
+            checked_pred_idx.append(pred_idx)
+            predictions.append(curr_pred)
+    return predictions
+
+
 if __name__ == "__main__":
     PROMPT_VERSION = 4
 
@@ -74,11 +127,6 @@ if __name__ == "__main__":
 
     # Load sentence-transformers for computing embeddings
     emb_model = SentenceTransformer("sentence-transformers/all-mpnet-base-v2")
-    # Load YOLOX model for object detection
-    # Run export_onnx.py script first
-    onnx_out_path = "./yolox_checkpoint/yolox_x.onnx"
-    yolox = cv2.dnn.readNetFromONNX(onnx_out_path)
-    ln = yolox.getLayerNames()
 
     for model, ds in zip(model_list, ds_list):
         print(f"{model} -- {ds}")
@@ -111,12 +159,6 @@ if __name__ == "__main__":
             # Load image for 3rd matching step
             img_path = f"../{curr_sk['img_path']}"
             img = cv2.imread(img_path)
-            # scale to RBG with 1/255
-            # 640 x 640 is the image size of yolox
-            # swapRB is because OpenCV reads images as BGR
-            # more here: https://docs.opencv.org/4.x/da/d9d/tutorial_dnn_yolo.html
-            img_blob = cv2.dnn.blobFromImage(img, 1 / 255, (640, 640), swapRB=True)
-            yolox.setInput(img_blob)
 
             # Make SK into a format that can be easily compared with SK
             # RK format: {'from_concept': ..., 'relationship': ..., 'to_concept': ...}
@@ -166,8 +208,25 @@ if __name__ == "__main__":
                     curr_rk_matches.append(sk_max_sim)
                     continue
 
-                # Third try: run object detection on the fly to get position
-                yolox_out = yolox.forward(ln)
+                # Third try: run object detection on the fly to get positions
+                yoloe = YOLOE("yoloe-11l-seg.pt")  # this version expects a prompt
+                from_concept = rk_rel["from_concept"]  # this will be class 0
+                to_concept = rk_rel["to_concept"]  # this will be class 1
+                prompt = [from_concept, to_concept]
+                yoloe.set_classes(prompt, yoloe.get_text_pe(prompt))
+                yoloe_res = yoloe.predict(img)[0]
+                preds = yoloe_res.boxes.cls  # .detach().cpu().tolist()
+                if len(preds) > 0:
+                    res_dict = parse_yoloe_res(yoloe_res, prompt_free=False)
+                    pass
+                else:
+                    # We did not find anything, try to use the prompt-free yoloe
+                    yoloe_pf = YOLOE("yoloe-11l-seg-pf.pt")
+                    yoloe_pf_res = yoloe_pf.predict(img)[0]
+                    res_dict = parse_yoloe_res(yoloe_pf_res, prompt_free=True)
+
+                # Now that we have a formatted list of predictions, time to match
+                # TODO: finish this
 
             matched_rk[rk["question_id"]] = curr_rk_matches
 
