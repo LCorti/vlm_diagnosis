@@ -17,6 +17,11 @@ from utils.graph_utils import stringify_graph_triple
 from utils.data_io import make_dir, load_jsonl, save_jsonl
 
 
+def free_gpu(var):
+    del var
+    torch.cuda.empty_cache()
+
+
 # Compute semantic similarity
 def compute_similarity(model, text_a, text_b):
     text_a_emb = torch.FloatTensor(
@@ -217,12 +222,14 @@ if __name__ == "__main__":
                 preds = yoloe_res.boxes.cls  # .detach().cpu().tolist()
                 if len(preds) > 0:
                     res_dict = parse_yoloe_res(yoloe_res, prompt_free=False)
-                    pass
+                    free_gpu(yoloe_res)
                 else:
                     # We did not find anything, try to use the prompt-free yoloe
+                    free_gpu(yoloe_res)
                     yoloe_pf = YOLOE("yoloe-11l-seg-pf.pt")
                     yoloe_pf_res = yoloe_pf.predict(img)[0]
                     res_dict = parse_yoloe_res(yoloe_pf_res, prompt_free=True)
+                    free_gpu(yoloe_pf_res)
 
                 # Now that we have a formatted list of predictions, time to match
                 # TODO: finish this
