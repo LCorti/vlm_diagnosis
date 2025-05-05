@@ -20,10 +20,6 @@ class RKConfig:
         return list(self.RK_PATHS[model].keys())
 
     def get_rk_paths(self, model, ds_name, rk_type):
-        if model not in self.RK_PATHS:
-            raise
-        if ds_name not in self.RK_PATHS[model]:
-            raise
         return self.RK_PATHS[model][ds_name][rk_type]
 
     def get_raw_rk_paths(self, model, ds_name):
