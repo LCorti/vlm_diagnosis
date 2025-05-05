@@ -1,0 +1,20 @@
+internvl2:
+  llava-bench: data/eval_performance/internvl2/llava-bench/eval_res.json
+  mmbench: data/eval_performance/internvl2/mmbench/eval_res.json
+  seed: data/eval_performance/internvl2/seed/eval_res.json
+  vqav2: data/eval_performance/internvl2/vqav2/eval_res.json
+llava-1.6:
+  llava-bench: data/eval_performance/llava-1.6/llava-bench/eval_res.json
+  mmbench: data/eval_performance/llava-1.6/mmbench/eval_res.json
+  seed: data/eval_performance/llava-1.6/seed/eval_res.json
+  vqav2: data/eval_performance/llava-1.6/vqav2/eval_res.json
+minigpt4:
+  llava-bench: data/eval_performance/minigpt4/llava-bench/eval_res.json
+  mmbench: data/eval_performance/minigpt4/mmbench/eval_res.json
+  seed: data/eval_performance/minigpt4/seed/eval_res.json
+  vqav2: data/eval_performance/minigpt4/vqav2/eval_res.json
+sharegpt4v:
+  llava-bench: data/eval_performance/sharegpt4v/llava-bench/eval_res.json
+  mmbench: data/eval_performance/sharegpt4v/mmbench/eval_res.json
+  seed: data/eval_performance/sharegpt4v/seed/eval_res.json
+  vqav2: data/eval_performance/sharegpt4v/vqav2/eval_res.json
