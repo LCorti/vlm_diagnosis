@@ -32,3 +32,6 @@ db_backups
 *model_checkpoint
 *.pth
 *.onnx
+
+# Folder with extra data
+backups
