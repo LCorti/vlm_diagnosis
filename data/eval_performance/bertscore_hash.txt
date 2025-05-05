@@ -1,0 +1,1 @@
+microsoft/deberta-xlarge-mnli_L40_no-idf_version=0.3.12(hug_trans=4.49.0)
