@@ -1,0 +1,384 @@
+{
+  "samples": {
+    "2001830": {
+      "initial": 12,
+      "after_val": 0,
+      "after_ann": 3
+    },
+    "2001816": {
+      "initial": 9,
+      "after_val": 2,
+      "after_ann": 5
+    },
+    "3001801": {
+      "initial": 13,
+      "after_val": 2,
+      "after_ann": 5
+    },
+    "1824": {
+      "initial": 7,
+      "after_val": 4,
+      "after_ann": 9
+    },
+    "91": {
+      "initial": 12,
+      "after_val": 8,
+      "after_ann": 11
+    },
+    "3001815": {
+      "initial": 10,
+      "after_val": 8,
+      "after_ann": 11
+    },
+    "2000078": {
+      "initial": 13,
+      "after_val": 1,
+      "after_ann": 4
+    },
+    "47": {
+      "initial": 13,
+      "after_val": 5,
+      "after_ann": 9
+    },
+    "3001793": {
+      "initial": 8,
+      "after_val": 8,
+      "after_ann": 11
+    },
+    "2000070": {
+      "initial": 15,
+      "after_val": 8,
+      "after_ann": 11
+    },
+    "74": {
+      "initial": 14,
+      "after_val": 1,
+      "after_ann": 4
+    },
+    "3001816": {
+      "initial": 9,
+      "after_val": 0,
+      "after_ann": 3
+    },
+    "3000074": {
+      "initial": 14,
+      "after_val": 7,
+      "after_ann": 10
+    },
+    "2000082": {
+      "initial": 8,
+      "after_val": 2,
+      "after_ann": 5
+    },
+    "2001802": {
+      "initial": 10,
+      "after_val": 6,
+      "after_ann": 9
+    },
+    "2000058": {
+      "initial": 7,
+      "after_val": 5,
+      "after_ann": 8
+    },
+    "3001808": {
+      "initial": 11,
+      "after_val": 2,
+      "after_ann": 5
+    },
+    "3001809": {
+      "initial": 12,
+      "after_val": 1,
+      "after_ann": 4
+    },
+    "58": {
+      "initial": 7,
+      "after_val": 5,
+      "after_ann": 8
+    },
+    "2001809": {
+      "initial": 12,
+      "after_val": 2,
+      "after_ann": 5
+    },
+    "3001805": {
+      "initial": 12,
+      "after_val": 12,
+      "after_ann": 15
+    },
+    "1000055": {
+      "initial": 12,
+      "after_val": 11,
+      "after_ann": 14
+    },
+    "2000053": {
+      "initial": 13,
+      "after_val": 2,
+      "after_ann": 5
+    },
+    "3000047": {
+      "initial": 13,
+      "after_val": 10,
+      "after_ann": 13
+    },
+    "1000049": {
+      "initial": 8,
+      "after_val": 8,
+      "after_ann": 11
+    },
+    "1001802": {
+      "initial": 10,
+      "after_val": 5,
+      "after_ann": 8
+    },
+    "3001835": {
+      "initial": 15,
+      "after_val": 14,
+      "after_ann": 17
+    },
+    "1795": {
+      "initial": 9,
+      "after_val": 9,
+      "after_ann": 12
+    },
+    "3000070": {
+      "initial": 15,
+      "after_val": 0,
+      "after_ann": 4
+    },
+    "1000027": {
+      "initial": 6,
+      "after_val": 6,
+      "after_ann": 9
+    },
+    "1808": {
+      "initial": 11,
+      "after_val": 0,
+      "after_ann": 3
+    },
+    "2000062": {
+      "initial": 7,
+      "after_val": 3,
+      "after_ann": 6
+    },
+    "1001791": {
+      "initial": 12,
+      "after_val": 6,
+      "after_ann": 9
+    },
+    "1001795": {
+      "initial": 9,
+      "after_val": 8,
+      "after_ann": 11
+    },
+    "2000091": {
+      "initial": 12,
+      "after_val": 12,
+      "after_ann": 15
+    },
+    "3000078": {
+      "initial": 13,
+      "after_val": 13,
+      "after_ann": 16
+    },
+    "3000082": {
+      "initial": 8,
+      "after_val": 0,
+      "after_ann": 3
+    },
+    "1000069": {
+      "initial": 10,
+      "after_val": 8,
+      "after_ann": 11
+    },
+    "1830": {
+      "initial": 12,
+      "after_val": 5,
+      "after_ann": 8
+    },
+    "78": {
+      "initial": 13,
+      "after_val": 6,
+      "after_ann": 9
+    },
+    "2001824": {
+      "initial": 7,
+      "after_val": 1,
+      "after_ann": 4
+    },
+    "62": {
+      "initial": 7,
+      "after_val": 6,
+      "after_ann": 9
+    },
+    "3001802": {
+      "initial": 10,
+      "after_val": 5,
+      "after_ann": 8
+    },
+    "3000058": {
+      "initial": 7,
+      "after_val": 2,
+      "after_ann": 5
+    },
+    "1001816": {
+      "initial": 9,
+      "after_val": 2,
+      "after_ann": 5
+    },
+    "2001792": {
+      "initial": 6,
+      "after_val": 5,
+      "after_ann": 8
+    },
+    "1805": {
+      "initial": 12,
+      "after_val": 8,
+      "after_ann": 11
+    },
+    "1000091": {
+      "initial": 12,
+      "after_val": 3,
+      "after_ann": 6
+    },
+    "2001793": {
+      "initial": 8,
+      "after_val": 7,
+      "after_ann": 10
+    },
+    "2001831": {
+      "initial": 15,
+      "after_val": 8,
+      "after_ann": 11
+    },
+    "1000115": {
+      "initial": 11,
+      "after_val": 11,
+      "after_ann": 14
+    },
+    "1828": {
+      "initial": 12,
+      "after_val": 4,
+      "after_ann": 7
+    },
+    "2001828": {
+      "initial": 12,
+      "after_val": 3,
+      "after_ann": 6
+    },
+    "1001809": {
+      "initial": 12,
+      "after_val": 1,
+      "after_ann": 4
+    },
+    "1001835": {
+      "initial": 15,
+      "after_val": 1,
+      "after_ann": 4
+    },
+    "1001783": {
+      "initial": 9,
+      "after_val": 9,
+      "after_ann": 12
+    },
+    "1835": {
+      "initial": 15,
+      "after_val": 5,
+      "after_ann": 8
+    },
+    "1001793": {
+      "initial": 8,
+      "after_val": 8,
+      "after_ann": 11
+    },
+    "2001825": {
+      "initial": 6,
+      "after_val": 6,
+      "after_ann": 9
+    },
+    "1801": {
+      "initial": 13,
+      "after_val": 12,
+      "after_ann": 15
+    },
+    "1800": {
+      "initial": 6,
+      "after_val": 6,
+      "after_ann": 9
+    },
+    "1000062": {
+      "initial": 7,
+      "after_val": 2,
+      "after_ann": 5
+    },
+    "2001798": {
+      "initial": 15,
+      "after_val": 4,
+      "after_ann": 7
+    },
+    "1787": {
+      "initial": 8,
+      "after_val": 7,
+      "after_ann": 10
+    },
+    "1783": {
+      "initial": 9,
+      "after_val": 1,
+      "after_ann": 4
+    },
+    "3001839": {
+      "initial": 9,
+      "after_val": 0,
+      "after_ann": 5
+    },
+    "2001800": {
+      "initial": 6,
+      "after_val": 6,
+      "after_ann": 9
+    },
+    "1000047": {
+      "initial": 13,
+      "after_val": 4,
+      "after_ann": 7
+    },
+    "3001830": {
+      "initial": 12,
+      "after_val": 0,
+      "after_ann": 3
+    },
+    "2000055": {
+      "initial": 12,
+      "after_val": 10,
+      "after_ann": 13
+    },
+    "2001808": {
+      "initial": 11,
+      "after_val": 7,
+      "after_ann": 10
+    },
+    "3001783": {
+      "initial": 9,
+      "after_val": 0,
+      "after_ann": 4
+    },
+    "1798": {
+      "initial": 15,
+      "after_val": 12,
+      "after_ann": 15
+    },
+    "3000115": {
+      "initial": 11,
+      "after_val": 11,
+      "after_ann": 14
+    },
+    "1001812": {
+      "initial": 13,
+      "after_val": 9,
+      "after_ann": 12
+    }
+  },
+  "summary": {
+    "initial": 798,
+    "after_val": 401,
+    "after_ann": 633
+  }
+}

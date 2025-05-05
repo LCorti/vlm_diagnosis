@@ -1,0 +1,384 @@
+{
+  "samples": {
+    "418275002": {
+      "initial": 15,
+      "after_val": 12,
+      "after_ann": 15
+    },
+    "279490024": {
+      "initial": 10,
+      "after_val": 0,
+      "after_ann": 6
+    },
+    "240275005": {
+      "initial": 10,
+      "after_val": 5,
+      "after_ann": 8
+    },
+    "18336006": {
+      "initial": 12,
+      "after_val": 1,
+      "after_ann": 7
+    },
+    "538414002": {
+      "initial": 10,
+      "after_val": 0,
+      "after_ann": 6
+    },
+    "431799001": {
+      "initial": 10,
+      "after_val": 10,
+      "after_ann": 13
+    },
+    "473299000": {
+      "initial": 10,
+      "after_val": 8,
+      "after_ann": 14
+    },
+    "64059005": {
+      "initial": 11,
+      "after_val": 6,
+      "after_ann": 9
+    },
+    "557812013": {
+      "initial": 12,
+      "after_val": 2,
+      "after_ann": 6
+    },
+    "202981008": {
+      "initial": 10,
+      "after_val": 6,
+      "after_ann": 9
+    },
+    "186130000": {
+      "initial": 10,
+      "after_val": 9,
+      "after_ann": 12
+    },
+    "439897004": {
+      "initial": 11,
+      "after_val": 7,
+      "after_ann": 10
+    },
+    "300206000": {
+      "initial": 13,
+      "after_val": 1,
+      "after_ann": 8
+    },
+    "291286004": {
+      "initial": 13,
+      "after_val": 13,
+      "after_ann": 19
+    },
+    "154520073": {
+      "initial": 11,
+      "after_val": 2,
+      "after_ann": 5
+    },
+    "249046003": {
+      "initial": 10,
+      "after_val": 5,
+      "after_ann": 8
+    },
+    "77063003": {
+      "initial": 11,
+      "after_val": 2,
+      "after_ann": 5
+    },
+    "249883001": {
+      "initial": 10,
+      "after_val": 1,
+      "after_ann": 7
+    },
+    "69965002": {
+      "initial": 13,
+      "after_val": 10,
+      "after_ann": 13
+    },
+    "517612002": {
+      "initial": 15,
+      "after_val": 3,
+      "after_ann": 7
+    },
+    "6719001": {
+      "initial": 11,
+      "after_val": 11,
+      "after_ann": 17
+    },
+    "163600007": {
+      "initial": 14,
+      "after_val": 13,
+      "after_ann": 16
+    },
+    "229889007": {
+      "initial": 15,
+      "after_val": 4,
+      "after_ann": 7
+    },
+    "391375002": {
+      "initial": 11,
+      "after_val": 7,
+      "after_ann": 10
+    },
+    "409964010": {
+      "initial": 14,
+      "after_val": 14,
+      "after_ann": 17
+    },
+    "526371000": {
+      "initial": 12,
+      "after_val": 8,
+      "after_ann": 11
+    },
+    "322194006": {
+      "initial": 10,
+      "after_val": 4,
+      "after_ann": 7
+    },
+    "33005004": {
+      "initial": 14,
+      "after_val": 14,
+      "after_ann": 21
+    },
+    "353136002": {
+      "initial": 14,
+      "after_val": 7,
+      "after_ann": 10
+    },
+    "544519002": {
+      "initial": 11,
+      "after_val": 1,
+      "after_ann": 4
+    },
+    "177919000": {
+      "initial": 11,
+      "after_val": 3,
+      "after_ann": 9
+    },
+    "319095002": {
+      "initial": 10,
+      "after_val": 2,
+      "after_ann": 5
+    },
+    "73832000": {
+      "initial": 11,
+      "after_val": 6,
+      "after_ann": 9
+    },
+    "380706001": {
+      "initial": 12,
+      "after_val": 2,
+      "after_ann": 5
+    },
+    "85584001": {
+      "initial": 11,
+      "after_val": 11,
+      "after_ann": 14
+    },
+    "539386000": {
+      "initial": 12,
+      "after_val": 1,
+      "after_ann": 4
+    },
+    "77050001": {
+      "initial": 14,
+      "after_val": 1,
+      "after_ann": 4
+    },
+    "169076001": {
+      "initial": 10,
+      "after_val": 1,
+      "after_ann": 4
+    },
+    "437494002": {
+      "initial": 12,
+      "after_val": 12,
+      "after_ann": 15
+    },
+    "572900009": {
+      "initial": 14,
+      "after_val": 14,
+      "after_ann": 21
+    },
+    "65008001": {
+      "initial": 12,
+      "after_val": 2,
+      "after_ann": 5
+    },
+    "302107002": {
+      "initial": 15,
+      "after_val": 3,
+      "after_ann": 6
+    },
+    "232692003": {
+      "initial": 13,
+      "after_val": 6,
+      "after_ann": 9
+    },
+    "92644001": {
+      "initial": 11,
+      "after_val": 2,
+      "after_ann": 5
+    },
+    "326664002": {
+      "initial": 14,
+      "after_val": 2,
+      "after_ann": 7
+    },
+    "544857000": {
+      "initial": 11,
+      "after_val": 3,
+      "after_ann": 6
+    },
+    "323851001": {
+      "initial": 14,
+      "after_val": 4,
+      "after_ann": 7
+    },
+    "44856002": {
+      "initial": 15,
+      "after_val": 9,
+      "after_ann": 12
+    },
+    "319350000": {
+      "initial": 15,
+      "after_val": 9,
+      "after_ann": 15
+    },
+    "521306011": {
+      "initial": 15,
+      "after_val": 0,
+      "after_ann": 3
+    },
+    "380711000": {
+      "initial": 13,
+      "after_val": 4,
+      "after_ann": 7
+    },
+    "31542000": {
+      "initial": 11,
+      "after_val": 0,
+      "after_ann": 3
+    },
+    "98434000": {
+      "initial": 12,
+      "after_val": 3,
+      "after_ann": 6
+    },
+    "367953005": {
+      "initial": 12,
+      "after_val": 11,
+      "after_ann": 14
+    },
+    "251824001": {
+      "initial": 11,
+      "after_val": 0,
+      "after_ann": 3
+    },
+    "405740008": {
+      "initial": 13,
+      "after_val": 4,
+      "after_ann": 7
+    },
+    "136458001": {
+      "initial": 15,
+      "after_val": 14,
+      "after_ann": 17
+    },
+    "498453001": {
+      "initial": 10,
+      "after_val": 1,
+      "after_ann": 4
+    },
+    "404780000": {
+      "initial": 10,
+      "after_val": 6,
+      "after_ann": 9
+    },
+    "431256002": {
+      "initial": 14,
+      "after_val": 6,
+      "after_ann": 9
+    },
+    "1176000": {
+      "initial": 10,
+      "after_val": 10,
+      "after_ann": 16
+    },
+    "18519001": {
+      "initial": 13,
+      "after_val": 5,
+      "after_ann": 8
+    },
+    "405279002": {
+      "initial": 10,
+      "after_val": 1,
+      "after_ann": 4
+    },
+    "37677001": {
+      "initial": 13,
+      "after_val": 1,
+      "after_ann": 7
+    },
+    "402109004": {
+      "initial": 13,
+      "after_val": 3,
+      "after_ann": 6
+    },
+    "310543001": {
+      "initial": 14,
+      "after_val": 8,
+      "after_ann": 14
+    },
+    "288201001": {
+      "initial": 12,
+      "after_val": 3,
+      "after_ann": 6
+    },
+    "133933036": {
+      "initial": 11,
+      "after_val": 6,
+      "after_ann": 9
+    },
+    "470070003": {
+      "initial": 14,
+      "after_val": 8,
+      "after_ann": 11
+    },
+    "199215001": {
+      "initial": 15,
+      "after_val": 15,
+      "after_ann": 21
+    },
+    "224000000": {
+      "initial": 13,
+      "after_val": 4,
+      "after_ann": 10
+    },
+    "79721005": {
+      "initial": 14,
+      "after_val": 1,
+      "after_ann": 8
+    },
+    "469961000": {
+      "initial": 15,
+      "after_val": 15,
+      "after_ann": 18
+    },
+    "451406003": {
+      "initial": 13,
+      "after_val": 5,
+      "after_ann": 11
+    },
+    "551966004": {
+      "initial": 12,
+      "after_val": 12,
+      "after_ann": 18
+    }
+  },
+  "summary": {
+    "initial": 918,
+    "after_val": 425,
+    "after_ann": 718
+  }
+}
