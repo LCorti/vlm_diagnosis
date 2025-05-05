@@ -1,0 +1,2243 @@
+{
+  "measures": {
+    "precision": 0.6567788428539852,
+    "recall": 0.7797276472016205,
+    "f1": 0.706452087532702
+  },
+  "ranges": {
+    "0_20": [],
+    "20_40": [
+      {
+        "question_id": 2000070,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "144",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/144.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A vehicle is shown transporting a shipment of bicycles.",
+        "response": "A white truck with a trailer attached to it is parked on the side of the road. The trailer is filled with bicycles. The bicycles are red and white in color. The truck is parked in front of a building. The building has a sign that reads \"coach\". The truck is parked on the side of the road. The bicycles are arranged in rows on the trailer. The truck is parked on the side of the road. The bicycles are arranged in rows on the trailer. The truck is parked on the side of the road. The bicycles are arranged in rows on the trailer. The truck is parked on the side of the road. The bicycles are arranged in rows on the trailer. The truck is parked on the side of the road. The bicycles are arranged in rows on the trailer. The truck is parked on the side of the road. The bicycles are arranged in rows on the trailer. The truck is parked on the side of the road. The bicycles are arranged in rows on the trailer. The truck is parked on the side",
+        "measures": {
+          "precision": 0.26959526538848877,
+          "recall": 0.6896838545799255,
+          "f1": 0.38765671849250793
+        }
+      },
+      {
+        "question_id": 3000070,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "207",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/207.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A vehicle is shown transporting a shipment of bicycles.",
+        "response": "A white truck with a trailer attached to it is parked on the side of the road. The trailer is filled with bicycles. The bicycles are red and white in color. The truck is parked in front of a building. The building has a sign that reads \"coach\". The truck is parked on the side of the road. The bicycles are arranged in rows on the trailer. The truck is parked on the side of the road. The bicycles are arranged in rows on the trailer. The truck is parked on the side of the road. The bicycles are arranged in rows on the trailer. The truck is parked on the side of the road. The bicycles are arranged in rows on the trailer. The truck is parked on the side of the road. The bicycles are arranged in rows on the trailer. The truck is parked on the side of the road. The bicycles are arranged in rows on the trailer. The truck is parked on the side of the road. The bicycles are arranged in rows on the trailer. The truck is parked on the side",
+        "measures": {
+          "precision": 0.26959526538848877,
+          "recall": 0.6896838545799255,
+          "f1": 0.38765671849250793
+        }
+      }
+    ],
+    "40_60": [
+      {
+        "question_id": 91,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "24",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/24.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "Two horses gaze out from among the trees.",
+        "response": "In the heart of a verdant forest, two horses, one black and one brown, stand amidst the lush greenery. The black horse, positioned on the left, faces the camera, its gaze meeting ours. On the right, the brown horse stands with its back to us, adding a sense of depth to the scene. The forest around them is dense with trees and bushes, creating a natural backdrop for these majestic creatures. The image captures a serene moment in nature, with the horses appearing calm and at ease in their surroundings.",
+        "measures": {
+          "precision": 0.4841894209384918,
+          "recall": 0.7303255796432495,
+          "f1": 0.5823162794113159
+        }
+      },
+      {
+        "question_id": 2000078,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "148",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/148.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A mother and son elephant walking through a green grass field.",
+        "response": "In the image, there are two elephants in a grassy field. The larger elephant, with a darker gray skin, is walking towards the right side of the image. The smaller elephant, with a lighter gray skin, is walking towards the left side of the image. They are both walking on a patch of green grass. In the background, there is a green building and some trees. The elephants appear to be the only animals in the image. There is no text present in the image. The relative positions of the elephants and their actions suggest a peaceful coexistence in their natural habitat.",
+        "measures": {
+          "precision": 0.48866331577301025,
+          "recall": 0.6996262669563293,
+          "f1": 0.5754181146621704
+        }
+      },
+      {
+        "question_id": 3001793,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "224",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/224.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A car driving on a highway at night",
+        "response": "The image captures a scene of a highway at dusk. The sky, painted in hues of pink and purple, casts a soft glow on the scene below. The highway, a ribbon of gray, stretches out ahead, flanked by a series of cars. \n\nIn the foreground, a blue car is captured mid-motion, driving away from the camera. Its headlights are on, piercing the twilight. Further down the road, a yellow car can be seen, its taillights glowing red. The cars, though distant, are clearly visible, adding a sense of depth to the image.\n\nOn the right side of the image, a highway sign stands tall. Its details are not clear, but it adds another layer of interest to the scene. The overall image is a snapshot of a moment in time, a glimpse into the everyday life of a highway at dusk.",
+        "measures": {
+          "precision": 0.4406658709049225,
+          "recall": 0.6982974410057068,
+          "f1": 0.5403437614440918
+        }
+      },
+      {
+        "question_id": 3001808,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "234",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/234.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A woman getting a pedicure at a salon",
+        "response": "In the image, a woman is seated comfortably in a black salon chair, her legs elegantly crossed. She is dressed in a pristine white robe, adding to the serene ambiance of the setting. A pair of white gloves are worn by the woman, perhaps indicating a professional setting.\n\nStanding next to the seated woman is another woman, also dressed in a white robe and gloves. She is in the process of performing a pedicure on the seated woman's feet. The pedicure is taking place on a wooden table, which is positioned next to a brick wall.\n\nThe image captures a moment of relaxation and care, as the woman receives a pedicure in a calm and professional environment. The precise positioning of the objects and individuals suggests a well-organized and efficient salon setup. The image does not contain any discernible text. The relative positions of the objects and individuals are accurately represented, providing a clear and detailed depiction of the scene.",
+        "measures": {
+          "precision": 0.4328063726425171,
+          "recall": 0.6896489858627319,
+          "f1": 0.531842052936554
+        }
+      },
+      {
+        "question_id": 1795,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "35",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/35.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A plane flying through clouds",
+        "response": "A large commercial airplane is flying through a cloudy sky. The airplane is predominantly white, with a blue tail and red and white engines. The sky is filled with clouds, creating a dramatic backdrop for the airplane. The airplane is flying from left to right in the image. There are no discernible texts or other objects in the image. The relative position of the airplane suggests it is at a considerable altitude, as it is flying above the clouds. The image does not provide enough detail to confidently determine the exact make and model of the airplane.",
+        "measures": {
+          "precision": 0.45215490460395813,
+          "recall": 0.7391319870948792,
+          "f1": 0.5610774755477905
+        }
+      },
+      {
+        "question_id": 1808,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "43",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/43.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A woman getting a pedicure at a salon",
+        "response": "In the image, a woman is seated comfortably in a black salon chair, her legs elegantly crossed. She is dressed in a pristine white robe, adding to the serene ambiance of the setting. A pair of white gloves are worn by the woman, perhaps indicating a professional setting.\n\nStanding next to the seated woman is another woman, also dressed in a white robe and gloves. She is in the process of performing a pedicure on the seated woman's feet. The pedicure is taking place on a wooden table, which is positioned next to a brick wall.\n\nThe image captures a moment of relaxation and care, as the woman receives a pedicure in a calm and professional environment. The precise positioning of the objects and individuals suggests a well-organized and efficient salon setup. The image does not contain any discernible text. The relative positions of the objects and individuals are accurately represented, providing a clear and detailed depiction of the scene.",
+        "measures": {
+          "precision": 0.4328063726425171,
+          "recall": 0.6896489858627319,
+          "f1": 0.531842052936554
+        }
+      },
+      {
+        "question_id": 1001795,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "99",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/99.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A plane flying through clouds",
+        "response": "A large commercial airplane is flying through a cloudy sky. The airplane is predominantly white, with a blue tail and red and white engines. The sky is filled with clouds, creating a dramatic backdrop for the airplane. The airplane is flying from left to right in the image. There are no discernible texts or other objects in the image. The relative position of the airplane suggests it is at a considerable altitude, as it is flying above the clouds. The image does not provide enough detail to confidently determine the exact make and model of the airplane.",
+        "measures": {
+          "precision": 0.45215490460395813,
+          "recall": 0.7391319870948792,
+          "f1": 0.5610774755477905
+        }
+      },
+      {
+        "question_id": 2000091,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "152",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/152.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "Two horses gaze out from among the trees.",
+        "response": "In the heart of a verdant forest, two horses, one black and one brown, stand amidst the lush greenery. The black horse, positioned on the left, faces the camera, its gaze meeting ours. On the right, the brown horse stands with its back to us, adding a sense of depth to the scene. The forest around them is dense with trees and bushes, creating a natural backdrop for these majestic creatures. The image captures a serene moment in nature, with the horses appearing calm and at ease in their surroundings.",
+        "measures": {
+          "precision": 0.4841894209384918,
+          "recall": 0.7303255796432495,
+          "f1": 0.5823162794113159
+        }
+      },
+      {
+        "question_id": 3000078,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "211",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/211.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A mother and son elephant walking through a green grass field.",
+        "response": "In the image, there are two elephants in a grassy field. The larger elephant, with a darker gray skin, is walking towards the right side of the image. The smaller elephant, with a lighter gray skin, is walking towards the left side of the image. They are both walking on a patch of green grass. In the background, there is a green building and some trees. The elephants appear to be the only animals in the image. There is no text present in the image. The relative positions of the elephants and their actions suggest a peaceful coexistence in their natural habitat.",
+        "measures": {
+          "precision": 0.48866331577301025,
+          "recall": 0.6996262669563293,
+          "f1": 0.5754181146621704
+        }
+      },
+      {
+        "question_id": 78,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "20",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/20.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A mother and son elephant walking through a green grass field.",
+        "response": "In the image, there are two elephants in a grassy field. The larger elephant, with a darker gray skin, is walking towards the right side of the image. The smaller elephant, with a lighter gray skin, is walking towards the left side of the image. They are both walking on a patch of green grass. In the background, there is a green building and some trees. The elephants appear to be the only animals in the image. There is no text present in the image. The relative positions of the elephants and their actions suggest a peaceful coexistence in their natural habitat.",
+        "measures": {
+          "precision": 0.48866331577301025,
+          "recall": 0.6996262669563293,
+          "f1": 0.5754181146621704
+        }
+      },
+      {
+        "question_id": 2001792,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "160",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/160.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A woman standing on a balcony overlooking a city",
+        "response": "A woman stands on a balcony overlooking a sprawling cityscape. She is dressed in a black top and white pants, her back to the camera, as she gazes out at the urban expanse. The city is a mix of buildings, roads, and trees, stretching out beneath her. The sky overhead is overcast, casting a muted palette over the scene. The woman's position on the balcony, coupled with her attire, suggests a moment of contemplation or observation. The cityscape, with its myriad of structures, hints at a bustling urban environment. The overcast sky adds a sense of tranquility to the scene. The image captures a moment of quiet reflection amidst the hustle and bustle of city life.",
+        "measures": {
+          "precision": 0.4439464807510376,
+          "recall": 0.7664421200752258,
+          "f1": 0.5622314214706421
+        }
+      },
+      {
+        "question_id": 1000091,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "88",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/88.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "Two horses gaze out from among the trees.",
+        "response": "In the heart of a verdant forest, two horses, one black and one brown, stand amidst the lush greenery. The black horse, positioned on the left, faces the camera, its gaze meeting ours. On the right, the brown horse stands with its back to us, adding a sense of depth to the scene. The forest around them is dense with trees and bushes, creating a natural backdrop for these majestic creatures. The image captures a serene moment in nature, with the horses appearing calm and at ease in their surroundings.",
+        "measures": {
+          "precision": 0.4841894209384918,
+          "recall": 0.7303255796432495,
+          "f1": 0.5823162794113159
+        }
+      },
+      {
+        "question_id": 2001793,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "161",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/161.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A car driving on a highway at night",
+        "response": "The image captures a scene of a highway at dusk. The sky, painted in hues of pink and purple, casts a soft glow on the scene below. The highway, a ribbon of gray, stretches out ahead, flanked by a series of cars. \n\nIn the foreground, a blue car is captured mid-motion, driving away from the camera. Its headlights are on, piercing the twilight. Further down the road, a yellow car can be seen, its taillights glowing red. The cars, though distant, are clearly visible, adding a sense of depth to the image.\n\nOn the right side of the image, a highway sign stands tall. Its details are not clear, but it adds another layer of interest to the scene. The overall image is a snapshot of a moment in time, a glimpse into the everyday life of a highway at dusk.",
+        "measures": {
+          "precision": 0.4406658709049225,
+          "recall": 0.6982974410057068,
+          "f1": 0.5403437614440918
+        }
+      },
+      {
+        "question_id": 1828,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "58",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/58.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A person practicing martial arts in a studio.",
+        "response": "A man in a white karate uniform is in the middle of a kick, his leg extended high in the air. He is standing on a black mat in a gym, with a red punching bag hanging from the ceiling behind him. The gym is filled with various pieces of equipment, including a weight rack and a bench. The man's stance and the position of his leg suggest he is in the middle of a powerful kick. The red punching bag, hanging from the ceiling, is the only object in the gym that is not on the floor. The weight rack and bench are located further back in the gym, behind the man. The man is the only person in the gym, and he is the only person visible in the image. The gym appears to be well-equipped, with a variety of equipment for different types of workouts. The man's white karate uniform stands out against the more muted colors of the gym equipment. The image does not contain any text. The man's position relative to the punching bag and the weight rack suggests he is in the center of the gym. The bench is located to the right",
+        "measures": {
+          "precision": 0.3881697356700897,
+          "recall": 0.6242511868476868,
+          "f1": 0.4786851406097412
+        }
+      },
+      {
+        "question_id": 2001828,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "186",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/186.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A person practicing martial arts in a studio.",
+        "response": "A man in a white karate uniform is in the middle of a kick, his leg extended high in the air. He is standing on a black mat in a gym, with a red punching bag hanging from the ceiling behind him. The gym is filled with various pieces of equipment, including a weight rack and a bench. The man's stance and the position of his leg suggest he is in the middle of a powerful kick. The red punching bag, hanging from the ceiling, is the only object in the gym that is not on the floor. The weight rack and bench are located further back in the gym, behind the man. The man is the only person in the gym, and he is the only person visible in the image. The gym appears to be well-equipped, with a variety of equipment for different types of workouts. The man's white karate uniform stands out against the more muted colors of the gym equipment. The image does not contain any text. The man's position relative to the punching bag and the weight rack suggests he is in the center of the gym. The bench is located to the right",
+        "measures": {
+          "precision": 0.3881697356700897,
+          "recall": 0.6242511868476868,
+          "f1": 0.4786851406097412
+        }
+      },
+      {
+        "question_id": 1001783,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "92",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/92.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A man riding a bicycle on a mountain trail",
+        "response": "A mountain biker is seen riding down a rocky trail, with the vast expanse of the ocean visible in the background. The biker is wearing a blue helmet and a blue shirt, and is holding onto the handlebars of the bike. The trail is surrounded by rocks and shrubs, adding to the ruggedness of the scene. The ocean in the distance provides a stark contrast to the rocky trail, creating a visually striking image. The biker's action of riding down the trail suggests a sense of adventure and thrill. The image captures the essence of mountain biking, showcasing the sport's challenging nature and the beauty of the natural landscape.",
+        "measures": {
+          "precision": 0.48595091700553894,
+          "recall": 0.715053915977478,
+          "f1": 0.5786505937576294
+        }
+      },
+      {
+        "question_id": 1001793,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "97",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/97.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A car driving on a highway at night",
+        "response": "The image captures a scene of a highway at dusk. The sky, painted in hues of pink and purple, casts a soft glow on the scene below. The highway, a ribbon of gray, stretches out ahead, flanked by a series of cars. \n\nIn the foreground, a blue car is captured mid-motion, driving away from the camera. Its headlights are on, piercing the twilight. Further down the road, a yellow car can be seen, its taillights glowing red. The cars, though distant, are clearly visible, adding a sense of depth to the image.\n\nOn the right side of the image, a highway sign stands tall. Its details are not clear, but it adds another layer of interest to the scene. The overall image is a snapshot of a moment in time, a glimpse into the everyday life of a highway at dusk.",
+        "measures": {
+          "precision": 0.4406658709049225,
+          "recall": 0.6982974410057068,
+          "f1": 0.5403437614440918
+        }
+      },
+      {
+        "question_id": 1783,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "28",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/28.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A man riding a bicycle on a mountain trail",
+        "response": "A mountain biker is seen riding down a rocky trail, with the vast expanse of the ocean visible in the background. The biker is wearing a blue helmet and a blue shirt, and is holding onto the handlebars of the bike. The trail is surrounded by rocks and shrubs, adding to the ruggedness of the scene. The ocean in the distance provides a stark contrast to the rocky trail, creating a visually striking image. The biker's action of riding down the trail suggests a sense of adventure and thrill. The image captures the essence of mountain biking, showcasing the sport's challenging nature and the beauty of the natural landscape.",
+        "measures": {
+          "precision": 0.48595091700553894,
+          "recall": 0.715053915977478,
+          "f1": 0.5786505937576294
+        }
+      },
+      {
+        "question_id": 2001808,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "171",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/171.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A woman getting a pedicure at a salon",
+        "response": "In the image, a woman is seated comfortably in a black salon chair, her legs elegantly crossed. She is dressed in a pristine white robe, adding to the serene ambiance of the setting. A pair of white gloves are worn by the woman, perhaps indicating a professional setting.\n\nStanding next to the seated woman is another woman, also dressed in a white robe and gloves. She is in the process of performing a pedicure on the seated woman's feet. The pedicure is taking place on a wooden table, which is positioned next to a brick wall.\n\nThe image captures a moment of relaxation and care, as the woman receives a pedicure in a calm and professional environment. The precise positioning of the objects and individuals suggests a well-organized and efficient salon setup. The image does not contain any discernible text. The relative positions of the objects and individuals are accurately represented, providing a clear and detailed depiction of the scene.",
+        "measures": {
+          "precision": 0.4328063726425171,
+          "recall": 0.6896489858627319,
+          "f1": 0.531842052936554
+        }
+      },
+      {
+        "question_id": 3001783,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "219",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/219.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A man riding a bicycle on a mountain trail",
+        "response": "A mountain biker is seen riding down a rocky trail, with the vast expanse of the ocean visible in the background. The biker is wearing a blue helmet and a blue shirt, and is holding onto the handlebars of the bike. The trail is surrounded by rocks and shrubs, adding to the ruggedness of the scene. The ocean in the distance provides a stark contrast to the rocky trail, creating a visually striking image. The biker's action of riding down the trail suggests a sense of adventure and thrill. The image captures the essence of mountain biking, showcasing the sport's challenging nature and the beauty of the natural landscape.",
+        "measures": {
+          "precision": 0.48595091700553894,
+          "recall": 0.715053915977478,
+          "f1": 0.5786505937576294
+        }
+      },
+      {
+        "question_id": 95,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "10",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/10.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A fork, apple, orange and onion sitting on a surface.",
+        "response": "Three fruits are arranged in a row on a white background. The first is a red apple, the second is an orange, and the third is a yellow onion. The apple is on the left, the orange is in the middle, and the onion is on the right.",
+        "measures": {
+          "precision": 0.5193237662315369,
+          "recall": 0.6920294761657715,
+          "f1": 0.5933650732040405
+        }
+      },
+      {
+        "question_id": 101,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "12",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/12.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A foot long hot dog on top of two buns.",
+        "response": "A hot dog is placed on a bun and a paper plate. The hot dog is in the middle of the bun, and the bun is on the paper plate. The plate is on a wooden table. The hot dog is the only object in the image. There are no texts or other objects in the image. The relative position of the objects is such that the hot dog is on top of the bun, which is on the paper plate, which is on the wooden table.",
+        "measures": {
+          "precision": 0.39547020196914673,
+          "recall": 0.586869478225708,
+          "f1": 0.47252368927001953
+        }
+      },
+      {
+        "question_id": 1000095,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "26",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/26.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A fork, apple, orange and onion sitting on a surface.",
+        "response": "Three fruits are arranged in a row on a white background. The first is a red apple, the second is an orange, and the third is a yellow onion. The apple is on the left, the orange is in the middle, and the onion is on the right.",
+        "measures": {
+          "precision": 0.5193237662315369,
+          "recall": 0.6920294761657715,
+          "f1": 0.5933650732040405
+        }
+      },
+      {
+        "question_id": 1000101,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "28",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/28.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A foot long hot dog on top of two buns.",
+        "response": "A hot dog is placed on a bun and a paper plate. The hot dog is in the middle of the bun, and the bun is on the paper plate. The plate is on a wooden table. The hot dog is the only object in the image. There are no texts or other objects in the image. The relative position of the objects is such that the hot dog is on top of the bun, which is on the paper plate, which is on the wooden table.",
+        "measures": {
+          "precision": 0.39547020196914673,
+          "recall": 0.586869478225708,
+          "f1": 0.47252368927001953
+        }
+      },
+      {
+        "question_id": 2000095,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "42",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/42.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A fork, apple, orange and onion sitting on a surface.",
+        "response": "Three fruits are arranged in a row on a white background. The first is a red apple, the second is an orange, and the third is a yellow onion. The apple is on the left, the orange is in the middle, and the onion is on the right.",
+        "measures": {
+          "precision": 0.5193237662315369,
+          "recall": 0.6920294761657715,
+          "f1": 0.5933650732040405
+        }
+      },
+      {
+        "question_id": 2000101,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "44",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/44.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A foot long hot dog on top of two buns.",
+        "response": "A hot dog is placed on a bun and a paper plate. The hot dog is in the middle of the bun, and the bun is on the paper plate. The plate is on a wooden table. The hot dog is the only object in the image. There are no texts or other objects in the image. The relative position of the objects is such that the hot dog is on top of the bun, which is on the paper plate, which is on the wooden table.",
+        "measures": {
+          "precision": 0.39547020196914673,
+          "recall": 0.586869478225708,
+          "f1": 0.47252368927001953
+        }
+      },
+      {
+        "question_id": 3000095,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "58",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/58.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A fork, apple, orange and onion sitting on a surface.",
+        "response": "Three fruits are arranged in a row on a white background. The first is a red apple, the second is an orange, and the third is a yellow onion. The apple is on the left, the orange is in the middle, and the onion is on the right.",
+        "measures": {
+          "precision": 0.5193237662315369,
+          "recall": 0.6920294761657715,
+          "f1": 0.5933650732040405
+        }
+      },
+      {
+        "question_id": 3000101,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "60",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/60.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A foot long hot dog on top of two buns.",
+        "response": "A hot dog is placed on a bun and a paper plate. The hot dog is in the middle of the bun, and the bun is on the paper plate. The plate is on a wooden table. The hot dog is the only object in the image. There are no texts or other objects in the image. The relative position of the objects is such that the hot dog is on top of the bun, which is on the paper plate, which is on the wooden table.",
+        "measures": {
+          "precision": 0.39547020196914673,
+          "recall": 0.586869478225708,
+          "f1": 0.47252368927001953
+        }
+      }
+    ],
+    "60_80": [
+      {
+        "question_id": 2001830,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "187",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/187.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A group of people watching a play in a theater.",
+        "response": "Audience members are seated in rows of chairs, watching a performance on a stage. The stage is set with a red curtain and a yellow stool. The audience members are dressed in a variety of colors, including red, black, and white. The perspective of the image is from the audience, looking towards the stage.",
+        "measures": {
+          "precision": 0.5240730047225952,
+          "recall": 0.7483811378479004,
+          "f1": 0.6164565682411194
+        }
+      },
+      {
+        "question_id": 3001801,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "231",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/231.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A group of people sitting around a campfire",
+        "response": "In the image, a group of three people are gathered around a campfire on a beach at night. The fire, which is the central focus of the image, is ablaze with orange and yellow flames. The people are seated on the sand, their faces illuminated by the warm glow of the fire. They are all smiling, their expressions radiating joy and camaraderie. The background is dark, suggesting it's nighttime, and the beach is visible in the distance. The image captures a moment of shared happiness and connection in a serene beach setting.",
+        "measures": {
+          "precision": 0.49828100204467773,
+          "recall": 0.7805717587471008,
+          "f1": 0.6082703471183777
+        }
+      },
+      {
+        "question_id": 3001815,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "240",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/240.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A person skiing down a mountain",
+        "response": "A skier in a yellow jacket and green helmet is carving down a snowy mountain.",
+        "measures": {
+          "precision": 0.6326902508735657,
+          "recall": 0.821317732334137,
+          "f1": 0.7147687673568726
+        }
+      },
+      {
+        "question_id": 74,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "18",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/18.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "an elephant is in some brown grass and some trees",
+        "response": "A baby elephant is seen in a field of tall grass, reaching out with its trunk.",
+        "measures": {
+          "precision": 0.7037866115570068,
+          "recall": 0.7571865320205688,
+          "f1": 0.7295107245445251
+        }
+      },
+      {
+        "question_id": 3000074,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "209",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/209.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "an elephant is in some brown grass and some trees",
+        "response": "A baby elephant is seen in a field of tall grass, reaching out with its trunk.",
+        "measures": {
+          "precision": 0.7037866115570068,
+          "recall": 0.7571865320205688,
+          "f1": 0.7295107245445251
+        }
+      },
+      {
+        "question_id": 2000082,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "149",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/149.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "Five people stand on a shoreline, with woods in the background.",
+        "response": "A group of three people are playing frisbee in a park. The man in the center is in the middle of throwing the frisbee. The woman on the left is holding the frisbee, and the woman on the right is watching the action. The park is located next to a lake, and the sky is pink.",
+        "measures": {
+          "precision": 0.5533405542373657,
+          "recall": 0.7363831400871277,
+          "f1": 0.6318727731704712
+        }
+      },
+      {
+        "question_id": 2000058,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "141",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/141.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A red and blue train on a bridge during a cloudy day.",
+        "response": "A train is crossing a bridge over a body of water. The train is blue and red, and it has the number 100 on the side. The bridge is supported by concrete pillars. The sky above is cloudy.",
+        "measures": {
+          "precision": 0.6425677537918091,
+          "recall": 0.821567952632904,
+          "f1": 0.7211259603500366
+        }
+      },
+      {
+        "question_id": 3001809,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "235",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/235.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A person taking a photo with a camera",
+        "response": "A woman with a camera around her neck is looking up at the sky.",
+        "measures": {
+          "precision": 0.6426134705543518,
+          "recall": 0.7213740348815918,
+          "f1": 0.679719865322113
+        }
+      },
+      {
+        "question_id": 58,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "13",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/13.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A red and blue train on a bridge during a cloudy day.",
+        "response": "A train is crossing a bridge over a body of water. The train is blue and red, and it has the number 100 on the side. The bridge is supported by concrete pillars. The sky above is cloudy.",
+        "measures": {
+          "precision": 0.6425677537918091,
+          "recall": 0.821567952632904,
+          "f1": 0.7211259603500366
+        }
+      },
+      {
+        "question_id": 2001809,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "172",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/172.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A person taking a photo with a camera",
+        "response": "A woman with a camera around her neck is looking up at the sky.",
+        "measures": {
+          "precision": 0.6426134705543518,
+          "recall": 0.7213740348815918,
+          "f1": 0.679719865322113
+        }
+      },
+      {
+        "question_id": 1000055,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "75",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/75.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A big billboard is painted onto the side of a brick building.",
+        "response": "A large blue sign with white letters that say \"UARE ALIVE\" and a white \"X\" on the right side.",
+        "measures": {
+          "precision": 0.5900527834892273,
+          "recall": 0.7520193457603455,
+          "f1": 0.6612626910209656
+        }
+      },
+      {
+        "question_id": 2000053,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "138",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/138.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A group of giraffes and zebras in a wildlife exhibit.",
+        "response": "A giraffe stands in a field with other animals.",
+        "measures": {
+          "precision": 0.7725757956504822,
+          "recall": 0.7396498322486877,
+          "f1": 0.7557543516159058
+        }
+      },
+      {
+        "question_id": 3000082,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "212",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/212.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "Five people stand on a shoreline, with woods in the background.",
+        "response": "A group of three people are playing frisbee in a park. The man in the center is in the middle of throwing the frisbee. The woman on the left is holding the frisbee, and the woman on the right is watching the action. The park is located next to a lake, and the sky is pink.",
+        "measures": {
+          "precision": 0.5533405542373657,
+          "recall": 0.7363831400871277,
+          "f1": 0.6318727731704712
+        }
+      },
+      {
+        "question_id": 1000069,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "79",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/79.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "Cows are walking through tall grass near many trees.",
+        "response": "A herd of cows graze in a field with a mountain in the background.",
+        "measures": {
+          "precision": 0.7555873394012451,
+          "recall": 0.7999517321586609,
+          "f1": 0.7771368622779846
+        }
+      },
+      {
+        "question_id": 1830,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "59",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/59.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A group of people watching a play in a theater.",
+        "response": "Audience members are seated in rows of chairs, watching a performance on a stage. The stage is set with a red curtain and a yellow stool. The audience members are dressed in a variety of colors, including red, black, and white. The perspective of the image is from the audience, looking towards the stage.",
+        "measures": {
+          "precision": 0.5240730047225952,
+          "recall": 0.7483811378479004,
+          "f1": 0.6164565682411194
+        }
+      },
+      {
+        "question_id": 3000058,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "204",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/204.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A red and blue train on a bridge during a cloudy day.",
+        "response": "A train is crossing a bridge over a body of water. The train is blue and red, and it has the number 100 on the side. The bridge is supported by concrete pillars. The sky above is cloudy.",
+        "measures": {
+          "precision": 0.6425677537918091,
+          "recall": 0.821567952632904,
+          "f1": 0.7211259603500366
+        }
+      },
+      {
+        "question_id": 2001831,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "188",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/188.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A woman sculpting a statue from clay.",
+        "response": "A woman with a ponytail is standing in front of a sculpture of a woman's head. She is wearing a white shirt and has blue nail polish on her fingernails. The sculpture is made of a brown material and is placed on a wooden table. The woman appears to be examining the sculpture, possibly considering it for purchase or display. The setting suggests an art gallery or studio environment.",
+        "measures": {
+          "precision": 0.5249141454696655,
+          "recall": 0.7469398379325867,
+          "f1": 0.616547703742981
+        }
+      },
+      {
+        "question_id": 1001809,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "108",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/108.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A person taking a photo with a camera",
+        "response": "A woman with a camera around her neck is looking up at the sky.",
+        "measures": {
+          "precision": 0.6426134705543518,
+          "recall": 0.7213740348815918,
+          "f1": 0.679719865322113
+        }
+      },
+      {
+        "question_id": 2001825,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "183",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/183.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A person skateboarding in a skatepark",
+        "response": "A young woman is performing a skateboard trick at a skate park. She is wearing a gray tank top and blue jeans. The skateboard is yellow with white wheels. The skate park has a concrete ramp and a metal railing. The sky is cloudy.",
+        "measures": {
+          "precision": 0.5377923250198364,
+          "recall": 0.7804185748100281,
+          "f1": 0.6367769241333008
+        }
+      },
+      {
+        "question_id": 1801,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "40",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/40.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A group of people sitting around a campfire",
+        "response": "In the image, a group of three people are gathered around a campfire on a beach at night. The fire, which is the central focus of the image, is ablaze with orange and yellow flames. The people are seated on the sand, their faces illuminated by the warm glow of the fire. They are all smiling, their expressions radiating joy and camaraderie. The background is dark, suggesting it's nighttime, and the beach is visible in the distance. The image captures a moment of shared happiness and connection in a serene beach setting.",
+        "measures": {
+          "precision": 0.49828100204467773,
+          "recall": 0.7805717587471008,
+          "f1": 0.6082703471183777
+        }
+      },
+      {
+        "question_id": 1800,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "39",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/39.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A person playing a piano in a studio",
+        "response": "A man is sitting at a piano, playing it. He is wearing a gray shirt and a gray scarf. The piano is in front of him, and there are several books and a potted plant in the background. The man appears to be focused on his music.",
+        "measures": {
+          "precision": 0.5579315423965454,
+          "recall": 0.7528965473175049,
+          "f1": 0.640915036201477
+        }
+      },
+      {
+        "question_id": 2001798,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "165",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/165.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A group of people dancing at a party",
+        "response": "A group of people are dancing at a party. They are all dressed in glamorous outfits and are having a great time. The background is dark, with a disco ball and a red hat adding to the festive atmosphere. The photo is taken from a low angle, making the people appear larger and more prominent. The overall mood of the photo is joyful and celebratory.",
+        "measures": {
+          "precision": 0.5473631620407104,
+          "recall": 0.8911353349685669,
+          "f1": 0.6781719326972961
+        }
+      },
+      {
+        "question_id": 1787,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "30",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/30.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A sandwich with ham, lettuce, and cheese",
+        "response": "A plate of sandwiches and carrots.",
+        "measures": {
+          "precision": 0.7725909352302551,
+          "recall": 0.7327606678009033,
+          "f1": 0.7521489262580872
+        }
+      },
+      {
+        "question_id": 3001839,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "254",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/254.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A woman taking a walk in a park.",
+        "response": "A woman in a red shirt and jeans is walking down a path in a park. The path is lined with trees that have yellow leaves. The woman is smiling and looking ahead. There are other people in the background, but they are blurred and not the focus of the photo. The photo is taken from a low angle, looking up at the woman. The colors in the photo are warm and natural, with the yellow leaves of the trees contrasting against the woman's red shirt. The overall atmosphere of the photo is peaceful and serene.",
+        "measures": {
+          "precision": 0.47720280289649963,
+          "recall": 0.8136501908302307,
+          "f1": 0.6015807390213013
+        }
+      },
+      {
+        "question_id": 2001800,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "167",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/167.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A person playing a piano in a studio",
+        "response": "A man is sitting at a piano, playing it. He is wearing a gray shirt and a gray scarf. The piano is in front of him, and there are several books and a potted plant in the background. The man appears to be focused on his music.",
+        "measures": {
+          "precision": 0.5579315423965454,
+          "recall": 0.7528965473175049,
+          "f1": 0.640915036201477
+        }
+      },
+      {
+        "question_id": 3001830,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "250",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/250.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A group of people watching a play in a theater.",
+        "response": "Audience members are seated in rows of chairs, watching a performance on a stage. The stage is set with a red curtain and a yellow stool. The audience members are dressed in a variety of colors, including red, black, and white. The perspective of the image is from the audience, looking towards the stage.",
+        "measures": {
+          "precision": 0.5240730047225952,
+          "recall": 0.7483811378479004,
+          "f1": 0.6164565682411194
+        }
+      },
+      {
+        "question_id": 2000055,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "139",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/139.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A big billboard is painted onto the side of a brick building.",
+        "response": "A large blue sign with white letters that say \"UARE ALIVE\" and a white \"X\" on the right side.",
+        "measures": {
+          "precision": 0.5900527834892273,
+          "recall": 0.7520193457603455,
+          "f1": 0.6612626910209656
+        }
+      },
+      {
+        "question_id": 1798,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "37",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/37.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A group of people dancing at a party",
+        "response": "A group of people are dancing at a party. They are all dressed in glamorous outfits and are having a great time. The background is dark, with a disco ball and a red hat adding to the festive atmosphere. The photo is taken from a low angle, making the people appear larger and more prominent. The overall mood of the photo is joyful and celebratory.",
+        "measures": {
+          "precision": 0.5473631620407104,
+          "recall": 0.8911353349685669,
+          "f1": 0.6781719326972961
+        }
+      },
+      {
+        "question_id": 1001812,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "110",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/110.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A woman applying makeup in front of a mirror",
+        "response": "A young woman is applying makeup in front of a mirror. She is holding a makeup brush in her right hand and her lips are puckered as she applies the makeup. The mirror reflects her image and the makeup brush. The background is blurred, but it appears to be a bathroom. The woman is wearing a white shirt.",
+        "measures": {
+          "precision": 0.5572248697280884,
+          "recall": 0.8670216798782349,
+          "f1": 0.6784303784370422
+        }
+      },
+      {
+        "question_id": 38,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "0",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/0.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A plane sitting on a runway getting ready to be emptied.",
+        "response": "A white airplane is parked on the tarmac, with a worker in a yellow vest standing next to it. The plane is being loaded with luggage from a red luggage cart. The tarmac is surrounded by buildings and other airplanes.",
+        "measures": {
+          "precision": 0.5840775370597839,
+          "recall": 0.75078284740448,
+          "f1": 0.657020628452301
+        }
+      },
+      {
+        "question_id": 50,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "1",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/1.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A triangle sign with an English and foreign warning",
+        "response": "A sign with a red triangle and a white background with the words \"Low gear now\" written on it.",
+        "measures": {
+          "precision": 0.5896984934806824,
+          "recall": 0.6967445611953735,
+          "f1": 0.6387678384780884
+        }
+      },
+      {
+        "question_id": 97,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "11",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/11.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "The clock on the building is in the shape of a coffee cup.",
+        "response": "A clock with a blue and red border and a white face with black numbers and hands.",
+        "measures": {
+          "precision": 0.6145954728126526,
+          "recall": 0.7032734155654907,
+          "f1": 0.6559509038925171
+        }
+      },
+      {
+        "question_id": 102,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "13",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/13.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A young child is sitting at a bar and eating.",
+        "response": "A young girl is sitting at a table in a restaurant, eating a hot dog. She is wearing a blue sweater and has a smile on her face. The table is set with a Pepsi cup and a napkin. The background of the image features a red carpet and a blue backpack.",
+        "measures": {
+          "precision": 0.5977689027786255,
+          "recall": 0.8334323167800903,
+          "f1": 0.6961982846260071
+        }
+      },
+      {
+        "question_id": 114,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "15",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/15.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A chocolate and fudge dessert on layered pastry is on a red plate.",
+        "response": "A stack of crepes with chocolate sauce and whipped cream.",
+        "measures": {
+          "precision": 0.7672638297080994,
+          "recall": 0.7544423341751099,
+          "f1": 0.7607990503311157
+        }
+      },
+      {
+        "question_id": 1000038,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "16",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/16.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A plane sitting on a runway getting ready to be emptied.",
+        "response": "A white airplane is parked on the tarmac, with a worker in a yellow vest standing next to it. The plane is being loaded with luggage from a red luggage cart. The tarmac is surrounded by buildings and other airplanes.",
+        "measures": {
+          "precision": 0.5840775370597839,
+          "recall": 0.75078284740448,
+          "f1": 0.657020628452301
+        }
+      },
+      {
+        "question_id": 1000050,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "17",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/17.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A triangle sign with an English and foreign warning",
+        "response": "A sign with a red triangle and a white background with the words \"Low gear now\" written on it.",
+        "measures": {
+          "precision": 0.5896984934806824,
+          "recall": 0.6967445611953735,
+          "f1": 0.6387678384780884
+        }
+      },
+      {
+        "question_id": 1000064,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "19",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/19.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A cat and dog napping together on the couch.",
+        "response": "A dog and a cat are sleeping on a couch. The dog is on the left side of the couch and the cat is on the right side. The dog is brown and the cat is white.",
+        "measures": {
+          "precision": 0.5855531692504883,
+          "recall": 0.7937897443771362,
+          "f1": 0.6739529371261597
+        }
+      },
+      {
+        "question_id": 1000068,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "21",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/21.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A gray chair and a black chair sit in a room near a lamp.",
+        "response": "A cat is sleeping on a couch.",
+        "measures": {
+          "precision": 0.7785332798957825,
+          "recall": 0.6579984426498413,
+          "f1": 0.7132089734077454
+        }
+      },
+      {
+        "question_id": 1000072,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "22",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/22.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A black kitten laying down next to two remote controls.",
+        "response": "A black kitten is laying on a plaid blanket next to a silver and black phone and a black calculator.",
+        "measures": {
+          "precision": 0.7229152917861938,
+          "recall": 0.8302574157714844,
+          "f1": 0.772877037525177
+        }
+      },
+      {
+        "question_id": 1000092,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "24",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/24.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A wooden table with a white plate of fresh fruit sitting on it.",
+        "response": "A white bowl filled with a variety of fruits including bananas, apples, and pears.",
+        "measures": {
+          "precision": 0.7398606538772583,
+          "recall": 0.8091676831245422,
+          "f1": 0.7729636430740356
+        }
+      },
+      {
+        "question_id": 1000094,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "25",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/25.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A person dressed in costume, wearing a banana hat and a banana necklace.",
+        "response": "A person wearing a costume made of bananas is smiling.",
+        "measures": {
+          "precision": 0.7842845916748047,
+          "recall": 0.7493478059768677,
+          "f1": 0.7664182186126709
+        }
+      },
+      {
+        "question_id": 1000097,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "27",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/27.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "The clock on the building is in the shape of a coffee cup.",
+        "response": "A clock with a blue and red border and a white face with black numbers and hands.",
+        "measures": {
+          "precision": 0.6145954728126526,
+          "recall": 0.7032734155654907,
+          "f1": 0.6559509038925171
+        }
+      },
+      {
+        "question_id": 1000102,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "29",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/29.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A young child is sitting at a bar and eating.",
+        "response": "A young girl is sitting at a table in a restaurant, eating a hot dog. She is wearing a blue sweater and has a smile on her face. The table is set with a Pepsi cup and a napkin. The background of the image features a red carpet and a blue backpack.",
+        "measures": {
+          "precision": 0.5977689027786255,
+          "recall": 0.8334323167800903,
+          "f1": 0.6961982846260071
+        }
+      },
+      {
+        "question_id": 64,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "3",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/3.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A cat and dog napping together on the couch.",
+        "response": "A dog and a cat are sleeping on a couch. The dog is on the left side of the couch and the cat is on the right side. The dog is brown and the cat is white.",
+        "measures": {
+          "precision": 0.5855531692504883,
+          "recall": 0.7937897443771362,
+          "f1": 0.6739529371261597
+        }
+      },
+      {
+        "question_id": 1000114,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "31",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/31.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A chocolate and fudge dessert on layered pastry is on a red plate.",
+        "response": "A stack of crepes with chocolate sauce and whipped cream.",
+        "measures": {
+          "precision": 0.7672638297080994,
+          "recall": 0.7544423341751099,
+          "f1": 0.7607990503311157
+        }
+      },
+      {
+        "question_id": 2000038,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "32",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/32.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A plane sitting on a runway getting ready to be emptied.",
+        "response": "A white airplane is parked on the tarmac, with a worker in a yellow vest standing next to it. The plane is being loaded with luggage from a red luggage cart. The tarmac is surrounded by buildings and other airplanes.",
+        "measures": {
+          "precision": 0.5840775370597839,
+          "recall": 0.75078284740448,
+          "f1": 0.657020628452301
+        }
+      },
+      {
+        "question_id": 2000050,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "33",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/33.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A triangle sign with an English and foreign warning",
+        "response": "A sign with a red triangle and a white background with the words \"Low gear now\" written on it.",
+        "measures": {
+          "precision": 0.5896984934806824,
+          "recall": 0.6967445611953735,
+          "f1": 0.6387678384780884
+        }
+      },
+      {
+        "question_id": 2000064,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "35",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/35.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A cat and dog napping together on the couch.",
+        "response": "A dog and a cat are sleeping on a couch. The dog is on the left side of the couch and the cat is on the right side. The dog is brown and the cat is white.",
+        "measures": {
+          "precision": 0.5855531692504883,
+          "recall": 0.7937897443771362,
+          "f1": 0.6739529371261597
+        }
+      },
+      {
+        "question_id": 2000068,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "37",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/37.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A gray chair and a black chair sit in a room near a lamp.",
+        "response": "A cat is sleeping on a couch.",
+        "measures": {
+          "precision": 0.7785332798957825,
+          "recall": 0.6579984426498413,
+          "f1": 0.7132089734077454
+        }
+      },
+      {
+        "question_id": 2000072,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "38",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/38.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A black kitten laying down next to two remote controls.",
+        "response": "A black kitten is laying on a plaid blanket next to a silver and black phone and a black calculator.",
+        "measures": {
+          "precision": 0.7229152917861938,
+          "recall": 0.8302574157714844,
+          "f1": 0.772877037525177
+        }
+      },
+      {
+        "question_id": 2000092,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "40",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/40.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A wooden table with a white plate of fresh fruit sitting on it.",
+        "response": "A white bowl filled with a variety of fruits including bananas, apples, and pears.",
+        "measures": {
+          "precision": 0.7398606538772583,
+          "recall": 0.8091676831245422,
+          "f1": 0.7729636430740356
+        }
+      },
+      {
+        "question_id": 2000094,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "41",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/41.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A person dressed in costume, wearing a banana hat and a banana necklace.",
+        "response": "A person wearing a costume made of bananas is smiling.",
+        "measures": {
+          "precision": 0.7842845916748047,
+          "recall": 0.7493478059768677,
+          "f1": 0.7664182186126709
+        }
+      },
+      {
+        "question_id": 2000097,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "43",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/43.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "The clock on the building is in the shape of a coffee cup.",
+        "response": "A clock with a blue and red border and a white face with black numbers and hands.",
+        "measures": {
+          "precision": 0.6145954728126526,
+          "recall": 0.7032734155654907,
+          "f1": 0.6559509038925171
+        }
+      },
+      {
+        "question_id": 2000102,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "45",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/45.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A young child is sitting at a bar and eating.",
+        "response": "A young girl is sitting at a table in a restaurant, eating a hot dog. She is wearing a blue sweater and has a smile on her face. The table is set with a Pepsi cup and a napkin. The background of the image features a red carpet and a blue backpack.",
+        "measures": {
+          "precision": 0.5977689027786255,
+          "recall": 0.8334323167800903,
+          "f1": 0.6961982846260071
+        }
+      },
+      {
+        "question_id": 2000114,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "47",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/47.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A chocolate and fudge dessert on layered pastry is on a red plate.",
+        "response": "A stack of crepes with chocolate sauce and whipped cream.",
+        "measures": {
+          "precision": 0.7672638297080994,
+          "recall": 0.7544423341751099,
+          "f1": 0.7607990503311157
+        }
+      },
+      {
+        "question_id": 3000038,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "48",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/48.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A plane sitting on a runway getting ready to be emptied.",
+        "response": "A white airplane is parked on the tarmac, with a worker in a yellow vest standing next to it. The plane is being loaded with luggage from a red luggage cart. The tarmac is surrounded by buildings and other airplanes.",
+        "measures": {
+          "precision": 0.5840775370597839,
+          "recall": 0.75078284740448,
+          "f1": 0.657020628452301
+        }
+      },
+      {
+        "question_id": 3000050,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "49",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/49.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A triangle sign with an English and foreign warning",
+        "response": "A sign with a red triangle and a white background with the words \"Low gear now\" written on it.",
+        "measures": {
+          "precision": 0.5896984934806824,
+          "recall": 0.6967445611953735,
+          "f1": 0.6387678384780884
+        }
+      },
+      {
+        "question_id": 68,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "5",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/5.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A gray chair and a black chair sit in a room near a lamp.",
+        "response": "A cat is sleeping on a couch.",
+        "measures": {
+          "precision": 0.7785332798957825,
+          "recall": 0.6579984426498413,
+          "f1": 0.7132089734077454
+        }
+      },
+      {
+        "question_id": 3000064,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "51",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/51.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A cat and dog napping together on the couch.",
+        "response": "A dog and a cat are sleeping on a couch. The dog is on the left side of the couch and the cat is on the right side. The dog is brown and the cat is white.",
+        "measures": {
+          "precision": 0.5855531692504883,
+          "recall": 0.7937897443771362,
+          "f1": 0.6739529371261597
+        }
+      },
+      {
+        "question_id": 3000068,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "53",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/53.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A gray chair and a black chair sit in a room near a lamp.",
+        "response": "A cat is sleeping on a couch.",
+        "measures": {
+          "precision": 0.7785332798957825,
+          "recall": 0.6579984426498413,
+          "f1": 0.7132089734077454
+        }
+      },
+      {
+        "question_id": 3000072,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "54",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/54.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A black kitten laying down next to two remote controls.",
+        "response": "A black kitten is laying on a plaid blanket next to a silver and black phone and a black calculator.",
+        "measures": {
+          "precision": 0.7229152917861938,
+          "recall": 0.8302574157714844,
+          "f1": 0.772877037525177
+        }
+      },
+      {
+        "question_id": 3000092,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "56",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/56.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A wooden table with a white plate of fresh fruit sitting on it.",
+        "response": "A white bowl filled with a variety of fruits including bananas, apples, and pears.",
+        "measures": {
+          "precision": 0.7398606538772583,
+          "recall": 0.8091676831245422,
+          "f1": 0.7729636430740356
+        }
+      },
+      {
+        "question_id": 3000094,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "57",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/57.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A person dressed in costume, wearing a banana hat and a banana necklace.",
+        "response": "A person wearing a costume made of bananas is smiling.",
+        "measures": {
+          "precision": 0.7842845916748047,
+          "recall": 0.7493478059768677,
+          "f1": 0.7664182186126709
+        }
+      },
+      {
+        "question_id": 3000097,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "59",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/59.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "The clock on the building is in the shape of a coffee cup.",
+        "response": "A clock with a blue and red border and a white face with black numbers and hands.",
+        "measures": {
+          "precision": 0.6145954728126526,
+          "recall": 0.7032734155654907,
+          "f1": 0.6559509038925171
+        }
+      },
+      {
+        "question_id": 72,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "6",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/6.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A black kitten laying down next to two remote controls.",
+        "response": "A black kitten is laying on a plaid blanket next to a silver and black phone and a black calculator.",
+        "measures": {
+          "precision": 0.7229152917861938,
+          "recall": 0.8302574157714844,
+          "f1": 0.772877037525177
+        }
+      },
+      {
+        "question_id": 3000102,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "61",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/61.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A young child is sitting at a bar and eating.",
+        "response": "A young girl is sitting at a table in a restaurant, eating a hot dog. She is wearing a blue sweater and has a smile on her face. The table is set with a Pepsi cup and a napkin. The background of the image features a red carpet and a blue backpack.",
+        "measures": {
+          "precision": 0.5977689027786255,
+          "recall": 0.8334323167800903,
+          "f1": 0.6961982846260071
+        }
+      },
+      {
+        "question_id": 3000114,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "63",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/63.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A chocolate and fudge dessert on layered pastry is on a red plate.",
+        "response": "A stack of crepes with chocolate sauce and whipped cream.",
+        "measures": {
+          "precision": 0.7672638297080994,
+          "recall": 0.7544423341751099,
+          "f1": 0.7607990503311157
+        }
+      },
+      {
+        "question_id": 92,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "8",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/8.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A wooden table with a white plate of fresh fruit sitting on it.",
+        "response": "A white bowl filled with a variety of fruits including bananas, apples, and pears.",
+        "measures": {
+          "precision": 0.7398606538772583,
+          "recall": 0.8091676831245422,
+          "f1": 0.7729636430740356
+        }
+      },
+      {
+        "question_id": 94,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "9",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/9.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A person dressed in costume, wearing a banana hat and a banana necklace.",
+        "response": "A person wearing a costume made of bananas is smiling.",
+        "measures": {
+          "precision": 0.7842845916748047,
+          "recall": 0.7493478059768677,
+          "f1": 0.7664182186126709
+        }
+      }
+    ],
+    "80_100": [
+      {
+        "question_id": 2001816,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "178",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/178.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A woman doing yoga in a park",
+        "response": "A woman in a purple tank top and leggings is doing a yoga pose in a park.",
+        "measures": {
+          "precision": 0.7123070955276489,
+          "recall": 0.9240647554397583,
+          "f1": 0.804484486579895
+        }
+      },
+      {
+        "question_id": 1824,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "54",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/54.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A person rock climbing on a mountain",
+        "response": "A person is rock climbing at sunset.",
+        "measures": {
+          "precision": 0.8124034404754639,
+          "recall": 0.8373299837112427,
+          "f1": 0.824678361415863
+        }
+      },
+      {
+        "question_id": 47,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "7",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/7.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A fire hydrant with a pair of eye stickers making a face on it.",
+        "response": "A fire hydrant with googly eyes and a black handle.",
+        "measures": {
+          "precision": 0.8137918710708618,
+          "recall": 0.7888017892837524,
+          "f1": 0.8011020421981812
+        }
+      },
+      {
+        "question_id": 3001816,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "241",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/241.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A woman doing yoga in a park",
+        "response": "A woman in a purple tank top and leggings is doing a yoga pose in a park.",
+        "measures": {
+          "precision": 0.7123070955276489,
+          "recall": 0.9240647554397583,
+          "f1": 0.804484486579895
+        }
+      },
+      {
+        "question_id": 2001802,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "169",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/169.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A person kayaking on a lake",
+        "response": "A man is kayaking on a lake with a mountain in the background.",
+        "measures": {
+          "precision": 0.7443729639053345,
+          "recall": 0.8944737911224365,
+          "f1": 0.8125495314598083
+        }
+      },
+      {
+        "question_id": 3001805,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "233",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/233.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A person holding a bouquet of flowers",
+        "response": "A young man is holding a bouquet of flowers.",
+        "measures": {
+          "precision": 0.8816405534744263,
+          "recall": 0.9278790950775146,
+          "f1": 0.9041690826416016
+        }
+      },
+      {
+        "question_id": 3000047,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "198",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/198.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A fire hydrant with a pair of eye stickers making a face on it.",
+        "response": "A fire hydrant with googly eyes and a black handle.",
+        "measures": {
+          "precision": 0.8137918710708618,
+          "recall": 0.7888017892837524,
+          "f1": 0.8011020421981812
+        }
+      },
+      {
+        "question_id": 1000049,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "73",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/73.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A yellow and blue fire hydrant sitting on a sidewalk.",
+        "response": "A yellow and blue fire hydrant sits on a sidewalk next to a street.",
+        "measures": {
+          "precision": 0.8869706392288208,
+          "recall": 0.9621890783309937,
+          "f1": 0.923050045967102
+        }
+      },
+      {
+        "question_id": 1001802,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "105",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/105.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A person kayaking on a lake",
+        "response": "A man is kayaking on a lake with a mountain in the background.",
+        "measures": {
+          "precision": 0.7443729639053345,
+          "recall": 0.8944737911224365,
+          "f1": 0.8125495314598083
+        }
+      },
+      {
+        "question_id": 3001835,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "252",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/252.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A woman using a computer at a desk.",
+        "response": "A woman is sitting at a desk, typing on a computer.",
+        "measures": {
+          "precision": 0.8663826584815979,
+          "recall": 0.9043450355529785,
+          "f1": 0.8849568963050842
+        }
+      },
+      {
+        "question_id": 1000027,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "66",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/66.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A bathroom with multicolored tile, bathtub and pedestal sink.",
+        "response": "A bathroom with a white bathtub and a shower curtain.",
+        "measures": {
+          "precision": 0.8758629560470581,
+          "recall": 0.8204398155212402,
+          "f1": 0.8472459316253662
+        }
+      },
+      {
+        "question_id": 2000062,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "142",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/142.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A small cat is sitting on the wooden beam.",
+        "response": "A cat is sitting on a blue wooden box.",
+        "measures": {
+          "precision": 0.9235552549362183,
+          "recall": 0.8920289874076843,
+          "f1": 0.9075184464454651
+        }
+      },
+      {
+        "question_id": 1001791,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "95",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/95.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A person sitting on a rock near a river",
+        "response": "A man sits on a rock, overlooking a river that flows through a rocky landscape.",
+        "measures": {
+          "precision": 0.7802137136459351,
+          "recall": 0.8606258630752563,
+          "f1": 0.8184493780136108
+        }
+      },
+      {
+        "question_id": 2001824,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "182",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/182.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A person rock climbing on a mountain",
+        "response": "A person is rock climbing at sunset.",
+        "measures": {
+          "precision": 0.8124034404754639,
+          "recall": 0.8373299837112427,
+          "f1": 0.824678361415863
+        }
+      },
+      {
+        "question_id": 62,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "14",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/14.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A small cat is sitting on the wooden beam.",
+        "response": "A cat is sitting on a blue wooden box.",
+        "measures": {
+          "precision": 0.9235552549362183,
+          "recall": 0.8920289874076843,
+          "f1": 0.9075184464454651
+        }
+      },
+      {
+        "question_id": 3001802,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "232",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/232.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A person kayaking on a lake",
+        "response": "A man is kayaking on a lake with a mountain in the background.",
+        "measures": {
+          "precision": 0.7443729639053345,
+          "recall": 0.8944737911224365,
+          "f1": 0.8125495314598083
+        }
+      },
+      {
+        "question_id": 1001816,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "114",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/114.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A woman doing yoga in a park",
+        "response": "A woman in a purple tank top and leggings is doing a yoga pose in a park.",
+        "measures": {
+          "precision": 0.7123070955276489,
+          "recall": 0.9240647554397583,
+          "f1": 0.804484486579895
+        }
+      },
+      {
+        "question_id": 1805,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "42",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/42.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A person holding a bouquet of flowers",
+        "response": "A young man is holding a bouquet of flowers.",
+        "measures": {
+          "precision": 0.8816405534744263,
+          "recall": 0.9278790950775146,
+          "f1": 0.9041690826416016
+        }
+      },
+      {
+        "question_id": 1000115,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "89",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/89.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "a messy bed room a bed a chair and boxes",
+        "response": "A messy bedroom with a bed, a chair, and a pile of boxes and bags.",
+        "measures": {
+          "precision": 0.7862445116043091,
+          "recall": 0.8234280347824097,
+          "f1": 0.8044067621231079
+        }
+      },
+      {
+        "question_id": 1001835,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "125",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/125.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A woman using a computer at a desk.",
+        "response": "A woman is sitting at a desk, typing on a computer.",
+        "measures": {
+          "precision": 0.8663826584815979,
+          "recall": 0.9043450355529785,
+          "f1": 0.8849568963050842
+        }
+      },
+      {
+        "question_id": 1835,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "61",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/61.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A woman using a computer at a desk.",
+        "response": "A woman is sitting at a desk, typing on a computer.",
+        "measures": {
+          "precision": 0.8663826584815979,
+          "recall": 0.9043450355529785,
+          "f1": 0.8849568963050842
+        }
+      },
+      {
+        "question_id": 1000062,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "78",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/78.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A small cat is sitting on the wooden beam.",
+        "response": "A cat is sitting on a blue wooden box.",
+        "measures": {
+          "precision": 0.9235552549362183,
+          "recall": 0.8920289874076843,
+          "f1": 0.9075184464454651
+        }
+      },
+      {
+        "question_id": 1000047,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "71",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/71.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A fire hydrant with a pair of eye stickers making a face on it.",
+        "response": "A fire hydrant with googly eyes and a black handle.",
+        "measures": {
+          "precision": 0.8137918710708618,
+          "recall": 0.7888017892837524,
+          "f1": 0.8011020421981812
+        }
+      },
+      {
+        "question_id": 3000115,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_scene",
+        "img": "216",
+        "img_path": "./data/datasets/mmbench/imgs/image_scene/216.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "a messy bed room a bed a chair and boxes",
+        "response": "A messy bedroom with a bed, a chair, and a pile of boxes and bags.",
+        "measures": {
+          "precision": 0.7862445116043091,
+          "recall": 0.8234280347824097,
+          "f1": 0.8044067621231079
+        }
+      },
+      {
+        "question_id": 108,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "14",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/14.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A birthday cake with candles and a cell phone.",
+        "response": "A birthday cake with a cell phone and candles.",
+        "measures": {
+          "precision": 0.9114564061164856,
+          "recall": 0.932789146900177,
+          "f1": 0.9219993948936462
+        }
+      },
+      {
+        "question_id": 1000054,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "18",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/18.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A grey and white bird with red feet and eyes perches on a branch.",
+        "response": "A bird with red eyes is perched on a branch.",
+        "measures": {
+          "precision": 0.9236093163490295,
+          "recall": 0.8453508615493774,
+          "f1": 0.8827490210533142
+        }
+      },
+      {
+        "question_id": 54,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "2",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/2.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A grey and white bird with red feet and eyes perches on a branch.",
+        "response": "A bird with red eyes is perched on a branch.",
+        "measures": {
+          "precision": 0.9236093163490295,
+          "recall": 0.8453508615493774,
+          "f1": 0.8827490210533142
+        }
+      },
+      {
+        "question_id": 1000067,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "20",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/20.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A furry cat sleeping inside a packed suitcase",
+        "response": "A cat is laying in a black suitcase.",
+        "measures": {
+          "precision": 0.8067735433578491,
+          "recall": 0.8021340370178223,
+          "f1": 0.8044470548629761
+        }
+      },
+      {
+        "question_id": 1000089,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "23",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/23.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A little girl riding a horse next to another girl.",
+        "response": "A young girl is riding a horse while another girl walks beside her.",
+        "measures": {
+          "precision": 0.8255502581596375,
+          "recall": 0.9023337364196777,
+          "f1": 0.862235963344574
+        }
+      },
+      {
+        "question_id": 1000108,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "30",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/30.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A birthday cake with candles and a cell phone.",
+        "response": "A birthday cake with a cell phone and candles.",
+        "measures": {
+          "precision": 0.9114564061164856,
+          "recall": 0.932789146900177,
+          "f1": 0.9219993948936462
+        }
+      },
+      {
+        "question_id": 2000054,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "34",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/34.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A grey and white bird with red feet and eyes perches on a branch.",
+        "response": "A bird with red eyes is perched on a branch.",
+        "measures": {
+          "precision": 0.9236093163490295,
+          "recall": 0.8453508615493774,
+          "f1": 0.8827490210533142
+        }
+      },
+      {
+        "question_id": 2000067,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "36",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/36.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A furry cat sleeping inside a packed suitcase",
+        "response": "A cat is laying in a black suitcase.",
+        "measures": {
+          "precision": 0.8067735433578491,
+          "recall": 0.8021340370178223,
+          "f1": 0.8044470548629761
+        }
+      },
+      {
+        "question_id": 2000089,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "39",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/39.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A little girl riding a horse next to another girl.",
+        "response": "A young girl is riding a horse while another girl walks beside her.",
+        "measures": {
+          "precision": 0.8255502581596375,
+          "recall": 0.9023337364196777,
+          "f1": 0.862235963344574
+        }
+      },
+      {
+        "question_id": 67,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "4",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/4.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A furry cat sleeping inside a packed suitcase",
+        "response": "A cat is laying in a black suitcase.",
+        "measures": {
+          "precision": 0.8067735433578491,
+          "recall": 0.8021340370178223,
+          "f1": 0.8044470548629761
+        }
+      },
+      {
+        "question_id": 2000108,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "46",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/46.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A birthday cake with candles and a cell phone.",
+        "response": "A birthday cake with a cell phone and candles.",
+        "measures": {
+          "precision": 0.9114564061164856,
+          "recall": 0.932789146900177,
+          "f1": 0.9219993948936462
+        }
+      },
+      {
+        "question_id": 3000054,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "50",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/50.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A grey and white bird with red feet and eyes perches on a branch.",
+        "response": "A bird with red eyes is perched on a branch.",
+        "measures": {
+          "precision": 0.9236093163490295,
+          "recall": 0.8453508615493774,
+          "f1": 0.8827490210533142
+        }
+      },
+      {
+        "question_id": 3000067,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "52",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/52.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A furry cat sleeping inside a packed suitcase",
+        "response": "A cat is laying in a black suitcase.",
+        "measures": {
+          "precision": 0.8067735433578491,
+          "recall": 0.8021340370178223,
+          "f1": 0.8044470548629761
+        }
+      },
+      {
+        "question_id": 3000089,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "55",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/55.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A little girl riding a horse next to another girl.",
+        "response": "A young girl is riding a horse while another girl walks beside her.",
+        "measures": {
+          "precision": 0.8255502581596375,
+          "recall": 0.9023337364196777,
+          "f1": 0.862235963344574
+        }
+      },
+      {
+        "question_id": 3000108,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "62",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/62.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A birthday cake with candles and a cell phone.",
+        "response": "A birthday cake with a cell phone and candles.",
+        "measures": {
+          "precision": 0.9114564061164856,
+          "recall": 0.932789146900177,
+          "f1": 0.9219993948936462
+        }
+      },
+      {
+        "question_id": 89,
+        "question": "Provide a concise and descriptive caption for the given image.",
+        "class": "image_topic",
+        "img": "7",
+        "img_path": "./data/datasets/mmbench/imgs/image_topic/7.jpg",
+        "is_open": false,
+        "options": null,
+        "answer": "A little girl riding a horse next to another girl.",
+        "response": "A young girl is riding a horse while another girl walks beside her.",
+        "measures": {
+          "precision": 0.8255502581596375,
+          "recall": 0.9023337364196777,
+          "f1": 0.862235963344574
+        }
+      }
+    ]
+  },
+  "invalid_resp": []
+}

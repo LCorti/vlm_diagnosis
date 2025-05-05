@@ -1,0 +1,979 @@
+{
+  "measures": {
+    "precision": 0.6382468248407046,
+    "recall": 0.6377483621239662,
+    "f1": 0.6343459124366443
+  },
+  "ranges": {
+    "0_20": [],
+    "20_40": [
+      {
+        "question_id": 29,
+        "question": "Is there any strawberry-flavored yogurt in the fridge?",
+        "img": "011",
+        "img_path": "./data/datasets/llava-bench/imgs/main/011.jpg",
+        "is_open": true,
+        "options": null,
+        "answer": "There is no strawberry-flavored yogurt in the fridge. There is a large bottle of Fage non-fat yogurt, a smaller cup of Fage blueberry yogurt, and another smaller cup with an unknown brand and flavor.",
+        "class": "main",
+        "response": "\u200b",
+        "measures": {
+          "precision": 0.44927629828453064,
+          "recall": 0.27272066473960876,
+          "f1": 0.339411199092865
+        }
+      }
+    ],
+    "40_60": [
+      {
+        "question_id": 3,
+        "question": "Compose an engaging travel blog post about a recent trip to this place, highlighting cultural experiences and must-see attractions, including both the attraction seen in the photo and other must-see attractions as well.",
+        "img": "001",
+        "img_path": "./data/datasets/llava-bench/imgs/main/001.jpg",
+        "is_open": true,
+        "options": null,
+        "answer": "Title: Aloha from Hawaii: Our Unforgettable Adventure at Diamond Head and Beyond!\n\nDay 1: Exploring the Cultural Riches of the Island\n\nUpon our arrival in the breathtaking Hawaiian Islands, we couldn't wait to start exploring the myriad cultural experiences that awaited us. We started by visiting the renowned 'Iolani Palace, witnessing the rich history that exudes from the architecture and artifacts. Next, we strolled through the quirky and art-filled streets of Kaka'ako, a colorful neighborhood with a welcoming atmosphere.\n\nDay 2: A Journey to Diamond Head\n\nWaking up early to the sound of crashing waves, we eagerly prepared for today's main event: hiking Diamond Head. This iconic volcanic cone is a must-see attraction in the Hawaiian Islands. As we made our ascent, we marveled at the majestic aerial view of Diamond Head, showcasing its vast expanse and lush, green beauty. The jaw-dropping views from the summit, featuring a stunning panorama of Waikiki and endless ocean vistas, were undoubtedly worth the effort.\n\nDay 3: Cultural Immersion and Culinary Delights\n\nOur next day was devoted to experiencing Hawaiian culture and flavors. We joined a luau and were enthralled by the captivating stories told through traditional music and dance. The feast which followed satisfied our taste buds with mouth-watering dishes like Kalua pig, poi, and luscious haupia, an authentic coconut dessert.\n\nDay 4: Discovering the Island's Natural Wonders\n\nOur travel would not be complete without exploring Oahu's other natural gems. The ethereal Hanauma Bay wowed us with its vibrant marine life and crystal-clear waters, offering an unparalleled snorkeling experience. We rounded off our day with a picturesque hike at Manoa Falls, where towering trees and a magnificent waterfall welcomed us.\n\nDay 5: Time to Say Aloha!\n\nOur Hawaiian adventure was unforgettable - from the breathtaking summit at Diamond Head and the aquatic paradise of Hanauma Bay to the cultural heartbeat pulsating within Kaka'ako and the delectable luau feast. If you haven't visited the Hawaiian Islands, what are you waiting for? Paradise is calling!\n\nAloha!",
+        "class": "main",
+        "response": "\u200b\n\nThe image shows a beautiful view of the coastline and a mountain in the background. The mountain is covered in lush greenery, and the ocean is a deep blue color. There are some small islands visible in the distance. The sky is a bright blue, with a few white clouds floating in it.\n\nThis place is a popular tourist destination due to its stunning natural beauty. It is located on the island of Oahu in Hawaii, which is known for its beautiful beaches and scenic landscapes. The mountain in the image is called Diamond Head, which is a popular hiking spot that offers breathtaking views of the ocean and the city.\n\nThere are many cultural experiences to be had in this place. For example, visitors can learn about the history and culture of the area through guided tours of historical sites such as Pearl Harbor, which is located nearby. Visitors can also experience traditional Hawaiian cuisine at local restaurants and markets.\n\nIn addition to the natural and cultural attractions, there are also many must-see attractions in this place. For example, visitors can visit the famous Waikiki Beach, which is known for its clear waters",
+        "measures": {
+          "precision": 0.6307463645935059,
+          "recall": 0.5693861246109009,
+          "f1": 0.5984976291656494
+        }
+      },
+      {
+        "question_id": 4,
+        "question": "What type of fruit is this?",
+        "img": "002",
+        "img_path": "./data/datasets/llava-bench/imgs/main/002.jpg",
+        "is_open": true,
+        "options": null,
+        "answer": "This is a mangosteen fruit.",
+        "class": "main",
+        "response": "The fruit in the image appears to be a passion fruit. Passion fruit is a tropical fruit that is typically purple or yellow in color and has a distinctive, spiky exterior. It is often used in desserts and drinks.\n\nThe image also shows a cut open passion fruit on the right side of the image, with the seeds and pulp visible inside. The passion fruit is sitting on top of a wooden surface, surrounded by a woven basket.",
+        "measures": {
+          "precision": 0.4634474217891693,
+          "recall": 0.6875600814819336,
+          "f1": 0.5536852478981018
+        }
+      },
+      {
+        "question_id": 11,
+        "question": "What is the name of the man in the photo?",
+        "img": "004",
+        "img_path": "./data/datasets/llava-bench/imgs/main/004.jpg",
+        "is_open": true,
+        "options": null,
+        "answer": "The man in the photo is Elon Musk.",
+        "class": "main",
+        "response": "The man in the photo is holding a small monkey in his arms. The monkey is wearing a red shirt and blue shorts. The man is standing on a rocky outcropping with a mountainous background in the distance. The sky is clear and blue, with some clouds visible in the distance. The man's face is obscured by the monkey's head.",
+        "measures": {
+          "precision": 0.4771321415901184,
+          "recall": 0.7088416814804077,
+          "f1": 0.570351779460907
+        }
+      },
+      {
+        "question_id": 14,
+        "question": "Please explain the meme in detail.",
+        "img": "005",
+        "img_path": "./data/datasets/llava-bench/imgs/main/005.jpg",
+        "is_open": true,
+        "options": null,
+        "answer": "The meme features a dog lying on a cyan wooden floor, looking exhausted or unenthusiastic. The text at the top of the meme reads \"MONDAY,\" and at the bottom, it says \"JUST...MONDAY.\" The meme humorously captures the feeling of a lack of motivation and energy that is often associated with Mondays, represented by the dog's pose and expression.",
+        "class": "main",
+        "response": "The image is a French bulldog lying on its back on a wooden floor. The caption reads, \"Monday just got started.\" This meme is likely meant to depict the idea that Mondays are difficult and that they can be challenging to get through. The French bulldog's position on its back suggests relaxation and laziness, which could be interpreted as an attitude towards Mondays. The caption's use of the word \"just\" implies that Mondays are not particularly difficult or challenging, but rather that they are simply starting. Overall, this meme seems to suggest that Mondays are not particularly enjoyable, but they are a necessary part of the week.",
+        "measures": {
+          "precision": 0.5699698328971863,
+          "recall": 0.6305264234542847,
+          "f1": 0.5987208485603333
+        }
+      },
+      {
+        "question_id": 15,
+        "question": "In what other ways might someone express the same sentiment that this meme is expressing?",
+        "img": "005",
+        "img_path": "./data/datasets/llava-bench/imgs/main/005.jpg",
+        "is_open": true,
+        "options": null,
+        "answer": "Someone could express the same sentiment as this meme by saying things like \"Mondays, am I right?\" or \"Struggling to get through Monday\" or even using a hashtag like #MondayBlues. Visual alternatives might include a person dragging themselves out of bed or showing a gloomy face with the text \"Monday Mood.\"",
+        "class": "main",
+        "response": "1. \"I'm so tired, I just want to sleep all day.\"\n2. \"I'm so stressed, I just want to take a nap.\"\n3. \"I'm so lazy, I just want to lay in bed all day.\"\n4. \"I'm so exhausted, I just want to rest my head.\"\n5. \"I'm so worn out, I just want to sleep for hours.\"\n6. \"I'm so drained, I just want to take a power nap.\"\n7. \"I'm so fatigued, I just want to sleep until noon.\"\n8. \"I'm so exhausted, I just want to sleep through the day.\"\n9. \"I'm so tired, I just want to sleep until tomorrow.\"\n10. \"I'm so exhausted, I just want to sleep for a week.\"",
+        "measures": {
+          "precision": 0.4122762680053711,
+          "recall": 0.4409533739089966,
+          "f1": 0.4261329174041748
+        }
+      },
+      {
+        "question_id": 30,
+        "question": "Describe this photo in detail.",
+        "img": "011",
+        "img_path": "./data/datasets/llava-bench/imgs/main/011.jpg",
+        "is_open": true,
+        "options": null,
+        "answer": "The image shows an open refrigerator filled with various food items. In the left part of the compartment, you can see a plastic box of strawberries with a small bag of baby carrots on top, and towards the back, there is a stack of sauce containers. In the middle of the compartment, there is a green plastic box towards the front, with an unidentified plastic bag resting on it. A carton of milk is located towards the back of this section. \n\nOn the right side of the compartment, there is a box of blueberries with three yogurts stacked on top. The large bottle of yogurt is Fage non-fat yogurt, and one of the smaller cups is Fage blueberry yogurt. The brand and flavor of the other smaller cup are unknown. Towards the back of this section, there is a container with an unknown content.",
+        "class": "main",
+        "response": "This image shows an open refrigerator with various food items inside. The refrigerator has a white interior and the door is open. There are several containers of yogurt, milk, and juice on the shelves. There are also some fruits and vegetables in bags on the bottom shelf. The refrigerator has a transparent door that allows you to see what's inside.",
+        "measures": {
+          "precision": 0.6360719203948975,
+          "recall": 0.5412428975105286,
+          "f1": 0.584838330745697
+        }
+      },
+      {
+        "question_id": 31,
+        "question": "What are the meals that I can cook with these?",
+        "img": "011",
+        "img_path": "./data/datasets/llava-bench/imgs/main/011.jpg",
+        "is_open": true,
+        "options": null,
+        "answer": "With the available ingredients, you could potentially make:\n\n1. A fruit salad using the strawberries and blueberries.\n2. A yogurt parfait by layering the Fage non-fat yogurt, blueberry yogurt, and fresh fruit (strawberries and blueberries).\n3. A smoothie using the milk, strawberries, blueberries, and yogurt. You could add other ingredients if you have them, like a banana or some spinach.\n4. A healthy snack by enjoying the baby carrots with a dip, such as hummus or ranch, if you have them in the sauce containers.\n\nIt's difficult to suggest more specific meals without knowing the contents of the unidentified plastic bag, green plastic box, and the unknown container.",
+        "class": "main",
+        "response": "The image shows a refrigerator with various food items inside, including yogurt, milk, juice, and fruits.",
+        "measures": {
+          "precision": 0.6487241387367249,
+          "recall": 0.48150938749313354,
+          "f1": 0.5527473092079163
+        }
+      },
+      {
+        "question_id": 34,
+        "question": "Show the detailed recipe for this dish.",
+        "img": "013",
+        "img_path": "./data/datasets/llava-bench/imgs/main/013.jpg",
+        "is_open": true,
+        "options": null,
+        "answer": "As an AI visual assistant, I cannot display or provide a full recipe. However, from the image I can tell you the main ingredients and components of this dish. It consists of cooked lobsters covered with melted butter, minced garlic, rosemary, and parsley. There are also lemon slices placed on the tray. To make this dish, you would need to prepare these ingredients and cook the lobsters according to a recipe you find.",
+        "class": "main",
+        "response": "1. Preheat the oven to 400\u00b0F (200\u00b0C).\n2. In a large baking dish, combine the lobsters, lemon wedges, parsley, and garlic.\n3. Drizzle with olive oil and season with salt and pepper.\n4. Bake for 15-20 minutes or until the lobsters are cooked through.\n5. Serve hot with lemon wedges on the side.",
+        "measures": {
+          "precision": 0.532392680644989,
+          "recall": 0.5482155084609985,
+          "f1": 0.5401882529258728
+        }
+      },
+      {
+        "question_id": 36,
+        "question": "What are the two machine learning concepts mentioned in the meme?",
+        "img": "015",
+        "img_path": "./data/datasets/llava-bench/imgs/main/015.jpg",
+        "is_open": true,
+        "options": null,
+        "answer": "The two machine learning concepts mentioned in the meme are \"statistical learning\" and \"neural networks.\"",
+        "class": "main",
+        "response": "1. Supervised learning: This is a type of machine learning where the model is trained on labeled data, which means that the data has been labeled with the correct output. The model learns to predict the correct output for new, unseen data based on the patterns it has learned from the labeled data.\n2. Unsupervised learning: This is a type of machine learning where the model is not given any labeled data. Instead, it must find patterns and relationships in the data on its own. This can be useful for identifying outliers or grouping similar data points together.",
+        "measures": {
+          "precision": 0.4423910975456238,
+          "recall": 0.5628343820571899,
+          "f1": 0.4953971803188324
+        }
+      },
+      {
+        "question_id": 37,
+        "question": "Give a detailed description of this meme.",
+        "img": "015",
+        "img_path": "./data/datasets/llava-bench/imgs/main/015.jpg",
+        "is_open": true,
+        "options": null,
+        "answer": "This meme consists of two distinct parts placed vertically. In the top half, the caption reads \"statistical learning,\" and there's an image of a person standing in front of a whiteboard with a concerned expression. On the whiteboard, there's a plot showing a red curve gradually decreasing. The person's chat bubble reads: \"People, our learner overgeneralizes because the VC-Dimension of our Kernel is too high. Get some experts and minimize the structural risk in a new one. Rework our loss function, make the next kernel stable, unbiased, and consider using a soft margin.\"\n\nIn the bottom half of the image, the caption reads \"neural networks,\" and there's another person standing in front of a whiteboard with a happy expression. This time, the whiteboard displays a plot with a green curve, with both x and y axes labeled \"LAYERS.\" The person's chat bubble reads: \"STACK MORE LAYERS.\" \n\nAt the bottom of the meme, a text caption says: \"But unironically.\" This implies that stacking more layers is genuinely considered a useful approach in neural networks, in contrast to the complex instructions given in the statistical learning section.",
+        "class": "main",
+        "response": "This meme is a cartoon depiction of a person standing in front of a whiteboard with various diagrams and charts written on it. The person is holding a marker and pointing to different parts of the board, indicating that they are presenting information. The caption reads, \"Stack more layers,\" which suggests that the person is suggesting that the information on the board should be organized into multiple layers or categories. The overall tone of the meme is informative and professional, as it appears to be a presentation or lesson on some topic.",
+        "measures": {
+          "precision": 0.6099599599838257,
+          "recall": 0.5355369448661804,
+          "f1": 0.5703308582305908
+        }
+      },
+      {
+        "question_id": 38,
+        "question": "Can you explain why this is funny. Think about it step-by-step.",
+        "img": "015",
+        "img_path": "./data/datasets/llava-bench/imgs/main/015.jpg",
+        "is_open": true,
+        "options": null,
+        "answer": "This meme is funny because it highlights the difference in complexity and jargon between two machine learning approaches: statistical learning and neural networks.\n\nIn the top half, the meme features a person discussing statistical learning. They use technical terms, such as \"VC-Dimension,\" \"kernel,\" \"structural risk,\" and \"soft margin.\" The text and the person's concerned expression suggest that this approach requires a deep understanding of various concepts, making it seem complicated and challenging.\n\nIn contrast, the bottom half shows a person with a happy expression, talking about neural networks. The advice given here is simply to \"stack more layers,\" referring to adding layers to a neural network model to improve its performance. This part of the meme pokes fun at the perceived simplicity of neural networks compared to statistical learning.\n\nThe humor comes from the exaggerated simplicity of the neural networks approach compared to the complex jargon of statistical learning, implying that neural networks practitioners might not need the same level of expertise as those working with statistical learning methods. The \"but unironically\" text suggests that this is a genuine observation made in the field, adding to the humor.",
+        "class": "main",
+        "response": "1. The image shows a group of people in a meeting room, with one person standing at the front of the room and the rest seated around a table.\n2. The person at the front of the room is holding a whiteboard marker and pointing to a diagram on the whiteboard behind them.\n3. The diagram on the whiteboard appears to show a flowchart or decision tree, with several branches and nodes representing different options or outcomes.\n4. The text underneath the diagram reads \"Stack More Layers\" in bold letters.\n5. The people in the room are all wearing business attire and appear to be engaged in a discussion.\n6. The overall tone of the image is professional and focused on decision-making and problem-solving.",
+        "measures": {
+          "precision": 0.5807047486305237,
+          "recall": 0.5322664976119995,
+          "f1": 0.5554315447807312
+        }
+      },
+      {
+        "question_id": 39,
+        "question": "Give a detailed description of this image.  Describe it panel by panel.",
+        "img": "016",
+        "img_path": "./data/datasets/llava-bench/imgs/main/016.jpg",
+        "is_open": true,
+        "options": null,
+        "answer": "Panel 1: This panel features a smartphone that resembles an iPhone, with a white VGA cable plugged into its charging port. The VGA connector is blue. The phone has a glass screen protector and is encased in a protective case.\n\nPanel 2: This panel shows a product package containing a VGA connector similar to the one in the first panel. The brand is ELECOM, and the specific series is the P-APLTDCN. There is a green sticker at the bottom of the package that reads, \"For Lightning Cable.\" \n\nPanel 3: The final panel is a top view of the connector, which appears similar to the ones in the previous panels. In this panel, the actual connector is visible, revealing that it is, in fact, a Lightning connector.",
+        "class": "main",
+        "response": "The image shows a person's hand holding an iPhone with a blue USB cable plugged into it. The phone is lying on a bed or couch, and the person is looking at it. The phone has a white screen with blue and green icons on it. There are no other objects in the image.",
+        "measures": {
+          "precision": 0.6407346129417419,
+          "recall": 0.5330309271812439,
+          "f1": 0.5819413661956787
+        }
+      },
+      {
+        "question_id": 40,
+        "question": "What is funny about this image? Describe it panel by panel.",
+        "img": "016",
+        "img_path": "./data/datasets/llava-bench/imgs/main/016.jpg",
+        "is_open": true,
+        "options": null,
+        "answer": "The humor in this image comes from the misleading setup across the three panels. \n\nPanel 1: It shows a smartphone with a VGA cable plugged into its charging port, which is unexpected, as smartphones typically don't connect with VGA cables. \n\nPanel 2: The product package is shown, containing a VGA connector from the ELECOM P-APLTDCN series, making it appear related to the previous panel. The green sticker at the bottom says, \"For Lightning Cable,\" adding to the confusion.\n\nPanel 3: The top view of the connector reveals that it is actually a Lightning connector instead of a VGA connector, which explains how it can be plugged into the smartphone. This surprise twist creates the humor in the meme.",
+        "class": "main",
+        "response": "1. The image shows a person holding an iPhone with a blue USB cable plugged into it.\n2. The person is wearing a white shirt and black pants, and the phone is on a bed or couch.\n3. There is a small piece of paper or tissue on the bed next to the phone.\n4. The phone has a blue background with white text that says \"Image Content\" in the center.\n5. The USB cable is connected to the phone's charging port.\n6. The person's hand is holding the phone with the USB cable plugged in.\n7. The phone appears to be turned off, as there are no lights or icons on the screen.\n8. The background of the image is a light blue color.\n9. There are no other objects or people visible in the image.\n10. The overall effect of the image is one of a person using a phone to charge it.",
+        "measures": {
+          "precision": 0.5766568779945374,
+          "recall": 0.5469590425491333,
+          "f1": 0.5614154934883118
+        }
+      },
+      {
+        "question_id": 45,
+        "question": "Describe this sketch in detail.",
+        "img": "019",
+        "img_path": "./data/datasets/llava-bench/imgs/main/019.jpg",
+        "is_open": true,
+        "options": null,
+        "answer": "The sketch is a website layout on a page of a notebook. It has a heading that reads \"My Joke Website\". Below the heading, there are several rows, presumably representing different sections of the website. Each row contains a joke followed by a button or interactive element. The first row includes \"[Really funny joke 1]\" and \"[Push to reveal punchline]\". The second row has \"[Same, but joke 2]\" and \"[Push to reveal punchline]\". At the bottom of the sketch, there's a copyright notice: \"Copyright OpenAI 2023\". The overall layout is simple and linear, focusing on the presentation of jokes and their punchlines through interactive user engagement.",
+        "class": "main",
+        "response": "This is a sketch of a person sitting on a chair with their arms crossed and a notebook in front of them. The person has a serious expression on their face and appears to be deep in thought. The notebook is open and appears to have some notes written on it. There are no other objects or details in the image.",
+        "measures": {
+          "precision": 0.5915358662605286,
+          "recall": 0.5169193148612976,
+          "f1": 0.551716148853302
+        }
+      },
+      {
+        "question_id": 47,
+        "question": "Describe this sketch in detail.",
+        "img": "020",
+        "img_path": "./data/datasets/llava-bench/imgs/main/020.jpg",
+        "is_open": true,
+        "options": null,
+        "answer": "The sketch is of a website layout on a page of a notebook. The heading reads \"My Joke Website,\" indicating the theme of the site. Below the heading, there are two rows. The first row contains the text \"[Funny Joke]\", which likely represents a placeholder for the actual joke content. In the second row, there is a text that says \"[Push to reveal punchline],\" suggesting that an interactive element will be added to reveal the joke's punchline to users upon interaction.",
+        "class": "main",
+        "response": "This sketch is a simple drawing of a person sitting on a chair with their arms crossed in front of them. The person's face is not visible, but it appears to be smiling. The background is white and there are no other objects or details in the image.\n\nIt is difficult to determine the purpose or meaning of this sketch without more context. It could be a representation of someone relaxing or enjoying themselves, or it could be a random drawing. Without more information, it is impossible to say for sure what the artist intended with this image.",
+        "measures": {
+          "precision": 0.5262850522994995,
+          "recall": 0.5305338501930237,
+          "f1": 0.5284008383750916
+        }
+      },
+      {
+        "question_id": 49,
+        "question": "What's the ending of this movie?",
+        "img": "021",
+        "img_path": "./data/datasets/llava-bench/imgs/main/021.jpg",
+        "is_open": true,
+        "options": null,
+        "answer": "As a visual assistant, I can only analyze and describe the image provided. To find out the ending of the movie, it would be best to watch it or research a plot summary.",
+        "class": "main",
+        "response": "The ending of this movie is not specified. It is unknown what happens to the characters in the film.",
+        "measures": {
+          "precision": 0.6107257604598999,
+          "recall": 0.5246151089668274,
+          "f1": 0.5644048452377319
+        }
+      },
+      {
+        "question_id": 51,
+        "question": "What's the name of the restaurant serving these dishes?",
+        "img": "022",
+        "img_path": "./data/datasets/llava-bench/imgs/main/022.jpg",
+        "is_open": true,
+        "options": null,
+        "answer": "The restaurant serving these dishes is ICHIRAN.",
+        "class": "main",
+        "response": "This is a bowl of ramen with chicken, vegetables, and noodles. The dish is typically served in a large bowl with chopsticks on the side.\n\nThe restaurant serving this dish is likely a Japanese or Asian restaurant that specializes in ramen. Ramen is a popular noodle soup dish that originated in China and has since become popular in Japan and other parts of Asia. It typically consists of a flavorful broth made from a combination of ingredients such as soy sauce, miso paste, and chicken or pork stock, to which noodles and vegetables are added.\n\nThe bowl of ramen in the image appears to be topped with chicken, vegetables, and noodles, and it is served with chopsticks on the side. The dish is often garnished with various condiments such as pickled ginger, green onions, and sesame seeds.",
+        "measures": {
+          "precision": 0.4271104037761688,
+          "recall": 0.6442446708679199,
+          "f1": 0.5136739015579224
+        }
+      },
+      {
+        "question_id": 53,
+        "question": "If someone were to recommend a new flavor or topping to the dish, describe the reason for this change and how it might alter the overall taste.",
+        "img": "022",
+        "img_path": "./data/datasets/llava-bench/imgs/main/022.jpg",
+        "is_open": true,
+        "options": null,
+        "answer": "If someone were to recommend a new flavor or topping to the chashu ramen dish, the reason for this change could be to enhance or complement the existing flavors. For example, adding a soft-boiled egg would enrich the dish with its silky yolk, providing an added creaminess that would complement the spicy chili sauce and the tender chashu. This alteration would make the overall taste more complex, creating a satisfying balance of flavors and textures in the meal.",
+        "class": "main",
+        "response": "\u200b\n\nThe image shows a bowl of ramen noodles topped with chicken, vegetables, and a boiled egg. The noodles are long and thin, and the broth is rich and flavorful. The dish is served with chopsticks and a small bowl of dipping sauce on the side.\n\nThis dish is a popular choice for lunch or dinner in many Asian countries. The combination of chicken, vegetables, and noodles makes it a filling and satisfying meal. The broth is made with a variety of ingredients, including soy sauce, garlic, ginger, and various spices, which give it a rich and savory flavor. The dipping sauce is usually made with soy sauce, vinegar, and chili peppers, and is used to add extra flavor to the noodles.\n\nOverall, this dish is a great option for anyone looking for a hearty and delicious meal. It's easy to make at home with a few simple ingredients, and can be customized to suit individual tastes.",
+        "measures": {
+          "precision": 0.5746514797210693,
+          "recall": 0.611690878868103,
+          "f1": 0.5925929546356201
+        }
+      }
+    ],
+    "60_80": [
+      {
+        "question_id": 0,
+        "question": "What is the name of this famous sight in the photo?",
+        "img": "001",
+        "img_path": "./data/datasets/llava-bench/imgs/main/001.jpg",
+        "is_open": true,
+        "options": null,
+        "answer": "The famous sight in the photo is Diamond Head.",
+        "class": "main",
+        "response": "The image shows a view of the Waimea Canyon, also known as the Grand Canyon of the Pacific, on the island of Kauai in Hawaii.",
+        "measures": {
+          "precision": 0.6233808994293213,
+          "recall": 0.740835428237915,
+          "f1": 0.6770519614219666
+        }
+      },
+      {
+        "question_id": 1,
+        "question": "Describe this photo in detail.",
+        "img": "001",
+        "img_path": "./data/datasets/llava-bench/imgs/main/001.jpg",
+        "is_open": true,
+        "options": null,
+        "answer": "This photo features an aerial view of Diamond Head, located in the Hawaiian Islands. The volcanic tuff cone appears prominent and impressive, with its ridges and slopes covered in lush green vegetation. The crater of Diamond Head is clearly visible, surrounded by the steep walls of the structure. In the background, you can see the vast expanse of the ocean with varying shades of blue, showcasing the pristine waters surrounding the island.",
+        "class": "main",
+        "response": "This image shows a beautiful view of the ocean and a mountainous landscape in the background. The mountain is covered in lush green vegetation, and the ocean is a deep blue color with white waves crashing against the shore. In the foreground, there is a small beach with sand and rocks, and a few people are walking along the shore. The sky is clear and blue, with some clouds in the distance. The overall scene is very peaceful and serene, with no signs of human activity or pollution in the area.",
+        "measures": {
+          "precision": 0.6720035672187805,
+          "recall": 0.6517715454101562,
+          "f1": 0.6617329716682434
+        }
+      },
+      {
+        "question_id": 2,
+        "question": "What are the possible reasons of the formation of this sight?",
+        "img": "001",
+        "img_path": "./data/datasets/llava-bench/imgs/main/001.jpg",
+        "is_open": true,
+        "options": null,
+        "answer": "Diamond Head is a volcanic cone formed by the eruption of a volcano. The formation of this sight can be attributed to volcanic activity, where magma from the Earth's mantle rises and breaks through the Earth's crust, creating eruptions. Over time, the eruptions build up layers of volcanic ash and rock, which solidify and form this distinct cone-shaped structure. The erosion caused by wind, rain, and waves can also shape the landscape, contributing to its current appearance.",
+        "class": "main",
+        "response": "The image shows a beautiful view of a coastal area with a mountain in the background. The mountain is likely a volcanic formation, which can be formed due to tectonic activity such as earthquakes or volcanic eruptions. The ocean and surrounding land are likely the result of erosion and weathering processes over time.",
+        "measures": {
+          "precision": 0.6450083255767822,
+          "recall": 0.6086443066596985,
+          "f1": 0.6262989640235901
+        }
+      },
+      {
+        "question_id": 6,
+        "question": "Describe this photo in detail.",
+        "img": "002",
+        "img_path": "./data/datasets/llava-bench/imgs/main/002.jpg",
+        "is_open": true,
+        "options": null,
+        "answer": "This photo features four mangosteens on a wooden table. Three of them are uncut, showing their round, dark purple exterior. The fourth mangosteen is cut open, revealing its white, fleshy interior, which is divided into segments. The table surface has a natural wood grain pattern and adds a rustic touch to the image.",
+        "class": "main",
+        "response": "The image shows three purple fruits with their skin peeled off, revealing the red flesh inside. There is a half of one of the fruits on the ground next to a basket of fruits. The fruits appear to be ripe and ready to eat. The background is a wooden table with some leaves and stems visible in the foreground.",
+        "measures": {
+          "precision": 0.6743364930152893,
+          "recall": 0.6740120649337769,
+          "f1": 0.6741741895675659
+        }
+      },
+      {
+        "question_id": 7,
+        "question": "Imagine the fragrance of the fruits in the image. How would you describe this to someone who has never had this fruit before?",
+        "img": "002",
+        "img_path": "./data/datasets/llava-bench/imgs/main/002.jpg",
+        "is_open": true,
+        "options": null,
+        "answer": "The fragrance of the mangosteens in the image can be described as sweet and slightly floral, with a hint of citrus aroma. It is a delicate and pleasant smell that entices you to try the fruit.",
+        "class": "main",
+        "response": "The image shows three purple fruits with white flesh and a green stem on a wooden surface. The fruits are cut in half, revealing their red and orange insides. The fruit appears to be sweet and juicy, with a fragrant aroma that is likely to attract people's attention. It could be described as a unique and exotic fruit with a distinct flavor that is different from other fruits.",
+        "measures": {
+          "precision": 0.6674379706382751,
+          "recall": 0.7064783573150635,
+          "f1": 0.6864034533500671
+        }
+      },
+      {
+        "question_id": 8,
+        "question": "Describe this photo in detail.",
+        "img": "003",
+        "img_path": "./data/datasets/llava-bench/imgs/main/003.jpg",
+        "is_open": true,
+        "options": null,
+        "answer": "This painting is a creative fusion of the famous Mona Lisa and a dog. The dog is dressed as the Mona Lisa, with a similar facial expression and hairstyle as the iconic figure. The canine's fur seamlessly blends with the clothing, imitating the original painting's style. The background features a landscape with gentle rolling hills and a hazy sky, just like in the original Mona Lisa artwork. The artist has skillfully combined the two subjects into one, giving the piece a whimsical and amusing quality.",
+        "class": "main",
+        "response": "This painting depicts a dog in the style of the mona lisa, with a brown and white fur coat and a black muzzle. The dog's eyes are closed, and it appears to be wearing a crown or tiara on its head. The background is a dark, muted color, and there are no other objects or people visible in the image. The overall effect is one of mystery and intrigue, as if the dog is hiding something or keeping a secret.",
+        "measures": {
+          "precision": 0.6492685079574585,
+          "recall": 0.6188401579856873,
+          "f1": 0.633689284324646
+        }
+      },
+      {
+        "question_id": 9,
+        "question": "What might be the intended effect of this painting?",
+        "img": "003",
+        "img_path": "./data/datasets/llava-bench/imgs/main/003.jpg",
+        "is_open": true,
+        "options": null,
+        "answer": "The intended effect of this painting might be to create a humorous and whimsical twist on the famous Mona Lisa artwork by featuring a dog dressed in her attire, which can evoke feelings of amusement and curiosity.",
+        "class": "main",
+        "response": "The painting appears to be a portrait of a dog wearing a mona lisa-style painting on its face. The dog's fur is brown and its eyes are black. The background of the painting appears to be a dark, muted color. The overall effect of the painting is one of mystery and intrigue.",
+        "measures": {
+          "precision": 0.6489129662513733,
+          "recall": 0.6836004853248596,
+          "f1": 0.6658052802085876
+        }
+      },
+      {
+        "question_id": 10,
+        "question": "Discuss how this creative twist on a classic work of art might be interpreted differently by various audiences.",
+        "img": "003",
+        "img_path": "./data/datasets/llava-bench/imgs/main/003.jpg",
+        "is_open": true,
+        "options": null,
+        "answer": "This creative twist on the classic Mona Lisa painting, featuring a dog dressed as the iconic figure, can be interpreted differently by various audiences. Art enthusiasts may view this as an interesting fusion of popular culture and classical art, appreciating the creativity and humor behind the concept. Animal lovers, on the other hand, might be delighted to see a dog take center stage in such a famous piece of art, showcasing the artist's love and appreciation for animals.\n\nFor those with a fondness for satire, the image can be seen as poking fun at the seriousness often associated with classical works while simultaneously paying homage to Leonardo da Vinci's masterpiece. Others might interpret this image as a commentary on how iconic images and art can be reimagined and reinterpreted over time, reflecting the ever-evolving nature of culture and society. Regardless of the audience, this playful adaptation of the Mona Lisa serves as a conversation-starter and offers a fresh perspective on a timeless classic.",
+        "class": "main",
+        "response": "\u200b\n\nThe painting depicts a dog in the style of the Mona Lisa, with a similar pose and facial expression. The dog's fur is brown and its eyes are black, giving it a serious and contemplative look. The background is a dark, muted color, which contrasts with the bright colors of the dog's fur. The overall effect is one of a serious and thoughtful dog, which may be interpreted as a commentary on the nature of dogs or the human condition. Some viewers might see the painting as a humorous take on the classic work of art, while others might see it as a serious exploration of the relationship between humans and animals.",
+        "measures": {
+          "precision": 0.6182615756988525,
+          "recall": 0.5949327349662781,
+          "f1": 0.6063728332519531
+        }
+      },
+      {
+        "question_id": 12,
+        "question": "Which iconic movie scene is being parodied in the meme?",
+        "img": "004",
+        "img_path": "./data/datasets/llava-bench/imgs/main/004.jpg",
+        "is_open": true,
+        "options": null,
+        "answer": "The meme is parodying an iconic scene from The Lion King, where Rafiki holds up Simba to all the other animals while standing on a mountaintop.",
+        "class": "main",
+        "response": "The image shows a man holding up a small monkey in his arms, with the monkey looking up at him. The man is wearing a black shirt and has short brown hair. The background of the image is a rocky terrain with some trees in the distance.\n\nThe meme is likely referencing the scene from the 1994 Disney animated film, The Lion King, where Simba holds up a small monkey named Rafiki as he contemplates his future as the rightful king of the Pride Lands. The image is a play on this scene, with the man holding up the small monkey instead of Simba.",
+        "measures": {
+          "precision": 0.5907821655273438,
+          "recall": 0.7055675983428955,
+          "f1": 0.6430930495262146
+        }
+      },
+      {
+        "question_id": 13,
+        "question": "How does this meme reflect or comment on Elon Musk's public image, personality, or actions?",
+        "img": "004",
+        "img_path": "./data/datasets/llava-bench/imgs/main/004.jpg",
+        "is_open": true,
+        "options": null,
+        "answer": "This meme reflects Elon Musk's public image and actions by humorously comparing him to the iconic scene from The Lion King. It suggests that he is presenting a new and valuable \"creation\" to the world, much like Rafiki holding up Simba. In the context of Elon Musk, this could allude to his innovative ventures in technology and entrepreneurship, along with his eccentric and playful personality that often captures attention and generates discussions. The dog in the image might also be a nod to his frequent engagement with internet culture and his tendency to influence trends, including those involving cryptocurrencies like Dogecoin.",
+        "class": "main",
+        "response": "The meme reflects Elon Musk's public image as a tech entrepreneur and innovator. The image of the monkey holding the small dog in its arms is a playful representation of the relationship between the two animals, with the monkey acting like a parent or caretaker to the dog. This can be interpreted as a metaphor for the relationship between humans and technology, with the monkey representing the human side and the dog representing the technological side. The overall message of the meme is likely to be lighthearted and humorous, highlighting the playful and friendly nature of the relationship between humans and technology.",
+        "measures": {
+          "precision": 0.6182625889778137,
+          "recall": 0.6086017489433289,
+          "f1": 0.6133941411972046
+        }
+      },
+      {
+        "question_id": 16,
+        "question": "Do you know who paint this?",
+        "img": "006",
+        "img_path": "./data/datasets/llava-bench/imgs/main/006.jpg",
+        "is_open": true,
+        "options": null,
+        "answer": "Yes, the Mona Lisa was painted by the famous Italian artist, Leonardo da Vinci.",
+        "class": "main",
+        "response": "\u200b\n\nThis painting is a portrait of the famous artist, Leonardo da Vinci, known for his masterpieces such as the Mona Lisa and The Last Supper. The painting depicts a woman with long, curly hair and a serious expression on her face. The background is a landscape with mountains and a river in the foreground. The colors used in the painting are muted and earthy, giving the impression of a serene and peaceful scene.",
+        "measures": {
+          "precision": 0.5220450162887573,
+          "recall": 0.7126191854476929,
+          "f1": 0.602624237537384
+        }
+      },
+      {
+        "question_id": 17,
+        "question": "Describe this painting in detail.",
+        "img": "006",
+        "img_path": "./data/datasets/llava-bench/imgs/main/006.jpg",
+        "is_open": true,
+        "options": null,
+        "answer": "This painting, the Mona Lisa, features a woman with a serene and enigmatic smile. She has long, dark hair that flows down onto her shoulders, and her skin tone is fair. Her attire consists of a blue and green garment. In the background, there is a landscape with a winding river, trees, mountains, and a distant bridge, imbuing the scene with depth and misty atmosphere. The gentle softness of the forms, the delicate colors, and the subtle transitions between light and shadow are specific to the sfumato technique used by the artist Leonardo da Vinci.",
+        "class": "main",
+        "response": "This painting is a portrait of a woman with long, curly hair and a serious expression. She is wearing a red dress and has a necklace around her neck. The background is a landscape with mountains and a river in the foreground. The colors are muted and the brushstrokes are loose and sketchy. The overall effect is somber and introspective.",
+        "measures": {
+          "precision": 0.7681594491004944,
+          "recall": 0.7012615203857422,
+          "f1": 0.733187735080719
+        }
+      },
+      {
+        "question_id": 18,
+        "question": "Discuss the historical impact and the significance of this painting in the art world.",
+        "img": "006",
+        "img_path": "./data/datasets/llava-bench/imgs/main/006.jpg",
+        "is_open": true,
+        "options": null,
+        "answer": "The Mona Lisa, painted by Leonardo da Vinci in the early 16th century, has had a significant historical impact on the art world. As a masterpiece of the Italian Renaissance, it showcases da Vinci's exceptional talents in both painting techniques and psychological insight.\n\nThe painting is notable for its use of sfumato, a technique that blends colors together without stark lines, creating a more realistic and softened appearance. This technique was groundbreaking at the time and has since inspired countless artists.\n\nAdditionally, the Mona Lisa's enigmatic expression and the subject's gaze, which seems to follow the viewer, have captured the imaginations of viewers for centuries. This has led to extensive analysis and discussion of the portrait, making it a widely recognized symbol of not only the Italian Renaissance but also of the broader history of Western art.\n\nThe Mona Lisa has also been a source of fascination for its mysterious history, including theft, vandalism, and conspiracy theories. These events have added to the painting's allure and contributed to its iconic status in popular culture.\n\nIn summary, the historical impact and significance of the Mona Lisa can be attributed to its revolutionary techniques, enigmatic subject, and storied history, all of which have cemented its place as a crucial work in the art world.",
+        "class": "main",
+        "response": "\u200b\n\nThe painting you have provided is a portrait of the Mona Lisa, also known as La Gioconda, which was painted by Leonardo da Vinci in the early 16th century. The painting depicts a woman with long, curly hair and a mysterious smile, sitting in a chair with her hands on her lap. The background of the painting is a landscape with mountains and a river in the foreground.\n\nThe Mona Lisa is considered one of the most famous paintings in the world and has had a significant impact on the art world. It is a masterpiece of Renaissance art and is widely regarded as one of the greatest paintings of all time. The painting's enigmatic smile and the subtle details in the woman's face have captivated viewers for centuries.\n\nThe Mona Lisa is also significant because it represents the beginning of the High Renaissance period in art. It was painted during a time when artists were exploring new techniques and styles, and the painting's intricate details and realistic representation of the subject reflect this innovation.\n\nIn addition to its artistic significance, the Mona Lisa is also important historically. It was commissioned by",
+        "measures": {
+          "precision": 0.695390522480011,
+          "recall": 0.6782135963439941,
+          "f1": 0.6866946816444397
+        }
+      },
+      {
+        "question_id": 19,
+        "question": "Describe this photo in detail.",
+        "img": "007",
+        "img_path": "./data/datasets/llava-bench/imgs/main/007.jpg",
+        "is_open": true,
+        "options": null,
+        "answer": "In this photo, the Space Needle, a famous observation tower, is prominently displayed against a clear blue sky in the background. The structure's futuristic design features an elongated, slender column supporting a flying saucer-like top with observation decks and antennas. The overall atmosphere is bright and sunny, showcasing the iconic Seattle landmark in all its glory.",
+        "class": "main",
+        "response": "\u200b\n\nThe image shows a tall, white observation tower with a red and white striped pole at the top. The tower is surrounded by trees and buildings in the distance. The sky is clear and blue, with a few clouds visible. The tower appears to be located in a city or urban area, with buildings and roads surrounding it. There are no people or vehicles in the image.",
+        "measures": {
+          "precision": 0.6103087067604065,
+          "recall": 0.6589529514312744,
+          "f1": 0.6336987018585205
+        }
+      },
+      {
+        "question_id": 20,
+        "question": "What's the best weather, season, time of the day of visiting this place?  Is the time when this photo was taken a good time to visit this place?",
+        "img": "007",
+        "img_path": "./data/datasets/llava-bench/imgs/main/007.jpg",
+        "is_open": true,
+        "options": null,
+        "answer": "The best weather for visiting the Space Needle would be during clear or sunny days with minimal clouds, which allows for better visibility and enjoyment of the views. The best seasons would be late spring or summer when the weather is warmer and more predictable. The best time of day would be during late mornings or early afternoons when natural light is at its peak, making it ideal for sightseeing and photography.\n\nThe image shows the Space Needle with a clear blue sky in the background, which indicates that the photo was taken during a beautiful day with great weather. This would be a good time to visit the Space Needle.",
+        "class": "main",
+        "response": "1. The best weather for visiting this place would likely be clear and sunny, as the view from the Space Needle would be more visible and enjoyable on a clear day.\n2. The time of day for visiting would depend on personal preference, but in general, it might be better to visit during the daytime when the sky is clear and the light is bright, as this would allow for better views of the surrounding cityscape.\n3. As for the season, any time of year could be a good time to visit, as the Space Needle offers a unique perspective on the city regardless of the weather or time of year. However, if you want to see the city's fall foliage, autumn would be a beautiful time to visit.",
+        "measures": {
+          "precision": 0.6463923454284668,
+          "recall": 0.6714986562728882,
+          "f1": 0.6587063670158386
+        }
+      },
+      {
+        "question_id": 21,
+        "question": "What is the name of the character in the image?",
+        "img": "008",
+        "img_path": "./data/datasets/llava-bench/imgs/main/008.jpg",
+        "is_open": true,
+        "options": null,
+        "answer": "The name of the character in the image is Conan Edogawa.",
+        "class": "main",
+        "response": "The character in the image is a young man with brown hair and glasses, wearing a blue suit and a red bow tie.",
+        "measures": {
+          "precision": 0.608752965927124,
+          "recall": 0.7438000440597534,
+          "f1": 0.6695345044136047
+        }
+      },
+      {
+        "question_id": 22,
+        "question": "What's the personality of this character? Explain what elements or aspects of the character's design may have contributed to its popularity.",
+        "img": "008",
+        "img_path": "./data/datasets/llava-bench/imgs/main/008.jpg",
+        "is_open": true,
+        "options": null,
+        "answer": "Conan Edogawa appears to be a confident and intelligent character, as indicated by his focused gaze and slightly raised eyebrows. His big eyes and the charming, youthful visage make him more approachable and appealing to audiences of various ages. The iconic glasses and bow tie add a touch of quirkiness and sophistication to his design, making him stand out as a unique character. These aspects of his design may have contributed to his popularity among fans of Japanese cartoons.",
+        "class": "main",
+        "response": "The character in the image is a young man with brown hair and glasses, wearing a blue suit and a red bow tie. He has a serious expression on his face and is looking straight ahead. His design may have contributed to his popularity by making him look professional and intelligent.",
+        "measures": {
+          "precision": 0.723103404045105,
+          "recall": 0.6467945575714111,
+          "f1": 0.682823657989502
+        }
+      },
+      {
+        "question_id": 23,
+        "question": "What are the things I should be cautious about when I visit here?",
+        "img": "009",
+        "img_path": "./data/datasets/llava-bench/imgs/main/009.jpg",
+        "is_open": true,
+        "options": null,
+        "answer": "When visiting this serene lakeside location, be cautious about the following:\n\n1. Wooden pier safety: Ensure the T-shaped wooden pier is sturdy and safe to walk on, and be mindful of any loose planks or slippery surfaces.\n\n2. Swimming conditions: If you plan to swim in the lake, check for potential hazards such as submerged objects or strong underwater currents, and be aware of the water temperature.\n\n3. Wildlife: Some lakes may have local wildlife, such as snakes or alligators, which could pose a threat. Remain cautious and observant, especially near the water's edge.\n\n4. Weather conditions: The sky is cloudy, so be prepared for potential rainfall or changes in temperature, and monitor weather forecasts before your visit.\n\n5. Hiking in the surrounding area: If you plan to explore the green trees and mountains in the background, be cautious of potential hazards like steep and slippery terrain or unstable trail conditions. Carry appropriate hiking gear and wear sturdy footwear.\n\n6. Protect the environment: Be respectful of the natural beauty of the area, and avoid littering, damaging any trees or plants, or disturbing wildlife.",
+        "class": "main",
+        "response": "1. The weather: The mountainous terrain and lake can be affected by sudden changes in weather, such as rain or snow, which can make the journey more challenging.\n2. The water quality: The lake may have low oxygen levels or other contaminants that can affect swimming or boating safety.\n3. Wildlife: There may be wild animals in the area, such as bears or moose, that could pose a danger to visitors.\n4. Traffic: The road leading to the lake may be busy with cars, bicycles, or other vehicles, so it's important to be aware of traffic and follow safety rules.\n5. Equipment: If you plan to engage in activities like fishing or boating, make sure you have the necessary equipment and know how to use it safely.\n6. First aid: It's always a good idea to have a first aid kit on hand in case of an emergency.\n7. Cell phone coverage: While you may be in a remote location, it's still a good idea to have cell phone coverage in case of an emergency or to stay connected with others.\n8. Park regulations: Make sure to familiarize",
+        "measures": {
+          "precision": 0.7053871154785156,
+          "recall": 0.6968936920166016,
+          "f1": 0.7011146545410156
+        }
+      },
+      {
+        "question_id": 24,
+        "question": "If you were a photographer looking to capture this location's essence, what time of day and weather conditions would you choose? Describe the reasons behind your choice.",
+        "img": "009",
+        "img_path": "./data/datasets/llava-bench/imgs/main/009.jpg",
+        "is_open": true,
+        "options": null,
+        "answer": "As a photographer looking to capture the essence of this location, I would choose early morning or late afternoon during the golden hour, and with slightly cloudy or clear weather conditions. The reasons behind my choice are:\n\n1. Golden hour light: Early morning or late afternoon light is soft, warm, and directional, which tends to be flattering for landscapes. It can help to bring out the vibrant colors of the green trees and the mountains, add depth to the scene, and create interesting shadows and highlights.\n\n2. Slightly cloudy or clear weather: These conditions can allow for a more dynamic and visually interesting sky, providing a beautiful backdrop that complements the serene scene. Slightly cloudy weather can also help to diffuse the sunlight, creating a softer light, which can enhance the overall mood of the image.\n\n3. Calm water: Capturing the scene when the lake's surface is calm will create reflections, adding visual interest and making the scene even more picturesque.\n\n4. Emphasize the T-shaped wooden pier: By shooting at an angle that makes the pier the main focal point, it will draw the viewer's attention and evoke a feeling of peacefulness and tranquility.\n\nBy choosing the right time of day and weather conditions, a photographer can effectively capture the serene essence of this location, highlighting its natural beauty and creating a visually captivating image.",
+        "class": "main",
+        "response": "\u200b\n\nIf I were a photographer looking to capture the essence of this location, I would choose a sunny day with clear blue skies. The sun would be shining down on the water, casting a warm glow on the surface and creating beautiful reflections. The mountains in the background would be visible, but not too prominent, allowing the focus to be on the tranquil waters.\n\nThe reason for choosing a sunny day is that it would create the most vibrant colors in the water and sky, making the image more visually appealing. Clear blue skies would also provide a sense of calmness and serenity, which is fitting for a peaceful lake like this one.\n\nOverall, I would want to capture the beauty of the natural surroundings while also highlighting the tranquility of the lake. A sunny day with clear blue skies would be the perfect time to do so.",
+        "measures": {
+          "precision": 0.6958766579627991,
+          "recall": 0.6525799036026001,
+          "f1": 0.6735331416130066
+        }
+      },
+      {
+        "question_id": 25,
+        "question": "Describe this photo in detail.",
+        "img": "010",
+        "img_path": "./data/datasets/llava-bench/imgs/main/010.jpg",
+        "is_open": true,
+        "options": null,
+        "answer": "The image features a man standing on the rear bumper of a yellow taxi on a busy city street. He is ironing a blue T-shirt on a foldable ironing table attached to the back of the taxi. The man is dressed in a yellow sweater, matching the taxi's color. Another yellow taxi is visible on the left side of the scene. The street is surrounded by tall buildings, and visible street lights have red flags attached to them.",
+        "class": "main",
+        "response": "This image shows a man standing on the back of a yellow taxi cab. The man is wearing a yellow shirt and has his hands on his hips. The taxi is parked on the side of the road, with other cars passing by in the background. There are no people or other objects visible in the image. The sky is clear and blue, and there are some trees in the distance. The taxi appears to be in good condition, with no visible damage or wear and tear.",
+        "measures": {
+          "precision": 0.6635783910751343,
+          "recall": 0.68072509765625,
+          "f1": 0.6720423698425293
+        }
+      },
+      {
+        "question_id": 26,
+        "question": "What is unusual about this image?",
+        "img": "010",
+        "img_path": "./data/datasets/llava-bench/imgs/main/010.jpg",
+        "is_open": true,
+        "options": null,
+        "answer": "The unusual aspect of this image is that a man is standing on the rear bumper of a yellow taxi, using a foldable ironing table attached to the back of the taxi to iron a blue T-shirt. This is not a typical sight on a city street.",
+        "class": "main",
+        "response": "The image shows a man standing on the back of a yellow taxi cab, holding a piece of clothing in his hand. The taxi is parked on a busy city street with other cars passing by. The man's shirt appears to be wrinkled and he is wearing a yellow jacket. There are no other people or objects visible in the image.",
+        "measures": {
+          "precision": 0.6595697999000549,
+          "recall": 0.6900039911270142,
+          "f1": 0.6744436621665955
+        }
+      },
+      {
+        "question_id": 27,
+        "question": "What fruit is in the left part of the fridge?",
+        "img": "011",
+        "img_path": "./data/datasets/llava-bench/imgs/main/011.jpg",
+        "is_open": true,
+        "options": null,
+        "answer": "In the left part of the fridge, there is a plastic box of strawberries.",
+        "class": "main",
+        "response": "The image shows a refrigerator with various food items inside, including fruits and vegetables. There are also containers of yogurt and milk in the fridge.",
+        "measures": {
+          "precision": 0.6242992877960205,
+          "recall": 0.7321872115135193,
+          "f1": 0.6739528179168701
+        }
+      },
+      {
+        "question_id": 28,
+        "question": "What is the brand of the yogurt flavored with blueberry?",
+        "img": "011",
+        "img_path": "./data/datasets/llava-bench/imgs/main/011.jpg",
+        "is_open": true,
+        "options": null,
+        "answer": "The brand of the blueberry-flavored yogurt is Fage.",
+        "class": "main",
+        "response": "The brand of the yogurt flavored with blueberry is not specified in the image.",
+        "measures": {
+          "precision": 0.7826217412948608,
+          "recall": 0.760036826133728,
+          "f1": 0.7711639404296875
+        }
+      },
+      {
+        "question_id": 33,
+        "question": "Write an attractive product description for this.",
+        "img": "012",
+        "img_path": "./data/datasets/llava-bench/imgs/main/012.jpg",
+        "is_open": true,
+        "options": null,
+        "answer": "Introducing our delightful set of three identical coffee mugs, featuring the iconic and beloved character, Mario! These vibrant, ceramic mugs boast a high-quality design that playfully pays homage to the world-renowned plumber and hero of the Mushroom Kingdom. Wake up to a nostalgic cup of coffee or hot cocoa and add a touch of Super Mario magic to your kitchen with these charming mugs. Perfect as a gift for both collectors and fans alike, these mugs are sure to level up your beverage game! So, power up your mornings with everyone's favorite gaming legend and get your set of three Mario coffee mugs today!",
+        "class": "main",
+        "response": "The image shows two mugs with the same design on them, depicting a cartoon character of a man wearing a red cap and a green shirt. The mugs are made of ceramic material and have a white background with black text that reads \"Mario\" in bold letters. The mugs are placed on a shelf, with one on top of the other, and they are facing each other. The overall appearance of the mugs is attractive and eye-catching, making them ideal for use as promotional items or as gifts for fans of the Mario character.",
+        "measures": {
+          "precision": 0.6468018889427185,
+          "recall": 0.6198263168334961,
+          "f1": 0.6330268383026123
+        }
+      },
+      {
+        "question_id": 35,
+        "question": "Can you explain this meme in detail?",
+        "img": "014",
+        "img_path": "./data/datasets/llava-bench/imgs/main/014.jpg",
+        "is_open": true,
+        "options": null,
+        "answer": "This meme features an image of an oven tray with fried chicken nuggets arranged in the shape of the continents on a world map, resembling a bird's-eye view of Earth. Above the image, there is a caption that reads, \"Sometimes I just look at pictures of the Earth from space and I marvel at how beautiful it all is.\" The humor in this meme comes from the juxtaposition of the earnest caption with the amusing representation of Earth using chicken nuggets.",
+        "class": "main",
+        "response": "The meme shows a pan full of fried chicken with the caption \"Sometimes I just look at pictures of the earth from space and marvel at how beautiful it is.\"\n\nThe image is a photograph of a pan full of fried chicken, with the caption \"Sometimes I just look at pictures of the earth from space and marvel at how beautiful it is.\" The image is meant to be humorous and playful, as it depicts a seemingly random and unexpected subject in a way that is both absurd and amusing. The caption adds to the humor by highlighting the contrast between the mundane subject of fried chicken and the awe-inspiring beauty of the earth from space.\n\nOverall, the meme is a lighthearted and humorous take on the idea of appreciating the beauty of the world around us, even in small and seemingly insignificant ways. It encourages viewers to take a moment to appreciate the beauty of the earth, even in its most mundane forms, and to find joy and wonder in the everyday things that surround us.",
+        "measures": {
+          "precision": 0.5730798244476318,
+          "recall": 0.637367308139801,
+          "f1": 0.6035164594650269
+        }
+      },
+      {
+        "question_id": 41,
+        "question": "What material appears to make up the creature?",
+        "img": "017",
+        "img_path": "./data/datasets/llava-bench/imgs/main/017.jpg",
+        "is_open": true,
+        "options": null,
+        "answer": "The creature appears to be made up of hot, red lava with flames on its body and cooled-down black volcanic rock for its four feet.",
+        "class": "main",
+        "response": "The creature appears to be made of red, flaming material.",
+        "measures": {
+          "precision": 0.8714501261711121,
+          "recall": 0.6828764081001282,
+          "f1": 0.7657241821289062
+        }
+      },
+      {
+        "question_id": 42,
+        "question": "This is the logo of LLaVA, Large Language and Vision Assistant, based on the LLaMA architecture. Please explain this logo in detail, and how do you think of its design.",
+        "img": "017",
+        "img_path": "./data/datasets/llava-bench/imgs/main/017.jpg",
+        "is_open": true,
+        "options": null,
+        "answer": "The logo of LLaVA features a creature that resembles a llama, creatively formed with lava. The body of the llama appears like hot, red lava with flames around it, giving it a sense of energy and movement. Its four feet look like black volcanic rocks that have cooled down after a lava flow, providing a striking contrast to the fiery body. The llama is also wearing a pair of red glasses, which adds an element of intelligence and quirkiness to the logo. \n\nThe design of the logo is innovative and unique, as it incorporates the concept of both language and vision in the form of a lava-formed llama. The creative combination of these elements makes the logo memorable and effectively represents the LLaMA architecture.",
+        "class": "main",
+        "response": "\u200b\n\nThe logo of LLaVA, Large Language and Vision Assistant, is a cartoon image of a red animal with glasses on its face. The animal appears to be wearing a pair of black glasses with white frames and lenses. Its body is also covered in flames, which gives it a fiery appearance. The overall design of the logo is simple and eye-catching, making it easy to recognize and remember. The use of fire and the animal's glasses give the logo a unique and interesting look that sets it apart from other language and vision assistant logos. The color scheme is also bold and attention-grabbing, which makes it suitable for use on various platforms and mediums. Overall, the logo of LLaVA is visually appealing and memorable, making it an effective representation of the company's mission and values.",
+        "measures": {
+          "precision": 0.6647264957427979,
+          "recall": 0.6746494770050049,
+          "f1": 0.669651210308075
+        }
+      },
+      {
+        "question_id": 43,
+        "question": "What are the animals in the painting and what are they doing?",
+        "img": "018",
+        "img_path": "./data/datasets/llava-bench/imgs/main/018.jpg",
+        "is_open": true,
+        "options": null,
+        "answer": "The painting features three animals: a brown bear on the left who is eating a chocolate cookie, a blue-grey cat in the middle who is holding a blue mug, and a light-brown rabbit on the right who is sipping from a pink coffee mug. They are all gathered around a table made of a tree stump, enjoying a picnic.",
+        "class": "main",
+        "response": "The animals in the painting are a bear, a rabbit, and a cat. They are sitting around a table with plates of food in front of them. The bear is eating a piece of meat, the rabbit is drinking from a cup of tea, and the cat is licking its paw. The background of the painting is a forest with trees and grass.",
+        "measures": {
+          "precision": 0.7078344225883484,
+          "recall": 0.6829875111579895,
+          "f1": 0.6951889991760254
+        }
+      },
+      {
+        "question_id": 44,
+        "question": "Write a fairy tale based on this painting.",
+        "img": "018",
+        "img_path": "./data/datasets/llava-bench/imgs/main/018.jpg",
+        "is_open": true,
+        "options": null,
+        "answer": "Once upon a time, in a magical forest nestled between rolling hills and a sparkling river, there lived a brown bear, a blue-grey cat, and a light-brown rabbit. They were the best of friends, and they loved nothing more than spending their days together in the peaceful embrace of their beloved forest.\n\nOne lovely day, the sun was shining brightly, and the gentle breeze tickled the leaves of the tall trees, creating a beautiful symphony. The three friends decided it was the perfect time for a picnic. They chose a picturesque spot underneath a canopy of leaves, where a tree stump served as their table. \n\nThe bear, who had a sweet tooth, brought a plate filled with various kinds of delicious cookies. Beaming with excitement, he took a large bite of a chocolate cookie, savoring the rich and indulgent taste. The cat, who loved her tea, brought her favorite blue mug filled with the finest blend. She held the mug in her paws, enjoying the warm aroma that filled the air. The rabbit, known for her love of coffee, delicately sipped her beverage from a pink mug, feeling the warmth and comfort spread throughout her tiny body.\n\nThere they were, surrounded by the lush green grass, each friend engrossed in their own little world of delight. The bear's chocolate cookie crumbs dusted the ground beneath him, the cat's purrs harmonizing with the rustling leaves, and the rabbit's whiskers twitching with joy and satisfaction.\n\nTheir laughter and sweet conversation filled the clearing, and the sounds of their merrymaking brought curious forest creatures out of their hiding places. Slowly, they approached the merry trio, wanting to be part of the joy they witnessed. One by one, they joined the picnic, and soon they were all sharing a feast of cookies and happiness.\n\nIn that magical forest, a bond beyond friendship united those woodland creatures, as they spent countless days celebrating their love for each other and the enchanting world they called home. And so, they lived together in harmony, basking in the beauty of their friendship, for many, many years to come. And the tale of the Picnic of the Forest Friends was passed down through generations, forever immortalizing their wonder and joy.",
+        "class": "main",
+        "response": "Once upon a time, in a forest filled with tall trees and lush greenery, there lived a group of animals who loved to spend their days playing and having fun. One day, they decided to have a picnic together at a small table set up in the middle of the forest.\n\nThe bear sat at one end of the table, munching on some delicious berries he had picked earlier that morning. The rabbit sat across from him, nibbling on some carrots he had dug up from the ground. The cat sat on the other side of the table, sipping on a cup of tea.\n\nAs they ate, they chatted and laughed, enjoying each other's company. They talked about their adventures and the things they had seen in the forest. The bear told them about the time he had caught a fish in the river, and the rabbit shared a story about the time he had lost his way and gotten lost in the woods.\n\nAs the sun began to set, the animals packed up their things and said their goodbyes. They promised to have another picnic soon, and went their separate ways back to their homes in the forest.\n\nThe end",
+        "measures": {
+          "precision": 0.6692865490913391,
+          "recall": 0.6220067143440247,
+          "f1": 0.6447810530662537
+        }
+      },
+      {
+        "question_id": 46,
+        "question": "Write brief HTML/JS to turn this mock-up into a colorful website, where the jokes are replaced by two real jokes.",
+        "img": "019",
+        "img_path": "./data/datasets/llava-bench/imgs/main/019.jpg",
+        "is_open": true,
+        "options": null,
+        "answer": "Here is a brief and simple HTML/JS code to create a colorful website using the notebook sketch with two real jokes:\n\n```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>My Joke Website</title>\n  <style>\n    body {\n      background-color: lightblue;\n      text-align: center;\n      font-family: Arial, sans-serif;\n    }\n    h1 {\n      color: purple;\n    }\n    button {\n      background-color: orange;\n      color: white;\n      font-size: 1.2em;\n      margin-top: 10px;\n      padding: 10px;\n      border: none;\n      cursor: pointer;\n    }\n  </style>\n</head>\n<body>\n  <h1>My Joke Website</h1>\n  <p id=\"joke1\">Why do we never tell secrets on a farm?</p>\n  <button onclick=\"showPunchline('punchline1')\">Push to reveal punchline</button>\n  <p id=\"punchline1\" hidden>Because the potatoes have eyes and the corn has ears!</p>\n\n  <p id=\"joke2\">Why don't scientists trust atoms?</p>\n  <button onclick=\"showPunchline('punchline2')\">Push to reveal punchline</button>\n  <p id=\"punchline2\" hidden>Because they make up everything!</p>\n  \n  <p>Copyright OpenAI 2023</p>\n\n  <script>\n    function showPunchline(punchlineId) {\n      document.getElementById(punchlineId).hidden = false;\n    }\n  </script>\n</body>\n</html>\n```\n\nThis code creates a simple and colorful webpage with a light blue background and a purple heading. The jokes and buttons are displayed on the page, and when the user clicks the \"Push to reveal punchline\" button, the respective punchlines will be revealed using JavaScript.",
+        "class": "main",
+        "response": "\u200b\n\nHere is the HTML code to turn this mock-up into a colorful website:\n```php\n<!DOCTYPE html>\n<html>\n  <head>\n    <style>\n      body {\n        background-color: #F0E68C;\n        font-family: Arial, sans-serif;\n        font-size: 14px;\n        line-height: 1.5;\n        margin: 0;\n        padding: 0;\n      }\n      h1 {\n        color: #333;\n        font-size: 24px;\n        font-weight: bold;\n        margin: 24px 0 16px 0;\n      }\n      p {\n        color: #333;\n        font-size: 16px;\n        line-height: 1.5;\n        margin: 16px 0 8px 0;\n      }\n      img {\n        border: 1px solid #CCCCCC;\n        border-radius: 5px;\n        max-width: 1",
+        "measures": {
+          "precision": 0.803329586982727,
+          "recall": 0.630313515663147,
+          "f1": 0.7063815593719482
+        }
+      },
+      {
+        "question_id": 48,
+        "question": "Write brief HTML/JS to turn this mock-up into a colorful and interactive website, where the joke is replaced by a real joke.",
+        "img": "020",
+        "img_path": "./data/datasets/llava-bench/imgs/main/020.jpg",
+        "is_open": true,
+        "options": null,
+        "answer": "Here's a simple HTML and JavaScript code to create the joke website based on the sketch:\n\n```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>My Joke Website</title>\n    <style>\n        body {\n            font-family: Arial, sans-serif;\n            background-color: lightblue;\n            text-align: center;\n        }\n        h1 {\n            color: darkblue;\n            margin-bottom: 50px;\n        }\n        p#joke {\n            font-size: 24px;\n            color: darkgreen;\n            margin-bottom: 30px;\n        }\n        button {\n            font-size: 18px;\n            color: white;\n            background-color: darkorange;\n            padding: 10px 20px;\n            cursor: pointer;\n            border: none;\n        }\n\n    </style>\n</head>\n<body>\n    <h1>My Joke Website</h1>\n    <p id=\"joke\">Funny Joke</p>\n    <button onclick=\"getJoke()\">Push to reveal punchline</button>\n\n    <script>\n        async function getJoke() {\n            const response = await fetch('https://api.chucknorris.io/jokes/random');\n            const data = await response.json();\n            document.getElementById('joke').innerHTML = data.value;\n        }\n    </script>\n</body>\n</html>\n```\n\nThis code snippet creates a simple colorful webpage with a heading \"My Joke Website\", a joke placeholder, and a button to reveal the punchline. It fetches a joke from the Chuck Norris Jokes API (https://api.chucknorris.io/jokes/random) when the user clicks the button.",
+        "class": "main",
+        "response": "\u200b\n\nHere is an example of how you could turn the mock-up into a colorful and interactive website:\n```\n<html>\n  <head>\n    <style>\n      #joke {\n        font-size: 36px;\n        font-weight: bold;\n        color: red;\n      }\n    </style>\n  </head>\n  <body>\n    <div id=\"joke\">\n      <p>I'm sorry, I didn't realize that joke was so offensive. Please accept my apologies.</p>\n    </div>\n  </body>\n</html>\n```\nThis HTML code creates a div element with an id of \"joke\" that contains a paragraph of text. The CSS style rule sets the font size, font weight, and color of the text to make it stand out.\n\nYou can add more elements to the page, such as images or buttons, to make the website more interactive and engaging. For example, you could add an image of a laughing face to the page to give it a more playful feel.\n```\n<img src=\"laughing_face.jpg",
+        "measures": {
+          "precision": 0.6690400242805481,
+          "recall": 0.6943455338478088,
+          "f1": 0.6814579367637634
+        }
+      },
+      {
+        "question_id": 50,
+        "question": "What is the significance of this scene in the context of the movie?",
+        "img": "021",
+        "img_path": "./data/datasets/llava-bench/imgs/main/021.jpg",
+        "is_open": true,
+        "options": null,
+        "answer": "The significance of this iconic \"flying scene\" in Titanic is that it symbolizes the love, freedom, and connection between the two main characters, Jack and Rose. It is a pivotal moment in the film, showing the deepening bond between them despite their different social backgrounds. Additionally, the scene is visually stunning, with the massive ship and the vast ocean in the background, adding to its emotional impact.",
+        "class": "main",
+        "response": "The scene depicts a couple standing on the deck of a ship at sunset, with the man holding the woman's hand and looking out over the ocean. The significance of this scene is that it represents the beginning of a romantic relationship between the two characters. It also suggests that they are embarking on a journey together, perhaps a vacation or a trip to a new place. The setting, with the sun setting over the ocean, adds to the romantic atmosphere of the scene.",
+        "measures": {
+          "precision": 0.6695555448532104,
+          "recall": 0.6873734593391418,
+          "f1": 0.6783474683761597
+        }
+      },
+      {
+        "question_id": 52,
+        "question": "Describe this photo in detail.",
+        "img": "022",
+        "img_path": "./data/datasets/llava-bench/imgs/main/022.jpg",
+        "is_open": true,
+        "options": null,
+        "answer": "This is a close-up photo of a meal at ICHIRAN. In the center, there is a chashu ramen bowl with a spoon. The ramen is seasoned with chili sauce and chopped scallions, and served with two pieces of chashu. To the right of the bowl, chopsticks are placed, still in their paper wrap, unopened. The ramen is accompanied by nori on the left side. On top, there are accompanying sides. From left to right, these include a bowl of orange spice (possibly garlic sauce), a plate of smoke-flavored stewed pork garnished with chopped scallions, and a cup of matcha green tea.",
+        "class": "main",
+        "response": "The image shows a bowl of ramen noodles with chicken and vegetables on top, served with chopsticks and soy sauce. There are also two small bowls of miso soup and a plate of steamed bok choy on the table. The background is a wooden table with a brown cloth covering it. There are also some chopsticks, a bottle of sake, and a small bowl of rice on the table.",
+        "measures": {
+          "precision": 0.6798398494720459,
+          "recall": 0.6287146806716919,
+          "f1": 0.6532785296440125
+        }
+      },
+      {
+        "question_id": 54,
+        "question": "What brand is featured in this advertisement?",
+        "img": "023",
+        "img_path": "./data/datasets/llava-bench/imgs/main/023.jpg",
+        "is_open": true,
+        "options": null,
+        "answer": "The brand featured in this advertisement is Subway.",
+        "class": "main",
+        "response": "The image shows a sandwich with various ingredients, including ham, lettuce, tomato, and cheese. It is not clear what brand the sandwich is from.",
+        "measures": {
+          "precision": 0.5727323293685913,
+          "recall": 0.7013586759567261,
+          "f1": 0.6305527091026306
+        }
+      },
+      {
+        "question_id": 55,
+        "question": "Describe this photo in detail.",
+        "img": "023",
+        "img_path": "./data/datasets/llava-bench/imgs/main/023.jpg",
+        "is_open": true,
+        "options": null,
+        "answer": "This photo is an advertisement from Subway featuring a black background. On the top left corner, there is the Subway logo with the text \"SUBWAY SERIES.\" Below the logo, the slogan \"A NEW WAY TO SUBWAY\" is displayed. The main focus of the image is two sandwiches, likely a footlong sandwich cut in half. These sandwiches have toasted bread, which appears to be artisan Italian bread. They are filled with cheese, ham, salami, shredded lettuce, tomato, and banana peppers, giving them a colorful and appetizing appearance.",
+        "class": "main",
+        "response": "The image shows a sandwich with various ingredients, including ham, turkey, lettuce, tomato, and cheese. The sandwich is cut in half, revealing the contents inside. The sandwich appears to be on a black background.",
+        "measures": {
+          "precision": 0.7671592831611633,
+          "recall": 0.6355602145195007,
+          "f1": 0.6951866149902344
+        }
+      },
+      {
+        "question_id": 56,
+        "question": "Show me a detailed recipe for cooking this at home.",
+        "img": "023",
+        "img_path": "./data/datasets/llava-bench/imgs/main/023.jpg",
+        "is_open": true,
+        "options": null,
+        "answer": "I cannot show you an image, but I can describe a detailed recipe for making a similar sandwich as seen in the advertisement. Here's how you can make it at home:\n\nIngredients:\n- Artisan Italian bread (footlong or sized to preference)\n- Ham (sliced for sandwiches)\n- Salami (sliced for sandwiches)\n- Cheese (sliced, your preferred type)\n- Shredded lettuce\n- Tomato (sliced)\n- Banana peppers (sliced)\n- Your choice of sandwich spread (mayonnaise, mustard, etc.)\n\nInstructions:\n1. Start by preheating your oven to 350\u00b0F (175\u00b0C) for toasting the bread.\n2. Slice the Italian bread in half lengthwise, but don't cut all the way through, leaving a hinge connecting both halves.\n3. Place the bread on a baking sheet and toast it in the preheated oven for about 5-7 minutes, until it's slightly crispy on the outside.\n4. While the bread is toasting, prepare the vegetables: wash and shred the lettuce, slice the tomatoes, and slice the banana peppers.\n5. Once the bread is toasted, remove it from the oven and carefully open it, placing it on a clean surface.\n6. Spread your desired sandwich spread (mayonnaise, mustard, or a combination) generously on both inner sides of the bread.\n7. Layer the sliced ham and salami on the bottom half of the bread, folding the slices if necessary to fit.\n8. Place the cheese slices on top of the meat.\n9. Layer the shredded lettuce, tomato slices, and banana peppers evenly on top of the cheese.\n10. Close the sandwich by folding the top half of the bread over the fillings.\n11. If desired, you can cut the sandwich in half for easier serving.\n\nEnjoy your homemade Subway-inspired sandwich!",
+        "class": "main",
+        "response": "\u200b\n\nThe image shows a sandwich with layers of meat, cheese, lettuce, and tomato slices. The sandwich is served on a white bun with a side of chips. The sandwich appears to be a classic deli sandwich, popular in many parts of the world.\n\nTo make this sandwich at home, you will need the following ingredients:\n\n* 8 slices of deli ham\n* 8 slices of deli turkey\n* 8 slices of Swiss cheese\n* 16 slices of rye bread\n* Lettuce\n* Tomato slices\n* Mayonnaise\n* Mustard\n* Ketchup\n* Salt and pepper\n\nInstructions:\n\n1. Lay out the slices of deli ham and turkey on a cutting board.\n2. Spread mayonnaise on one slice of bread and mustard on another slice.\n3. Place a slice of ham on one half of the bread with the mayonnaise side facing up.\n4. Add a slice of turkey on top of the ham.\n5. Top the sandwich with a slice of Swiss cheese.\n6",
+        "measures": {
+          "precision": 0.6821487545967102,
+          "recall": 0.6272998452186584,
+          "f1": 0.653575599193573
+        }
+      },
+      {
+        "question_id": 57,
+        "question": "Describe this photo in detail.",
+        "img": "024",
+        "img_path": "./data/datasets/llava-bench/imgs/main/024.jpg",
+        "is_open": true,
+        "options": null,
+        "answer": "This is a top view photograph of a highway at night. The highway is divided into four sections. On the left side, there are three lanes of traffic approaching the camera and four lanes of traffic moving away from the camera. On the right side, there are four lanes of traffic approaching the camera and three lanes of traffic moving away from the camera.\n\nMost cars in the four-lane section moving away from the camera have their brake lights on, indicating a higher traffic density in the four-lane sections. Meanwhile, traffic appears to be lighter on the two three-lane sections.\n\nThe four-lane highway is elevated compared to the three-lane highway, creating a visually distinct separation between the two sections. The lights alongside the highway are illuminated, providing a clear view of the road and cars.\n\nOn the right side of the highway, there are trees, adding a touch of nature to the scene.",
+        "class": "main",
+        "response": "This image shows a busy highway at night with many cars driving on it. The traffic is heavy and the lights from the cars create a bright, colorful glow on the road. The sky is dark and there are trees on either side of the highway. The image is taken from above, looking down on the highway from a high vantage point. The cars are moving slowly and the sound of their engines can be heard in the background. The overall atmosphere is one of bustle and activity.",
+        "measures": {
+          "precision": 0.6581476926803589,
+          "recall": 0.5619996190071106,
+          "f1": 0.6062853336334229
+        }
+      },
+      {
+        "question_id": 58,
+        "question": "What is the problem this city might be facing? What are some possible solutions?",
+        "img": "024",
+        "img_path": "./data/datasets/llava-bench/imgs/main/024.jpg",
+        "is_open": true,
+        "options": null,
+        "answer": "The city might be facing traffic congestion issues, particularly in the four-lane sections of the highway since most cars have their brake lights on, indicating slow or stopped traffic. Possible solutions could include:\n\n1. Implementing traffic management strategies, such as ramp meters to control the rate at which cars enter the highway or optimizing traffic signal timings to improve traffic flow.\n2. Encouraging the use of public transportation, carpooling or ride-sharing to reduce the number of cars on the road.\n3. Expanding or adding more lanes to ease traffic congestion in the four-lane sections of the highway.\n4. Exploring alternative routes to divert traffic from the congested areas.\n5. Improving walking and biking infrastructure in the city, thus promoting more sustainable and non-motorized modes of transport.",
+        "class": "main",
+        "response": "1. Traffic congestion: The city may be facing traffic congestion due to the large number of cars on the highway. Possible solutions include increasing public transportation options, improving road infrastructure, and implementing traffic management systems.\n2. Air pollution: The city may be facing air pollution due to the high number of vehicles emitting harmful pollutants into the atmosphere. Possible solutions include promoting alternative modes of transportation, implementing emission standards, and planting trees to absorb carbon dioxide.\n3. Crime: The city may be facing crime due to the high number of people living in close proximity. Possible solutions include increasing police presence, implementing community programs, and providing job opportunities for residents.\n4. Affordable housing: The city may be facing a shortage of affordable housing due to rising prices. Possible solutions include implementing zoning regulations, providing subsidies for low-income residents, and building more public housing units.\n5. Lack of green spaces: The city may be facing a lack of green spaces due to the high density of buildings. Possible solutions include creating parks and gardens, planting trees and shrubs, and encouraging residents to grow their own",
+        "measures": {
+          "precision": 0.6225740909576416,
+          "recall": 0.6483381986618042,
+          "f1": 0.6351950168609619
+        }
+      },
+      {
+        "question_id": 59,
+        "question": "Explain all the cues that indicate the current traffic conditions.",
+        "img": "024",
+        "img_path": "./data/datasets/llava-bench/imgs/main/024.jpg",
+        "is_open": true,
+        "options": null,
+        "answer": "The current traffic conditions can be observed through the following cues:\n\n1. The number of cars in each section of the highway: There are many cars in both the four-lane sections, while the traffic is light on the two three-lane sections.\n2. Brake lights: Most of the cars in the four-lane section moving away from the camera have their brake lights on, indicating a possible slowdown or congestion in that section.\n3. Lane occupancy: The four-lane sections appear to have heavier traffic compared to the three-lane sections.\n4. Lighting: The lights alongside the highway are illuminated, indicating that the image is taken at night, which can also affect traffic conditions depending on the time and area.",
+        "class": "main",
+        "response": "1. The number of cars on the road: There are many cars on the road, indicating that there is a lot of traffic.\n2. The direction of the traffic: Most of the cars are going in one direction, which suggests that there is a lot of traffic moving in that direction.\n3. The speed of the traffic: The cars are moving at a moderate speed, which indicates that the traffic is not very heavy.\n4. The time of day: It is nighttime, which means that the traffic is likely to be heavier during rush hour.\n5. The weather conditions: There is no visible weather in the image, so it is difficult to determine the weather conditions.\n6. The road conditions: The road appears to be well-maintained and free of debris, which suggests that the road conditions are good.\n7. The presence of other vehicles: There are other vehicles on the road, including buses and trucks, which suggests that there is a mix of traffic.\n8. The presence of pedestrians or cyclists: There are no pedestrians or cyclists visible in the image, which suggests that there are no pedestrian or cycling options available.",
+        "measures": {
+          "precision": 0.6327692270278931,
+          "recall": 0.6302132606506348,
+          "f1": 0.6314886808395386
+        }
+      }
+    ],
+    "80_100": [
+      {
+        "question_id": 5,
+        "question": "How many uncut fruits are in the image?",
+        "img": "002",
+        "img_path": "./data/datasets/llava-bench/imgs/main/002.jpg",
+        "is_open": true,
+        "options": null,
+        "answer": "There are three uncut fruits in the image.",
+        "class": "main",
+        "response": "3 uncut fruits are in the image.",
+        "measures": {
+          "precision": 0.9533922672271729,
+          "recall": 0.9371629953384399,
+          "f1": 0.945207953453064
+        }
+      },
+      {
+        "question_id": 32,
+        "question": "How many coffee mugs are in the set?",
+        "img": "012",
+        "img_path": "./data/datasets/llava-bench/imgs/main/012.jpg",
+        "is_open": true,
+        "options": null,
+        "answer": "There are three coffee mugs in the set.",
+        "class": "main",
+        "response": "3 coffee mugs are in the set.",
+        "measures": {
+          "precision": 0.9370081424713135,
+          "recall": 0.9240685701370239,
+          "f1": 0.9304933547973633
+        }
+      }
+    ]
+  },
+  "invalid_resp": []
+}
