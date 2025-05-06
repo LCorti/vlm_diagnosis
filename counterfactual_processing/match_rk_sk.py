@@ -4,6 +4,7 @@ import os
 import sys
 import torch
 
+from pathlib import Path
 from sentence_transformers import SentenceTransformer
 from ultralytics import YOLOE
 
@@ -14,7 +15,7 @@ if module_path not in sys.path:
 from config_loaders.rk_config_loader import RKConfig
 from config_loaders.sk_config_loader import SKConfig
 from utils.graph_utils import stringify_graph_triple
-from utils.data_io import make_dir, load_jsonl, save_jsonl
+from utils.data_io import make_dir, load_json, load_jsonl, save_jsonl
 
 
 def free_gpu(var):
@@ -33,12 +34,29 @@ def compute_similarity(model, text_a, text_b):
     return model.similarity_pairwise(text_a_emb, text_b_emb)
 
 
+def get_similar_concept(emb_model, concept_to_match, res_dicts):
+    max_sim = -1
+    curr_concept = {}
+    for res in res_dicts:
+        sim = compute_similarity(
+            emb_model,
+            concept_to_match,
+            res["box"]["bb_label"]["bb_label_text"],
+        )
+        # Keep track of max sim and corresponding data
+        if sim > 0 and sim > max_sim:
+            max_sim = sim
+            curr_concept = res
+
+    return curr_concept
+
+
 def load_merge_sk_data(sk_paths):
     sk_data = []
     for ds_class in sk_paths:
         curr_base_dir = sk_paths[ds_class]["dir"]
         curr_sk_file = sk_paths[ds_class]["sk_final"]
-        curr_sk_path = f"../{curr_base_dir}/{curr_sk_file}"
+        curr_sk_path = Path("..").joinpath(curr_base_dir).joinpath(curr_sk_file)
         sk_data.extend(load_jsonl(curr_sk_path))
     return sk_data
 
@@ -56,6 +74,44 @@ def get_sk_rels(sk):
     return rels
 
 
+def get_concept_id(concept_label, sgg_dict):
+    if concept_label in sgg_dict["label_to_idx"]:
+        return sgg_dict["label_to_idx"][concept_label]
+    else:
+        return "new"
+
+
+def get_relation_id(relation_label, sgg_dict):
+    if relation_label in sgg_dict["predicate_to_idx"]:
+        return sgg_dict["predicate_to_idx"][relation_label]
+    else:
+        return "new"
+
+
+def make_pred_dict(box, label, conf):
+    pred_dict = {
+        "conf": conf,
+        "box": {
+            "top_left_x": round(box[0]),
+            "top_left_y": round(box[1]),
+            "bottom_right_x": round(box[2]),
+            "bottom_right_y": round(box[3]),
+            "bb_label": {
+                "bb_label_idx": 0,  # Updated later
+                "bb_label_text": label,
+                "bb_label_full": label,  # TODO: fix
+            },
+        },
+    }
+    pred_dict["box"]["width"] = np.abs(
+        pred_dict["box"]["top_left_x"] - pred_dict["box"]["bottom_right_x"]
+    ).item()
+    pred_dict["box"]["height"] = np.abs(
+        pred_dict["box"]["top_left_y"] - pred_dict["box"]["bottom_right_y"]
+    ).item()
+    return pred_dict
+
+
 def parse_yoloe_res(yoloe_res, prompt_free=False):
     label_dict = yoloe_res.names
     all_pred_idx = yoloe_res.boxes.cls.detach().cpu().numpy()
@@ -64,19 +120,17 @@ def parse_yoloe_res(yoloe_res, prompt_free=False):
     predictions = []
 
     if prompt_free:
+        print("Running prompt free!")
         for pred_idx, conf, box in zip(all_pred_idx, all_conf, all_boxes):
-            curr_pred = {
-                "label": label_dict[pred_idx],
-                "conf": np.array(conf).item(),
-                "box": {
-                    "top_left_x": round(box[0]),
-                    "top_left_y": round(box[1]),
-                    "bottom_right_x": round(box[2]),
-                    "bottom_right_y": round(box[3]),
-                },
-            }
+            curr_pred = make_pred_dict(box, label_dict[pred_idx], np.array(conf).item())
+            # curr_pred["prompt_free"] = prompt_free
+            # Fix bb_label_idx field
+            curr_pred["box"]["bb_label"]["bb_label_idx"] = get_concept_id(
+                curr_pred["box"]["bb_label"]["bb_label_text"], sgg_dict
+            )
             predictions.append(curr_pred)
     else:
+        print("Running a prompt!")
         checked_pred_idx = []
         for pred_idx in all_pred_idx:
             if pred_idx in checked_pred_idx:
@@ -92,17 +146,10 @@ def parse_yoloe_res(yoloe_res, prompt_free=False):
             max_conf_idx = np.where(all_conf == max_conf)[0][0]
             # extract bboxes data corresponding to max confidence
             box = all_boxes[max_conf_idx]
-            curr_pred = {
-                "label": label_dict[pred_idx],
-                "conf": np.array(max_conf).item(),
-                "box": {
-                    "top_left_x": round(box[0]),
-                    "top_left_y": round(box[1]),
-                    "bottom_left_x": round(box[2]),
-                    "bottom_left_y": round(box[3]),
-                },
-            }
-
+            curr_pred = make_pred_dict(
+                box, label_dict[pred_idx], np.array(max_conf).item()
+            )
+            # curr_pred["prompt_free"] = prompt_free
             # update lists
             checked_pred_idx.append(pred_idx)
             predictions.append(curr_pred)
@@ -120,6 +167,9 @@ if __name__ == "__main__":
     ds_list.remove("vqav2_holdout")
     ds_list = ds_list * 4
     model_list.sort()
+
+    # Load sgg dict
+    sgg_dict = load_json(Path("..", "data", "common", "sgg_dicts.json"))
 
     # Variables to check what is happening
     counts = {
@@ -142,7 +192,7 @@ if __name__ == "__main__":
         # Load parsed RK
         rk_parsed_path = rk_config.get_parsed_rk_paths(model, ds)
         rk_parsed_path = rk_parsed_path.format(PROMPT_VERSION)
-        rk_parsed_path = f"../{rk_parsed_path}"
+        rk_parsed_path = Path("..").joinpath(rk_parsed_path)
         rk_parsed = load_jsonl(rk_parsed_path)
 
         matched_rk = {}
@@ -161,7 +211,7 @@ if __name__ == "__main__":
                 break
 
             # Load image for 3rd matching step
-            img_path = f"../{curr_sk['img_path']}"
+            img_path = Path("..").joinpath(curr_sk["img_path"])
             img = cv2.imread(img_path)
 
             # Make SK into a format that can be easily compared with SK
@@ -214,26 +264,130 @@ if __name__ == "__main__":
 
                 # Third try: run object detection on the fly to get positions
                 yoloe = YOLOE("yoloe-11l-seg.pt")  # this version expects a prompt
+                yoloe_pf = YOLOE("yoloe-11l-seg-pf.pt")
                 from_concept = rk_rel["from_concept"]  # this will be class 0
                 to_concept = rk_rel["to_concept"]  # this will be class 1
+                print(f"CV matching for {from_concept} - {to_concept}")
                 prompt = [from_concept, to_concept]
                 yoloe.set_classes(prompt, yoloe.get_text_pe(prompt))
                 yoloe_res = yoloe.predict(img)[0]
                 preds = yoloe_res.boxes.cls  # .detach().cpu().tolist()
+                print(preds)
                 if len(preds) > 0:
-                    res_dict = parse_yoloe_res(yoloe_res, prompt_free=False)
+                    res_dicts = parse_yoloe_res(yoloe_res, prompt_free=False)
+                    free_gpu(yoloe_res)
+                    print(res_dicts)
+                    # Since we have from_concept and to_concept, merge data
+                    matched_rk = {
+                        "rel_label": {
+                            "rel_label_idx": get_relation_id(
+                                rk_rel["relationship"], sgg_dict
+                            ),
+                            "rel_label_text": rk_rel["relationship"],
+                        }
+                    }
+                    for pred_idx, res in zip(preds, res_dicts):
+                        if int(pred_idx.item()) == 0:
+                            matched_rk["from_concept"] = next(
+                                res["box"]
+                                for res in res_dicts
+                                if res["box"]["bb_label"]["bb_label_text"]
+                                == from_concept
+                            )
+                        elif int(pred_idx.item()) == 1:
+                            matched_rk["to_concept"] = next(
+                                res["box"]
+                                for res in res_dicts
+                                if res["box"]["bb_label"]["bb_label_text"] == to_concept
+                            )
+                        else:
+                            print(f"Unexpected pred_idx in results: {pred_idx}")
+
+                    print(matched_rk)
+
+                    # If only 1 concept is found, run sem similarity to try to match it.
+                    if "from_concept" not in matched_rk:
+                        matched_rk["from_concept"] = get_similar_concept(
+                            emb_model, from_concept, res_dicts
+                        )["box"]
+                        print(matched_rk)
+                        matched_rk["from_concept"]["bb_label"]["bb_label_idx"] = (
+                            get_concept_id(from_concept, sgg_dict)
+                        )
+                        matched_rk["from_concept"]["bb_label"]["bb_label_text"] = (
+                            from_concept
+                        )
+                        matched_rk["from_concept"]["bb_label"]["bb_label_full"] = (
+                            from_concept  # TODO: fix
+                        )
+
+                    if "to_concept" not in matched_rk:
+                        matched_rk["to_concept"] = get_similar_concept(
+                            emb_model, to_concept, res_dicts
+                        )["box"]
+                        print(matched_rk)
+                        matched_rk["to_concept"]["bb_label"]["bb_label_idx"] = (
+                            get_concept_id(to_concept, sgg_dict)
+                        )
+                        matched_rk["to_concept"]["bb_label"]["bb_label_text"] = (
+                            to_concept
+                        )
+                        matched_rk["to_concept"]["bb_label"]["bb_label_full"] = (
+                            to_concept  # TODO: fix
+                        )
+
+                    counts["after_cv_match"] += 1
+                    curr_rk_matches.append(matched_rk)
                     free_gpu(yoloe_res)
                 else:
                     # We did not find anything, try to use the prompt-free yoloe
                     free_gpu(yoloe_res)
-                    yoloe_pf = YOLOE("yoloe-11l-seg-pf.pt")
                     yoloe_pf_res = yoloe_pf.predict(img)[0]
-                    res_dict = parse_yoloe_res(yoloe_pf_res, prompt_free=True)
+                    res_dicts = parse_yoloe_res(yoloe_pf_res, prompt_free=True)
                     free_gpu(yoloe_pf_res)
+                    # We can not do exact matches here, try again with cosine similarity
+                    max_sim_from_concept = get_similar_concept(
+                        emb_model, from_concept, res_dicts
+                    )
+                    max_sim_to_concept = get_similar_concept(
+                        emb_model, to_concept, res_dicts
+                    )
 
-                # Now that we have a formatted list of predictions, time to match
-                # TODO: finish this
+                    # Merge bbox data with correct labels
+                    matched_rk = {
+                        "from_concept": max_sim_from_concept["box"],
+                        "to_concept": max_sim_to_concept["box"],
+                        "rel_label": {
+                            "rel_label_idx": get_relation_id(
+                                rk_rel["relationship"], sgg_dict
+                            ),
+                            "rel_label_text": rk_rel["relationship"],
+                        },
+                    }
+                    # Fix labels
+                    matched_rk["from_concept"]["bb_label"]["bb_label_idx"] = (
+                        get_concept_id(from_concept, sgg_dict)
+                    )
+                    matched_rk["from_concept"]["bb_label"]["bb_label_text"] = (
+                        from_concept
+                    )
+                    matched_rk["from_concept"]["bb_label"]["bb_label_full"] = (
+                        from_concept  # TODO: fix
+                    )
+                    matched_rk["to_concept"]["bb_label"]["bb_label_idx"] = (
+                        get_concept_id(to_concept, sgg_dict)
+                    )
+                    matched_rk["to_concept"]["bb_label"]["bb_label_text"] = to_concept
+                    matched_rk["to_concept"]["bb_label"]["bb_label_full"] = (
+                        to_concept  # TODO: fix
+                    )
+                    counts["after_cv_match"] += 1
+                    curr_rk_matches.append(matched_rk)
 
-            matched_rk[rk["question_id"]] = curr_rk_matches
+        matched_rk[rk["question_id"]] = curr_rk_matches
 
-    print(counts)
+        print(counts)
+
+        # Save data to file
+        out_path = Path(".", rk_config.get_final_rk_paths(model, ds))
+        save_jsonl(matched_rk, out_path)
