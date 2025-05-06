@@ -73,15 +73,15 @@ def load_pickle(file_path):
 # Handling Model Responses
 # == == == == == == == == == == == == == == == ==
 def load_eval_responses(model, ds, prompt_version):
-    folder_path = f"../really_knows/{model}/results_v{prompt_version}"
-    file_name = f"exp_{ds}_rk.jsonl"
-    return load_jsonl(f"{folder_path}/{file_name}")
+    file_path = Path(
+        "..", "really_knows", model, f"results_v{prompt_version}", f"exp_{ds}_rk.jsonl"
+    )
+    return load_jsonl(file_path)
 
 
 def load_counter_responses(model, ds):
-    folder_path = f"../really_knows/{model}/res_counter"
-    file_name = f"res_{ds}_c_rk.jsonl"
-    return load_jsonl(f"{folder_path}/{file_name}")
+    file_path = Path("..", "really_knows", model, "res_counter", f"res_{ds}_c_rk.jsonl")
+    return load_jsonl(file_path)
 
 
 # == == == == == == == == == == == == == == == ==

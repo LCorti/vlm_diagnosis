@@ -1,6 +1,8 @@
 import os
 import sys
 
+from pathlib import Path
+
 module_path = os.path.abspath(os.path.join("../"))
 if module_path not in sys.path:
     sys.path.append(module_path)
@@ -20,7 +22,8 @@ def main():
     ds_list = dataset_config.get_ds_list()
     # Skip the holdout classes.
     ds_list.remove("vqav2_holdout")
-    out_dir = "../data/datasets/"
+    base_dir = Path("..")
+    out_dir = base_dir.joinpath("data").joinpath("datasets")
 
     for ds in ds_list:
         ds_paths = dataset_config.get_ds_paths(ds)
@@ -30,9 +33,9 @@ def main():
             curr_out_dir = f"{out_dir}/{ds}/imgs_resized/{c}"
             make_dir(curr_out_dir)
 
-            img_list = os.listdir(f"../{curr_imgs_path}")
+            img_list = os.listdir(base_dir.joinpath(curr_imgs_path))
             for img_name in img_list:
-                img_path = f"../{curr_imgs_path}/{img_name}"
+                img_path = base_dir.joinpath(curr_imgs_path).joinpath(img_name)
                 img = load_img(img_path)
                 img = resize_img(img)
                 save_img(img, f"{curr_out_dir}/{img_name}")

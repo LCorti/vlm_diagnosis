@@ -39,8 +39,8 @@ class QuestionFormatter:
             new_q["question_id"] = raw_q["question_id"]
             new_q["question"] = raw_q["text"]
             new_q["img"] = Path(raw_q["image"]).stem
-            new_q["img_path"] = (
-                f"./{self.DATASET_PATHS[ds_class]['imgs']}/{raw_q['image']}"
+            new_q["img_path"] = str(
+                Path(".", self.DATASET_PATHS[ds_class]["imgs"], raw_q["image"])
             )
             new_q["is_open"] = True
             new_q["options"] = None
@@ -56,8 +56,8 @@ class QuestionFormatter:
             )
             new_q["class"] = raw_q["category"]
             new_q["img"] = Path(raw_q["img_path"]).stem
-            new_q["img_path"] = (
-                f"./{self.DATASET_PATHS[ds_class]['imgs']}/{new_q['img']}.jpg"
+            new_q["img_path"] = str(
+                Path(".", self.DATASET_PATHS[ds_class]["imgs"], f"{new_q['img']}.jpg")
             )
             new_q["is_open"] = False
             new_q["options"] = None
@@ -67,8 +67,8 @@ class QuestionFormatter:
             new_q["question"] = raw_q["question"]
             new_q["class"] = ds_class
             new_q["img"] = Path(raw_q["img_path"]).stem
-            new_q["img_path"] = (
-                f"./{self.DATASET_PATHS[ds_class]['imgs']}/{new_q['img']}.jpg"
+            new_q["img_path"] = str(
+                Path(".", self.DATASET_PATHS[ds_class]["imgs"], f"{new_q['img']}.jpg")
             )
             new_q["is_open"] = False
             new_q["options"] = {
@@ -83,8 +83,8 @@ class QuestionFormatter:
             new_q["question"] = raw_q["question"]
             new_q["class"] = ds_class
             new_q["img"] = Path(raw_q["img_path"]).stem
-            new_q["img_path"] = (
-                f"./{self.DATASET_PATHS[ds_class]['imgs']}/{new_q['img']}.jpg"
+            new_q["img_path"] = str(
+                Path(".", self.DATASET_PATHS[ds_class]["imgs"], f"{new_q['img']}.jpg")
             )
             new_q["is_open"] = True
             new_q["options"] = None
@@ -92,7 +92,9 @@ class QuestionFormatter:
         return new_q
 
     def load_llavabench_ans(self):
-        ans_file_path = "../data/datasets/llava-bench/answers_gpt4.jsonl"
+        ans_file_path = Path(
+            "..", "data", "datasets", "llava-bench", "answers_gpt4.jsonl"
+        )
         return load_jsonl(ans_file_path)
 
     def get_llava_answer(self, q_idx):
