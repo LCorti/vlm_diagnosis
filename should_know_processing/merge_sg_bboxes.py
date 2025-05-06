@@ -3,6 +3,8 @@ import numpy as np
 import os
 import sys
 
+from pathlib import Path
+
 module_path = os.path.abspath(os.path.join("../"))
 if module_path not in sys.path:
     sys.path.append(module_path)
@@ -134,7 +136,7 @@ if __name__ == "__main__":
             # Load clean scene graphs
             base_dir = sk_paths[ds_class]["dir"]
             clean_sg_file = sk_paths[ds_class]["sg_clean"]
-            clean_sg = load_jsonl(f"../{base_dir}/{clean_sg_file}")
+            clean_sg = Path("..", base_dir, clean_sg_file)
 
             bb_clusters = {}
 
@@ -207,7 +209,7 @@ if __name__ == "__main__":
                     )
 
             # Save class data to file
-            out_folder = f"../{base_dir}/scene_graphs"
+            out_folder = Path("..", base_dir, "scene_graphs")
             make_dir(out_folder)
 
             if not FULL_DATA:
@@ -216,4 +218,4 @@ if __name__ == "__main__":
                     del img["bboxes_not_rel"]
                     del img["rel_clusters"]
 
-            save_jsonl(clean_sg, f"../{base_dir}/{sk_paths[ds_class]['sg_merged']}")
+            save_jsonl(clean_sg, Path("..", base_dir, sk_paths[ds_class]["sg_merged"]))

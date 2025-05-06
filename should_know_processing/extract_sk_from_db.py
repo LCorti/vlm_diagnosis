@@ -2,6 +2,8 @@ import mysql.connector
 import os
 import sys
 
+from pathlib import Path
+
 module_path = os.path.abspath(os.path.join("../"))
 if module_path not in sys.path:
     sys.path.append(module_path)
@@ -91,7 +93,7 @@ if __name__ == "__main__":
 
             # Save crowdsourced data in different files
             for ds_class in curr_out_paths:
-                out_dir = f"../{curr_out_paths[ds_class]['dir']}"
+                out_dir = Path("..", curr_out_paths[ds_class]["dir"])
                 make_dir(out_dir)
 
                 # Validation data

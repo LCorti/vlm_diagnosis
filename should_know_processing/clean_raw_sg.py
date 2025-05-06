@@ -1,6 +1,8 @@
 import os
 import sys
 
+from pathlib import Path
+
 module_path = os.path.abspath(os.path.join("../"))
 if module_path not in sys.path:
     sys.path.append(module_path)
@@ -72,7 +74,7 @@ if __name__ == "__main__":
             # Load Raw scene graphs
             base_dir = sk_paths[ds_class]["dir"]
             raw_sg_file = sk_paths[ds_class]["sg_raw"]
-            raw_sg = load_json(f"../{base_dir}/{raw_sg_file}")
+            raw_sg = load_json(Path("..", base_dir, raw_sg_file))
 
             # Get lists of concepts
             unique_c_bbox, unique_c_rel = get_unique_concepts(raw_sg)
@@ -102,10 +104,9 @@ if __name__ == "__main__":
                 del img["bboxes"]
 
             # Save current batch of clean scene graphs
-            out_folder = f"../{base_dir}/scene_graphs"
+            out_folder = Path("..", base_dir, "scene_graphs")
             make_dir(out_folder)
 
             save_jsonl(
-                raw_sg["imgs"],
-                f"../{base_dir}/{sk_paths[ds_class]['sg_clean']}",
+                raw_sg["imgs"], Path("..", base_dir, sk_paths[ds_class]["sg_clean"])
             )

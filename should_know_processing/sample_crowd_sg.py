@@ -2,6 +2,8 @@ import numpy as np
 import os
 import sys
 
+from pathlib import Path
+
 module_path = os.path.abspath(os.path.join("../"))
 if module_path not in sys.path:
     sys.path.append(module_path)
@@ -49,7 +51,7 @@ if __name__ == "__main__":
             # Load merged scene graphs
             base_dir = sk_paths[ds_class]["dir"]
             merged_sg_file = sk_paths[ds_class]["sg_merged"]
-            merged_sg = load_jsonl(f"../{base_dir}/{merged_sg_file}")
+            merged_sg = load_jsonl(Path("..", base_dir, merged_sg_file))
 
             # Save number of relations for plotting
             all_n_rels[dataset][ds_class] = []
@@ -102,9 +104,9 @@ if __name__ == "__main__":
                     rel["rel_id"] = crete_rel_id(rel)
 
             # Save data to disk
-            out_folder = f"../{base_dir}/scene_graphs"
+            out_folder = Path("..", base_dir, "scene_graphs")
             make_dir(out_folder)
             save_jsonl(
                 sk_to_keep[dataset][ds_class],
-                f"../{base_dir}/{sk_paths[ds_class]['sg_crowd']}",
+                Path("..", base_dir, sk_paths[ds_class]["sg_crowd"]),
             )

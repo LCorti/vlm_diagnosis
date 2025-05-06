@@ -1,6 +1,8 @@
 import os
 import sys
 
+from pathlib import Path
+
 module_path = os.path.abspath(os.path.join("../"))
 if module_path not in sys.path:
     sys.path.append(module_path)
@@ -27,12 +29,12 @@ if __name__ == "__main__":
 
         for ds_class in sk_paths:
             print(f"Dealing with {ds} + {ds_class}")
-            questions = load_jsonl(f"../{ds_paths[ds_class]['questions']}")
+            questions = load_jsonl(Path("..", ds_paths[ds_class]["questions"]))
             print(f"... Loaded {len(questions)} questions")
 
             base_sk_dir = sk_paths[ds_class]["dir"]
             crowd_sg_file = sk_paths[ds_class]["sg_crowd"]
-            crowd_sg = load_jsonl(f"../{base_sk_dir}/{crowd_sg_file}")
+            crowd_sg = load_jsonl(Path("..", base_sk_dir, crowd_sg_file))
             print(f"... Loaded {len(crowd_sg)} scene graphs")
 
             sampled_questions = []
@@ -58,10 +60,10 @@ if __name__ == "__main__":
                     #     break
 
             # Save individual files
-            out_file_path = f"../{ds_paths[ds_class]['sampled_questions']}"
+            out_file_path = Path("..", ds_paths[ds_class]["sampled_questions"])
             ds_crowd_questions.extend(sampled_questions)
             save_jsonl(sampled_questions, out_file_path)
 
         # Save single file for dataset
-        out_file_path = f"../data/datasets/{ds}/q_crowd.json"
+        out_file_path = Path("..", "data", "datasets", ds, "q_crowd.json")
         save_json(ds_crowd_questions, out_file_path)
