@@ -30,7 +30,7 @@ def load_sk_data(sk_data_paths):
 
         for gf in graph_files:
             g_idx = int(Path(gf).stem.split("_")[1]) - 1
-            sk_data[ds][g_idx] = data_io.load_pickle(f"{sk_dp}/{gf}")
+            sk_data[ds][g_idx] = data_io.load_pickle(Path(sk_dp, gf))
 
     return sk_data
 
@@ -54,9 +54,10 @@ def save_iou_data(curr_iou_data, out_path):
 
 if __name__ == "__main__":
     # Create data paths
-    sk_data_paths = [f"./sk/{ds}/graphs/ann" for ds in DATASETS]
-    rk_data_paths = [f"./rk/{m}/{ds}/graphs" for m in MODELS for ds in DATASETS]
-
+    sk_data_paths = [Path(".", "sk", ds, "graphs", "ann") for ds in DATASETS]
+    rk_data_paths = [
+        Path(".", "rk", m, ds, "graphs") for m in MODELS for ds in DATASETS
+    ]
     # Load SK and RK data
     sk_data = load_sk_data(sk_data_paths)
     rk_data = load_rk_data(rk_data_paths)
@@ -115,7 +116,7 @@ if __name__ == "__main__":
 
         # Save IOU data
         print(f"Saving IOU values for {model}...")
-        out_path = f"./rk/{model}/{ds}"
-        save_iou_data(iou_data[model][ds], f"{out_path}/iou_samples.json")
-        save_iou_data(summary_iou, f"{out_path}/iou_summary.json")
+        out_path = Path(".", "rk", model, ds)
+        save_iou_data(iou_data[model][ds], out_path.joinpath("iou_samples.json"))
+        save_iou_data(summary_iou, out_path.joinpath("iou_summary.json"))
         print("Saved!")

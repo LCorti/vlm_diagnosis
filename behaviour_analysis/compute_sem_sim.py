@@ -24,7 +24,7 @@ def load_sk_data(sk_data_paths):
 
         for gf in graph_files:
             g_idx = int(Path(gf).stem.split("_")[1]) - 1
-            sk_data[ds][g_idx] = data_io.load_pickle(f"{sk_dp}/{gf}")
+            sk_data[ds][g_idx] = data_io.load_pickle(Path(sk_dp, gf))
 
     return sk_data
 
@@ -51,9 +51,10 @@ if __name__ == "__main__":
     emb_model = SentenceTransformer("sentence-transformers/all-mpnet-base-v2")
 
     # Create data paths
-    sk_data_paths = [f"./sk/{ds}/graphs/ann" for ds in DATASETS]
-    rk_data_paths = [f"./rk/{m}/{ds}/graphs" for m in MODELS for ds in DATASETS]
-
+    sk_data_paths = [Path(".", "sk", ds, "graphs", "ann") for ds in DATASETS]
+    rk_data_paths = [
+        Path(".", "rk", m, ds, "graphs") for m in MODELS for ds in DATASETS
+    ]
     # Load SK and RK data
     sk_data = load_sk_data(sk_data_paths)
     rk_data = load_rk_data(rk_data_paths)
@@ -97,7 +98,7 @@ if __name__ == "__main__":
 
         # Save similarity data
         print(f"Saving similarity values for {model}...")
-        out_path = f"./rk/{model}/{ds}"
-        save_sim_data(sim_data[model][ds], f"{out_path}/sim_samples.json")
-        save_sim_data(summary_sim, f"{out_path}/sim_summary.json")
+        out_path = Path(".", "rk", model, ds)
+        save_sim_data(sim_data[model][ds], out_path.joinpath("sim_samples.json"))
+        save_sim_data(summary_sim, out_path.joinpath("sim_summary.json"))
         print("Saved!")

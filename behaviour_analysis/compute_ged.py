@@ -31,7 +31,7 @@ def load_sk_data(sk_data_paths):
 
         for gf in graph_files:
             g_idx = int(Path(gf).stem.split("_")[1]) - 1
-            sk_data[ds][g_idx] = data_io.load_pickle(f"{sk_dp}/{gf}")
+            sk_data[ds][g_idx] = data_io.load_pickle(Path(sk_dp, gf))
 
     return sk_data
 
@@ -55,8 +55,10 @@ def save_ged_data(curr_ged_data, out_path):
 
 if __name__ == "__main__":
     # Create data paths
-    sk_data_paths = [f"./sk/{ds}/graphs/ann" for ds in DATASETS]
-    rk_data_paths = [f"./rk/{m}/{ds}/graphs" for m in MODELS for ds in DATASETS]
+    sk_data_paths = [Path(".", "sk", ds, "graphs", "ann") for ds in DATASETS]
+    rk_data_paths = [
+        Path(".", "rk", m, ds, "graphs") for m in MODELS for ds in DATASETS
+    ]
 
     # Load SK and RK data
     sk_data = load_sk_data(sk_data_paths)
@@ -94,7 +96,7 @@ if __name__ == "__main__":
 
         # Save GED data
         print(f"Saving GED values for {model}...")
-        out_path = f"./rk/{model}/{ds}"
-        save_ged_data(ged_data[model][ds], f"{out_path}/ged_samples.json")
-        save_ged_data(summary_ged, f"{out_path}/ged_summary.json")
+        out_path = Path(".", "rk", model, ds)
+        save_ged_data(ged_data[model][ds], out_path.joinpath("ged_samples.json"))
+        save_ged_data(summary_ged, out_path.joinpath("ged_summary.json"))
         print("Saved!")
