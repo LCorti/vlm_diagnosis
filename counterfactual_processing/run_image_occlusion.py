@@ -141,7 +141,13 @@ if __name__ == "__main__":
             raise
 
         # Load questions
-        questions_file = f"../data/datasets/{dataset}/q_crowd.json"
+        questions_file = (
+            Path("..")
+            .joinpath("data")
+            .joinpath("datasets")
+            .joinpath(dataset)
+            .joinpath("q_crowd.json")
+        )
         questions = load_json(questions_file)
 
         # Add summary entry for current dataset
@@ -159,7 +165,9 @@ if __name__ == "__main__":
             if ds_class not in ds_sk:
                 base_sk_dir = sk_paths[ds_class]["dir"]
                 curr_sg_file = sk_paths[ds_class]["sg_crowd"]
-                curr_sg = load_jsonl(f"../{base_sk_dir}/{curr_sg_file}")
+                curr_sg = load_jsonl(
+                    Path("..").joinpath(base_sk_dir).joinpath(curr_sg_file)
+                )
                 ds_sk[ds_class] = curr_sg
             # Retrieve corresponding SG data
             curr_sg = lookup_sg(curr_q["img"], ds_sk[ds_class])
