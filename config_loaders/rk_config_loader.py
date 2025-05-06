@@ -27,5 +27,8 @@ class RKConfig:
     def get_parsed_rk_paths(self, model, ds_name):
         return self.get_rk_paths(model, ds_name, "parsed")
 
+    def get_final_rk_paths(self, model, ds_name):
+        return self.get_rk_paths(model, ds_name, "final")
+
     def get_counterfactual_rk_paths(self, model, ds_name):
         return self.get_rk_paths(model, ds_name, "counter")
