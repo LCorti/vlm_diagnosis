@@ -45,7 +45,7 @@ if __name__ == "__main__":
     for model, ds in zip(all_models, all_ds):
         print(f"Evaluating {model} on {ds}...")
         # Load responses for current model + dataset combo
-        resp_path = f"../{rk_config.get_parsed_rk_paths(model, ds)}"
+        resp_path = Path("..", rk_config.get_parsed_rk_paths(model, ds))
         resp_path = resp_path.format(PROMPT_VERSION)
         resp_data = load_jsonl(resp_path)
         count_ok = 0
@@ -54,7 +54,7 @@ if __name__ == "__main__":
         ds_paths = ds_config.get_ds_paths(ds)
         for ds_class in ds_paths:
             # Load questions
-            questions_path = f"../{ds_paths[ds_class]['sampled_questions']}"
+            questions_path = Path("..", ds_paths[ds_class]["sampled_questions"])
             questions = load_jsonl(questions_path)
 
             if ds in ["llava-bench", "mmbench"]:
@@ -223,6 +223,6 @@ if __name__ == "__main__":
 
         # Save measures to file
         # Make dirs, if necessary
-        out_path = f"../{eval_config.get_eval_paths(model, ds)}"
+        out_path = Path("..", eval_config.get_eval_paths(model, ds))
         make_dir(Path(out_path).parent)
         save_json(eval_dict[model][ds], out_path)
