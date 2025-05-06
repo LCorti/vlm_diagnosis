@@ -1,6 +1,8 @@
 import os
 import sys
 
+from pathlib import Path
+
 module_path = os.path.abspath(os.path.join("../"))
 if module_path not in sys.path:
     sys.path.append(module_path)
@@ -349,7 +351,13 @@ if __name__ == "__main__":
         # Get current sk paths
         sk_paths = sk_config.get_sk_paths(dataset)
         # Load questions for this dataset
-        q_path = f"../data/datasets/{dataset}/q_crowd.json"
+        q_path = (
+            Path("..")
+            .joinpath("data")
+            .joinpath("datasets")
+            .joinpath(dataset)
+            .joinpath("q_crowd.json")
+        )
         ds_questions = load_json(q_path)
         # Add entry for statistics
         if dataset not in stats:
@@ -362,15 +370,15 @@ if __name__ == "__main__":
                 stats[dataset][ds_class] = {"samples": {}, "summary": {}}
 
             # Load scene graphs showed to crowd workers for a given class
-            base_dir = sk_paths[ds_class]["dir"]
+            base_dir = Path("..").joinpath(sk_paths[ds_class]["dir"])
             crowd_sg_file = sk_paths[ds_class]["sg_crowd"]
-            crowd_sg = load_jsonl(f"../{base_dir}/{crowd_sg_file}")
+            crowd_sg = load_jsonl(base_dir.joinpath(crowd_sg_file))
             # Load data from validation step
             crowd_val_file = sk_paths[ds_class]["val_step"]
-            crowd_val = load_jsonl(f"../{base_dir}/{crowd_val_file}")
+            crowd_val = load_jsonl(base_dir.joinpath(crowd_val_file))
             # Load data from annotation step
             crowd_ann_file = sk_paths[ds_class]["ann_exp"]
-            crowd_ann = load_jsonl(f"../{base_dir}/{crowd_ann_file}")
+            crowd_ann = load_jsonl(base_dir.joinpath(crowd_ann_file))
 
             # Parse validation and annotation data
             parsed_crowd_val = parse_validation_data(crowd_val)
@@ -406,9 +414,9 @@ if __name__ == "__main__":
             # Save to disk
             print("... Saving reconciled data to file...")
             sg_final_file = sk_paths[ds_class]["sk_final"]
-            out_file_path = f"../{base_dir}/{sg_final_file}"
+            out_file_path = base_dir.joinpath(sg_final_file)
             save_jsonl(sg_final, out_file_path)
             print("... Saving stats to file...")
-            out_file_path = f"../{base_dir}/stats.json"
+            out_file_path = base_dir.joinpath("stats.json")
             save_json(stats[dataset][ds_class], out_file_path)
             print("Saved.")
