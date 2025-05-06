@@ -1,13 +1,14 @@
-import numpy as np
 import os
 import sys
+from pathlib import Path
+
+import numpy as np
 
 module_path = os.path.abspath(os.path.join("../"))
 if module_path not in sys.path:
     sys.path.append(module_path)
 
 from config_loaders.sk_config_loader import SKConfig
-from pathlib import Path
 from utils.data_io import load_json, load_jsonl, make_dir, save_json
 from utils.graph_utils import compute_concepts_powerset
 
@@ -93,12 +94,12 @@ if __name__ == "__main__":
         combinations_details = {}
         base_dir = Path(__file__).parent.parent
         base_path_details = base_dir.joinpath(
-            f"./data/datasets/{dataset}/imgs_occluded/"
+            ".", "data", "datasets", dataset, "imgs_occluded"
         )
         make_dir(base_path_details)
         path_comb_details = base_path_details.joinpath("details.json")
         # Load questions
-        questions_file = f"../data/datasets/{dataset}/q_crowd.json"
+        questions_file = Path("..", "data", "datasets", dataset, "q_crowd.json")
         questions = load_json(questions_file)
 
         for curr_q in questions:
@@ -107,7 +108,7 @@ if __name__ == "__main__":
             if ds_class not in ds_sk:
                 base_sk_dir = sk_paths[ds_class]["dir"]
                 curr_sg_file = sk_paths[ds_class]["sg_crowd"]
-                curr_sg = load_jsonl(f"../{base_sk_dir}/{curr_sg_file}")
+                curr_sg = load_json(Path("..", base_sk_dir, curr_sg_file))
                 ds_sk[ds_class] = curr_sg
             # Retrieve corresponding SG data
             curr_sg = lookup_sg(curr_q["img"], ds_sk[ds_class])

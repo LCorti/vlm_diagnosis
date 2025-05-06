@@ -127,10 +127,10 @@ if __name__ == "__main__":
         powerset_details = {}
         base_dir = Path(__file__).parent.parent
         path_summary = base_dir.joinpath(
-            f"./data/datasets/{dataset}/imgs_occluded/summary.json"
+            Path(".", "data", "datasets", dataset, "imgs_occluded", "summary.json")
         )
         path_powerset_details = base_dir.joinpath(
-            f"./data/datasets/{dataset}/imgs_occluded/details.json"
+            Path(".", "data", "datasets", dataset, "imgs_occluded", "details.json")
         )
 
         # Try to load combination data
@@ -184,7 +184,15 @@ if __name__ == "__main__":
 
             # Run occlusion
             base_path_imgs = base_dir.joinpath(
-                f"./data/datasets/{dataset}/imgs_occluded/{ds_class}/{curr_q['question_id']}"
+                Path(
+                    ".",
+                    "data",
+                    "datasets",
+                    dataset,
+                    "imgs_occluded",
+                    ds_class,
+                    curr_q["question_id"],
+                )
             )
 
             make_dir(base_path_imgs)
