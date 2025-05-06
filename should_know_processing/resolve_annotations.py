@@ -343,7 +343,9 @@ if __name__ == "__main__":
     ds_list = sk_config.get_sk_list()
     ds_list.remove("vqav2_holdout")
     # Load SGG dict to match concept and relation labels
-    sgg_dict = load_json("../data/common/sgg_dicts.json")
+    sgg_dict = load_json(
+        Path("..").joinpath("data").joinpath("common").joinpath("sgg_dicts.json")
+    )
     stats = {}
 
     for dataset in ds_list:
