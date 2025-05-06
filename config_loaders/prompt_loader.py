@@ -4,19 +4,22 @@ from pathlib import Path
 
 class PromptLoader:
     def __init__(self, prompt_version=1, load_counterfactual=False):
+        self.SE_PROMPTS_PATH = Path(
+            "..",
+            "config",
+            "prompts",
+            "self_explanations",
+            f"self_expl_v{prompt_version}.yaml",
+        )
         self.SE_PROMPTS_PATH = (
-            Path(__file__)
-            .parent.joinpath(
-                f"../config/prompts/self_explanations/self_expl_v{prompt_version}.yaml"
-            )
-            .resolve()
+            Path(__file__).parent.joinpath(self.SE_PROMPTS_PATH).resolve()
         )
         self.SE_PROMPTS = self.load_se_prompts()
 
         # [OLD] Load prompts for counterfactual responses.
         if load_counterfactual:
             self.COUNTER_PROMPTS_PATH = Path(
-                "../config/prompts/counterfactual/counter_resp.yaml"
+                "..", "config", "prompts", "counterfactual", "counter_resp.yaml"
             ).resolve()
             self.COUNTER_PROMPTS = self.load_counter_prompts()
 

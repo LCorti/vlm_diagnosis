@@ -4,8 +4,9 @@ from pathlib import Path
 
 class EvalConfigLoader:
     def __init__(self):
+        self.EVAL_CONFIG_PATH = Path("..", "config", "eval_paths.yaml")
         self.EVAL_CONFIG_PATH = (
-            Path(__file__).parent.joinpath("../config/eval_paths.yaml").resolve()
+            Path(__file__).parent.joinpath(self.EVAL_CONFIG_PATH).resolve()
         )
         self.EVAL_PATHS = self.load_eval_config(self.EVAL_CONFIG_PATH)
 
