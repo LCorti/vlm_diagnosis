@@ -160,4 +160,6 @@ class GenUtils:
             for rk in parsed_rk["triples"]:
                 rk_match = re.search(self.GROUP_PATTERN, rk)
                 if rk_match is not None:
-                    parsed_rk["triple_objs"].append(rk_match.groupdict())
+                    parsed_rk["triple_objs"].append(
+                        {k: v.lower() for k, v in rk_match.groupdict()}
+                    )
