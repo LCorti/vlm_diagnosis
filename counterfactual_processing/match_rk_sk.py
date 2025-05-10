@@ -414,7 +414,7 @@ if __name__ == "__main__":
                     counts[model][ds]["after_cv_match"] += 1
                     curr_rk_matches.append(matched_rk)
 
-        matched_rk[rk["question_id"]] = curr_rk_matches
+            matched_rk[rk["question_id"]] = curr_rk_matches
 
         print(counts)
 
