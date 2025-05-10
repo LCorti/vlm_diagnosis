@@ -198,7 +198,7 @@ if __name__ == "__main__":
         rk_parsed_path = Path("..", rk_parsed_path)
         rk_parsed = load_jsonl(rk_parsed_path)
 
-        matched_rk = {}
+        all_matches = {}
 
         for rk in rk_parsed:
             print(f">> Checking question {rk['question_id']}")
@@ -414,11 +414,11 @@ if __name__ == "__main__":
                     counts[model][ds]["after_cv_match"] += 1
                     curr_rk_matches.append(matched_rk)
 
-            matched_rk[rk["question_id"]] = curr_rk_matches
+            all_matches[rk["question_id"]] = curr_rk_matches
 
         print(counts)
 
         # Save data to file
         out_path = Path("..", rk_config.get_final_rk_paths(model, ds))
         make_dir(out_path.parent)
-        save_json(matched_rk, out_path)
+        save_json(all_matches, out_path)
