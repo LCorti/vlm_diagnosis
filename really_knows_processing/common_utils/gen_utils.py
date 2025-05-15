@@ -13,7 +13,7 @@ from config_loaders.prompt_loader import PromptLoader
 
 
 class GenUtils:
-    def __init__(self, model_name, prompt_version=1):
+    def __init__(self, model_name: str, prompt_version=1) -> None:
         self.PROMPT_VERSION = prompt_version
         self.PROMPT_FILE_PATH = "../prompts_rk_v{}.yaml".format(self.PROMPT_VERSION)
         self.MODEL_NAME = model_name
@@ -35,13 +35,13 @@ class GenUtils:
             self.SEARCH_PATTERN = r"\(Entity: (.+), Relationship: (.+), Entity: (.+)\)"
             self.GROUP_PATTERN = r"\(Entity: (?P<from_concept>.+), Relationship: (?P<relationship>.+), Entity: (?P<to_concept>.+)\)"
 
-    def get_question_template(self, ds_name):
+    def get_question_template(self, ds_name: str) -> str:
         return self.PROMPT_LOADER.get_question_template(self.MODEL_NAME, ds_name)
 
-    def get_rationale_template(self):
+    def get_rationale_template(self) -> str:
         return self.PROMPT_LOADER.get_rationale_template(self.MODEL_NAME)
 
-    def get_out_format_template(self):
+    def get_out_format_template(self) -> str:
         return self.PROMPT_LOADER.get_out_format_template(self.MODEL_NAME)
 
     def get_gen_config(
@@ -51,7 +51,7 @@ class GenUtils:
         temperature=0.1,
         max_new_tokens=256,
         use_cache=True,
-    ):
+    ) -> dict | GenerationConfig:
         # Return if self.GEN_CONFIG already initialised.
         if self.GEN_CONFIG:
             return self.GEN_CONFIG
@@ -87,8 +87,8 @@ class GenUtils:
         return self.GEN_CONFIG
 
     def gen_response_internvl2(
-        self, model, tokenizer, image_tensor, text_input, history=None
-    ):
+        self, model: str, tokenizer, image_tensor, text_input: str, history=None
+    ) -> str:
         return model.chat(
             tokenizer,
             image_tensor,
@@ -98,7 +98,7 @@ class GenUtils:
             return_history=True,
         )
 
-    def gen_response_llava_next(self, model, tokenizer, image_tensor, input_ids):
+    def gen_response_llava_next(self, model, tokenizer, image_tensor, input_ids) -> str:
         with torch.inference_mode():
             output_ids = model.generate(
                 input_ids, images=image_tensor, generation_config=self.GEN_CONFIG
@@ -107,7 +107,7 @@ class GenUtils:
 
     def gen_response_sharegpt4v(
         self, model, tokenizer, image_tensor, input_ids, stopping_criteria, stop_str
-    ):
+    ) -> str:
         with torch.inference_mode():
             output_ids = model.generate(
                 input_ids,
@@ -135,7 +135,7 @@ class GenUtils:
         outputs = outputs.strip()
         return outputs
 
-    def parse_raw_rk(self, raw_rk):
+    def parse_raw_rk(self, raw_rk: str) -> dict:
         # Prep new object
         parsed_rk = {}
         parsed_rk["question_id"] = raw_rk["question_id"]
