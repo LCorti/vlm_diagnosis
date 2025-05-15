@@ -15,7 +15,7 @@ from utils.data_io import make_dir, save_jsonl
 # If not, change the the connection configuration below
 
 
-def get_query_annotations():
+def get_query_annotations() -> str:
     return "SELECT \
             U.id AS id_user, optout, A.id as id_annotation, \
             correctly_identified, new_label_entity1 AS new_label_from_concept, \
@@ -35,7 +35,7 @@ def get_query_annotations():
             WHERE U.optout=0"
 
 
-def get_query_new_triples():
+def get_query_new_triples() -> str:
     return "SELECT T.id AS id, U.id AS id_user, optout, \
             id_json, entity1, coords_entity1, relationship, \
             entity2, coords_entity2, new_user_annotation, T.id_image, \

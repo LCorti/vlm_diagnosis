@@ -17,7 +17,7 @@ MIN_RELS_MMBENCH = 5
 SAMPLE_SIZE = 75
 
 
-def crete_rel_id(relation):
+def crete_rel_id(relation: dict) -> str:
     return "{}-{}-{}".format(
         relation["from_concept"]["bb_label"]["bb_label_idx"],
         relation["rel_label"]["rel_label_idx"],
@@ -25,7 +25,7 @@ def crete_rel_id(relation):
     )
 
 
-def get_n_rels(images):
+def get_n_rels(images: dict) -> list:
     return [(i["img_id"], len(i["rel_clusters_unique"])) for i in images]
 
 

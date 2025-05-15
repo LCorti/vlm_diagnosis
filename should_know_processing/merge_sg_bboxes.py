@@ -18,7 +18,7 @@ from utils.data_io import make_dir, load_jsonl, save_jsonl
 FULL_DATA = False
 
 
-def flatten_bboxes_data(bboxes):
+def flatten_bboxes_data(bboxes: list[dict]) -> list:
     bboxes_list = [
         [
             int(bb["top_left_x"]),
@@ -31,7 +31,7 @@ def flatten_bboxes_data(bboxes):
     return bboxes_list
 
 
-def compute_clusters(bboxes, eps):
+def compute_clusters(bboxes: list, eps: float) -> dict:
     # Run 3 times the clustering algorithm, adjusting the threshold
     # to get a good number of clusters.
     clusters = {
@@ -42,7 +42,7 @@ def compute_clusters(bboxes, eps):
     return clusters
 
 
-def format_cluster_bbox(bb):
+def format_cluster_bbox(bb: tuple) -> dict:
     formatted_bb = {
         "top_left_x": int(bb[0]),
         "top_left_y": int(bb[1]),
@@ -54,8 +54,8 @@ def format_cluster_bbox(bb):
     return formatted_bb
 
 
-def bbox_to_polygon(bb):
-    poly = Polygon(
+def bbox_to_polygon(bb: dict) -> Polygon:
+    return Polygon(
         [
             (bb["top_left_x"], bb["top_left_y"]),
             (bb["top_left_x"] + bb["width"], bb["top_left_y"]),
@@ -63,22 +63,21 @@ def bbox_to_polygon(bb):
             (bb["bottom_right_x"], bb["bottom_right_y"]),
         ]
     )
-    return poly
 
 
-def overlap(bb1, bb2):
+def overlap(bb1: Polygon, bb2: Polygon) -> Polygon:
     rect1 = bbox_to_polygon(bb1)
     rect2 = bbox_to_polygon(bb2)
     return rect1.intersects(rect2)
 
 
-def compute_distance(bb1, bb2):
+def compute_distance(bb1: Polygon, bb2: Polygon) -> float:
     rect1 = bbox_to_polygon(bb1)
     rect2 = bbox_to_polygon(bb2)
     return distance(rect1, rect2)
 
 
-def lookup_bbox(img_data, bb_rel, key):
+def lookup_bbox(img_data: dict, bb_rel: dict, key: str) -> dict:
     for bb in img_data["bboxes_rel"]:
         if (
             bb_rel[key]["bb_label_idx"] == bb["bb_label"]["bb_label_idx"]
@@ -88,7 +87,7 @@ def lookup_bbox(img_data, bb_rel, key):
             return bb
 
 
-def resolve_concept(img_data, bb_rel, bb_c, key):
+def resolve_concept(img_data: dict, bb_rel: dict, bb_c: dict, key: str) -> str:
     if (
         bb_rel[key]["bb_label_idx"] == bb_c["bb_label"]["bb_label_idx"]
         and bb_rel[key]["bb_label_text"] == bb_c["bb_label"]["bb_label_text"]
@@ -99,7 +98,7 @@ def resolve_concept(img_data, bb_rel, bb_c, key):
         return lookup_bbox(img_data, bb_rel, key)
 
 
-def remove_duplicate_rels(relations):
+def remove_duplicate_rels(relations: list[dict]) -> list:
     no_dupes = {}
     for rel in relations:
         from_concept_idx = rel["from_concept"]["bb_label"]["bb_label_idx"]
@@ -112,7 +111,7 @@ def remove_duplicate_rels(relations):
     return list(no_dupes.values())
 
 
-def retrieve_img(clean_sg, img_idx):
+def retrieve_img(clean_sg: list[dict], img_idx: int) -> dict:
     return next(img for img in clean_sg if img["img_id"] == img_idx)
 
 

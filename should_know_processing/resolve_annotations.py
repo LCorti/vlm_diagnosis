@@ -11,7 +11,7 @@ from config_loaders.sk_config_loader import SKConfig
 from utils.data_io import load_json, load_jsonl, save_json, save_jsonl
 
 
-def parse_validation_data(val_data):
+def parse_validation_data(val_data: list[dict]) -> dict:
     # Check no annotation data is present
     outcome, _ = check_val_data(val_data)
     if not outcome:
@@ -50,7 +50,7 @@ def parse_validation_data(val_data):
     return val_data_dict
 
 
-def parse_annotation_data(ann_data):
+def parse_annotation_data(ann_data: list[dict]) -> dict:
     # Check no validation data is present
     outcome, _ = check_ann_data(ann_data)
     if not outcome:
@@ -76,7 +76,7 @@ def parse_annotation_data(ann_data):
     return ann_data_dict
 
 
-def check_data(data, step):
+def check_data(data: list[dict], step: str) -> (bool, list):
     new_ann_value = 0 if step == "val" else 1
     print(f">> Checking data from {step} step:")
     check_entries = []
@@ -100,15 +100,15 @@ def check_data(data, step):
         return False, check_entries
 
 
-def check_val_data(val_data):
+def check_val_data(val_data: list[dict]) -> (bool, list):
     return check_data(val_data, "val")
 
 
-def check_ann_data(ann_data):
+def check_ann_data(ann_data: list[dict]) -> (bool, list):
     return check_data(ann_data, "ann")
 
 
-def fix_bbox(bbox_to_fix):
+def fix_bbox(bbox_to_fix: str) -> dict:
     # bbox_to_fix: string formatted like "[start_x, start_y, width, height]"
     start_x, start_y, width, height = (
         int(elem) for elem in bbox_to_fix.replace("[", "").replace("]", "").split(",")
@@ -151,21 +151,23 @@ def fix_bbox(bbox_to_fix):
     return fixed_bbox
 
 
-def get_concept_id(concept_label, sgg_dict):
+def get_concept_id(concept_label: str, sgg_dict: dict) -> int | str:
     if concept_label in sgg_dict["label_to_idx"]:
         return sgg_dict["label_to_idx"][concept_label]
     else:
         return "new"
 
 
-def get_relation_id(relation_label, sgg_dict):
+def get_relation_id(relation_label: str, sgg_dict: dict) -> int | str:
     if relation_label in sgg_dict["predicate_to_idx"]:
         return sgg_dict["predicate_to_idx"][relation_label]
     else:
         return "new"
 
 
-def resolve_val_data(sg_data, parsed_crowd_val, sgg_dict, question):
+def resolve_val_data(
+    sg_data: dict, parsed_crowd_val: dict, sgg_dict: dict, question: dict
+) -> (dict, dict):
     res_val_entry = {
         "question_id": question["question_id"],
         "img": question["img"],
@@ -269,7 +271,9 @@ def resolve_val_data(sg_data, parsed_crowd_val, sgg_dict, question):
     return res_val_entry, stats
 
 
-def resolve_ann_data(val_entry, parsed_crowd_ann, sgg_dict, question, stats):
+def resolve_ann_data(
+    val_entry: dict, parsed_crowd_ann: dict, sgg_dict: dict, question: dict, stats: dict
+) -> (dict, dict):
     res_ann_entry = val_entry
     # Add new relationships
     question_key = int(res_ann_entry["question_id"]) + 1
@@ -317,8 +321,13 @@ def resolve_ann_data(val_entry, parsed_crowd_ann, sgg_dict, question, stats):
 
 
 def resolve_crowd_data(
-    sg_data, parsed_crowd_val, parsed_crowd_ann, sgg_dict, ds_questions, stats
-):
+    sg_data: dict,
+    parsed_crowd_val: dict,
+    parsed_crowd_ann: dict,
+    sgg_dict: dict,
+    ds_questions: list[dict],
+    stats: dict,
+) -> (dict, dict):
     resolved_data = []
     stats = {}
     for question in ds_questions:
