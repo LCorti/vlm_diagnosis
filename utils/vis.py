@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import networkx as nx
 import numpy as np
+import pandas as pd
 
 from matplotlib.transforms import ScaledTranslation
 
@@ -17,7 +18,7 @@ DS_MAP = {
 # -- -- -- -- -- -- -- -- -- -- -- --
 
 
-def save_graph_to_img(graph, out_file, highlight_cycles=False):
+def save_graph_to_img(graph: nx.DiGraph, out_file: str, highlight_cycles=False) -> None:
     # Plot graph
     plt.figure(figsize=(15, 15))
     plt.axis("off")
@@ -57,7 +58,7 @@ def save_graph_to_img(graph, out_file, highlight_cycles=False):
     plt.close()
 
 
-def plot_concepts_vs_relations(sample_stats_df, output_path):
+def plot_concepts_vs_relations(sample_stats_df: pd.DataFrame, output_path: str) -> None:
     plt.figure(figsize=(10, 6))
     plt.scatter(
         sample_stats_df["num_relations"],
@@ -84,7 +85,7 @@ def plot_concepts_vs_relations(sample_stats_df, output_path):
 # -- -- -- -- -- -- -- -- -- -- -- --
 
 
-def set_custom_patch_color_sk(b_plot, color_key="concept"):
+def set_custom_patch_color_sk(b_plot: plt.boxplot, color_key="concept") -> None:
     # Palette taken from https://venngage.com/tools/accessible-color-palette-generator
     color_map = {
         "concept": ["#b27795", "#c18750", "#7f9a46"],
@@ -97,7 +98,9 @@ def set_custom_patch_color_sk(b_plot, color_key="concept"):
         patch.set(hatch=hatches[idx_col])
 
 
-def plot_boxplot_sk(all_concept_counts, all_relation_counts, output_path):
+def plot_boxplot_sk(
+    all_concept_counts: dict, all_relation_counts: dict, output_path: str
+) -> None:
     _, axes = plt.subplots(
         1, len(all_concept_counts.keys()), sharey=True, figsize=(15, 4)
     )
@@ -157,7 +160,7 @@ def plot_boxplot_sk(all_concept_counts, all_relation_counts, output_path):
 # -- -- -- -- -- -- -- -- -- -- -- --
 
 
-def set_custom_patch_color_rk(b_plot):
+def set_custom_patch_color_rk(b_plot: plt.boxplot) -> None:
     # Palette taken from https://venngage.com/tools/accessible-color-palette-generator
     color_map = ["#e6a6a3", "#f1c3c2", "#b0d3dc", "#8cbcc7"]
     hatches = ["...", "///", "xxx", "+++"]
@@ -167,7 +170,9 @@ def set_custom_patch_color_rk(b_plot):
         patch.set(hatch=hatches[idx_col])
 
 
-def plot_boxplot_rk(all_concept_counts, all_relation_counts, output_path):
+def plot_boxplot_rk(
+    all_concept_counts: dict, all_relation_counts: dict, output_path: str
+) -> None:
     fig, axes = plt.subplots(
         1, len(all_concept_counts.keys()), sharey=True, figsize=(15, 4)
     )
@@ -233,7 +238,7 @@ def plot_boxplot_rk(all_concept_counts, all_relation_counts, output_path):
 # -- -- -- -- -- -- -- -- -- -- -- --
 
 
-def set_custom_patch_color_sim(b_plot, pos):
+def set_custom_patch_color_sim(b_plot: plt.boxplot, pos: int) -> None:
     # Palette taken from https://venngage.com/tools/accessible-color-palette-generator
     color_map = ["#5ba300", "#89ce00", "#e6308a", "#b51963"]
     hatch_density = 2
@@ -249,7 +254,7 @@ def set_custom_patch_color_sim(b_plot, pos):
         patch.set(hatch=hatches[pos - 1])
 
 
-def plot_boxplot_sim(data, out_path):
+def plot_boxplot_sim(data: dict, out_path: str) -> None:
     _, axes = plt.subplots(1, len(data.keys()), sharey=True, figsize=(15, 4))
 
     model_keys = list(data.keys())
@@ -289,7 +294,7 @@ def plot_boxplot_sim(data, out_path):
     plt.close()
 
 
-def plot_split_similarity_values(df, out_path):
+def plot_split_similarity_values(df: pd.DataFrame, out_path: str) -> None:
     model_keys = df["model"].unique()
     ds_keys = df["dataset"].unique()
     _, axes = plt.subplots(1, len(model_keys), sharey=True, figsize=(15, 4))
@@ -340,7 +345,7 @@ def plot_split_similarity_values(df, out_path):
     plt.close()
 
 
-def plot_behaviour_counts(data, totals, out_path):
+def plot_behaviour_counts(data, totals, out_path) -> None:
     _, axes = plt.subplots(1, 3, sharey=True, layout="constrained", figsize=(15, 4))
 
     models = ["InternVL2", "LLaVa-1.6", "MiniGPT-4", "ShareGPT4V"]

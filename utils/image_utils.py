@@ -4,27 +4,27 @@ from PIL import Image, ImageDraw
 # https://github.com/waxnkw/IETrans-SGG.pytorch
 
 
-def load_img(img_path):
+def load_img(img_path: str) -> Image:
     img = Image.open(img_path)
     return img
 
 
-def save_img(pil_img, file_path):
+def save_img(pil_img: Image, file_path: str) -> None:
     rgb_img = pil_img.convert("RGB")
     rgb_img.save(file_path)
 
 
-def from_array(array):
+def from_array(array) -> Image:
     return Image.fromarray(array)
 
 
-def resize_img(pil_img):
+def resize_img(pil_img: Image) -> Image:
     size = get_size(pil_img.size)
     pil_img = pil_img.resize(size)
     return pil_img
 
 
-def get_size(image_size):
+def get_size(image_size: tuple) -> tuple:
     min_size = 600
     max_size = 1000
     w, h = image_size
@@ -45,7 +45,7 @@ def get_size(image_size):
     return (ow, oh)
 
 
-def draw_single_box(pic, box, color="red", draw_info=None):
+def draw_single_box(pic: Image, box: dict, color="red", draw_info=None) -> None:
     draw = ImageDraw.Draw(pic)
     draw.rectangle(
         (
@@ -66,7 +66,7 @@ def draw_single_box(pic, box, color="red", draw_info=None):
         draw.text((box["top_left_x"], box["top_left_y"]), info)
 
 
-def draw_bboxes(pil_img, bboxes):
+def draw_bboxes(pil_img: Image, bboxes: list[dict]) -> Image:
     size = get_size(pil_img.size)
     pil_img = pil_img.resize(size)
 
@@ -77,7 +77,7 @@ def draw_bboxes(pil_img, bboxes):
     return pil_img
 
 
-def list_relations(relations):
+def list_relations(relations: list[dict]) -> list[str]:
     rel_triples = []
     for idx, rel in enumerate(relations):
         curr_rel = "{} \t: {}, {}, {}".format(

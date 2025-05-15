@@ -1,7 +1,8 @@
+import networkx as nx
 import numpy as np
 
 
-def compute_ic(elem, count_dict, freq_dict):
+def compute_ic(elem: str, count_dict: dict, freq_dict: dict) -> float:
     # If we have the frequency for a particular element, we use that.
     # Otherwise, we consider count(element) = 1 and then compute its frequency.
     if elem in freq_dict:
@@ -11,7 +12,7 @@ def compute_ic(elem, count_dict, freq_dict):
     return ic
 
 
-def compute_ic_relation(relation, sg_freqs):
+def compute_ic_relation(relation: tuple, sg_freqs: dict) -> float:
     from_concept = relation[0]
     predicate = relation[1]
     to_concept = relation[2]
@@ -27,7 +28,7 @@ def compute_ic_relation(relation, sg_freqs):
     return ic_from_concept + ic_predicate + ic_to_concept
 
 
-def compute_ic_predicates(graph, sg_freqs):
+def compute_ic_predicates(graph: nx.DiGraph, sg_freqs: dict) -> float:
     pred_list = [graph[e[0]][e[1]]["label"] for e in graph.edges]
     all_pred_ics = []
     for pred in pred_list:
@@ -37,7 +38,7 @@ def compute_ic_predicates(graph, sg_freqs):
     return np.mean(all_pred_ics)
 
 
-def compute_ic_concepts(graph, sg_freqs):
+def compute_ic_concepts(graph: nx.DiGraph, sg_freqs: dict) -> float:
     concept_list = list(graph.nodes)
     all_concept_ics = []
     for concept in concept_list:

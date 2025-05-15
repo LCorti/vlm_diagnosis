@@ -17,7 +17,7 @@ Images are directly saved there. See sk_collection_webapp directory.
 """
 
 
-def main():
+if __name__ == "__main__":
     dataset_config = DatasetConfig()
     ds_list = dataset_config.get_ds_list()
     # Skip the holdout classes.
@@ -39,7 +39,3 @@ def main():
                 img = load_img(img_path)
                 img = resize_img(img)
                 save_img(img, f"{curr_out_dir}/{img_name}")
-
-
-if __name__ == "__main__":
-    main()

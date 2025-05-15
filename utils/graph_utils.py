@@ -4,7 +4,7 @@ import networkx as nx
 from utils.data_io import load_json
 
 
-def load_vg1800_dict(data_path):
+def load_vg1800_dict(data_path: str) -> dict:
     vg1800_data = load_json(data_path)
 
     pred_counts = vg1800_data["predicate_count"]
@@ -27,7 +27,7 @@ def load_vg1800_dict(data_path):
     return vg1800_dict
 
 
-def compute_concepts_powerset(concepts, return_dict=False):
+def compute_concepts_powerset(concepts: list, return_dict=False) -> dict:
     powerset_list = compute_powerset(concepts)
     if not return_dict:
         return powerset_list
@@ -41,14 +41,14 @@ def compute_concepts_powerset(concepts, return_dict=False):
     return powerset_dict
 
 
-def compute_powerset(base_set):
+def compute_powerset(base_set: list) -> list:
     powerset = itertools.chain.from_iterable(
         itertools.combinations(base_set, r) for r in range(1, len(base_set) + 1)
     )
     return list(powerset)
 
 
-def stringify_nx_graph(graph, template=True):
+def stringify_nx_graph(graph: nx.DiGraph, template=True) -> str:
     rels = []
     for e in graph.edges:
         from_concept = graph.nodes[e[0]]["label"]
@@ -58,7 +58,7 @@ def stringify_nx_graph(graph, template=True):
     return rels
 
 
-def stringify_graph_triple(triple, template=True):
+def stringify_graph_triple(triple: tuple, template=True) -> str:
     from_concept, rel, to_concept = triple
     if template:
         return (
@@ -68,7 +68,7 @@ def stringify_graph_triple(triple, template=True):
         return f"{from_concept} {rel} {to_concept}"
 
 
-def make_nx_graph(raw_sk_rels):
+def make_nx_graph(raw_sk_rels: dict) -> nx.DiGraph:
     nx_graph = nx.DiGraph()
     for raw_rel in raw_sk_rels:
         from_concept = raw_rel["from_concept"]["bb_label"]["bb_label_full"]

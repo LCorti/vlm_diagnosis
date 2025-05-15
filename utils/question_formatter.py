@@ -6,7 +6,7 @@ from pathlib import Path
 
 
 class QuestionFormatter:
-    def __init__(self, dataset):
+    def __init__(self, dataset: str) -> None:
         self.QUESTION_TEMPLATE = {
             "question_id": "",
             "question": "",
@@ -26,13 +26,13 @@ class QuestionFormatter:
         else:
             self.LLAVA_ANS = None
 
-    def validate_dataset_name(self, dataset):
+    def validate_dataset_name(self, dataset: str) -> str:
         if dataset in self.DATASET_CONFIG.get_ds_list():
             return dataset
         else:
             raise
 
-    def format(self, raw_q, ds_class):
+    def format(self, raw_q: dict, ds_class: str) -> dict:
         new_q = copy.deepcopy(self.QUESTION_TEMPLATE)
 
         if self.DATASET == "llava-bench":
@@ -91,12 +91,12 @@ class QuestionFormatter:
             new_q["answer"] = raw_q["multiple_choice_answer"]
         return new_q
 
-    def load_llavabench_ans(self):
+    def load_llavabench_ans(self) -> list[dict]:
         ans_file_path = Path(
             "..", "data", "datasets", "llava-bench", "answers_gpt4.jsonl"
         )
         return load_jsonl(ans_file_path)
 
-    def get_llava_answer(self, q_idx):
+    def get_llava_answer(self, q_idx: int) -> str:
         ans = next(a["text"] for a in self.LLAVA_ANS if a["question_id"] == q_idx)
         return ans
