@@ -1,5 +1,10 @@
+from pathlib import Path
+
+
 # Prepare the dictionary to store results
-def get_eval_dict(model_list, ds_list, start=0, end=100, step=20):
+def get_eval_dict(
+    model_list: list, ds_list: list, start: int = 0, end: int = 100, step: int = 20
+) -> dict:
     eval_dict = {}
     for model, ds in zip(model_list, ds_list):
         # Create structure
@@ -34,13 +39,13 @@ def get_eval_dict(model_list, ds_list, start=0, end=100, step=20):
 
 
 # Storing response data for multiple-choice VQA
-def prep_resp(q, resp):
+def prep_resp(q: dict, resp: str) -> dict:
     new_r = q.copy()
     new_r["response"] = resp
     return new_r
 
 
-def cleanup_resp(resp):
+def cleanup_resp(resp: str) -> str:
     # Clear preceding and trailing spaces, new lines, etc.
     clean_resp = "".join(resp.splitlines())
     # Remove unicode characters (e.g., zero-width spaces and emojis)
@@ -50,7 +55,7 @@ def cleanup_resp(resp):
 
 
 # Storing response data for open-ended VQA
-def prep_for_split(q, resp, measures):
+def prep_for_split(q: dict, resp: str, measures: dict) -> dict:
     to_add = q.copy()
     to_add["response"] = resp
     to_add["measures"] = measures
@@ -58,6 +63,6 @@ def prep_for_split(q, resp, measures):
 
 
 # For reproducibility
-def save_bertscore_hash(hash, path):
+def save_bertscore_hash(hash: str, path: str | Path) -> None:
     with open(path, "w") as fp:
         fp.write(hash)
