@@ -13,7 +13,7 @@ from utils.data_io import load_json, load_jsonl, make_dir, save_json
 from utils.graph_utils import compute_concepts_powerset
 
 
-def get_concept_dict(relations):
+def get_concept_dict(relations: list[dict]) -> dict:
     concepts = {}
 
     for rel in relations:
@@ -41,7 +41,7 @@ def get_concept_dict(relations):
     return concepts
 
 
-def lookup_sg(img_id, sk_list):
+def lookup_sg(img_id: int, sk_list: list[dict]) -> int | None:
     return next((sk_data for sk_data in sk_list if sk_data["img_id"] == img_id), None)
 
 
@@ -61,7 +61,7 @@ def lookup_sg(img_id, sk_list):
 #     return sample
 
 
-def sample_powerset(powerset, max_sample=100):
+def sample_powerset(powerset: dict, max_sample: int = 100) -> list[dict]:
     sample = {}
     for size in powerset:
         if len(powerset[size]) <= max_sample:
@@ -73,7 +73,7 @@ def sample_powerset(powerset, max_sample=100):
     return sample
 
 
-def compute_powerset_size(powerset):
+def compute_powerset_size(powerset: dict) -> int:
     flat_powerset = []
     for size in powerset:
         flat_powerset.extend(powerset[size])

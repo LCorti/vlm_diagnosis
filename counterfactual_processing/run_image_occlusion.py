@@ -3,6 +3,8 @@ import numpy as np
 import os
 import sys
 
+from PIL import Image
+
 module_path = os.path.abspath(os.path.join("../"))
 if module_path not in sys.path:
     sys.path.append(module_path)
@@ -15,7 +17,7 @@ from utils.data_io import load_json, load_jsonl, make_dir, save_json
 from utils.image_utils import load_img, save_img, from_array
 
 
-def bbox_to_polygon(bb):
+def bbox_to_polygon(bb: dict) -> Polygon:
     poly = Polygon(
         [
             (bb["top_left_x"], bb["top_left_y"]),
@@ -27,7 +29,7 @@ def bbox_to_polygon(bb):
     return poly
 
 
-def run_occlusion(img, concept_dict, concepts_to_occlude):
+def run_occlusion(img: Image, concept_dict: dict, concepts_to_occlude: list) -> Image:
     concepts_to_skip = list(set(concept_dict.keys()) - set(concepts_to_occlude))
     # Make polygons out of bounding boxes
     list_to_occlude = [
@@ -61,7 +63,12 @@ def run_occlusion(img, concept_dict, concepts_to_occlude):
     return pil_masked_img
 
 
-def occlude_image(img, base_out_path, concept_dict, concept_combinations):
+def occlude_image(
+    img: Image,
+    base_out_path: str | Path,
+    concept_dict: dict,
+    concept_combinations: list[dict],
+) -> dict:
     occlusion_data = []
     counter = 0
     for combination in concept_combinations:
@@ -79,11 +86,11 @@ def occlude_image(img, base_out_path, concept_dict, concept_combinations):
     return occlusion_data
 
 
-def lookup_sg(img_id, sk_list):
+def lookup_sg(img_id: int, sk_list: list[dict]) -> dict:
     return next((sk_data for sk_data in sk_list if sk_data["img_id"] == img_id), None)
 
 
-def get_concept_dict(relations):
+def get_concept_dict(relations: list[dict]) -> dict:
     concepts = {}
 
     for rel in relations:

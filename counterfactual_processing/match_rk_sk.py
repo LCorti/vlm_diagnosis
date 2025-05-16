@@ -6,6 +6,7 @@ import torch
 
 from pathlib import Path
 from sentence_transformers import SentenceTransformer
+from typing import Any
 from ultralytics import YOLOE
 
 module_path = os.path.abspath(os.path.join("../"))
@@ -18,13 +19,13 @@ from utils.graph_utils import stringify_graph_triple
 from utils.data_io import make_dir, load_json, load_jsonl, save_json
 
 
-def free_gpu(var):
+def free_gpu(var: Any) -> None:
     del var
     torch.cuda.empty_cache()
 
 
 # Compute semantic similarity
-def compute_similarity(model, text_a, text_b):
+def compute_similarity(model: SentenceTransformer, text_a: str, text_b: str) -> float:
     text_a_emb = torch.FloatTensor(
         model.encode(text_a, normalize_embeddings=True)
     ).unsqueeze(0)
@@ -34,7 +35,9 @@ def compute_similarity(model, text_a, text_b):
     return model.similarity_pairwise(text_a_emb, text_b_emb)
 
 
-def get_similar_concept(emb_model, concept_to_match, res_dicts):
+def get_similar_concept(
+    emb_model: SentenceTransformer, concept_to_match: str, res_dicts: list[dict]
+) -> dict:
     max_sim = -1
     curr_concept = {}
     for res in res_dicts:
@@ -52,7 +55,7 @@ def get_similar_concept(emb_model, concept_to_match, res_dicts):
     return curr_concept
 
 
-def load_merge_sk_data(sk_paths):
+def load_merge_sk_data(sk_paths: list[dict]) -> list:
     sk_data = []
     for ds_class in sk_paths:
         curr_base_dir = sk_paths[ds_class]["dir"]
@@ -62,7 +65,7 @@ def load_merge_sk_data(sk_paths):
     return sk_data
 
 
-def get_sk_rels(sk):
+def get_sk_rels(sk: dict) -> list[dict]:
     rels = []
     for rel in sk["relations"]:
         rels.append(
@@ -75,21 +78,21 @@ def get_sk_rels(sk):
     return rels
 
 
-def get_concept_id(concept_label, sgg_dict):
+def get_concept_id(concept_label: str, sgg_dict: dict) -> int | str:
     if concept_label in sgg_dict["label_to_idx"]:
         return sgg_dict["label_to_idx"][concept_label]
     else:
         return "new"
 
 
-def get_relation_id(relation_label, sgg_dict):
+def get_relation_id(relation_label: str, sgg_dict: dict) -> int | str:
     if relation_label in sgg_dict["predicate_to_idx"]:
         return sgg_dict["predicate_to_idx"][relation_label]
     else:
         return "new"
 
 
-def make_pred_dict(box, label, conf):
+def make_pred_dict(box: dict, label: str, conf: float) -> dict:
     pred_dict = {
         "conf": conf,
         "box": {
@@ -113,7 +116,7 @@ def make_pred_dict(box, label, conf):
     return pred_dict
 
 
-def parse_yoloe_res(yoloe_res, prompt_free=False):
+def parse_yoloe_res(yoloe_res: Any, prompt_free: bool = False) -> dict:
     label_dict = yoloe_res.names
     all_pred_idx = yoloe_res.boxes.cls.detach().cpu().numpy()
     all_conf = yoloe_res.boxes.conf.detach().cpu().numpy()
