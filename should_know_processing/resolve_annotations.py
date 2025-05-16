@@ -217,32 +217,32 @@ def resolve_val_data(
             continue
 
         if crowd_rel["answers"]["relevance"] == 1:
-            # Fixing bboxes for 'from_concept' and 'to_concept'
-            # from_concept
-            fixed_bbox = fix_bbox(crowd_rel["crowd"]["new_coords_from_concept"])
-            rel["from_concept"].update(fixed_bbox)
-            # to_concept
-            fixed_bbox = fix_bbox(crowd_rel["crowd"]["new_coords_to_concept"])
-            rel["to_concept"].update(fixed_bbox)
-
             # Fixing concept labels if not identified correctly
             if crowd_rel["answers"]["concepts_identified"] == 0:
                 # from_concept
-                from_concept_idx = get_concept_id(
+                # coordinates
+                rel["from_concept"].update(
+                    fix_bbox(crowd_rel["crowd"]["new_coords_from_concept"])
+                )
+                # bb_label data
+                rel["from_concept"]["bb_label"]["bb_label_idx"] = get_concept_id(
                     crowd_rel["crowd"]["new_from_concept"], sgg_dict
                 )
                 from_concept_label = crowd_rel["crowd"]["new_from_concept"]
-                rel["from_concept"]["bb_label"]["bb_label_idx"] = from_concept_idx
                 rel["from_concept"]["bb_label"]["bb_label_text"] = from_concept_label
                 rel["from_concept"]["bb_label"]["bb_label_full"] = (
                     f"0-{from_concept_label}"
                 )
                 # to_concept
-                to_concept_idx = get_concept_id(
+                # coordinates
+                rel["to_concept"].update(
+                    fix_bbox(crowd_rel["crowd"]["new_coords_to_concept"])
+                )
+                # bb_label data
+                rel["to_concept"]["bb_label"]["bb_label_idx"] = get_concept_id(
                     crowd_rel["crowd"]["new_to_concept"], sgg_dict
                 )
                 to_concept_label = crowd_rel["crowd"]["new_to_concept"]
-                rel["to_concept"]["bb_label"]["bb_label_idx"] = to_concept_idx
                 rel["to_concept"]["bb_label"]["bb_label_text"] = to_concept_label
                 rel["to_concept"]["bb_label"]["bb_label_full"] = f"0-{to_concept_label}"
 
@@ -306,6 +306,7 @@ def resolve_ann_data(
                 "rel_label_text": raw_crowd_ann["relationship"],
             },
         }
+        # Add object detection data
         crowd_ann["from_concept"].update(fix_bbox(raw_crowd_ann["coords_from_concept"]))
         crowd_ann["to_concept"].update(fix_bbox(raw_crowd_ann["coords_to_concept"]))
         # Update rel_id field
@@ -329,7 +330,6 @@ def resolve_crowd_data(
     stats: dict,
 ) -> tuple[dict, dict]:
     resolved_data = []
-    stats = {}
     for question in ds_questions:
         # Resolve validation data
         resolved_val_entry, curr_stats = resolve_val_data(
