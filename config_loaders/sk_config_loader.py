@@ -4,8 +4,11 @@ from pathlib import Path
 
 class SKConfig:
     def __init__(self):
-        self.CONFIG_PATH = Path("..", "config", "sk_paths.yaml")
-        self.CONFIG_PATH = Path(__file__).parent.joinpath(self.CONFIG_PATH).resolve()
+        self.CONFIG_PATH = (
+            Path(__file__)
+            .parent.joinpath(Path("..", "config", "sk_paths.yaml"))
+            .resolve()
+        )
         self.SK_PATHS = self.load_sk_config()
 
     def load_sk_config(self):

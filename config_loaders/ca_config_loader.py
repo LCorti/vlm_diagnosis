@@ -4,9 +4,10 @@ from pathlib import Path
 
 class CAConfig:
     def __init__(self):
-        self.CE_CONFIG_PATH = Path("..", "config", "ce_paths.yaml")
         self.CE_CONFIG_PATH = (
-            Path(__file__).parent.joinpath(self.CE_CONFIG_PATH).resolve()
+            Path(__file__)
+            .parent.joinpath(Path("..", "config", "ce_paths.yaml"))
+            .resolve()
         )
         self.CE_PATHS = self.load_config(self.CE_CONFIG_PATH)
 

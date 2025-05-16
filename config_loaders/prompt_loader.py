@@ -4,15 +4,18 @@ from pathlib import Path
 
 class PromptLoader:
     def __init__(self, prompt_version=1, load_counterfactual=False):
-        self.SE_PROMPTS_PATH = Path(
-            "..",
-            "config",
-            "prompts",
-            "self_explanations",
-            f"self_expl_v{prompt_version}.yaml",
-        )
         self.SE_PROMPTS_PATH = (
-            Path(__file__).parent.joinpath(self.SE_PROMPTS_PATH).resolve()
+            Path(__file__)
+            .parent.joinpath(
+                Path(
+                    "..",
+                    "config",
+                    "prompts",
+                    "self_explanations",
+                    f"self_expl_v{prompt_version}.yaml",
+                )
+            )
+            .resolve()
         )
         self.SE_PROMPTS = self.load_se_prompts()
 
