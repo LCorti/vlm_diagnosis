@@ -76,7 +76,7 @@ def parse_annotation_data(ann_data: list[dict]) -> dict:
     return ann_data_dict
 
 
-def check_data(data: list[dict], step: str) -> (bool, list):
+def check_data(data: list[dict], step: str) -> tuple[bool, list]:
     new_ann_value = 0 if step == "val" else 1
     print(f">> Checking data from {step} step:")
     check_entries = []
@@ -100,11 +100,11 @@ def check_data(data: list[dict], step: str) -> (bool, list):
         return False, check_entries
 
 
-def check_val_data(val_data: list[dict]) -> (bool, list):
+def check_val_data(val_data: list[dict]) -> tuple[bool, list]:
     return check_data(val_data, "val")
 
 
-def check_ann_data(ann_data: list[dict]) -> (bool, list):
+def check_ann_data(ann_data: list[dict]) -> tuple[bool, list]:
     return check_data(ann_data, "ann")
 
 
@@ -167,7 +167,7 @@ def get_relation_id(relation_label: str, sgg_dict: dict) -> int | str:
 
 def resolve_val_data(
     sg_data: dict, parsed_crowd_val: dict, sgg_dict: dict, question: dict
-) -> (dict, dict):
+) -> tuple[dict, dict]:
     res_val_entry = {
         "question_id": question["question_id"],
         "img": question["img"],
@@ -272,8 +272,8 @@ def resolve_val_data(
 
 
 def resolve_ann_data(
-    val_entry: dict, parsed_crowd_ann: dict, sgg_dict: dict, question: dict, stats: dict
-) -> (dict, dict):
+    val_entry: dict, parsed_crowd_ann: dict, sgg_dict: dict, stats: dict
+) -> tuple[dict, dict]:
     res_ann_entry = val_entry
     # Add new relationships
     question_key = int(res_ann_entry["question_id"]) + 1
@@ -327,7 +327,7 @@ def resolve_crowd_data(
     sgg_dict: dict,
     ds_questions: list[dict],
     stats: dict,
-) -> (dict, dict):
+) -> tuple[dict, dict]:
     resolved_data = []
     stats = {}
     for question in ds_questions:
@@ -338,9 +338,9 @@ def resolve_crowd_data(
         # print(resolved_val_entry)
         # Resolve annotation data
         resolved_ann_entry, curr_stats = resolve_ann_data(
-            resolved_val_entry, parsed_crowd_ann, sgg_dict, question, curr_stats
+            resolved_val_entry, parsed_crowd_ann, sgg_dict, curr_stats
         )
-        resolved_data.append(resolved_val_entry)
+        resolved_data.append(resolved_ann_entry)
         stats[question["question_id"]] = curr_stats
         # Return the data annotation data has been merged
     return resolved_data, stats

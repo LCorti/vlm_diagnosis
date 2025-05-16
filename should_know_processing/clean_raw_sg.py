@@ -12,7 +12,7 @@ from config_loaders.sk_config_loader import SKConfig
 from utils.data_io import make_dir, load_json, save_jsonl
 
 
-def get_unique_concepts(raw_sg: list[dict]) -> (dict, dict):
+def get_unique_concepts(raw_sg: list[dict]) -> tuple[dict, dict]:
     unique_concepts_bbox = {}
     unique_concepts_rel = {}
 
@@ -38,7 +38,7 @@ def get_unique_concepts(raw_sg: list[dict]) -> (dict, dict):
 
 def get_all_concepts(
     unique_concepts_bbox: dict, unique_concepts_rel: dict
-) -> (dict, dict):
+) -> tuple[dict, dict]:
     all_concepts_in_rel = {}
     all_concepts_not_in_rel = {}
 

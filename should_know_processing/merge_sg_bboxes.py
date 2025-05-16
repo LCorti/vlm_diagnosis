@@ -135,7 +135,7 @@ if __name__ == "__main__":
             # Load clean scene graphs
             base_dir = sk_paths[ds_class]["dir"]
             clean_sg_file = sk_paths[ds_class]["sg_clean"]
-            clean_sg = Path("..", base_dir, clean_sg_file)
+            clean_sg = load_jsonl(Path("..", base_dir, clean_sg_file))
 
             bb_clusters = {}
 

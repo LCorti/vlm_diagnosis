@@ -18,7 +18,9 @@ DS_MAP = {
 # -- -- -- -- -- -- -- -- -- -- -- --
 
 
-def save_graph_to_img(graph: nx.DiGraph, out_file: str, highlight_cycles=False) -> None:
+def save_graph_to_img(
+    graph: nx.DiGraph, out_file: str, highlight_cycles: bool = False
+) -> None:
     # Plot graph
     plt.figure(figsize=(15, 15))
     plt.axis("off")
@@ -85,7 +87,7 @@ def plot_concepts_vs_relations(sample_stats_df: pd.DataFrame, output_path: str) 
 # -- -- -- -- -- -- -- -- -- -- -- --
 
 
-def set_custom_patch_color_sk(b_plot: plt.boxplot, color_key="concept") -> None:
+def set_custom_patch_color_sk(b_plot: plt.boxplot, color_key: str = "concept") -> None:
     # Palette taken from https://venngage.com/tools/accessible-color-palette-generator
     color_map = {
         "concept": ["#b27795", "#c18750", "#7f9a46"],
@@ -345,7 +347,7 @@ def plot_split_similarity_values(df: pd.DataFrame, out_path: str) -> None:
     plt.close()
 
 
-def plot_behaviour_counts(data, totals, out_path) -> None:
+def plot_behaviour_counts(data, out_path) -> None:
     _, axes = plt.subplots(1, 3, sharey=True, layout="constrained", figsize=(15, 4))
 
     models = ["InternVL2", "LLaVa-1.6", "MiniGPT-4", "ShareGPT4V"]
