@@ -3,7 +3,8 @@ import re
 import sys
 import torch
 
-from transformers import GenerationConfig
+from transformers import AutoTokenizer, AutoModel, GenerationConfig
+from typings import Any
 
 module_path = os.path.abspath(os.path.join("../"))
 if module_path not in sys.path:
@@ -13,7 +14,7 @@ from config_loaders.prompt_loader import PromptLoader
 
 
 class GenUtils:
-    def __init__(self, model_name: str, prompt_version=1) -> None:
+    def __init__(self, model_name: str, prompt_version: int = 1) -> None:
         self.PROMPT_VERSION = prompt_version
         self.PROMPT_FILE_PATH = "../prompts_rk_v{}.yaml".format(self.PROMPT_VERSION)
         self.MODEL_NAME = model_name
@@ -87,7 +88,12 @@ class GenUtils:
         return self.GEN_CONFIG
 
     def gen_response_internvl2(
-        self, model: str, tokenizer, image_tensor, text_input: str, history=None
+        self,
+        model: AutoModel,
+        tokenizer: AutoTokenizer,
+        image_tensor: torch.Tensor,
+        text_input: str,
+        history: Any = None,
     ) -> str:
         return model.chat(
             tokenizer,

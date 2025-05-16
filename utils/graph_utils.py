@@ -27,7 +27,7 @@ def load_vg1800_dict(data_path: str) -> dict:
     return vg1800_dict
 
 
-def compute_concepts_powerset(concepts: list, return_dict=False) -> dict:
+def compute_concepts_powerset(concepts: list, return_dict: bool = False) -> dict | list:
     powerset_list = compute_powerset(concepts)
     if not return_dict:
         return powerset_list
@@ -48,17 +48,17 @@ def compute_powerset(base_set: list) -> list:
     return list(powerset)
 
 
-def stringify_nx_graph(graph: nx.DiGraph, template=True) -> str:
+def stringify_nx_graph(graph: nx.DiGraph) -> list:
     rels = []
     for e in graph.edges:
         from_concept = graph.nodes[e[0]]["label"]
         to_concept = graph.nodes[e[1]]["label"]
         rel = graph[from_concept][to_concept]["label"]
-        rels.append((from_concept, rel, to_concept), template=template)
+        rels.append((from_concept, rel, to_concept))
     return rels
 
 
-def stringify_graph_triple(triple: tuple, template=True) -> str:
+def stringify_graph_triple(triple: tuple, template: bool = True) -> str:
     from_concept, rel, to_concept = triple
     if template:
         return (

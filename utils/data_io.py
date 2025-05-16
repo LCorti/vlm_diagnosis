@@ -18,18 +18,18 @@ def read_csv(file_path: str) -> pd.DataFrame:
 # == == == == == == == == == == == == == == == ==
 # Handling JSON files
 # == == == == == == == == == == == == == == == ==
-def load_json(file_path: str) -> dict:
+def load_json(file_path: str | Path) -> dict:
     with open(file_path, "r") as fp:
         json_data = json.load(fp)
     return json_data
 
 
-def save_json(data: dict, file_path: str) -> None:
+def save_json(data: dict, file_path: str | Path) -> None:
     with open(file_path, "w") as fp:
         json.dump(data, fp, indent=2)
 
 
-def load_jsonl(file_path: str) -> list[dict]:
+def load_jsonl(file_path: str | Path) -> list[dict]:
     with open(file_path, "r") as fp:
         data = [json.loads(line) for line in fp]
     return data
@@ -49,7 +49,7 @@ def append_to_jsonl(data: dict, file_path: str) -> None:
 # == == == == == == == == == == == == == == == ==
 # Directory management
 # == == == == == == == == == == == == == == == ==
-def make_dir(dir_path: str) -> None:
+def make_dir(dir_path: str | Path) -> None:
     try:
         Path(dir_path).mkdir(parents=True)
     except FileExistsError as f_exception:

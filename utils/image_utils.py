@@ -1,4 +1,7 @@
+import numpy as np
+
 from PIL import Image, ImageDraw
+from typing import Any
 
 # Utils functions taken from the official implementation of IETrans.
 # https://github.com/waxnkw/IETrans-SGG.pytorch
@@ -14,7 +17,7 @@ def save_img(pil_img: Image, file_path: str) -> None:
     rgb_img.save(file_path)
 
 
-def from_array(array) -> Image:
+def from_array(array: np.array) -> Image:
     return Image.fromarray(array)
 
 
@@ -45,7 +48,9 @@ def get_size(image_size: tuple) -> tuple:
     return (ow, oh)
 
 
-def draw_single_box(pic: Image, box: dict, color="red", draw_info=None) -> None:
+def draw_single_box(
+    pic: Image, box: dict, color: str = "red", draw_info: Any = None
+) -> None:
     draw = ImageDraw.Draw(pic)
     draw.rectangle(
         (
