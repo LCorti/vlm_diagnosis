@@ -3,8 +3,13 @@ import re
 import sys
 import torch
 
-from transformers import AutoTokenizer, AutoModel, GenerationConfig
-from typings import Any
+from transformers import (
+    AutoTokenizer,
+    AutoModel,
+    AutoModelForCausalLM,
+    GenerationConfig,
+)
+from typing import Any
 
 module_path = os.path.abspath(os.path.join("../"))
 if module_path not in sys.path:
@@ -47,11 +52,11 @@ class GenUtils:
 
     def get_gen_config(
         self,
-        do_sample=False,
-        num_beams=1,
-        temperature=0.1,
-        max_new_tokens=256,
-        use_cache=True,
+        do_sample: bool = False,
+        num_beams: int = 1,
+        temperature: float = 0.1,
+        max_new_tokens: int = 256,
+        use_cache: bool = True,
     ) -> dict | GenerationConfig:
         # Return if self.GEN_CONFIG already initialised.
         if self.GEN_CONFIG:
@@ -104,7 +109,13 @@ class GenUtils:
             return_history=True,
         )
 
-    def gen_response_llava_next(self, model, tokenizer, image_tensor, input_ids) -> str:
+    def gen_response_llava_next(
+        self,
+        model: AutoModelForCausalLM,
+        tokenizer: AutoTokenizer,
+        image_tensor: torch.Tensor,
+        input_ids: torch.Tensor,
+    ) -> str:
         with torch.inference_mode():
             output_ids = model.generate(
                 input_ids, images=image_tensor, generation_config=self.GEN_CONFIG
@@ -112,7 +123,13 @@ class GenUtils:
         return tokenizer.batch_decode(output_ids, skip_special_tokens=True)[0].strip()
 
     def gen_response_sharegpt4v(
-        self, model, tokenizer, image_tensor, input_ids, stopping_criteria, stop_str
+        self,
+        model: AutoModelForCausalLM,
+        tokenizer: AutoTokenizer,
+        image_tensor: torch.Tensor,
+        input_ids: torch.Tensor,
+        stopping_criteria: Any,
+        stop_str: str,
     ) -> str:
         with torch.inference_mode():
             output_ids = model.generate(

@@ -3,6 +3,7 @@ import torchvision.transforms as T
 
 from PIL import Image
 from torchvision.transforms.functional import InterpolationMode
+from typing import Any
 
 IMAGENET_MEAN = (0.485, 0.456, 0.406)
 IMAGENET_STD = (0.229, 0.224, 0.225)
@@ -12,7 +13,9 @@ def load_image(image_file: str) -> Image:
     return Image.open(image_file).convert("RGB")
 
 
-def get_image_tensor(image: Image, input_size=448, max_num=12) -> torch.Tensor:
+def get_image_tensor(
+    image: Image, input_size: int = 448, max_num: int = 12
+) -> torch.Tensor:
     transform = build_transform(input_size=input_size)
     images = dynamic_preprocess(
         image, image_size=input_size, use_thumbnail=True, max_num=max_num
@@ -22,7 +25,7 @@ def get_image_tensor(image: Image, input_size=448, max_num=12) -> torch.Tensor:
     return pixel_values
 
 
-def build_transform(input_size):
+def build_transform(input_size: Any):
     transform = T.Compose(
         [
             T.Lambda(lambda img: img.convert("RGB") if img.mode != "RGB" else img),
@@ -51,7 +54,11 @@ def find_closest_aspect_ratio(aspect_ratio, target_ratios, width, height, image_
 
 
 def dynamic_preprocess(
-    image, min_num=1, max_num=12, image_size=448, use_thumbnail=False
+    image: Image,
+    min_num: int = 1,
+    max_num: int = 12,
+    image_size: int = 448,
+    use_thumbnail: bool = False,
 ):
     orig_width, orig_height = image.size
     aspect_ratio = orig_width / orig_height
