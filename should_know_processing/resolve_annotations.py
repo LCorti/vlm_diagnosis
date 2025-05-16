@@ -360,13 +360,7 @@ if __name__ == "__main__":
         # Get current sk paths
         sk_paths = sk_config.get_sk_paths(dataset)
         # Load questions for this dataset
-        q_path = (
-            Path("..")
-            .joinpath("data")
-            .joinpath("datasets")
-            .joinpath(dataset)
-            .joinpath("q_crowd.json")
-        )
+        q_path = Path("..", "data", "datasets", dataset, "q_crowd.json")
         ds_questions = load_json(q_path)
         # Add entry for statistics
         if dataset not in stats:
@@ -379,7 +373,7 @@ if __name__ == "__main__":
                 stats[dataset][ds_class] = {"samples": {}, "summary": {}}
 
             # Load scene graphs showed to crowd workers for a given class
-            base_dir = Path("..").joinpath(sk_paths[ds_class]["dir"])
+            base_dir = Path("..", sk_paths[ds_class]["dir"])
             crowd_sg_file = sk_paths[ds_class]["sg_crowd"]
             crowd_sg = load_jsonl(base_dir.joinpath(crowd_sg_file))
             # Load data from validation step
