@@ -185,9 +185,9 @@ if __name__ == "__main__":
         if ds not in counts[model]:
             counts[model][ds] = {
                 "initial": 0,
-                "after_exact_match": 0,
-                "after_sim_match": 0,
-                "after_cv_match": 0,
+                "with_exact_match": 0,
+                "with_sim_match": 0,
+                "with_cv_match": 0,
             }
 
         # Load SK final
@@ -247,7 +247,7 @@ if __name__ == "__main__":
                 # If a match is found, just use that (and update count)
                 # and go to next iteration
                 if match_sk_rel:
-                    counts[model][ds]["after_exact_match"] += 1
+                    counts[model][ds]["with_exact_match"] += 1
                     curr_rk_matches.append(match_sk_rel)
                     continue
 
@@ -266,7 +266,7 @@ if __name__ == "__main__":
                         sk_max_sim = sk_rel
                 # Check if the matched triple is similar enough
                 if max_sim > 0.5:
-                    counts[model][ds]["after_sim_match"] += 1
+                    counts[model][ds]["with_sim_match"] += 1
                     curr_rk_matches.append(sk_max_sim)
                     continue
 
@@ -303,12 +303,14 @@ if __name__ == "__main__":
                                 if res["box"]["bb_label"]["bb_label_text"]
                                 == from_concept
                             )
+                            matched_rk["from_concept"]["yolo_prompt"] = True
                         elif int(pred_idx.item()) == 1:
                             matched_rk["to_concept"] = next(
                                 res["box"]
                                 for res in res_dicts
                                 if res["box"]["bb_label"]["bb_label_text"] == to_concept
                             )
+                            matched_rk["to_concept"]["yolo_prompt"] = True
                         else:
                             print(f"Unexpected pred_idx in results: {pred_idx}")
 
@@ -331,8 +333,8 @@ if __name__ == "__main__":
                                 from_concept  # TODO: fix
                             )
                         else:
-                            matched_rk["from_concept"] = rk_rel
-                            matched_rk["from_concept"]["missing"] = True
+                            matched_rk["from_concept"] = rk_rel["from_concept"]
+                            matched_rk["from_missing"] = True
 
                     if "to_concept" not in matched_rk:
                         sim_concept = get_similar_concept(
@@ -350,10 +352,10 @@ if __name__ == "__main__":
                                 to_concept  # TODO: fix
                             )
                         else:
-                            matched_rk["to_concept"] = rk_rel
-                            matched_rk["to_concept"]["missing"] = True
+                            matched_rk["to_concept"] = rk_rel["to_concept"]
+                            matched_rk["to_missing"] = True
 
-                    counts[model][ds]["after_cv_match"] += 1
+                    counts[model][ds]["with_cv_match"] += 1
                     curr_rk_matches.append(matched_rk)
                     free_gpu(yoloe_res)
                 else:
@@ -395,9 +397,10 @@ if __name__ == "__main__":
                         matched_rk["from_concept"]["bb_label"]["bb_label_full"] = (
                             from_concept  # TODO: fix
                         )
+                        matched_rk["from_concept"]["yolo_prompt"] = False
                     else:
-                        matched_rk["from_concept"] = rk_rel
-                        matched_rk["from_concept"]["missing"] = True
+                        matched_rk["from_concept"] = rk_rel["from_concept"]
+                        matched_rk["from_missing"] = True
 
                     if "box" in max_sim_to_concept:
                         matched_rk["to_concept"] = max_sim_to_concept["box"]
@@ -410,11 +413,17 @@ if __name__ == "__main__":
                         matched_rk["to_concept"]["bb_label"]["bb_label_full"] = (
                             to_concept  # TODO: fix
                         )
+                        matched_rk["to_concept"]["yolo_prompt"] = False
                     else:
-                        matched_rk["to_concept"] = rk_rel
-                        matched_rk["to_concept"]["missing"] = True
+                        matched_rk["to_concept"] = rk_rel["to_concept"]
+                        matched_rk["to_missing"] = True
 
-                    counts[model][ds]["after_cv_match"] += 1
+                    # Updating the count depending on what happened above
+                    if (
+                        "from_missing" not in matched_rk
+                        and "to_missing" not in matched_rk
+                    ):
+                        counts[model][ds]["with_cv_match"] += 1
                     curr_rk_matches.append(matched_rk)
 
             all_matches[rk["question_id"]] = curr_rk_matches
