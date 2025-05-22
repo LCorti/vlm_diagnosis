@@ -57,6 +57,8 @@ class GenUtils:
         temperature: float = 0.1,
         max_new_tokens: int = 256,
         use_cache: bool = True,
+        top_k: int = 10,
+        top_p: float = 0.95,
     ) -> dict | GenerationConfig:
         # Return if self.GEN_CONFIG already initialised.
         if self.GEN_CONFIG:
@@ -68,6 +70,8 @@ class GenUtils:
                 do_sample=do_sample,
                 temperature=temperature,
                 max_new_tokens=max_new_tokens,
+                top_k=top_k,
+                top_p=top_p,
             )
         elif self.MODEL_NAME == "llava-1.6":
             self.GEN_CONFIG = GenerationConfig.from_dict(
@@ -77,6 +81,8 @@ class GenUtils:
                     "temperature": temperature,
                     "use_cache": use_cache,
                     "max_new_tokens": max_new_tokens,
+                    "top_k": top_k,
+                    "top_p": top_p,
                     "cache_position": None,
                 }
             )
@@ -88,6 +94,8 @@ class GenUtils:
                     "temperature": temperature,
                     "use_cache": use_cache,
                     "max_new_tokens": max_new_tokens,
+                    "top_k": top_k,
+                    "top_p": top_p,
                 }
             )
         return self.GEN_CONFIG
