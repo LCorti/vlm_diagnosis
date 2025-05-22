@@ -46,6 +46,7 @@ def get_response(
     num_beams=1,
     temperature=0.1,
     max_new_tokens=256,
+    top_p=0.95,
 ):
     response = chat.answer(
         conv=chat_state,
@@ -54,5 +55,6 @@ def get_response(
         temperature=temperature,
         max_new_tokens=max_new_tokens,
         max_length=2000,
+        top_p=top_p,
     )[0]
     return response
