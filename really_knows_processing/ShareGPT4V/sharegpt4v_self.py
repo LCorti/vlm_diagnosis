@@ -42,6 +42,8 @@ def parse_args():
     parser.add_argument("--do_sample", default=False)
     parser.add_argument("--num_beams", type=int, default=1)
     parser.add_argument("--temperature", help="Model temperature.", default=0.1)
+    parser.add_argument("--top_k", help="Top-K", default=10)
+    parser.add_argument("--top_p", help="Top-P", default=0.95)
     parser.add_argument(
         "--max_new_tokens", help="Maximum number of tokens to generate", default=256
     )
@@ -70,7 +72,7 @@ if __name__ == "__main__":
     rk_config = RKConfig()
     # Get RK output paths and
     # (1) complete file name with prompt version
-    raw_out_f = rk_config.get_rk_paths(MODEL_NAME, ds_name)
+    raw_out_f = rk_config.get_raw_rk_paths(MODEL_NAME, ds_name)
     raw_out_f = raw_out_f.format(PROMPT_VERSION)
     parsed_out_f = rk_config.get_parsed_rk_paths(MODEL_NAME, ds_name)
     parsed_out_f = parsed_out_f.format(PROMPT_VERSION)
@@ -91,6 +93,8 @@ if __name__ == "__main__":
         temperature=args.temperature,
         use_cache=args.use_cache,
         max_new_tokens=args.max_new_tokens,
+        top_k=args.top_k,
+        top_p=args.top_p,
     )
     # Get prompt templates for generation
     question_template = gen_utils.get_question_template(ds_name)
