@@ -198,3 +198,11 @@ class GenUtils:
                 if rk_match is not None:
                     print(rk_match.groupdict())
                     parsed_rk["triple_objs"].append(self.clean_rk(rk_match.groupdict()))
+
+        # Remove duplicate triples
+        parsed_rk["triple_objs"] = [
+            dict(t)
+            for t in {tuple(sorted(d.items())) for d in parsed_rk["triple_objs"]}
+        ]
+
+        return parsed_rk
