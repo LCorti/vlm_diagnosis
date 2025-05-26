@@ -32,14 +32,10 @@ class GenUtils:
         self.FIRST_CHARS = ["\\*", "-", "\\+", "[0-9]+\\."]
 
         # Parsing patterns
-        if self.MODEL_NAME == "sharegpt4v":
-            self.SEARCH_PATTERN = r"\((.+), (.+), (.+)\)"
-            self.GROUP_PATTERN = (
-                r"\((?P<from_concept>.+), (?P<relationship>.+), (?P<to_concept>.+)\)"
-            )
-        else:
-            self.SEARCH_PATTERN = r"\(Entity: (.+), Relationship: (.+), Entity: (.+)\)"
-            self.GROUP_PATTERN = r"\(Entity: (?P<from_concept>.+), Relationship: (?P<relationship>.+), Entity: (?P<to_concept>.+)\)"
+        # self.SEARCH_PATTERN = r"\(entity: (.+), relationship: (.+), entity: (.+)\)"
+        self.SEARCH_PATTERN = r"\((.+), (.+), (.+)\)"
+        self.GROUP_PATTERN = r"\(entity: (?P<from_concept>[^,]+), relationship: (?P<relationship>[^,]+), entity: (?P<to_concept>[^)]+)\)"
+        self.GROUP_PATTERN_SIMP = r"\((?P<from_concept>[^,]+), (?P<relationship>[^,]+), (?P<to_concept>[^)]+)\)"
 
     def get_question_template(self, ds_name: str) -> str:
         return self.PROMPT_LOADER.get_question_template(self.MODEL_NAME, ds_name)
@@ -166,6 +162,9 @@ class GenUtils:
         outputs = outputs.strip()
         return outputs
 
+    def clean_rk(self, rk: dict) -> dict:
+        return {k: v.strip() for k, v in rk.items()}
+
     def parse_raw_rk(self, raw_rk: str) -> dict:
         # Prep new object
         parsed_rk = {}
@@ -178,19 +177,24 @@ class GenUtils:
         # Parse raw-text triples
         # (1) Split lines
         raw_rk_lines = [
-            line.rstrip().rstrip()
+            line.rstrip().rstrip().lower()
             for line in raw_rk["triples"].split("\n")
             if len(line) > 0
         ]
 
         # (2) Parse following this structure
         # <first_char> (Entity: <x>, Relationship: <y>, Entity: <z>)
-        pattern = re.compile(self.SEARCH_PATTERN)
-        parsed_rk["triples"].extend(rl for rl in raw_rk_lines if re.search(pattern, rl))
+        parsed_rk["triples"].extend(
+            rl for rl in raw_rk_lines if re.search(self.SEARCH_PATTERN, rl)
+        )
+
         if len(parsed_rk["triples"]) > 0:
             for rk in parsed_rk["triples"]:
+                # Try with complete patterns first, then with simpler one
                 rk_match = re.search(self.GROUP_PATTERN, rk)
+                if rk_match is None:
+                    rk_match = re.search(self.GROUP_PATTERN_SIMP, rk)
+
                 if rk_match is not None:
-                    parsed_rk["triple_objs"].append(
-                        {k: v.lower() for k, v in rk_match.groupdict()}
-                    )
+                    print(rk_match.groupdict())
+                    parsed_rk["triple_objs"].append(self.clean_rk(rk_match.groupdict()))
