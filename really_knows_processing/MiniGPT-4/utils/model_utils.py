@@ -43,6 +43,7 @@ def get_response(
     chat,
     img_list,
     chat_state,
+    do_sample=False,
     num_beams=1,
     temperature=0.1,
     max_new_tokens=256,
@@ -51,6 +52,7 @@ def get_response(
     response = chat.answer(
         conv=chat_state,
         img_list=img_list,
+        do_sample=do_sample,
         num_beams=num_beams,
         temperature=temperature,
         max_new_tokens=max_new_tokens,
