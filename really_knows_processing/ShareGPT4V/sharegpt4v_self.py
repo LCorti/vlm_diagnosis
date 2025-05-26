@@ -27,7 +27,7 @@ from utils.model_utils import (
 )
 
 
-PROMPT_VERSION = 4
+PROMPT_VERSION = 5
 MODEL_NAME = "sharegpt4v"
 HF_MODEL_NAME = "Lin-Chen/ShareGPT4V-7B"
 
@@ -39,7 +39,9 @@ def parse_args():
     parser.add_argument(
         "--questions_file", required=True, help="Path to the file with questions."
     )
-    parser.add_argument("--do_sample", default=False)
+    parser.add_argument(
+        "--do_sample", type=bool, default=False, action=argparse.BooleanOptionalAction
+    )
     parser.add_argument("--num_beams", type=int, default=1)
     parser.add_argument("--temperature", help="Model temperature.", default=0.1)
     parser.add_argument("--top_k", help="Top-K", default=10)
