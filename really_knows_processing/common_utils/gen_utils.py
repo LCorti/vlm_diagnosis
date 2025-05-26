@@ -26,11 +26,6 @@ class GenUtils:
         self.PROMPT_LOADER = PromptLoader(prompt_version=self.PROMPT_VERSION)
         self.GEN_CONFIG = None
 
-        # After manually inspecting the generated really-knows, these characters
-        # seem to be used by models (more or less consistently) when asked to
-        # generate a list of structured triples.
-        self.FIRST_CHARS = ["\\*", "-", "\\+", "[0-9]+\\."]
-
         # Parsing patterns
         # self.SEARCH_PATTERN = r"\(entity: (.+), relationship: (.+), entity: (.+)\)"
         self.SEARCH_PATTERN = r"\((.+), (.+), (.+)\)"
@@ -183,7 +178,7 @@ class GenUtils:
         ]
 
         # (2) Parse following this structure
-        # <first_char> (Entity: <x>, Relationship: <y>, Entity: <z>)
+        # (Entity: <x>, Relationship: <y>, Entity: <z>)
         parsed_rk["triples"].extend(
             rl for rl in raw_rk_lines if re.search(self.SEARCH_PATTERN, rl)
         )
