@@ -24,7 +24,7 @@ from utils.model_utils import (
     add_conv_step,
 )
 
-PROMPT_VERSION = 4
+PROMPT_VERSION = 5
 MODEL_NAME = "llava-1.6"
 HF_MODEL_NAME = "liuhaotian/llava-v1.6-vicuna-7b"
 
@@ -36,9 +36,13 @@ def parse_args():
     parser.add_argument(
         "--questions_file", required=True, help="Path to the file with questions."
     )
-    parser.add_argument("--do_sample", default=False)
+    parser.add_argument(
+        "--do_sample", type=bool, default=False, action=argparse.BooleanOptionalAction
+    )
     parser.add_argument("--num_beams", type=int, default=1)
     parser.add_argument("--temperature", help="Model temperature.", default=0.1)
+    parser.add_argument("--top_k", help="Top-K", default=10)
+    parser.add_argument("--top_p", help="Top-P", default=0.95)
     parser.add_argument(
         "--max_new_tokens", help="Maximum number of tokens to generate", default=256
     )
@@ -88,6 +92,8 @@ if __name__ == "__main__":
         temperature=args.temperature,
         use_cache=args.use_cache,
         max_new_tokens=args.max_new_tokens,
+        top_k=args.top_k,
+        top_p=args.top_p,
     )
     # Get prompt templates for generation
     question_template = gen_utils.get_question_template(ds_name)

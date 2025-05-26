@@ -19,7 +19,7 @@ from really_knows_processing.common_utils.image_utils import (
 from utils.data_io import make_dir, load_json, save_jsonl
 from utils.model_utils import split_model, make_message
 
-PROMPT_VERSION = 4
+PROMPT_VERSION = 5
 MODEL_NAME = "internvl2"
 HF_MODEL_NAME = "OpenGVLab/InternVL2-8B"
 
@@ -31,8 +31,12 @@ def parse_args():
     parser.add_argument(
         "--questions_file", required=True, help="Path to the file with questions."
     )
-    parser.add_argument("--do_sample", default=False)
+    parser.add_argument(
+        "--do_sample", type=bool, default=False, action=argparse.BooleanOptionalAction
+    )
     parser.add_argument("--temperature", help="Model temperature.", default=0.1)
+    parser.add_argument("--top_k", help="Top-K", default=10)
+    parser.add_argument("--top_p", help="Top-P", default=0.95)
     parser.add_argument(
         "--max_new_tokens", help="Maximum tokens to generate.", default=256
     )
@@ -78,6 +82,8 @@ if __name__ == "__main__":
         do_sample=args.do_sample,
         temperature=args.temperature,
         max_new_tokens=args.max_new_tokens,
+        top_k=args.top_k,
+        top_p=args.top_p,
     )
     # Get prompt templates for generation
     question_template = gen_utils.get_question_template(ds_name)

@@ -28,7 +28,7 @@ from utils.model_utils import (
     make_message,
 )
 
-PROMPT_VERSION = 4
+PROMPT_VERSION = 5
 MODEL_NAME = "minigpt4"
 
 # ================================================================== #
@@ -44,8 +44,12 @@ def parse_args():
     parser.add_argument(
         "--questions_file", required=True, help="Path to the file with questions."
     )
+    parser.add_argument(
+        "--do_sample", type=bool, default=False, action=argparse.BooleanOptionalAction
+    )
     parser.add_argument("--num_beams", type=int, default=1)
     parser.add_argument("--temperature", type=int, default=0.1)
+    parser.add_argument("--top_p", help="Top-P", default=0.95)
     parser.add_argument(
         "--max_new_tokens", help="Maximum number of tokens to generate", default=256
     )
@@ -137,9 +141,11 @@ if __name__ == "__main__":
             img_list,
             conv,
             num_repeats=1,
+            do_sample=args.do_sample,
             num_beams=args.num_beams,
             temperature=args.temperature,
             max_new_tokens=args.max_new_tokens,
+            top_p=args.top_p,
         )
         print("Response: {}".format(curr_rk["response"]))
         print("=" * 25)
@@ -154,6 +160,7 @@ if __name__ == "__main__":
             num_beams=args.num_beams,
             temperature=args.temperature,
             max_new_tokens=args.max_new_tokens,
+            top_p=args.top_p,
         )
         # print(curr_rk["rationales"])
         # print("=" * 25)
@@ -168,6 +175,7 @@ if __name__ == "__main__":
             num_beams=args.num_beams,
             temperature=args.temperature,
             max_new_tokens=args.max_new_tokens,
+            top_p=args.top_p,
         )
         print(curr_rk["triples"])
         print("=" * 25)
