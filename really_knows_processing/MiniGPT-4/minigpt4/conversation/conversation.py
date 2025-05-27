@@ -1,4 +1,5 @@
 import argparse
+import pathlib
 import time
 from threading import Thread
 from PIL import Image
@@ -236,7 +237,7 @@ class Chat:
     def encode_img(self, img_list):
         image = img_list[0]
         img_list.pop(0)
-        if isinstance(image, str):  # is a image path
+        if isinstance(image, (str, pathlib.PurePath)):  # is a image path
             raw_image = Image.open(image).convert("RGB")
             image = self.vis_processor(raw_image).unsqueeze(0).to(self.device)
         elif isinstance(image, Image.Image):
