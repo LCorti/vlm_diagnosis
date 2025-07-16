@@ -23,7 +23,7 @@ from config_loaders.dataset_config_loader import DatasetConfig
 from config_loaders.ca_config_loader import CAConfig
 from config_loaders.sk_config_loader import SKConfig
 from utils.data_io import load_json, load_jsonl, load_pickle, make_dir, append_to_jsonl
-from utils.measures import compute_ic_relation
+from utils.graph_stats import compute_ic_relation
 
 warnings.filterwarnings("ignore")
 
