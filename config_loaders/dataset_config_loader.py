@@ -11,14 +11,14 @@ class DatasetConfig:
         )
         self.DATASET_PATHS = self.load_dataset_config()
 
-    def load_dataset_config(self):
+    def load_dataset_config(self) -> dict:
         with open(self.CONFIG_PATH) as fp:
             return yaml.safe_load(fp)
 
-    def get_ds_list(self):
+    def get_ds_list(self) -> list:
         return list(self.DATASET_PATHS.keys())
 
-    def get_ds_paths(self, ds_name):
+    def get_ds_paths(self, ds_name: str) -> str:
         if ds_name not in self.DATASET_PATHS:
             raise
         return self.DATASET_PATHS[ds_name]

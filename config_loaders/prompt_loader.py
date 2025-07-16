@@ -3,7 +3,7 @@ from pathlib import Path
 
 
 class PromptLoader:
-    def __init__(self, prompt_version=1, load_counterfactual=False):
+    def __init__(self, prompt_version: int = 1, load_counterfactual: bool = False):
         self.SE_PROMPTS_PATH = (
             Path(__file__)
             .parent.joinpath(
@@ -27,22 +27,22 @@ class PromptLoader:
             self.COUNTER_PROMPTS = self.load_counter_prompts()
 
     # File loading
-    def load_prompts(self, path):
+    def load_prompts(self, path: str | Path) -> dict:
         with open(path) as fp:
             return yaml.safe_load(fp)
 
-    def load_se_prompts(self):
+    def load_se_prompts(self) -> dict:
         return self.load_prompts(self.SE_PROMPTS_PATH)
 
-    def load_counter_prompts(self):
+    def load_counter_prompts(self) -> dict:
         return self.load_prompts(self.COUNTER_PROMPTS_PATH)
 
     # Prompt retrieval
-    def get_question_template(self, model, ds_name):
+    def get_question_template(self, model: str, ds_name: str) -> str:
         return self.SE_PROMPTS["question_template"][model][ds_name]
 
-    def get_rationale_template(self, model):
+    def get_rationale_template(self, model: str) -> str:
         return self.SE_PROMPTS["rationale_template"][model]
 
-    def get_out_format_template(self, model):
+    def get_out_format_template(self, model: str) -> str:
         return self.SE_PROMPTS["out_format_template"][model]

@@ -11,14 +11,14 @@ class SKConfig:
         )
         self.SK_PATHS = self.load_sk_config()
 
-    def load_sk_config(self):
+    def load_sk_config(self) -> dict:
         with open(self.CONFIG_PATH) as fp:
             return yaml.safe_load(fp)
 
-    def get_sk_list(self):
+    def get_sk_list(self) -> list:
         return list(self.SK_PATHS.keys())
 
-    def get_sk_paths(self, ds_name):
+    def get_sk_paths(self, ds_name: str) -> dict:
         if ds_name not in self.SK_PATHS:
             raise
         return self.SK_PATHS[ds_name]
