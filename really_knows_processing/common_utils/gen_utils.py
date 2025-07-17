@@ -21,8 +21,8 @@ from config_loaders.prompt_handler import PromptHandler
 class GenUtils:
     def __init__(self, model_name: str, prompt_version: int = 1) -> None:
         self.MODEL_NAME = model_name
-        self.PROMPT_LOADER = PromptHandler(prompt_version=prompt_version)
-        self.PROMPT_LOADER.set_curr_model(self.MODEL_NAME)
+        self.PROMPT_HDL = PromptHandler(prompt_version=prompt_version)
+        self.PROMPT_HDL.set_curr_model(self.MODEL_NAME)
         self.GEN_CONFIG = None
 
         # Parsing patterns
@@ -32,14 +32,14 @@ class GenUtils:
         self.GROUP_PATTERN_SIMP = r"\((?P<from_concept>[^,]+), (?P<relationship>[^,]+), (?P<to_concept>[^)]+)\)"
 
     def get_question_template(self, ds_name: str) -> str:
-        self.PROMPT_LOADER.set_curr_ds(ds_name)
-        return self.PROMPT_LOADER.get_question_template()
+        self.PROMPT_HDL.set_curr_ds(ds_name)
+        return self.PROMPT_HDL.get_question_template()
 
     def get_rationale_template(self) -> str:
-        return self.PROMPT_LOADER.get_rationale_template()
+        return self.PROMPT_HDL.get_rationale_template()
 
     def get_out_format_template(self) -> str:
-        return self.PROMPT_LOADER.get_out_format_template()
+        return self.PROMPT_HDL.get_out_format_template()
 
     def get_gen_config(
         self,
