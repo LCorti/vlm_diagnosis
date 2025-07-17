@@ -1,100 +1,100 @@
 internvl2:
   llava-bench: 
-    raw: data/really_know/outcomes/internvl2/llava-bench/results_v{}.jsonl
-    parsed: data/really_know/parsed/internvl2/llava-bench/results_v{}.jsonl
-    parsed_pkl: data/really_know/parsed_pkl/internvl2/llava-bench/results.jsonl
-    final: data/really_know/final/internvl2/llava-bench/results.json
-    counter: data/really_know/counterfactual/internvl2/llava-bench/results.jsonl
+    raw: results_v{}.jsonl
+    parsed: results_v{}.jsonl
+    parsed_pkl: results.jsonl
+    final: results.json
+    counter: results.jsonl
   mmbench: 
-    raw: data/really_know/outcomes/internvl2/mmbench/results_v{}.jsonl
-    parsed: data/really_know/parsed/internvl2/mmbench/results_v{}.jsonl
-    parsed_pkl: data/really_know/parsed_pkl/internvl2/mmbench/results.jsonl
-    final: data/really_know/final/internvl2/mmbench/results.json
-    counter: data/really_know/counterfactual/internvl2/mmbench/results.jsonl
+    raw: results_v{}.jsonl
+    parsed: results_v{}.jsonl
+    parsed_pkl: results.jsonl
+    final: results.json
+    counter: results.jsonl
   seed: 
-    raw: data/really_know/outcomes/internvl2/seed/results_v{}.jsonl
-    parsed: data/really_know/parsed/internvl2/seed/results_v{}.jsonl
-    parsed_pkl: data/really_know/parsed_pkl/internvl2/seed/results.jsonl
-    final: data/really_know/final/internvl2/seed/results.json
-    counter: data/really_know/counterfactual/internvl2/seed/results.jsonl
+    raw: results_v{}.jsonl
+    parsed: results_v{}.jsonl
+    parsed_pkl: results.jsonl
+    final: results.json
+    counter: results.jsonl
   vqav2: 
-    raw: data/really_know/outcomes/internvl2/vqav2/results_v{}.jsonl
-    parsed: data/really_know/parsed/internvl2/vqav2/results_v{}.jsonl
-    parsed_pkl: data/really_know/parsed_pkl/internvl2/vqav2/results.jsonl
-    final: data/really_know/final/internvl2/vqav2/results.json
-    counter: data/really_know/counterfactual/internvl2/vqav2/results.jsonl
+    raw: results_v{}.jsonl
+    parsed: results_v{}.jsonl
+    parsed_pkl: results.jsonl
+    final: results.json
+    counter: results.jsonl
 llava-1.6:
   llava-bench: 
-    raw: data/really_know/outcomes/llava-1.6/llava-bench/results_v{}.jsonl
-    parsed: data/really_know/parsed/llava-1.6/llava-bench/results_v{}.jsonl
-    parsed_pkl: data/really_know/parsed_pkl/llava-1.6/llava-bench/results.jsonl
-    final: data/really_know/final/llava-1.6/llava-bench/results.json
-    counter: data/really_know/counterfactual/llava-1.6/llava-bench/results.jsonl
+    raw: results_v{}.jsonl
+    parsed: results_v{}.jsonl
+    parsed_pkl: results.jsonl
+    final: results.json
+    counter: results.jsonl
   mmbench: 
-    raw: data/really_know/outcomes/llava-1.6/mmbench/results_v{}.jsonl
-    parsed: data/really_know/parsed/llava-1.6/mmbench/results_v{}.jsonl
-    parsed_pkl: data/really_know/parsed_pkl/llava-1.6/mmbench/results.jsonl
-    final: data/really_know/final/llava-1.6/mmbench/results.json
-    counter: data/really_know/counterfactual/llava-1.6/mmbench/results.jsonl
+    raw: results_v{}.jsonl
+    parsed: results_v{}.jsonl
+    parsed_pkl: results.jsonl
+    final: results.json
+    counter: results.jsonl
   seed: 
-    raw: data/really_know/outcomes/llava-1.6/seed/results_v{}.jsonl
-    parsed: data/really_know/parsed/llava-1.6/seed/results_v{}.jsonl
-    parsed_pkl: data/really_know/parsed_pkl/llava-1.6/seed/results.jsonl
-    final: data/really_know/final/llava-1.6/seed/results.json
-    counter: data/really_know/counterfactual/llava-1.6/seed/results.jsonl
+    raw: results_v{}.jsonl
+    parsed: results_v{}.jsonl
+    parsed_pkl: results.jsonl
+    final: results.json
+    counter: results.jsonl
   vqav2: 
-    raw: data/really_know/outcomes/llava-1.6/vqav2/results_v{}.jsonl
-    parsed: data/really_know/parsed/llava-1.6/vqav2/results_v{}.jsonl
-    parsed_pkl: data/really_know/parsed_pkl/llava-1.6/vqav2/results.jsonl
-    final: data/really_know/final/llava-1.6/vqav2/results.json
-    counter: data/really_know/counterfactual/llava-1.6/vqav2/results.jsonl
+    raw: results_v{}.jsonl
+    parsed: results_v{}.jsonl
+    parsed_pkl: results.jsonl
+    final: results.json
+    counter: results.jsonl
 minigpt4:
   llava-bench: 
-    raw: data/really_know/outcomes/minigpt4/llava-bench/results_v{}.jsonl
-    parsed: data/really_know/parsed/minigpt4/llava-bench/results_v{}.jsonl
-    parsed_pkl: data/really_know/parsed_pkl/minigpt4/llava-bench/results.jsonl
-    final: data/really_know/final/minigpt4/llava-bench/results.json
-    counter: data/really_know/counterfactual/minigpt4/llava-bench/results.jsonl
+    raw: results_v{}.jsonl
+    parsed: results_v{}.jsonl
+    parsed_pkl: results.jsonl
+    final: results.json
+    counter: results.jsonl
   mmbench: 
-    raw: data/really_know/outcomes/minigpt4/mmbench/results_v{}.jsonl
-    parsed: data/really_know/parsed/minigpt4/mmbench/results_v{}.jsonl
-    parsed_pkl: data/really_know/parsed_pkl/minigpt4/mmbench/results.jsonl
-    final: data/really_know/final/minigpt4/mmbench/results.json
-    counter: data/really_know/counterfactual/minigpt4/mmbench/results.jsonl
+    raw: results_v{}.jsonl
+    parsed: results_v{}.jsonl
+    parsed_pkl: results.jsonl
+    final: results.json
+    counter: results.jsonl
   seed: 
-    raw: data/really_know/outcomes/minigpt4/seed/results_v{}.jsonl
-    parsed: data/really_know/parsed/minigpt4/seed/results_v{}.jsonl
-    parsed_pkl: data/really_know/parsed_pkl/minigpt4/seed/results.jsonl
-    final: data/really_know/final/minigpt4/seed/results.json
-    counter: data/really_know/counterfactual/minigpt4/seed/results.jsonl
+    raw: results_v{}.jsonl
+    parsed: results_v{}.jsonl
+    parsed_pkl: results.jsonl
+    final: results.json
+    counter: results.jsonl
   vqav2: 
-    raw: data/really_know/outcomes/minigpt4/vqav2/results_v{}.jsonl
-    parsed: data/really_know/parsed/minigpt4/vqav2/results_v{}.jsonl
-    parsed_pkl: data/really_know/parsed_pkl/minigpt4/vqav2/results.jsonl
-    final: data/really_know/final/minigpt4/vqav2/results.json
-    counter: data/really_know/counterfactual/minigpt4/vqav2/results.jsonl
+    raw: results_v{}.jsonl
+    parsed: results_v{}.jsonl
+    parsed_pkl: results.jsonl
+    final: results.json
+    counter: results.jsonl
 sharegpt4v:
   llava-bench: 
-    raw: data/really_know/outcomes/sharegpt4v/llava-bench/results_v{}.jsonl
-    parsed: data/really_know/parsed/sharegpt4v/llava-bench/results_v{}.jsonl
-    parsed_pkl: data/really_know/parsed_pkl/sharegpt4v/llava-bench/results.jsonl
-    final: data/really_know/final/sharegpt4v/llava-bench/results.json
-    counter: data/really_know/counterfactual/sharegpt4v/llava-bench/results.jsonl
+    raw: results_v{}.jsonl
+    parsed: results_v{}.jsonl
+    parsed_pkl: results.jsonl
+    final: results.json
+    counter: results.jsonl
   mmbench: 
-    raw: data/really_know/outcomes/sharegpt4v/mmbench/results_v{}.jsonl
-    parsed: data/really_know/parsed/sharegpt4v/mmbench/results_v{}.jsonl
-    parsed_pkl: data/really_know/parsed_pkl/sharegpt4v/mmbench/results.jsonl
-    final: data/really_know/final/sharegpt4v/mmbench/results.json
-    counter: data/really_know/counterfactual/sharegpt4v/mmbench/results.jsonl
+    raw: results_v{}.jsonl
+    parsed: results_v{}.jsonl
+    parsed_pkl: results.jsonl
+    final: results.json
+    counter: results.jsonl
   seed: 
-    raw: data/really_know/outcomes/sharegpt4v/seed/results_v{}.jsonl
-    parsed: data/really_know/parsed/sharegpt4v/seed/results_v{}.jsonl
-    parsed_pkl: data/really_know/parsed_pkl/sharegpt4v/seed/results.jsonl
-    final: data/really_know/final/sharegpt4v/seed/results.json
-    counter: data/really_know/counterfactual/sharegpt4v/seed/results.jsonl
+    raw: results_v{}.jsonl
+    parsed: results_v{}.jsonl
+    parsed_pkl: results.jsonl
+    final: results.json
+    counter: results.jsonl
   vqav2: 
-    raw: data/really_know/outcomes/sharegpt4v/vqav2/results_v{}.jsonl
-    parsed: data/really_know/parsed/sharegpt4v/vqav2/results_v{}.jsonl
-    parsed_pkl: data/really_know/parsed_pkl/sharegpt4v/vqav2/results.jsonl
-    final: data/really_know/final/sharegpt4v/vqav2/results.json
-    counter: data/really_know/counterfactual/sharegpt4v/vqav2/results.jsonl
+    raw: results_v{}.jsonl
+    parsed: results_v{}.jsonl
+    parsed_pkl: results.jsonl
+    final: results.json
+    counter: results.jsonl
