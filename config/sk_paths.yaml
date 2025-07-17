@@ -1,84 +1,77 @@
 llava-bench:
   main:
-    dir: data/should_know/llava-bench/main
-    sg_raw: scene_graphs/sg_raw.json
-    sg_clean: scene_graphs/sg_clean.jsonl
-    sg_merged: scene_graphs/sg_merged.jsonl
-    sg_crowd: scene_graphs/sg_crowd.jsonl
+    sg_raw: sg_raw.json
+    sg_clean: sg_clean.jsonl
+    sg_merged: sg_merged.jsonl
+    sg_crowd: sg_crowd.jsonl
     val_step: crowd_val.jsonl
     ann_step: crowd_ann.jsonl
     ann_exp: crowd_ann_exp.jsonl
     sk_final: sk_final.jsonl
-    pkl: pkl/sg_crowd_nx.pkl
+    pkl: sg_crowd_nx.pkl
 mmbench:
   image_scene:
-    dir: data/should_know/mmbench/image_scene
-    sg_raw: scene_graphs/sg_raw.json
-    sg_clean: scene_graphs/sg_clean.jsonl
-    sg_merged: scene_graphs/sg_merged.jsonl
-    sg_crowd: scene_graphs/sg_crowd.jsonl
+    sg_raw: sg_raw.json
+    sg_clean: sg_clean.jsonl
+    sg_merged: sg_merged.jsonl
+    sg_crowd: sg_crowd.jsonl
     val_step: crowd_val.jsonl
     ann_step: crowd_ann.jsonl
     ann_exp: crowd_ann_exp.jsonl
     sk_final: sk_final.jsonl
-    pkl: pkl/sg_crowd_nx.pkl
+    pkl: sg_crowd_nx.pkl
   image_topic:
-    dir: data/should_know/mmbench/image_topic
-    sg_raw: scene_graphs/sg_raw.json
-    sg_clean: scene_graphs/sg_clean.jsonl
-    sg_merged: scene_graphs/sg_merged.jsonl
-    sg_crowd: scene_graphs/sg_crowd.jsonl
+    sg_raw: sg_raw.json
+    sg_clean: sg_clean.jsonl
+    sg_merged: sg_merged.jsonl
+    sg_crowd: sg_crowd.jsonl
     val_step: crowd_val.jsonl
     ann_step: crowd_ann.jsonl
     ann_exp: crowd_ann_exp.jsonl
     sk_final: sk_final.jsonl
-    pkl: pkl/sg_crowd_nx.pkl
+    pkl: sg_crowd_nx.pkl
 seed:
   scene_understanding:
-    dir: data/should_know/seed/scene_understanding
-    sg_raw: scene_graphs/sg_raw.json
-    sg_clean: scene_graphs/sg_clean.jsonl
-    sg_merged: scene_graphs/sg_merged.jsonl
-    sg_crowd: scene_graphs/sg_crowd.jsonl
+    sg_raw: sg_raw.json
+    sg_clean: sg_clean.jsonl
+    sg_merged: sg_merged.jsonl
+    sg_crowd: sg_crowd.jsonl
     val_step: crowd_val.jsonl
     ann_step: crowd_ann.jsonl
     ann_exp: crowd_ann_exp.jsonl
     sk_final: sk_final.jsonl
-    pkl: pkl/sg_crowd_nx.pkl
+    pkl: sg_crowd_nx.pkl
   visual_reasoning:
-    dir: data/should_know/seed/visual_reasoning
-    sg_raw: scene_graphs/sg_raw.json
-    sg_clean: scene_graphs/sg_clean.jsonl
-    sg_merged: scene_graphs/sg_merged.jsonl
-    sg_crowd: scene_graphs/sg_crowd.jsonl
+    sg_raw: sg_raw.json
+    sg_clean: sg_clean.jsonl
+    sg_merged: sg_merged.jsonl
+    sg_crowd: sg_crowd.jsonl
     val_step: crowd_val.jsonl
     ann_step: crowd_ann.jsonl
     ann_exp: crowd_ann_exp.jsonl
     sk_final: sk_final.jsonl
-    pkl: pkl/sg_crowd_nx.pkl
+    pkl: sg_crowd_nx.pkl
 vqav2:
   how_many_people_are:
-    dir: data/should_know/vqav2/how_many_people_are
-    sg_raw: scene_graphs/sg_raw.json
-    sg_clean: scene_graphs/sg_clean.jsonl
-    sg_merged: scene_graphs/sg_merged.jsonl
-    sg_crowd: scene_graphs/sg_crowd.jsonl
+    sg_raw: sg_raw.json
+    sg_clean: sg_clean.jsonl
+    sg_merged: sg_merged.jsonl
+    sg_crowd: sg_crowd.jsonl
     val_step: crowd_val.jsonl
     ann_step: crowd_ann.jsonl
     ann_exp: crowd_ann_exp.jsonl
     sk_final: sk_final.jsonl
-    pkl: pkl/sg_crowd_nx.pkl
+    pkl: sg_crowd_nx.pkl
   what_is_the_person:
-    dir: data/should_know/vqav2/what_is_the_person
-    sg_raw: scene_graphs/sg_raw.json
-    sg_clean: scene_graphs/sg_clean.jsonl
-    sg_merged: scene_graphs/sg_merged.jsonl
-    sg_crowd: scene_graphs/sg_crowd.jsonl
+    sg_raw: sg_raw.json
+    sg_clean: sg_clean.jsonl
+    sg_merged: sg_merged.jsonl
+    sg_crowd: sg_crowd.jsonl
     val_step: crowd_val.jsonl
     ann_step: crowd_ann.jsonl
     ann_exp: crowd_ann_exp.jsonl
     sk_final: sk_final.jsonl
-    pkl: pkl/sg_crowd_nx.pkl
+    pkl: sg_crowd_nx.pkl
 vqav2_holdout:
   is_the_person:
     dir: data/should_know/vqav2/holdout/is_the_person
