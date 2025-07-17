@@ -2,7 +2,6 @@ import argparse
 import copy
 import io
 import networkx as nx
-import os
 import pandas as pd
 import sys
 import warnings
@@ -15,7 +14,7 @@ from sklearn.preprocessing import PolynomialFeatures
 from sklearn.linear_model import LassoCV
 from sklearn.ensemble import GradientBoostingRegressor
 
-module_path = os.path.abspath(os.path.join("../"))
+module_path = str(Path("..").resolve())
 if module_path not in sys.path:
     sys.path.append(module_path)
 

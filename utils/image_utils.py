@@ -1,5 +1,6 @@
 import numpy as np
 
+from pathlib import Path
 from PIL import Image, ImageDraw
 from typing import Any
 
@@ -7,12 +8,12 @@ from typing import Any
 # https://github.com/waxnkw/IETrans-SGG.pytorch
 
 
-def load_img(img_path: str) -> Image:
+def load_img(img_path: str | Path) -> Image:
     img = Image.open(img_path)
     return img
 
 
-def save_img(pil_img: Image, file_path: str) -> None:
+def save_img(pil_img: Image, file_path: str | Path) -> None:
     rgb_img = pil_img.convert("RGB")
     rgb_img.save(file_path)
 

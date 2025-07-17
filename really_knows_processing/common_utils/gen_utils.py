@@ -1,8 +1,8 @@
-import os
 import re
 import sys
 import torch
 
+from pathlib import Path
 from transformers import (
     AutoTokenizer,
     AutoModel,
@@ -11,7 +11,7 @@ from transformers import (
 )
 from typing import Any
 
-module_path = os.path.abspath(os.path.join("../"))
+module_path = str(Path("..").resolve())
 if module_path not in sys.path:
     sys.path.append(module_path)
 

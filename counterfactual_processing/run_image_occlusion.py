@@ -1,16 +1,15 @@
 import cv2
 import numpy as np
-import os
 import sys
 
+from pathlib import Path
 from PIL import Image
 
-module_path = os.path.abspath(os.path.join("../"))
+module_path = str(Path("..").resolve())
 if module_path not in sys.path:
     sys.path.append(module_path)
 
 from config_loaders.sk_handler import SKHandler
-from pathlib import Path
 from shapely.geometry import Polygon, MultiPolygon
 from shapely.ops import unary_union
 from utils.data_io import load_json, load_jsonl, make_dir, save_json

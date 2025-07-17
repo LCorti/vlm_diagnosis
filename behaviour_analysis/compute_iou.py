@@ -1,5 +1,4 @@
 import json
-import os
 import numpy as np
 import utils.data_io as data_io
 
@@ -26,7 +25,7 @@ def edge_match(edge1, edge2):
 def load_sk_data(sk_data_paths):
     sk_data = {ds: {} for ds in DATASETS}
     for sk_dp, ds in zip(sk_data_paths, DATASETS):
-        graph_files = os.listdir(sk_dp)
+        graph_files = [gf for gf in Path(sk_dp).iterdir()]
 
         for gf in graph_files:
             g_idx = int(Path(gf).stem.split("_")[1]) - 1
@@ -38,7 +37,7 @@ def load_sk_data(sk_data_paths):
 def load_rk_data(rk_data_paths):
     rk_data = {m: {ds: {} for ds in DATASETS} for m in MODELS}
     for rk_dp, ds, model in zip(rk_data_paths, ALL_DATASETS, ALL_MODELS):
-        graph_files = os.listdir(rk_dp)
+        graph_files = [gf for gf in Path(rk_dp).iterdir()]
 
         for gf in graph_files:
             g_idx = int(Path(gf).stem.split("_")[1])

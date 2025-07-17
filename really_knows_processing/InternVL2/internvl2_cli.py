@@ -1,13 +1,13 @@
 import argparse
-import os
 import sys
 import torch
 
-module_path = os.path.abspath(os.path.join("../../"))
+from pathlib import Path
+
+module_path = str(Path("..", "..").resolve())
 if module_path not in sys.path:
     sys.path.append(module_path)
 
-from pathlib import Path
 from really_knows_processing.common_utils.gen_utils import GenUtils
 from transformers import AutoTokenizer, AutoModel
 from utils.data_io import load_json, save_jsonl

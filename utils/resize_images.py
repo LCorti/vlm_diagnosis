@@ -1,9 +1,8 @@
-import os
 import sys
 
 from pathlib import Path
 
-module_path = os.path.abspath(os.path.join("../"))
+module_path = str(Path("..").resolve())
 if module_path not in sys.path:
     sys.path.append(module_path)
 
@@ -30,12 +29,12 @@ if __name__ == "__main__":
 
         for c in ds_paths:
             curr_imgs_path = ds_paths[c]["imgs"]
-            curr_out_dir = f"{out_dir}/{ds}/imgs_resized/{c}"
+            curr_out_dir = Path(out_dir, ds, "imgs_resized", c)
             make_dir(curr_out_dir)
 
-            img_list = os.listdir(base_dir.joinpath(curr_imgs_path))
+            img_list = [img for img in base_dir.joinpath(curr_imgs_path).iterdir()]
             for img_name in img_list:
                 img_path = base_dir.joinpath(curr_imgs_path).joinpath(img_name)
                 img = load_img(img_path)
                 img = resize_img(img)
-                save_img(img, f"{curr_out_dir}/{img_name}")
+                save_img(img, curr_out_dir.joinpath(img_name))

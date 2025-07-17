@@ -1,6 +1,5 @@
 import cv2
 import numpy as np
-import os
 import sys
 import torch
 
@@ -9,7 +8,7 @@ from sentence_transformers import SentenceTransformer
 from typing import Any
 from ultralytics import YOLOE
 
-module_path = os.path.abspath(os.path.join("../"))
+module_path = str(Path("..").resolve())
 if module_path not in sys.path:
     sys.path.append(module_path)
 

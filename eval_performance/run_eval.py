@@ -1,4 +1,3 @@
-import os
 import sys
 
 from evaluate import load
@@ -11,7 +10,7 @@ from eval_utils import (
     save_bertscore_hash,
 )
 
-module_path = os.path.abspath(os.path.join("../"))
+module_path = str(Path("..").resolve())
 if module_path not in sys.path:
     sys.path.append(module_path)
 

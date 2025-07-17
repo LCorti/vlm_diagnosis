@@ -1,5 +1,4 @@
 import argparse
-import os
 import sys
 import torch
 
@@ -13,7 +12,7 @@ from minigpt4.runners import *
 from minigpt4.tasks import *
 from pathlib import Path
 
-module_path = os.path.abspath(os.path.join("../../"))
+module_path = str(Path("..", "..").resolve())
 if module_path not in sys.path:
     sys.path.append(module_path)
 
