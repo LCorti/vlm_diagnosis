@@ -24,8 +24,6 @@ class EvalHandler:
     def get_ds_list(self, model: str = "internvl2") -> list:
         return list(self.EVAL_PATHS[model].keys())
 
-    # Update from here!
-
     def get_eval_path(self) -> Path:
         fn = self.EVAL_PATHS[self.CURR_MODEL][self.CURR_DS]
         return self.BASE_DIR.joinpath(self.CURR_MODEL, self.CURR_DS, fn)
