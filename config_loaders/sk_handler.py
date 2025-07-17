@@ -36,42 +36,39 @@ class SKHandler:
     def get_classes(self) -> list:
         return list(self.SK_PATHS[self.CURR_DS].keys())
 
-    def build_path(self, target: Path) -> Path:
-        return self.BASE_DIR.joinpath(self.CURR_DS, self.CURR_CLASS, target)
+    def build_path(self, target: str) -> Path:
+        fn = self.SK_PATHS[self.CURR_DS][self.CURR_CLASS][target]
+        if target in ["sg_raw", "sg_clean", "sg_merged", "sg_crowd"]:
+            new_fn = Path("scene_graphs", fn)
+        elif target == "pkl":
+            new_fn = Path("pkl", fn)
+        else:
+            new_fn = fn
+        return self.BASE_DIR.joinpath(self.CURR_DS, self.CURR_CLASS, new_fn)
 
     def get_sg_raw_path(self) -> Path:
-        target = self.SK_PATHS[self.CURR_DS][self.CURR_CLASS]["sg_raw"]
-        target = Path("scene_graphs", target)
-        return self.build_path(target)
+        return self.build_path("sg_raw")
 
     def get_sg_clean_path(self) -> Path:
-        target = self.SK_PATHS[self.CURR_DS][self.CURR_CLASS]["sg_clean"]
-        target = Path("scene_graphs", target)
-        return self.build_path(target)
+        return self.build_path("sg_clean")
 
     def get_sg_merged_path(self) -> Path:
-        target = self.SK_PATHS[self.CURR_DS][self.CURR_CLASS]["sg_merged"]
-        target = Path("scene_graphs", target)
-        return self.build_path(target)
+        return self.build_path("sg_merged")
 
     def get_sg_crowd_path(self) -> Path:
-        target = self.SK_PATHS[self.CURR_DS][self.CURR_CLASS]["sg_crowd"]
-        target = Path("scene_graphs", target)
-        return self.build_path(target)
+        return self.build_path("sg_crowd")
 
     def get_val_step_path(self) -> Path:
-        return self.build_path(self.SK_PATHS[self.CURR_DS][self.CURR_CLASS]["val_step"])
+        return self.build_path("val_step")
 
     def get_ann_step_path(self) -> Path:
-        return self.build_path(self.SK_PATHS[self.CURR_DS][self.CURR_CLASS]["ann_step"])
+        return self.build_path("ann_step")
 
     def get_ann_exp_path(self) -> Path:
-        return self.build_path(self.SK_PATHS[self.CURR_DS][self.CURR_CLASS]["ann_exp"])
+        return self.build_path("ann_exp")
 
     def get_sk_final_path(self) -> Path:
-        return self.build_path(self.SK_PATHS[self.CURR_DS][self.CURR_CLASS]["sk_final"])
+        return self.build_path("sk_final")
 
     def get_pkl_path(self) -> Path:
-        target = self.SK_PATHS[self.CURR_DS][self.CURR_CLASS]["pkl"]
-        target = Path("pkl", target)
-        return self.build_path(target)
+        return self.build_path("pkl")
