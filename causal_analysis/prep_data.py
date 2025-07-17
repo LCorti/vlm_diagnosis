@@ -15,7 +15,6 @@ if module_path not in sys.path:
 from config_loaders.dataset_config_loader import DatasetConfig
 from config_loaders.ca_config_loader import CAConfig
 from config_loaders.rk_config_loader import RKConfig
-from config_loaders.sk_config_loader import SKConfig
 from utils.data_io import load_jsonl, make_dir, save_jsonl
 
 warnings.filterwarnings("ignore")
@@ -61,7 +60,6 @@ if __name__ == "__main__":
     #  Load config handlers
     ca_config = CAConfig()
     rk_config = RKConfig()
-    sk_config = SKConfig()
     ds_config = DatasetConfig()
     ds_list = ds_config.get_ds_list()
     ds_list.remove("vqav2_holdout")
