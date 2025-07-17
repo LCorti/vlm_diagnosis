@@ -21,7 +21,7 @@ if module_path not in sys.path:
 
 from config_loaders.dataset_config_loader import DatasetConfig
 from config_loaders.ca_config_loader import CAConfig
-from config_loaders.sk_config_loader import SKConfig
+from config_loaders.sk_handler import SKHandler
 from utils.data_io import load_json, load_jsonl, load_pickle, make_dir, append_to_jsonl
 from utils.graph_stats import compute_ic_relation
 
@@ -205,7 +205,7 @@ if __name__ == "__main__":
 
     # Load config handlers
     ca_config = CAConfig()
-    sk_config = SKConfig()
+    sk_hdl = SKHandler()
     ds_config = DatasetConfig()
 
     # Load data
@@ -234,13 +234,12 @@ if __name__ == "__main__":
     # pickled files first.
 
     # Load pickled SK graphs
-    sk_paths = sk_config.get_sk_paths(dataset)
+    sk_hdl.set_curr_ds(dataset)
     sk_graphs = {}
     all_img_ids = []
-    for ds_class in sk_paths:
-        sk_dir = sk_paths[ds_class]["dir"]
-        sk_pkl_path = sk_paths[ds_class]["pkl"]
-        curr_graphs = load_pickle(Path("..").joinpath(sk_dir).joinpath(sk_pkl_path))
+    for ds_class in sk_hdl.get_classes():
+        sk_hdl.set_curr_class(ds_class)
+        curr_graphs = load_pickle(Path("..", sk_hdl.get_pkl_path()))
         all_img_ids.extend(list(curr_graphs.keys()))
         print(f"Loaded {len(curr_graphs)} from {dataset}+{ds_class}")
         print(f"- Old graph dict: {len(sk_graphs)} entries.")

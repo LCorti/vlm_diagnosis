@@ -8,7 +8,7 @@ module_path = os.path.abspath(os.path.join("../"))
 if module_path not in sys.path:
     sys.path.append(module_path)
 
-from config_loaders.sk_config_loader import SKConfig
+from config_loaders.sk_handler import SKHandler
 from utils.data_io import make_dir, save_jsonl
 
 # Assumption: data has been exported from docker container into local instance.
@@ -52,16 +52,16 @@ PASSWORD = ""
 DATABASE_PREFIX = "lmm_diag_"  # completed dynamically
 
 if __name__ == "__main__":
-    sk_config = SKConfig()
-    sk_list = sk_config.get_sk_list()
+    sk_hdl = SKHandler()
+    ds_list = sk_hdl.get_sk_list()
     # Skip holdout set from VQA v2
-    sk_list.remove("vqav2_holdout")
+    ds_list.remove("vqav2_holdout")
 
-    for ds in sk_list:
+    for ds in ds_list:
         print("=" * 25)
         print("Connecting to {}...".format(ds))
+        sk_hdl.set_curr_ds(ds)
 
-        curr_out_paths = sk_config.get_sk_paths(ds)
         database = "{}{}".format(DATABASE_PREFIX, ds)
         try:
             mydb = mysql.connector.connect(
@@ -92,21 +92,20 @@ if __name__ == "__main__":
             print("Found {} rows.".format(len(rows_ann)))
 
             # Save crowdsourced data in different files
-            for ds_class in curr_out_paths:
-                out_dir = Path("..", curr_out_paths[ds_class]["dir"])
+            for ds_class in sk_hdl.get_classes():
+                sk_hdl.set_curr_class(ds_class)
+                out_file_val = sk_hdl.get_val_step_path()
+                out_file_ann = sk_hdl.get_ann_step_path()
+                out_dir = Path("..", out_file_val.parent)  # same for ann step
                 make_dir(out_dir)
 
                 # Validation data
-                out_file_name = curr_out_paths[ds_class]["val_step"]
-                out_file_path = f"{out_dir}/{out_file_name}"
                 curr_val_data = [r for r in rows_val if r["class"] == ds_class]
-                save_jsonl(curr_val_data, out_file_path)
+                save_jsonl(curr_val_data, out_file_val)
 
                 # Annotation data
-                out_file_name = curr_out_paths[ds_class]["ann_step"]
-                out_file_path = f"{out_dir}/{out_file_name}"
                 curr_ann_data = [r for r in rows_ann if r["class"] == ds_class]
-                save_jsonl(curr_ann_data, out_file_path)
+                save_jsonl(curr_ann_data, out_file_ann)
 
             # Close cursor and free up pooled connection
             cursor.close()

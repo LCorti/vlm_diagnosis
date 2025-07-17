@@ -7,7 +7,7 @@ module_path = os.path.abspath(os.path.join("../"))
 if module_path not in sys.path:
     sys.path.append(module_path)
 
-from config_loaders.sk_config_loader import SKConfig
+from config_loaders.sk_handler import SKHandler
 from utils.data_io import load_json, load_jsonl, save_json, save_jsonl
 
 
@@ -348,8 +348,8 @@ def resolve_crowd_data(
 
 if __name__ == "__main__":
     # Load SK config
-    sk_config = SKConfig()
-    ds_list = sk_config.get_sk_list()
+    sk_hdl = SKHandler()
+    ds_list = sk_hdl.get_sk_list()
     ds_list.remove("vqav2_holdout")
     # Load SGG dict to match concept and relation labels
     sgg_dict = load_json(Path("..", "data", "common", "sgg_dicts.json"))
@@ -357,8 +357,7 @@ if __name__ == "__main__":
 
     for dataset in ds_list:
         print(f"Looking at {dataset}")
-        # Get current sk paths
-        sk_paths = sk_config.get_sk_paths(dataset)
+        sk_hdl.set_curr_ds(dataset)
         # Load questions for this dataset
         q_path = Path("..", "data", "datasets", dataset, "q_crowd.json")
         ds_questions = load_json(q_path)
@@ -366,22 +365,19 @@ if __name__ == "__main__":
         if dataset not in stats:
             stats[dataset] = {}
 
-        for ds_class in sk_paths:
+        for ds_class in sk_hdl.get_classes():
             print(f"- Looking at {ds_class}")
+            sk_hdl.set_curr_class(ds_class)
             # Add entry for statistics
             if ds_class not in stats[dataset]:
                 stats[dataset][ds_class] = {"samples": {}, "summary": {}}
 
             # Load scene graphs showed to crowd workers for a given class
-            base_dir = Path("..", sk_paths[ds_class]["dir"])
-            crowd_sg_file = sk_paths[ds_class]["sg_crowd"]
-            crowd_sg = load_jsonl(base_dir.joinpath(crowd_sg_file))
+            crowd_sg = load_jsonl(Path("..", sk_hdl.get_sg_crowd_path()))
             # Load data from validation step
-            crowd_val_file = sk_paths[ds_class]["val_step"]
-            crowd_val = load_jsonl(base_dir.joinpath(crowd_val_file))
+            crowd_val = load_jsonl(Path("..", sk_hdl.get_val_step_path()))
             # Load data from annotation step
-            crowd_ann_file = sk_paths[ds_class]["ann_exp"]
-            crowd_ann = load_jsonl(base_dir.joinpath(crowd_ann_file))
+            crowd_ann = load_jsonl(Path("..", sk_hdl.get_ann_step_path()))
 
             # Parse validation and annotation data
             parsed_crowd_val = parse_validation_data(crowd_val)
@@ -416,10 +412,9 @@ if __name__ == "__main__":
 
             # Save to disk
             print("... Saving reconciled data to file...")
-            sg_final_file = sk_paths[ds_class]["sk_final"]
-            out_file_path = base_dir.joinpath(sg_final_file)
-            save_jsonl(sg_final, out_file_path)
+            sg_final_file = sk_hdl.get_sk_final_path()
+            save_jsonl(sg_final, Path("..", sg_final_file))
             print("... Saving stats to file...")
-            out_file_path = base_dir.joinpath("stats.json")
-            save_json(stats[dataset][ds_class], out_file_path)
+            stats_file = Path("..", sg_final_file.parent, "stats.json")
+            save_json(stats[dataset][ds_class], stats_file)
             print("Saved.")

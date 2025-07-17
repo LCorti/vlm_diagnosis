@@ -8,7 +8,7 @@ if module_path not in sys.path:
     sys.path.append(module_path)
 
 from config_loaders.dataset_config_loader import DatasetConfig
-from config_loaders.sk_config_loader import SKConfig
+from config_loaders.sk_handler import SKHandler
 from utils.data_io import load_jsonl, save_jsonl, save_json
 
 
@@ -20,21 +20,20 @@ if __name__ == "__main__":
     ds_list.remove("vqav2_holdout")
 
     # Load SK config
-    sk_config = SKConfig()
+    sk_hdl = SKHandler()
 
     for ds in ds_list:
         ds_paths = ds_config.get_ds_paths(ds)
-        sk_paths = sk_config.get_sk_paths(ds)
+        sk_hdl.set_curr_ds(ds)
         ds_crowd_questions = []
 
-        for ds_class in sk_paths:
+        for ds_class in sk_hdl.get_classes():
             print(f"Dealing with {ds} + {ds_class}")
             questions = load_jsonl(Path("..", ds_paths[ds_class]["questions"]))
             print(f"... Loaded {len(questions)} questions")
 
-            base_sk_dir = sk_paths[ds_class]["dir"]
-            crowd_sg_file = sk_paths[ds_class]["sg_crowd"]
-            crowd_sg = load_jsonl(Path("..", base_sk_dir, crowd_sg_file))
+            sk_hdl.set_curr_class(ds_class)
+            crowd_sg = load_jsonl(Path("..", sk_hdl.get_sg_crowd_path()))
             print(f"... Loaded {len(crowd_sg)} scene graphs")
 
             sampled_questions = []

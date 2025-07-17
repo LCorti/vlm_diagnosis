@@ -9,7 +9,7 @@ module_path = os.path.abspath(os.path.join("../"))
 if module_path not in sys.path:
     sys.path.append(module_path)
 
-from config_loaders.sk_config_loader import SKConfig
+from config_loaders.sk_handler import SKHandler
 from pathlib import Path
 from shapely.geometry import Polygon, MultiPolygon
 from shapely.ops import unary_union
@@ -120,15 +120,15 @@ def get_concept_dict(relations: list[dict]) -> dict:
 
 if __name__ == "__main__":
     # Load SK config
-    sk_config = SKConfig()
-    ds_list = sk_config.get_sk_list()
+    sk_hdl = SKHandler()
+    ds_list = sk_hdl.get_sk_list()
     ds_list.remove("vqav2_holdout")
 
     for dataset in ds_list:
         # Load images
         print(f"Looking at {dataset}.")
         # Get current paths
-        sk_paths = sk_config.get_sk_paths(dataset)
+        sk_hdl.set_curr_ds(dataset)
         ds_sk = {}
         summary = {}
         powerset_details = {}
@@ -162,11 +162,10 @@ if __name__ == "__main__":
             )
             img = load_img(img_path)
             ds_class = curr_q["class"]
+            sk_hdl.set_curr_class(ds_class)
             # Load SG data if not already present
             if ds_class not in ds_sk:
-                base_sk_dir = sk_paths[ds_class]["dir"]
-                curr_sg_file = sk_paths[ds_class]["sg_crowd"]
-                curr_sg = load_jsonl(Path("..", base_sk_dir, curr_sg_file))
+                curr_sg = load_jsonl(Path("..", sk_hdl.get_sg_crowd_path()))
                 ds_sk[ds_class] = curr_sg
             # Retrieve corresponding SG data
             curr_sg = lookup_sg(curr_q["img"], ds_sk[ds_class])

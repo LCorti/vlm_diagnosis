@@ -10,7 +10,7 @@ if module_path not in sys.path:
     sys.path.append(module_path)
 
 from config_loaders.dataset_config_loader import DatasetConfig
-from config_loaders.sk_config_loader import SKConfig
+from config_loaders.sk_handler import SKHandler
 from shapely.geometry import Polygon
 from shapely.measurement import distance
 from utils.data_io import make_dir, load_jsonl, save_jsonl
@@ -121,7 +121,7 @@ if __name__ == "__main__":
     ds_list = ds_config.get_ds_list()
 
     # Load SK config
-    sk_config = SKConfig()
+    sk_hdl = SKHandler()
 
     # Threshold for clustering bboxes
     eps = 0.32
@@ -129,13 +129,12 @@ if __name__ == "__main__":
     for dataset in ds_list:
         # Get current paths
         ds_paths = ds_config.get_ds_paths(dataset)
-        sk_paths = sk_config.get_sk_paths(dataset)
+        sk_hdl.set_curr_ds(dataset)
 
         for ds_class in ds_paths:
             # Load clean scene graphs
-            base_dir = sk_paths[ds_class]["dir"]
-            clean_sg_file = sk_paths[ds_class]["sg_clean"]
-            clean_sg = load_jsonl(Path("..", base_dir, clean_sg_file))
+            sk_hdl.set_curr_class(ds_class)
+            clean_sg = load_jsonl(Path("..", sk_hdl.get_sg_clean_path()))
 
             bb_clusters = {}
 
@@ -208,7 +207,8 @@ if __name__ == "__main__":
                     )
 
             # Save class data to file
-            out_folder = Path("..", base_dir, "scene_graphs")
+            out_file = sk_hdl.get_sg_merged_path()
+            out_folder = Path("..", out_file.parent)
             make_dir(out_folder)
 
             if not FULL_DATA:
@@ -217,4 +217,4 @@ if __name__ == "__main__":
                     del img["bboxes_not_rel"]
                     del img["rel_clusters"]
 
-            save_jsonl(clean_sg, Path("..", base_dir, sk_paths[ds_class]["sg_merged"]))
+            save_jsonl(clean_sg, Path("..", out_file))

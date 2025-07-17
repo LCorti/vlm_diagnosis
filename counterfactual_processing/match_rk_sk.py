@@ -14,7 +14,7 @@ if module_path not in sys.path:
     sys.path.append(module_path)
 
 from config_loaders.rk_config_loader import RKConfig
-from config_loaders.sk_config_loader import SKConfig
+from config_loaders.sk_handler import SKHandler
 from utils.graph_utils import stringify_graph_triple
 from utils.data_io import make_dir, load_json, load_jsonl, save_json
 
@@ -55,13 +55,11 @@ def get_similar_concept(
     return curr_concept
 
 
-def load_merge_sk_data(sk_paths: list[dict]) -> list:
+def load_merge_sk_data(sk_hdl: SKHandler) -> list:
     sk_data = []
-    for ds_class in sk_paths:
-        curr_base_dir = sk_paths[ds_class]["dir"]
-        curr_sk_file = sk_paths[ds_class]["sk_final"]
-        curr_sk_path = Path("..", curr_base_dir, curr_sk_file)
-        sk_data.extend(load_jsonl(curr_sk_path))
+    for ds_class in sk_hdl.get_classes():
+        sk_hdl.set_curr_class(ds_class)
+        sk_data.extend(load_jsonl(Path("..", sk_hdl.get_sk_final_path())))
     return sk_data
 
 
@@ -160,10 +158,10 @@ if __name__ == "__main__":
     PROMPT_VERSION = 4
 
     # Loading config files
-    sk_config = SKConfig()
+    sk_hdl = SKHandler()
     rk_config = RKConfig()
     model_list = rk_config.get_model_list() * 4
-    ds_list = sk_config.get_sk_list()
+    ds_list = sk_hdl.get_sk_list()
     ds_list.remove("vqav2_holdout")
     ds_list = ds_list * 4
     model_list.sort()
@@ -191,9 +189,9 @@ if __name__ == "__main__":
             }
 
         # Load SK final
-        sk_final_paths = sk_config.get_sk_paths(ds)
+        sk_hdl.set_curr_ds(ds)
         # Merge batches from classes
-        sk_final = load_merge_sk_data(sk_final_paths)
+        sk_final = load_merge_sk_data(sk_hdl)
 
         # Load parsed RK
         rk_parsed_path = rk_config.get_parsed_rk_paths(model, ds)

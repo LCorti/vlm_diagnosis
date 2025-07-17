@@ -8,7 +8,7 @@ module_path = os.path.abspath(os.path.join("../"))
 if module_path not in sys.path:
     sys.path.append(module_path)
 
-from config_loaders.sk_config_loader import SKConfig
+from config_loaders.sk_handler import SKHandler
 from utils.data_io import make_dir, load_jsonl, save_jsonl
 
 MAX_RELS = 15
@@ -31,8 +31,8 @@ def get_n_rels(images: dict) -> list:
 
 if __name__ == "__main__":
     # Load SK config
-    sk_config = SKConfig()
-    ds_list = sk_config.get_sk_list()
+    sk_hdl = SKHandler()
+    ds_list = sk_hdl.get_sk_list()
     ds_list.remove("vqav2_holdout")
 
     sk_to_keep = {}
@@ -42,16 +42,15 @@ if __name__ == "__main__":
     for dataset in ds_list:
         print(f"Looking at {dataset}")
         # Get current paths
-        sk_paths = sk_config.get_sk_paths(dataset)
+        sk_hdl.set_curr_ds(dataset)
         sk_to_keep[dataset] = {}
         all_n_rels[dataset] = {}
 
-        for ds_class in sk_paths:
+        for ds_class in sk_hdl.get_classes():
             print(f"- Looking at {ds_class}")
             # Load merged scene graphs
-            base_dir = sk_paths[ds_class]["dir"]
-            merged_sg_file = sk_paths[ds_class]["sg_merged"]
-            merged_sg = load_jsonl(Path("..", base_dir, merged_sg_file))
+            sk_hdl.set_curr_class(ds_class)
+            merged_sg = load_jsonl(Path("..", sk_hdl.get_sg_merged_path()))
 
             # Save number of relations for plotting
             all_n_rels[dataset][ds_class] = []
@@ -104,9 +103,7 @@ if __name__ == "__main__":
                     rel["rel_id"] = crete_rel_id(rel)
 
             # Save data to disk
-            out_folder = Path("..", base_dir, "scene_graphs")
+            out_file = sk_hdl.get_sg_crowd_path()
+            out_folder = out_file.parent
             make_dir(out_folder)
-            save_jsonl(
-                sk_to_keep[dataset][ds_class],
-                Path("..", base_dir, sk_paths[ds_class]["sg_crowd"]),
-            )
+            save_jsonl(sk_to_keep[dataset][ds_class], Path("..", out_file))

@@ -8,7 +8,7 @@ if module_path not in sys.path:
     sys.path.append(module_path)
 
 from config_loaders.dataset_config_loader import DatasetConfig
-from config_loaders.sk_config_loader import SKConfig
+from config_loaders.sk_handler import SKHandler
 from utils.data_io import make_dir, load_json, save_jsonl
 
 
@@ -65,18 +65,17 @@ if __name__ == "__main__":
     ds_list = ds_config.get_ds_list()
 
     # Load SK config
-    sk_config = SKConfig()
+    sk_hdl = SKHandler()
 
     for dataset in ds_list:
         # Get current paths
         ds_paths = ds_config.get_ds_paths(dataset)
-        sk_paths = sk_config.get_sk_paths(dataset)
+        sk_hdl.set_curr_ds(dataset)
 
-        for ds_class in ds_paths:
+        for ds_class in sk_hdl.get_classes():
             # Load Raw scene graphs
-            base_dir = sk_paths[ds_class]["dir"]
-            raw_sg_file = sk_paths[ds_class]["sg_raw"]
-            raw_sg = load_json(Path("..", base_dir, raw_sg_file))
+            sk_hdl.set_curr_class(ds_class)
+            raw_sg = load_json(Path("..", sk_hdl.get_sg_raw_path()))
 
             # Get lists of concepts
             unique_c_bbox, unique_c_rel = get_unique_concepts(raw_sg)
@@ -106,9 +105,8 @@ if __name__ == "__main__":
                 del img["bboxes"]
 
             # Save current batch of clean scene graphs
-            out_folder = Path("..", base_dir, "scene_graphs")
+            out_file = sk_hdl.get_sg_clean_path()
+            out_folder = Path("..", out_file.parent)
             make_dir(out_folder)
 
-            save_jsonl(
-                raw_sg["imgs"], Path("..", base_dir, sk_paths[ds_class]["sg_clean"])
-            )
+            save_jsonl(raw_sg["imgs"], Path("..", out_file))
