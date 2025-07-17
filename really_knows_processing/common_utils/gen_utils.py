@@ -15,15 +15,14 @@ module_path = str(Path("..").resolve())
 if module_path not in sys.path:
     sys.path.append(module_path)
 
-from config_loaders.prompt_loader import PromptLoader
+from config_loaders.prompt_handler import PromptHandler
 
 
 class GenUtils:
     def __init__(self, model_name: str, prompt_version: int = 1) -> None:
-        self.PROMPT_VERSION = prompt_version
-        self.PROMPT_FILE_PATH = "../prompts_rk_v{}.yaml".format(self.PROMPT_VERSION)
         self.MODEL_NAME = model_name
-        self.PROMPT_LOADER = PromptLoader(prompt_version=self.PROMPT_VERSION)
+        self.PROMPT_LOADER = PromptHandler(prompt_version=prompt_version)
+        self.PROMPT_LOADER.set_curr_model(self.MODEL_NAME)
         self.GEN_CONFIG = None
 
         # Parsing patterns
@@ -33,13 +32,14 @@ class GenUtils:
         self.GROUP_PATTERN_SIMP = r"\((?P<from_concept>[^,]+), (?P<relationship>[^,]+), (?P<to_concept>[^)]+)\)"
 
     def get_question_template(self, ds_name: str) -> str:
-        return self.PROMPT_LOADER.get_question_template(self.MODEL_NAME, ds_name)
+        self.PROMPT_LOADER.set_curr_ds(ds_name)
+        return self.PROMPT_LOADER.get_question_template()
 
     def get_rationale_template(self) -> str:
-        return self.PROMPT_LOADER.get_rationale_template(self.MODEL_NAME)
+        return self.PROMPT_LOADER.get_rationale_template()
 
     def get_out_format_template(self) -> str:
-        return self.PROMPT_LOADER.get_out_format_template(self.MODEL_NAME)
+        return self.PROMPT_LOADER.get_out_format_template()
 
     def get_gen_config(
         self,
@@ -56,39 +56,25 @@ class GenUtils:
             return self.GEN_CONFIG
 
         # Otherwise, initialise and return it.
+        config_dict = dict(
+            do_sample=do_sample,
+            temperature=temperature,
+            max_new_tokens=max_new_tokens,
+            top_k=top_k,
+            top_p=top_p,
+        )
+
         if self.MODEL_NAME == "internvl2":
-            self.GEN_CONFIG = dict(
-                do_sample=do_sample,
-                temperature=temperature,
-                max_new_tokens=max_new_tokens,
-                top_k=top_k,
-                top_p=top_p,
-            )
+            self.GEN_CONFIG = config_dict
         elif self.MODEL_NAME == "llava-1.6":
-            self.GEN_CONFIG = GenerationConfig.from_dict(
-                {
-                    "do_sample": do_sample,
-                    "num_beams": num_beams,
-                    "temperature": temperature,
-                    "use_cache": use_cache,
-                    "max_new_tokens": max_new_tokens,
-                    "top_k": top_k,
-                    "top_p": top_p,
-                    "cache_position": None,
-                }
-            )
+            config_dict["num_beams"] = num_beams
+            config_dict["use_cache"] = use_cache
+            config_dict["cache_position"] = None
+            self.GEN_CONFIG = GenerationConfig.from_dict(config_dict)
         elif self.MODEL_NAME == "sharegpt4v":
-            self.GEN_CONFIG = GenerationConfig.from_dict(
-                {
-                    "do_sample": do_sample,
-                    "num_beams": num_beams,
-                    "temperature": temperature,
-                    "use_cache": use_cache,
-                    "max_new_tokens": max_new_tokens,
-                    "top_k": top_k,
-                    "top_p": top_p,
-                }
-            )
+            config_dict["num_beams"] = num_beams
+            config_dict["use_cache"] = use_cache
+            self.GEN_CONFIG = GenerationConfig.from_dict(config_dict)
         return self.GEN_CONFIG
 
     def gen_response_internvl2(
