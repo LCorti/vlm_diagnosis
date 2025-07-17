@@ -13,7 +13,7 @@ module_path = os.path.abspath(os.path.join("../"))
 if module_path not in sys.path:
     sys.path.append(module_path)
 
-from config_loaders.rk_config_loader import RKConfig
+from config_loaders.rk_handler import RKHandler
 from config_loaders.sk_handler import SKHandler
 from utils.graph_utils import stringify_graph_triple
 from utils.data_io import make_dir, load_json, load_jsonl, save_json
@@ -159,8 +159,8 @@ if __name__ == "__main__":
 
     # Loading config files
     sk_hdl = SKHandler()
-    rk_config = RKConfig()
-    model_list = rk_config.get_model_list() * 4
+    rk_hdl = RKHandler()
+    model_list = rk_hdl.get_model_list() * 4
     ds_list = sk_hdl.get_sk_list()
     ds_list.remove("vqav2_holdout")
     ds_list = ds_list * 4
@@ -194,9 +194,11 @@ if __name__ == "__main__":
         sk_final = load_merge_sk_data(sk_hdl)
 
         # Load parsed RK
-        rk_parsed_path = rk_config.get_parsed_rk_paths(model, ds)
-        rk_parsed_path = rk_parsed_path.format(PROMPT_VERSION)
-        rk_parsed_path = Path("..", rk_parsed_path)
+        rk_hdl.set_curr_model(model)
+        rk_hdl.set_curr_ds(ds)
+        rk_parsed_path = Path(
+            "..", str(rk_hdl.get_parsed_rk_path()).format(PROMPT_VERSION)
+        )
         rk_parsed = load_jsonl(rk_parsed_path)
 
         all_matches = {}
@@ -429,6 +431,6 @@ if __name__ == "__main__":
         print(counts)
 
         # Save data to file
-        out_path = Path("..", rk_config.get_final_rk_paths(model, ds))
+        out_path = Path("..", rk_hdl.get_final_rk_path())
         make_dir(out_path.parent)
         save_json(all_matches, out_path)

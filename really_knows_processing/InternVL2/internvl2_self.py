@@ -10,7 +10,7 @@ module_path = os.path.abspath(os.path.join("../../"))
 if module_path not in sys.path:
     sys.path.append(module_path)
 
-from config_loaders.rk_config_loader import RKConfig
+from config_loaders.rk_handler import RKHandler
 from really_knows_processing.common_utils.gen_utils import GenUtils
 from really_knows_processing.common_utils.image_utils import (
     load_image,
@@ -60,13 +60,13 @@ if __name__ == "__main__":
     questions_file = args.questions_file
 
     # Load RK config
-    rk_config = RKConfig()
+    rk_hdl = RKHandler()
+    rk_hdl.set_curr_model(MODEL_NAME)
+    rk_hdl.set_curr_ds(ds_name)
     # Get RK output paths and
     # (1) complete file name with prompt version
-    raw_out_f = rk_config.get_raw_rk_paths(MODEL_NAME, ds_name)
-    raw_out_f = raw_out_f.format(PROMPT_VERSION)
-    parsed_out_f = rk_config.get_parsed_rk_paths(MODEL_NAME, ds_name)
-    parsed_out_f = parsed_out_f.format(PROMPT_VERSION)
+    raw_out_f = str(rk_hdl.get_raw_rk_path()).format(PROMPT_VERSION)
+    parsed_out_f = str(rk_hdl.get_parsed_rk_path()).format(PROMPT_VERSION)
     # (2) make directory if missing
     base_dir = Path(__file__).parent.parent.parent
     full_raw_out_f = base_dir.joinpath(raw_out_f)

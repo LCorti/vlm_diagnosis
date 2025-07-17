@@ -14,7 +14,7 @@ if module_path not in sys.path:
 
 from config_loaders.dataset_config_loader import DatasetConfig
 from config_loaders.ca_config_loader import CAConfig
-from config_loaders.rk_config_loader import RKConfig
+from config_loaders.rk_handler import RKHandler
 from utils.data_io import load_jsonl, make_dir, save_jsonl
 
 warnings.filterwarnings("ignore")
@@ -59,18 +59,20 @@ if __name__ == "__main__":
 
     #  Load config handlers
     ca_config = CAConfig()
-    rk_config = RKConfig()
+    rk_hdl = RKHandler()
+    rk_hdl.set_curr_model(model)
+    rk_hdl.set_curr_ds(dataset)
     ds_config = DatasetConfig()
     ds_list = ds_config.get_ds_list()
     ds_list.remove("vqav2_holdout")
 
     # Load data
     base_dir = Path(__file__).parent.parent
-    resps_path = rk_config.get_parsed_rk_paths(model, dataset).format(prompt_version)
+    resps_path = rk_hdl.get_parsed_rk_path().format(prompt_version)
     resps_path = base_dir.joinpath(resps_path).resolve()
     resps = load_jsonl(resps_path)
 
-    alt_resps_path = rk_config.get_counterfactual_rk_paths(model, dataset)
+    alt_resps_path = rk_hdl.get_counterfactual_rk_path()
     alt_resps_path = base_dir.joinpath(alt_resps_path).resolve()
     alt_resps = load_jsonl(alt_resps_path)
 

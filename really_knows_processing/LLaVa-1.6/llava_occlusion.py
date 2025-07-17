@@ -14,7 +14,7 @@ if module_path not in sys.path:
     sys.path.append(module_path)
 
 from config_loaders.dataset_config_loader import DatasetConfig
-from config_loaders.rk_config_loader import RKConfig
+from config_loaders.rk_handler import RKHandler
 from really_knows_processing.common_utils.gen_utils import GenUtils
 from really_knows_processing.common_utils.image_utils import load_image
 from really_knows_processing.common_utils.path_utils import merge_path
@@ -73,8 +73,10 @@ if __name__ == "__main__":
     ds_paths = ds_config.get_ds_paths(ds_name)
 
     # Load RK Config
-    rk_config = RKConfig()
-    counter_out_f = rk_config.get_counterfactual_rk_paths(MODEL_NAME, ds_name)
+    rk_hdl = RKHandler()
+    rk_hdl.set_curr_model(MODEL_NAME)
+    rk_hdl.set_curr_ds(ds_name)
+    counter_out_f = rk_hdl.get_counterfactual_rk_path()
     # Make directory if missing
     base_dir = Path(__file__).parent.parent.parent
     full_counter_out_f = base_dir.joinpath(counter_out_f)

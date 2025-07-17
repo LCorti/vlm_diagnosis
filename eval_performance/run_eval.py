@@ -17,7 +17,7 @@ if module_path not in sys.path:
 
 from config_loaders.dataset_config_loader import DatasetConfig
 from config_loaders.eval_config_loader import EvalConfigLoader
-from config_loaders.rk_config_loader import RKConfig
+from config_loaders.rk_handler import RKHandler
 from utils.data_io import load_jsonl, make_dir, save_json
 
 PROMPT_VERSION = 4
@@ -28,13 +28,13 @@ END = 100
 STEP = 20
 
 if __name__ == "__main__":
-    rk_config = RKConfig()
+    rk_hdl = RKHandler()
     ds_config = DatasetConfig()
     eval_config = EvalConfigLoader()
 
     ds_list = ds_config.get_ds_list()
     ds_list.remove("vqav2_holdout")
-    model_list = rk_config.get_model_list()
+    model_list = rk_hdl.get_model_list()
 
     all_models = model_list * 4
     all_models.sort()
@@ -45,7 +45,9 @@ if __name__ == "__main__":
     for model, ds in zip(all_models, all_ds):
         print(f"Evaluating {model} on {ds}...")
         # Load responses for current model + dataset combo
-        resp_path = Path("..", rk_config.get_parsed_rk_paths(model, ds))
+        rk_hdl.set_curr_model(model)
+        rk_hdl.set_curr_ds(ds)
+        resp_path = Path("..", rk_hdl.get_parsed_rk_path())
         resp_path = resp_path.format(PROMPT_VERSION)
         resp_data = load_jsonl(resp_path)
         count_ok = 0
