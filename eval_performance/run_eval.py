@@ -15,7 +15,7 @@ if module_path not in sys.path:
     sys.path.append(module_path)
 
 from config_loaders.dataset_config_loader import DatasetConfig
-from config_loaders.eval_config_loader import EvalConfigLoader
+from config_loaders.eval_handler import EvalHandler
 from config_loaders.rk_handler import RKHandler
 from utils.data_io import load_jsonl, make_dir, save_json
 
@@ -29,7 +29,7 @@ STEP = 20
 if __name__ == "__main__":
     rk_hdl = RKHandler()
     ds_config = DatasetConfig()
-    eval_config = EvalConfigLoader()
+    eval_hdl = EvalHandler()
 
     ds_list = ds_config.get_ds_list()
     ds_list.remove("vqav2_holdout")
@@ -224,6 +224,6 @@ if __name__ == "__main__":
 
         # Save measures to file
         # Make dirs, if necessary
-        out_path = Path("..", eval_config.get_eval_paths(model, ds))
+        out_path = Path("..", eval_hdl.get_eval_path(model, ds))
         make_dir(Path(out_path).parent)
         save_json(eval_dict[model][ds], out_path)
