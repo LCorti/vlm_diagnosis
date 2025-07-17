@@ -32,7 +32,7 @@ from utils.model_utils import (
 PROMPT_VERSION = 4
 MODEL_NAME = "sharegpt4v"
 HF_MODEL_NAME = "Lin-Chen/ShareGPT4V-7B"
-SURF_DRIVE = "/data/storage"
+SURF_DRIVE = Path("data", "storage")
 
 
 # Kwargs parser
@@ -137,7 +137,7 @@ if __name__ == "__main__":
         print("-- Text: {}".format(curr_q["question"]))
 
         ds_class = curr_q["class"]
-        curr_dir = Path(f"{SURF_DRIVE}/{ds_paths[ds_class]['imgs_occluded']}")
+        curr_dir = SURF_DRIVE.joinpath(ds_paths[ds_class]["imgs_occluded"])
         path_to_summary = f"{curr_dir.parent}/summary.json"
         summary = load_json(path_to_summary)
         occlusion_data = summary[ds_class][str(curr_q["question_id"])]["occlusion"]
