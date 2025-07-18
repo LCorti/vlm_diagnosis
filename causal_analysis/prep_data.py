@@ -11,8 +11,7 @@ module_path = str(Path("..").resolve())
 if module_path not in sys.path:
     sys.path.append(module_path)
 
-from config_loaders.dataset_handler import DatasetHandler
-from config_loaders.ca_config_loader import CAConfig
+from config_loaders.causal_handler import CausalHandler
 from config_loaders.rk_handler import RKHandler
 from utils.data_io import load_jsonl, make_dir, save_jsonl
 
@@ -57,12 +56,13 @@ if __name__ == "__main__":
     model = args.model
 
     #  Load config handlers
-    ca_config = CAConfig()
+    causal_hdl = CausalHandler()
+    causal_hdl.set_curr_model(model)
+    causal_hdl.set_curr_ds(dataset)
     rk_hdl = RKHandler()
     rk_hdl.set_curr_model(model)
     rk_hdl.set_curr_ds(dataset)
-    ds_hdl = DatasetHandler()
-    ds_list = ds_hdl.get_ds_list()
+    ds_list = rk_hdl.get_ds_list()
     if "vqav2_holdout" in ds_list:
         ds_list.remove("vqav2_holdout")
 
@@ -195,7 +195,7 @@ if __name__ == "__main__":
         for idx, row in df_dict[q_idx].iterrows():
             out_data.append(row.to_dict())
 
-    ca_data_path = ca_config.get_ca_data_paths(model, dataset)
+    ca_data_path = causal_hdl.get_ca_data_path(model, dataset)
     out_file = base_dir.joinpath(ca_data_path).resolve()
     out_path = out_file.parent
     make_dir(out_path)

@@ -19,7 +19,7 @@ if module_path not in sys.path:
     sys.path.append(module_path)
 
 from config_loaders.dataset_handler import DatasetHandler
-from config_loaders.ca_config_loader import CAConfig
+from config_loaders.causal_handler import CausalHandler
 from config_loaders.sk_handler import SKHandler
 from utils.data_io import load_json, load_jsonl, load_pickle, make_dir, append_to_jsonl
 from utils.graph_stats import compute_ic_relation
@@ -203,22 +203,26 @@ if __name__ == "__main__":
     model = args.model
 
     # Load config handlers
-    ca_config = CAConfig()
+    causal_hdl = CausalHandler()
+    causal_hdl.set_curr_model(model)
+    causal_hdl.set_curr_ds(dataset)
     sk_hdl = SKHandler()
+    sk_hdl.set_curr_ds(dataset)
     ds_hdl = DatasetHandler()
+    ds_hdl.set_curr_ds(dataset)
 
     # Load data
     base_dir = Path(__file__).parent.parent
-    ca_data_file = ca_config.get_ca_data_paths(model, dataset)
-    ca_data_path = base_dir.joinpath(ca_data_file).resolve()
+    ca_data_path = base_dir.joinpath(causal_hdl.get_ca_data_path()).resolve()
     ca_data = load_jsonl(ca_data_path)
     # Load scene graph counts
-    sgg_freqs_path = base_dir.joinpath("data/common/sgg_freqs.json")
+    sgg_freqs_path = base_dir.joinpath("data", "common", "sgg_freqs.json")
     sg_freqs = load_json(sgg_freqs_path)
 
     # Prepare output file
-    estimates_out_file = Path(ca_config.get_ce_paths(model, dataset))
-    estimates_out_path = base_dir.joinpath(estimates_out_file).resolve()
+    estimates_out_path = base_dir.joinpath(
+        Path(causal_hdl.get_estimates_path())
+    ).resolve()
     make_dir(estimates_out_path.parent)
 
     # Build df_dict
@@ -233,7 +237,6 @@ if __name__ == "__main__":
     # pickled files first.
 
     # Load pickled SK graphs
-    sk_hdl.set_curr_ds(dataset)
     sk_graphs = {}
     all_img_ids = []
     for ds_class in sk_hdl.get_classes():
@@ -254,7 +257,6 @@ if __name__ == "__main__":
 
     # Load question data. Needed to match df_dict and sk_graphs
     questions = []
-    ds_hdl.set_curr_ds(dataset)
     for ds_class in ds_hdl.get_classes():
         ds_hdl.set_curr_class(ds_class)
         q_path = ds_hdl.get_sampled_questions_path()

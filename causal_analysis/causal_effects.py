@@ -33,7 +33,7 @@ if module_path not in sys.path:
     sys.path.append(module_path)
 
 from config_loaders.dataset_handler import DatasetHandler
-from config_loaders.ca_config_loader import CAConfig
+from config_loaders.causal_handler import CausalHandler
 from config_loaders.rk_handler import RKHandler
 from config_loaders.sk_handler import SKHandler
 from utils.data_io import load_jsonl, load_pickle, make_dir, save_json
@@ -48,8 +48,12 @@ DATASET = "vqav2"
 
 # %%
 rk_hdl = RKHandler()
+rk_hdl.set_curr_model(MODEL)
+rk_hdl.set_curr_ds(DATASET)
 sk_hdl = SKHandler()
+sk_hdl.set_curr_ds(DATASET)
 ds_hdl = DatasetHandler()
+ds_hdl.set_curr_ds(DATASET)
 
 ds_list = ds_hdl.get_ds_list()
 if "vqav2_holdout" in ds_list:
@@ -60,10 +64,7 @@ if "vqav2_holdout" in ds_list:
 # - These files already include the answer for the "complete RK"
 
 # %%
-# TODO: change this to Path(__file__).parent for script
-base_dir = Path("..")
-rk_hdl.set_curr_model(MODEL)
-rk_hdl.set_curr_ds(DATASET)
+base_dir = Path(__file__).parent
 resps_path = base_dir.joinpath(str(rk_hdl.get_parsed_rk_path()).format(PROMPT_VERSION))
 print(resps_path)
 resps = load_jsonl(resps_path)
@@ -265,7 +266,6 @@ df_dict[337814001].head()
 
 # %%
 # Load pickled SK graphs
-sk_hdl.set_curr_ds(DATASET)
 sk_classes = sk_hdl.get_classes()
 sk_graphs = {}
 all_img_ids = []
@@ -292,7 +292,6 @@ for sk in sk_graphs.values():
 # %%
 # Load question data. Needed to match df_dict and sk_graphs
 questions = []
-ds_hdl.set_curr_ds(DATASET)
 for ds_class in ds_hdl.get_classes():
     ds_hdl.set_curr_class(ds_class)
     q_path = ds_hdl.get_sampled_questions_path()
@@ -478,9 +477,10 @@ for curr_q in questions:
 # Save causal estimates to file
 
 # %%
-ca_config = CAConfig()
-estimates_out_file = Path(ca_config.get_ca_estimates_paths(MODEL, DATASET))
-estimates_out_path = base_dir.joinpath(estimates_out_file).resolve()
+causal_hdl = CausalHandler()
+causal_hdl.set_curr_model(MODEL)
+causal_hdl.set_curr_ds(DATASET)
+estimates_out_path = base_dir.joinpath(Path(causal_hdl.get_estimates_path())).resolve()
 make_dir(estimates_out_path.parent)
 
 # %%

@@ -1,52 +1,52 @@
 internvl2:
   llava-bench:
-    ca_data: data/causal_effects/ca_data/internvl2/llava-bench/ca_data.jsonl
-    estimates: data/causal_effects/estimates/internvl2/llava-bench/ce.jsonl
+    ca_data: ca_data.jsonl
+    estimates: ce.jsonl
   mmbench:
-    ca_data: data/causal_effects/ca_data/internvl2/mmbench/ca_data.jsonl
-    estimates: data/causal_effects/estimates/internvl2/mmbench/ce.jsonl
+    ca_data: ca_data.jsonl
+    estimates: ce.jsonl
   seed:
-    ca_data: data/causal_effects/ca_data/internvl2/seed/ca_data.jsonl
-    estimates: data/causal_effects/estimates/internvl2/seed/ce.jsonl
+    ca_data: ca_data.jsonl
+    estimates: ce.jsonl
   vqav2:
-    ca_data: data/causal_effects/ca_data/internvl2/vqav2/ca_data.jsonl
-    estimates: data/causal_effects/estimates/internvl2/vqav2/ce.jsonl
+    ca_data: ca_data.jsonl
+    estimates: ce.jsonl
 llava-1.6:
   llava-bench:
-    ca_data: data/causal_effects/ca_data/llava-1.6/llava-bench/ca_data.jsonl
-    estimates: data/causal_effects/estimates/llava-1.6/llava-bench/ce.jsonl
+    ca_data: ca_data.jsonl
+    estimates: ce.jsonl
   mmbench:
-    ca_data: data/causal_effects/ca_data/llava-1.6/mmbench/ca_data.jsonl
-    estimates: data/causal_effects/estimates/llava-1.6/mmbench/ce.jsonl
+    ca_data: ca_data.jsonl
+    estimates: ce.jsonl
   seed:
-    ca_data: data/causal_effects/ca_data/llava-1.6/seed/ca_data.jsonl
-    estimates: data/causal_effects/estimates/llava-1.6/seed/ce.jsonl
+    ca_data: ca_data.jsonl
+    estimates: ce.jsonl
   vqav2:
-    ca_data: data/causal_effects/ca_data/llava-1.6/vqav2/ca_data.jsonl
-    estimates: data/causal_effects/estimates/llava-1.6/vqav2/ce.jsonl
+    ca_data: ca_data.jsonl
+    estimates: ce.jsonl
 minigpt4:
   llava-bench:
-    ca_data: data/causal_effects/ca_data/minigpt4/llava-bench/ca_data.jsonl
-    estimates: data/causal_effects/estimates/minigpt4/llava-bench/ce.jsonl
+    ca_data: ca_data.jsonl
+    estimates: ce.jsonl
   mmbench:
-    ca_data: data/causal_effects/ca_data/minigpt4/mmbench/ca_data.jsonl
-    estimates: data/causal_effects/estimates/minigpt4/mmbench/ce.jsonl
+    ca_data: ca_data.jsonl
+    estimates: ce.jsonl
   seed:
-    ca_data: data/causal_effects/ca_data/minigpt4/seed/ca_data.jsonl
-    estimates: data/causal_effects/estimates/minigpt4/seed/ce.jsonl
+    ca_data: ca_data.jsonl
+    estimates: ce.jsonl
   vqav2:
-    ca_data: data/causal_effects/ca_data/minigpt4/vqav2/ca_data.jsonl
-    estimates: data/causal_effects/estimates/minigpt4/vqav2/ce.jsonl
+    ca_data: ca_data.jsonl
+    estimates: ce.jsonl
 sharegpt4v:
   llava-bench:
-    ca_data: data/causal_effects/ca_data/sharegpt4v/llava-bench/ca_data.jsonl
-    estimates: data/causal_effects/estimates/sharegpt4v/llava-bench/ce.jsonl
+    ca_data: ca_data.jsonl
+    estimates: ce.jsonl
   mmbench:
-    ca_data: data/causal_effects/ca_data/sharegpt4v/mmbench/ca_data.jsonl
-    estimates: data/causal_effects/estimates/sharegpt4v/mmbench/ce.jsonl
+    ca_data: ca_data.jsonl
+    estimates: ce.jsonl
   seed:
-    ca_data: data/causal_effects/ca_data/sharegpt4v/seed/ca_data.jsonl
-    estimates: data/causal_effects/estimates/sharegpt4v/seed/ce.jsonl
+    ca_data: ca_data.jsonl
+    estimates: ce.jsonl
   vqav2:
-    ca_data: data/causal_effects/ca_data/sharegpt4v/vqav2/ca_data.jsonl
-    estimates: data/causal_effects/estimates/sharegpt4v/vqav2/ce.jsonl
+    ca_data: ca_data.jsonl
+    estimates: ce.jsonl
