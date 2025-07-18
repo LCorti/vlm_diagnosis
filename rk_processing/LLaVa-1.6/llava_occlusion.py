@@ -14,9 +14,9 @@ if module_path not in sys.path:
 
 from config_handlers.dataset_handler import DatasetHandler
 from config_handlers.rk_handler import RKHandler
-from really_knows_processing.common_utils.gen_utils import GenUtils
-from really_knows_processing.common_utils.image_utils import load_image
-from really_knows_processing.common_utils.path_utils import merge_path
+from rk_processing.common_utils.gen_utils import GenUtils
+from rk_processing.common_utils.image_utils import load_image
+from rk_processing.common_utils.path_utils import merge_path
 from utils.data_io import make_dir, load_json, load_jsonl, append_to_jsonl
 from utils.model_utils import (
     set_conv_mode,

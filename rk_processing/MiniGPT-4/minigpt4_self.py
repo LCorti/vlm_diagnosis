@@ -17,7 +17,7 @@ if module_path not in sys.path:
     sys.path.append(module_path)
 
 from config_handlers.rk_handler import RKHandler
-from really_knows_processing.common_utils.gen_utils import GenUtils
+from rk_processing.common_utils.gen_utils import GenUtils
 from utils.data_io import make_dir, load_json, save_jsonl
 from utils.model_utils import (
     ask,

@@ -9,8 +9,8 @@ module_path = str(Path("..", "..").resolve())
 if module_path not in sys.path:
     sys.path.append(module_path)
 
-from config_handlers.rk_config_loader import RKConfig
-from really_knows_processing.common_utils.gen_utils import GenUtils
+from config_handlers.rk_handler import RKHandler
+from rk_processing.common_utils.gen_utils import GenUtils
 from utils.data_io import make_dir, load_json, save_jsonl
 from utils.image_utils import load_image
 from utils.model_utils import split_model, make_message
@@ -18,6 +18,10 @@ from utils.model_utils import split_model, make_message
 PROMPT_VERSION = 4
 MODEL_NAME = "internvl2"
 HF_MODEL_NAME = "OpenGVLab/InternVL2-8B"
+
+#
+# TODO: Update this script.
+#
 
 
 # Kwargs parser

@@ -262,7 +262,7 @@ df_dict[337814001].head()
 # %% [markdown]
 # First, we load the NX graphs and make the .dot string required by the dowhy package.
 #
-# Make sure to run ```should_know_processing/pickle_sk.py``` to obtain the pickled files first.
+# Make sure to run ```sk_processing/pickle_sk.py``` to obtain the pickled files first.
 
 # %%
 # Load pickled SK graphs
