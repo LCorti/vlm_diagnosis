@@ -14,9 +14,9 @@ module_path = str(Path("..").resolve())
 if module_path not in sys.path:
     sys.path.append(module_path)
 
-from config_loaders.dataset_handler import DatasetHandler
-from config_loaders.eval_handler import EvalHandler
-from config_loaders.rk_handler import RKHandler
+from config_handlers.dataset_handler import DatasetHandler
+from config_handlers.eval_handler import EvalHandler
+from config_handlers.rk_handler import RKHandler
 from utils.data_io import load_jsonl, make_dir, save_json
 
 PROMPT_VERSION = 4

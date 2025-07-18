@@ -18,9 +18,9 @@ module_path = str(Path("..").resolve())
 if module_path not in sys.path:
     sys.path.append(module_path)
 
-from config_loaders.dataset_handler import DatasetHandler
-from config_loaders.causal_handler import CausalHandler
-from config_loaders.sk_handler import SKHandler
+from config_handlers.dataset_handler import DatasetHandler
+from config_handlers.causal_handler import CausalHandler
+from config_handlers.sk_handler import SKHandler
 from utils.data_io import load_json, load_jsonl, load_pickle, make_dir, append_to_jsonl
 from utils.graph_stats import compute_ic_relation
 

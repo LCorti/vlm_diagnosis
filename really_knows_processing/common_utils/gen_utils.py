@@ -15,7 +15,7 @@ module_path = str(Path("..").resolve())
 if module_path not in sys.path:
     sys.path.append(module_path)
 
-from config_loaders.prompt_handler import PromptHandler
+from config_handlers.prompt_handler import PromptHandler
 
 
 class GenUtils:

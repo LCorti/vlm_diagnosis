@@ -6,7 +6,7 @@ module_path = str(Path("..").resolve())
 if module_path not in sys.path:
     sys.path.append(module_path)
 
-from config_loaders.sk_handler import SKHandler
+from config_handlers.sk_handler import SKHandler
 from utils.data_io import load_jsonl, make_dir, save_pickle
 from utils.graph_utils import raw_sk_to_nx
 

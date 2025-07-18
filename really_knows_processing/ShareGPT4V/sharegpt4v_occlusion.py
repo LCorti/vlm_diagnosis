@@ -12,8 +12,8 @@ module_path = str(Path("..", "..").resolve())
 if module_path not in sys.path:
     sys.path.append(module_path)
 
-from config_loaders.dataset_handler import DatasetHandler
-from config_loaders.rk_handler import RKHandler
+from config_handlers.dataset_handler import DatasetHandler
+from config_handlers.rk_handler import RKHandler
 from really_knows_processing.common_utils.gen_utils import GenUtils
 from really_knows_processing.common_utils.image_utils import load_image
 from really_knows_processing.common_utils.path_utils import merge_path

@@ -12,8 +12,8 @@ module_path = str(Path("..").resolve())
 if module_path not in sys.path:
     sys.path.append(module_path)
 
-from config_loaders.rk_handler import RKHandler
-from config_loaders.sk_handler import SKHandler
+from config_handlers.rk_handler import RKHandler
+from config_handlers.sk_handler import SKHandler
 from utils.graph_utils import stringify_graph_triple
 from utils.data_io import make_dir, load_json, load_jsonl, save_json
 

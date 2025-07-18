@@ -6,8 +6,8 @@ module_path = str(Path("..").resolve())
 if module_path not in sys.path:
     sys.path.append(module_path)
 
-from config_loaders.dataset_handler import DatasetHandler
-from config_loaders.sk_handler import SKHandler
+from config_handlers.dataset_handler import DatasetHandler
+from config_handlers.sk_handler import SKHandler
 from utils.data_io import load_jsonl, save_jsonl, save_json
 
 

@@ -6,7 +6,7 @@ module_path = str(Path("..").resolve())
 if module_path not in sys.path:
     sys.path.append(module_path)
 
-from config_loaders.dataset_handler import DatasetHandler
+from config_handlers.dataset_handler import DatasetHandler
 from utils.data_io import make_dir
 from utils.image_utils import load_img, save_img, resize_img
 

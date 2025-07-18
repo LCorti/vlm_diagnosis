@@ -11,8 +11,8 @@ module_path = str(Path("..").resolve())
 if module_path not in sys.path:
     sys.path.append(module_path)
 
-from config_loaders.causal_handler import CausalHandler
-from config_loaders.rk_handler import RKHandler
+from config_handlers.causal_handler import CausalHandler
+from config_handlers.rk_handler import RKHandler
 from utils.data_io import load_jsonl, make_dir, save_jsonl
 
 warnings.filterwarnings("ignore")
