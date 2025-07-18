@@ -12,8 +12,9 @@ from utils.vis import save_graph_to_img
 
 if __name__ == "__main__":
     sk_hdl = SKHandler()
-    ds_list = sk_hdl.get_sk_list()
-    ds_list.remove("vqav2_holdout")
+    ds_list = sk_hdl.get_ds_list()
+    if "vqav2_holdout" in ds_list:
+        ds_list.remove("vqav2_holdout")
     base_dir = Path(__file__).parent.parent
 
     for ds_name in ds_list:

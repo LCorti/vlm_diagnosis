@@ -18,7 +18,7 @@ module_path = str(Path("..").resolve())
 if module_path not in sys.path:
     sys.path.append(module_path)
 
-from config_loaders.dataset_config_loader import DatasetConfig
+from config_loaders.dataset_handler import DatasetHandler
 from config_loaders.ca_config_loader import CAConfig
 from config_loaders.sk_handler import SKHandler
 from utils.data_io import load_json, load_jsonl, load_pickle, make_dir, append_to_jsonl
@@ -205,7 +205,7 @@ if __name__ == "__main__":
     # Load config handlers
     ca_config = CAConfig()
     sk_hdl = SKHandler()
-    ds_config = DatasetConfig()
+    ds_hdl = DatasetHandler()
 
     # Load data
     base_dir = Path(__file__).parent.parent
@@ -253,11 +253,12 @@ if __name__ == "__main__":
             sk.add_edge(node, "y")
 
     # Load question data. Needed to match df_dict and sk_graphs
-    ds_paths = ds_config.get_ds_paths(dataset)
     questions = []
-    for ds_class in ds_paths:
-        questions_path = Path("..").joinpath(ds_paths[ds_class]["sampled_questions"])
-        data = load_jsonl(questions_path)
+    ds_hdl.set_curr_ds(dataset)
+    for ds_class in ds_hdl.get_classes():
+        ds_hdl.set_curr_class(ds_class)
+        q_path = ds_hdl.get_sampled_questions_path()
+        data = load_jsonl(Path("..", q_path))
         questions.extend(data)
     print(f"Loaded {len(questions)} questions from {dataset}.")
 

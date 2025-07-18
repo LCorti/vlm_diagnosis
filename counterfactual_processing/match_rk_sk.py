@@ -160,8 +160,9 @@ if __name__ == "__main__":
     sk_hdl = SKHandler()
     rk_hdl = RKHandler()
     model_list = rk_hdl.get_model_list() * 4
-    ds_list = sk_hdl.get_sk_list()
-    ds_list.remove("vqav2_holdout")
+    ds_list = sk_hdl.get_ds_list()
+    if "vqav2_holdout" in ds_list:
+        ds_list.remove("vqav2_holdout")
     ds_list = ds_list * 4
     model_list.sort()
 

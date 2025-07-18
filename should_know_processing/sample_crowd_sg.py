@@ -31,8 +31,9 @@ def get_n_rels(images: dict) -> list:
 if __name__ == "__main__":
     # Load SK config
     sk_hdl = SKHandler()
-    ds_list = sk_hdl.get_sk_list()
-    ds_list.remove("vqav2_holdout")
+    ds_list = sk_hdl.get_ds_list()
+    if "vqav2_holdout" in ds_list:
+        ds_list.remove("vqav2_holdout")
 
     sk_to_keep = {}
 

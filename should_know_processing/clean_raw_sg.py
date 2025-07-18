@@ -6,7 +6,6 @@ module_path = str(Path("..").resolve())
 if module_path not in sys.path:
     sys.path.append(module_path)
 
-from config_loaders.dataset_config_loader import DatasetConfig
 from config_loaders.sk_handler import SKHandler
 from utils.data_io import make_dir, load_json, save_jsonl
 
@@ -59,16 +58,12 @@ def get_all_concepts(
 
 
 if __name__ == "__main__":
-    # Load dataset config
-    ds_config = DatasetConfig()
-    ds_list = ds_config.get_ds_list()
-
     # Load SK config
     sk_hdl = SKHandler()
+    ds_list = sk_hdl.get_ds_list()
 
     for dataset in ds_list:
         # Get current paths
-        ds_paths = ds_config.get_ds_paths(dataset)
         sk_hdl.set_curr_ds(dataset)
 
         for ds_class in sk_hdl.get_classes():

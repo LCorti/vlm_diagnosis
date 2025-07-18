@@ -6,29 +6,30 @@ module_path = str(Path("..").resolve())
 if module_path not in sys.path:
     sys.path.append(module_path)
 
-from config_loaders.dataset_config_loader import DatasetConfig
+from config_loaders.dataset_handler import DatasetHandler
 from config_loaders.sk_handler import SKHandler
 from utils.data_io import load_jsonl, save_jsonl, save_json
 
 
 if __name__ == "__main__":
-    # Load dataset config
-    ds_config = DatasetConfig()
-    ds_list = ds_config.get_ds_list()
-    # Skip holdout set from VQA v2
-    ds_list.remove("vqav2_holdout")
+    # Load DS config
+    ds_hdl = DatasetHandler()
+    ds_list = ds_hdl.get_sk_list()
+    if "vqav2_holdout" in ds_list:
+        ds_list.remove("vqav2_holdout")
 
     # Load SK config
     sk_hdl = SKHandler()
 
     for ds in ds_list:
-        ds_paths = ds_config.get_ds_paths(ds)
+        ds_hdl.set_curr_ds(ds)
         sk_hdl.set_curr_ds(ds)
         ds_crowd_questions = []
 
         for ds_class in sk_hdl.get_classes():
             print(f"Dealing with {ds} + {ds_class}")
-            questions = load_jsonl(Path("..", ds_paths[ds_class]["questions"]))
+            ds_hdl.set_curr_class(ds_class)
+            questions = load_jsonl(Path("..", ds_hdl.get_questions_path()))
             print(f"... Loaded {len(questions)} questions")
 
             sk_hdl.set_curr_class(ds_class)
@@ -58,7 +59,7 @@ if __name__ == "__main__":
                     #     break
 
             # Save individual files
-            out_file_path = Path("..", ds_paths[ds_class]["sampled_questions"])
+            out_file_path = Path("..", ds_hdl.get_sampled_questions_path())
             ds_crowd_questions.extend(sampled_questions)
             save_jsonl(sampled_questions, out_file_path)
 

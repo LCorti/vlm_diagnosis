@@ -8,7 +8,6 @@ module_path = str(Path("..").resolve())
 if module_path not in sys.path:
     sys.path.append(module_path)
 
-from config_loaders.dataset_config_loader import DatasetConfig
 from config_loaders.sk_handler import SKHandler
 from shapely.geometry import Polygon
 from shapely.measurement import distance
@@ -115,22 +114,20 @@ def retrieve_img(clean_sg: list[dict], img_idx: int) -> dict:
 
 
 if __name__ == "__main__":
-    # Load dataset config
-    ds_config = DatasetConfig()
-    ds_list = ds_config.get_ds_list()
-
     # Load SK config
     sk_hdl = SKHandler()
+    ds_list = sk_hdl.get_ds_list()
+    if "vqav2_holdout" in ds_list:
+        ds_list.remove("vqav2_holdout")
 
     # Threshold for clustering bboxes
     eps = 0.32
 
     for dataset in ds_list:
         # Get current paths
-        ds_paths = ds_config.get_ds_paths(dataset)
         sk_hdl.set_curr_ds(dataset)
 
-        for ds_class in ds_paths:
+        for ds_class in sk_hdl.get_classes():
             # Load clean scene graphs
             sk_hdl.set_curr_class(ds_class)
             clean_sg = load_jsonl(Path("..", sk_hdl.get_sg_clean_path()))

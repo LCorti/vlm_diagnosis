@@ -30,7 +30,7 @@ class SKHandler:
     def set_curr_class(self, new_class: str):
         self.CURR_CLASS = new_class
 
-    def get_sk_list(self) -> list:
+    def get_ds_list(self) -> list:
         return list(self.SK_PATHS.keys())
 
     def get_classes(self) -> list:

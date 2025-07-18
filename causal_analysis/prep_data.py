@@ -11,7 +11,7 @@ module_path = str(Path("..").resolve())
 if module_path not in sys.path:
     sys.path.append(module_path)
 
-from config_loaders.dataset_config_loader import DatasetConfig
+from config_loaders.dataset_handler import DatasetHandler
 from config_loaders.ca_config_loader import CAConfig
 from config_loaders.rk_handler import RKHandler
 from utils.data_io import load_jsonl, make_dir, save_jsonl
@@ -61,9 +61,10 @@ if __name__ == "__main__":
     rk_hdl = RKHandler()
     rk_hdl.set_curr_model(model)
     rk_hdl.set_curr_ds(dataset)
-    ds_config = DatasetConfig()
-    ds_list = ds_config.get_ds_list()
-    ds_list.remove("vqav2_holdout")
+    ds_hdl = DatasetHandler()
+    ds_list = ds_hdl.get_ds_list()
+    if "vqav2_holdout" in ds_list:
+        ds_list.remove("vqav2_holdout")
 
     # Load data
     base_dir = Path(__file__).parent.parent

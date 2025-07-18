@@ -14,7 +14,7 @@ module_path = str(Path("..").resolve())
 if module_path not in sys.path:
     sys.path.append(module_path)
 
-from config_loaders.dataset_config_loader import DatasetConfig
+from config_loaders.dataset_handler import DatasetHandler
 from config_loaders.eval_handler import EvalHandler
 from config_loaders.rk_handler import RKHandler
 from utils.data_io import load_jsonl, make_dir, save_json
@@ -28,11 +28,12 @@ STEP = 20
 
 if __name__ == "__main__":
     rk_hdl = RKHandler()
-    ds_config = DatasetConfig()
+    ds_hdl = DatasetHandler()
     eval_hdl = EvalHandler()
 
-    ds_list = ds_config.get_ds_list()
-    ds_list.remove("vqav2_holdout")
+    ds_list = ds_hdl.get_ds_list()
+    if "vqav2_holdout" in ds_list:
+        ds_list.remove("vqav2_holdout")
     model_list = rk_hdl.get_model_list()
 
     all_models = model_list * 4
@@ -52,11 +53,12 @@ if __name__ == "__main__":
         count_ok = 0
 
         # Iterate through datasets' paths
-        ds_paths = ds_config.get_ds_paths(ds)
-        for ds_class in ds_paths:
+        ds_hdl.set_curr_ds(ds)
+        for ds_class in ds_hdl.get_classes():
             # Load questions
-            questions_path = Path("..", ds_paths[ds_class]["sampled_questions"])
-            questions = load_jsonl(questions_path)
+            ds_hdl.set_curr_class(ds_class)
+            q_path = ds_hdl.get_sampled_questions_path()
+            questions = load_jsonl(Path("..", q_path))
 
             if ds in ["llava-bench", "mmbench"]:
                 # For open-ended VQA datasets, we compute BERTScore-F1

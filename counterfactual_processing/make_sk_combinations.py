@@ -82,8 +82,9 @@ def compute_powerset_size(powerset: dict) -> int:
 if __name__ == "__main__":
     # Load SK config
     sk_hdl = SKHandler()
-    ds_list = sk_hdl.get_sk_list()
-    ds_list.remove("vqav2_holdout")
+    ds_list = sk_hdl.get_ds_list()
+    if "vqav2_holdout" in ds_list:
+        ds_list.remove("vqav2_holdout")
 
     for dataset in ds_list:
         print(f"Looking at {dataset}.")
