@@ -35,6 +35,9 @@ class DatasetHandler:
     def set_curr_class(self, new_class: str):
         self.CURR_CLASS = new_class
 
+    def get_classes(self) -> list:
+        return list(self.DATASET_PATHS[self.CURR_DS].keys())
+
     def build_path(self, target: str) -> Path:
         if target == "imgs":
             p_name = Path(self.CURR_DS, "imgs", self.CURR_CLASS)
@@ -43,7 +46,7 @@ class DatasetHandler:
         elif target == "imgs_occluded":
             p_name = Path(self.CURR_DS, "imgs_occluded", self.CURR_CLASS)
         elif target in ["questions", "sampled_questions"]:
-            p_name = Path(self.CURR_DS, self.DATASET_PATHS[target])
+            p_name = Path(self.CURR_DS, self.CURR_CLASS, self.DATASET_PATHS[target])
         return self.BASE_DIR.joinpath(p_name)
 
     def get_imgs_path(self) -> Path:
@@ -60,8 +63,3 @@ class DatasetHandler:
 
     def get_sampled_questions_path(self) -> Path:
         return self.build_path("sampled_questions")
-
-    def get_ds_paths(self, ds_name: str) -> str:
-        if ds_name not in self.DATASET_PATHS:
-            raise
-        return self.DATASET_PATHS[ds_name]
