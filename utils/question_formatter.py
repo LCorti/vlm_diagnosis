@@ -1,12 +1,13 @@
 import copy
 
-from config_loaders.dataset_config_loader import DatasetConfig
+from config_loaders.dataset_handler import DatasetHandler
 from utils.data_io import load_jsonl
 from pathlib import Path
 
 
 class QuestionFormatter:
     def __init__(self, dataset: str) -> None:
+        self.DATASET = self.validate_dataset_name(dataset)
         self.QUESTION_TEMPLATE = {
             "question_id": "",
             "question": "",
@@ -17,9 +18,8 @@ class QuestionFormatter:
             "answer": "",
             "class": "",
         }
-        self.DATASET_CONFIG = DatasetConfig()
-        self.DATASET = self.validate_dataset_name(dataset)
-        self.DATASET_PATHS = self.DATASET_CONFIG.get_ds_paths(self.DATASET)
+        self.DATASET_HDL = DatasetHandler()
+        self.DATASET_HDL.set_curr_ds(dataset)
 
         if self.DATASET == "llava-bench":
             self.LLAVA_ANS = self.load_llavabench_ans()
@@ -27,20 +27,21 @@ class QuestionFormatter:
             self.LLAVA_ANS = None
 
     def validate_dataset_name(self, dataset: str) -> str:
-        if dataset in self.DATASET_CONFIG.get_ds_list():
+        if dataset in self.DATASET_HDL.get_ds_list():
             return dataset
         else:
             raise
 
     def format(self, raw_q: dict, ds_class: str) -> dict:
         new_q = copy.deepcopy(self.QUESTION_TEMPLATE)
+        self.DATASET_HDL.set_curr_class(ds_class)
 
         if self.DATASET == "llava-bench":
             new_q["question_id"] = raw_q["question_id"]
             new_q["question"] = raw_q["text"]
             new_q["img"] = Path(raw_q["image"]).stem
             new_q["img_path"] = str(
-                Path(".", self.DATASET_PATHS[ds_class]["imgs"], raw_q["image"])
+                Path(".", self.DATASET_HDL.get_imgs_path(), raw_q["image"])
             )
             new_q["is_open"] = True
             new_q["options"] = None
@@ -57,7 +58,7 @@ class QuestionFormatter:
             new_q["class"] = raw_q["category"]
             new_q["img"] = Path(raw_q["img_path"]).stem
             new_q["img_path"] = str(
-                Path(".", self.DATASET_PATHS[ds_class]["imgs"], f"{new_q['img']}.jpg")
+                Path(".", self.DATASET_HDL.get_imgs_path(), f"{new_q['img']}.jpg")
             )
             new_q["is_open"] = False
             new_q["options"] = None
@@ -68,7 +69,7 @@ class QuestionFormatter:
             new_q["class"] = ds_class
             new_q["img"] = Path(raw_q["img_path"]).stem
             new_q["img_path"] = str(
-                Path(".", self.DATASET_PATHS[ds_class]["imgs"], f"{new_q['img']}.jpg")
+                Path(".", self.DATASET_HDL.get_imgs_path(), f"{new_q['img']}.jpg")
             )
             new_q["is_open"] = False
             new_q["options"] = {
@@ -84,7 +85,7 @@ class QuestionFormatter:
             new_q["class"] = ds_class
             new_q["img"] = Path(raw_q["img_path"]).stem
             new_q["img_path"] = str(
-                Path(".", self.DATASET_PATHS[ds_class]["imgs"], f"{new_q['img']}.jpg")
+                Path(".", self.DATASET_HDL.get_imgs_path(), f"{new_q['img']}.jpg")
             )
             new_q["is_open"] = True
             new_q["options"] = None

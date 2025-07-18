@@ -40,14 +40,10 @@ class RKHandler:
         fn = self.RK_PATHS[self.CURR_MODEL][self.CURR_DS][target]
         if target == "raw":
             new_fn = Path("outcomes", fn)
-        elif target == "parsed":
-            new_fn = Path("parsed", fn)
-        elif target == "parsed_pkl":
-            new_fn = Path("parsed_pkl", fn)
-        elif target == "final":
-            new_fn = Path("final", fn)
         elif target == "counter":
             new_fn = Path("counterfactual", fn)
+        elif target in ["parsed", "parsed_pkl", "final"]:
+            new_fn = Path(target, fn)
         return self.BASE_DIR.joinpath(self.CURR_MODEL, self.CURR_DS, new_fn)
 
     def get_raw_rk_path(self) -> Path:

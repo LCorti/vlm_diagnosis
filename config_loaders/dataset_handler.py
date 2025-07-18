@@ -39,12 +39,8 @@ class DatasetHandler:
         return list(self.DATASET_PATHS[self.CURR_DS].keys())
 
     def build_path(self, target: str) -> Path:
-        if target == "imgs":
-            p_name = Path(self.CURR_DS, "imgs", self.CURR_CLASS)
-        elif target == "imgs_resized":
-            p_name = Path(self.CURR_DS, "imgs_resized", self.CURR_CLASS)
-        elif target == "imgs_occluded":
-            p_name = Path(self.CURR_DS, "imgs_occluded", self.CURR_CLASS)
+        if target in ["imgs", "imgs_resized", "imgs_occluded"]:
+            p_name = Path(self.CURR_DS, target, self.CURR_CLASS)
         elif target in ["questions", "sampled_questions"]:
             p_name = Path(self.CURR_DS, self.CURR_CLASS, self.DATASET_PATHS[target])
         return self.BASE_DIR.joinpath(p_name)
