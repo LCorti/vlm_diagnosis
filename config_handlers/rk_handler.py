@@ -39,12 +39,12 @@ class RKHandler:
     def build_path(self, target: str) -> Path:
         fn = self.RK_PATHS[self.CURR_MODEL][self.CURR_DS][target]
         if target == "raw":
-            new_fn = Path("outcomes", fn)
+            new_fn = Path("outcomes", self.CURR_MODEL, self.CURR_DS, fn)
         elif target == "counter":
-            new_fn = Path("counterfactual", fn)
+            new_fn = Path("counterfactual", self.CURR_MODEL, self.CURR_DS, fn)
         elif target in ["parsed", "parsed_pkl", "final"]:
-            new_fn = Path(target, fn)
-        return self.BASE_DIR.joinpath(self.CURR_MODEL, self.CURR_DS, new_fn)
+            new_fn = Path(target, self.CURR_MODEL, self.CURR_DS, fn)
+        return self.BASE_DIR.joinpath(new_fn)
 
     def get_raw_rk_path(self) -> Path:
         return self.build_path("raw")
