@@ -4,6 +4,7 @@ import numpy as np
 import pandas as pd
 
 from matplotlib.transforms import ScaledTranslation
+from pathlib import Path
 
 # Dictionary to show nice labels
 DS_MAP = {
@@ -173,7 +174,7 @@ def set_custom_patch_color_rk(b_plot: plt.boxplot) -> None:
 
 
 def plot_boxplot_rk(
-    all_concept_counts: dict, all_relation_counts: dict, output_path: str
+    all_concept_counts: dict, all_relation_counts: dict, output_path: str | Path
 ) -> None:
     fig, axes = plt.subplots(
         1, len(all_concept_counts.keys()), sharey=True, figsize=(15, 4)
