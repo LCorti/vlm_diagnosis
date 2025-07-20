@@ -8,7 +8,7 @@ if module_path not in sys.path:
 
 from config_handlers.sk_handler import SKHandler
 from utils.data_io import load_jsonl, make_dir, save_pickle
-from utils.graph_utils import raw_sk_to_nx
+from utils.graph_utils import sk_to_nx
 
 if __name__ == "__main__":
     # Load SK config
@@ -34,7 +34,7 @@ if __name__ == "__main__":
 
             # Go through current batch of SKs and make NX graphs for thema
             for sk in crowd_sg:
-                sk_graph = raw_sk_to_nx(sk["rel_clusters_unique"])
+                sk_graph = sk_to_nx(sk["rel_clusters_unique"])
                 graph_dict[sk["img_id"]] = sk_graph
 
             # Make directory if needed and save graph to it

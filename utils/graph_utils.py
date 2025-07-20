@@ -91,7 +91,7 @@ def create_nx_graph(rel_list: list) -> DiGraph:
     return nx_graph
 
 
-def raw_sk_to_nx(raw_sk_rels: dict) -> DiGraph:
+def sk_to_nx(raw_sk_rels: dict) -> DiGraph:
     # Prepare raw_sk_rels before making nx graph
     sk_list = [
         {
