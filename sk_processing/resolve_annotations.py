@@ -173,7 +173,12 @@ def resolve_val_data(
         "img_path": question["img_path"],
         "relations": [],
     }
-    stats = {"initial": 0, "after_val": 0}
+    stats = {
+        "concepts": {"init": 0, "val": 0},
+        "preds": {"init": 0, "val": 0},
+    }
+    concept_ids_init = set()
+    concept_ids_val = set()
     print(
         f"Checking q. {res_val_entry['question_id']} and image {res_val_entry['img']}"
     )
@@ -189,13 +194,12 @@ def resolve_val_data(
     question_key = int(res_val_entry["question_id"]) + 1
     # print(f"Looking for {question_key} in {parsed_crowd_val.keys()}")
     all_crowd_val = list(parsed_crowd_val[question_key].values())
-    # Update stats
-    stats["initial"] = len(rels_to_check)
 
     for rel in rels_to_check:
         from_concept = rel["from_concept"]["bb_label"]["bb_label_text"]
         relationship = rel["rel_label"]["rel_label_text"]
         to_concept = rel["to_concept"]["bb_label"]["bb_label_text"]
+        concept_ids_init.update([from_concept, to_concept])
         # Retrieve corresponding annotation
         # print(f"Searching for: {from_concept} - {relationship} - {to_concept}")
         crowd_rel = next(
@@ -263,10 +267,15 @@ def resolve_val_data(
 
             # Add to list of resolved relations
             res_val_entry["relations"].append(rel)
+            concept_ids_val.update([from_concept_idx, to_concept_idx])
         else:
             print("-- Relationship marked as irrelevant.")
 
-    stats["after_val"] = len(res_val_entry["relations"])
+    # Update stats
+    stats["concepts"]["init"] = len(concept_ids_init)
+    stats["concepts"]["val"] = len(concept_ids_val)
+    stats["preds"]["init"] = len(rels_to_check)
+    stats["preds"]["val"] = len(res_val_entry["relations"])
     return res_val_entry, stats
 
 
@@ -274,6 +283,7 @@ def resolve_ann_data(
     val_entry: dict, parsed_crowd_ann: dict, sgg_dict: dict, stats: dict
 ) -> tuple[dict, dict]:
     res_ann_entry = val_entry
+    concept_ids = set()
     # Add new relationships
     question_key = int(res_ann_entry["question_id"]) + 1
     all_crowd_ann = [elem["crowd"] for elem in parsed_crowd_ann[question_key].values()]
@@ -314,9 +324,11 @@ def resolve_ann_data(
         relationship_idx = crowd_ann["rel_label"]["rel_label_idx"]
         crowd_ann["rel_id"] = f"{from_concept_idx}-{relationship_idx}-{to_concept_idx}"
         res_ann_entry["relations"].append(crowd_ann)
+        concept_ids.update([from_concept_idx, to_concept_idx])
 
     # Update stats by adding a new key
-    stats["after_ann"] = len(res_ann_entry["relations"])
+    stats["concepts"]["ann"] = len(concept_ids)
+    stats["preds"]["ann"] = len(res_ann_entry["relations"])
     return res_ann_entry, stats
 
 
@@ -370,7 +382,10 @@ if __name__ == "__main__":
             sk_hdl.set_curr_class(ds_class)
             # Add entry for statistics
             if ds_class not in stats[dataset]:
-                stats[dataset][ds_class] = {"samples": {}, "summary": {}}
+                stats[dataset][ds_class] = {
+                    "samples": {},
+                    "summary": {"concepts": {}, "preds": {}},
+                }
 
             # Load scene graphs showed to crowd workers for a given class
             crowd_sg = load_jsonl(Path("..", sk_hdl.get_sg_crowd_path()))
@@ -397,18 +412,45 @@ if __name__ == "__main__":
                 stats[dataset][ds_class]["samples"],
             )
 
-            stats[dataset][ds_class]["summary"]["initial"] = sum(
-                entry["initial"]
-                for entry in stats[dataset][ds_class]["samples"].values()
-            )
-            stats[dataset][ds_class]["summary"]["after_val"] = sum(
-                entry["after_val"]
-                for entry in stats[dataset][ds_class]["samples"].values()
-            )
-            stats[dataset][ds_class]["summary"]["after_ann"] = sum(
-                entry["after_ann"]
-                for entry in stats[dataset][ds_class]["samples"].values()
-            )
+            #  Update summary
+            for entry in stats[dataset][ds_class]["samples"].values():
+                # Concepts
+                if "init" not in stats[dataset][ds_class]["summary"]["concepts"]:
+                    stats[dataset][ds_class]["summary"]["concepts"]["init"] = 0
+                stats[dataset][ds_class]["summary"]["concepts"]["init"] += entry[
+                    "concepts"
+                ]["init"]
+
+                if "val" not in stats[dataset][ds_class]["summary"]["concepts"]:
+                    stats[dataset][ds_class]["summary"]["concepts"]["val"] = 0
+                stats[dataset][ds_class]["summary"]["concepts"]["val"] += entry[
+                    "concepts"
+                ]["val"]
+
+                if "ann" not in stats[dataset][ds_class]["summary"]["concepts"]:
+                    stats[dataset][ds_class]["summary"]["concepts"]["ann"] = 0
+                stats[dataset][ds_class]["summary"]["concepts"]["ann"] += entry[
+                    "concepts"
+                ]["ann"]
+
+                # Preds
+                if "init" not in stats[dataset][ds_class]["summary"]["preds"]:
+                    stats[dataset][ds_class]["summary"]["preds"]["init"] = 0
+                stats[dataset][ds_class]["summary"]["preds"]["init"] += entry["preds"][
+                    "init"
+                ]
+
+                if "val" not in stats[dataset][ds_class]["summary"]["preds"]:
+                    stats[dataset][ds_class]["summary"]["preds"]["val"] = 0
+                stats[dataset][ds_class]["summary"]["preds"]["val"] += entry["preds"][
+                    "val"
+                ]
+
+                if "ann" not in stats[dataset][ds_class]["summary"]["preds"]:
+                    stats[dataset][ds_class]["summary"]["preds"]["ann"] = 0
+                stats[dataset][ds_class]["summary"]["preds"]["ann"] += entry["preds"][
+                    "ann"
+                ]
 
             # Save to disk
             print("... Saving reconciled data to file...")

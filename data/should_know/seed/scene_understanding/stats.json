@@ -1,384 +1,916 @@
 {
   "samples": {
     "3151": {
-      "initial": 12,
-      "after_val": 10,
-      "after_ann": 13
+      "concepts": {
+        "init": 13,
+        "val": 13,
+        "ann": 5
+      },
+      "preds": {
+        "init": 12,
+        "val": 10,
+        "ann": 13
+      }
     },
     "1656": {
-      "initial": 10,
-      "after_val": 1,
-      "after_ann": 7
+      "concepts": {
+        "init": 10,
+        "val": 2,
+        "ann": 7
+      },
+      "preds": {
+        "init": 10,
+        "val": 1,
+        "ann": 7
+      }
     },
     "154": {
-      "initial": 11,
-      "after_val": 6,
-      "after_ann": 11
+      "concepts": {
+        "init": 14,
+        "val": 10,
+        "ann": 6
+      },
+      "preds": {
+        "init": 11,
+        "val": 6,
+        "ann": 11
+      }
     },
     "3057": {
-      "initial": 14,
-      "after_val": 5,
-      "after_ann": 8
+      "concepts": {
+        "init": 6,
+        "val": 5,
+        "ann": 5
+      },
+      "preds": {
+        "init": 14,
+        "val": 5,
+        "ann": 8
+      }
     },
     "2173": {
-      "initial": 12,
-      "after_val": 10,
-      "after_ann": 13
+      "concepts": {
+        "init": 9,
+        "val": 7,
+        "ann": 4
+      },
+      "preds": {
+        "init": 12,
+        "val": 10,
+        "ann": 13
+      }
     },
     "3104": {
-      "initial": 12,
-      "after_val": 9,
-      "after_ann": 12
+      "concepts": {
+        "init": 11,
+        "val": 8,
+        "ann": 4
+      },
+      "preds": {
+        "init": 12,
+        "val": 9,
+        "ann": 12
+      }
     },
     "58": {
-      "initial": 15,
-      "after_val": 9,
-      "after_ann": 12
+      "concepts": {
+        "init": 12,
+        "val": 10,
+        "ann": 5
+      },
+      "preds": {
+        "init": 15,
+        "val": 9,
+        "ann": 12
+      }
     },
     "2051": {
-      "initial": 15,
-      "after_val": 0,
-      "after_ann": 3
+      "concepts": {
+        "init": 16,
+        "val": 0,
+        "ann": 4
+      },
+      "preds": {
+        "init": 15,
+        "val": 0,
+        "ann": 3
+      }
     },
     "2387": {
-      "initial": 13,
-      "after_val": 9,
-      "after_ann": 12
+      "concepts": {
+        "init": 9,
+        "val": 10,
+        "ann": 3
+      },
+      "preds": {
+        "init": 13,
+        "val": 9,
+        "ann": 12
+      }
     },
     "2156": {
-      "initial": 13,
-      "after_val": 12,
-      "after_ann": 15
+      "concepts": {
+        "init": 11,
+        "val": 12,
+        "ann": 4
+      },
+      "preds": {
+        "init": 13,
+        "val": 12,
+        "ann": 15
+      }
     },
     "3131": {
-      "initial": 12,
-      "after_val": 12,
-      "after_ann": 15
+      "concepts": {
+        "init": 6,
+        "val": 9,
+        "ann": 6
+      },
+      "preds": {
+        "init": 12,
+        "val": 12,
+        "ann": 15
+      }
     },
     "2677": {
-      "initial": 14,
-      "after_val": 0,
-      "after_ann": 3
+      "concepts": {
+        "init": 11,
+        "val": 0,
+        "ann": 4
+      },
+      "preds": {
+        "init": 14,
+        "val": 0,
+        "ann": 3
+      }
     },
     "2980": {
-      "initial": 14,
-      "after_val": 12,
-      "after_ann": 15
+      "concepts": {
+        "init": 7,
+        "val": 6,
+        "ann": 4
+      },
+      "preds": {
+        "init": 14,
+        "val": 12,
+        "ann": 15
+      }
     },
     "2408": {
-      "initial": 13,
-      "after_val": 1,
-      "after_ann": 4
+      "concepts": {
+        "init": 15,
+        "val": 2,
+        "ann": 6
+      },
+      "preds": {
+        "init": 13,
+        "val": 1,
+        "ann": 4
+      }
     },
     "2386": {
-      "initial": 11,
-      "after_val": 2,
-      "after_ann": 6
+      "concepts": {
+        "init": 9,
+        "val": 2,
+        "ann": 5
+      },
+      "preds": {
+        "init": 11,
+        "val": 2,
+        "ann": 6
+      }
     },
     "2249": {
-      "initial": 13,
-      "after_val": 0,
-      "after_ann": 3
+      "concepts": {
+        "init": 10,
+        "val": 0,
+        "ann": 3
+      },
+      "preds": {
+        "init": 13,
+        "val": 0,
+        "ann": 3
+      }
     },
     "650": {
-      "initial": 10,
-      "after_val": 2,
-      "after_ann": 5
+      "concepts": {
+        "init": 8,
+        "val": 3,
+        "ann": 4
+      },
+      "preds": {
+        "init": 10,
+        "val": 2,
+        "ann": 5
+      }
     },
     "743": {
-      "initial": 10,
-      "after_val": 0,
-      "after_ann": 3
+      "concepts": {
+        "init": 9,
+        "val": 0,
+        "ann": 4
+      },
+      "preds": {
+        "init": 10,
+        "val": 0,
+        "ann": 3
+      }
     },
     "2496": {
-      "initial": 12,
-      "after_val": 7,
-      "after_ann": 10
+      "concepts": {
+        "init": 9,
+        "val": 9,
+        "ann": 5
+      },
+      "preds": {
+        "init": 12,
+        "val": 7,
+        "ann": 10
+      }
     },
     "691": {
-      "initial": 12,
-      "after_val": 1,
-      "after_ann": 4
+      "concepts": {
+        "init": 13,
+        "val": 2,
+        "ann": 5
+      },
+      "preds": {
+        "init": 12,
+        "val": 1,
+        "ann": 4
+      }
     },
     "1873": {
-      "initial": 13,
-      "after_val": 3,
-      "after_ann": 6
+      "concepts": {
+        "init": 11,
+        "val": 4,
+        "ann": 3
+      },
+      "preds": {
+        "init": 13,
+        "val": 3,
+        "ann": 6
+      }
     },
     "2607": {
-      "initial": 12,
-      "after_val": 2,
-      "after_ann": 9
+      "concepts": {
+        "init": 14,
+        "val": 4,
+        "ann": 6
+      },
+      "preds": {
+        "init": 12,
+        "val": 2,
+        "ann": 9
+      }
     },
     "1419": {
-      "initial": 10,
-      "after_val": 7,
-      "after_ann": 10
+      "concepts": {
+        "init": 11,
+        "val": 10,
+        "ann": 5
+      },
+      "preds": {
+        "init": 10,
+        "val": 7,
+        "ann": 10
+      }
     },
     "2794": {
-      "initial": 12,
-      "after_val": 0,
-      "after_ann": 3
+      "concepts": {
+        "init": 9,
+        "val": 0,
+        "ann": 3
+      },
+      "preds": {
+        "init": 12,
+        "val": 0,
+        "ann": 3
+      }
     },
     "252": {
-      "initial": 12,
-      "after_val": 7,
-      "after_ann": 10
+      "concepts": {
+        "init": 11,
+        "val": 7,
+        "ann": 4
+      },
+      "preds": {
+        "init": 12,
+        "val": 7,
+        "ann": 10
+      }
     },
     "1363": {
-      "initial": 11,
-      "after_val": 11,
-      "after_ann": 14
+      "concepts": {
+        "init": 9,
+        "val": 9,
+        "ann": 5
+      },
+      "preds": {
+        "init": 11,
+        "val": 11,
+        "ann": 14
+      }
     },
     "158": {
-      "initial": 12,
-      "after_val": 6,
-      "after_ann": 9
+      "concepts": {
+        "init": 10,
+        "val": 5,
+        "ann": 4
+      },
+      "preds": {
+        "init": 12,
+        "val": 6,
+        "ann": 9
+      }
     },
     "57": {
-      "initial": 12,
-      "after_val": 10,
-      "after_ann": 13
+      "concepts": {
+        "init": 11,
+        "val": 12,
+        "ann": 5
+      },
+      "preds": {
+        "init": 12,
+        "val": 10,
+        "ann": 13
+      }
     },
     "1592": {
-      "initial": 15,
-      "after_val": 12,
-      "after_ann": 15
+      "concepts": {
+        "init": 10,
+        "val": 9,
+        "ann": 4
+      },
+      "preds": {
+        "init": 15,
+        "val": 12,
+        "ann": 15
+      }
     },
     "1194": {
-      "initial": 12,
-      "after_val": 6,
-      "after_ann": 10
+      "concepts": {
+        "init": 13,
+        "val": 6,
+        "ann": 6
+      },
+      "preds": {
+        "init": 12,
+        "val": 6,
+        "ann": 10
+      }
     },
     "2865": {
-      "initial": 12,
-      "after_val": 9,
-      "after_ann": 12
+      "concepts": {
+        "init": 11,
+        "val": 9,
+        "ann": 6
+      },
+      "preds": {
+        "init": 12,
+        "val": 9,
+        "ann": 12
+      }
     },
     "1962": {
-      "initial": 12,
-      "after_val": 1,
-      "after_ann": 7
+      "concepts": {
+        "init": 12,
+        "val": 2,
+        "ann": 9
+      },
+      "preds": {
+        "init": 12,
+        "val": 1,
+        "ann": 7
+      }
     },
     "2356": {
-      "initial": 10,
-      "after_val": 3,
-      "after_ann": 6
+      "concepts": {
+        "init": 14,
+        "val": 3,
+        "ann": 5
+      },
+      "preds": {
+        "init": 10,
+        "val": 3,
+        "ann": 6
+      }
     },
     "1286": {
-      "initial": 14,
-      "after_val": 9,
-      "after_ann": 12
+      "concepts": {
+        "init": 11,
+        "val": 7,
+        "ann": 5
+      },
+      "preds": {
+        "init": 14,
+        "val": 9,
+        "ann": 12
+      }
     },
     "1753": {
-      "initial": 14,
-      "after_val": 3,
-      "after_ann": 6
+      "concepts": {
+        "init": 14,
+        "val": 5,
+        "ann": 3
+      },
+      "preds": {
+        "init": 14,
+        "val": 3,
+        "ann": 6
+      }
     },
     "894": {
-      "initial": 15,
-      "after_val": 0,
-      "after_ann": 3
+      "concepts": {
+        "init": 15,
+        "val": 0,
+        "ann": 4
+      },
+      "preds": {
+        "init": 15,
+        "val": 0,
+        "ann": 3
+      }
     },
     "1657": {
-      "initial": 12,
-      "after_val": 8,
-      "after_ann": 11
+      "concepts": {
+        "init": 13,
+        "val": 12,
+        "ann": 6
+      },
+      "preds": {
+        "init": 12,
+        "val": 8,
+        "ann": 11
+      }
     },
     "129": {
-      "initial": 11,
-      "after_val": 6,
-      "after_ann": 9
+      "concepts": {
+        "init": 10,
+        "val": 7,
+        "ann": 4
+      },
+      "preds": {
+        "init": 11,
+        "val": 6,
+        "ann": 9
+      }
     },
     "503": {
-      "initial": 14,
-      "after_val": 2,
-      "after_ann": 9
+      "concepts": {
+        "init": 13,
+        "val": 4,
+        "ann": 9
+      },
+      "preds": {
+        "init": 14,
+        "val": 2,
+        "ann": 9
+      }
     },
     "2825": {
-      "initial": 13,
-      "after_val": 1,
-      "after_ann": 4
+      "concepts": {
+        "init": 12,
+        "val": 2,
+        "ann": 4
+      },
+      "preds": {
+        "init": 13,
+        "val": 1,
+        "ann": 4
+      }
     },
     "2740": {
-      "initial": 13,
-      "after_val": 5,
-      "after_ann": 8
+      "concepts": {
+        "init": 13,
+        "val": 6,
+        "ann": 3
+      },
+      "preds": {
+        "init": 13,
+        "val": 5,
+        "ann": 8
+      }
     },
     "2104": {
-      "initial": 12,
-      "after_val": 4,
-      "after_ann": 7
+      "concepts": {
+        "init": 9,
+        "val": 5,
+        "ann": 4
+      },
+      "preds": {
+        "init": 12,
+        "val": 4,
+        "ann": 7
+      }
     },
     "2342": {
-      "initial": 15,
-      "after_val": 5,
-      "after_ann": 8
+      "concepts": {
+        "init": 13,
+        "val": 9,
+        "ann": 5
+      },
+      "preds": {
+        "init": 15,
+        "val": 5,
+        "ann": 8
+      }
     },
     "2358": {
-      "initial": 14,
-      "after_val": 1,
-      "after_ann": 4
+      "concepts": {
+        "init": 8,
+        "val": 2,
+        "ann": 4
+      },
+      "preds": {
+        "init": 14,
+        "val": 1,
+        "ann": 4
+      }
     },
     "406": {
-      "initial": 12,
-      "after_val": 9,
-      "after_ann": 12
+      "concepts": {
+        "init": 12,
+        "val": 13,
+        "ann": 5
+      },
+      "preds": {
+        "init": 12,
+        "val": 9,
+        "ann": 12
+      }
     },
     "1271": {
-      "initial": 13,
-      "after_val": 13,
-      "after_ann": 16
+      "concepts": {
+        "init": 7,
+        "val": 13,
+        "ann": 5
+      },
+      "preds": {
+        "init": 13,
+        "val": 13,
+        "ann": 16
+      }
     },
     "1561": {
-      "initial": 15,
-      "after_val": 2,
-      "after_ann": 5
+      "concepts": {
+        "init": 10,
+        "val": 3,
+        "ann": 2
+      },
+      "preds": {
+        "init": 15,
+        "val": 2,
+        "ann": 5
+      }
     },
     "1569": {
-      "initial": 10,
-      "after_val": 2,
-      "after_ann": 7
+      "concepts": {
+        "init": 10,
+        "val": 4,
+        "ann": 6
+      },
+      "preds": {
+        "init": 10,
+        "val": 2,
+        "ann": 7
+      }
     },
     "2960": {
-      "initial": 12,
-      "after_val": 6,
-      "after_ann": 9
+      "concepts": {
+        "init": 13,
+        "val": 9,
+        "ann": 5
+      },
+      "preds": {
+        "init": 12,
+        "val": 6,
+        "ann": 9
+      }
     },
     "1018": {
-      "initial": 13,
-      "after_val": 2,
-      "after_ann": 5
+      "concepts": {
+        "init": 11,
+        "val": 4,
+        "ann": 5
+      },
+      "preds": {
+        "init": 13,
+        "val": 2,
+        "ann": 5
+      }
     },
     "1567": {
-      "initial": 13,
-      "after_val": 10,
-      "after_ann": 13
+      "concepts": {
+        "init": 15,
+        "val": 14,
+        "ann": 6
+      },
+      "preds": {
+        "init": 13,
+        "val": 10,
+        "ann": 13
+      }
     },
     "297": {
-      "initial": 12,
-      "after_val": 0,
-      "after_ann": 3
+      "concepts": {
+        "init": 10,
+        "val": 0,
+        "ann": 5
+      },
+      "preds": {
+        "init": 12,
+        "val": 0,
+        "ann": 3
+      }
     },
     "1948": {
-      "initial": 10,
-      "after_val": 5,
-      "after_ann": 8
+      "concepts": {
+        "init": 7,
+        "val": 6,
+        "ann": 5
+      },
+      "preds": {
+        "init": 10,
+        "val": 5,
+        "ann": 8
+      }
     },
     "1711": {
-      "initial": 11,
-      "after_val": 3,
-      "after_ann": 6
+      "concepts": {
+        "init": 9,
+        "val": 5,
+        "ann": 5
+      },
+      "preds": {
+        "init": 11,
+        "val": 3,
+        "ann": 6
+      }
     },
     "1350": {
-      "initial": 12,
-      "after_val": 1,
-      "after_ann": 6
+      "concepts": {
+        "init": 13,
+        "val": 2,
+        "ann": 7
+      },
+      "preds": {
+        "init": 12,
+        "val": 1,
+        "ann": 6
+      }
     },
     "1549": {
-      "initial": 12,
-      "after_val": 7,
-      "after_ann": 10
+      "concepts": {
+        "init": 10,
+        "val": 6,
+        "ann": 5
+      },
+      "preds": {
+        "init": 12,
+        "val": 7,
+        "ann": 10
+      }
     },
     "2180": {
-      "initial": 15,
-      "after_val": 11,
-      "after_ann": 14
+      "concepts": {
+        "init": 12,
+        "val": 11,
+        "ann": 5
+      },
+      "preds": {
+        "init": 15,
+        "val": 11,
+        "ann": 14
+      }
     },
     "2812": {
-      "initial": 10,
-      "after_val": 6,
-      "after_ann": 9
+      "concepts": {
+        "init": 9,
+        "val": 8,
+        "ann": 4
+      },
+      "preds": {
+        "init": 10,
+        "val": 6,
+        "ann": 9
+      }
     },
     "300": {
-      "initial": 13,
-      "after_val": 13,
-      "after_ann": 16
+      "concepts": {
+        "init": 10,
+        "val": 12,
+        "ann": 3
+      },
+      "preds": {
+        "init": 13,
+        "val": 13,
+        "ann": 16
+      }
     },
     "2048": {
-      "initial": 13,
-      "after_val": 6,
-      "after_ann": 9
+      "concepts": {
+        "init": 9,
+        "val": 6,
+        "ann": 6
+      },
+      "preds": {
+        "init": 13,
+        "val": 6,
+        "ann": 9
+      }
     },
     "199": {
-      "initial": 11,
-      "after_val": 11,
-      "after_ann": 14
+      "concepts": {
+        "init": 8,
+        "val": 10,
+        "ann": 4
+      },
+      "preds": {
+        "init": 11,
+        "val": 11,
+        "ann": 14
+      }
     },
     "1904": {
-      "initial": 12,
-      "after_val": 5,
-      "after_ann": 8
+      "concepts": {
+        "init": 14,
+        "val": 7,
+        "ann": 4
+      },
+      "preds": {
+        "init": 12,
+        "val": 5,
+        "ann": 8
+      }
     },
     "1664": {
-      "initial": 12,
-      "after_val": 8,
-      "after_ann": 11
+      "concepts": {
+        "init": 7,
+        "val": 8,
+        "ann": 5
+      },
+      "preds": {
+        "init": 12,
+        "val": 8,
+        "ann": 11
+      }
     },
     "1595": {
-      "initial": 13,
-      "after_val": 11,
-      "after_ann": 14
+      "concepts": {
+        "init": 11,
+        "val": 10,
+        "ann": 5
+      },
+      "preds": {
+        "init": 13,
+        "val": 11,
+        "ann": 14
+      }
     },
     "1645": {
-      "initial": 11,
-      "after_val": 2,
-      "after_ann": 5
+      "concepts": {
+        "init": 10,
+        "val": 3,
+        "ann": 4
+      },
+      "preds": {
+        "init": 11,
+        "val": 2,
+        "ann": 5
+      }
     },
     "1533": {
-      "initial": 13,
-      "after_val": 6,
-      "after_ann": 9
+      "concepts": {
+        "init": 7,
+        "val": 6,
+        "ann": 5
+      },
+      "preds": {
+        "init": 13,
+        "val": 6,
+        "ann": 9
+      }
     },
     "2928": {
-      "initial": 10,
-      "after_val": 9,
-      "after_ann": 12
+      "concepts": {
+        "init": 11,
+        "val": 11,
+        "ann": 1
+      },
+      "preds": {
+        "init": 10,
+        "val": 9,
+        "ann": 12
+      }
     },
     "3051": {
-      "initial": 13,
-      "after_val": 8,
-      "after_ann": 11
+      "concepts": {
+        "init": 6,
+        "val": 9,
+        "ann": 4
+      },
+      "preds": {
+        "init": 13,
+        "val": 8,
+        "ann": 11
+      }
     },
     "1111": {
-      "initial": 14,
-      "after_val": 7,
-      "after_ann": 10
+      "concepts": {
+        "init": 9,
+        "val": 8,
+        "ann": 1
+      },
+      "preds": {
+        "init": 14,
+        "val": 7,
+        "ann": 10
+      }
     },
     "913": {
-      "initial": 13,
-      "after_val": 12,
-      "after_ann": 15
+      "concepts": {
+        "init": 13,
+        "val": 11,
+        "ann": 5
+      },
+      "preds": {
+        "init": 13,
+        "val": 12,
+        "ann": 15
+      }
     },
     "1021": {
-      "initial": 15,
-      "after_val": 5,
-      "after_ann": 8
+      "concepts": {
+        "init": 11,
+        "val": 6,
+        "ann": 5
+      },
+      "preds": {
+        "init": 15,
+        "val": 5,
+        "ann": 8
+      }
     },
     "1620": {
-      "initial": 13,
-      "after_val": 1,
-      "after_ann": 4
+      "concepts": {
+        "init": 10,
+        "val": 2,
+        "ann": 5
+      },
+      "preds": {
+        "init": 13,
+        "val": 1,
+        "ann": 4
+      }
     },
     "2906": {
-      "initial": 14,
-      "after_val": 4,
-      "after_ann": 7
+      "concepts": {
+        "init": 11,
+        "val": 4,
+        "ann": 5
+      },
+      "preds": {
+        "init": 14,
+        "val": 4,
+        "ann": 7
+      }
     },
     "1437": {
-      "initial": 14,
-      "after_val": 14,
-      "after_ann": 17
+      "concepts": {
+        "init": 13,
+        "val": 17,
+        "ann": 5
+      },
+      "preds": {
+        "init": 14,
+        "val": 14,
+        "ann": 17
+      }
     },
     "2847": {
-      "initial": 11,
-      "after_val": 2,
-      "after_ann": 5
+      "concepts": {
+        "init": 11,
+        "val": 4,
+        "ann": 6
+      },
+      "preds": {
+        "init": 11,
+        "val": 2,
+        "ann": 5
+      }
     }
   },
   "summary": {
-    "initial": 935,
-    "after_val": 430,
-    "after_ann": 677
+    "concepts": {
+      "init": 804,
+      "val": 481,
+      "ann": 352
+    },
+    "preds": {
+      "init": 935,
+      "val": 430,
+      "ann": 677
+    }
   }
 }

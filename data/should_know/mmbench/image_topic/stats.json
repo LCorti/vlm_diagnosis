@@ -1,329 +1,784 @@
 {
   "samples": {
     "38": {
-      "initial": 10,
-      "after_val": 9,
-      "after_ann": 12
+      "concepts": {
+        "init": 8,
+        "val": 12,
+        "ann": 4
+      },
+      "preds": {
+        "init": 10,
+        "val": 9,
+        "ann": 12
+      }
     },
     "50": {
-      "initial": 5,
-      "after_val": 0,
-      "after_ann": 3
+      "concepts": {
+        "init": 3,
+        "val": 0,
+        "ann": 5
+      },
+      "preds": {
+        "init": 5,
+        "val": 0,
+        "ann": 3
+      }
     },
     "95": {
-      "initial": 11,
-      "after_val": 4,
-      "after_ann": 7
+      "concepts": {
+        "init": 10,
+        "val": 6,
+        "ann": 6
+      },
+      "preds": {
+        "init": 11,
+        "val": 4,
+        "ann": 7
+      }
     },
     "97": {
-      "initial": 3,
-      "after_val": 3,
-      "after_ann": 6
+      "concepts": {
+        "init": 4,
+        "val": 4,
+        "ann": 6
+      },
+      "preds": {
+        "init": 3,
+        "val": 3,
+        "ann": 6
+      }
     },
     "101": {
-      "initial": 10,
-      "after_val": 1,
-      "after_ann": 4
+      "concepts": {
+        "init": 8,
+        "val": 2,
+        "ann": 3
+      },
+      "preds": {
+        "init": 10,
+        "val": 1,
+        "ann": 4
+      }
     },
     "102": {
-      "initial": 14,
-      "after_val": 0,
-      "after_ann": 3
+      "concepts": {
+        "init": 14,
+        "val": 0,
+        "ann": 4
+      },
+      "preds": {
+        "init": 14,
+        "val": 0,
+        "ann": 3
+      }
     },
     "108": {
-      "initial": 17,
-      "after_val": 7,
-      "after_ann": 10
+      "concepts": {
+        "init": 14,
+        "val": 11,
+        "ann": 4
+      },
+      "preds": {
+        "init": 17,
+        "val": 7,
+        "ann": 10
+      }
     },
     "114": {
-      "initial": 7,
-      "after_val": 2,
-      "after_ann": 5
+      "concepts": {
+        "init": 7,
+        "val": 3,
+        "ann": 6
+      },
+      "preds": {
+        "init": 7,
+        "val": 2,
+        "ann": 5
+      }
     },
     "1000038": {
-      "initial": 10,
-      "after_val": 0,
-      "after_ann": 3
+      "concepts": {
+        "init": 8,
+        "val": 0,
+        "ann": 5
+      },
+      "preds": {
+        "init": 10,
+        "val": 0,
+        "ann": 3
+      }
     },
     "1000050": {
-      "initial": 5,
-      "after_val": 0,
-      "after_ann": 3
+      "concepts": {
+        "init": 3,
+        "val": 0,
+        "ann": 4
+      },
+      "preds": {
+        "init": 5,
+        "val": 0,
+        "ann": 3
+      }
     },
     "1000054": {
-      "initial": 6,
-      "after_val": 5,
-      "after_ann": 8
+      "concepts": {
+        "init": 6,
+        "val": 6,
+        "ann": 5
+      },
+      "preds": {
+        "init": 6,
+        "val": 5,
+        "ann": 8
+      }
     },
     "1000064": {
-      "initial": 17,
-      "after_val": 0,
-      "after_ann": 3
+      "concepts": {
+        "init": 11,
+        "val": 0,
+        "ann": 4
+      },
+      "preds": {
+        "init": 17,
+        "val": 0,
+        "ann": 3
+      }
     },
     "54": {
-      "initial": 6,
-      "after_val": 1,
-      "after_ann": 4
+      "concepts": {
+        "init": 6,
+        "val": 2,
+        "ann": 5
+      },
+      "preds": {
+        "init": 6,
+        "val": 1,
+        "ann": 4
+      }
     },
     "1000067": {
-      "initial": 12,
-      "after_val": 8,
-      "after_ann": 11
+      "concepts": {
+        "init": 9,
+        "val": 7,
+        "ann": 5
+      },
+      "preds": {
+        "init": 12,
+        "val": 8,
+        "ann": 11
+      }
     },
     "1000068": {
-      "initial": 11,
-      "after_val": 2,
-      "after_ann": 5
+      "concepts": {
+        "init": 11,
+        "val": 4,
+        "ann": 6
+      },
+      "preds": {
+        "init": 11,
+        "val": 2,
+        "ann": 5
+      }
     },
     "1000072": {
-      "initial": 12,
-      "after_val": 0,
-      "after_ann": 3
+      "concepts": {
+        "init": 10,
+        "val": 0,
+        "ann": 4
+      },
+      "preds": {
+        "init": 12,
+        "val": 0,
+        "ann": 3
+      }
     },
     "1000089": {
-      "initial": 6,
-      "after_val": 0,
-      "after_ann": 5
+      "concepts": {
+        "init": 4,
+        "val": 0,
+        "ann": 6
+      },
+      "preds": {
+        "init": 6,
+        "val": 0,
+        "ann": 5
+      }
     },
     "1000092": {
-      "initial": 14,
-      "after_val": 8,
-      "after_ann": 11
+      "concepts": {
+        "init": 8,
+        "val": 5,
+        "ann": 4
+      },
+      "preds": {
+        "init": 14,
+        "val": 8,
+        "ann": 11
+      }
     },
     "1000094": {
-      "initial": 21,
-      "after_val": 1,
-      "after_ann": 4
+      "concepts": {
+        "init": 14,
+        "val": 2,
+        "ann": 4
+      },
+      "preds": {
+        "init": 21,
+        "val": 1,
+        "ann": 4
+      }
     },
     "1000095": {
-      "initial": 11,
-      "after_val": 6,
-      "after_ann": 9
+      "concepts": {
+        "init": 10,
+        "val": 8,
+        "ann": 4
+      },
+      "preds": {
+        "init": 11,
+        "val": 6,
+        "ann": 9
+      }
     },
     "1000097": {
-      "initial": 3,
-      "after_val": 2,
-      "after_ann": 5
+      "concepts": {
+        "init": 4,
+        "val": 4,
+        "ann": 5
+      },
+      "preds": {
+        "init": 3,
+        "val": 2,
+        "ann": 5
+      }
     },
     "1000101": {
-      "initial": 10,
-      "after_val": 6,
-      "after_ann": 9
+      "concepts": {
+        "init": 8,
+        "val": 8,
+        "ann": 5
+      },
+      "preds": {
+        "init": 10,
+        "val": 6,
+        "ann": 9
+      }
     },
     "1000102": {
-      "initial": 14,
-      "after_val": 14,
-      "after_ann": 17
+      "concepts": {
+        "init": 14,
+        "val": 14,
+        "ann": 6
+      },
+      "preds": {
+        "init": 14,
+        "val": 14,
+        "ann": 17
+      }
     },
     "64": {
-      "initial": 17,
-      "after_val": 13,
-      "after_ann": 16
+      "concepts": {
+        "init": 11,
+        "val": 12,
+        "ann": 3
+      },
+      "preds": {
+        "init": 17,
+        "val": 13,
+        "ann": 16
+      }
     },
     "1000108": {
-      "initial": 17,
-      "after_val": 0,
-      "after_ann": 3
+      "concepts": {
+        "init": 14,
+        "val": 0,
+        "ann": 5
+      },
+      "preds": {
+        "init": 17,
+        "val": 0,
+        "ann": 3
+      }
     },
     "1000114": {
-      "initial": 7,
-      "after_val": 3,
-      "after_ann": 6
+      "concepts": {
+        "init": 7,
+        "val": 3,
+        "ann": 5
+      },
+      "preds": {
+        "init": 7,
+        "val": 3,
+        "ann": 6
+      }
     },
     "2000038": {
-      "initial": 10,
-      "after_val": 1,
-      "after_ann": 7
+      "concepts": {
+        "init": 8,
+        "val": 2,
+        "ann": 7
+      },
+      "preds": {
+        "init": 10,
+        "val": 1,
+        "ann": 7
+      }
     },
     "2000050": {
-      "initial": 5,
-      "after_val": 0,
-      "after_ann": 3
+      "concepts": {
+        "init": 3,
+        "val": 0,
+        "ann": 4
+      },
+      "preds": {
+        "init": 5,
+        "val": 0,
+        "ann": 3
+      }
     },
     "2000054": {
-      "initial": 6,
-      "after_val": 3,
-      "after_ann": 6
+      "concepts": {
+        "init": 6,
+        "val": 5,
+        "ann": 5
+      },
+      "preds": {
+        "init": 6,
+        "val": 3,
+        "ann": 6
+      }
     },
     "2000064": {
-      "initial": 17,
-      "after_val": 14,
-      "after_ann": 17
+      "concepts": {
+        "init": 11,
+        "val": 14,
+        "ann": 4
+      },
+      "preds": {
+        "init": 17,
+        "val": 14,
+        "ann": 17
+      }
     },
     "2000067": {
-      "initial": 12,
-      "after_val": 4,
-      "after_ann": 7
+      "concepts": {
+        "init": 9,
+        "val": 6,
+        "ann": 5
+      },
+      "preds": {
+        "init": 12,
+        "val": 4,
+        "ann": 7
+      }
     },
     "2000068": {
-      "initial": 11,
-      "after_val": 3,
-      "after_ann": 6
+      "concepts": {
+        "init": 11,
+        "val": 4,
+        "ann": 6
+      },
+      "preds": {
+        "init": 11,
+        "val": 3,
+        "ann": 6
+      }
     },
     "2000072": {
-      "initial": 12,
-      "after_val": 10,
-      "after_ann": 13
+      "concepts": {
+        "init": 10,
+        "val": 17,
+        "ann": 4
+      },
+      "preds": {
+        "init": 12,
+        "val": 10,
+        "ann": 13
+      }
     },
     "2000089": {
-      "initial": 6,
-      "after_val": 3,
-      "after_ann": 6
+      "concepts": {
+        "init": 4,
+        "val": 4,
+        "ann": 4
+      },
+      "preds": {
+        "init": 6,
+        "val": 3,
+        "ann": 6
+      }
     },
     "67": {
-      "initial": 12,
-      "after_val": 12,
-      "after_ann": 15
+      "concepts": {
+        "init": 9,
+        "val": 11,
+        "ann": 4
+      },
+      "preds": {
+        "init": 12,
+        "val": 12,
+        "ann": 15
+      }
     },
     "2000092": {
-      "initial": 14,
-      "after_val": 10,
-      "after_ann": 13
+      "concepts": {
+        "init": 8,
+        "val": 10,
+        "ann": 5
+      },
+      "preds": {
+        "init": 14,
+        "val": 10,
+        "ann": 13
+      }
     },
     "2000094": {
-      "initial": 21,
-      "after_val": 1,
-      "after_ann": 4
+      "concepts": {
+        "init": 14,
+        "val": 2,
+        "ann": 5
+      },
+      "preds": {
+        "init": 21,
+        "val": 1,
+        "ann": 4
+      }
     },
     "2000095": {
-      "initial": 11,
-      "after_val": 11,
-      "after_ann": 14
+      "concepts": {
+        "init": 10,
+        "val": 12,
+        "ann": 5
+      },
+      "preds": {
+        "init": 11,
+        "val": 11,
+        "ann": 14
+      }
     },
     "2000097": {
-      "initial": 3,
-      "after_val": 3,
-      "after_ann": 6
+      "concepts": {
+        "init": 4,
+        "val": 4,
+        "ann": 5
+      },
+      "preds": {
+        "init": 3,
+        "val": 3,
+        "ann": 6
+      }
     },
     "2000101": {
-      "initial": 10,
-      "after_val": 0,
-      "after_ann": 3
+      "concepts": {
+        "init": 8,
+        "val": 0,
+        "ann": 6
+      },
+      "preds": {
+        "init": 10,
+        "val": 0,
+        "ann": 3
+      }
     },
     "2000102": {
-      "initial": 14,
-      "after_val": 3,
-      "after_ann": 6
+      "concepts": {
+        "init": 14,
+        "val": 5,
+        "ann": 5
+      },
+      "preds": {
+        "init": 14,
+        "val": 3,
+        "ann": 6
+      }
     },
     "2000108": {
-      "initial": 17,
-      "after_val": 7,
-      "after_ann": 10
+      "concepts": {
+        "init": 14,
+        "val": 10,
+        "ann": 4
+      },
+      "preds": {
+        "init": 17,
+        "val": 7,
+        "ann": 10
+      }
     },
     "2000114": {
-      "initial": 7,
-      "after_val": 1,
-      "after_ann": 4
+      "concepts": {
+        "init": 7,
+        "val": 2,
+        "ann": 4
+      },
+      "preds": {
+        "init": 7,
+        "val": 1,
+        "ann": 4
+      }
     },
     "3000038": {
-      "initial": 10,
-      "after_val": 5,
-      "after_ann": 8
+      "concepts": {
+        "init": 8,
+        "val": 5,
+        "ann": 4
+      },
+      "preds": {
+        "init": 10,
+        "val": 5,
+        "ann": 8
+      }
     },
     "3000050": {
-      "initial": 5,
-      "after_val": 5,
-      "after_ann": 8
+      "concepts": {
+        "init": 3,
+        "val": 3,
+        "ann": 3
+      },
+      "preds": {
+        "init": 5,
+        "val": 5,
+        "ann": 8
+      }
     },
     "68": {
-      "initial": 11,
-      "after_val": 6,
-      "after_ann": 9
+      "concepts": {
+        "init": 11,
+        "val": 8,
+        "ann": 5
+      },
+      "preds": {
+        "init": 11,
+        "val": 6,
+        "ann": 9
+      }
     },
     "3000054": {
-      "initial": 6,
-      "after_val": 2,
-      "after_ann": 5
+      "concepts": {
+        "init": 6,
+        "val": 3,
+        "ann": 4
+      },
+      "preds": {
+        "init": 6,
+        "val": 2,
+        "ann": 5
+      }
     },
     "3000064": {
-      "initial": 17,
-      "after_val": 0,
-      "after_ann": 4
+      "concepts": {
+        "init": 11,
+        "val": 0,
+        "ann": 4
+      },
+      "preds": {
+        "init": 17,
+        "val": 0,
+        "ann": 4
+      }
     },
     "3000067": {
-      "initial": 12,
-      "after_val": 2,
-      "after_ann": 5
+      "concepts": {
+        "init": 9,
+        "val": 3,
+        "ann": 3
+      },
+      "preds": {
+        "init": 12,
+        "val": 2,
+        "ann": 5
+      }
     },
     "3000068": {
-      "initial": 11,
-      "after_val": 3,
-      "after_ann": 7
+      "concepts": {
+        "init": 11,
+        "val": 5,
+        "ann": 7
+      },
+      "preds": {
+        "init": 11,
+        "val": 3,
+        "ann": 7
+      }
     },
     "3000072": {
-      "initial": 12,
-      "after_val": 0,
-      "after_ann": 3
+      "concepts": {
+        "init": 10,
+        "val": 0,
+        "ann": 5
+      },
+      "preds": {
+        "init": 12,
+        "val": 0,
+        "ann": 3
+      }
     },
     "3000089": {
-      "initial": 6,
-      "after_val": 0,
-      "after_ann": 3
+      "concepts": {
+        "init": 4,
+        "val": 0,
+        "ann": 5
+      },
+      "preds": {
+        "init": 6,
+        "val": 0,
+        "ann": 3
+      }
     },
     "3000092": {
-      "initial": 14,
-      "after_val": 6,
-      "after_ann": 9
+      "concepts": {
+        "init": 8,
+        "val": 8,
+        "ann": 4
+      },
+      "preds": {
+        "init": 14,
+        "val": 6,
+        "ann": 9
+      }
     },
     "3000094": {
-      "initial": 21,
-      "after_val": 3,
-      "after_ann": 6
+      "concepts": {
+        "init": 14,
+        "val": 6,
+        "ann": 6
+      },
+      "preds": {
+        "init": 21,
+        "val": 3,
+        "ann": 6
+      }
     },
     "3000095": {
-      "initial": 11,
-      "after_val": 1,
-      "after_ann": 4
+      "concepts": {
+        "init": 10,
+        "val": 2,
+        "ann": 3
+      },
+      "preds": {
+        "init": 11,
+        "val": 1,
+        "ann": 4
+      }
     },
     "3000097": {
-      "initial": 3,
-      "after_val": 2,
-      "after_ann": 5
+      "concepts": {
+        "init": 4,
+        "val": 3,
+        "ann": 5
+      },
+      "preds": {
+        "init": 3,
+        "val": 2,
+        "ann": 5
+      }
     },
     "72": {
-      "initial": 12,
-      "after_val": 6,
-      "after_ann": 9
+      "concepts": {
+        "init": 10,
+        "val": 9,
+        "ann": 4
+      },
+      "preds": {
+        "init": 12,
+        "val": 6,
+        "ann": 9
+      }
     },
     "3000101": {
-      "initial": 10,
-      "after_val": 0,
-      "after_ann": 4
+      "concepts": {
+        "init": 8,
+        "val": 0,
+        "ann": 3
+      },
+      "preds": {
+        "init": 10,
+        "val": 0,
+        "ann": 4
+      }
     },
     "3000102": {
-      "initial": 14,
-      "after_val": 4,
-      "after_ann": 7
+      "concepts": {
+        "init": 14,
+        "val": 5,
+        "ann": 4
+      },
+      "preds": {
+        "init": 14,
+        "val": 4,
+        "ann": 7
+      }
     },
     "3000108": {
-      "initial": 17,
-      "after_val": 17,
-      "after_ann": 20
+      "concepts": {
+        "init": 14,
+        "val": 17,
+        "ann": 6
+      },
+      "preds": {
+        "init": 17,
+        "val": 17,
+        "ann": 20
+      }
     },
     "3000114": {
-      "initial": 7,
-      "after_val": 4,
-      "after_ann": 7
+      "concepts": {
+        "init": 7,
+        "val": 7,
+        "ann": 3
+      },
+      "preds": {
+        "init": 7,
+        "val": 4,
+        "ann": 7
+      }
     },
     "89": {
-      "initial": 6,
-      "after_val": 6,
-      "after_ann": 9
+      "concepts": {
+        "init": 4,
+        "val": 4,
+        "ann": 5
+      },
+      "preds": {
+        "init": 6,
+        "val": 6,
+        "ann": 9
+      }
     },
     "92": {
-      "initial": 14,
-      "after_val": 8,
-      "after_ann": 10
+      "concepts": {
+        "init": 8,
+        "val": 6,
+        "ann": 4
+      },
+      "preds": {
+        "init": 14,
+        "val": 8,
+        "ann": 10
+      }
     },
     "94": {
-      "initial": 21,
-      "after_val": 1,
-      "after_ann": 4
+      "concepts": {
+        "init": 14,
+        "val": 2,
+        "ann": 6
+      },
+      "preds": {
+        "init": 21,
+        "val": 1,
+        "ann": 4
+      }
     }
   },
   "summary": {
-    "initial": 704,
-    "after_val": 262,
-    "after_ann": 461
+    "concepts": {
+      "init": 564,
+      "val": 317,
+      "ann": 298
+    },
+    "preds": {
+      "init": 704,
+      "val": 262,
+      "ann": 461
+    }
   }
 }

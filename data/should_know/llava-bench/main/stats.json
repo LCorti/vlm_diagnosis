@@ -1,309 +1,736 @@
 {
   "samples": {
     "0": {
-      "initial": 7,
-      "after_val": 6,
-      "after_ann": 9
+      "concepts": {
+        "init": 4,
+        "val": 4,
+        "ann": 1
+      },
+      "preds": {
+        "init": 7,
+        "val": 6,
+        "ann": 9
+      }
     },
     "1": {
-      "initial": 7,
-      "after_val": 6,
-      "after_ann": 11
+      "concepts": {
+        "init": 4,
+        "val": 5,
+        "ann": 6
+      },
+      "preds": {
+        "init": 7,
+        "val": 6,
+        "ann": 11
+      }
     },
     "2": {
-      "initial": 7,
-      "after_val": 7,
-      "after_ann": 10
+      "concepts": {
+        "init": 5,
+        "val": 5,
+        "ann": 3
+      },
+      "preds": {
+        "init": 7,
+        "val": 7,
+        "ann": 10
+      }
     },
     "3": {
-      "initial": 7,
-      "after_val": 5,
-      "after_ann": 8
+      "concepts": {
+        "init": 5,
+        "val": 2,
+        "ann": 5
+      },
+      "preds": {
+        "init": 7,
+        "val": 5,
+        "ann": 8
+      }
     },
     "4": {
-      "initial": 7,
-      "after_val": 7,
-      "after_ann": 10
+      "concepts": {
+        "init": 5,
+        "val": 4,
+        "ann": 2
+      },
+      "preds": {
+        "init": 7,
+        "val": 7,
+        "ann": 10
+      }
     },
     "5": {
-      "initial": 7,
-      "after_val": 7,
-      "after_ann": 10
+      "concepts": {
+        "init": 4,
+        "val": 0,
+        "ann": 3
+      },
+      "preds": {
+        "init": 7,
+        "val": 7,
+        "ann": 10
+      }
     },
     "6": {
-      "initial": 7,
-      "after_val": 7,
-      "after_ann": 11
+      "concepts": {
+        "init": 4,
+        "val": 0,
+        "ann": 4
+      },
+      "preds": {
+        "init": 7,
+        "val": 7,
+        "ann": 11
+      }
     },
     "7": {
-      "initial": 7,
-      "after_val": 7,
-      "after_ann": 10
+      "concepts": {
+        "init": 4,
+        "val": 0,
+        "ann": 4
+      },
+      "preds": {
+        "init": 7,
+        "val": 7,
+        "ann": 10
+      }
     },
     "8": {
-      "initial": 6,
-      "after_val": 3,
-      "after_ann": 7
+      "concepts": {
+        "init": 7,
+        "val": 5,
+        "ann": 5
+      },
+      "preds": {
+        "init": 6,
+        "val": 3,
+        "ann": 7
+      }
     },
     "9": {
-      "initial": 6,
-      "after_val": 0,
-      "after_ann": 3
+      "concepts": {
+        "init": 6,
+        "val": 0,
+        "ann": 6
+      },
+      "preds": {
+        "init": 6,
+        "val": 0,
+        "ann": 3
+      }
     },
     "10": {
-      "initial": 6,
-      "after_val": 6,
-      "after_ann": 9
+      "concepts": {
+        "init": 6,
+        "val": 8,
+        "ann": 6
+      },
+      "preds": {
+        "init": 6,
+        "val": 6,
+        "ann": 9
+      }
     },
     "11": {
-      "initial": 18,
-      "after_val": 6,
-      "after_ann": 9
+      "concepts": {
+        "init": 11,
+        "val": 7,
+        "ann": 2
+      },
+      "preds": {
+        "init": 18,
+        "val": 6,
+        "ann": 9
+      }
     },
     "12": {
-      "initial": 18,
-      "after_val": 4,
-      "after_ann": 7
+      "concepts": {
+        "init": 14,
+        "val": 0,
+        "ann": 1
+      },
+      "preds": {
+        "init": 18,
+        "val": 4,
+        "ann": 7
+      }
     },
     "13": {
-      "initial": 18,
-      "after_val": 5,
-      "after_ann": 9
+      "concepts": {
+        "init": 14,
+        "val": 2,
+        "ann": 4
+      },
+      "preds": {
+        "init": 18,
+        "val": 5,
+        "ann": 9
+      }
     },
     "14": {
-      "initial": 12,
-      "after_val": 1,
-      "after_ann": 4
+      "concepts": {
+        "init": 9,
+        "val": 2,
+        "ann": 6
+      },
+      "preds": {
+        "init": 12,
+        "val": 1,
+        "ann": 4
+      }
     },
     "15": {
-      "initial": 12,
-      "after_val": 1,
-      "after_ann": 4
+      "concepts": {
+        "init": 9,
+        "val": 2,
+        "ann": 4
+      },
+      "preds": {
+        "init": 12,
+        "val": 1,
+        "ann": 4
+      }
     },
     "16": {
-      "initial": 12,
-      "after_val": 12,
-      "after_ann": 15
+      "concepts": {
+        "init": 9,
+        "val": 11,
+        "ann": 4
+      },
+      "preds": {
+        "init": 12,
+        "val": 12,
+        "ann": 15
+      }
     },
     "17": {
-      "initial": 12,
-      "after_val": 4,
-      "after_ann": 7
+      "concepts": {
+        "init": 9,
+        "val": 0,
+        "ann": 5
+      },
+      "preds": {
+        "init": 12,
+        "val": 4,
+        "ann": 7
+      }
     },
     "18": {
-      "initial": 12,
-      "after_val": 4,
-      "after_ann": 7
+      "concepts": {
+        "init": 9,
+        "val": 0,
+        "ann": 5
+      },
+      "preds": {
+        "init": 12,
+        "val": 4,
+        "ann": 7
+      }
     },
     "19": {
-      "initial": 5,
-      "after_val": 5,
-      "after_ann": 8
+      "concepts": {
+        "init": 4,
+        "val": 7,
+        "ann": 3
+      },
+      "preds": {
+        "init": 5,
+        "val": 5,
+        "ann": 8
+      }
     },
     "20": {
-      "initial": 5,
-      "after_val": 2,
-      "after_ann": 5
+      "concepts": {
+        "init": 6,
+        "val": 0,
+        "ann": 1
+      },
+      "preds": {
+        "init": 5,
+        "val": 2,
+        "ann": 5
+      }
     },
     "21": {
-      "initial": 5,
-      "after_val": 0,
-      "after_ann": 3
+      "concepts": {
+        "init": 5,
+        "val": 0,
+        "ann": 4
+      },
+      "preds": {
+        "init": 5,
+        "val": 0,
+        "ann": 3
+      }
     },
     "22": {
-      "initial": 5,
-      "after_val": 0,
-      "after_ann": 3
+      "concepts": {
+        "init": 5,
+        "val": 0,
+        "ann": 4
+      },
+      "preds": {
+        "init": 5,
+        "val": 0,
+        "ann": 3
+      }
     },
     "23": {
-      "initial": 3,
-      "after_val": 3,
-      "after_ann": 6
+      "concepts": {
+        "init": 2,
+        "val": 2,
+        "ann": 6
+      },
+      "preds": {
+        "init": 3,
+        "val": 3,
+        "ann": 6
+      }
     },
     "24": {
-      "initial": 3,
-      "after_val": 2,
-      "after_ann": 5
+      "concepts": {
+        "init": 2,
+        "val": 2,
+        "ann": 5
+      },
+      "preds": {
+        "init": 3,
+        "val": 2,
+        "ann": 5
+      }
     },
     "25": {
-      "initial": 19,
-      "after_val": 18,
-      "after_ann": 21
+      "concepts": {
+        "init": 16,
+        "val": 20,
+        "ann": 6
+      },
+      "preds": {
+        "init": 19,
+        "val": 18,
+        "ann": 21
+      }
     },
     "26": {
-      "initial": 19,
-      "after_val": 19,
-      "after_ann": 22
+      "concepts": {
+        "init": 18,
+        "val": 16,
+        "ann": 6
+      },
+      "preds": {
+        "init": 19,
+        "val": 19,
+        "ann": 22
+      }
     },
     "27": {
-      "initial": 8,
-      "after_val": 2,
-      "after_ann": 5
+      "concepts": {
+        "init": 8,
+        "val": 3,
+        "ann": 5
+      },
+      "preds": {
+        "init": 8,
+        "val": 2,
+        "ann": 5
+      }
     },
     "28": {
-      "initial": 8,
-      "after_val": 2,
-      "after_ann": 5
+      "concepts": {
+        "init": 8,
+        "val": 3,
+        "ann": 5
+      },
+      "preds": {
+        "init": 8,
+        "val": 2,
+        "ann": 5
+      }
     },
     "29": {
-      "initial": 8,
-      "after_val": 8,
-      "after_ann": 11
+      "concepts": {
+        "init": 8,
+        "val": 9,
+        "ann": 2
+      },
+      "preds": {
+        "init": 8,
+        "val": 8,
+        "ann": 12
+      }
     },
     "30": {
-      "initial": 8,
-      "after_val": 2,
-      "after_ann": 10
+      "concepts": {
+        "init": 8,
+        "val": 2,
+        "ann": 9
+      },
+      "preds": {
+        "init": 8,
+        "val": 2,
+        "ann": 10
+      }
     },
     "31": {
-      "initial": 8,
-      "after_val": 7,
-      "after_ann": 10
+      "concepts": {
+        "init": 8,
+        "val": 11,
+        "ann": 6
+      },
+      "preds": {
+        "init": 8,
+        "val": 7,
+        "ann": 10
+      }
     },
     "32": {
-      "initial": 13,
-      "after_val": 13,
-      "after_ann": 16
+      "concepts": {
+        "init": 11,
+        "val": 11,
+        "ann": 6
+      },
+      "preds": {
+        "init": 13,
+        "val": 13,
+        "ann": 16
+      }
     },
     "33": {
-      "initial": 13,
-      "after_val": 0,
-      "after_ann": 3
+      "concepts": {
+        "init": 11,
+        "val": 0,
+        "ann": 6
+      },
+      "preds": {
+        "init": 13,
+        "val": 0,
+        "ann": 3
+      }
     },
     "34": {
-      "initial": 12,
-      "after_val": 4,
-      "after_ann": 7
+      "concepts": {
+        "init": 9,
+        "val": 3,
+        "ann": 4
+      },
+      "preds": {
+        "init": 12,
+        "val": 4,
+        "ann": 7
+      }
     },
     "35": {
-      "initial": 9,
-      "after_val": 2,
-      "after_ann": 5
+      "concepts": {
+        "init": 8,
+        "val": 4,
+        "ann": 5
+      },
+      "preds": {
+        "init": 9,
+        "val": 2,
+        "ann": 5
+      }
     },
     "36": {
-      "initial": 18,
-      "after_val": 8,
-      "after_ann": 11
+      "concepts": {
+        "init": 17,
+        "val": 10,
+        "ann": 6
+      },
+      "preds": {
+        "init": 18,
+        "val": 8,
+        "ann": 11
+      }
     },
     "37": {
-      "initial": 18,
-      "after_val": 8,
-      "after_ann": 11
+      "concepts": {
+        "init": 19,
+        "val": 7,
+        "ann": 4
+      },
+      "preds": {
+        "init": 18,
+        "val": 8,
+        "ann": 11
+      }
     },
     "38": {
-      "initial": 18,
-      "after_val": 3,
-      "after_ann": 15
+      "concepts": {
+        "init": 19,
+        "val": 2,
+        "ann": 13
+      },
+      "preds": {
+        "init": 18,
+        "val": 3,
+        "ann": 15
+      }
     },
     "39": {
-      "initial": 17,
-      "after_val": 12,
-      "after_ann": 21
+      "concepts": {
+        "init": 12,
+        "val": 10,
+        "ann": 5
+      },
+      "preds": {
+        "init": 17,
+        "val": 12,
+        "ann": 21
+      }
     },
     "40": {
-      "initial": 17,
-      "after_val": 12,
-      "after_ann": 15
+      "concepts": {
+        "init": 21,
+        "val": 0,
+        "ann": 5
+      },
+      "preds": {
+        "init": 17,
+        "val": 12,
+        "ann": 15
+      }
     },
     "41": {
-      "initial": 7,
-      "after_val": 6,
-      "after_ann": 9
+      "concepts": {
+        "init": 7,
+        "val": 8,
+        "ann": 4
+      },
+      "preds": {
+        "init": 7,
+        "val": 6,
+        "ann": 9
+      }
     },
     "42": {
-      "initial": 7,
-      "after_val": 5,
-      "after_ann": 9
+      "concepts": {
+        "init": 9,
+        "val": 0,
+        "ann": 5
+      },
+      "preds": {
+        "init": 7,
+        "val": 5,
+        "ann": 9
+      }
     },
     "43": {
-      "initial": 19,
-      "after_val": 0,
-      "after_ann": 3
+      "concepts": {
+        "init": 9,
+        "val": 0,
+        "ann": 1
+      },
+      "preds": {
+        "init": 19,
+        "val": 0,
+        "ann": 3
+      }
     },
     "44": {
-      "initial": 19,
-      "after_val": 17,
-      "after_ann": 20
+      "concepts": {
+        "init": 9,
+        "val": 16,
+        "ann": 6
+      },
+      "preds": {
+        "init": 19,
+        "val": 17,
+        "ann": 20
+      }
     },
     "45": {
-      "initial": 9,
-      "after_val": 8,
-      "after_ann": 11
+      "concepts": {
+        "init": 3,
+        "val": 8,
+        "ann": 6
+      },
+      "preds": {
+        "init": 9,
+        "val": 8,
+        "ann": 11
+      }
     },
     "46": {
-      "initial": 9,
-      "after_val": 6,
-      "after_ann": 11
+      "concepts": {
+        "init": 5,
+        "val": 5,
+        "ann": 4
+      },
+      "preds": {
+        "init": 9,
+        "val": 6,
+        "ann": 11
+      }
     },
     "47": {
-      "initial": 5,
-      "after_val": 1,
-      "after_ann": 4
+      "concepts": {
+        "init": 1,
+        "val": 1,
+        "ann": 1
+      },
+      "preds": {
+        "init": 5,
+        "val": 1,
+        "ann": 4
+      }
     },
     "48": {
-      "initial": 5,
-      "after_val": 1,
-      "after_ann": 8
+      "concepts": {
+        "init": 1,
+        "val": 2,
+        "ann": 6
+      },
+      "preds": {
+        "init": 5,
+        "val": 1,
+        "ann": 8
+      }
     },
     "49": {
-      "initial": 17,
-      "after_val": 0,
-      "after_ann": 3
+      "concepts": {
+        "init": 15,
+        "val": 0,
+        "ann": 6
+      },
+      "preds": {
+        "init": 17,
+        "val": 0,
+        "ann": 3
+      }
     },
     "50": {
-      "initial": 17,
-      "after_val": 0,
-      "after_ann": 3
+      "concepts": {
+        "init": 15,
+        "val": 0,
+        "ann": 1
+      },
+      "preds": {
+        "init": 17,
+        "val": 0,
+        "ann": 3
+      }
     },
     "51": {
-      "initial": 16,
-      "after_val": 16,
-      "after_ann": 19
+      "concepts": {
+        "init": 15,
+        "val": 15,
+        "ann": 5
+      },
+      "preds": {
+        "init": 16,
+        "val": 16,
+        "ann": 19
+      }
     },
     "52": {
-      "initial": 16,
-      "after_val": 5,
-      "after_ann": 13
+      "concepts": {
+        "init": 15,
+        "val": 8,
+        "ann": 10
+      },
+      "preds": {
+        "init": 16,
+        "val": 5,
+        "ann": 13
+      }
     },
     "53": {
-      "initial": 16,
-      "after_val": 3,
-      "after_ann": 6
+      "concepts": {
+        "init": 15,
+        "val": 0,
+        "ann": 5
+      },
+      "preds": {
+        "init": 16,
+        "val": 3,
+        "ann": 6
+      }
     },
     "54": {
-      "initial": 7,
-      "after_val": 3,
-      "after_ann": 6
+      "concepts": {
+        "init": 9,
+        "val": 6,
+        "ann": 5
+      },
+      "preds": {
+        "init": 7,
+        "val": 3,
+        "ann": 6
+      }
     },
     "55": {
-      "initial": 7,
-      "after_val": 6,
-      "after_ann": 9
+      "concepts": {
+        "init": 9,
+        "val": 6,
+        "ann": 5
+      },
+      "preds": {
+        "init": 7,
+        "val": 6,
+        "ann": 9
+      }
     },
     "56": {
-      "initial": 7,
-      "after_val": 4,
-      "after_ann": 12
+      "concepts": {
+        "init": 10,
+        "val": 0,
+        "ann": 10
+      },
+      "preds": {
+        "init": 7,
+        "val": 4,
+        "ann": 12
+      }
     },
     "57": {
-      "initial": 4,
-      "after_val": 3,
-      "after_ann": 7
+      "concepts": {
+        "init": 5,
+        "val": 5,
+        "ann": 5
+      },
+      "preds": {
+        "init": 4,
+        "val": 3,
+        "ann": 7
+      }
     },
     "58": {
-      "initial": 4,
-      "after_val": 4,
-      "after_ann": 7
+      "concepts": {
+        "init": 5,
+        "val": 5,
+        "ann": 5
+      },
+      "preds": {
+        "init": 4,
+        "val": 4,
+        "ann": 7
+      }
     },
     "59": {
-      "initial": 4,
-      "after_val": 4,
-      "after_ann": 7
+      "concepts": {
+        "init": 5,
+        "val": 5,
+        "ann": 2
+      },
+      "preds": {
+        "init": 4,
+        "val": 4,
+        "ann": 7
+      }
     }
   },
   "summary": {
-    "initial": 622,
-    "after_val": 322,
-    "after_ann": 545
+    "concepts": {
+      "init": 525,
+      "val": 269,
+      "ann": 284
+    },
+    "preds": {
+      "init": 622,
+      "val": 322,
+      "ann": 546
+    }
   }
 }
