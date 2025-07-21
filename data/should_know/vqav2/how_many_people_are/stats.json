@@ -3,96 +3,96 @@
     "337814001": {
       "concepts": {
         "init": 13,
-        "val": 9,
-        "ann": 7
+        "val": 13,
+        "ann": 17
       },
       "preds": {
         "init": 11,
-        "val": 6,
+        "val": 11,
         "ann": 12
       }
     },
     "549390000": {
       "concepts": {
         "init": 13,
-        "val": 9,
-        "ann": 4
+        "val": 12,
+        "ann": 11
       },
       "preds": {
         "init": 10,
-        "val": 6,
-        "ann": 9
+        "val": 9,
+        "ann": 7
       }
     },
     "502456011": {
       "concepts": {
         "init": 16,
-        "val": 11,
-        "ann": 5
+        "val": 16,
+        "ann": 13
       },
       "preds": {
         "init": 12,
-        "val": 8,
+        "val": 12,
         "ann": 11
       }
     },
     "547487002": {
       "concepts": {
         "init": 14,
-        "val": 9,
-        "ann": 8
+        "val": 14,
+        "ann": 16
       },
       "preds": {
         "init": 12,
-        "val": 6,
+        "val": 12,
         "ann": 12
       }
     },
     "60596018": {
       "concepts": {
         "init": 16,
-        "val": 15,
-        "ann": 8
+        "val": 16,
+        "ann": 19
       },
       "preds": {
         "init": 14,
-        "val": 11,
-        "ann": 17
+        "val": 14,
+        "ann": 15
       }
     },
     "58157004": {
       "concepts": {
         "init": 10,
         "val": 10,
-        "ann": 11
+        "ann": 20
       },
       "preds": {
         "init": 15,
-        "val": 12,
+        "val": 15,
         "ann": 18
       }
     },
     "356622000": {
       "concepts": {
         "init": 7,
-        "val": 3,
-        "ann": 8
+        "val": 7,
+        "ann": 9
       },
       "preds": {
         "init": 12,
-        "val": 2,
+        "val": 12,
         "ann": 8
       }
     },
     "53580001": {
       "concepts": {
         "init": 12,
-        "val": 7,
-        "ann": 4
+        "val": 12,
+        "ann": 9
       },
       "preds": {
         "init": 14,
-        "val": 5,
+        "val": 14,
         "ann": 8
       }
     },
@@ -100,19 +100,19 @@
       "concepts": {
         "init": 8,
         "val": 8,
-        "ann": 3
+        "ann": 8
       },
       "preds": {
         "init": 11,
-        "val": 9,
-        "ann": 12
+        "val": 11,
+        "ann": 11
       }
     },
     "18699005": {
       "concepts": {
         "init": 11,
         "val": 11,
-        "ann": 12
+        "ann": 21
       },
       "preds": {
         "init": 13,
@@ -123,20 +123,20 @@
     "573214003": {
       "concepts": {
         "init": 8,
-        "val": 4,
-        "ann": 5
+        "val": 8,
+        "ann": 7
       },
       "preds": {
-        "init": 12,
-        "val": 2,
+        "init": 11,
+        "val": 11,
         "ann": 5
       }
     },
     "266922002": {
       "concepts": {
         "init": 13,
-        "val": 18,
-        "ann": 6
+        "val": 14,
+        "ann": 19
       },
       "preds": {
         "init": 14,
@@ -147,108 +147,108 @@
     "313948000": {
       "concepts": {
         "init": 9,
-        "val": 10,
-        "ann": 5
+        "val": 9,
+        "ann": 9
       },
       "preds": {
         "init": 15,
-        "val": 7,
+        "val": 15,
         "ann": 10
       }
     },
     "372024000": {
       "concepts": {
         "init": 8,
-        "val": 4,
-        "ann": 9
+        "val": 8,
+        "ann": 13
       },
       "preds": {
-        "init": 12,
-        "val": 4,
-        "ann": 10
+        "init": 10,
+        "val": 10,
+        "ann": 9
       }
     },
     "284152001": {
       "concepts": {
         "init": 11,
-        "val": 3,
-        "ann": 5
+        "val": 11,
+        "ann": 7
       },
       "preds": {
-        "init": 13,
-        "val": 2,
+        "init": 12,
+        "val": 12,
         "ann": 5
       }
     },
     "120162001": {
       "concepts": {
         "init": 9,
-        "val": 5,
-        "ann": 6
+        "val": 9,
+        "ann": 10
       },
       "preds": {
         "init": 10,
-        "val": 4,
+        "val": 10,
         "ann": 7
       }
     },
     "410446000": {
       "concepts": {
         "init": 13,
-        "val": 0,
-        "ann": 5
+        "val": 13,
+        "ann": 6
       },
       "preds": {
         "init": 13,
-        "val": 0,
+        "val": 13,
         "ann": 3
       }
     },
     "25804000": {
       "concepts": {
         "init": 8,
-        "val": 5,
-        "ann": 8
+        "val": 8,
+        "ann": 12
       },
       "preds": {
         "init": 12,
-        "val": 5,
+        "val": 12,
         "ann": 11
       }
     },
     "378538002": {
       "concepts": {
         "init": 11,
-        "val": 2,
-        "ann": 7
+        "val": 11,
+        "ann": 8
       },
       "preds": {
         "init": 14,
-        "val": 1,
-        "ann": 6
+        "val": 14,
+        "ann": 5
       }
     },
     "525616002": {
       "concepts": {
         "init": 9,
-        "val": 0,
+        "val": 9,
         "ann": 9
       },
       "preds": {
-        "init": 11,
-        "val": 0,
+        "init": 9,
+        "val": 9,
         "ann": 8
       }
     },
     "460684004": {
       "concepts": {
         "init": 11,
-        "val": 4,
-        "ann": 6
+        "val": 11,
+        "ann": 10
       },
       "preds": {
         "init": 11,
-        "val": 3,
+        "val": 11,
         "ann": 6
       }
     },
@@ -256,59 +256,59 @@
       "concepts": {
         "init": 12,
         "val": 14,
-        "ann": 6
+        "ann": 16
       },
       "preds": {
         "init": 10,
-        "val": 8,
+        "val": 10,
         "ann": 11
       }
     },
     "296657000": {
       "concepts": {
         "init": 12,
-        "val": 10,
-        "ann": 6
+        "val": 12,
+        "ann": 16
       },
       "preds": {
         "init": 12,
-        "val": 8,
+        "val": 12,
         "ann": 11
       }
     },
     "162543000": {
       "concepts": {
         "init": 10,
-        "val": 5,
-        "ann": 8
+        "val": 10,
+        "ann": 10
       },
       "preds": {
         "init": 14,
-        "val": 4,
-        "ann": 10
+        "val": 14,
+        "ann": 9
       }
     },
     "63939005": {
       "concepts": {
         "init": 11,
-        "val": 2,
+        "val": 11,
         "ann": 4
       },
       "preds": {
         "init": 14,
-        "val": 1,
-        "ann": 4
+        "val": 14,
+        "ann": 3
       }
     },
     "544533000": {
       "concepts": {
         "init": 12,
-        "val": 2,
-        "ann": 6
+        "val": 12,
+        "ann": 7
       },
       "preds": {
         "init": 12,
-        "val": 1,
+        "val": 12,
         "ann": 4
       }
     },
@@ -316,7 +316,7 @@
       "concepts": {
         "init": 16,
         "val": 16,
-        "ann": 1
+        "ann": 22
       },
       "preds": {
         "init": 14,
@@ -327,120 +327,120 @@
     "33683009": {
       "concepts": {
         "init": 11,
-        "val": 2,
+        "val": 11,
         "ann": 5
       },
       "preds": {
         "init": 11,
-        "val": 1,
-        "ann": 7
+        "val": 11,
+        "ann": 5
       }
     },
     "528458004": {
       "concepts": {
         "init": 7,
-        "val": 0,
-        "ann": 9
+        "val": 7,
+        "ann": 11
       },
       "preds": {
         "init": 10,
-        "val": 0,
+        "val": 10,
         "ann": 8
       }
     },
     "388619000": {
       "concepts": {
         "init": 13,
-        "val": 11,
-        "ann": 5
+        "val": 13,
+        "ann": 13
       },
       "preds": {
         "init": 12,
-        "val": 10,
-        "ann": 13
+        "val": 12,
+        "ann": 12
       }
     },
     "21979005": {
       "concepts": {
         "init": 12,
-        "val": 0,
+        "val": 12,
         "ann": 5
       },
       "preds": {
         "init": 14,
-        "val": 0,
+        "val": 14,
         "ann": 3
       }
     },
     "218189016": {
       "concepts": {
         "init": 11,
-        "val": 4,
-        "ann": 7
+        "val": 11,
+        "ann": 11
       },
       "preds": {
-        "init": 14,
-        "val": 4,
-        "ann": 12
+        "init": 13,
+        "val": 13,
+        "ann": 9
       }
     },
     "56983014": {
       "concepts": {
         "init": 10,
-        "val": 2,
-        "ann": 6
+        "val": 11,
+        "ann": 8
       },
       "preds": {
         "init": 10,
-        "val": 1,
+        "val": 10,
         "ann": 4
       }
     },
     "464831006": {
       "concepts": {
         "init": 10,
-        "val": 8,
-        "ann": 6
+        "val": 10,
+        "ann": 10
       },
       "preds": {
         "init": 14,
-        "val": 6,
+        "val": 14,
         "ann": 9
       }
     },
     "190018000": {
       "concepts": {
         "init": 11,
-        "val": 5,
-        "ann": 6
+        "val": 11,
+        "ann": 10
       },
       "preds": {
         "init": 11,
-        "val": 6,
+        "val": 11,
         "ann": 9
       }
     },
     "540414001": {
       "concepts": {
         "init": 9,
-        "val": 5,
-        "ann": 6
+        "val": 9,
+        "ann": 8
       },
       "preds": {
-        "init": 15,
-        "val": 6,
-        "ann": 9
+        "init": 14,
+        "val": 14,
+        "ann": 8
       }
     },
     "67551000": {
       "concepts": {
         "init": 11,
-        "val": 3,
-        "ann": 4
+        "val": 11,
+        "ann": 6
       },
       "preds": {
         "init": 14,
-        "val": 2,
+        "val": 14,
         "ann": 5
       }
     },
@@ -448,83 +448,83 @@
       "concepts": {
         "init": 10,
         "val": 10,
-        "ann": 8
+        "ann": 13
       },
       "preds": {
         "init": 12,
         "val": 12,
-        "ann": 16
+        "ann": 14
       }
     },
     "301641001": {
       "concepts": {
         "init": 10,
-        "val": 2,
-        "ann": 3
+        "val": 10,
+        "ann": 4
       },
       "preds": {
         "init": 12,
-        "val": 1,
+        "val": 12,
         "ann": 4
       }
     },
     "175615001": {
       "concepts": {
         "init": 15,
-        "val": 14,
-        "ann": 5
+        "val": 15,
+        "ann": 15
       },
       "preds": {
         "init": 15,
-        "val": 9,
-        "ann": 12
+        "val": 14,
+        "ann": 11
       }
     },
     "377949002": {
       "concepts": {
         "init": 13,
-        "val": 0,
+        "val": 13,
         "ann": 2
       },
       "preds": {
         "init": 11,
-        "val": 0,
-        "ann": 3
+        "val": 11,
+        "ann": 2
       }
     },
     "318284007": {
       "concepts": {
         "init": 13,
-        "val": 5,
-        "ann": 5
+        "val": 13,
+        "ann": 9
       },
       "preds": {
         "init": 10,
-        "val": 3,
+        "val": 10,
         "ann": 6
       }
     },
     "154520018": {
       "concepts": {
         "init": 9,
-        "val": 4,
-        "ann": 4
+        "val": 9,
+        "ann": 5
       },
       "preds": {
         "init": 11,
-        "val": 2,
+        "val": 11,
         "ann": 5
       }
     },
     "207108000": {
       "concepts": {
         "init": 11,
-        "val": 0,
+        "val": 11,
         "ann": 11
       },
       "preds": {
         "init": 14,
-        "val": 0,
+        "val": 14,
         "ann": 6
       }
     },
@@ -532,119 +532,119 @@
       "concepts": {
         "init": 11,
         "val": 11,
-        "ann": 5
+        "ann": 11
       },
       "preds": {
         "init": 14,
-        "val": 7,
+        "val": 14,
         "ann": 10
       }
     },
     "159223001": {
       "concepts": {
         "init": 9,
-        "val": 4,
-        "ann": 4
+        "val": 9,
+        "ann": 8
       },
       "preds": {
-        "init": 10,
-        "val": 2,
+        "init": 9,
+        "val": 9,
         "ann": 5
       }
     },
     "420916000": {
       "concepts": {
         "init": 10,
-        "val": 12,
-        "ann": 4
+        "val": 9,
+        "ann": 13
       },
       "preds": {
         "init": 10,
-        "val": 10,
-        "ann": 13
+        "val": 9,
+        "ann": 11
       }
     },
     "433204004": {
       "concepts": {
         "init": 11,
         "val": 11,
-        "ann": 6
+        "ann": 14
       },
       "preds": {
         "init": 13,
-        "val": 7,
+        "val": 13,
         "ann": 10
       }
     },
     "563775002": {
       "concepts": {
         "init": 11,
-        "val": 2,
-        "ann": 3
+        "val": 12,
+        "ann": 4
       },
       "preds": {
         "init": 10,
-        "val": 1,
+        "val": 10,
         "ann": 4
       }
     },
     "399744001": {
       "concepts": {
         "init": 9,
-        "val": 8,
-        "ann": 6
+        "val": 9,
+        "ann": 13
       },
       "preds": {
         "init": 15,
-        "val": 6,
-        "ann": 15
+        "val": 15,
+        "ann": 12
       }
     },
     "216520003": {
       "concepts": {
         "init": 13,
-        "val": 0,
+        "val": 13,
         "ann": 6
       },
       "preds": {
         "init": 14,
-        "val": 0,
+        "val": 14,
         "ann": 3
       }
     },
     "50100017": {
       "concepts": {
         "init": 9,
-        "val": 3,
-        "ann": 3
+        "val": 9,
+        "ann": 5
       },
       "preds": {
         "init": 12,
-        "val": 2,
-        "ann": 5
+        "val": 12,
+        "ann": 4
       }
     },
     "17869002": {
       "concepts": {
         "init": 9,
-        "val": 0,
-        "ann": 4
+        "val": 9,
+        "ann": 5
       },
       "preds": {
         "init": 11,
-        "val": 0,
+        "val": 11,
         "ann": 3
       }
     },
     "50926004": {
       "concepts": {
         "init": 11,
-        "val": 2,
-        "ann": 6
+        "val": 11,
+        "ann": 7
       },
       "preds": {
         "init": 13,
-        "val": 2,
+        "val": 13,
         "ann": 5
       }
     },
@@ -652,103 +652,103 @@
       "concepts": {
         "init": 12,
         "val": 13,
-        "ann": 4
+        "ann": 13
       },
       "preds": {
         "init": 13,
-        "val": 9,
-        "ann": 12
+        "val": 12,
+        "ann": 11
       }
     },
     "526394000": {
       "concepts": {
         "init": 7,
-        "val": 9,
-        "ann": 4
+        "val": 7,
+        "ann": 8
       },
       "preds": {
         "init": 10,
-        "val": 6,
-        "ann": 9
+        "val": 8,
+        "ann": 7
       }
     },
     "224757004": {
       "concepts": {
         "init": 10,
-        "val": 0,
-        "ann": 7
+        "val": 10,
+        "ann": 9
       },
       "preds": {
         "init": 15,
-        "val": 0,
+        "val": 15,
         "ann": 6
       }
     },
     "2613006": {
       "concepts": {
         "init": 10,
-        "val": 12,
-        "ann": 3
+        "val": 10,
+        "ann": 12
       },
       "preds": {
         "init": 11,
-        "val": 11,
-        "ann": 14
+        "val": 10,
+        "ann": 12
       }
     },
     "161231000": {
       "concepts": {
         "init": 11,
-        "val": 5,
-        "ann": 4
+        "val": 11,
+        "ann": 9
       },
       "preds": {
-        "init": 14,
-        "val": 5,
-        "ann": 8
+        "init": 13,
+        "val": 13,
+        "ann": 7
       }
     },
     "147179001": {
       "concepts": {
         "init": 11,
-        "val": 2,
-        "ann": 7
+        "val": 11,
+        "ann": 9
       },
       "preds": {
         "init": 14,
-        "val": 1,
+        "val": 14,
         "ann": 7
       }
     },
     "157063001": {
       "concepts": {
         "init": 13,
-        "val": 7,
-        "ann": 5
+        "val": 13,
+        "ann": 8
       },
       "preds": {
         "init": 15,
-        "val": 5,
-        "ann": 8
+        "val": 15,
+        "ann": 6
       }
     },
     "404263008": {
       "concepts": {
         "init": 11,
-        "val": 6,
-        "ann": 6
+        "val": 11,
+        "ann": 12
       },
       "preds": {
-        "init": 12,
-        "val": 5,
-        "ann": 11
+        "init": 11,
+        "val": 11,
+        "ann": 10
       }
     },
     "30413000": {
       "concepts": {
         "init": 11,
         "val": 11,
-        "ann": 6
+        "ann": 16
       },
       "preds": {
         "init": 10,
@@ -759,158 +759,158 @@
     "430788008": {
       "concepts": {
         "init": 13,
-        "val": 10,
-        "ann": 6
+        "val": 13,
+        "ann": 12
       },
       "preds": {
         "init": 13,
-        "val": 8,
-        "ann": 11
+        "val": 13,
+        "ann": 10
       }
     },
     "471893002": {
       "concepts": {
         "init": 10,
-        "val": 2,
-        "ann": 6
+        "val": 10,
+        "ann": 7
       },
       "preds": {
-        "init": 10,
-        "val": 1,
+        "init": 9,
+        "val": 9,
         "ann": 7
       }
     },
     "522727001": {
       "concepts": {
         "init": 11,
-        "val": 9,
-        "ann": 5
+        "val": 11,
+        "ann": 12
       },
       "preds": {
         "init": 10,
-        "val": 6,
+        "val": 10,
         "ann": 9
       }
     },
     "473299002": {
       "concepts": {
         "init": 8,
-        "val": 10,
-        "ann": 4
+        "val": 8,
+        "ann": 11
       },
       "preds": {
-        "init": 10,
-        "val": 10,
-        "ann": 13
+        "init": 8,
+        "val": 8,
+        "ann": 11
       }
     },
     "88682001": {
       "concepts": {
         "init": 7,
-        "val": 6,
-        "ann": 5
+        "val": 7,
+        "ann": 11
       },
       "preds": {
         "init": 12,
-        "val": 7,
+        "val": 12,
         "ann": 10
       }
     },
     "549448003": {
       "concepts": {
         "init": 8,
-        "val": 7,
-        "ann": 5
+        "val": 8,
+        "ann": 9
       },
       "preds": {
         "init": 12,
-        "val": 5,
+        "val": 12,
         "ann": 8
       }
     },
     "333538005": {
       "concepts": {
         "init": 16,
-        "val": 4,
-        "ann": 5
+        "val": 16,
+        "ann": 7
       },
       "preds": {
         "init": 14,
-        "val": 2,
+        "val": 14,
         "ann": 6
       }
     },
     "415798004": {
       "concepts": {
         "init": 9,
-        "val": 3,
-        "ann": 7
+        "val": 9,
+        "ann": 8
       },
       "preds": {
         "init": 11,
-        "val": 2,
-        "ann": 8
+        "val": 11,
+        "ann": 7
       }
     },
     "579060002": {
       "concepts": {
         "init": 9,
-        "val": 0,
+        "val": 9,
         "ann": 6
       },
       "preds": {
         "init": 10,
-        "val": 0,
+        "val": 10,
         "ann": 3
       }
     },
     "372413001": {
       "concepts": {
         "init": 14,
-        "val": 6,
-        "ann": 5
+        "val": 14,
+        "ann": 9
       },
       "preds": {
         "init": 13,
-        "val": 4,
+        "val": 13,
         "ann": 7
       }
     },
     "570381003": {
       "concepts": {
         "init": 11,
-        "val": 9,
-        "ann": 4
+        "val": 11,
+        "ann": 12
       },
       "preds": {
         "init": 14,
-        "val": 6,
-        "ann": 12
+        "val": 14,
+        "ann": 8
       }
     },
     "305876000": {
       "concepts": {
         "init": 9,
         "val": 9,
-        "ann": 5
+        "ann": 11
       },
       "preds": {
-        "init": 13,
-        "val": 8,
-        "ann": 11
+        "init": 11,
+        "val": 10,
+        "ann": 9
       }
     }
   },
   "summary": {
     "concepts": {
       "init": 813,
-      "val": 464,
-      "ann": 425
+      "val": 817,
+      "ann": 771
     },
     "preds": {
-      "init": 925,
-      "val": 367,
-      "ann": 673
+      "init": 909,
+      "val": 901,
+      "ann": 628
     }
   }
 }

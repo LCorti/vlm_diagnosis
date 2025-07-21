@@ -8,6 +8,7 @@ if module_path not in sys.path:
 
 from config_handlers.sk_handler import SKHandler
 from utils.data_io import load_json, load_jsonl, save_json, save_jsonl
+from utils.graph_utils import sk_to_nx
 
 
 def parse_validation_data(val_data: list[dict]) -> dict:
@@ -165,7 +166,11 @@ def get_relation_id(relation_label: str, sgg_dict: dict) -> int | str:
 
 
 def resolve_val_data(
-    sg_data: dict, parsed_crowd_val: dict, sgg_dict: dict, question: dict
+    sg_data: dict,
+    parsed_crowd_val: dict,
+    sgg_dict: dict,
+    question: dict,
+    graphs_dict: dict,
 ) -> tuple[dict, dict]:
     res_val_entry = {
         "question_id": question["question_id"],
@@ -173,33 +178,23 @@ def resolve_val_data(
         "img_path": question["img_path"],
         "relations": [],
     }
-    stats = {
-        "concepts": {"init": 0, "val": 0},
-        "preds": {"init": 0, "val": 0},
-    }
-    concept_ids_init = set()
-    concept_ids_val = set()
-    print(
-        f"Checking q. {res_val_entry['question_id']} and image {res_val_entry['img']}"
-    )
-    # print(
-    #     f"Looking for {res_val_entry['img']} among : {[sg['img_id'] for sg in sg_data]}"
-    # )
+
+    print(f"Check q. {res_val_entry['question_id']}; img {res_val_entry['img']}")
     rels_to_check = next(
         sg["rel_clusters_unique"]
         for sg in sg_data
         if sg["img_id"] == res_val_entry["img"]
     )
+    # Update graphs_dict with initial data
+    graphs_dict[res_val_entry["question_id"]] = {"init": sk_to_nx(rels_to_check)}
     # Add +1 to match with ids from DB. Only added for this purpose.
     question_key = int(res_val_entry["question_id"]) + 1
-    # print(f"Looking for {question_key} in {parsed_crowd_val.keys()}")
     all_crowd_val = list(parsed_crowd_val[question_key].values())
 
     for rel in rels_to_check:
         from_concept = rel["from_concept"]["bb_label"]["bb_label_text"]
         relationship = rel["rel_label"]["rel_label_text"]
         to_concept = rel["to_concept"]["bb_label"]["bb_label_text"]
-        concept_ids_init.update([from_concept, to_concept])
         # Retrieve corresponding annotation
         # print(f"Searching for: {from_concept} - {relationship} - {to_concept}")
         crowd_rel = next(
@@ -267,23 +262,18 @@ def resolve_val_data(
 
             # Add to list of resolved relations
             res_val_entry["relations"].append(rel)
-            concept_ids_val.update([from_concept_idx, to_concept_idx])
         else:
             print("-- Relationship marked as irrelevant.")
 
-    # Update stats
-    stats["concepts"]["init"] = len(concept_ids_init)
-    stats["concepts"]["val"] = len(concept_ids_val)
-    stats["preds"]["init"] = len(rels_to_check)
-    stats["preds"]["val"] = len(res_val_entry["relations"])
-    return res_val_entry, stats
+    # Update graphs_dict with validation data
+    graphs_dict[res_val_entry["question_id"]]["val"] = sk_to_nx(rels_to_check)
+    return res_val_entry, graphs_dict
 
 
 def resolve_ann_data(
-    val_entry: dict, parsed_crowd_ann: dict, sgg_dict: dict, stats: dict
+    val_entry: dict, parsed_crowd_ann: dict, sgg_dict: dict, graphs_dict: dict
 ) -> tuple[dict, dict]:
     res_ann_entry = val_entry
-    concept_ids = set()
     # Add new relationships
     question_key = int(res_ann_entry["question_id"]) + 1
     all_crowd_ann = [elem["crowd"] for elem in parsed_crowd_ann[question_key].values()]
@@ -324,12 +314,12 @@ def resolve_ann_data(
         relationship_idx = crowd_ann["rel_label"]["rel_label_idx"]
         crowd_ann["rel_id"] = f"{from_concept_idx}-{relationship_idx}-{to_concept_idx}"
         res_ann_entry["relations"].append(crowd_ann)
-        concept_ids.update([from_concept_idx, to_concept_idx])
 
-    # Update stats by adding a new key
-    stats["concepts"]["ann"] = len(concept_ids)
-    stats["preds"]["ann"] = len(res_ann_entry["relations"])
-    return res_ann_entry, stats
+    # Update graphs_dict with annotation data
+    graphs_dict[res_ann_entry["question_id"]]["ann"] = sk_to_nx(
+        res_ann_entry["relations"]
+    )
+    return res_ann_entry, graphs_dict
 
 
 def resolve_crowd_data(
@@ -338,33 +328,73 @@ def resolve_crowd_data(
     parsed_crowd_ann: dict,
     sgg_dict: dict,
     ds_questions: list[dict],
-    stats: dict,
 ) -> tuple[dict, dict]:
     resolved_data = []
+    graphs_dict = {}
     for question in ds_questions:
         # Resolve validation data
-        resolved_val_entry, curr_stats = resolve_val_data(
-            sg_data, parsed_crowd_val, sgg_dict, question
+        resolved_val_entry, graphs_dict = resolve_val_data(
+            sg_data, parsed_crowd_val, sgg_dict, question, graphs_dict
         )
         # print(resolved_val_entry)
         # Resolve annotation data
-        resolved_ann_entry, curr_stats = resolve_ann_data(
-            resolved_val_entry, parsed_crowd_ann, sgg_dict, curr_stats
+        resolved_ann_entry, graphs_dict = resolve_ann_data(
+            resolved_val_entry, parsed_crowd_ann, sgg_dict, graphs_dict
         )
         resolved_data.append(resolved_ann_entry)
-        stats[question["question_id"]] = curr_stats
-        # Return the data annotation data has been merged
-    return resolved_data, stats
+    return resolved_data, graphs_dict
+
+
+def compute_stats(graphs_dict: dict) -> dict:
+    stats = {
+        "samples": {},
+        "summary": {
+            "concepts": {"init": 0, "val": 0, "ann": 0},
+            "preds": {"init": 0, "val": 0, "ann": 0},
+        },
+    }
+
+    for sample_idx in graphs_dict:
+        # Sample-level stats
+        stats["samples"][sample_idx] = {
+            "concepts": {
+                "init": graphs_dict[sample_idx]["init"].number_of_nodes(),
+                "val": graphs_dict[sample_idx]["val"].number_of_nodes(),
+                "ann": graphs_dict[sample_idx]["ann"].number_of_nodes(),
+            },
+            "preds": {
+                "init": graphs_dict[sample_idx]["init"].number_of_edges(),
+                "val": graphs_dict[sample_idx]["val"].number_of_edges(),
+                "ann": graphs_dict[sample_idx]["ann"].number_of_edges(),
+            },
+        }
+
+        # Update summary
+        stats["summary"]["concepts"]["init"] += stats["samples"][sample_idx][
+            "concepts"
+        ]["init"]
+        stats["summary"]["concepts"]["val"] += stats["samples"][sample_idx]["concepts"][
+            "val"
+        ]
+        stats["summary"]["concepts"]["ann"] += stats["samples"][sample_idx]["concepts"][
+            "ann"
+        ]
+        stats["summary"]["preds"]["init"] += stats["samples"][sample_idx]["preds"][
+            "init"
+        ]
+        stats["summary"]["preds"]["val"] += stats["samples"][sample_idx]["preds"]["val"]
+        stats["summary"]["preds"]["ann"] += stats["samples"][sample_idx]["preds"]["ann"]
+
+    return stats
 
 
 if __name__ == "__main__":
     # Load SK config
     sk_hdl = SKHandler()
     ds_list = sk_hdl.get_ds_list()
-    if "vqav2_holdout" in ds_list:
-        ds_list.remove("vqav2_holdout")
     # Load SGG dict to match concept and relation labels
     sgg_dict = load_json(Path("..", "data", "common", "sgg_dicts.json"))
+    graphs_dict = {}
     stats = {}
 
     for dataset in ds_list:
@@ -374,6 +404,8 @@ if __name__ == "__main__":
         q_path = Path("..", "data", "datasets", dataset, "q_crowd.json")
         ds_questions = load_json(q_path)
         # Add entry for statistics
+        if dataset not in graphs_dict:
+            graphs_dict[dataset] = {}
         if dataset not in stats:
             stats[dataset] = {}
 
@@ -381,11 +413,8 @@ if __name__ == "__main__":
             print(f"- Looking at {ds_class}")
             sk_hdl.set_curr_class(ds_class)
             # Add entry for statistics
-            if ds_class not in stats[dataset]:
-                stats[dataset][ds_class] = {
-                    "samples": {},
-                    "summary": {"concepts": {}, "preds": {}},
-                }
+            if ds_class not in graphs_dict[dataset]:
+                graphs_dict[dataset][ds_class] = {}
 
             # Load scene graphs showed to crowd workers for a given class
             crowd_sg = load_jsonl(Path("..", sk_hdl.get_sg_crowd_path()))
@@ -403,60 +432,23 @@ if __name__ == "__main__":
 
             # Filter dataset questions for the given class
             qs_to_use = [q for q in ds_questions if q["class"] == ds_class]
-            sg_final, stats[dataset][ds_class]["samples"] = resolve_crowd_data(
+            # dict with final SKs + dict with nx graphs at different steps
+            sk_final, graphs_dict[dataset][ds_class] = resolve_crowd_data(
                 crowd_sg,
                 parsed_crowd_val,
                 parsed_crowd_ann,
                 sgg_dict,
                 qs_to_use,
-                stats[dataset][ds_class]["samples"],
             )
 
-            #  Update summary
-            for entry in stats[dataset][ds_class]["samples"].values():
-                # Concepts
-                if "init" not in stats[dataset][ds_class]["summary"]["concepts"]:
-                    stats[dataset][ds_class]["summary"]["concepts"]["init"] = 0
-                stats[dataset][ds_class]["summary"]["concepts"]["init"] += entry[
-                    "concepts"
-                ]["init"]
-
-                if "val" not in stats[dataset][ds_class]["summary"]["concepts"]:
-                    stats[dataset][ds_class]["summary"]["concepts"]["val"] = 0
-                stats[dataset][ds_class]["summary"]["concepts"]["val"] += entry[
-                    "concepts"
-                ]["val"]
-
-                if "ann" not in stats[dataset][ds_class]["summary"]["concepts"]:
-                    stats[dataset][ds_class]["summary"]["concepts"]["ann"] = 0
-                stats[dataset][ds_class]["summary"]["concepts"]["ann"] += entry[
-                    "concepts"
-                ]["ann"]
-
-                # Preds
-                if "init" not in stats[dataset][ds_class]["summary"]["preds"]:
-                    stats[dataset][ds_class]["summary"]["preds"]["init"] = 0
-                stats[dataset][ds_class]["summary"]["preds"]["init"] += entry["preds"][
-                    "init"
-                ]
-
-                if "val" not in stats[dataset][ds_class]["summary"]["preds"]:
-                    stats[dataset][ds_class]["summary"]["preds"]["val"] = 0
-                stats[dataset][ds_class]["summary"]["preds"]["val"] += entry["preds"][
-                    "val"
-                ]
-
-                if "ann" not in stats[dataset][ds_class]["summary"]["preds"]:
-                    stats[dataset][ds_class]["summary"]["preds"]["ann"] = 0
-                stats[dataset][ds_class]["summary"]["preds"]["ann"] += entry["preds"][
-                    "ann"
-                ]
+            # Compute stats
+            stats[dataset][ds_class] = compute_stats(graphs_dict[dataset][ds_class])
 
             # Save to disk
             print("... Saving reconciled data to file...")
-            sg_final_file = sk_hdl.get_sk_final_path()
-            save_jsonl(sg_final, Path("..", sg_final_file))
+            sk_final_file = sk_hdl.get_sk_final_path()
+            save_jsonl(sk_final, Path("..", sk_final_file))
             print("... Saving stats to file...")
-            stats_file = Path("..", sg_final_file.parent, "stats.json")
+            stats_file = Path("..", sk_final_file.parent, "stats.json")
             save_json(stats[dataset][ds_class], stats_file)
             print("Saved.")

@@ -4,235 +4,235 @@
       "concepts": {
         "init": 4,
         "val": 4,
-        "ann": 1
+        "ann": 10
       },
       "preds": {
-        "init": 7,
+        "init": 6,
         "val": 6,
-        "ann": 9
+        "ann": 8
       }
     },
     "1": {
       "concepts": {
         "init": 4,
         "val": 5,
-        "ann": 6
+        "ann": 9
       },
       "preds": {
-        "init": 7,
+        "init": 6,
         "val": 6,
-        "ann": 11
+        "ann": 10
       }
     },
     "2": {
       "concepts": {
         "init": 5,
         "val": 5,
-        "ann": 3
+        "ann": 7
       },
       "preds": {
-        "init": 7,
-        "val": 7,
-        "ann": 10
+        "init": 6,
+        "val": 6,
+        "ann": 8
       }
     },
     "3": {
       "concepts": {
         "init": 5,
-        "val": 2,
-        "ann": 5
-      },
-      "preds": {
-        "init": 7,
         "val": 5,
         "ann": 8
+      },
+      "preds": {
+        "init": 6,
+        "val": 6,
+        "ann": 7
       }
     },
     "4": {
       "concepts": {
         "init": 5,
         "val": 4,
-        "ann": 2
+        "ann": 7
       },
       "preds": {
-        "init": 7,
-        "val": 7,
-        "ann": 10
+        "init": 6,
+        "val": 4,
+        "ann": 6
       }
     },
     "5": {
       "concepts": {
         "init": 4,
-        "val": 0,
-        "ann": 3
+        "val": 4,
+        "ann": 6
       },
       "preds": {
-        "init": 7,
-        "val": 7,
-        "ann": 10
+        "init": 4,
+        "val": 4,
+        "ann": 7
       }
     },
     "6": {
       "concepts": {
         "init": 4,
-        "val": 0,
-        "ann": 4
+        "val": 4,
+        "ann": 9
       },
       "preds": {
-        "init": 7,
-        "val": 7,
-        "ann": 11
+        "init": 4,
+        "val": 4,
+        "ann": 8
       }
     },
     "7": {
       "concepts": {
         "init": 4,
-        "val": 0,
-        "ann": 4
+        "val": 4,
+        "ann": 9
       },
       "preds": {
-        "init": 7,
-        "val": 7,
-        "ann": 10
+        "init": 4,
+        "val": 4,
+        "ann": 7
       }
     },
     "8": {
       "concepts": {
         "init": 7,
-        "val": 5,
-        "ann": 5
+        "val": 6,
+        "ann": 8
       },
       "preds": {
         "init": 6,
-        "val": 3,
+        "val": 5,
         "ann": 7
       }
     },
     "9": {
       "concepts": {
         "init": 6,
-        "val": 0,
+        "val": 6,
         "ann": 6
       },
       "preds": {
-        "init": 6,
-        "val": 0,
+        "init": 5,
+        "val": 5,
         "ann": 3
       }
     },
     "10": {
       "concepts": {
         "init": 6,
-        "val": 8,
-        "ann": 6
+        "val": 6,
+        "ann": 10
       },
       "preds": {
-        "init": 6,
-        "val": 6,
-        "ann": 9
+        "init": 5,
+        "val": 5,
+        "ann": 8
       }
     },
     "11": {
       "concepts": {
         "init": 11,
-        "val": 7,
-        "ann": 2
+        "val": 14,
+        "ann": 12
       },
       "preds": {
-        "init": 18,
-        "val": 6,
+        "init": 17,
+        "val": 18,
         "ann": 9
       }
     },
     "12": {
       "concepts": {
         "init": 14,
-        "val": 0,
-        "ann": 1
+        "val": 14,
+        "ann": 11
       },
       "preds": {
         "init": 18,
-        "val": 4,
+        "val": 18,
         "ann": 7
       }
     },
     "13": {
       "concepts": {
         "init": 14,
-        "val": 2,
-        "ann": 4
+        "val": 14,
+        "ann": 14
       },
       "preds": {
         "init": 18,
-        "val": 5,
+        "val": 18,
         "ann": 9
       }
     },
     "14": {
       "concepts": {
         "init": 9,
-        "val": 2,
-        "ann": 6
+        "val": 9,
+        "ann": 7
       },
       "preds": {
-        "init": 12,
-        "val": 1,
+        "init": 11,
+        "val": 11,
         "ann": 4
       }
     },
     "15": {
       "concepts": {
         "init": 9,
-        "val": 2,
+        "val": 9,
         "ann": 4
       },
       "preds": {
-        "init": 12,
-        "val": 1,
-        "ann": 4
+        "init": 11,
+        "val": 11,
+        "ann": 3
       }
     },
     "16": {
       "concepts": {
         "init": 9,
-        "val": 11,
-        "ann": 4
+        "val": 9,
+        "ann": 10
       },
       "preds": {
         "init": 12,
-        "val": 12,
-        "ann": 15
+        "val": 11,
+        "ann": 13
       }
     },
     "17": {
       "concepts": {
         "init": 9,
-        "val": 0,
-        "ann": 5
+        "val": 9,
+        "ann": 10
       },
       "preds": {
-        "init": 12,
-        "val": 4,
+        "init": 11,
+        "val": 11,
         "ann": 7
       }
     },
     "18": {
       "concepts": {
         "init": 9,
-        "val": 0,
-        "ann": 5
+        "val": 9,
+        "ann": 10
       },
       "preds": {
-        "init": 12,
-        "val": 4,
+        "init": 11,
+        "val": 11,
         "ann": 7
       }
     },
     "19": {
       "concepts": {
         "init": 4,
-        "val": 7,
-        "ann": 3
+        "val": 6,
+        "ann": 9
       },
       "preds": {
         "init": 5,
@@ -243,36 +243,36 @@
     "20": {
       "concepts": {
         "init": 6,
-        "val": 0,
-        "ann": 1
+        "val": 6,
+        "ann": 9
       },
       "preds": {
         "init": 5,
-        "val": 2,
+        "val": 5,
         "ann": 5
       }
     },
     "21": {
       "concepts": {
         "init": 5,
-        "val": 0,
+        "val": 5,
         "ann": 4
       },
       "preds": {
-        "init": 5,
-        "val": 0,
+        "init": 4,
+        "val": 4,
         "ann": 3
       }
     },
     "22": {
       "concepts": {
         "init": 5,
-        "val": 0,
+        "val": 5,
         "ann": 4
       },
       "preds": {
-        "init": 5,
-        "val": 0,
+        "init": 4,
+        "val": 4,
         "ann": 3
       }
     },
@@ -280,7 +280,7 @@
       "concepts": {
         "init": 2,
         "val": 2,
-        "ann": 6
+        "ann": 8
       },
       "preds": {
         "init": 3,
@@ -292,31 +292,31 @@
       "concepts": {
         "init": 2,
         "val": 2,
-        "ann": 5
+        "ann": 6
       },
       "preds": {
         "init": 3,
-        "val": 2,
+        "val": 3,
         "ann": 5
       }
     },
     "25": {
       "concepts": {
         "init": 16,
-        "val": 20,
-        "ann": 6
+        "val": 18,
+        "ann": 21
       },
       "preds": {
         "init": 19,
-        "val": 18,
+        "val": 19,
         "ann": 21
       }
     },
     "26": {
       "concepts": {
         "init": 18,
-        "val": 16,
-        "ann": 6
+        "val": 18,
+        "ann": 22
       },
       "preds": {
         "init": 19,
@@ -327,32 +327,32 @@
     "27": {
       "concepts": {
         "init": 8,
-        "val": 3,
+        "val": 8,
         "ann": 5
       },
       "preds": {
         "init": 8,
-        "val": 2,
+        "val": 8,
         "ann": 5
       }
     },
     "28": {
       "concepts": {
         "init": 8,
-        "val": 3,
-        "ann": 5
+        "val": 8,
+        "ann": 8
       },
       "preds": {
         "init": 8,
-        "val": 2,
+        "val": 8,
         "ann": 5
       }
     },
     "29": {
       "concepts": {
         "init": 8,
-        "val": 9,
-        "ann": 2
+        "val": 8,
+        "ann": 16
       },
       "preds": {
         "init": 8,
@@ -363,12 +363,12 @@
     "30": {
       "concepts": {
         "init": 8,
-        "val": 2,
-        "ann": 9
+        "val": 8,
+        "ann": 11
       },
       "preds": {
         "init": 8,
-        "val": 2,
+        "val": 8,
         "ann": 10
       }
     },
@@ -376,19 +376,19 @@
       "concepts": {
         "init": 8,
         "val": 11,
-        "ann": 6
+        "ann": 15
       },
       "preds": {
         "init": 8,
         "val": 7,
-        "ann": 10
+        "ann": 9
       }
     },
     "32": {
       "concepts": {
         "init": 11,
         "val": 11,
-        "ann": 6
+        "ann": 17
       },
       "preds": {
         "init": 13,
@@ -399,168 +399,168 @@
     "33": {
       "concepts": {
         "init": 11,
-        "val": 0,
+        "val": 11,
         "ann": 6
       },
       "preds": {
         "init": 13,
-        "val": 0,
+        "val": 13,
         "ann": 3
       }
     },
     "34": {
       "concepts": {
         "init": 9,
-        "val": 3,
-        "ann": 4
+        "val": 9,
+        "ann": 7
       },
       "preds": {
-        "init": 12,
-        "val": 4,
-        "ann": 7
+        "init": 10,
+        "val": 10,
+        "ann": 5
       }
     },
     "35": {
       "concepts": {
         "init": 8,
-        "val": 4,
-        "ann": 5
+        "val": 11,
+        "ann": 7
       },
       "preds": {
-        "init": 9,
-        "val": 2,
+        "init": 8,
+        "val": 9,
         "ann": 5
       }
     },
     "36": {
       "concepts": {
         "init": 17,
-        "val": 10,
-        "ann": 6
+        "val": 19,
+        "ann": 15
       },
       "preds": {
-        "init": 18,
-        "val": 8,
+        "init": 17,
+        "val": 17,
         "ann": 11
       }
     },
     "37": {
       "concepts": {
         "init": 19,
-        "val": 7,
-        "ann": 4
+        "val": 19,
+        "ann": 13
       },
       "preds": {
-        "init": 18,
-        "val": 8,
+        "init": 17,
+        "val": 17,
         "ann": 11
       }
     },
     "38": {
       "concepts": {
         "init": 19,
-        "val": 2,
-        "ann": 13
+        "val": 19,
+        "ann": 18
       },
       "preds": {
-        "init": 18,
-        "val": 3,
-        "ann": 15
+        "init": 17,
+        "val": 17,
+        "ann": 14
       }
     },
     "39": {
       "concepts": {
         "init": 12,
-        "val": 10,
-        "ann": 5
+        "val": 21,
+        "ann": 27
       },
       "preds": {
-        "init": 17,
-        "val": 12,
+        "init": 16,
+        "val": 17,
         "ann": 21
       }
     },
     "40": {
       "concepts": {
         "init": 21,
-        "val": 0,
-        "ann": 5
+        "val": 21,
+        "ann": 20
       },
       "preds": {
         "init": 17,
-        "val": 12,
+        "val": 17,
         "ann": 15
       }
     },
     "41": {
       "concepts": {
         "init": 7,
-        "val": 8,
-        "ann": 4
+        "val": 9,
+        "ann": 11
       },
       "preds": {
         "init": 7,
-        "val": 6,
+        "val": 7,
         "ann": 9
       }
     },
     "42": {
       "concepts": {
         "init": 9,
-        "val": 0,
-        "ann": 5
+        "val": 9,
+        "ann": 12
       },
       "preds": {
         "init": 7,
-        "val": 5,
+        "val": 7,
         "ann": 9
       }
     },
     "43": {
       "concepts": {
         "init": 9,
-        "val": 0,
-        "ann": 1
+        "val": 9,
+        "ann": 6
       },
       "preds": {
         "init": 19,
-        "val": 0,
+        "val": 19,
         "ann": 3
       }
     },
     "44": {
       "concepts": {
         "init": 9,
-        "val": 16,
-        "ann": 6
+        "val": 10,
+        "ann": 14
       },
       "preds": {
         "init": 19,
-        "val": 17,
+        "val": 19,
         "ann": 20
       }
     },
     "45": {
       "concepts": {
         "init": 3,
-        "val": 8,
-        "ann": 6
+        "val": 5,
+        "ann": 8
       },
       "preds": {
-        "init": 9,
+        "init": 7,
         "val": 8,
-        "ann": 11
+        "ann": 10
       }
     },
     "46": {
       "concepts": {
         "init": 5,
-        "val": 5,
-        "ann": 4
+        "val": 8,
+        "ann": 15
       },
       "preds": {
-        "init": 9,
-        "val": 6,
+        "init": 8,
+        "val": 9,
         "ann": 11
       }
     },
@@ -568,10 +568,10 @@
       "concepts": {
         "init": 1,
         "val": 1,
-        "ann": 1
+        "ann": 7
       },
       "preds": {
-        "init": 5,
+        "init": 1,
         "val": 1,
         "ann": 4
       }
@@ -580,35 +580,35 @@
       "concepts": {
         "init": 1,
         "val": 2,
-        "ann": 6
+        "ann": 13
       },
       "preds": {
-        "init": 5,
-        "val": 1,
+        "init": 1,
+        "val": 2,
         "ann": 8
       }
     },
     "49": {
       "concepts": {
         "init": 15,
-        "val": 0,
+        "val": 15,
         "ann": 6
       },
       "preds": {
-        "init": 17,
-        "val": 0,
+        "init": 15,
+        "val": 15,
         "ann": 3
       }
     },
     "50": {
       "concepts": {
         "init": 15,
-        "val": 0,
-        "ann": 1
+        "val": 15,
+        "ann": 5
       },
       "preds": {
-        "init": 17,
-        "val": 0,
+        "init": 15,
+        "val": 15,
         "ann": 3
       }
     },
@@ -616,71 +616,71 @@
       "concepts": {
         "init": 15,
         "val": 15,
-        "ann": 5
+        "ann": 19
       },
       "preds": {
-        "init": 16,
-        "val": 16,
-        "ann": 19
+        "init": 15,
+        "val": 15,
+        "ann": 18
       }
     },
     "52": {
       "concepts": {
         "init": 15,
-        "val": 8,
-        "ann": 10
+        "val": 15,
+        "ann": 15
       },
       "preds": {
-        "init": 16,
-        "val": 5,
+        "init": 15,
+        "val": 14,
         "ann": 13
       }
     },
     "53": {
       "concepts": {
         "init": 15,
-        "val": 0,
-        "ann": 5
+        "val": 15,
+        "ann": 10
       },
       "preds": {
-        "init": 16,
-        "val": 3,
+        "init": 14,
+        "val": 14,
         "ann": 6
       }
     },
     "54": {
       "concepts": {
         "init": 9,
-        "val": 6,
-        "ann": 5
+        "val": 9,
+        "ann": 10
       },
       "preds": {
         "init": 7,
-        "val": 3,
+        "val": 7,
         "ann": 6
       }
     },
     "55": {
       "concepts": {
         "init": 9,
-        "val": 6,
-        "ann": 5
+        "val": 10,
+        "ann": 12
       },
       "preds": {
         "init": 7,
-        "val": 6,
+        "val": 7,
         "ann": 9
       }
     },
     "56": {
       "concepts": {
         "init": 10,
-        "val": 0,
-        "ann": 10
+        "val": 10,
+        "ann": 16
       },
       "preds": {
         "init": 7,
-        "val": 4,
+        "val": 7,
         "ann": 12
       }
     },
@@ -688,19 +688,7 @@
       "concepts": {
         "init": 5,
         "val": 5,
-        "ann": 5
-      },
-      "preds": {
-        "init": 4,
-        "val": 3,
-        "ann": 7
-      }
-    },
-    "58": {
-      "concepts": {
-        "init": 5,
-        "val": 5,
-        "ann": 5
+        "ann": 8
       },
       "preds": {
         "init": 4,
@@ -708,11 +696,23 @@
         "ann": 7
       }
     },
+    "58": {
+      "concepts": {
+        "init": 5,
+        "val": 5,
+        "ann": 7
+      },
+      "preds": {
+        "init": 4,
+        "val": 4,
+        "ann": 6
+      }
+    },
     "59": {
       "concepts": {
         "init": 5,
         "val": 5,
-        "ann": 2
+        "ann": 11
       },
       "preds": {
         "init": 4,
@@ -724,13 +724,13 @@
   "summary": {
     "concepts": {
       "init": 525,
-      "val": 269,
-      "ann": 284
+      "val": 558,
+      "ann": 640
     },
     "preds": {
-      "init": 622,
-      "val": 322,
-      "ann": 546
+      "init": 573,
+      "val": 573,
+      "ann": 517
     }
   }
 }
