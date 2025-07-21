@@ -95,9 +95,9 @@ def sk_to_nx(raw_sk_rels: dict) -> DiGraph:
     # Prepare raw_sk_rels before making nx graph
     sk_list = [
         {
-            "from_concept": sk["from_concept"]["bb_label"]["bb_label_full"],
+            "from_concept": sk["from_concept"]["bb_label"]["bb_label_text"],
             "relationship": sk["rel_label"]["rel_label_text"],
-            "to_concept": sk["to_concept"]["bb_label"]["bb_label_full"],
+            "to_concept": sk["to_concept"]["bb_label"]["bb_label_text"],
         }
         for sk in raw_sk_rels
     ]
