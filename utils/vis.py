@@ -11,7 +11,7 @@ DS_MAP = {
     "llava-bench": "LLaVa-Bench",
     "mmbench": "MMBench",
     "seed": "SEED-Bench 2",
-    "vqa": "VQA v2",
+    "vqav2": "VQA v2",
 }
 
 # -- -- -- -- -- -- -- -- -- -- -- --
@@ -101,14 +101,10 @@ def set_custom_patch_color_sk(b_plot: plt.boxplot, color_key: str = "concept") -
         patch.set(hatch=hatches[idx_col])
 
 
-def plot_boxplot_sk(
-    all_concept_counts: dict, all_relation_counts: dict, output_path: str
-) -> None:
-    _, axes = plt.subplots(
-        1, len(all_concept_counts.keys()), sharey=True, figsize=(15, 4)
-    )
+def plot_sk(count_concepts: dict, count_preds: dict, output_path: str) -> None:
+    _, axes = plt.subplots(1, len(count_concepts.keys()), sharey=True, figsize=(15, 4))
 
-    ds_keys = list(all_concept_counts.keys())
+    ds_keys = list(count_concepts.keys())
     width = 0.85
 
     for idx, ax in enumerate(axes):
@@ -117,8 +113,8 @@ def plot_boxplot_sk(
         ax.set_xticklabels(["", "Concepts", "", "", "Relations", ""])
         ax.yaxis.grid(True, linestyle="-", which="major", color="lightgrey", alpha=0.7)
 
-        cc_plot = all_concept_counts[ds_keys[idx]]
-        rc_plot = all_relation_counts[ds_keys[idx]]
+        cc_plot = count_concepts[ds_keys[idx]]
+        rc_plot = count_preds[ds_keys[idx]]
 
         b_plot = ax.boxplot(
             cc_plot.values(),
@@ -147,11 +143,48 @@ def plot_boxplot_sk(
         bbox_to_anchor=(1, 0.5),
     )
 
-    # ax.legend(['Orig.', 'Val.', 'Val. + Ann.']*2,
-    #            loc="upper right",
-    #            ncol=2)
+    # ax.set_title("Should-Know Concepts and Relations")
+    axes[0].set_ylabel("Count")
+    plt.tight_layout()
+    plt.savefig(output_path)
+    plt.close()
 
-    # ax.set_title("Boxplot of Concepts and Relations")
+
+def plot_relations(all_relation_counts: dict, output_path: str) -> None:
+    _, axes = plt.subplots(
+        1, len(all_relation_counts.keys()), sharey=True, figsize=(15, 4)
+    )
+
+    ds_keys = list(all_relation_counts.keys())
+    print(ds_keys)
+    width = 0.85
+
+    for idx, ax in enumerate(axes):
+        ax.set_title(DS_MAP[ds_keys[idx]])
+        ax.tick_params(bottom=False)
+        ax.set_xticklabels(["OG", "VAL", "ANN"])
+        ax.yaxis.grid(True, linestyle="-", which="major", color="lightgrey", alpha=0.7)
+
+        rc_plot = all_relation_counts[ds_keys[idx]]
+
+        b_plot = ax.boxplot(
+            rc_plot.values(),
+            positions=[1, 2, 3],
+            widths=width,
+            patch_artist=True,
+            notch=True,
+            medianprops=dict(color="black"),
+        )
+        set_custom_patch_color_sk(b_plot, color_key="relation")
+
+    ax.legend(
+        ["Original", "Validation", "Annotation"],
+        loc="center left",
+        ncol=1,
+        bbox_to_anchor=(1, 0.5),
+    )
+
+    # ax.set_title("Should-Know Relations")
     axes[0].set_ylabel("Count")
     plt.tight_layout()
     plt.savefig(output_path)
