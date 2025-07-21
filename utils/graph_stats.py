@@ -3,6 +3,8 @@ import numpy as np
 from networkx import DiGraph
 from typing import Tuple
 
+from utils.data_io import np_encoder
+
 
 # Computation of information content
 def compute_ic(elem: str, count_dict: dict, freq_dict: dict) -> float:
@@ -168,4 +170,8 @@ def compute_stats(graph_dict: dict, source_dict: dict) -> Tuple[dict, dict]:
         "avg_h_graph": np.mean(h_graphs),
         "std_h_graph": np.std(h_graphs) if len(h_graphs) > 1 else 0,
     }
+
+    # Fix typing to save to JSON
+    for k, v in stats_summary.items():
+        stats_summary[k] = np_encoder(v)
     return sample_stats, stats_summary

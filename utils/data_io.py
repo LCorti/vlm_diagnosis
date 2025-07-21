@@ -1,4 +1,5 @@
 import json
+import numpy as np
 import pandas as pd
 import pickle
 
@@ -44,6 +45,15 @@ def append_to_jsonl(data: dict, file_path: str) -> None:
     with open(file_path, "a") as fp:
         fp.write("\n".join(map(json.dumps, data)))
         fp.write("\n")
+
+
+def np_encoder(obj: Any) -> dict:
+    if isinstance(obj, np.integer):
+        return int(obj)
+    if isinstance(obj, np.floating):
+        return float(obj)
+    if isinstance(obj, np.ndarray):
+        return obj.tolist()
 
 
 # == == == == == == == == == == == == == == == ==
