@@ -56,8 +56,6 @@ ds_hdl = DatasetHandler()
 ds_hdl.set_curr_ds(DATASET)
 
 ds_list = ds_hdl.get_ds_list()
-if "vqav2_holdout" in ds_list:
-    ds_list.remove("vqav2_holdout")
 
 # %% [markdown]
 # Load responses_counter

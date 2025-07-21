@@ -63,8 +63,6 @@ if __name__ == "__main__":
     rk_hdl.set_curr_model(model)
     rk_hdl.set_curr_ds(dataset)
     ds_list = rk_hdl.get_ds_list()
-    if "vqav2_holdout" in ds_list:
-        ds_list.remove("vqav2_holdout")
 
     # Load data
     base_dir = Path(__file__).parent.parent

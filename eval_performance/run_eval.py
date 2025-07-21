@@ -32,8 +32,6 @@ if __name__ == "__main__":
     eval_hdl = EvalHandler()
 
     ds_list = ds_hdl.get_ds_list()
-    if "vqav2_holdout" in ds_list:
-        ds_list.remove("vqav2_holdout")
     model_list = rk_hdl.get_model_list()
 
     all_models = model_list * 4

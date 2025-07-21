@@ -53,9 +53,6 @@ DATABASE_PREFIX = "lmm_diag_"  # completed dynamically
 if __name__ == "__main__":
     sk_hdl = SKHandler()
     ds_list = sk_hdl.get_ds_list()
-    # Skip holdout set from VQA v2
-    if "vqav2_holdout" in ds_list:
-        ds_list.remove("vqav2_holdout")
 
     for ds in ds_list:
         print("=" * 25)

@@ -15,8 +15,6 @@ if __name__ == "__main__":
     # Load DS config
     ds_hdl = DatasetHandler()
     ds_list = ds_hdl.get_sk_list()
-    if "vqav2_holdout" in ds_list:
-        ds_list.remove("vqav2_holdout")
 
     # Load SK config
     sk_hdl = SKHandler()

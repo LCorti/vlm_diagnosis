@@ -18,8 +18,12 @@ class DatasetHandler:
         with open(self.CONFIG_PATH) as fp:
             return yaml.safe_load(fp)
 
-    def get_ds_list(self) -> list:
-        return list(self.DATASET_PATHS.keys())
+    def get_ds_list(self, return_holdout: bool = False) -> list:
+        if not return_holdout:
+            ds_list = list(self.SK_PATHS.keys())
+            ds_list.remove("vqav2_holdout")
+            return ds_list
+        return list(self.SK_PATHS.keys())
 
     ## Update from here
 

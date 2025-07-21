@@ -14,8 +14,6 @@ if __name__ == "__main__":
     # Load SK config
     sk_hdl = SKHandler()
     ds_list = sk_hdl.get_ds_list()
-    if "vqav2_holdout" in ds_list:
-        ds_list.remove("vqav2_holdout")
 
     # Open jsonl from crowdsourcing
     # Convert to NX graph (probably add graph utils)

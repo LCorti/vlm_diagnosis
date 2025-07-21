@@ -30,7 +30,11 @@ class SKHandler:
     def set_curr_class(self, new_class: str):
         self.CURR_CLASS = new_class
 
-    def get_ds_list(self) -> list:
+    def get_ds_list(self, return_holdout: bool = False) -> list:
+        if not return_holdout:
+            ds_list = list(self.SK_PATHS.keys())
+            ds_list.remove("vqav2_holdout")
+            return ds_list
         return list(self.SK_PATHS.keys())
 
     def get_classes(self) -> list:
