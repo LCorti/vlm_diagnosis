@@ -1,6 +1,7 @@
 import numpy as np
 
 from networkx import DiGraph
+from sklearn.preprocessing import MinMaxScaler
 from typing import Tuple
 
 from utils.data_io import np_encoder
@@ -17,20 +18,20 @@ def compute_ic(elem: str, count_dict: dict, freq_dict: dict) -> float:
     return ic
 
 
-def compute_ic_preds(graph: DiGraph, count_dict, freq_dict) -> float:
-    pred_list = [graph[e[0]][e[1]]["label"] for e in graph.edges]
-    all_pred_ics = []
-    for pred in pred_list:
-        all_pred_ics.append(compute_ic(pred, count_dict, freq_dict))
-    return np.mean(all_pred_ics)
+def compute_ic_preds(graph: DiGraph, count_dict: dict, freq_dict: dict) -> float:
+    preds = [graph[e[0]][e[1]]["label"] for e in graph.edges]
+    preds_ic = np.array([compute_ic(p, count_dict, freq_dict) for p in preds]).reshape(
+        -1, 1
+    )
+    return preds_ic
 
 
 def compute_ic_concepts(graph: DiGraph, count_dict: dict, freq_dict: dict) -> float:
-    concept_list = list(graph.nodes)
-    all_concept_ics = []
-    for concept in concept_list:
-        all_concept_ics.append(compute_ic(concept, count_dict, freq_dict))
-    return np.mean(all_concept_ics)
+    concepts = list(graph.nodes)
+    concepts_ic = np.array(
+        [compute_ic(c, count_dict, freq_dict) for c in concepts]
+    ).reshape(-1, 1)
+    return concepts_ic
 
 
 def compute_ic_graph(graph: DiGraph, source_dict: dict) -> Tuple[float, float, float]:
@@ -40,10 +41,39 @@ def compute_ic_graph(graph: DiGraph, source_dict: dict) -> Tuple[float, float, f
     ic_preds = compute_ic_preds(
         graph, source_dict["predicate_counts"], source_dict["predicate_freqs"]
     )
-    # For now, concepts and predicates have equal weights.
-    weights = [1, 1]
-    ic_graph = np.average([ic_preds, ic_concepts], weights=weights)
-    return ic_concepts, ic_preds, ic_graph
+    return ic_concepts, ic_preds
+
+
+def compute_ic_ds(graphs: DiGraph, source_dict: dict) -> float:
+    ds_ic = {}
+    for g_idx, graph in graphs.items():
+        ds_ic[g_idx] = {
+            "concepts": compute_ic_concepts(
+                graph, source_dict["concept_counts"], source_dict["concept_freqs"]
+            ),
+            "preds": compute_ic_preds(
+                graph, source_dict["predicate_counts"], source_dict["predicate_freqs"]
+            ),
+        }
+
+    # Fit scalers
+    concept_scaler = MinMaxScaler().fit(
+        np.concatenate([g["concepts"] for g in ds_ic.values()], axis=0)
+    )
+    pred_scaler = MinMaxScaler().fit(
+        np.concatenate([g["preds"] for g in ds_ic.values()], axis=0)
+    )
+    for g_idx in ds_ic:
+        vals = np.concatenate(
+            [
+                concept_scaler.transform(ds_ic[g_idx]["concepts"]),
+                pred_scaler.transform(ds_ic[g_idx]["preds"]),
+            ],
+            axis=0,
+        )
+        ds_ic[g_idx] = np_encoder(np.mean(vals))
+
+    return ds_ic
 
 
 def compute_ic_relation(relation: tuple, sg_dict: dict) -> float:
@@ -60,118 +90,71 @@ def compute_ic_relation(relation: tuple, sg_dict: dict) -> float:
     return ic_from_concept + ic_predicate + ic_to_concept
 
 
-# Computation of entropy
-def compute_h(elem: str, count_dict: dict, freq_dict: dict) -> float:
-    ic = compute_ic(elem, count_dict, freq_dict)
-    if elem in freq_dict:
-        h = freq_dict[elem] * ic
-    else:
-        h = 1 / sum(count_dict.values()) * ic
-    return h
-
-
-def compute_h_concepts(graph: DiGraph, count_dict: dict, freq_dict: dict) -> float:
-    concept_list = list(graph.nodes)
-    all_concepts_h = []
-    for concept in concept_list:
-        all_concepts_h.append(compute_h(concept, count_dict, freq_dict))
-    # Apply Miller-Madow correction
-    correction_factor = (len(set(concept_list)) - 1) / (2 * len(concept_list))
-    norm_h = (np.sum(all_concepts_h) + correction_factor) / np.log2(len(count_dict))
-    return norm_h
-
-
-def compute_h_preds(graph: DiGraph, count_dict: dict, freq_dict: dict) -> float:
-    pred_list = [graph[e[0]][e[1]]["label"] for e in graph.edges]
-    all_pred_h = []
-    for pred in pred_list:
-        all_pred_h.append(compute_h(pred, count_dict, freq_dict))
-    # Apply Miller-Madow correction
-    correction_factor = (len(set(pred_list)) - 1) / (2 * len(pred_list))
-    norm_h = (np.sum(all_pred_h) + correction_factor) / np.log2(len(count_dict))
-    return norm_h
-
-
-def compute_h_graph(graph: DiGraph, source_dict: dict) -> float:
-    h_concepts = compute_h_concepts(
-        graph, source_dict["concept_counts"], source_dict["concept_freqs"]
-    )
-    h_preds = compute_h_preds(
-        graph, source_dict["predicate_counts"], source_dict["predicate_freqs"]
-    )
-    # For now, concepts and predicates have equal weights.
-    weights = [1, 1]
-    h_graph = np.average([h_concepts, h_preds], weights=weights)
-    return h_concepts, h_preds, h_graph
-
-
 def compute_sample_stats(sample_graph: DiGraph, source_dict: dict) -> dict:
     stats = {
         "count_concepts": sample_graph.number_of_nodes(),
         "count_preds": sample_graph.number_of_edges(),
     }
-    # Information content
-    ic = compute_ic_graph(sample_graph, source_dict)
-    stats["ic_concepts"] = ic[0]
-    stats["ic_preds"] = ic[1]
-    stats["ic_graph"] = ic[2]
-    # Entropy
-    h = compute_h_graph(sample_graph, source_dict)
-    stats["h_concepts"] = h[0]
-    stats["h_preds"] = h[1]
-    stats["h_graph"] = h[2]
+    # Information content (not scaled)
+    stats["ic_concepts"], stats["ic_preds"] = compute_ic_graph(
+        sample_graph, source_dict
+    )
     return stats
 
 
 def compute_stats(graph_dict: dict, source_dict: dict) -> Tuple[dict, dict]:
     # Compute stats for each sample
     sample_stats = {}
-    for idx, graph in graph_dict.items():
-        if idx not in sample_stats:
-            sample_stats[idx] = {}
-        sample_stats[idx] = compute_sample_stats(graph, source_dict)
+    for g_idx, graph in graph_dict.items():
+        sample_stats[g_idx] = compute_sample_stats(graph, source_dict)
+    # end up with a dict{g_idx: sample_stats}
 
-    # end up with a dict{idx: sample_stats}
+    # Fit scalers for information content
+    concept_scaler = MinMaxScaler().fit(
+        np.concatenate([g["ic_concepts"] for g in sample_stats.values()], axis=0)
+    )
+    pred_scaler = MinMaxScaler().fit(
+        np.concatenate([g["ic_preds"] for g in sample_stats.values()], axis=0)
+    )
 
-    # sample_stats and all the other used to be a list []
+    # Compute IC for each sample
+    for g_idx in sample_stats.keys():
+        vals = np.concatenate(
+            [
+                concept_scaler.transform(sample_stats[g_idx]["ic_concepts"]),
+                pred_scaler.transform(sample_stats[g_idx]["ic_preds"]),
+            ],
+            axis=0,
+        )
+        sample_stats[g_idx]["ic_graph"] = np_encoder(np.mean(vals))
+        # Also fix formatting such that it is JSON-friendly
+        sample_stats[g_idx]["ic_concepts"] = (
+            sample_stats[g_idx]["ic_concepts"].flatten().tolist()
+        )
+        sample_stats[g_idx]["ic_preds"] = (
+            sample_stats[g_idx]["ic_preds"].flatten().tolist()
+        )
 
     # Compute dataset statistic
     # Concepts
     count_conc_list = [v["count_concepts"] for v in sample_stats.values()]
-    ic_concepts = [v["ic_concepts"] for v in sample_stats.values()]
-    h_concepts = [v["h_concepts"] for v in sample_stats.values()]
-
     # Predicates
     count_preds_list = [v["count_preds"] for v in sample_stats.values()]
-    ic_preds = [v["ic_preds"] for v in sample_stats.values()]
-    h_preds = [v["h_preds"] for v in sample_stats.values()]
-
     # Graphs
     ic_graphs = [v["ic_graph"] for v in sample_stats.values()]
-    h_graphs = [v["h_graph"] for v in sample_stats.values()]
 
     stats_summary = {
         "count_concepts": np.sum(count_conc_list),
         "avg_concepts": np.mean(count_conc_list),
         "std_concepts": np.std(count_conc_list) if len(count_conc_list) > 1 else 0,
-        "avg_ic_concepts": np.mean(ic_concepts),
-        "std_ic_concepts": np.std(ic_concepts) if len(ic_concepts) > 1 else 0,
-        "avg_h_concepts": np.mean(h_concepts),
-        "std_h_concepts": np.std(h_concepts) if len(h_concepts) > 1 else 0,
         "count_preds": np.sum(count_preds_list),
         "avg_preds": np.mean(count_preds_list),
         "std_preds": np.std(count_preds_list) if len(count_preds_list) > 1 else 0,
-        "avg_ic_preds": np.mean(ic_preds),
-        "std_ic_preds": np.std(ic_preds) if len(ic_preds) > 1 else 0,
-        "avg_h_preds": np.mean(h_preds),
-        "std_h_preds": np.std(h_preds) if len(h_preds) > 1 else 0,
-        "avg_ic_graph": np.mean(ic_graphs),
-        "std_ic_graph": np.std(ic_graphs) if len(ic_graphs) > 1 else 0,
-        "avg_h_graph": np.mean(h_graphs),
-        "std_h_graph": np.std(h_graphs) if len(h_graphs) > 1 else 0,
+        "avg_ic": np.mean(ic_graphs),
+        "std_ic": np.std(ic_graphs) if len(ic_graphs) > 1 else 0,
     }
 
-    # Fix typing to save to JSON
+    # Fix typing to save to JSON for the summary
     for k, v in stats_summary.items():
         stats_summary[k] = np_encoder(v)
     return sample_stats, stats_summary
