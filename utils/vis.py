@@ -14,6 +14,13 @@ DS_MAP = {
     "vqav2": "VQA v2",
 }
 
+MODEL_MAP = {
+    "internvl2": "InternVL2",
+    "llava-1.6": "LLaVa-1.6",
+    "minigpt4": "MiniGPT4",
+    "sharegpt4v": "ShareGPT4V",
+}
+
 # -- -- -- -- -- -- -- -- -- -- -- --
 # Individual charts
 # -- -- -- -- -- -- -- -- -- -- -- --
@@ -101,7 +108,7 @@ def set_custom_patch_color_sk(b_plot: plt.boxplot, color_key: str = "concept") -
         patch.set(hatch=hatches[idx_col])
 
 
-def plot_sk(count_concepts: dict, count_preds: dict, output_path: str) -> None:
+def plot_sk(count_concepts: dict, count_preds: dict, output_path: str | Path) -> None:
     _, axes = plt.subplots(1, len(count_concepts.keys()), sharey=True, figsize=(15, 4))
 
     ds_keys = list(count_concepts.keys())
@@ -150,7 +157,7 @@ def plot_sk(count_concepts: dict, count_preds: dict, output_path: str) -> None:
     plt.close()
 
 
-def plot_relations(all_relation_counts: dict, output_path: str) -> None:
+def plot_sk_rels(all_relation_counts: dict, output_path: str | Path) -> None:
     _, axes = plt.subplots(
         1, len(all_relation_counts.keys()), sharey=True, figsize=(15, 4)
     )
@@ -206,7 +213,7 @@ def set_custom_patch_color_rk(b_plot: plt.boxplot) -> None:
         patch.set(hatch=hatches[idx_col])
 
 
-def plot_boxplot_rk(
+def plot_rk(
     all_concept_counts: dict, all_relation_counts: dict, output_path: str | Path
 ) -> None:
     fig, axes = plt.subplots(
@@ -218,7 +225,7 @@ def plot_boxplot_rk(
     width = 0.8
 
     for idx, ax in enumerate(axes):
-        ax.set_title(model_keys[idx])
+        ax.set_title(MODEL_MAP[model_keys[idx]])
         ax.tick_params(bottom=False)
         ax.set_xticklabels(["", "Concepts", "", "", "", "Relations", "", ""])
         # Create offset transform by 5 points in x direction
@@ -243,7 +250,7 @@ def plot_boxplot_rk(
             notch=True,
             medianprops=dict(color="black"),
         )
-        set_custom_patch_color_rk(b_plot, color_key="concept")
+        set_custom_patch_color_rk(b_plot)
 
         b_plot = ax.boxplot(
             rc_plot.values(),
@@ -253,7 +260,7 @@ def plot_boxplot_rk(
             notch=True,
             medianprops=dict(color="black"),
         )
-        set_custom_patch_color_rk(b_plot, color_key="relation")
+        set_custom_patch_color_rk(b_plot)
 
     ax.legend(DS_MAP.values(), loc="center left", ncol=1, bbox_to_anchor=(1, 0.5))
 
@@ -262,6 +269,56 @@ def plot_boxplot_rk(
     #           ncol=1)
 
     # ax.set_title("Boxplot of Concepts and Relations")
+    axes[0].set_ylabel("Count")
+    # plt.show()
+    plt.tight_layout()
+    plt.savefig(output_path)
+    plt.close()
+
+
+def plot_rk_rels(all_relation_counts: dict, output_path: str | Path) -> None:
+    fig, axes = plt.subplots(
+        1, len(all_relation_counts.keys()), sharey=True, figsize=(15, 4)
+    )
+
+    model_keys = list(all_relation_counts.keys())
+
+    width = 0.8
+
+    for idx, ax in enumerate(axes):
+        ax.set_title(MODEL_MAP[model_keys[idx]])
+        ax.tick_params(bottom=False)
+        ax.set_xticklabels(["", "Relations", "", ""])
+        # Create offset transform by 5 points in x direction
+        dx = 15 / 72.0
+        dy = 0 / 72.0
+        offset = ScaledTranslation(dx, dy, fig.dpi_scale_trans)
+
+        # apply offset transform to all x ticklabels.
+        for label in ax.xaxis.get_majorticklabels():
+            label.set_transform(label.get_transform() + offset)
+
+        ax.yaxis.grid(True, linestyle="-", which="major", color="lightgrey", alpha=0.7)
+
+        rc_plot = all_relation_counts[model_keys[idx]]
+
+        b_plot = ax.boxplot(
+            rc_plot.values(),
+            positions=[5.5, 6.5, 7.5, 8.5],
+            widths=width,
+            patch_artist=True,
+            notch=True,
+            medianprops=dict(color="black"),
+        )
+        set_custom_patch_color_rk(b_plot)
+
+    ax.legend(DS_MAP.values(), loc="center left", ncol=1, bbox_to_anchor=(1, 0.5))
+
+    # ax.legend(DS_MAP.values(),
+    #           loc="upper right",
+    #           ncol=1)
+
+    # ax.set_title("Really-Know Relations")
     axes[0].set_ylabel("Count")
     # plt.show()
     plt.tight_layout()
