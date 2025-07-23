@@ -911,6 +911,12 @@
       "init": 899,
       "val": 896,
       "ann": 640
+    },
+    "changes": {
+      "marked_not_relevant": 505,
+      "concepts_changed": 59,
+      "predicates_changed": 63,
+      "new_rels": 247
     }
   }
 }

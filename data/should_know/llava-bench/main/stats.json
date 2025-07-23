@@ -731,6 +731,12 @@
       "init": 573,
       "val": 573,
       "ann": 517
+    },
+    "changes": {
+      "marked_not_relevant": 300,
+      "concepts_changed": 80,
+      "predicates_changed": 32,
+      "new_rels": 224
     }
   }
 }

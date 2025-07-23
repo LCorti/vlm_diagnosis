@@ -171,6 +171,7 @@ def resolve_val_data(
     sgg_dict: dict,
     question: dict,
     graphs_dict: dict,
+    changes: dict,
 ) -> tuple[dict, dict]:
     res_val_entry = {
         "question_id": question["question_id"],
@@ -223,29 +224,34 @@ def resolve_val_data(
                     fix_bbox(crowd_rel["crowd"]["new_coords_from_concept"])
                 )
                 # bb_label data
-                rel["from_concept"]["bb_label"]["bb_label_idx"] = get_concept_id(
-                    crowd_rel["crowd"]["new_from_concept"], sgg_dict
-                )
-                from_concept_label = crowd_rel["crowd"]["new_from_concept"]
-                rel["from_concept"]["bb_label"]["bb_label_text"] = from_concept_label
-                rel["from_concept"]["bb_label"]["bb_label_full"] = (
-                    f"0-{from_concept_label}"
-                )
+                old_label = rel["from_concept"]["bb_label"]["bb_label_text"]
+                new_label = crowd_rel["crowd"]["new_from_concept"]
+                if old_label != new_label:
+                    changes["concepts_changed"] += 1
+                    rel["from_concept"]["bb_label"]["bb_label_idx"] = get_concept_id(
+                        new_label, sgg_dict
+                    )
+                    rel["from_concept"]["bb_label"]["bb_label_text"] = new_label
+                    rel["from_concept"]["bb_label"]["bb_label_full"] = f"0-{new_label}"
                 # to_concept
                 # coordinates
                 rel["to_concept"].update(
                     fix_bbox(crowd_rel["crowd"]["new_coords_to_concept"])
                 )
                 # bb_label data
-                rel["to_concept"]["bb_label"]["bb_label_idx"] = get_concept_id(
-                    crowd_rel["crowd"]["new_to_concept"], sgg_dict
-                )
-                to_concept_label = crowd_rel["crowd"]["new_to_concept"]
-                rel["to_concept"]["bb_label"]["bb_label_text"] = to_concept_label
-                rel["to_concept"]["bb_label"]["bb_label_full"] = f"0-{to_concept_label}"
+                old_label = rel["to_concept"]["bb_label"]["bb_label_text"]
+                new_label = crowd_rel["crowd"]["new_to_concept"]
+                if old_label != new_label:
+                    changes["concepts_changed"] += 1
+                    rel["to_concept"]["bb_label"]["bb_label_idx"] = get_concept_id(
+                        new_label, sgg_dict
+                    )
+                    rel["to_concept"]["bb_label"]["bb_label_text"] = new_label
+                    rel["to_concept"]["bb_label"]["bb_label_full"] = f"0-{new_label}"
 
             # Fixing relationships if incorrect label
             if crowd_rel["answers"]["correct_relationship"] == 0:
+                changes["predicates_changed"] += 1
                 rel_label_idx = get_relation_id(
                     crowd_rel["crowd"]["new_relationship"], sgg_dict
                 )
@@ -264,14 +270,19 @@ def resolve_val_data(
             res_val_entry["relations"].append(rel)
         else:
             print("-- Relationship marked as irrelevant.")
+            changes["marked_not_relevant"] += 1
 
     # Update graphs_dict with validation data
     graphs_dict[res_val_entry["question_id"]]["val"] = sk_to_nx(rels_to_check)
-    return res_val_entry, graphs_dict
+    return res_val_entry, graphs_dict, changes
 
 
 def resolve_ann_data(
-    val_entry: dict, parsed_crowd_ann: dict, sgg_dict: dict, graphs_dict: dict
+    val_entry: dict,
+    parsed_crowd_ann: dict,
+    sgg_dict: dict,
+    graphs_dict: dict,
+    changes: dict,
 ) -> tuple[dict, dict]:
     res_ann_entry = val_entry
     # Add new relationships
@@ -315,11 +326,13 @@ def resolve_ann_data(
         crowd_ann["rel_id"] = f"{from_concept_idx}-{relationship_idx}-{to_concept_idx}"
         res_ann_entry["relations"].append(crowd_ann)
 
+    changes["new_rels"] += len(all_crowd_ann)
+
     # Update graphs_dict with annotation data
     graphs_dict[res_ann_entry["question_id"]]["ann"] = sk_to_nx(
         res_ann_entry["relations"]
     )
-    return res_ann_entry, graphs_dict
+    return res_ann_entry, graphs_dict, changes
 
 
 def resolve_crowd_data(
@@ -331,18 +344,24 @@ def resolve_crowd_data(
 ) -> tuple[dict, dict]:
     resolved_data = []
     graphs_dict = {}
+    changes = {
+        "marked_not_relevant": 0,
+        "concepts_changed": 0,
+        "predicates_changed": 0,
+        "new_rels": 0,
+    }
     for question in ds_questions:
         # Resolve validation data
-        resolved_val_entry, graphs_dict = resolve_val_data(
-            sg_data, parsed_crowd_val, sgg_dict, question, graphs_dict
+        resolved_val_entry, graphs_dict, changes = resolve_val_data(
+            sg_data, parsed_crowd_val, sgg_dict, question, graphs_dict, changes
         )
         # print(resolved_val_entry)
         # Resolve annotation data
-        resolved_ann_entry, graphs_dict = resolve_ann_data(
-            resolved_val_entry, parsed_crowd_ann, sgg_dict, graphs_dict
+        resolved_ann_entry, graphs_dict, changes = resolve_ann_data(
+            resolved_val_entry, parsed_crowd_ann, sgg_dict, graphs_dict, changes
         )
         resolved_data.append(resolved_ann_entry)
-    return resolved_data, graphs_dict
+    return resolved_data, graphs_dict, changes
 
 
 def compute_stats(graphs_dict: dict) -> dict:
@@ -433,7 +452,7 @@ if __name__ == "__main__":
             # Filter dataset questions for the given class
             qs_to_use = [q for q in ds_questions if q["class"] == ds_class]
             # dict with final SKs + dict with nx graphs at different steps
-            sk_final, graphs_dict[dataset][ds_class] = resolve_crowd_data(
+            sk_final, graphs_dict[dataset][ds_class], changes = resolve_crowd_data(
                 crowd_sg,
                 parsed_crowd_val,
                 parsed_crowd_ann,
@@ -443,6 +462,7 @@ if __name__ == "__main__":
 
             # Compute stats
             stats[dataset][ds_class] = compute_stats(graphs_dict[dataset][ds_class])
+            stats[dataset][ds_class]["summary"]["changes"] = changes
 
             # Save to disk
             print("... Saving reconciled data to file...")
