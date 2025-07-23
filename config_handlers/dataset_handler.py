@@ -46,7 +46,9 @@ class DatasetHandler:
         if target in ["imgs", "imgs_resized", "imgs_occluded"]:
             p_name = Path(self.CURR_DS, target, self.CURR_CLASS)
         elif target in ["questions", "sampled_questions"]:
-            p_name = Path(self.CURR_DS, self.CURR_CLASS, self.DATASET_PATHS[target])
+            p_name = Path(self.CURR_DS, self.DATASET_PATHS[self.CURR_CLASS][target])
+        elif target == "crowd_questions":
+            p_name = Path(self.CURR_DS, "q_crowd.json")
         return self.BASE_DIR.joinpath(p_name)
 
     def get_imgs_path(self) -> Path:
@@ -63,3 +65,6 @@ class DatasetHandler:
 
     def get_sampled_questions_path(self) -> Path:
         return self.build_path("sampled_questions")
+
+    def get_crowd_questions_path(self) -> Path:
+        return self.build_path("crowd_questions")
