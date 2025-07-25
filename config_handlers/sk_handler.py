@@ -74,5 +74,8 @@ class SKHandler:
     def get_sk_final_path(self) -> Path:
         return self.build_path("sk_final")
 
+    def get_sk_exp_path(self) -> Path:
+        return self.build_path("sk_exp")
+
     def get_pkl_path(self) -> Path:
         return self.build_path("pkl")
