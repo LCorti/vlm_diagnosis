@@ -44,7 +44,7 @@ class SKHandler:
         fn = self.SK_PATHS[self.CURR_DS][self.CURR_CLASS][target]
         if target in ["sg_raw", "sg_clean", "sg_merged", "sg_crowd"]:
             new_fn = Path("scene_graphs", fn)
-        elif target == "pkl":
+        elif target in ["crowd_pkl", "exp_pkl"]:
             new_fn = Path("pkl", fn)
         else:
             new_fn = fn
@@ -77,5 +77,8 @@ class SKHandler:
     def get_sk_exp_path(self) -> Path:
         return self.build_path("sk_exp")
 
-    def get_pkl_path(self) -> Path:
-        return self.build_path("pkl")
+    def get_crowd_pkl_path(self) -> Path:
+        return self.build_path("crowd_pkl")
+
+    def get_exp_pkl_path(self) -> Path:
+        return self.build_path("exp_pkl")
