@@ -2,99 +2,99 @@ internvl2:
   llava-bench: 
     raw: results_v{}.jsonl
     parsed: results_v{}.jsonl
-    parsed_pkl: results.jsonl
+    parsed_pkl: results.pkl
     final: results.json
     counter: results.jsonl
   mmbench: 
     raw: results_v{}.jsonl
     parsed: results_v{}.jsonl
-    parsed_pkl: results.jsonl
+    parsed_pkl: results.pkl
     final: results.json
     counter: results.jsonl
   seed: 
     raw: results_v{}.jsonl
     parsed: results_v{}.jsonl
-    parsed_pkl: results.jsonl
+    parsed_pkl: results.pkl
     final: results.json
     counter: results.jsonl
   vqav2: 
     raw: results_v{}.jsonl
     parsed: results_v{}.jsonl
-    parsed_pkl: results.jsonl
+    parsed_pkl: results.pkl
     final: results.json
     counter: results.jsonl
 llava-1.6:
   llava-bench: 
     raw: results_v{}.jsonl
     parsed: results_v{}.jsonl
-    parsed_pkl: results.jsonl
+    parsed_pkl: results.pkl
     final: results.json
     counter: results.jsonl
   mmbench: 
     raw: results_v{}.jsonl
     parsed: results_v{}.jsonl
-    parsed_pkl: results.jsonl
+    parsed_pkl: results.pkl
     final: results.json
     counter: results.jsonl
   seed: 
     raw: results_v{}.jsonl
     parsed: results_v{}.jsonl
-    parsed_pkl: results.jsonl
+    parsed_pkl: results.pkl
     final: results.json
     counter: results.jsonl
   vqav2: 
     raw: results_v{}.jsonl
     parsed: results_v{}.jsonl
-    parsed_pkl: results.jsonl
+    parsed_pkl: results.pkl
     final: results.json
     counter: results.jsonl
 minigpt4:
   llava-bench: 
     raw: results_v{}.jsonl
     parsed: results_v{}.jsonl
-    parsed_pkl: results.jsonl
+    parsed_pkl: results.pkl
     final: results.json
     counter: results.jsonl
   mmbench: 
     raw: results_v{}.jsonl
     parsed: results_v{}.jsonl
-    parsed_pkl: results.jsonl
+    parsed_pkl: results.pkl
     final: results.json
     counter: results.jsonl
   seed: 
     raw: results_v{}.jsonl
     parsed: results_v{}.jsonl
-    parsed_pkl: results.jsonl
+    parsed_pkl: results.pkl
     final: results.json
     counter: results.jsonl
   vqav2: 
     raw: results_v{}.jsonl
     parsed: results_v{}.jsonl
-    parsed_pkl: results.jsonl
+    parsed_pkl: results.pkl
     final: results.json
     counter: results.jsonl
 sharegpt4v:
   llava-bench: 
     raw: results_v{}.jsonl
     parsed: results_v{}.jsonl
-    parsed_pkl: results.jsonl
+    parsed_pkl: results.pkl
     final: results.json
     counter: results.jsonl
   mmbench: 
     raw: results_v{}.jsonl
     parsed: results_v{}.jsonl
-    parsed_pkl: results.jsonl
+    parsed_pkl: results.pkl
     final: results.json
     counter: results.jsonl
   seed: 
     raw: results_v{}.jsonl
     parsed: results_v{}.jsonl
-    parsed_pkl: results.jsonl
+    parsed_pkl: results.pkl
     final: results.json
     counter: results.jsonl
   vqav2: 
     raw: results_v{}.jsonl
     parsed: results_v{}.jsonl
-    parsed_pkl: results.jsonl
+    parsed_pkl: results.pkl
     final: results.json
     counter: results.jsonl
