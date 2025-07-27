@@ -36,7 +36,7 @@ if __name__ == "__main__":
                 graph_dict[sk["img_id"]] = sk_graph
 
             # Make directory if needed and save graph to it
-            out_file = sk_hdl.get_pkl_path()
+            out_file = sk_hdl.get_crowd_pkl_path()
             out_folder = Path("..", out_file.parent)
             make_dir(out_folder)
             save_pickle(graph_dict, out_file)

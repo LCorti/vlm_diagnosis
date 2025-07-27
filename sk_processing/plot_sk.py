@@ -20,7 +20,7 @@ if __name__ == "__main__":
         for ds_class in sk_hdl.get_classes():
             # Loading graphs
             sk_hdl.set_curr_class(ds_class)
-            pkl_file = sk_hdl.get_pkl_path()
+            pkl_file = sk_hdl.get_crowd_pkl_path()
             graphs = load_pickle(Path("..", pkl_file))
 
             # Make output folder

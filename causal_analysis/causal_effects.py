@@ -269,7 +269,7 @@ sk_graphs = {}
 all_img_ids = []
 for ds_class in sk_classes:
     sk_hdl.set_curr_class(ds_class)
-    curr_graphs = load_pickle(Path("..", sk_hdl.get_pkl_path()))
+    curr_graphs = load_pickle(Path("..", sk_hdl.get_exp_pkl_path()))
     all_img_ids.extend(list(curr_graphs.keys()))
     print(f"Loaded {len(curr_graphs)} from {DATASET}+{ds_class}")
     print(f"- Old graph dict: {len(sk_graphs)} entries.")
