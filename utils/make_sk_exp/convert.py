@@ -1,26 +1,20 @@
 # Script to convert arrays in JSON files into JSON-lines files for SK annotation.
-
-import json
+import sys
 
 from pathlib import Path
 
+module_path = str(Path("..", "..").resolve())
+if module_path not in sys.path:
+    sys.path.append(module_path)
+
+from utils import data_io, graph_utils
+
 
 def load_vg1800_dict() -> dict:
-    vg1800_data = load_json(
-        Path(__file__).parent.parent.joinpath("data", "common", "sgg_dicts.json")
+    vg1800_data = data_io.load_json(
+        Path(__file__).parent.parent.parent.joinpath("data", "common", "sgg_dicts.json")
     )
     return vg1800_data
-
-
-def load_json(file_path: str | Path) -> dict:
-    with open(file_path, "r") as fp:
-        json_data = json.load(fp)
-    return json_data
-
-
-def save_jsonl(data: list[dict], file_path: str) -> None:
-    with open(file_path, "w") as fp:
-        fp.write("\n".join(map(json.dumps, data)))
 
 
 def get_concept_id(concept_label: str, sgg_dict: dict) -> int | str:
@@ -52,7 +46,8 @@ if __name__ == "__main__":
     for ds in structure:
         for ds_class in structure[ds]:
             # Load data
-            data = load_json(Path(ds, ds_class, in_file))
+            data = data_io.load_json(Path(ds, ds_class, in_file))
+            nx_data = {}
             # Recompute concept and predicate IDs
             for q_data in data:
                 for rel in q_data["relations"]:
@@ -75,10 +70,23 @@ if __name__ == "__main__":
                     rel["to_concept"]["bb_label"]["bb_label_idx"] = to_concept_idx
                     rel["to_concept"]["bb_label"]["bb_label_full"] = to_concept_full
 
+                nx_data[q_data["question_id"]] = graph_utils.sk_to_nx(
+                    q_data["relations"]
+                )
+
             # Save data
-            save_jsonl(
+            # JSON
+            data_io.save_jsonl(
                 data,
                 Path(__file__).parent.parent.parent.joinpath(
                     "data", "should_know", ds, ds_class, out_file
+                ),
+            )
+
+            # Pkl
+            data_io.save_pickle(
+                nx_data,
+                Path(__file__).parent.parent.parent.joinpath(
+                    "data", "should_know", ds, ds_class, "pkl", "sk_exp_nx.pkl"
                 ),
             )
