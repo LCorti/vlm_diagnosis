@@ -56,17 +56,17 @@ def compute_concepts_powerset(concepts: list, return_dict: bool = False) -> dict
 
 
 # Return string version of a graph (SK or RK)
-def stringify_nx_graph(graph: DiGraph) -> list:
+def nx_graph_to_str(graph: DiGraph, template: bool = False) -> list:
     rels = []
     for e in graph.edges:
         from_concept = graph.nodes[e[0]]["label"]
         to_concept = graph.nodes[e[1]]["label"]
         rel = graph[from_concept][to_concept]["label"]
-        rels.append((from_concept, rel, to_concept))
+        rels.append(nx_triple_to_str((from_concept, rel, to_concept), template))
     return rels
 
 
-def stringify_graph_triple(triple: tuple, template: bool = True) -> str:
+def nx_triple_to_str(triple: tuple, template: bool = True) -> str:
     from_concept, rel, to_concept = triple
     if template:
         return (
