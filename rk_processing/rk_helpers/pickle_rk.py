@@ -25,6 +25,8 @@ if __name__ == "__main__":
 
             graphs = {}
             for rk in parsed_rk:
-                graphs[rk["question_id"]] = graph_utils.rk_to_nx(rk["triple_objs"])
+                # Only make NX graphs for existing RKs. Ignore the rest.
+                if len(rk["triple_objs"]) > 0:
+                    graphs[rk["question_id"]] = graph_utils.rk_to_nx(rk["triple_objs"])
 
             data_io.save_pickle(graphs, out_file)
