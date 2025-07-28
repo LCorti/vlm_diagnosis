@@ -110,7 +110,9 @@ if __name__ == "__main__":
                         )
 
                 # Save bertscore info
-                bertscore_hash_path = "../data/eval_performance/bertscore_hash.txt"
+                bertscore_hash_path = Path(
+                    "..", "data", "eval_performance", "bertscore_hash.txt"
+                )
                 save_bertscore_hash(scores["hashcode"], bertscore_hash_path)
             elif ds in ["seed", "vqav2"]:
                 for q in questions:
@@ -140,7 +142,8 @@ if __name__ == "__main__":
                                 prep_resp(q, clean_resp)
                             )
                             count_ok += 1
-                        # If model answer is present as-is in the list of alternatives even with no letter
+                        # If model answer is present as-is in the list of alternatives
+                        # even with no letter.
                         elif q["options"] is not None and clean_resp in list(
                             q["options"].values()
                         ):
@@ -176,7 +179,7 @@ if __name__ == "__main__":
                                 eval_dict[model][ds]["wrong_resp"].append(
                                     prep_resp(q, ref_letter)
                                 )
-                        # For some responses there is a preamble, e.g., 'The correct answer is'.
+                        # Sometimes, models use 'The correct answer is'.
                         # The letter indicating the reponse appears right before.
                         elif clean_resp[-1] == q["answer"]:
                             eval_dict[model][ds]["correct_resp"].append(
@@ -224,6 +227,8 @@ if __name__ == "__main__":
 
         # Save measures to file
         # Make dirs, if necessary
+        eval_hdl.set_curr_model(model)
+        eval_hdl.set_curr_ds(ds)
         out_path = Path("..", eval_hdl.get_eval_path(model, ds))
         make_dir(Path(out_path).parent)
         save_json(eval_dict[model][ds], out_path)
