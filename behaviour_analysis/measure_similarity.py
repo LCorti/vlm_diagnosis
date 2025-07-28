@@ -72,6 +72,7 @@ def compute_cosine(
     # print(rk_emb)
 
     if len(sk_batch) == 0 or len(rk_batch) == 0:
+        print("Problem!")
         return 0.0
     else:
         sk_emb = torch.FloatTensor(np.mean(sk_batch, axis=0)).unsqueeze(0)
@@ -124,6 +125,7 @@ if __name__ == "__main__":
         if ds not in sim_summary[model]:
             sim_summary[model][ds] = {}
 
+        print(f"> {len(rk_data)} samples to process...")
         for g_idx, g_data in rk_data.items():
             print(f"Processing {g_idx}")
             # Compute sample-level measures
