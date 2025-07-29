@@ -95,7 +95,7 @@ def plot_concepts_vs_relations(sample_stats_df: pd.DataFrame, output_path: str) 
 # -- -- -- -- -- -- -- -- -- -- -- --
 
 
-def set_custom_patch_color_sk(b_plot: plt.boxplot, color_key: str = "concept") -> None:
+def set_custom_patch_sk(b_plot: plt.boxplot, color_key: str = "concept") -> None:
     # Palette taken from https://venngage.com/tools/accessible-color-palette-generator
     color_map = {
         "concept": ["#b27795", "#c18750", "#7f9a46"],
@@ -131,7 +131,7 @@ def plot_sk(count_concepts: dict, count_preds: dict, output_path: str | Path) ->
             notch=True,
             medianprops=dict(color="black"),
         )
-        set_custom_patch_color_sk(b_plot, color_key="concept")
+        set_custom_patch_sk(b_plot, color_key="concept")
 
         b_plot = ax.boxplot(
             rc_plot.values(),
@@ -141,7 +141,7 @@ def plot_sk(count_concepts: dict, count_preds: dict, output_path: str | Path) ->
             notch=True,
             medianprops=dict(color="black"),
         )
-        set_custom_patch_color_sk(b_plot, color_key="relation")
+        set_custom_patch_sk(b_plot, color_key="relation")
 
     ax.legend(
         ["Original", "Validation", "Annotation"] * 2,
@@ -182,7 +182,7 @@ def plot_sk_rels(all_relation_counts: dict, output_path: str | Path) -> None:
             notch=True,
             medianprops=dict(color="black"),
         )
-        set_custom_patch_color_sk(b_plot, color_key="relation")
+        set_custom_patch_sk(b_plot, color_key="relation")
 
     ax.legend(
         ["Original", "Validation", "Annotation"],
@@ -203,7 +203,7 @@ def plot_sk_rels(all_relation_counts: dict, output_path: str | Path) -> None:
 # -- -- -- -- -- -- -- -- -- -- -- --
 
 
-def set_custom_patch_color_rk(b_plot: plt.boxplot) -> None:
+def set_custom_patch_rk(b_plot: plt.boxplot) -> None:
     # Palette taken from https://venngage.com/tools/accessible-color-palette-generator
     color_map = ["#e6a6a3", "#f1c3c2", "#b0d3dc", "#8cbcc7"]
     hatches = ["...", "///", "xxx", "+++"]
@@ -250,7 +250,7 @@ def plot_rk(
             notch=True,
             medianprops=dict(color="black"),
         )
-        set_custom_patch_color_rk(b_plot)
+        set_custom_patch_rk(b_plot)
 
         b_plot = ax.boxplot(
             rc_plot.values(),
@@ -260,7 +260,7 @@ def plot_rk(
             notch=True,
             medianprops=dict(color="black"),
         )
-        set_custom_patch_color_rk(b_plot)
+        set_custom_patch_rk(b_plot)
 
     ax.legend(DS_MAP.values(), loc="center left", ncol=1, bbox_to_anchor=(1, 0.5))
 
@@ -310,7 +310,7 @@ def plot_rk_rels(all_relation_counts: dict, output_path: str | Path) -> None:
             notch=True,
             medianprops=dict(color="black"),
         )
-        set_custom_patch_color_rk(b_plot)
+        set_custom_patch_rk(b_plot)
 
     ax.legend(DS_MAP.values(), loc="center left", ncol=1, bbox_to_anchor=(1, 0.5))
 
@@ -331,7 +331,7 @@ def plot_rk_rels(all_relation_counts: dict, output_path: str | Path) -> None:
 # -- -- -- -- -- -- -- -- -- -- -- --
 
 
-def set_custom_patch_color_sim(b_plot: plt.boxplot, pos: int) -> None:
+def set_custom_patch_sim(b_plot: plt.boxplot, pos: int) -> None:
     # Palette taken from https://venngage.com/tools/accessible-color-palette-generator
     color_map = ["#5ba300", "#89ce00", "#e6308a", "#b51963"]
     hatch_density = 2
@@ -347,11 +347,12 @@ def set_custom_patch_color_sim(b_plot: plt.boxplot, pos: int) -> None:
         patch.set(hatch=hatches[pos - 1])
 
 
-def plot_boxplot_sim(data: dict, out_path: str) -> None:
+def plot_similarity(
+    data: dict, out_path: str | Path, measure_key: str = "cosine"
+) -> None:
     _, axes = plt.subplots(1, len(data.keys()), sharey=True, figsize=(15, 4))
 
     model_keys = list(data.keys())
-
     width = 0.7
 
     for idx, ax in enumerate(axes):
@@ -377,7 +378,7 @@ def plot_boxplot_sim(data: dict, out_path: str) -> None:
             )
             ax.set_xticklabels("" * len(DS_MAP))
             pos += 1
-            set_custom_patch_color_sim(b_plot, pos)
+            set_custom_patch_sim(b_plot, pos)
 
     ax.legend(DS_MAP.values(), loc="center left", ncol=1, bbox_to_anchor=(1, 0.5))
 
