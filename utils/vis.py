@@ -381,58 +381,7 @@ def plot_boxplot_sim(data: dict, out_path: str) -> None:
 
     ax.legend(DS_MAP.values(), loc="center left", ncol=1, bbox_to_anchor=(1, 0.5))
 
-    axes[0].set_ylabel("Cosine Similarity Between SK and RK")
-    plt.tight_layout()
-    plt.savefig(out_path)
-    plt.close()
-
-
-def plot_split_similarity_values(df: pd.DataFrame, out_path: str) -> None:
-    model_keys = df["model"].unique()
-    ds_keys = df["dataset"].unique()
-    _, axes = plt.subplots(1, len(model_keys), sharey=True, figsize=(15, 4))
-
-    hatch_density = 1
-    quartile_map = {
-        "1": {"color": "#256baa", "hatch": "." * hatch_density, "legend_label": "Q1"},
-        "2": {"color": "#e1ba2c", "hatch": "/" * hatch_density, "legend_label": "Q2"},
-        "3": {"color": "#8069dc", "hatch": "+" * hatch_density, "legend_label": "Q3"},
-        "4": {"color": "#178356", "hatch": "x" * hatch_density, "legend_label": "Q4"},
-    }
-
-    width = 0.7
-
-    # Plot
-    for idx, ax in enumerate(axes):
-        bottom = np.zeros(len(ds_keys))
-        curr_model = model_keys[idx]
-        curr_df = df[df["model"] == curr_model]
-        ax.set_title(curr_model)
-
-        ax.yaxis.grid(True, linestyle="-", which="major", color="lightgrey", alpha=0.7)
-
-        # Get values
-        values = {
-            k: list(curr_df[curr_df["quartiles"] == k]["counts"]) for k in quartile_map
-        }
-
-        for label, count in values.items():
-            ax.bar(
-                DS_MAP.values(),
-                count,
-                width,
-                label=label,
-                bottom=bottom,
-                color=quartile_map[label]["color"],
-                hatch=quartile_map[label]["hatch"],
-            )
-            bottom += count
-
-    ax.legend(
-        [q["legend_label"] for q in quartile_map.values()], loc="upper right", ncol=1
-    )
-    axes[0].set_ylabel("N. Samples with (Dis-)similar Behaviours")
-
+    axes[0].set_ylabel("cosine_sim(SK,RK)")
     plt.tight_layout()
     plt.savefig(out_path)
     plt.close()
