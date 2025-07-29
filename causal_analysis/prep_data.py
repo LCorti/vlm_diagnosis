@@ -66,11 +66,11 @@ if __name__ == "__main__":
 
     # Load data
     base_dir = Path(__file__).parent.parent
-    resps_path = rk_hdl.get_parsed_rk_path().format(prompt_version)
+    resps_path = rk_hdl.get_rk_parsed_path().format(prompt_version)
     resps_path = base_dir.joinpath(resps_path).resolve()
     resps = load_jsonl(resps_path)
 
-    alt_resps_path = rk_hdl.get_counterfactual_rk_path()
+    alt_resps_path = rk_hdl.get_rk_counterfactual_path()
     alt_resps_path = base_dir.joinpath(alt_resps_path).resolve()
     alt_resps = load_jsonl(alt_resps_path)
 

@@ -45,7 +45,7 @@ if __name__ == "__main__":
         # Load responses for current model + dataset combo
         rk_hdl.set_curr_model(model)
         rk_hdl.set_curr_ds(ds)
-        resp_path = Path("..", rk_hdl.get_parsed_rk_path())
+        resp_path = Path("..", rk_hdl.get_rk_parsed_path())
         resp_path = resp_path.format(PROMPT_VERSION)
         resp_data = load_jsonl(resp_path)
         count_ok = 0

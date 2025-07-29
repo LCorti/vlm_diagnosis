@@ -75,7 +75,7 @@ if __name__ == "__main__":
     rk_hdl = RKHandler()
     rk_hdl.set_curr_model(MODEL_NAME)
     rk_hdl.set_curr_ds(ds_name)
-    counter_out_f = rk_hdl.get_counterfactual_rk_path()
+    counter_out_f = rk_hdl.get_rk_counterfactual_path()
     # Make directory if missing
     base_dir = Path(__file__).parent.parent.parent
     full_counter_out_f = base_dir.joinpath(counter_out_f)

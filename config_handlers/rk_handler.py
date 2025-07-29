@@ -46,17 +46,17 @@ class RKHandler:
             new_fn = Path(target, self.CURR_MODEL, self.CURR_DS, fn)
         return self.BASE_DIR.joinpath(new_fn)
 
-    def get_raw_rk_path(self) -> Path:
+    def get_rk_raw_path(self) -> Path:
         return self.build_path("raw")
 
-    def get_parsed_rk_path(self) -> Path:
+    def get_rk_parsed_path(self) -> Path:
         return self.build_path("parsed")
 
     def get_parsed_pkl_path(self) -> Path:
         return self.build_path("parsed_pkl")
 
-    def get_final_rk_path(self) -> Path:
+    def get_rk_final_path(self) -> Path:
         return self.build_path("final")
 
-    def get_counterfactual_rk_path(self) -> Path:
+    def get_rk_counterfactual_path(self) -> Path:
         return self.build_path("counter")

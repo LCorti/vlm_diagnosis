@@ -63,11 +63,11 @@ ds_list = ds_hdl.get_ds_list()
 
 # %%
 base_dir = Path(__file__).parent
-resps_path = base_dir.joinpath(str(rk_hdl.get_parsed_rk_path()).format(PROMPT_VERSION))
+resps_path = base_dir.joinpath(str(rk_hdl.get_rk_parsed_path()).format(PROMPT_VERSION))
 print(resps_path)
 resps = load_jsonl(resps_path)
 
-alt_resps_path = base_dir.joinpath(rk_hdl.get_counterfactual_rk_path())
+alt_resps_path = base_dir.joinpath(rk_hdl.get_rk_counterfactual_path())
 print(alt_resps_path)
 alt_resps = load_jsonl(alt_resps_path)
 
