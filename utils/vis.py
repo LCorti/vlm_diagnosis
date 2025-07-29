@@ -333,7 +333,7 @@ def plot_rk_rels(all_relation_counts: dict, output_path: str | Path) -> None:
 
 def set_custom_patch_sim(b_plot: plt.boxplot, pos: int) -> None:
     # Palette taken from https://venngage.com/tools/accessible-color-palette-generator
-    color_map = ["#5ba300", "#89ce00", "#e6308a", "#b51963"]
+    color_map = ["#e6a6a3", "#f1c3c2", "#b0d3dc", "#8cbcc7"]
     hatch_density = 2
     hatches = [
         "." * hatch_density,
@@ -342,7 +342,7 @@ def set_custom_patch_sim(b_plot: plt.boxplot, pos: int) -> None:
         "+" * hatch_density,
     ]
 
-    for idx_col, patch in enumerate(b_plot["boxes"]):
+    for _, patch in enumerate(b_plot["boxes"]):
         patch.set(facecolor=color_map[pos - 1])
         patch.set(hatch=hatches[pos - 1])
 
@@ -356,17 +356,21 @@ def plot_similarity(
     width = 0.7
 
     for idx, ax in enumerate(axes):
-        ax.set_title(model_keys[idx])
+        ax.set_title(MODEL_MAP[model_keys[idx]])
         ax.tick_params(bottom=False)
         # ax.set_xticklabels(list(DS_MAP.values()))
         ax.yaxis.grid(True, linestyle="-", which="major", color="lightgrey", alpha=0.7)
 
-        cc_plot = data[model_keys[idx]]
-
         pos = 0
-        for ds in cc_plot:
-            curr_samples = cc_plot[ds]["samples"]
-            plot_dict = {k: curr_samples[k] for k in curr_samples}
+        curr_model_data = data[model_keys[idx]]
+        for ds in curr_model_data:
+            if measure_key in ["iou_nodes", "iou_edges"]:
+                plot_dict = {
+                    k: v["iou"][measure_key] for k, v in curr_model_data[ds].items()
+                }
+            else:
+                # ged and cosine
+                plot_dict = {k: v[measure_key] for k, v in curr_model_data[ds].items()}
 
             b_plot = ax.boxplot(
                 plot_dict.values(),
@@ -391,11 +395,10 @@ def plot_similarity(
 def plot_behaviour_counts(data, out_path) -> None:
     _, axes = plt.subplots(1, 3, sharey=True, layout="constrained", figsize=(15, 4))
 
-    models = ["InternVL2", "LLaVa-1.6", "MiniGPT-4", "ShareGPT4V"]
     type_map = {0: "Type 1 Behaviours", 1: "Type 2 Behaviours", 2: "Type 3 Behaviours"}
 
     color_map = {
-        "llava": "#DC602E",
+        "llava-bench": "#DC602E",
         "mmbench": "#D7B49E",
         "seed": "#B8D5B8",
         "vqav2": "#05A8AA",
@@ -407,7 +410,7 @@ def plot_behaviour_counts(data, out_path) -> None:
         ax.set_title(type_map[idx])
         ax.tick_params(bottom=False)
         ax.set_ylim(top=150)
-        x = np.arange(len(models))
+        x = np.arange(len(MODEL_MAP))
         ax.yaxis.grid(True, linestyle="-", which="major", color="lightgrey", alpha=0.7)
 
         multiplier = 0
@@ -424,7 +427,7 @@ def plot_behaviour_counts(data, out_path) -> None:
 
             multiplier += 1
 
-        ax.set_xticks(x + width * 1.5, models)
+        ax.set_xticks(x + width * 1.5, list(MODEL_MAP.values()))
 
     ax.legend(list(DS_MAP.values()), loc="upper right", ncol=1)
     axes[0].set_ylabel("N. Samples per Behaviour Type")
