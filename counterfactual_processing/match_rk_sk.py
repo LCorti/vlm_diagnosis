@@ -14,7 +14,7 @@ if module_path not in sys.path:
 
 from config_handlers.rk_handler import RKHandler
 from config_handlers.sk_handler import SKHandler
-from utils.graph_utils import stringify_graph_triple
+from utils.graph_utils import nx_triple_to_str
 from utils.data_io import make_dir, load_json, load_jsonl, save_json
 
 
@@ -75,6 +75,21 @@ def get_sk_rels(sk: dict) -> list[dict]:
     return rels
 
 
+def retrieve_sk(rk_rel: dict, sk_list: list[dict]) -> dict:
+    return next(
+        (
+            (
+                sk_rel
+                for sk_rel in sk_list
+                if sk_rel["from_concept"] == rk_rel["from_concept"]
+                and sk_rel["relationship"] == rk_rel["relationship"]
+                and sk_rel["to_concept"] == rk_rel["to_concept"]
+            )
+        ),
+        None,
+    )
+
+
 def get_concept_id(concept_label: str, sgg_dict: dict) -> int | str:
     if concept_label in sgg_dict["label_to_idx"]:
         return sgg_dict["label_to_idx"][concept_label]
@@ -113,7 +128,13 @@ def make_pred_dict(box: dict, label: str, conf: float) -> dict:
     return pred_dict
 
 
-def parse_yoloe_res(yoloe_res: Any, prompt_free: bool = False) -> dict:
+def run_yolo(model: YOLOE, img: cv2.typing.MatLike, prompt: list = None) -> dict:
+    if prompt is not None:
+        model.set_classes(prompt, model.get_text_pe(prompt))
+    return model.predict(img)[0]
+
+
+def parse_yolo_res(yoloe_res: Any, prompt_free: bool = False) -> dict:
     label_dict = yoloe_res.names
     all_pred_idx = yoloe_res.boxes.cls.detach().cpu().numpy()
     all_conf = yoloe_res.boxes.conf.detach().cpu().numpy()
@@ -195,7 +216,7 @@ if __name__ == "__main__":
         rk_hdl.set_curr_model(model)
         rk_hdl.set_curr_ds(ds)
         rk_parsed_path = Path(
-            "..", str(rk_hdl.get_parsed_rk_path()).format(PROMPT_VERSION)
+            "..", str(rk_hdl.get_rk_parsed_path()).format(PROMPT_VERSION)
         )
         rk_parsed = load_jsonl(rk_parsed_path)
 
@@ -232,16 +253,7 @@ if __name__ == "__main__":
                 # First try: exact match -- look for the RK in the list of SK
                 # The matching is done at the triple-level to void the "wrong" concepts
                 # to be matched by mistake
-                match_sk_rel = next(
-                    (
-                        sk_rel
-                        for sk_rel in curr_sk_rels
-                        if sk_rel["from_concept"] == rk_rel["from_concept"]
-                        and sk_rel["relationship"] == rk_rel["relationship"]
-                        and sk_rel["to_concept"] == rk_rel["to_concept"]
-                    ),
-                    None,
-                )
+                match_sk_rel = retrieve_sk(rk_rel, curr_sk_rels)
                 # If a match is found, just use that (and update count)
                 # and go to next iteration
                 if match_sk_rel:
@@ -253,11 +265,9 @@ if __name__ == "__main__":
                 # Run similarity but only keep the largest one
                 max_sim = -1
                 sk_max_sim = {}
-                rk_rel_text = stringify_graph_triple(rk_rel.values(), template=False)
+                rk_rel_text = nx_triple_to_str(rk_rel.values(), template=False)
                 for sk_rel in curr_sk_rels:
-                    sk_rel_text = stringify_graph_triple(
-                        sk_rel.values(), template=False
-                    )
+                    sk_rel_text = nx_triple_to_str(sk_rel.values(), template=False)
                     sim = compute_similarity(emb_model, rk_rel_text, sk_rel_text)
                     if sim > max_sim:
                         max_sim = sim
@@ -269,20 +279,18 @@ if __name__ == "__main__":
                     continue
 
                 # Third try: run object detection on the fly to get positions
-                yoloe = YOLOE("yoloe-11l-seg.pt")  # this version expects a prompt
-                yoloe_pf = YOLOE("yoloe-11l-seg-pf.pt")
+                yolo = YOLOE("yoloe-11l-seg.pt")  # this version expects a prompt
+                yolo_pf = YOLOE("yoloe-11l-seg-pf.pt")
                 from_concept = rk_rel["from_concept"]  # this will be class 0
                 to_concept = rk_rel["to_concept"]  # this will be class 1
                 print(f"CV matching for {from_concept} - {to_concept}")
-                prompt = [from_concept, to_concept]
-                yoloe.set_classes(prompt, yoloe.get_text_pe(prompt))
-                yoloe_res = yoloe.predict(img)[0]
-                preds = yoloe_res.boxes.cls  # .detach().cpu().tolist()
+                yolo_res = run_yolo(yolo, img, [from_concept, to_concept])
+                preds = yolo_res.boxes.cls  # .detach().cpu().tolist()
                 # print(preds)
                 if len(preds) > 0:
                     print(f"Found {len(preds)} objects!")
-                    res_dicts = parse_yoloe_res(yoloe_res, prompt_free=False)
-                    free_gpu(yoloe_res)
+                    res_dicts = parse_yolo_res(yolo_res, prompt_free=False)
+                    free_gpu(yolo_res)
                     print(res_dicts)
                     # Since we have from_concept and to_concept, merge data
                     matched_rk = {
@@ -355,14 +363,14 @@ if __name__ == "__main__":
 
                     counts[model][ds]["with_cv_match"] += 1
                     curr_rk_matches.append(matched_rk)
-                    free_gpu(yoloe_res)
+                    free_gpu(yolo_res)
                 else:
                     print("Need to go look for concepts...")
                     # We did not find anything, try to use the prompt-free yoloe
-                    free_gpu(yoloe_res)
-                    yoloe_pf_res = yoloe_pf.predict(img)[0]
-                    res_dicts = parse_yoloe_res(yoloe_pf_res, prompt_free=True)
-                    free_gpu(yoloe_pf_res)
+                    free_gpu(yolo_res)
+                    yolo_pf_res = run_yolo(yolo_pf, img)
+                    res_dicts = parse_yolo_res(yolo_pf_res, prompt_free=True)
+                    free_gpu(yolo_pf_res)
                     # We can not do exact matches here, try again with cosine similarity
                     # print(res_dicts)
                     max_sim_from_concept = get_similar_concept(
@@ -429,6 +437,6 @@ if __name__ == "__main__":
         print(counts)
 
         # Save data to file
-        out_path = Path("..", rk_hdl.get_final_rk_path())
+        out_path = Path("..", rk_hdl.get_rk_final_path())
         make_dir(out_path.parent)
         save_json(all_matches, out_path)
