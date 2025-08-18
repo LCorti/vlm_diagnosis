@@ -20,10 +20,10 @@ class DatasetHandler:
 
     def get_ds_list(self, return_holdout: bool = False) -> list:
         if not return_holdout:
-            ds_list = list(self.SK_PATHS.keys())
+            ds_list = list(self.DATASET_PATHS.keys())
             ds_list.remove("vqav2_holdout")
             return ds_list
-        return list(self.SK_PATHS.keys())
+        return list(self.DATASET_PATHS.keys())
 
     ## Update from here
 
