@@ -15,7 +15,7 @@ if module_path not in sys.path:
 from config_handlers.rk_handler import RKHandler
 from config_handlers.sk_handler import SKHandler
 from utils.graph_utils import nx_triple_to_str
-from utils.data_io import make_dir, load_json, load_jsonl, save_json
+from utils.data_io import make_dir, load_json, load_jsonl, save_jsonl
 
 
 def free_gpu(var: Any) -> None:
@@ -220,7 +220,7 @@ if __name__ == "__main__":
         )
         rk_parsed = load_jsonl(rk_parsed_path)
 
-        all_matches = {}
+        all_matches = []
 
         for rk in rk_parsed:
             print(f">> Checking question {rk['question_id']}")
@@ -432,11 +432,17 @@ if __name__ == "__main__":
                         counts[model][ds]["with_cv_match"] += 1
                     curr_rk_matches.append(matched_rk)
 
-            all_matches[rk["question_id"]] = curr_rk_matches
+            all_matches.append(
+                {
+                    "question_id": rk["question_id"],
+                    "response": rk["response"],
+                    "triple_objs": curr_rk_matches,
+                }
+            )
 
         print(counts)
 
         # Save data to file
         out_path = Path("..", rk_hdl.get_rk_final_path())
         make_dir(out_path.parent)
-        save_json(all_matches, out_path)
+        save_jsonl(all_matches, out_path)
