@@ -62,28 +62,17 @@ def load_merge_sk_data(sk_hdl: SKHandler) -> list:
     return sk_data
 
 
-def get_sk_rels(sk: dict) -> list[dict]:
-    rels = []
-    for rel in sk["relations"]:
-        rels.append(
-            {
-                "from_concept": rel["from_concept"]["bb_label"]["bb_label_text"],
-                "relationship": rel["rel_label"]["rel_label_text"],
-                "to_concept": rel["to_concept"]["bb_label"]["bb_label_text"],
-            }
-        )
-    return rels
-
-
-def retrieve_sk(rk_rel: dict, sk_list: list[dict]) -> dict:
+def exact_match_sk(rk_rel: dict, sk_list: list[dict]) -> dict:
     return next(
         (
             (
                 sk_rel
                 for sk_rel in sk_list
-                if sk_rel["from_concept"] == rk_rel["from_concept"]
-                and sk_rel["relationship"] == rk_rel["relationship"]
-                and sk_rel["to_concept"] == rk_rel["to_concept"]
+                if sk_rel["from_concept"]["bb_label"]["bb_label_text"]
+                == rk_rel["from_concept"]
+                and sk_rel["rel_label"]["rel_label_text"] == rk_rel["relationship"]
+                and sk_rel["to_concept"]["bb_label"]["bb_label_text"]
+                == rk_rel["to_concept"]
             )
         ),
         None,
@@ -242,7 +231,7 @@ if __name__ == "__main__":
 
             # Make SK into a format that can be easily compared with SK
             # RK format: {'from_concept': ..., 'relationship': ..., 'to_concept': ...}
-            curr_sk_rels = get_sk_rels(curr_sk)
+            curr_sk_rels = curr_sk["relations"]
             # Go relation by relation and try to match
             curr_rk_matches = []
             for rk_rel in rk["triple_objs"]:
@@ -253,7 +242,7 @@ if __name__ == "__main__":
                 # First try: exact match -- look for the RK in the list of SK
                 # The matching is done at the triple-level to void the "wrong" concepts
                 # to be matched by mistake
-                match_sk_rel = retrieve_sk(rk_rel, curr_sk_rels)
+                match_sk_rel = exact_match_sk(rk_rel, curr_sk_rels)
                 # If a match is found, just use that (and update count)
                 # and go to next iteration
                 if match_sk_rel:
