@@ -25,28 +25,17 @@ def load_merge_sk_data(sk_hdl: SKHandler) -> list:
     return sk_data
 
 
-def get_sk_rels(sk: dict) -> list[dict]:
-    rels = []
-    for rel in sk["relations"]:
-        rels.append(
-            {
-                "from_concept": rel["from_concept"]["bb_label"]["bb_label_text"],
-                "relationship": rel["rel_label"]["rel_label_text"],
-                "to_concept": rel["to_concept"]["bb_label"]["bb_label_text"],
-            }
-        )
-    return rels
-
-
 def exact_match_sk(rk_rel: dict, sk_list: list[dict]) -> dict:
     return next(
         (
             (
                 sk_rel
                 for sk_rel in sk_list
-                if sk_rel["from_concept"] == rk_rel["from_concept"]
-                and sk_rel["relationship"] == rk_rel["relationship"]
-                and sk_rel["to_concept"] == rk_rel["to_concept"]
+                if sk_rel["from_concept"]["bb_label"]["bb_label_text"]
+                == rk_rel["from_concept"]
+                and sk_rel["rel_label"]["rel_label_text"] == rk_rel["relationship"]
+                and sk_rel["to_concept"]["bb_label"]["bb_label_text"]
+                == rk_rel["to_concept"]
             )
         ),
         None,
@@ -85,7 +74,7 @@ def get_similar_concept(
     emb_model: SentenceTransformer, concept: str, list_search: list[dict]
 ) -> dict:
     max_sim = -1
-    sim_th = 0.5
+    sim_th = 0.7
     curr_concept = {}
     for elem in list_search:
         sim_from_concept = compute_similarity(
@@ -213,13 +202,14 @@ if __name__ == "__main__":
                 print(f"Big error: SK missing for question {rk['question_id']}")
                 break
 
-            # Load image for 3rd matching step
-            img_path = Path("..", curr_sk["img_path"])
+            # Load (resized) image for the OVD matching step
+            img_path = curr_sk["img_path"].replace("/imgs/", "/imgs_resized/")
+            img_path = Path("..", img_path)
             img = Image.open(img_path)
 
             # Make SK into a format that can be easily compared with SK
             # RK format: {'from_concept': ..., 'relationship': ..., 'to_concept': ...}
-            curr_sk_rels = get_sk_rels(curr_sk)
+            curr_sk_rels = curr_sk["relations"]
             # Go relation by relation and try to match
             curr_rk_matches = []
             for rk_rel in rk["triple_objs"]:
