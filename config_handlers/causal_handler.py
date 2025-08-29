@@ -6,7 +6,7 @@ class CausalHandler:
     def __init__(self):
         self.CA_CONFIG_PATH = (
             Path(__file__)
-            .parent.joinpath(Path("..", "config", "CA_PATHS.yaml"))
+            .parent.joinpath(Path("..", "config", "ce_paths.yaml"))
             .resolve()
         )
         self.CA_PATHS = self.load_config(self.CA_CONFIG_PATH)
@@ -37,13 +37,23 @@ class CausalHandler:
         return list(self.CA_PATHS[model].keys())
 
     def build_path(self, target: str) -> Path:
-        fn = self.CA_PATHS[self.CURR_MODEL][self.CURR_DS][target]
-        if target in ["ca_data", "estimates"]:
-            new_fn = Path(target, self.CURR_MODEL, self.CURR_DS, fn)
+        if target == "imgs_occluded":
+            # In this case, we simply point to the dir with the occluded images.
+            # Here, we have (1) a folder for each question idx with all the occluded
+            # images inside and (2) files that describe what combination of concepts was
+            # masked in them image.
+            new_fn = Path(target, self.CURR_MODEL, self.CURR_DS)
+        else:
+            fn = self.CA_PATHS[self.CURR_MODEL][self.CURR_DS][target]
+            if target in ["ca_data", "estimates"]:
+                new_fn = Path(target, self.CURR_MODEL, self.CURR_DS, fn)
         return self.BASE_DIR.joinpath(new_fn)
 
     def get_estimates_path(self) -> Path:
         return self.build_path("estimates")
 
     def get_ca_data_path(self) -> Path:
-        return self.get_paths("ca_data")
+        return self.build_path("ca_data")
+
+    def get_imgs_occluded_path(self) -> Path:
+        return self.build_path("imgs_occluded")
