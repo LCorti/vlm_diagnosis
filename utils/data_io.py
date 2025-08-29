@@ -25,9 +25,9 @@ def load_json(file_path: str | Path) -> dict:
     return json_data
 
 
-def save_json(data: dict, file_path: str | Path) -> None:
+def save_json(data: dict, file_path: str | Path, indent: int = 2) -> None:
     with open(file_path, "w") as fp:
-        json.dump(data, fp, indent=2)
+        json.dump(data, fp, indent=indent)
 
 
 def load_jsonl(file_path: str | Path) -> list[dict]:
