@@ -174,7 +174,7 @@ if __name__ == "__main__":
         causal_hdl.set_curr_model(model)
         causal_hdl.set_curr_ds(ds)
         imgs_occ_path = base_dir.joinpath(causal_hdl.get_imgs_occluded_path())
-        data_io.make_dir(base_dir.joinpath(imgs_occ_path))
+        data_io.make_dir(imgs_occ_path)
 
         for rk in rk_final:
             det_dict = {
