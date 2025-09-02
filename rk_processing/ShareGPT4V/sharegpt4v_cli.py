@@ -20,7 +20,6 @@ from share4v.mm_utils import (
     tokenizer_image_token,
 )
 from share4v.model.builder import load_pretrained_model
-from share4v.mm_utils import get_model_name_from_path
 from share4v.utils import disable_torch_init
 
 
