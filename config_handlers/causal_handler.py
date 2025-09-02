@@ -45,7 +45,7 @@ class CausalHandler:
             new_fn = Path(target, self.CURR_MODEL, self.CURR_DS)
         else:
             fn = self.CA_PATHS[self.CURR_MODEL][self.CURR_DS][target]
-            if target in ["ca_data", "estimates"]:
+            if target in ["ca_data", "estimates", "counter_resps"]:
                 new_fn = Path(target, self.CURR_MODEL, self.CURR_DS, fn)
         return self.BASE_DIR.joinpath(new_fn)
 
@@ -57,3 +57,6 @@ class CausalHandler:
 
     def get_imgs_occluded_path(self) -> Path:
         return self.build_path("imgs_occluded")
+
+    def get_counter_resps_path(self) -> Path:
+        return self.build_path("counter_resps")
