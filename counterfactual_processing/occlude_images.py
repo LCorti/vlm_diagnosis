@@ -175,15 +175,8 @@ if __name__ == "__main__":
         causal_hdl.set_curr_ds(ds)
 
         # Only for running the code on remote VPS w/ storage attached
-        storage_path = Path(Path(__file__).resolve().root, "data", "storage")
         imgs_occ_path = causal_hdl.get_imgs_occluded_path()
-        if storage_path.exists():
-            imgs_occ_path = storage_path.joinpath(Path(*imgs_occ_path.parts[1:]))
-            print(f"External storage found. Saving to '{imgs_occ_path}'")
-        else:
-            # If not present, save within project
-            imgs_occ_path = base_dir.joinpath(imgs_occ_path)
-            print(f"External NOT storage found. Saving to {imgs_occ_path}")
+        imgs_occ_path = data_io.add_path_to_surf_storage(base_dir, imgs_occ_path)
         data_io.make_dir(imgs_occ_path)
 
         for rk in rk_final:
