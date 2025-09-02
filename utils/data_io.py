@@ -66,6 +66,19 @@ def make_dir(dir_path: str | Path) -> None:
         print(f"{f_exception}")
 
 
+def add_path_to_surf_storage(base_path: Path, target_path: Path) -> Path:
+    # This is always the case with SURF
+    storage_path = Path(Path(__file__).resolve().root, "data", "storage")
+    if storage_path.exists():
+        final_path = storage_path.joinpath(Path(*target_path.parts[1:]))
+        print(f"External storage found. Saving to '{final_path}'")
+    else:
+        # If not present, save within project
+        final_path = base_path.joinpath(target_path)
+        print(f"External NOT storage found. Saving to {final_path}")
+    return final_path
+
+
 # == == == == == == == == == == == == == == == ==
 # Handling NX graphs
 # == == == == == == == == == == == == == == == ==
