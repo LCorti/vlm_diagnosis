@@ -2,6 +2,8 @@ import argparse
 import sys
 import torch
 
+from pathlib import Path
+
 from minigpt4.common.config import Config
 from minigpt4.common.registry import registry
 from minigpt4.conversation.conversation import Chat
@@ -10,15 +12,7 @@ from minigpt4.models import *
 from minigpt4.processors import *
 from minigpt4.runners import *
 from minigpt4.tasks import *
-from pathlib import Path
 
-module_path = str(Path("..", "..").resolve())
-if module_path not in sys.path:
-    sys.path.append(module_path)
-
-from config_handlers.rk_handler import RKHandler
-from rk_processing.common_utils.gen_utils import GenUtils
-from utils.data_io import make_dir, load_json, save_jsonl
 from utils.model_utils import (
     ask,
     get_chat_state,
@@ -27,7 +21,16 @@ from utils.model_utils import (
     make_message,
 )
 
-PROMPT_VERSION = 5
+module_path = str(Path("..", "..").resolve())
+if module_path not in sys.path:
+    sys.path.append(module_path)
+
+import utils.data_io as data_io
+
+from config_handlers.rk_handler import RKHandler
+from rk_processing.utils.gen_utils import GenUtils
+
+PROMPT_VERSION = 4
 MODEL_NAME = "minigpt4"
 
 # ================================================================== #
@@ -84,10 +87,10 @@ if __name__ == "__main__":
     base_dir = Path(__file__).parent.parent.parent
     full_raw_out_f = base_dir.joinpath(raw_out_f)
     full_raw_out_dir = base_dir.joinpath(Path(raw_out_f).parent)
-    make_dir(full_raw_out_dir)
+    data_io.make_dir(full_raw_out_dir)
     full_parsed_out_f = base_dir.joinpath(parsed_out_f)
     full_parsed_out_dir = base_dir.joinpath(Path(parsed_out_f).parent)
-    make_dir(full_parsed_out_dir)
+    data_io.make_dir(full_parsed_out_dir)
 
     # Load generation config and prompt templates for generation
     gen_utils = GenUtils(MODEL_NAME, prompt_version=PROMPT_VERSION)
@@ -112,7 +115,7 @@ if __name__ == "__main__":
     # Load data
     print("Loading data...")
     print("Loading questions from {}".format(questions_file))
-    questions = load_json(args.questions_file)
+    questions = data_io.load_json(args.questions_file)
 
     # == == == == Get responses and self-explanations == == == ==
     print("Running inference and computing explanations...")
@@ -186,7 +189,7 @@ if __name__ == "__main__":
 
         # Save results to file
         print("... Saving raw Really Knows ...")
-        save_jsonl(all_rk, full_raw_out_f)
+        data_io.save_jsonl(all_rk, full_raw_out_f)
         print("... Saving parsed Really Knows ...")
-        save_jsonl(all_parsed_rk, full_parsed_out_f)
+        data_io.save_jsonl(all_parsed_rk, full_parsed_out_f)
         print("All data saved.")

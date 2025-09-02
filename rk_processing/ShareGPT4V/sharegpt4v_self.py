@@ -2,20 +2,13 @@ import argparse
 import sys
 import torch
 
+from pathlib import Path
+
+from rk_processing.utils.gen_utils import GenUtils
 from share4v.constants import IMAGE_TOKEN_INDEX
 from share4v.mm_utils import get_model_name_from_path, tokenizer_image_token
 from share4v.model.builder import load_pretrained_model
 from share4v.utils import disable_torch_init
-from pathlib import Path
-
-module_path = str(Path("..", "..").resolve())
-if module_path not in sys.path:
-    sys.path.append(module_path)
-
-from config_handlers.rk_handler import RKHandler
-from rk_processing.common_utils.gen_utils import GenUtils
-from rk_processing.common_utils.image_utils import load_image
-from utils.data_io import make_dir, load_json, save_jsonl
 from utils.model_utils import (
     add_conv_step,
     get_conv_template,
@@ -25,8 +18,17 @@ from utils.model_utils import (
     set_conv_mode,
 )
 
+module_path = str(Path("..", "..").resolve())
+if module_path not in sys.path:
+    sys.path.append(module_path)
 
-PROMPT_VERSION = 5
+import utils.data_io as data_io
+import utils.image_utils as image_utils
+
+from config_handlers.rk_handler import RKHandler
+
+
+PROMPT_VERSION = 4
 MODEL_NAME = "sharegpt4v"
 HF_MODEL_NAME = "Lin-Chen/ShareGPT4V-7B"
 
@@ -81,10 +83,10 @@ if __name__ == "__main__":
     base_dir = Path(__file__).parent.parent.parent
     full_raw_out_f = base_dir.joinpath(raw_out_f)
     full_raw_out_dir = base_dir.joinpath(Path(raw_out_f).parent)
-    make_dir(full_raw_out_dir)
+    data_io.make_dir(full_raw_out_dir)
     full_parsed_out_f = base_dir.joinpath(parsed_out_f)
     full_parsed_out_dir = base_dir.joinpath(Path(parsed_out_f).parent)
-    make_dir(full_parsed_out_dir)
+    data_io.make_dir(full_parsed_out_dir)
 
     # Load generation config
     gen_utils = GenUtils(MODEL_NAME, prompt_version=PROMPT_VERSION)
@@ -119,7 +121,7 @@ if __name__ == "__main__":
     # Load data
     print("Loading data...")
     print("Loading questions from {}".format(questions_file))
-    questions = load_json(questions_file)
+    questions = data_io.load_json(questions_file)
 
     # == == == == Get responses and self-explanations == == == ==
     print("Running inference and computing explanations...")
@@ -136,7 +138,7 @@ if __name__ == "__main__":
         # Loading image
         img_path = base_dir.joinpath(curr_q["img_path"])
         print("-- Loading image {}".format(img_path))
-        image = load_image(img_path)
+        image = image_utils.load_img(img_path)
         image_tensor = (
             image_processor.preprocess(image, return_tensors="pt")["pixel_values"]
             .half()
@@ -215,7 +217,7 @@ if __name__ == "__main__":
 
         # Saving results to file
         print("... Saving raw Really Knows ...")
-        save_jsonl(all_rk, full_raw_out_f)
+        data_io.save_jsonl(all_rk, full_raw_out_f)
         print("... Saving parsed Really Knows ...")
-        save_jsonl(all_parsed_rk, full_parsed_out_f)
+        data_io.save_jsonl(all_parsed_rk, full_parsed_out_f)
         print("All data saved.")

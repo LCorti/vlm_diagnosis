@@ -5,20 +5,19 @@ import torch
 from pathlib import Path
 from transformers import AutoTokenizer, AutoModel
 
+from rk_processing.utils.gen_utils import GenUtils
+from utils.model_utils import split_model, make_message
+
 module_path = str(Path("..", "..").resolve())
 if module_path not in sys.path:
     sys.path.append(module_path)
 
-from config_handlers.rk_handler import RKHandler
-from rk_processing.common_utils.gen_utils import GenUtils
-from rk_processing.common_utils.image_utils import (
-    load_image,
-    get_image_tensor,
-)
-from utils.data_io import make_dir, load_json, save_jsonl
-from utils.model_utils import split_model, make_message
+import utils.data_io as data_io
+import utils.image_utils as image_utils
 
-PROMPT_VERSION = 5
+from config_handlers.rk_handler import RKHandler
+
+PROMPT_VERSION = 4
 MODEL_NAME = "internvl2"
 HF_MODEL_NAME = "OpenGVLab/InternVL2-8B"
 
@@ -70,10 +69,10 @@ if __name__ == "__main__":
     base_dir = Path(__file__).parent.parent.parent
     full_raw_out_f = base_dir.joinpath(raw_out_f)
     full_raw_out_dir = base_dir.joinpath(Path(raw_out_f).parent)
-    make_dir(full_raw_out_dir)
+    data_io.make_dir(full_raw_out_dir)
     full_parsed_out_f = base_dir.joinpath(parsed_out_f)
     full_parsed_out_dir = base_dir.joinpath(Path(parsed_out_f).parent)
-    make_dir(full_parsed_out_dir)
+    data_io.make_dir(full_parsed_out_dir)
 
     # Load generation config
     gen_utils = GenUtils(MODEL_NAME, prompt_version=PROMPT_VERSION)
@@ -120,7 +119,7 @@ if __name__ == "__main__":
     # Load data
     print("Loading data...")
     print("Loading questions from {}".format(questions_file))
-    questions = load_json(questions_file)
+    questions = data_io.load_json(questions_file)
 
     # == == == == Get responses and self-explanations == == == ==
     print("Running inference and computing explanations...")
@@ -137,8 +136,10 @@ if __name__ == "__main__":
         # Loading image
         img_path = base_dir.joinpath(curr_q["img_path"])
         print("-- Loading image {}".format(img_path))
-        image = load_image(img_path)
-        image_tensor = get_image_tensor(image, max_num=12).to(torch.bfloat16).cuda()
+        image = image_utils.load_img(img_path)
+        image_tensor = (
+            image_utils.get_image_tensor(image, max_num=12).to(torch.bfloat16).cuda()
+        )
 
         # Format text input
         message = make_message(question_template, curr_q)
@@ -183,7 +184,7 @@ if __name__ == "__main__":
 
         # Saving results to file
         print("... Saving raw Really Knows ...")
-        save_jsonl(all_rk, full_raw_out_f)
+        data_io.save_jsonl(all_rk, full_raw_out_f)
         print("... Saving parsed Really Knows ...")
-        save_jsonl(all_parsed_rk, full_parsed_out_f)
+        data_io.save_jsonl(all_parsed_rk, full_parsed_out_f)
         print("All data saved.")
