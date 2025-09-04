@@ -8,7 +8,6 @@ from llava.constants import IMAGE_TOKEN_INDEX
 from llava.mm_utils import tokenizer_image_token, get_model_name_from_path
 from llava.model.builder import load_pretrained_model
 from llava.utils import disable_torch_init
-from rk_processing.utils.gen_utils import GenUtils
 from utils.model_utils import (
     set_conv_mode,
     make_message,
@@ -25,6 +24,8 @@ import utils.image_utils as image_utils
 
 from config_handlers.causal_handler import CausalHandler
 from config_handlers.dataset_handler import DatasetHandler
+from rk_processing.utils.gen_utils import GenUtils
+from rk_processing.utils.path_utils import merge_path
 
 
 PROMPT_VERSION = 4
@@ -142,7 +143,7 @@ if __name__ == "__main__":
 
         curr_cr_list = []
         for subset in q_det["powerset"].values():
-            for _, data in subset.item():
+            for _, data in subset.items():
                 # Prepare object to store info
                 curr_cr = {
                     "question_id": q_det["question_id"],
@@ -153,7 +154,8 @@ if __name__ == "__main__":
 
                 # Run inference
                 # Load image
-                image = image_utils.load_img(data["path"])
+                img_path = merge_path(imgs_occ_paths, data["path"])
+                image = image_utils.load_img(img_path)
                 image_tensor = (
                     image_processor.preprocess(image, return_tensors="pt")[
                         "pixel_values"

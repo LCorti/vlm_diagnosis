@@ -5,7 +5,6 @@ import torch
 from pathlib import Path
 from transformers import AutoTokenizer, AutoModel
 
-from rk_processing.utils.gen_utils import GenUtils
 from utils.model_utils import split_model, make_message
 
 module_path = str(Path("..", "..").resolve())
@@ -17,6 +16,8 @@ import utils.image_utils as image_utils
 
 from config_handlers.causal_handler import CausalHandler
 from config_handlers.dataset_handler import DatasetHandler
+from rk_processing.utils.gen_utils import GenUtils
+from rk_processing.utils.path_utils import merge_path
 
 PROMPT_VERSION = 4
 MODEL_NAME = "internvl2"
@@ -142,7 +143,7 @@ if __name__ == "__main__":
 
         curr_cr_list = []
         for subset in q_det["powerset"].values():
-            for _, data in subset.item():
+            for _, data in subset.items():
                 # Prepare object to store info
                 curr_cr = {
                     "question_id": q_det["question_id"],
@@ -153,7 +154,8 @@ if __name__ == "__main__":
 
                 # Run inference
                 # Load image
-                image = image_utils.load_img(data["path"])
+                img_path = merge_path(imgs_occ_paths, data["path"])
+                image = image_utils.load_img(img_path)
                 image_tensor = (
                     image_utils.get_image_tensor(image, max_num=12)
                     .to(torch.bfloat16)

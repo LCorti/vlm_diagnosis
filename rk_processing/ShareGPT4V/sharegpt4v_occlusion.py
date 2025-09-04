@@ -4,8 +4,6 @@ import torch
 
 from pathlib import Path
 
-from rk_processing.utils.gen_utils import GenUtils
-
 from share4v.constants import IMAGE_TOKEN_INDEX
 from share4v.mm_utils import get_model_name_from_path, tokenizer_image_token
 from share4v.model.builder import load_pretrained_model
@@ -28,6 +26,8 @@ import utils.image_utils as image_utils
 
 from config_handlers.causal_handler import CausalHandler
 from config_handlers.dataset_handler import DatasetHandler
+from rk_processing.utils.gen_utils import GenUtils
+from rk_processing.utils.path_utils import merge_path
 
 
 PROMPT_VERSION = 4
@@ -144,7 +144,7 @@ if __name__ == "__main__":
 
         curr_cr_list = []
         for subset in q_det["powerset"].values():
-            for _, data in subset.item():
+            for _, data in subset.items():
                 # Prepare object to store info
                 curr_cr = {
                     "question_id": q_det["question_id"],
@@ -155,7 +155,8 @@ if __name__ == "__main__":
 
                 # Run inference
                 # Loading image
-                image = image_utils.load_img(data["path"])
+                img_path = merge_path(imgs_occ_paths, data["path"])
+                image = image_utils.load_img(img_path)
                 image_tensor = (
                     image_processor.preprocess(image, return_tensors="pt")[
                         "pixel_values"

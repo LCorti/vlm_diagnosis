@@ -12,7 +12,6 @@ from minigpt4.models import *
 from minigpt4.processors import *
 from minigpt4.runners import *
 from minigpt4.tasks import *
-from rk_processing.utils.gen_utils import GenUtils
 from utils.model_utils import (
     ask,
     get_chat_state,
@@ -29,6 +28,8 @@ import utils.data_io as data_io
 
 from config_handlers.causal_handler import CausalHandler
 from config_handlers.dataset_handler import DatasetHandler
+from rk_processing.utils.gen_utils import GenUtils
+from rk_processing.utils.path_utils import merge_path
 
 PROMPT_VERSION = 4
 MODEL_NAME = "minigpt4"
@@ -139,7 +140,7 @@ if __name__ == "__main__":
 
         curr_cr_list = []
         for subset in q_det["powerset"].values():
-            for _, data in subset.item():
+            for _, data in subset.items():
                 # Prepare object to store info
                 curr_cr = {
                     "question_id": q_det["question_id"],
@@ -152,7 +153,9 @@ if __name__ == "__main__":
                 # Prepare message and image
                 message = make_message(question_template, question)
                 conv = get_chat_state()
-                conv, img_list = load_image(chat, data["path"], conv)
+                conv, img_list = load_image(
+                    chat, merge_path(imgs_occ_paths, data["path"]), conv
+                )
                 # Get response
                 conv = ask(chat, message, conv)
                 curr_cr["response"] = get_response(
