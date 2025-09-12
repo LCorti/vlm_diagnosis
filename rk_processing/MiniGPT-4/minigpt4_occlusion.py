@@ -98,12 +98,14 @@ if __name__ == "__main__":
     model_config = cfg.model_cfg
     model_config.device_8bit = args.gpu_id
     model_cls = registry.get_model_class(model_config.arch)
-    model = model_cls.from_config(model_config).to("cuda:{}".format(args.gpu_id))
+    # model = model_cls.from_config(model_config).to("cuda:{}".format(args.gpu_id))
+    model = model_cls.from_config(model_config)
     vis_processor_cfg = cfg.datasets_cfg.cc_sbu_align.vis_processor.train
     vis_processor = registry.get_processor_class(vis_processor_cfg.name).from_config(
         vis_processor_cfg
     )
-    chat = Chat(model, vis_processor, device="cuda:{}".format(args.gpu_id))
+    # chat = Chat(model, vis_processor, device="cuda:{}".format(args.gpu_id))
+    chat = Chat(model, vis_processor, device="cuda")
     print("Model loaded.")
 
     # Load data
@@ -162,7 +164,6 @@ if __name__ == "__main__":
                     chat,
                     img_list,
                     conv,
-                    num_repeats=1,
                     num_beams=args.num_beams,
                     temperature=args.temperature,
                     max_new_tokens=args.max_new_tokens,

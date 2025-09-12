@@ -192,7 +192,7 @@ class Chat:
         embs = embs[:, begin_idx:]
 
         generation_kwargs = dict(
-            inputs_embeds=embs,
+            inputs_embeds=embs.half(),
             max_new_tokens=max_new_tokens,
             stopping_criteria=self.stopping_criteria,
             num_beams=num_beams,
@@ -248,8 +248,8 @@ class Chat:
                 image = image.unsqueeze(0)
             image = image.to(self.device)
 
-        image_emb, _ = self.model.encode_img(image)
-        img_list.append(image_emb)
+        image_emb, _ = self.model.encode_img(image.to("cpu"))
+        img_list.append(image_emb.to("cuda"))
 
     def upload_img(self, image, conv, img_list):
         conv.append_message(conv.roles[0], "<Img><ImageHere></Img>")

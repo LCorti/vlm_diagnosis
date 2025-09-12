@@ -1,8 +1,8 @@
 """
- Copyright (c) 2022, salesforce.com, inc.
- All rights reserved.
- SPDX-License-Identifier: BSD-3-Clause
- For full license text, see the LICENSE_Lavis file in the repo root or https://opensource.org/licenses/BSD-3-Clause
+Copyright (c) 2022, salesforce.com, inc.
+All rights reserved.
+SPDX-License-Identifier: BSD-3-Clause
+For full license text, see the LICENSE_Lavis file in the repo root or https://opensource.org/licenses/BSD-3-Clause
 """
 
 import os
@@ -24,7 +24,6 @@ from minigpt4.common.dist_utils import download_cached_file
 from minigpt4.common.utils import get_abs_path, is_url
 from minigpt4.models.eva_vit import create_eva_vit_g
 from minigpt4.models.modeling_llama import LlamaForCausalLM
-
 
 
 class BaseModel(nn.Module):
@@ -84,9 +83,9 @@ class BaseModel(nn.Module):
 
     @classmethod
     def default_config_path(cls, model_type):
-        assert (
-            model_type in cls.PRETRAINED_MODEL_CONFIG_DICT
-        ), "Unknown model type {}".format(model_type)
+        assert model_type in cls.PRETRAINED_MODEL_CONFIG_DICT, (
+            "Unknown model type {}".format(model_type)
+        )
         return get_abs_path(cls.PRETRAINED_MODEL_CONFIG_DICT[model_type])
 
     def load_checkpoint_from_config(self, cfg, **kwargs):
@@ -100,9 +99,9 @@ class BaseModel(nn.Module):
         load_finetuned = cfg.get("load_finetuned", True)
         if load_finetuned:
             finetune_path = cfg.get("finetuned", None)
-            assert (
-                finetune_path is not None
-            ), "Found load_finetuned is True, but finetune_path is None."
+            assert finetune_path is not None, (
+                "Found load_finetuned is True, but finetune_path is None."
+            )
             self.load_checkpoint(url_or_filename=finetune_path)
         else:
             # load pre-trained weights
@@ -134,17 +133,25 @@ class BaseModel(nn.Module):
         enable_autocast = self.device != torch.device("cpu")
 
         if enable_autocast:
-            return torch.cuda.amp.autocast(dtype=dtype)
+            return torch.amp.autocast("cuda", dtype=dtype)
         else:
             return contextlib.nullcontext()
 
     @classmethod
     def init_vision_encoder(
-        cls, model_name, img_size, drop_path_rate, use_grad_checkpoint, precision, freeze
+        cls,
+        model_name,
+        img_size,
+        drop_path_rate,
+        use_grad_checkpoint,
+        precision,
+        freeze,
     ):
-        logging.info('Loading VIT')
+        logging.info("Loading VIT")
 
-        assert model_name == "eva_clip_g", "vit model must be eva_clip_g for current version of MiniGPT-4"
+        assert model_name == "eva_clip_g", (
+            "vit model must be eva_clip_g for current version of MiniGPT-4"
+        )
         if not freeze:
             precision = "fp32"  # fp16 is not for training
 
@@ -165,13 +172,22 @@ class BaseModel(nn.Module):
             ln_vision.train = disabled_train
             logging.info("freeze vision encoder")
 
-        logging.info('Loading VIT Done')
+        logging.info("Loading VIT Done")
         return visual_encoder, ln_vision
 
-    def init_llm(cls, llama_model_path, low_resource=False, low_res_device=0, lora_r=0,
-                 lora_target_modules=["q_proj","v_proj"], **lora_kargs):
-        logging.info('Loading LLAMA')
-        llama_tokenizer = LlamaTokenizer.from_pretrained(llama_model_path, use_fast=False)
+    def init_llm(
+        cls,
+        llama_model_path,
+        low_resource=False,
+        low_res_device=0,
+        lora_r=0,
+        lora_target_modules=["q_proj", "v_proj"],
+        **lora_kargs,
+    ):
+        logging.info("Loading LLAMA")
+        llama_tokenizer = LlamaTokenizer.from_pretrained(
+            llama_model_path, use_fast=False
+        )
         llama_tokenizer.pad_token = "$$"
 
         if low_resource:
@@ -179,12 +195,11 @@ class BaseModel(nn.Module):
                 llama_model_path,
                 torch_dtype=torch.float16,
                 load_in_8bit=True,
-                device_map={'': low_res_device}
+                device_map={"": low_res_device},
             )
         else:
             llama_model = LlamaForCausalLM.from_pretrained(
-                llama_model_path,
-                torch_dtype=torch.float16,
+                llama_model_path, torch_dtype=torch.float16, device_map="auto"
             )
 
         if lora_r > 0:
@@ -194,7 +209,7 @@ class BaseModel(nn.Module):
                 bias="none",
                 task_type="CAUSAL_LM",
                 target_modules=lora_target_modules,
-                **lora_kargs
+                **lora_kargs,
             )
             llama_model = get_peft_model(llama_model, loraconfig)
 
@@ -203,9 +218,8 @@ class BaseModel(nn.Module):
         else:
             for name, param in llama_model.named_parameters():
                 param.requires_grad = False
-        logging.info('Loading LLAMA Done')
+        logging.info("Loading LLAMA Done")
         return llama_model, llama_tokenizer
-
 
     def load_from_pretrained(self, url_or_filename):
         if is_url(url_or_filename):
@@ -241,8 +255,3 @@ class LayerNorm(nn.LayerNorm):
         orig_type = x.dtype
         ret = super().forward(x.type(torch.float32))
         return ret.type(orig_type)
-
-
-
-
-
