@@ -252,7 +252,7 @@ if __name__ == "__main__":
     causal_hdl.set_curr_model(MODEL)
 
     # Load model responses
-    base_dir = Path(__file__).parent
+    base_dir = Path(__file__).parent.parent
     resps = data_io.load_jsonl(base_dir.joinpath(rk_hdl.get_rk_final_path()))
     counter_resps = data_io.load_jsonl(
         base_dir.joinpath(causal_hdl.get_counter_resps_path())
