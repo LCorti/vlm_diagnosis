@@ -353,8 +353,10 @@ if __name__ == "__main__":
     # This is done so that we can create the '.dot' string required by 'dowhy'.
     rk_graphs = make_nx_graphs(resps)
     img_ids = list(rk_graphs.keys())
+    print("=" * 30)
     print(f"Loaded {len(rk_graphs)} from {MODEL} + {DATASET}")
     print(f"Duplicate ids: {set([x for x in img_ids if img_ids.count(x) > 1])}")
+    print("=" * 30)
 
     # Add to each graph a node corresponding to the outcome variable 'y'
     for rk in rk_graphs.values():
@@ -380,7 +382,7 @@ if __name__ == "__main__":
             print(loops)
         else:
             print("No loops found.")
-        print("=" * 30)
+        print("-" * 30)
 
         curr_rk.remove_edges_from(nx.selfloop_edges(curr_rk))
 
@@ -397,6 +399,7 @@ if __name__ == "__main__":
             confidence_intervals=True,
             do_refute=True,
         )
+    print("=" * 30)
 
     # Format and save results of causal analysis
     causal_out_path = base_dir.joinpath(causal_hdl.get_estimates_path()).resolve()
