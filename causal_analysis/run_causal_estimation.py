@@ -159,6 +159,7 @@ def run_causal_inference_DML(
     nx_graph,
     test_significance=False,
     confidence_intervals=False,
+    get_stderr=False,
     do_refute=False,
 ):
     all_estimates = {}
@@ -189,11 +190,13 @@ def run_causal_inference_DML(
         estimand = model.identify_effect(proceed_when_unidentifiable=True)
 
         # Define method params
+        # If less than default n_splits (5), use only 1 split
+        n_split = 2 if len(data) < 5 else 5
         method_params = {
             "init_params": {
                 "model_y": GradientBoostingRegressor(),
                 "model_t": GradientBoostingRegressor(),
-                "model_final": LassoCV(fit_intercept=False),
+                "model_final": LassoCV(fit_intercept=False, cv=n_split),
                 "featurizer": PolynomialFeatures(degree=1, include_bias=False),
             },
             "fit_params": {},
@@ -216,7 +219,8 @@ def run_causal_inference_DML(
             method_params=method_params,
         )
         # Compute standard error for the estimate
-        ce_estimate.get_standard_error()
+        if get_stderr:
+            ce_estimate.get_standard_error()
         all_estimates[col] = ce_estimate
 
         # Run refutation with Placebo
@@ -372,7 +376,7 @@ if __name__ == "__main__":
     refutations = {}
 
     for q_idx, rk_data in rk_graphs.items():
-        print(f">> Working with question # {q_idx}")
+        print(f">> Working with question # {q_idx} -- Samples: {len(df_dict[q_idx])}")
         curr_rk = copy.deepcopy(rk_data)
         curr_df = df_dict[q_idx]
 
@@ -395,9 +399,10 @@ if __name__ == "__main__":
         estimates[q_idx], refutations[q_idx] = run_causal_inference_DML(
             curr_df,
             curr_rk,
-            test_significance=True,
-            confidence_intervals=True,
-            do_refute=True,
+            test_significance=TEST_SIGNIFICANCE,
+            confidence_intervals=CONF_INTERVALS,
+            get_stderr=OUTPUT_STDERR,
+            do_refute=DO_REFUTE,
         )
     print("=" * 30)
 
