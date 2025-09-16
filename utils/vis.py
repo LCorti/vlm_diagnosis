@@ -6,6 +6,8 @@ import pandas as pd
 from matplotlib.transforms import ScaledTranslation
 from pathlib import Path
 
+from .graph_utils import expand_cycles
+
 # Dictionary to show nice labels
 DS_MAP = {
     "llava-bench": "LLaVa-Bench",
@@ -27,7 +29,7 @@ MODEL_MAP = {
 
 
 def save_graph_to_img(
-    graph: nx.DiGraph, out_file: str, highlight_cycles: bool = False
+    graph: nx.DiGraph, out_file: str | Path, highlight_cycles: bool = False
 ) -> None:
     # Plot graph
     plt.figure(figsize=(15, 15))
@@ -51,16 +53,18 @@ def save_graph_to_img(
 
     if highlight_cycles:
         try:
-            cycle = nx.find_cycle(graph, orientation="original")
-            nx.draw_networkx_edges(
-                graph,
-                pos,
-                arrows=True,
-                edgelist=cycle,
-                edge_color="r",
-                width=1,
-                connectionstyle=connection_style,
-            )
+            cycles = expand_cycles(list(nx.simple_cycles(graph)))
+            colours = iter(plt.cm.rainbow(np.linspace(0, 1, len(cycles))))
+            for cycle in cycles:
+                nx.draw_networkx_edges(
+                    graph,
+                    pos,
+                    arrows=True,
+                    edgelist=cycle,
+                    edge_color=next(colours),
+                    width=1,
+                    connectionstyle=connection_style,
+                )
         except Exception as e:
             print(e)
 

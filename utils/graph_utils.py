@@ -106,3 +106,25 @@ def sk_to_nx(raw_sk_rels: dict) -> DiGraph:
 
 def rk_to_nx(rk_rels: dict) -> DiGraph:
     return create_nx_graph(rk_rels)
+
+
+def expand_cycles(cycles: list) -> list:
+    new_cycles = []
+    for c in cycles:
+        if len(c) == 2:
+            """
+            Base case: we have a cycle between nodes u and v.
+            To access the corresponding edges, we need [u,v] and [v,u].
+            """
+            new_cycles.append([c, c[::-1]])
+        else:
+            """
+            For larger cycles, we need to consider a sliding window of 2 over the list.
+            For instance, if the identified cycle looks like [u,v,k], then we need
+            to make the following edges: [u,v], [v,k], [k,u]
+            """
+            subset = []
+            for i in range(len(c)):
+                subset.append([c[i], c[(i + 1) % len(c)]])
+            new_cycles.append(subset)
+    return new_cycles
