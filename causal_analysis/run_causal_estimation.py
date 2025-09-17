@@ -5,6 +5,7 @@ import networkx as nx
 import numpy as np
 import pandas as pd
 import sys
+import time
 import warnings
 
 from contextlib import redirect_stdout
@@ -96,61 +97,10 @@ def rk_to_nx(raw_rk_rels: dict) -> DiGraph:
 def make_nx_graphs(resps):
     graphs = {}
     for r in resps:
+        print(f"Processing sample id: {r['question_id']}")
         graphs[r["question_id"]] = rk_to_nx(r["triple_objs"])
+        print("-" * 40)
     return graphs
-
-
-def format_estimates(
-    estimates, refutations=None, test_significance=False, std_error=False
-):
-    out_data = {}
-    for q_idx in estimates:
-        if q_idx not in out_data:
-            out_data[q_idx] = {}
-
-        for var_name, curr_est in estimates[q_idx].items():
-            # var_name = curr_est._treatment_name[0]
-            if var_name not in out_data[q_idx]:
-                out_data[q_idx][var_name] = {}
-
-            to_save = {
-                "estimate": curr_est.value.item(),
-                "estimand_type": curr_est.target_estimand.estimand_type.value,
-                "estimand_expr": curr_est.realized_estimand_expr,
-            }
-
-            # Catch the output of the interpret() method
-            f = io.StringIO()
-            with redirect_stdout(f):
-                curr_est.interpret()
-            to_save["interpretation"] = f.getvalue().strip()
-
-            if refutations:
-                refute_data = refutations[q_idx][var_name]
-                p_val = refute_data.refutation_result["p_value"]
-                to_save["refute_test"] = {
-                    "is_stat_significant": refute_data.refutation_result[
-                        "is_statistically_significant"
-                    ].item(),
-                }
-                if isinstance(p_val, tuple):
-                    to_save["refute_test"]["p_value"] = list(p_val)
-                elif isinstance(p_val, np.floating):
-                    to_save["refute_test"]["p_value"] = p_val.item()
-
-            if test_significance:
-                p_val = curr_est.test_stat_significance()["p_value"]
-                if isinstance(p_val, tuple):
-                    to_save["p_value"] = list(p_val)
-                elif isinstance(p_val, np.floating):
-                    to_save["p_value"] = p_val.item()
-                # to_save["significance"] = None
-
-            if std_error:
-                to_save["std_error"] = curr_est.get_standard_error()
-
-            out_data[q_idx][var_name] = to_save
-    return out_data
 
 
 # Causal analysis
@@ -171,6 +121,10 @@ def run_causal_inference_DML(
     cols_to_keep = list(set(data.keys()) - set(cols_to_skip))
     data_for_estimation = data[cols_to_keep]  # n_observations x regressors
     regressors = list(data_for_estimation.drop("y", axis=1).keys())
+
+    print("## Full data ##")
+    print(data_for_estimation)
+    print("#" * 20)
 
     for col in regressors:
         print(f"Working on {col}...")
@@ -220,7 +174,14 @@ def run_causal_inference_DML(
         )
         # Compute standard error for the estimate
         if get_stderr:
-            ce_estimate.get_standard_error()
+            warnings.warn(
+                "The integration with econML seems incomplete and getting the standard error might fail."
+                "Further attempts to get/save the std. error will return None silently."
+            )
+            try:
+                ce_estimate.get_standard_error()
+            except Exception as e:
+                warnings.warn(e)
         all_estimates[col] = ce_estimate
 
         # Run refutation with Placebo
@@ -236,7 +197,65 @@ def run_causal_inference_DML(
     return all_estimates, all_refutations
 
 
+def format_estimates(
+    estimates, refutations=None, test_significance=False, std_error=False
+):
+    out_data = {}
+    for q_idx in estimates:
+        if q_idx not in out_data:
+            out_data[q_idx] = {}
+
+        for var_name, curr_est in estimates[q_idx].items():
+            # var_name = curr_est._treatment_name[0]
+            if var_name not in out_data[q_idx]:
+                out_data[q_idx][var_name] = {}
+
+            to_save = {
+                "estimate": curr_est.value.item(),
+                "estimand_type": curr_est.target_estimand.estimand_type.value,
+                "estimand_expr": curr_est.realized_estimand_expr,
+            }
+
+            # Catch the output of the interpret() method
+            f = io.StringIO()
+            with redirect_stdout(f):
+                curr_est.interpret()
+            to_save["interpretation"] = f.getvalue().strip()
+
+            if refutations[q_idx]:
+                refute_data = refutations[q_idx][var_name]
+                p_val = refute_data.refutation_result["p_value"]
+                to_save["refute_test"] = {
+                    "is_stat_significant": refute_data.refutation_result[
+                        "is_statistically_significant"
+                    ].item(),
+                }
+                if isinstance(p_val, tuple):
+                    to_save["refute_test"]["p_value"] = list(p_val)
+                elif isinstance(p_val, np.floating):
+                    to_save["refute_test"]["p_value"] = p_val.item()
+
+            if test_significance:
+                p_val = curr_est.test_stat_significance()["p_value"]
+                if isinstance(p_val, tuple):
+                    to_save["p_value"] = list(p_val)
+                elif isinstance(p_val, np.floating):
+                    to_save["p_value"] = p_val.item()
+                # to_save["significance"] = None
+
+            if std_error:
+                try:
+                    to_save["std_error"] = curr_est.get_standard_error()
+                except Exception as _:
+                    to_save["std_error"] = None
+
+            out_data[q_idx][var_name] = to_save
+    return out_data
+
+
 if __name__ == "__main__":
+    t1 = time.time()
+
     """ Setup """
     # Parse arguments
     args = parse_args()
@@ -262,6 +281,8 @@ if __name__ == "__main__":
         base_dir.joinpath(causal_hdl.get_counter_resps_path())
     )
 
+    print("=" * 60)
+    print(f"Processing data for {MODEL} + {DATASET}...")
     """ Preparing data """
     resps_ids = set([q["question_id"] for q in resps])
     dict_counter_resp = {
@@ -357,10 +378,8 @@ if __name__ == "__main__":
     # This is done so that we can create the '.dot' string required by 'dowhy'.
     rk_graphs = make_nx_graphs(resps)
     img_ids = list(rk_graphs.keys())
-    print("=" * 30)
-    print(f"Loaded {len(rk_graphs)} from {MODEL} + {DATASET}")
+    print(f"Loaded {len(rk_graphs)} samples.")
     print(f"Duplicate ids: {set([x for x in img_ids if img_ids.count(x) > 1])}")
-    print("=" * 30)
 
     # Add to each graph a node corresponding to the outcome variable 'y'
     for rk in rk_graphs.values():
@@ -376,8 +395,9 @@ if __name__ == "__main__":
     refutations = {}
 
     for q_idx, rk_data in rk_graphs.items():
+        print("=" * 60)
         print(f">> Working with question # {q_idx} -- Samples: {len(df_dict[q_idx])}")
-        curr_rk = copy.deepcopy(rk_data)
+        curr_rk = rk_data.copy()
         curr_df = df_dict[q_idx]
 
         # removing self loops for causal analysis
@@ -404,8 +424,8 @@ if __name__ == "__main__":
             get_stderr=OUTPUT_STDERR,
             do_refute=DO_REFUTE,
         )
-    print("=" * 30)
 
+    print("=" * 60)
     # Format and save results of causal analysis
     causal_out_path = base_dir.joinpath(causal_hdl.get_estimates_path()).resolve()
     print(f"Saving estimates to: {str(causal_out_path)}")
@@ -414,3 +434,5 @@ if __name__ == "__main__":
         estimates, refutations=refutations, test_significance=True, std_error=True
     )
     data_io.save_json(out_data, causal_out_path, indent=None)
+    print(f"Run ({MODEL}, {DATASET}) took {time.time() - t1:.2f}s.")
+    print("=" * 30)
