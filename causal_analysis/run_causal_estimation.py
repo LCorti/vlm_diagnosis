@@ -23,11 +23,11 @@ if module_path not in sys.path:
     sys.path.append(module_path)
 
 import utils.data_io as data_io
+import utils.graph_stats as graph_stats
 import utils.graph_utils as graph_utils
 
 from config_handlers.causal_handler import CausalHandler
 from config_handlers.rk_handler import RKHandler
-# from utils.vis import save_graph_to_img
 
 warnings.filterwarnings("ignore")
 
@@ -82,6 +82,42 @@ def fix_word_numbers(parser, x):
         return res
 
 
+def handle_cycles(graph: DiGraph, sgg_dicts) -> DiGraph:
+    # 1. Get first set of expanded cycles
+    exp_cycles = graph_utils.expand_cycles(list(nx.simple_cycles(graph)))
+    if not exp_cycles:
+        print("- No cycles found.")
+        return graph
+
+    print(f"- Identified cycles: {exp_cycles}")
+    while exp_cycles:
+        # 2. Group these cycles based on their size
+        idx_to_extract = 0
+        exp_cycles_dict = {}
+        for c in exp_cycles:
+            if len(c) not in exp_cycles_dict:
+                exp_cycles_dict[len(c)] = []
+            exp_cycles_dict[len(c)].append(c)
+        # 3. Consider smallest size and pop one
+        min_size = min(list(exp_cycles_dict.keys()))
+        curr_cycle = exp_cycles_dict[min_size][idx_to_extract]
+        least_inf = {"u": "", "v": "", "ic": np.inf}
+        for edge in curr_cycle:
+            # 4. Get label for edges in that cycle
+            label = graph.edges[edge[0], edge[1]]["label"]
+            # 5. Compute information content of label
+            ic = graph_stats.compute_ic(
+                label, sgg_dicts["predicate_counts"], sgg_dicts["predicate_freqs"]
+            )
+            if ic < least_inf["ic"]:
+                least_inf.update({"u": edge[0], "v": edge[1], "ic": ic})
+        # 6. Remove edge corresponding to the min. information content
+        graph.remove_edge(least_inf["u"], least_inf["v"])
+        # 7. Re-compute expanded cycles within the current graph
+        exp_cycles = graph_utils.expand_cycles(list(nx.simple_cycles(graph)))
+    return graph
+
+
 def rk_to_nx(raw_rk_rels: dict) -> DiGraph:
     rk_list = [
         {
@@ -91,7 +127,19 @@ def rk_to_nx(raw_rk_rels: dict) -> DiGraph:
         }
         for rk in raw_rk_rels
     ]
-    return graph_utils.create_nx_graph(rk_list)
+    nx_graph = graph_utils.create_nx_graph(rk_list)
+
+    # Removing self loops for causal analysis
+    self_loops = list(nx.selfloop_edges(nx_graph))
+    if self_loops:
+        print(f"- Found self loops: {self_loops}.")
+        nx_graph.remove_edges_from(nx.selfloop_edges(nx_graph))
+    else:
+        print("- No self-loops found.")
+
+    # Handle cycles for causal analysis
+    nx_graph = handle_cycles(nx_graph, graph_utils.load_vg1800_dict())
+    return nx_graph
 
 
 def make_nx_graphs(resps):
@@ -400,21 +448,6 @@ if __name__ == "__main__":
         curr_rk = rk_data.copy()
         curr_df = df_dict[q_idx]
 
-        # removing self loops for causal analysis
-        loops = list(nx.selfloop_edges(curr_rk))
-        if loops:
-            print(loops)
-        else:
-            print("No loops found.")
-        print("-" * 30)
-
-        curr_rk.remove_edges_from(nx.selfloop_edges(curr_rk))
-
-        # Save graph image
-        # curr_out_dir = f"{CE_OUT_DIR}/{MODEL}/{DATASET}"
-        # make_dir(curr_out_dir)
-        # save_graph_to_img(g_idx, graph, curr_out_dir)
-
         # Compute causal effects
         estimates[q_idx], refutations[q_idx] = run_causal_inference_DML(
             curr_df,
@@ -431,7 +464,10 @@ if __name__ == "__main__":
     print(f"Saving estimates to: {str(causal_out_path)}")
     data_io.make_dir(causal_out_path.parent)
     out_data = format_estimates(
-        estimates, refutations=refutations, test_significance=True, std_error=True
+        estimates,
+        refutations=refutations,
+        test_significance=TEST_SIGNIFICANCE,
+        std_error=OUTPUT_STDERR,
     )
     data_io.save_json(out_data, causal_out_path, indent=None)
     print(f"Run ({MODEL}, {DATASET}) took {time.time() - t1:.2f}s.")
