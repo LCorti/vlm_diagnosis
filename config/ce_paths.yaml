@@ -2,67 +2,67 @@ internvl2:
   llava-bench:
     counter_resps: counter_resps.jsonl
     ca_data: ca_data.jsonl
-    estimates: ce.json
+    estimates: ce.jsonl
   mmbench:
     counter_resps: counter_resps.jsonl
     ca_data: ca_data.jsonl
-    estimates: ce.json
+    estimates: ce.jsonl
   seed:
     counter_resps: counter_resps.jsonl
     ca_data: ca_data.jsonl
-    estimates: ce.json
+    estimates: ce.jsonl
   vqav2:
     counter_resps: counter_resps.jsonl
     ca_data: ca_data.jsonl
-    estimates: ce.json
+    estimates: ce.jsonl
 llava-1.6:
   llava-bench:
     counter_resps: counter_resps.jsonl
     ca_data: ca_data.jsonl
-    estimates: ce.json
+    estimates: ce.jsonl
   mmbench:
     counter_resps: counter_resps.jsonl
     ca_data: ca_data.jsonl
-    estimates: ce.json
+    estimates: ce.jsonl
   seed:
     counter_resps: counter_resps.jsonl
     ca_data: ca_data.jsonl
-    estimates: ce.json
+    estimates: ce.jsonl
   vqav2:
     counter_resps: counter_resps.jsonl
     ca_data: ca_data.jsonl
-    estimates: ce.json
+    estimates: ce.jsonl
 minigpt4:
   llava-bench:
     counter_resps: counter_resps.jsonl
     ca_data: ca_data.jsonl
-    estimates: ce.json
+    estimates: ce.jsonl
   mmbench:
     counter_resps: counter_resps.jsonl
     ca_data: ca_data.jsonl
-    estimates: ce.json
+    estimates: ce.jsonl
   seed:
     counter_resps: counter_resps.jsonl
     ca_data: ca_data.jsonl
-    estimates: ce.json
+    estimates: ce.jsonl
   vqav2:
     counter_resps: counter_resps.jsonl
     ca_data: ca_data.jsonl
-    estimates: ce.json
+    estimates: ce.jsonl
 sharegpt4v:
   llava-bench:
     counter_resps: counter_resps.jsonl
     ca_data: ca_data.jsonl
-    estimates: ce.json
+    estimates: ce.jsonl
   mmbench:
     counter_resps: counter_resps.jsonl
     ca_data: ca_data.jsonl
-    estimates: ce.json
+    estimates: ce.jsonl
   seed:
     counter_resps: counter_resps.jsonl
     ca_data: ca_data.jsonl
-    estimates: ce.json
+    estimates: ce.jsonl
   vqav2:
     counter_resps: counter_resps.jsonl
     ca_data: ca_data.jsonl
-    estimates: ce.json
+    estimates: ce.jsonl
