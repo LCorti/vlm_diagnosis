@@ -205,39 +205,78 @@ def run_causal_inference_DML(
                 "inference": BootstrapInference(n_bootstrap_samples=1, n_jobs=-1)
             }
 
-        # Control and treatment values are correct since we
-        # are occluding (removing) elements from images.
-        ce_estimate = model.estimate_effect(
-            estimand,
-            method_name="backdoor.econml.dml.DML",
-            control_value=1,
-            treatment_value=0,
-            test_significance=test_significance,
-            confidence_intervals=confidence_intervals,
-            fit_estimator=True,
-            method_params=method_params,
-        )
+        # Control and treatment values are correct since we are occluding (removing)
+        # elements from images.
+        try:
+            ce_estimate = model.estimate_effect(
+                estimand,
+                method_name="backdoor.econml.dml.DML",
+                control_value=1,
+                treatment_value=0,
+                fit_estimator=True,
+                method_params=method_params,
+            )
+        except Exception as e:
+            print("Unable to run estimation. Got the following exception:")
+            print(e)
+            ce_estimate = None
+            all_estimates[col] = ce_estimate
+            continue
+
+        # Run refutation with Placebo method
+        if do_refute:
+            print("- Running refutation test for estimate...")
+            try:
+                all_refutations[col] = model.refute_estimate(
+                    estimand,
+                    ce_estimate,
+                    method_name="placebo_treatment_refuter",
+                    show_progress_bar=False,
+                    placebo_type="permute",
+                )
+            except Exception as e:
+                print(
+                    "Unable to run refutation test of obtained estimate. Got the following exception:"
+                )
+                print(e)
+                all_refutations[col] = None
+
+        # The following calls are is wrapped in a try-except because it might fail
+        # when test_significance, confidence_intervals, or get_stderr are True.
+        # This is due to incomplete integration between the DoWhy and econML libraries.
+
+        if test_significance:
+            print("- Running significance test for estimate...")
+            try:
+                ce_estimate.test_stat_significance()
+            except Exception as e:
+                print(
+                    "Unable to test significance of obtained estimate. Got the following exception:"
+                )
+                print(e)
+
+        if confidence_intervals:
+            print("- Getting confidence intervals for estimate...")
+            try:
+                ce_estimate.get_confidence_intervals()
+            except Exception as e:
+                print(
+                    "Unable to get confidence intervals of the obtained estimate. Got the following exception:"
+                )
+                print(e)
+
         # Compute standard error for the estimate
         if get_stderr:
-            warnings.warn(
-                "The integration with econML seems incomplete and getting the standard error might fail."
-                "Further attempts to get/save the std. error will return None silently."
-            )
+            print("- Getting standard error for estimate...")
             try:
                 ce_estimate.get_standard_error()
             except Exception as e:
-                warnings.warn(e)
-        all_estimates[col] = ce_estimate
+                print(
+                    "Unable to get the standard error for the obtained estimate. Got the following exception:"
+                )
+                print(e)
 
-        # Run refutation with Placebo
-        if do_refute:
-            all_refutations[col] = model.refute_estimate(
-                estimand,
-                ce_estimate,
-                method_name="placebo_treatment_refuter",
-                show_progress_bar=False,
-                placebo_type="permute",
-            )
+        all_estimates[col] = ce_estimate
 
     return all_estimates, all_refutations
 
