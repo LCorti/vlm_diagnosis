@@ -1,7 +1,6 @@
 import argparse
 import copy
 import io
-import networkx as nx
 import numpy as np
 import pandas as pd
 import sys
@@ -11,7 +10,6 @@ import warnings
 from contextlib import redirect_stdout
 from dowhy import CausalModel
 from econml.inference import BootstrapInference
-from networkx import DiGraph
 from pathlib import Path
 from sklearn.preprocessing import PolynomialFeatures
 from sklearn.linear_model import LassoCV
@@ -23,7 +21,6 @@ if module_path not in sys.path:
     sys.path.append(module_path)
 
 import utils.data_io as data_io
-import utils.graph_stats as graph_stats
 import utils.graph_utils as graph_utils
 
 from config_handlers.causal_handler import CausalHandler
@@ -83,71 +80,11 @@ def fix_word_numbers(parser, x):
         return res
 
 
-def handle_cycles(graph: DiGraph, sgg_dicts) -> DiGraph:
-    # 1. Get first set of expanded cycles
-    exp_cycles = graph_utils.expand_cycles(list(nx.simple_cycles(graph)))
-    if not exp_cycles:
-        print("- No cycles found.")
-        return graph
-
-    print(f"- Identified cycles: {exp_cycles}")
-    while exp_cycles:
-        # 2. Group these cycles based on their size
-        idx_to_extract = 0
-        exp_cycles_dict = {}
-        for c in exp_cycles:
-            if len(c) not in exp_cycles_dict:
-                exp_cycles_dict[len(c)] = []
-            exp_cycles_dict[len(c)].append(c)
-        # 3. Consider smallest size and pop one
-        min_size = min(list(exp_cycles_dict.keys()))
-        curr_cycle = exp_cycles_dict[min_size][idx_to_extract]
-        least_inf = {"u": "", "v": "", "ic": np.inf}
-        for edge in curr_cycle:
-            # 4. Get label for edges in that cycle
-            label = graph.edges[edge[0], edge[1]]["label"]
-            # 5. Compute information content of label
-            ic = graph_stats.compute_ic(
-                label, sgg_dicts["predicate_counts"], sgg_dicts["predicate_freqs"]
-            )
-            if ic < least_inf["ic"]:
-                least_inf.update({"u": edge[0], "v": edge[1], "ic": ic})
-        # 6. Remove edge corresponding to the min. information content
-        graph.remove_edge(least_inf["u"], least_inf["v"])
-        # 7. Re-compute expanded cycles within the current graph
-        exp_cycles = graph_utils.expand_cycles(list(nx.simple_cycles(graph)))
-    return graph
-
-
-def rk_to_nx(raw_rk_rels: dict) -> DiGraph:
-    rk_list = [
-        {
-            "from_concept": rk["from_concept"]["bb_label"]["bb_label_full"],
-            "relationship": rk["rel_label"]["rel_label_text"],
-            "to_concept": rk["to_concept"]["bb_label"]["bb_label_full"],
-        }
-        for rk in raw_rk_rels
-    ]
-    nx_graph = graph_utils.create_nx_graph(rk_list)
-
-    # Removing self loops for causal analysis
-    self_loops = list(nx.selfloop_edges(nx_graph))
-    if self_loops:
-        print(f"- Found self loops: {self_loops}.")
-        nx_graph.remove_edges_from(nx.selfloop_edges(nx_graph))
-    else:
-        print("- No self-loops found.")
-
-    # Handle cycles for causal analysis
-    nx_graph = handle_cycles(nx_graph, graph_utils.load_vg1800_dict())
-    return nx_graph
-
-
 def make_nx_graphs(resps):
     graphs = {}
     for r in resps:
         print(f"Processing sample id: {r['question_id']}")
-        graphs[r["question_id"]] = rk_to_nx(r["triple_objs"])
+        graphs[r["question_id"]] = graph_utils.rk_to_nx(r["triple_objs"])
         print("-" * 40)
     return graphs
 
