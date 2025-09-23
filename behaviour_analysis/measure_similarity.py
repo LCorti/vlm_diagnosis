@@ -60,16 +60,6 @@ def compute_cosine(
     rk_batch = np.array(
         [emb_model.encode(rk, normalize_embeddings=True) for rk in rk_text]
     )
-    # print("=*50")
-    # print(sk_batch)
-    # print("-*50")
-    # print(rk_batch)
-    # print("=*50")
-
-    # sk_emb = torch.mean((torch.from_numpy(sk_batch)))
-    # rk_emb = torch.mean((torch.from_numpy(rk_batch)))
-    # print(sk_emb)
-    # print(rk_emb)
 
     if len(sk_batch) == 0 or len(rk_batch) == 0:
         print("Problem!")
@@ -172,7 +162,6 @@ if __name__ == "__main__":
         sim_summary[model][ds]["cosine"] = np.mean(sim_summary[model][ds]["cosine"])
 
         # Save
-        # print(sim_summary[model][ds])
         out_path = Path("0_stats", "similarity", model, ds)
         data_io.make_dir(out_path)
         data_io.save_json(sim_sample[model][ds], out_path.joinpath("samples.json"))
