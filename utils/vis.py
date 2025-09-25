@@ -390,7 +390,14 @@ def plot_similarity(
 
     ax.legend(DS_MAP.values(), loc="center left", ncol=1, bbox_to_anchor=(1, 0.5))
 
-    axes[0].set_ylabel("cosine_sim(SK,RK)")
+    if measure_key == "cosine":
+        ylabel = "cosine_sim(SK,RK)"
+    elif measure_key == "ged":
+        ylabel = "GED(SK, RK)"
+    elif measure_key == "iou":
+        ylabel = "IOU(SK,RK)"
+
+    axes[0].set_ylabel(ylabel)
     plt.tight_layout()
     plt.savefig(out_path)
     plt.close()
