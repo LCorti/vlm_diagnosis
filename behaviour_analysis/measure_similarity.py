@@ -88,6 +88,7 @@ if __name__ == "__main__":
     sk_hdl = SKHandler()
     rk_hdl = RKHandler()
     emb_model = SentenceTransformer("sentence-transformers/all-mpnet-base-v2")
+    # emb_model = SentenceTransformer("ibm-granite/granite-embedding-english-r2")
     all_datasets = sk_hdl.get_ds_list() * 4
     all_models = rk_hdl.get_model_list() * 4
     all_models.sort()
@@ -152,14 +153,29 @@ if __name__ == "__main__":
                 sim_summary[model][ds]["cosine"].append(measures["cosine"])
 
         # Compute mean values for measures
-        sim_summary[model][ds]["ged"] = np.mean(sim_summary[model][ds]["ged"])
-        sim_summary[model][ds]["iou"]["iou_nodes"] = np.mean(
+        sim_summary[model][ds]["ged_avg"] = np.mean(sim_summary[model][ds]["ged"])
+        sim_summary[model][ds]["ged_std"] = np.std(sim_summary[model][ds]["ged"])
+        sim_summary[model][ds].pop("ged", None)
+
+        sim_summary[model][ds]["iou"]["iou_nodes_avg"] = np.mean(
             sim_summary[model][ds]["iou"]["iou_nodes"]
         )
-        sim_summary[model][ds]["iou"]["iou_edges"] = np.mean(
+        sim_summary[model][ds]["iou"]["iou_nodes_std"] = np.std(
+            sim_summary[model][ds]["iou"]["iou_nodes"]
+        )
+        sim_summary[model][ds]["iou"].pop("iou_nodes", None)
+
+        sim_summary[model][ds]["iou"]["iou_edges_avg"] = np.mean(
             sim_summary[model][ds]["iou"]["iou_edges"]
         )
-        sim_summary[model][ds]["cosine"] = np.mean(sim_summary[model][ds]["cosine"])
+        sim_summary[model][ds]["iou"]["iou_edges_std"] = np.std(
+            sim_summary[model][ds]["iou"]["iou_edges"]
+        )
+        sim_summary[model][ds]["iou"].pop("iou_edges", None)
+
+        sim_summary[model][ds]["cosine_avg"] = np.mean(sim_summary[model][ds]["cosine"])
+        sim_summary[model][ds]["cosine_std"] = np.std(sim_summary[model][ds]["cosine"])
+        sim_summary[model][ds].pop("cosine", None)
 
         # Save
         out_path = Path("0_stats", "similarity", model, ds)
