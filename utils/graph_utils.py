@@ -1,6 +1,7 @@
 import itertools
 import networkx as nx
 import numpy as np
+import re
 
 from pathlib import Path
 
@@ -77,6 +78,13 @@ def nx_triple_to_str(triple: tuple, template: bool = True) -> str:
         )
     else:
         return f"{from_concept} {rel} {to_concept}"
+
+
+def triple_str_to_dict(triple: str) -> dict:
+    pattern = r"\* \(Entity 1: (?P<from_concept>.+), Relationship: (?P<relationship>.+), Entity 2: (?P<to_concept>.+)\)"
+    triple_match = re.search(pattern, triple)
+    triple_match = {k: v.strip() for k, v in triple_match.groupdict().items()}
+    return triple_match
 
 
 # Return NX graph object given strings
