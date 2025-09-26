@@ -1,6 +1,5 @@
 import networkx as nx
 import numpy as np
-import torch
 import sys
 
 from pathlib import Path
