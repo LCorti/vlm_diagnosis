@@ -1,3 +1,4 @@
+import itertools
 import matplotlib.pyplot as plt
 import networkx as nx
 import numpy as np
@@ -411,11 +412,16 @@ def plot_behaviour_counts(data, out_path) -> None:
     }
 
     width = 0.2
+    # Compute max value to scale y nicely
+    vals_list = list(
+        itertools.chain.from_iterable([v for d in data.values() for v in d.values()])
+    )
+    max_y = max(vals_list) + 60
 
     for idx, ax in enumerate(axes):
         ax.set_title(type_map[idx])
         ax.tick_params(bottom=False)
-        ax.set_ylim(top=150)
+        ax.set_ylim(top=max_y)
         x = np.arange(len(MODEL_MAP))
         ax.yaxis.grid(True, linestyle="-", which="major", color="lightgrey", alpha=0.7)
 
@@ -424,7 +430,7 @@ def plot_behaviour_counts(data, out_path) -> None:
         for ds, values in curr_failure.items():
             offset = width * multiplier
             bars = ax.bar(x + offset, values, width, color=color_map[ds], label=ds)
-            ax.bar_label(bars, padding=3)
+            ax.bar_label(bars, fontsize=8, padding=3)
 
             # Draw line over group
             # ax.hlines(y, x1, x2)
