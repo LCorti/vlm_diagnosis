@@ -17,7 +17,7 @@ from utils import data_io, graph_utils
 # Cosine Similarity
 def compute_cosine(
     emb_model: SentenceTransformer, sk_graph: nx.DiGraph, rk_graph: nx.DiGraph
-) -> float:
+) -> list[dict]:
     # Convert graphs to a list of strings
     sk_templated = graph_utils.nx_graph_to_str(sk_graph, template=True)
     rk_templated = graph_utils.nx_graph_to_str(rk_graph, template=True)
