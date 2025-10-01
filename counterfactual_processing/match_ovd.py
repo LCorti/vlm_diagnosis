@@ -330,7 +330,7 @@ if __name__ == "__main__":
             all_matches.append(
                 {
                     "question_id": rk["question_id"],
-                    "response": rk["response"],
+                    "response": rk["response_clean"],
                     "triple_objs": curr_rk_matches,
                 }
             )
