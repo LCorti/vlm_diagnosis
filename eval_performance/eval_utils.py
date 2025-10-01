@@ -45,15 +45,6 @@ def prep_resp(q: dict, resp: str) -> dict:
     return new_r
 
 
-def cleanup_resp(resp: str) -> str:
-    # Clear preceding and trailing spaces, new lines, etc.
-    clean_resp = "".join(resp.splitlines())
-    # Remove unicode characters (e.g., zero-width spaces and emojis)
-    clean_resp = (clean_resp.encode("ascii", "ignore")).decode("utf-8")
-    clean_resp = clean_resp.rstrip().lstrip()
-    return clean_resp
-
-
 # Storing response data for open-ended VQA
 def prep_for_split(q: dict, resp: str, measures: dict) -> dict:
     to_add = q.copy()
