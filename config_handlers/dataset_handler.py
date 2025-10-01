@@ -46,7 +46,9 @@ class DatasetHandler:
         if target in ["imgs", "imgs_resized"]:
             p_name = Path(self.CURR_DS, target, self.CURR_CLASS)
         elif target in ["questions", "sampled_questions"]:
-            p_name = Path(self.CURR_DS, self.DATASET_PATHS[self.CURR_CLASS][target])
+            p_name = Path(
+                self.CURR_DS, self.DATASET_PATHS[self.CURR_DS][self.CURR_CLASS][target]
+            )
         elif target == "crowd_questions":
             p_name = Path(self.CURR_DS, "q_crowd.json")
         return self.BASE_DIR.joinpath(p_name)
