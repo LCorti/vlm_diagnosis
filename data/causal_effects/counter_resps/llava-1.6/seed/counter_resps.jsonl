@@ -32044,34 +32044,34 @@
 {"question_id": "3905", "occluded": ["43600-people"], "size": 1, "path": "causal_effects/imgs_occluded/llava-1.6/seed/q_3905_i_90/0.jpg", "response": "A"}
 {"question_id": "3905", "occluded": ["new-horses"], "size": 1, "path": "causal_effects/imgs_occluded/llava-1.6/seed/q_3905_i_90/1.jpg", "response": "A"}
 {"question_id": "3905", "occluded": ["22710-fence"], "size": 1, "path": "causal_effects/imgs_occluded/llava-1.6/seed/q_3905_i_90/2.jpg", "response": "A"}
-{"question_id": "3905", "occluded": ["21927-event"], "size": 1, "path": "causal_effects/imgs_occluded/llava-1.6/seed/q_3905_i_90/3.jpg", "response": "A: \"A Peaceful Countryside Gathering\""}
-{"question_id": "3905", "occluded": ["22885-field"], "size": 1, "path": "causal_effects/imgs_occluded/llava-1.6/seed/q_3905_i_90/4.jpg", "response": "A: \"A Peaceful Countryside Gathering\""}
+{"question_id": "3905", "occluded": ["21927-event"], "size": 1, "path": "causal_effects/imgs_occluded/llava-1.6/seed/q_3905_i_90/3.jpg", "response": "A"}
+{"question_id": "3905", "occluded": ["22885-field"], "size": 1, "path": "causal_effects/imgs_occluded/llava-1.6/seed/q_3905_i_90/4.jpg", "response": "A"}
 {"question_id": "3905", "occluded": ["43600-people", "new-horses"], "size": 2, "path": "causal_effects/imgs_occluded/llava-1.6/seed/q_3905_i_90/5.jpg", "response": "A"}
 {"question_id": "3905", "occluded": ["43600-people", "22710-fence"], "size": 2, "path": "causal_effects/imgs_occluded/llava-1.6/seed/q_3905_i_90/6.jpg", "response": "A"}
-{"question_id": "3905", "occluded": ["43600-people", "21927-event"], "size": 2, "path": "causal_effects/imgs_occluded/llava-1.6/seed/q_3905_i_90/7.jpg", "response": "A: \"A Peaceful Countryside Gathering\""}
-{"question_id": "3905", "occluded": ["43600-people", "22885-field"], "size": 2, "path": "causal_effects/imgs_occluded/llava-1.6/seed/q_3905_i_90/8.jpg", "response": "A: \"A Peaceful Countryside Gathering\""}
+{"question_id": "3905", "occluded": ["43600-people", "21927-event"], "size": 2, "path": "causal_effects/imgs_occluded/llava-1.6/seed/q_3905_i_90/7.jpg", "response": "A"}
+{"question_id": "3905", "occluded": ["43600-people", "22885-field"], "size": 2, "path": "causal_effects/imgs_occluded/llava-1.6/seed/q_3905_i_90/8.jpg", "response": "A"}
 {"question_id": "3905", "occluded": ["new-horses", "22710-fence"], "size": 2, "path": "causal_effects/imgs_occluded/llava-1.6/seed/q_3905_i_90/9.jpg", "response": "A"}
-{"question_id": "3905", "occluded": ["new-horses", "21927-event"], "size": 2, "path": "causal_effects/imgs_occluded/llava-1.6/seed/q_3905_i_90/10.jpg", "response": "A: \"A Peaceful Countryside Gathering\""}
-{"question_id": "3905", "occluded": ["new-horses", "22885-field"], "size": 2, "path": "causal_effects/imgs_occluded/llava-1.6/seed/q_3905_i_90/11.jpg", "response": "A: \"A Peaceful Countryside Gathering\""}
+{"question_id": "3905", "occluded": ["new-horses", "21927-event"], "size": 2, "path": "causal_effects/imgs_occluded/llava-1.6/seed/q_3905_i_90/10.jpg", "response": "A"}
+{"question_id": "3905", "occluded": ["new-horses", "22885-field"], "size": 2, "path": "causal_effects/imgs_occluded/llava-1.6/seed/q_3905_i_90/11.jpg", "response": "A"}
 {"question_id": "3905", "occluded": ["22710-fence", "21927-event"], "size": 2, "path": "causal_effects/imgs_occluded/llava-1.6/seed/q_3905_i_90/12.jpg", "response": "A"}
 {"question_id": "3905", "occluded": ["22710-fence", "22885-field"], "size": 2, "path": "causal_effects/imgs_occluded/llava-1.6/seed/q_3905_i_90/13.jpg", "response": "A"}
 {"question_id": "3905", "occluded": ["21927-event", "22885-field"], "size": 2, "path": "causal_effects/imgs_occluded/llava-1.6/seed/q_3905_i_90/14.jpg", "response": "A"}
 {"question_id": "3905", "occluded": ["43600-people", "new-horses", "22710-fence"], "size": 3, "path": "causal_effects/imgs_occluded/llava-1.6/seed/q_3905_i_90/15.jpg", "response": "A"}
-{"question_id": "3905", "occluded": ["43600-people", "new-horses", "21927-event"], "size": 3, "path": "causal_effects/imgs_occluded/llava-1.6/seed/q_3905_i_90/16.jpg", "response": "A: \"A Peaceful Countryside Gathering\""}
-{"question_id": "3905", "occluded": ["43600-people", "new-horses", "22885-field"], "size": 3, "path": "causal_effects/imgs_occluded/llava-1.6/seed/q_3905_i_90/17.jpg", "response": "A: \"A Peaceful Countryside Gathering\""}
+{"question_id": "3905", "occluded": ["43600-people", "new-horses", "21927-event"], "size": 3, "path": "causal_effects/imgs_occluded/llava-1.6/seed/q_3905_i_90/16.jpg", "response": "A"}
+{"question_id": "3905", "occluded": ["43600-people", "new-horses", "22885-field"], "size": 3, "path": "causal_effects/imgs_occluded/llava-1.6/seed/q_3905_i_90/17.jpg", "response": "A"}
 {"question_id": "3905", "occluded": ["43600-people", "22710-fence", "21927-event"], "size": 3, "path": "causal_effects/imgs_occluded/llava-1.6/seed/q_3905_i_90/18.jpg", "response": "A"}
 {"question_id": "3905", "occluded": ["43600-people", "22710-fence", "22885-field"], "size": 3, "path": "causal_effects/imgs_occluded/llava-1.6/seed/q_3905_i_90/19.jpg", "response": "A"}
 {"question_id": "3905", "occluded": ["43600-people", "21927-event", "22885-field"], "size": 3, "path": "causal_effects/imgs_occluded/llava-1.6/seed/q_3905_i_90/20.jpg", "response": "A"}
 {"question_id": "3905", "occluded": ["new-horses", "22710-fence", "21927-event"], "size": 3, "path": "causal_effects/imgs_occluded/llava-1.6/seed/q_3905_i_90/21.jpg", "response": "A"}
 {"question_id": "3905", "occluded": ["new-horses", "22710-fence", "22885-field"], "size": 3, "path": "causal_effects/imgs_occluded/llava-1.6/seed/q_3905_i_90/22.jpg", "response": "A"}
 {"question_id": "3905", "occluded": ["new-horses", "21927-event", "22885-field"], "size": 3, "path": "causal_effects/imgs_occluded/llava-1.6/seed/q_3905_i_90/23.jpg", "response": "A"}
-{"question_id": "3905", "occluded": ["22710-fence", "21927-event", "22885-field"], "size": 3, "path": "causal_effects/imgs_occluded/llava-1.6/seed/q_3905_i_90/24.jpg", "response": "A: \"A Peaceful Countryside Gathering\""}
+{"question_id": "3905", "occluded": ["22710-fence", "21927-event", "22885-field"], "size": 3, "path": "causal_effects/imgs_occluded/llava-1.6/seed/q_3905_i_90/24.jpg", "response": "A"}
 {"question_id": "3905", "occluded": ["43600-people", "new-horses", "22710-fence", "21927-event"], "size": 4, "path": "causal_effects/imgs_occluded/llava-1.6/seed/q_3905_i_90/25.jpg", "response": "A"}
 {"question_id": "3905", "occluded": ["43600-people", "new-horses", "22710-fence", "22885-field"], "size": 4, "path": "causal_effects/imgs_occluded/llava-1.6/seed/q_3905_i_90/26.jpg", "response": "A"}
 {"question_id": "3905", "occluded": ["43600-people", "new-horses", "21927-event", "22885-field"], "size": 4, "path": "causal_effects/imgs_occluded/llava-1.6/seed/q_3905_i_90/27.jpg", "response": "A"}
-{"question_id": "3905", "occluded": ["43600-people", "22710-fence", "21927-event", "22885-field"], "size": 4, "path": "causal_effects/imgs_occluded/llava-1.6/seed/q_3905_i_90/28.jpg", "response": "A: \"A Peaceful Countryside Gathering\""}
-{"question_id": "3905", "occluded": ["new-horses", "22710-fence", "21927-event", "22885-field"], "size": 4, "path": "causal_effects/imgs_occluded/llava-1.6/seed/q_3905_i_90/29.jpg", "response": "A: \"A Peaceful Countryside Gathering\""}
-{"question_id": "3905", "occluded": ["43600-people", "new-horses", "22710-fence", "21927-event", "22885-field"], "size": 5, "path": "causal_effects/imgs_occluded/llava-1.6/seed/q_3905_i_90/30.jpg", "response": "A: \"A Peaceful Countryside Gathering\""}
+{"question_id": "3905", "occluded": ["43600-people", "22710-fence", "21927-event", "22885-field"], "size": 4, "path": "causal_effects/imgs_occluded/llava-1.6/seed/q_3905_i_90/28.jpg", "response": "A"}
+{"question_id": "3905", "occluded": ["new-horses", "22710-fence", "21927-event", "22885-field"], "size": 4, "path": "causal_effects/imgs_occluded/llava-1.6/seed/q_3905_i_90/29.jpg", "response": "A"}
+{"question_id": "3905", "occluded": ["43600-people", "new-horses", "22710-fence", "21927-event", "22885-field"], "size": 5, "path": "causal_effects/imgs_occluded/llava-1.6/seed/q_3905_i_90/30.jpg", "response": "A"}
 {"question_id": "3989", "occluded": ["5111-bench"], "size": 1, "path": "causal_effects/imgs_occluded/llava-1.6/seed/q_3989_i_174/0.jpg", "response": "C"}
 {"question_id": "3989", "occluded": ["new-seating arrangement"], "size": 1, "path": "causal_effects/imgs_occluded/llava-1.6/seed/q_3989_i_174/1.jpg", "response": "C"}
 {"question_id": "3989", "occluded": ["59864-television"], "size": 1, "path": "causal_effects/imgs_occluded/llava-1.6/seed/q_3989_i_174/2.jpg", "response": "C"}
