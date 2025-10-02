@@ -47,6 +47,10 @@ if __name__ == "__main__":
                     (rk for rk in rk_data if rk["question_id"] == q["question_id"]),
                     None,
                 )
+
+                if not curr_rk:
+                    continue
+
                 curr_rk["response_clean"] = clean_response(
                     curr_rk["response"], ds, open_ended=oe, mc_options=options
                 )
