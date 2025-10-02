@@ -1918,67 +1918,67 @@
 {"question_id": "2928", "occluded": ["19052-dining room", "16665-countertop", "68550-wooden floor", "5283-bicycle"], "size": 4, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_2928_i_2928/28.jpg", "response": "B"}
 {"question_id": "2928", "occluded": ["59019-table and chairs", "16665-countertop", "68550-wooden floor", "5283-bicycle"], "size": 4, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_2928_i_2928/29.jpg", "response": "B"}
 {"question_id": "2928", "occluded": ["19052-dining room", "59019-table and chairs", "16665-countertop", "68550-wooden floor", "5283-bicycle"], "size": 5, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_2928_i_2928/30.jpg", "response": "B"}
-{"question_id": "3051", "occluded": ["41076-orange"], "size": 1, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/0.jpg", "response": "A: A juice bar scene"}
+{"question_id": "3051", "occluded": ["41076-orange"], "size": 1, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/0.jpg", "response": "A"}
 {"question_id": "3051", "occluded": ["26276-glass of juice"], "size": 1, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/1.jpg", "response": "C"}
-{"question_id": "3051", "occluded": ["new-oranges"], "size": 1, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/2.jpg", "response": "A: A juice bar scene"}
-{"question_id": "3051", "occluded": ["39370-napkin"], "size": 1, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/3.jpg", "response": "A: A juice bar scene"}
-{"question_id": "3051", "occluded": ["7027-blanket"], "size": 1, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/4.jpg", "response": "A: A juice bar scene"}
-{"question_id": "3051", "occluded": ["11001-burlap sack"], "size": 1, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/5.jpg", "response": "A: A juice bar scene"}
+{"question_id": "3051", "occluded": ["new-oranges"], "size": 1, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/2.jpg", "response": "A"}
+{"question_id": "3051", "occluded": ["39370-napkin"], "size": 1, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/3.jpg", "response": "A"}
+{"question_id": "3051", "occluded": ["7027-blanket"], "size": 1, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/4.jpg", "response": "A"}
+{"question_id": "3051", "occluded": ["11001-burlap sack"], "size": 1, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/5.jpg", "response": "A"}
 {"question_id": "3051", "occluded": ["41076-orange", "26276-glass of juice"], "size": 2, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/6.jpg", "response": "C"}
-{"question_id": "3051", "occluded": ["41076-orange", "new-oranges"], "size": 2, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/7.jpg", "response": "A: A juice bar scene"}
-{"question_id": "3051", "occluded": ["41076-orange", "39370-napkin"], "size": 2, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/8.jpg", "response": "A: A juice bar scene"}
-{"question_id": "3051", "occluded": ["41076-orange", "7027-blanket"], "size": 2, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/9.jpg", "response": "A: A juice bar scene"}
-{"question_id": "3051", "occluded": ["41076-orange", "11001-burlap sack"], "size": 2, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/10.jpg", "response": "A: A juice bar scene"}
+{"question_id": "3051", "occluded": ["41076-orange", "new-oranges"], "size": 2, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/7.jpg", "response": "A"}
+{"question_id": "3051", "occluded": ["41076-orange", "39370-napkin"], "size": 2, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/8.jpg", "response": "A"}
+{"question_id": "3051", "occluded": ["41076-orange", "7027-blanket"], "size": 2, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/9.jpg", "response": "A"}
+{"question_id": "3051", "occluded": ["41076-orange", "11001-burlap sack"], "size": 2, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/10.jpg", "response": "A"}
 {"question_id": "3051", "occluded": ["26276-glass of juice", "new-oranges"], "size": 2, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/11.jpg", "response": "C"}
 {"question_id": "3051", "occluded": ["26276-glass of juice", "39370-napkin"], "size": 2, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/12.jpg", "response": "C"}
 {"question_id": "3051", "occluded": ["26276-glass of juice", "7027-blanket"], "size": 2, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/13.jpg", "response": "C"}
 {"question_id": "3051", "occluded": ["26276-glass of juice", "11001-burlap sack"], "size": 2, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/14.jpg", "response": "C"}
-{"question_id": "3051", "occluded": ["new-oranges", "39370-napkin"], "size": 2, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/15.jpg", "response": "A: A juice bar scene"}
-{"question_id": "3051", "occluded": ["new-oranges", "7027-blanket"], "size": 2, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/16.jpg", "response": "A: A juice bar scene"}
-{"question_id": "3051", "occluded": ["new-oranges", "11001-burlap sack"], "size": 2, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/17.jpg", "response": "A: A juice bar scene"}
-{"question_id": "3051", "occluded": ["39370-napkin", "7027-blanket"], "size": 2, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/18.jpg", "response": "A: A juice bar scene"}
-{"question_id": "3051", "occluded": ["39370-napkin", "11001-burlap sack"], "size": 2, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/19.jpg", "response": "A: A juice bar scene"}
-{"question_id": "3051", "occluded": ["7027-blanket", "11001-burlap sack"], "size": 2, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/20.jpg", "response": "A: A juice bar scene"}
+{"question_id": "3051", "occluded": ["new-oranges", "39370-napkin"], "size": 2, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/15.jpg", "response": "A"}
+{"question_id": "3051", "occluded": ["new-oranges", "7027-blanket"], "size": 2, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/16.jpg", "response": "A"}
+{"question_id": "3051", "occluded": ["new-oranges", "11001-burlap sack"], "size": 2, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/17.jpg", "response": "A"}
+{"question_id": "3051", "occluded": ["39370-napkin", "7027-blanket"], "size": 2, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/18.jpg", "response": "A"}
+{"question_id": "3051", "occluded": ["39370-napkin", "11001-burlap sack"], "size": 2, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/19.jpg", "response": "A"}
+{"question_id": "3051", "occluded": ["7027-blanket", "11001-burlap sack"], "size": 2, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/20.jpg", "response": "A"}
 {"question_id": "3051", "occluded": ["41076-orange", "26276-glass of juice", "new-oranges"], "size": 3, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/21.jpg", "response": "C"}
 {"question_id": "3051", "occluded": ["41076-orange", "26276-glass of juice", "39370-napkin"], "size": 3, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/22.jpg", "response": "C"}
 {"question_id": "3051", "occluded": ["41076-orange", "26276-glass of juice", "7027-blanket"], "size": 3, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/23.jpg", "response": "C"}
 {"question_id": "3051", "occluded": ["41076-orange", "26276-glass of juice", "11001-burlap sack"], "size": 3, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/24.jpg", "response": "C"}
-{"question_id": "3051", "occluded": ["41076-orange", "new-oranges", "39370-napkin"], "size": 3, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/25.jpg", "response": "A: A juice bar scene"}
-{"question_id": "3051", "occluded": ["41076-orange", "new-oranges", "7027-blanket"], "size": 3, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/26.jpg", "response": "A: A juice bar scene"}
-{"question_id": "3051", "occluded": ["41076-orange", "new-oranges", "11001-burlap sack"], "size": 3, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/27.jpg", "response": "A: A juice bar scene"}
-{"question_id": "3051", "occluded": ["41076-orange", "39370-napkin", "7027-blanket"], "size": 3, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/28.jpg", "response": "A: A juice bar scene"}
-{"question_id": "3051", "occluded": ["41076-orange", "39370-napkin", "11001-burlap sack"], "size": 3, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/29.jpg", "response": "A: A juice bar scene"}
-{"question_id": "3051", "occluded": ["41076-orange", "7027-blanket", "11001-burlap sack"], "size": 3, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/30.jpg", "response": "A: A juice bar scene"}
+{"question_id": "3051", "occluded": ["41076-orange", "new-oranges", "39370-napkin"], "size": 3, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/25.jpg", "response": "A"}
+{"question_id": "3051", "occluded": ["41076-orange", "new-oranges", "7027-blanket"], "size": 3, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/26.jpg", "response": "A"}
+{"question_id": "3051", "occluded": ["41076-orange", "new-oranges", "11001-burlap sack"], "size": 3, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/27.jpg", "response": "A"}
+{"question_id": "3051", "occluded": ["41076-orange", "39370-napkin", "7027-blanket"], "size": 3, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/28.jpg", "response": "A"}
+{"question_id": "3051", "occluded": ["41076-orange", "39370-napkin", "11001-burlap sack"], "size": 3, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/29.jpg", "response": "A"}
+{"question_id": "3051", "occluded": ["41076-orange", "7027-blanket", "11001-burlap sack"], "size": 3, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/30.jpg", "response": "A"}
 {"question_id": "3051", "occluded": ["26276-glass of juice", "new-oranges", "39370-napkin"], "size": 3, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/31.jpg", "response": "C"}
 {"question_id": "3051", "occluded": ["26276-glass of juice", "new-oranges", "7027-blanket"], "size": 3, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/32.jpg", "response": "C"}
 {"question_id": "3051", "occluded": ["26276-glass of juice", "new-oranges", "11001-burlap sack"], "size": 3, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/33.jpg", "response": "C"}
 {"question_id": "3051", "occluded": ["26276-glass of juice", "39370-napkin", "7027-blanket"], "size": 3, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/34.jpg", "response": "C"}
 {"question_id": "3051", "occluded": ["26276-glass of juice", "39370-napkin", "11001-burlap sack"], "size": 3, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/35.jpg", "response": "C"}
 {"question_id": "3051", "occluded": ["26276-glass of juice", "7027-blanket", "11001-burlap sack"], "size": 3, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/36.jpg", "response": "C"}
-{"question_id": "3051", "occluded": ["new-oranges", "39370-napkin", "7027-blanket"], "size": 3, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/37.jpg", "response": "A: A juice bar scene"}
-{"question_id": "3051", "occluded": ["new-oranges", "39370-napkin", "11001-burlap sack"], "size": 3, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/38.jpg", "response": "A: A juice bar scene"}
-{"question_id": "3051", "occluded": ["new-oranges", "7027-blanket", "11001-burlap sack"], "size": 3, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/39.jpg", "response": "A: A juice bar scene"}
-{"question_id": "3051", "occluded": ["39370-napkin", "7027-blanket", "11001-burlap sack"], "size": 3, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/40.jpg", "response": "A: A juice bar scene"}
+{"question_id": "3051", "occluded": ["new-oranges", "39370-napkin", "7027-blanket"], "size": 3, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/37.jpg", "response": "A"}
+{"question_id": "3051", "occluded": ["new-oranges", "39370-napkin", "11001-burlap sack"], "size": 3, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/38.jpg", "response": "A"}
+{"question_id": "3051", "occluded": ["new-oranges", "7027-blanket", "11001-burlap sack"], "size": 3, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/39.jpg", "response": "A"}
+{"question_id": "3051", "occluded": ["39370-napkin", "7027-blanket", "11001-burlap sack"], "size": 3, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/40.jpg", "response": "A"}
 {"question_id": "3051", "occluded": ["41076-orange", "26276-glass of juice", "new-oranges", "39370-napkin"], "size": 4, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/41.jpg", "response": "C"}
 {"question_id": "3051", "occluded": ["41076-orange", "26276-glass of juice", "new-oranges", "7027-blanket"], "size": 4, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/42.jpg", "response": "C"}
 {"question_id": "3051", "occluded": ["41076-orange", "26276-glass of juice", "new-oranges", "11001-burlap sack"], "size": 4, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/43.jpg", "response": "C"}
 {"question_id": "3051", "occluded": ["41076-orange", "26276-glass of juice", "39370-napkin", "7027-blanket"], "size": 4, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/44.jpg", "response": "C"}
 {"question_id": "3051", "occluded": ["41076-orange", "26276-glass of juice", "39370-napkin", "11001-burlap sack"], "size": 4, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/45.jpg", "response": "C"}
 {"question_id": "3051", "occluded": ["41076-orange", "26276-glass of juice", "7027-blanket", "11001-burlap sack"], "size": 4, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/46.jpg", "response": "C"}
-{"question_id": "3051", "occluded": ["41076-orange", "new-oranges", "39370-napkin", "7027-blanket"], "size": 4, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/47.jpg", "response": "A: A juice bar scene"}
-{"question_id": "3051", "occluded": ["41076-orange", "new-oranges", "39370-napkin", "11001-burlap sack"], "size": 4, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/48.jpg", "response": "A: A juice bar scene"}
-{"question_id": "3051", "occluded": ["41076-orange", "new-oranges", "7027-blanket", "11001-burlap sack"], "size": 4, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/49.jpg", "response": "A: A juice bar scene"}
-{"question_id": "3051", "occluded": ["41076-orange", "39370-napkin", "7027-blanket", "11001-burlap sack"], "size": 4, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/50.jpg", "response": "A: A juice bar scene"}
+{"question_id": "3051", "occluded": ["41076-orange", "new-oranges", "39370-napkin", "7027-blanket"], "size": 4, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/47.jpg", "response": "A"}
+{"question_id": "3051", "occluded": ["41076-orange", "new-oranges", "39370-napkin", "11001-burlap sack"], "size": 4, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/48.jpg", "response": "A"}
+{"question_id": "3051", "occluded": ["41076-orange", "new-oranges", "7027-blanket", "11001-burlap sack"], "size": 4, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/49.jpg", "response": "A"}
+{"question_id": "3051", "occluded": ["41076-orange", "39370-napkin", "7027-blanket", "11001-burlap sack"], "size": 4, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/50.jpg", "response": "A"}
 {"question_id": "3051", "occluded": ["26276-glass of juice", "new-oranges", "39370-napkin", "7027-blanket"], "size": 4, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/51.jpg", "response": "C"}
 {"question_id": "3051", "occluded": ["26276-glass of juice", "new-oranges", "39370-napkin", "11001-burlap sack"], "size": 4, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/52.jpg", "response": "C"}
 {"question_id": "3051", "occluded": ["26276-glass of juice", "new-oranges", "7027-blanket", "11001-burlap sack"], "size": 4, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/53.jpg", "response": "C"}
 {"question_id": "3051", "occluded": ["26276-glass of juice", "39370-napkin", "7027-blanket", "11001-burlap sack"], "size": 4, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/54.jpg", "response": "C"}
-{"question_id": "3051", "occluded": ["new-oranges", "39370-napkin", "7027-blanket", "11001-burlap sack"], "size": 4, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/55.jpg", "response": "A: A juice bar scene"}
+{"question_id": "3051", "occluded": ["new-oranges", "39370-napkin", "7027-blanket", "11001-burlap sack"], "size": 4, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/55.jpg", "response": "A"}
 {"question_id": "3051", "occluded": ["41076-orange", "26276-glass of juice", "new-oranges", "39370-napkin", "7027-blanket"], "size": 5, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/56.jpg", "response": "C"}
 {"question_id": "3051", "occluded": ["41076-orange", "26276-glass of juice", "new-oranges", "39370-napkin", "11001-burlap sack"], "size": 5, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/57.jpg", "response": "C"}
 {"question_id": "3051", "occluded": ["41076-orange", "26276-glass of juice", "new-oranges", "7027-blanket", "11001-burlap sack"], "size": 5, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/58.jpg", "response": "C"}
 {"question_id": "3051", "occluded": ["41076-orange", "26276-glass of juice", "39370-napkin", "7027-blanket", "11001-burlap sack"], "size": 5, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/59.jpg", "response": "C"}
-{"question_id": "3051", "occluded": ["41076-orange", "new-oranges", "39370-napkin", "7027-blanket", "11001-burlap sack"], "size": 5, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/60.jpg", "response": "A: A juice bar scene"}
+{"question_id": "3051", "occluded": ["41076-orange", "new-oranges", "39370-napkin", "7027-blanket", "11001-burlap sack"], "size": 5, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/60.jpg", "response": "A"}
 {"question_id": "3051", "occluded": ["26276-glass of juice", "new-oranges", "39370-napkin", "7027-blanket", "11001-burlap sack"], "size": 5, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/61.jpg", "response": "C"}
 {"question_id": "3051", "occluded": ["41076-orange", "26276-glass of juice", "new-oranges", "39370-napkin", "7027-blanket", "11001-burlap sack"], "size": 6, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3051_i_3051/62.jpg", "response": "C"}
 {"question_id": "1111", "occluded": ["59018-table"], "size": 1, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_1111_i_1111/0.jpg", "response": "B"}
@@ -3119,12 +3119,12 @@
 {"question_id": "4013", "occluded": ["51275-santa hat", "25905-gingerbread house", "new-children", "32696-kitchen counter", "30603-home", "32682-kitchen", "35307-living room"], "size": 7, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_4013_i_198/252.jpg", "response": "C"}
 {"question_id": "4013", "occluded": ["14155-christmas", "25905-gingerbread house", "new-children", "32696-kitchen counter", "30603-home", "32682-kitchen", "35307-living room"], "size": 7, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_4013_i_198/253.jpg", "response": "C"}
 {"question_id": "4013", "occluded": ["51275-santa hat", "14155-christmas", "25905-gingerbread house", "new-children", "32696-kitchen counter", "30603-home", "32682-kitchen", "35307-living room"], "size": 8, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_4013_i_198/254.jpg", "response": "C"}
-{"question_id": "4113", "occluded": ["new-singers"], "size": 1, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_4113_i_298/0.jpg", "response": "A: A rock song with fast tempo and high energy"}
+{"question_id": "4113", "occluded": ["new-singers"], "size": 1, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_4113_i_298/0.jpg", "response": "A"}
 {"question_id": "4113", "occluded": ["new-rock song"], "size": 1, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_4113_i_298/1.jpg", "response": "A"}
-{"question_id": "4113", "occluded": ["new-singers", "new-rock song"], "size": 2, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_4113_i_298/2.jpg", "response": "A: A rock song with fast tempo and high energy"}
-{"question_id": "3905", "occluded": ["43600-people"], "size": 1, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3905_i_90/0.jpg", "response": "A: \"A Peaceful Countryside Gathering\""}
-{"question_id": "3905", "occluded": ["new-horses and carriages"], "size": 1, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3905_i_90/1.jpg", "response": "A: \"A Peaceful Countryside Gathering\""}
-{"question_id": "3905", "occluded": ["43600-people", "new-horses and carriages"], "size": 2, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3905_i_90/2.jpg", "response": "A: \"A Peaceful Countryside Gathering\""}
+{"question_id": "4113", "occluded": ["new-singers", "new-rock song"], "size": 2, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_4113_i_298/2.jpg", "response": "A"}
+{"question_id": "3905", "occluded": ["43600-people"], "size": 1, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3905_i_90/0.jpg", "response": "A"}
+{"question_id": "3905", "occluded": ["new-horses and carriages"], "size": 1, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3905_i_90/1.jpg", "response": "A"}
+{"question_id": "3905", "occluded": ["43600-people", "new-horses and carriages"], "size": 2, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_3905_i_90/2.jpg", "response": "A"}
 {"question_id": "4060", "occluded": ["8993-boy"], "size": 1, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_4060_i_245/0.jpg", "response": "D"}
 {"question_id": "4060", "occluded": ["54593-sky"], "size": 1, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_4060_i_245/1.jpg", "response": "C"}
 {"question_id": "4060", "occluded": ["8993-boy", "54593-sky"], "size": 2, "path": "causal_effects/imgs_occluded/sharegpt4v/seed/q_4060_i_245/2.jpg", "response": "C"}
