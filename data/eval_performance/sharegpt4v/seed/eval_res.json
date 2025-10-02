@@ -1,6 +1,6 @@
 {
   "measures": {
-    "accuracy": 0.66
+    "accuracy": 0.6605504587155964
   },
   "correct_resp": [
     {
@@ -132,22 +132,6 @@
       "response": "C"
     },
     {
-      "question_id": "2386",
-      "question": "What is most likely happening in this drawing?",
-      "class": "scene_understanding",
-      "img": "2386",
-      "img_path": "./data/datasets/seed/imgs/scene_understanding/2386.jpg",
-      "is_open": false,
-      "options": {
-        "A": "The clown is juggling",
-        "B": "The clown is holding balloons",
-        "C": "The clown is blowing a bubble",
-        "D": "The clown is painting a picture"
-      },
-      "answer": "B",
-      "response": "B"
-    },
-    {
       "question_id": "2249",
       "question": "Which object is located further away from the crowd of people in the image?",
       "class": "scene_understanding",
@@ -244,38 +228,6 @@
       "response": "C"
     },
     {
-      "question_id": "252",
-      "question": "What is the dominant feature in the image?",
-      "class": "scene_understanding",
-      "img": "252",
-      "img_path": "./data/datasets/seed/imgs/scene_understanding/252.jpg",
-      "is_open": false,
-      "options": {
-        "A": "A plane parked on the deck of an aircraft carrier",
-        "B": "A tall building in the background",
-        "C": "A group of people walking near the plane",
-        "D": "The blue and white cloudy sky"
-      },
-      "answer": "A",
-      "response": "A"
-    },
-    {
-      "question_id": "158",
-      "question": "What is in the foreground of the image?",
-      "class": "scene_understanding",
-      "img": "158",
-      "img_path": "./data/datasets/seed/imgs/scene_understanding/158.jpg",
-      "is_open": false,
-      "options": {
-        "A": "A person sitting in a chair",
-        "B": "A model walking down a runway",
-        "C": "A pair of blue jeans",
-        "D": "Black shoes on a woman's feet"
-      },
-      "answer": "B",
-      "response": "B"
-    },
-    {
       "question_id": "1194",
       "question": "Which of the following best describes the floor?",
       "class": "scene_understanding",
@@ -290,22 +242,6 @@
       },
       "answer": "A",
       "response": "A"
-    },
-    {
-      "question_id": "2865",
-      "question": "What is the main activity happening in the image?",
-      "class": "scene_understanding",
-      "img": "2865",
-      "img_path": "./data/datasets/seed/imgs/scene_understanding/2865.jpg",
-      "is_open": false,
-      "options": {
-        "A": "A band is on stage at night with people",
-        "B": "People are playing music in a bar",
-        "C": "People are having a party outdoors",
-        "D": "People are attending a concert in a park"
-      },
-      "answer": "B",
-      "response": "B"
     },
     {
       "question_id": "1962",
@@ -340,38 +276,6 @@
       "response": "C"
     },
     {
-      "question_id": "1753",
-      "question": "What is the overall theme of the image?",
-      "class": "scene_understanding",
-      "img": "1753",
-      "img_path": "./data/datasets/seed/imgs/scene_understanding/1753.jpg",
-      "is_open": false,
-      "options": {
-        "A": "Nature",
-        "B": "Sports",
-        "C": "Art",
-        "D": "Fashion"
-      },
-      "answer": "C",
-      "response": "C"
-    },
-    {
-      "question_id": "129",
-      "question": "What can you infer about the atmosphere and cleanliness of the room?",
-      "class": "scene_understanding",
-      "img": "129",
-      "img_path": "./data/datasets/seed/imgs/scene_understanding/129.jpg",
-      "is_open": false,
-      "options": {
-        "A": "Messy and unorganized",
-        "B": "Dark and gloomy",
-        "C": "Clean and bright",
-        "D": "Rustic and traditional"
-      },
-      "answer": "C",
-      "response": "C"
-    },
-    {
       "question_id": "503",
       "question": "What does the image show?",
       "class": "scene_understanding",
@@ -386,38 +290,6 @@
       },
       "answer": "B",
       "response": "B"
-    },
-    {
-      "question_id": "2825",
-      "question": "What is the main subject of the image?",
-      "class": "scene_understanding",
-      "img": "2825",
-      "img_path": "./data/datasets/seed/imgs/scene_understanding/2825.jpg",
-      "is_open": false,
-      "options": {
-        "A": "A car parked on the street",
-        "B": "A man taking a picture of the fire",
-        "C": "Firemen trying to put out the wildfire",
-        "D": "A residential area engulfed in flames"
-      },
-      "answer": "B",
-      "response": "B"
-    },
-    {
-      "question_id": "2740",
-      "question": "What is the woman most likely doing in this image?",
-      "class": "scene_understanding",
-      "img": "2740",
-      "img_path": "./data/datasets/seed/imgs/scene_understanding/2740.jpg",
-      "is_open": false,
-      "options": {
-        "A": "Jogging",
-        "B": "Cooking",
-        "C": "Grocery shopping",
-        "D": "Swimming"
-      },
-      "answer": "C",
-      "response": "C"
     },
     {
       "question_id": "2342",
@@ -484,38 +356,6 @@
       "response": "A"
     },
     {
-      "question_id": "1561",
-      "question": "What object(s) are prominently featured in the image?",
-      "class": "scene_understanding",
-      "img": "1561",
-      "img_path": "./data/datasets/seed/imgs/scene_understanding/1561.jpg",
-      "is_open": false,
-      "options": {
-        "A": "People",
-        "B": "Microphones",
-        "C": "Guitars",
-        "D": "Drums"
-      },
-      "answer": "C",
-      "response": "C"
-    },
-    {
-      "question_id": "1569",
-      "question": "What is the main feature of the pathway in the image?",
-      "class": "scene_understanding",
-      "img": "1569",
-      "img_path": "./data/datasets/seed/imgs/scene_understanding/1569.jpg",
-      "is_open": false,
-      "options": {
-        "A": "Stone wall",
-        "B": "Walkway",
-        "C": "Railing",
-        "D": "Bridge"
-      },
-      "answer": "C",
-      "response": "C"
-    },
-    {
       "question_id": "1018",
       "question": "What can be inferred about the weather from the image?",
       "class": "scene_understanding",
@@ -530,22 +370,6 @@
       },
       "answer": "B",
       "response": "B"
-    },
-    {
-      "question_id": "297",
-      "question": "Where is the scene taking place?",
-      "class": "scene_understanding",
-      "img": "297",
-      "img_path": "./data/datasets/seed/imgs/scene_understanding/297.jpg",
-      "is_open": false,
-      "options": {
-        "A": "Inside a building",
-        "B": "Outside in a park",
-        "C": "In a gym",
-        "D": "Inside a classroom"
-      },
-      "answer": "A",
-      "response": "A"
     },
     {
       "question_id": "1948",
@@ -575,22 +399,6 @@
         "B": "On the background",
         "C": "Both equally",
         "D": "Nowhere in particular"
-      },
-      "answer": "A",
-      "response": "A"
-    },
-    {
-      "question_id": "2812",
-      "question": "What is the main activity occurring in the image?",
-      "class": "scene_understanding",
-      "img": "2812",
-      "img_path": "./data/datasets/seed/imgs/scene_understanding/2812.jpg",
-      "is_open": false,
-      "options": {
-        "A": "Biking",
-        "B": "Shopping",
-        "C": "Road construction",
-        "D": "Building demolition"
       },
       "answer": "A",
       "response": "A"
@@ -626,22 +434,6 @@
       },
       "answer": "B",
       "response": "B"
-    },
-    {
-      "question_id": "199",
-      "question": "What is the main object in focus in this image?",
-      "class": "scene_understanding",
-      "img": "199",
-      "img_path": "./data/datasets/seed/imgs/scene_understanding/199.jpg",
-      "is_open": false,
-      "options": {
-        "A": "A hand",
-        "B": "A remote",
-        "C": "A puzzle piece",
-        "D": "A businessman"
-      },
-      "answer": "C",
-      "response": "C"
     },
     {
       "question_id": "1595",
@@ -820,22 +612,6 @@
       "response": "C"
     },
     {
-      "question_id": "4106",
-      "question": "What is the material of the pole in the image?",
-      "class": "visual_reasoning",
-      "img": "291",
-      "img_path": "./data/datasets/seed/imgs/visual_reasoning/291.jpg",
-      "is_open": false,
-      "options": {
-        "A": "Metal",
-        "B": "Concrete",
-        "C": "Wood",
-        "D": "Plastic"
-      },
-      "answer": "C",
-      "response": "C"
-    },
-    {
       "question_id": "4112",
       "question": "What type of terrain dominates the scene?",
       "class": "visual_reasoning",
@@ -847,22 +623,6 @@
         "B": "Desert",
         "C": "Beach",
         "D": "Forest"
-      },
-      "answer": "A",
-      "response": "A"
-    },
-    {
-      "question_id": "3894",
-      "question": "What could be the possible purpose of the gathering of people in this image?",
-      "class": "visual_reasoning",
-      "img": "79",
-      "img_path": "./data/datasets/seed/imgs/visual_reasoning/79.jpg",
-      "is_open": false,
-      "options": {
-        "A": "Withdrawing cash from an ATM",
-        "B": "Protesting against a government policy",
-        "C": "Waiting in line for a concert",
-        "D": "Walking their pets in the park"
       },
       "answer": "A",
       "response": "A"
@@ -916,54 +676,6 @@
       "response": "B"
     },
     {
-      "question_id": "4121",
-      "question": "What is the athlete doing in the image?",
-      "class": "visual_reasoning",
-      "img": "306",
-      "img_path": "./data/datasets/seed/imgs/visual_reasoning/306.jpg",
-      "is_open": false,
-      "options": {
-        "A": "Tackling the rugby player.",
-        "B": "Running with the ball.",
-        "C": "Passing the ball to a teammate.",
-        "D": "Kicking the ball."
-      },
-      "answer": "A",
-      "response": "A"
-    },
-    {
-      "question_id": "4016",
-      "question": "What is the occasion outside the building that has caused a crowd to form?",
-      "class": "visual_reasoning",
-      "img": "201",
-      "img_path": "./data/datasets/seed/imgs/visual_reasoning/201.jpg",
-      "is_open": false,
-      "options": {
-        "A": "A concert",
-        "B": "A political rally",
-        "C": "A flag-lowering ceremony",
-        "D": "A sporting event"
-      },
-      "answer": "C",
-      "response": "C"
-    },
-    {
-      "question_id": "4027",
-      "question": "Which team is winning in the image?",
-      "class": "visual_reasoning",
-      "img": "212",
-      "img_path": "./data/datasets/seed/imgs/visual_reasoning/212.jpg",
-      "is_open": false,
-      "options": {
-        "A": "The team in yellow uniforms.",
-        "B": "The team in black jackets.",
-        "C": "The team in white uniforms.",
-        "D": "Cannot be determined from the image."
-      },
-      "answer": "C",
-      "response": "C"
-    },
-    {
       "question_id": "3856",
       "question": "What is the overall theme of the image?",
       "class": "visual_reasoning",
@@ -991,22 +703,6 @@
         "B": "A casual day at the park",
         "C": "A business meeting",
         "D": "A formal dinner"
-      },
-      "answer": "A",
-      "response": "A"
-    },
-    {
-      "question_id": "3922",
-      "question": "What items might a guest use most during their stay in this living room?",
-      "class": "visual_reasoning",
-      "img": "107",
-      "img_path": "./data/datasets/seed/imgs/visual_reasoning/107.jpg",
-      "is_open": false,
-      "options": {
-        "A": "Wicker chair and magazines",
-        "B": "Wicker basket and pillow",
-        "C": "Potted plants and fireplace",
-        "D": "Decorative pillow and framed pictures"
       },
       "answer": "A",
       "response": "A"
@@ -1108,22 +804,6 @@
       "response": "B"
     },
     {
-      "question_id": "4026",
-      "question": "Why would someone likely choose to live in the house found in the image?",
-      "class": "visual_reasoning",
-      "img": "211",
-      "img_path": "./data/datasets/seed/imgs/visual_reasoning/211.jpg",
-      "is_open": false,
-      "options": {
-        "A": "To be close to a large shopping mall",
-        "B": "For the vibrant city life",
-        "C": "To be near a major highway",
-        "D": "For a peaceful environment with lush greenery"
-      },
-      "answer": "D",
-      "response": "D"
-    },
-    {
       "question_id": "3846",
       "question": "What is the most likely reason for the fire in the fireplace?",
       "class": "visual_reasoning",
@@ -1186,54 +866,6 @@
       },
       "answer": "B",
       "response": "B"
-    },
-    {
-      "question_id": "3825",
-      "question": "What is the most likely reasoning behind the man's shocked expression?",
-      "class": "visual_reasoning",
-      "img": "10",
-      "img_path": "./data/datasets/seed/imgs/visual_reasoning/10.jpg",
-      "is_open": false,
-      "options": {
-        "A": "He got a bad grade on a test",
-        "B": "He suddenly remembered a forgotten appointment",
-        "C": "He's witnessing a fight",
-        "D": "He didn't expect the amount of poker chips on the table"
-      },
-      "answer": "D",
-      "response": "D"
-    },
-    {
-      "question_id": "3871",
-      "question": "What can be inferred about the state of the water in the image?",
-      "class": "visual_reasoning",
-      "img": "56",
-      "img_path": "./data/datasets/seed/imgs/visual_reasoning/56.jpg",
-      "is_open": false,
-      "options": {
-        "A": "The water is rough and choppy.",
-        "B": "The water is calm and still.",
-        "C": "The water is moving rapidly.",
-        "D": "The water is frozen solid."
-      },
-      "answer": "B",
-      "response": "B"
-    },
-    {
-      "question_id": "3853",
-      "question": "What is the relation between the guitar player and the drummer?",
-      "class": "visual_reasoning",
-      "img": "38",
-      "img_path": "./data/datasets/seed/imgs/visual_reasoning/38.jpg",
-      "is_open": false,
-      "options": {
-        "A": "The guitar player is performing music with the drummer",
-        "B": "The guitar player is playing music for the drummer's dance",
-        "C": "The guitar player is singing with the drummer",
-        "D": "The guitar player is walking past the drummer"
-      },
-      "answer": "A",
-      "response": "A"
     },
     {
       "question_id": "3858",
@@ -1348,22 +980,6 @@
       "response": "A"
     },
     {
-      "question_id": "3984",
-      "question": "What kind of activity is depicted in the image?",
-      "class": "visual_reasoning",
-      "img": "169",
-      "img_path": "./data/datasets/seed/imgs/visual_reasoning/169.jpg",
-      "is_open": false,
-      "options": {
-        "A": "A group of kids playing video games",
-        "B": "People watching a movie in a theater",
-        "C": "Passengers waiting to board a flight",
-        "D": "A crowd gathered to watch a baseball game"
-      },
-      "answer": "D",
-      "response": "D"
-    },
-    {
       "question_id": "4113",
       "question": "Based on the image, what kind of song might the singers be performing?",
       "class": "visual_reasoning",
@@ -1426,22 +1042,6 @@
       },
       "answer": "B",
       "response": "B"
-    },
-    {
-      "question_id": "4070",
-      "question": "What is the main event happening in the image?",
-      "class": "visual_reasoning",
-      "img": "255",
-      "img_path": "./data/datasets/seed/imgs/visual_reasoning/255.jpg",
-      "is_open": false,
-      "options": {
-        "A": "A man playing guitar with a dimmer light behind him",
-        "B": "A man hosting a talk show in front of a microphone",
-        "C": "A man giving a lecture in a dark room",
-        "D": "A man singing in front of a crowd at a concert"
-      },
-      "answer": "A",
-      "response": "A"
     },
     {
       "question_id": "3866",
@@ -1508,22 +1108,6 @@
       "response": "A"
     },
     {
-      "question_id": "4057",
-      "question": "What is the overall event happening in the image, and where is it taking place?",
-      "class": "visual_reasoning",
-      "img": "242",
-      "img_path": "./data/datasets/seed/imgs/visual_reasoning/242.jpg",
-      "is_open": false,
-      "options": {
-        "A": "A graduation ceremony in a large stadium",
-        "B": "A music concert in an open field",
-        "C": "A religious wedding ceremony in a church",
-        "D": "A fashion show on a runway"
-      },
-      "answer": "C",
-      "response": "C"
-    },
-    {
       "question_id": "4081",
       "question": "What is the main material used at the construction site?",
       "class": "visual_reasoning",
@@ -1551,22 +1135,6 @@
         "B": "Athletic activities",
         "C": "Casual daily wear",
         "D": "Formal events"
-      },
-      "answer": "A",
-      "response": "A"
-    },
-    {
-      "question_id": "4085",
-      "question": "If you had to clean up the mess in the front yard, which of the following tasks would be required?",
-      "class": "visual_reasoning",
-      "img": "270",
-      "img_path": "./data/datasets/seed/imgs/visual_reasoning/270.jpg",
-      "is_open": false,
-      "options": {
-        "A": "Clearing fallen palm tree debris",
-        "B": "Raking leaves",
-        "C": "Removing snow",
-        "D": "Clearing fallen oak tree branches"
       },
       "answer": "A",
       "response": "A"
@@ -1619,54 +1187,6 @@
         "D": "Orange and pink"
       },
       "answer": "B",
-      "response": "A"
-    },
-    {
-      "question_id": "58",
-      "question": "What would be a suitable title for this image?",
-      "class": "scene_understanding",
-      "img": "58",
-      "img_path": "./data/datasets/seed/imgs/scene_understanding/58.jpg",
-      "is_open": false,
-      "options": {
-        "A": "The Conference Room",
-        "B": "The Office Space",
-        "C": "The Dining Room",
-        "D": "The Living Room"
-      },
-      "answer": "B",
-      "response": "C"
-    },
-    {
-      "question_id": "2051",
-      "question": "What other large instrument is in the image besides the guitar?",
-      "class": "scene_understanding",
-      "img": "2051",
-      "img_path": "./data/datasets/seed/imgs/scene_understanding/2051.jpg",
-      "is_open": false,
-      "options": {
-        "A": "A piano",
-        "B": "A saxophone",
-        "C": "A trumpet",
-        "D": "A drum"
-      },
-      "answer": "D",
-      "response": "A"
-    },
-    {
-      "question_id": "2156",
-      "question": "What is the primary focus of the image?",
-      "class": "scene_understanding",
-      "img": "2156",
-      "img_path": "./data/datasets/seed/imgs/scene_understanding/2156.jpg",
-      "is_open": false,
-      "options": {
-        "A": "A woman walking down a runway in a grey coat and boots",
-        "B": "Two large white canopies",
-        "C": "A white lamp shade",
-        "D": "A model in a coat and boots on the catwalk at the show during event"
-      },
-      "answer": "D",
       "response": "A"
     },
     {
@@ -1766,38 +1286,6 @@
       "response": "B"
     },
     {
-      "question_id": "1592",
-      "question": "What is the prominent feature in the background of the image?",
-      "class": "scene_understanding",
-      "img": "1592",
-      "img_path": "./data/datasets/seed/imgs/scene_understanding/1592.jpg",
-      "is_open": false,
-      "options": {
-        "A": "River",
-        "B": "Tree",
-        "C": "House",
-        "D": "Church"
-      },
-      "answer": "B",
-      "response": "A"
-    },
-    {
-      "question_id": "2356",
-      "question": "What is the primary focus of the image?",
-      "class": "scene_understanding",
-      "img": "2356",
-      "img_path": "./data/datasets/seed/imgs/scene_understanding/2356.jpg",
-      "is_open": false,
-      "options": {
-        "A": "A woman walking on the sidewalk",
-        "B": "A fashion show happening on the street",
-        "C": "Different modes of transportation parked or driving on the road",
-        "D": "Several trees lined up on the street"
-      },
-      "answer": "C",
-      "response": "A"
-    },
-    {
       "question_id": "894",
       "question": "What is the man in the image doing?",
       "class": "scene_understanding",
@@ -1891,22 +1379,6 @@
         "D": "Purple and pink"
       },
       "answer": "B",
-      "response": "A"
-    },
-    {
-      "question_id": "1350",
-      "question": "What holiday decorations are present in the image?",
-      "class": "scene_understanding",
-      "img": "1350",
-      "img_path": "./data/datasets/seed/imgs/scene_understanding/1350.jpg",
-      "is_open": false,
-      "options": {
-        "A": "Christmas trees and flowers",
-        "B": "Christmas trees and pumpkins",
-        "C": "Christmas trees and snowmen",
-        "D": "Christmas trees and balloons"
-      },
-      "answer": "C",
       "response": "A"
     },
     {
@@ -2102,22 +1574,6 @@
       "response": "A"
     },
     {
-      "question_id": "3840",
-      "question": "What is the main subject of this image?",
-      "class": "visual_reasoning",
-      "img": "25",
-      "img_path": "./data/datasets/seed/imgs/visual_reasoning/25.jpg",
-      "is_open": false,
-      "options": {
-        "A": "Statues of liberty floating in the water near a building",
-        "B": "A city lit up at night with bodies of water and buildings along a canal",
-        "C": "A city lit up at night with statues floating on the water",
-        "D": "None of the above"
-      },
-      "answer": "D",
-      "response": "A"
-    },
-    {
       "question_id": "3992",
       "question": "What is the weather like in the image?",
       "class": "visual_reasoning",
@@ -2134,38 +1590,6 @@
       "response": "C"
     },
     {
-      "question_id": "3975",
-      "question": "Which team is likely winning the game?",
-      "class": "visual_reasoning",
-      "img": "160",
-      "img_path": "./data/datasets/seed/imgs/visual_reasoning/160.jpg",
-      "is_open": false,
-      "options": {
-        "A": "The team in black shorts",
-        "B": "The team in blue and white",
-        "C": "The team in white",
-        "D": "The team with the most players on the field"
-      },
-      "answer": "A",
-      "response": "B"
-    },
-    {
-      "question_id": "3886",
-      "question": "Based on the player's body position, what is the most likely outcome of the hit?",
-      "class": "visual_reasoning",
-      "img": "71",
-      "img_path": "./data/datasets/seed/imgs/visual_reasoning/71.jpg",
-      "is_open": false,
-      "options": {
-        "A": "A home run",
-        "B": "A foul ball",
-        "C": "A ground ball",
-        "D": "A fly ball"
-      },
-      "answer": "B",
-      "response": "C"
-    },
-    {
       "question_id": "3982",
       "question": "If a person is cooking on the stove, which direction should they face?",
       "class": "visual_reasoning",
@@ -2179,38 +1603,6 @@
         "D": "Toward the sink"
       },
       "answer": "D",
-      "response": "A"
-    },
-    {
-      "question_id": "4110",
-      "question": "What can be concluded about the size of the greenhouse?",
-      "class": "visual_reasoning",
-      "img": "295",
-      "img_path": "./data/datasets/seed/imgs/visual_reasoning/295.jpg",
-      "is_open": false,
-      "options": {
-        "A": "It is small, only containing a few plants",
-        "B": "It is large, containing a significant amount of plants",
-        "C": "It is medium sized, with a moderate amount of plants",
-        "D": "It is difficult to determine the size from the image"
-      },
-      "answer": "D",
-      "response": "B"
-    },
-    {
-      "question_id": "4129",
-      "question": "What is the color of the car mirror on the left side?",
-      "class": "visual_reasoning",
-      "img": "314",
-      "img_path": "./data/datasets/seed/imgs/visual_reasoning/314.jpg",
-      "is_open": false,
-      "options": {
-        "A": "Black",
-        "B": "Blue",
-        "C": "Green",
-        "D": "Silver"
-      },
-      "answer": "C",
       "response": "A"
     },
     {
@@ -2262,22 +1654,6 @@
       "response": "A"
     },
     {
-      "question_id": "3989",
-      "question": "If a person wants to sit and watch television in the bedroom, which furniture piece should they choose?",
-      "class": "visual_reasoning",
-      "img": "174",
-      "img_path": "./data/datasets/seed/imgs/visual_reasoning/174.jpg",
-      "is_open": false,
-      "options": {
-        "A": "The bed",
-        "B": "The floor",
-        "C": "The bench",
-        "D": "The chair"
-      },
-      "answer": "A",
-      "response": "C"
-    },
-    {
       "question_id": "3824",
       "question": "Where is the majority of the light coming from in the scene?",
       "class": "visual_reasoning",
@@ -2305,22 +1681,6 @@
         "B": "Wood-fired",
         "C": "Induction",
         "D": "Electric"
-      },
-      "answer": "D",
-      "response": "A"
-    },
-    {
-      "question_id": "3990",
-      "question": "Based on the scene, which team appears to be scoring a goal?",
-      "class": "visual_reasoning",
-      "img": "175",
-      "img_path": "./data/datasets/seed/imgs/visual_reasoning/175.jpg",
-      "is_open": false,
-      "options": {
-        "A": "Football teamtwo",
-        "B": "Football team with blue shirts",
-        "C": "None, the goal is being disputed",
-        "D": "Football team with white and red shirts"
       },
       "answer": "D",
       "response": "A"
@@ -2388,6 +1748,632 @@
       },
       "answer": "D",
       "response": "C"
+    }
+  ],
+  "invalid_resp": [
+    {
+      "question_id": "58",
+      "question": "What would be a suitable title for this image?",
+      "class": "scene_understanding",
+      "img": "58",
+      "img_path": "./data/datasets/seed/imgs/scene_understanding/58.jpg",
+      "is_open": false,
+      "options": {
+        "A": "The Conference Room",
+        "B": "The Office Space",
+        "C": "The Dining Room",
+        "D": "The Living Room"
+      },
+      "answer": "B",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": "2051",
+      "question": "What other large instrument is in the image besides the guitar?",
+      "class": "scene_understanding",
+      "img": "2051",
+      "img_path": "./data/datasets/seed/imgs/scene_understanding/2051.jpg",
+      "is_open": false,
+      "options": {
+        "A": "A piano",
+        "B": "A saxophone",
+        "C": "A trumpet",
+        "D": "A drum"
+      },
+      "answer": "D",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": "2156",
+      "question": "What is the primary focus of the image?",
+      "class": "scene_understanding",
+      "img": "2156",
+      "img_path": "./data/datasets/seed/imgs/scene_understanding/2156.jpg",
+      "is_open": false,
+      "options": {
+        "A": "A woman walking down a runway in a grey coat and boots",
+        "B": "Two large white canopies",
+        "C": "A white lamp shade",
+        "D": "A model in a coat and boots on the catwalk at the show during event"
+      },
+      "answer": "D",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": "2386",
+      "question": "What is most likely happening in this drawing?",
+      "class": "scene_understanding",
+      "img": "2386",
+      "img_path": "./data/datasets/seed/imgs/scene_understanding/2386.jpg",
+      "is_open": false,
+      "options": {
+        "A": "The clown is juggling",
+        "B": "The clown is holding balloons",
+        "C": "The clown is blowing a bubble",
+        "D": "The clown is painting a picture"
+      },
+      "answer": "B",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": "252",
+      "question": "What is the dominant feature in the image?",
+      "class": "scene_understanding",
+      "img": "252",
+      "img_path": "./data/datasets/seed/imgs/scene_understanding/252.jpg",
+      "is_open": false,
+      "options": {
+        "A": "A plane parked on the deck of an aircraft carrier",
+        "B": "A tall building in the background",
+        "C": "A group of people walking near the plane",
+        "D": "The blue and white cloudy sky"
+      },
+      "answer": "A",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": "158",
+      "question": "What is in the foreground of the image?",
+      "class": "scene_understanding",
+      "img": "158",
+      "img_path": "./data/datasets/seed/imgs/scene_understanding/158.jpg",
+      "is_open": false,
+      "options": {
+        "A": "A person sitting in a chair",
+        "B": "A model walking down a runway",
+        "C": "A pair of blue jeans",
+        "D": "Black shoes on a woman's feet"
+      },
+      "answer": "B",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": "1592",
+      "question": "What is the prominent feature in the background of the image?",
+      "class": "scene_understanding",
+      "img": "1592",
+      "img_path": "./data/datasets/seed/imgs/scene_understanding/1592.jpg",
+      "is_open": false,
+      "options": {
+        "A": "River",
+        "B": "Tree",
+        "C": "House",
+        "D": "Church"
+      },
+      "answer": "B",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": "2865",
+      "question": "What is the main activity happening in the image?",
+      "class": "scene_understanding",
+      "img": "2865",
+      "img_path": "./data/datasets/seed/imgs/scene_understanding/2865.jpg",
+      "is_open": false,
+      "options": {
+        "A": "A band is on stage at night with people",
+        "B": "People are playing music in a bar",
+        "C": "People are having a party outdoors",
+        "D": "People are attending a concert in a park"
+      },
+      "answer": "B",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": "2356",
+      "question": "What is the primary focus of the image?",
+      "class": "scene_understanding",
+      "img": "2356",
+      "img_path": "./data/datasets/seed/imgs/scene_understanding/2356.jpg",
+      "is_open": false,
+      "options": {
+        "A": "A woman walking on the sidewalk",
+        "B": "A fashion show happening on the street",
+        "C": "Different modes of transportation parked or driving on the road",
+        "D": "Several trees lined up on the street"
+      },
+      "answer": "C",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": "1753",
+      "question": "What is the overall theme of the image?",
+      "class": "scene_understanding",
+      "img": "1753",
+      "img_path": "./data/datasets/seed/imgs/scene_understanding/1753.jpg",
+      "is_open": false,
+      "options": {
+        "A": "Nature",
+        "B": "Sports",
+        "C": "Art",
+        "D": "Fashion"
+      },
+      "answer": "C",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": "129",
+      "question": "What can you infer about the atmosphere and cleanliness of the room?",
+      "class": "scene_understanding",
+      "img": "129",
+      "img_path": "./data/datasets/seed/imgs/scene_understanding/129.jpg",
+      "is_open": false,
+      "options": {
+        "A": "Messy and unorganized",
+        "B": "Dark and gloomy",
+        "C": "Clean and bright",
+        "D": "Rustic and traditional"
+      },
+      "answer": "C",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": "2825",
+      "question": "What is the main subject of the image?",
+      "class": "scene_understanding",
+      "img": "2825",
+      "img_path": "./data/datasets/seed/imgs/scene_understanding/2825.jpg",
+      "is_open": false,
+      "options": {
+        "A": "A car parked on the street",
+        "B": "A man taking a picture of the fire",
+        "C": "Firemen trying to put out the wildfire",
+        "D": "A residential area engulfed in flames"
+      },
+      "answer": "B",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": "2740",
+      "question": "What is the woman most likely doing in this image?",
+      "class": "scene_understanding",
+      "img": "2740",
+      "img_path": "./data/datasets/seed/imgs/scene_understanding/2740.jpg",
+      "is_open": false,
+      "options": {
+        "A": "Jogging",
+        "B": "Cooking",
+        "C": "Grocery shopping",
+        "D": "Swimming"
+      },
+      "answer": "C",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": "1561",
+      "question": "What object(s) are prominently featured in the image?",
+      "class": "scene_understanding",
+      "img": "1561",
+      "img_path": "./data/datasets/seed/imgs/scene_understanding/1561.jpg",
+      "is_open": false,
+      "options": {
+        "A": "People",
+        "B": "Microphones",
+        "C": "Guitars",
+        "D": "Drums"
+      },
+      "answer": "C",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": "1569",
+      "question": "What is the main feature of the pathway in the image?",
+      "class": "scene_understanding",
+      "img": "1569",
+      "img_path": "./data/datasets/seed/imgs/scene_understanding/1569.jpg",
+      "is_open": false,
+      "options": {
+        "A": "Stone wall",
+        "B": "Walkway",
+        "C": "Railing",
+        "D": "Bridge"
+      },
+      "answer": "C",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": "297",
+      "question": "Where is the scene taking place?",
+      "class": "scene_understanding",
+      "img": "297",
+      "img_path": "./data/datasets/seed/imgs/scene_understanding/297.jpg",
+      "is_open": false,
+      "options": {
+        "A": "Inside a building",
+        "B": "Outside in a park",
+        "C": "In a gym",
+        "D": "Inside a classroom"
+      },
+      "answer": "A",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": "1350",
+      "question": "What holiday decorations are present in the image?",
+      "class": "scene_understanding",
+      "img": "1350",
+      "img_path": "./data/datasets/seed/imgs/scene_understanding/1350.jpg",
+      "is_open": false,
+      "options": {
+        "A": "Christmas trees and flowers",
+        "B": "Christmas trees and pumpkins",
+        "C": "Christmas trees and snowmen",
+        "D": "Christmas trees and balloons"
+      },
+      "answer": "C",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": "2812",
+      "question": "What is the main activity occurring in the image?",
+      "class": "scene_understanding",
+      "img": "2812",
+      "img_path": "./data/datasets/seed/imgs/scene_understanding/2812.jpg",
+      "is_open": false,
+      "options": {
+        "A": "Biking",
+        "B": "Shopping",
+        "C": "Road construction",
+        "D": "Building demolition"
+      },
+      "answer": "A",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": "199",
+      "question": "What is the main object in focus in this image?",
+      "class": "scene_understanding",
+      "img": "199",
+      "img_path": "./data/datasets/seed/imgs/scene_understanding/199.jpg",
+      "is_open": false,
+      "options": {
+        "A": "A hand",
+        "B": "A remote",
+        "C": "A puzzle piece",
+        "D": "A businessman"
+      },
+      "answer": "C",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": "4106",
+      "question": "What is the material of the pole in the image?",
+      "class": "visual_reasoning",
+      "img": "291",
+      "img_path": "./data/datasets/seed/imgs/visual_reasoning/291.jpg",
+      "is_open": false,
+      "options": {
+        "A": "Metal",
+        "B": "Concrete",
+        "C": "Wood",
+        "D": "Plastic"
+      },
+      "answer": "C",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": "3894",
+      "question": "What could be the possible purpose of the gathering of people in this image?",
+      "class": "visual_reasoning",
+      "img": "79",
+      "img_path": "./data/datasets/seed/imgs/visual_reasoning/79.jpg",
+      "is_open": false,
+      "options": {
+        "A": "Withdrawing cash from an ATM",
+        "B": "Protesting against a government policy",
+        "C": "Waiting in line for a concert",
+        "D": "Walking their pets in the park"
+      },
+      "answer": "A",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": "4121",
+      "question": "What is the athlete doing in the image?",
+      "class": "visual_reasoning",
+      "img": "306",
+      "img_path": "./data/datasets/seed/imgs/visual_reasoning/306.jpg",
+      "is_open": false,
+      "options": {
+        "A": "Tackling the rugby player.",
+        "B": "Running with the ball.",
+        "C": "Passing the ball to a teammate.",
+        "D": "Kicking the ball."
+      },
+      "answer": "A",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": "4016",
+      "question": "What is the occasion outside the building that has caused a crowd to form?",
+      "class": "visual_reasoning",
+      "img": "201",
+      "img_path": "./data/datasets/seed/imgs/visual_reasoning/201.jpg",
+      "is_open": false,
+      "options": {
+        "A": "A concert",
+        "B": "A political rally",
+        "C": "A flag-lowering ceremony",
+        "D": "A sporting event"
+      },
+      "answer": "C",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": "4027",
+      "question": "Which team is winning in the image?",
+      "class": "visual_reasoning",
+      "img": "212",
+      "img_path": "./data/datasets/seed/imgs/visual_reasoning/212.jpg",
+      "is_open": false,
+      "options": {
+        "A": "The team in yellow uniforms.",
+        "B": "The team in black jackets.",
+        "C": "The team in white uniforms.",
+        "D": "Cannot be determined from the image."
+      },
+      "answer": "C",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": "3922",
+      "question": "What items might a guest use most during their stay in this living room?",
+      "class": "visual_reasoning",
+      "img": "107",
+      "img_path": "./data/datasets/seed/imgs/visual_reasoning/107.jpg",
+      "is_open": false,
+      "options": {
+        "A": "Wicker chair and magazines",
+        "B": "Wicker basket and pillow",
+        "C": "Potted plants and fireplace",
+        "D": "Decorative pillow and framed pictures"
+      },
+      "answer": "A",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": "3840",
+      "question": "What is the main subject of this image?",
+      "class": "visual_reasoning",
+      "img": "25",
+      "img_path": "./data/datasets/seed/imgs/visual_reasoning/25.jpg",
+      "is_open": false,
+      "options": {
+        "A": "Statues of liberty floating in the water near a building",
+        "B": "A city lit up at night with bodies of water and buildings along a canal",
+        "C": "A city lit up at night with statues floating on the water",
+        "D": "None of the above"
+      },
+      "answer": "D",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": "3975",
+      "question": "Which team is likely winning the game?",
+      "class": "visual_reasoning",
+      "img": "160",
+      "img_path": "./data/datasets/seed/imgs/visual_reasoning/160.jpg",
+      "is_open": false,
+      "options": {
+        "A": "The team in black shorts",
+        "B": "The team in blue and white",
+        "C": "The team in white",
+        "D": "The team with the most players on the field"
+      },
+      "answer": "A",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": "4026",
+      "question": "Why would someone likely choose to live in the house found in the image?",
+      "class": "visual_reasoning",
+      "img": "211",
+      "img_path": "./data/datasets/seed/imgs/visual_reasoning/211.jpg",
+      "is_open": false,
+      "options": {
+        "A": "To be close to a large shopping mall",
+        "B": "For the vibrant city life",
+        "C": "To be near a major highway",
+        "D": "For a peaceful environment with lush greenery"
+      },
+      "answer": "D",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": "3886",
+      "question": "Based on the player's body position, what is the most likely outcome of the hit?",
+      "class": "visual_reasoning",
+      "img": "71",
+      "img_path": "./data/datasets/seed/imgs/visual_reasoning/71.jpg",
+      "is_open": false,
+      "options": {
+        "A": "A home run",
+        "B": "A foul ball",
+        "C": "A ground ball",
+        "D": "A fly ball"
+      },
+      "answer": "B",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": "3825",
+      "question": "What is the most likely reasoning behind the man's shocked expression?",
+      "class": "visual_reasoning",
+      "img": "10",
+      "img_path": "./data/datasets/seed/imgs/visual_reasoning/10.jpg",
+      "is_open": false,
+      "options": {
+        "A": "He got a bad grade on a test",
+        "B": "He suddenly remembered a forgotten appointment",
+        "C": "He's witnessing a fight",
+        "D": "He didn't expect the amount of poker chips on the table"
+      },
+      "answer": "D",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": "3871",
+      "question": "What can be inferred about the state of the water in the image?",
+      "class": "visual_reasoning",
+      "img": "56",
+      "img_path": "./data/datasets/seed/imgs/visual_reasoning/56.jpg",
+      "is_open": false,
+      "options": {
+        "A": "The water is rough and choppy.",
+        "B": "The water is calm and still.",
+        "C": "The water is moving rapidly.",
+        "D": "The water is frozen solid."
+      },
+      "answer": "B",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": "4110",
+      "question": "What can be concluded about the size of the greenhouse?",
+      "class": "visual_reasoning",
+      "img": "295",
+      "img_path": "./data/datasets/seed/imgs/visual_reasoning/295.jpg",
+      "is_open": false,
+      "options": {
+        "A": "It is small, only containing a few plants",
+        "B": "It is large, containing a significant amount of plants",
+        "C": "It is medium sized, with a moderate amount of plants",
+        "D": "It is difficult to determine the size from the image"
+      },
+      "answer": "D",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": "3853",
+      "question": "What is the relation between the guitar player and the drummer?",
+      "class": "visual_reasoning",
+      "img": "38",
+      "img_path": "./data/datasets/seed/imgs/visual_reasoning/38.jpg",
+      "is_open": false,
+      "options": {
+        "A": "The guitar player is performing music with the drummer",
+        "B": "The guitar player is playing music for the drummer's dance",
+        "C": "The guitar player is singing with the drummer",
+        "D": "The guitar player is walking past the drummer"
+      },
+      "answer": "A",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": "4129",
+      "question": "What is the color of the car mirror on the left side?",
+      "class": "visual_reasoning",
+      "img": "314",
+      "img_path": "./data/datasets/seed/imgs/visual_reasoning/314.jpg",
+      "is_open": false,
+      "options": {
+        "A": "Black",
+        "B": "Blue",
+        "C": "Green",
+        "D": "Silver"
+      },
+      "answer": "C",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": "3984",
+      "question": "What kind of activity is depicted in the image?",
+      "class": "visual_reasoning",
+      "img": "169",
+      "img_path": "./data/datasets/seed/imgs/visual_reasoning/169.jpg",
+      "is_open": false,
+      "options": {
+        "A": "A group of kids playing video games",
+        "B": "People watching a movie in a theater",
+        "C": "Passengers waiting to board a flight",
+        "D": "A crowd gathered to watch a baseball game"
+      },
+      "answer": "D",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": "3989",
+      "question": "If a person wants to sit and watch television in the bedroom, which furniture piece should they choose?",
+      "class": "visual_reasoning",
+      "img": "174",
+      "img_path": "./data/datasets/seed/imgs/visual_reasoning/174.jpg",
+      "is_open": false,
+      "options": {
+        "A": "The bed",
+        "B": "The floor",
+        "C": "The bench",
+        "D": "The chair"
+      },
+      "answer": "A",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": "4070",
+      "question": "What is the main event happening in the image?",
+      "class": "visual_reasoning",
+      "img": "255",
+      "img_path": "./data/datasets/seed/imgs/visual_reasoning/255.jpg",
+      "is_open": false,
+      "options": {
+        "A": "A man playing guitar with a dimmer light behind him",
+        "B": "A man hosting a talk show in front of a microphone",
+        "C": "A man giving a lecture in a dark room",
+        "D": "A man singing in front of a crowd at a concert"
+      },
+      "answer": "A",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": "3990",
+      "question": "Based on the scene, which team appears to be scoring a goal?",
+      "class": "visual_reasoning",
+      "img": "175",
+      "img_path": "./data/datasets/seed/imgs/visual_reasoning/175.jpg",
+      "is_open": false,
+      "options": {
+        "A": "Football teamtwo",
+        "B": "Football team with blue shirts",
+        "C": "None, the goal is being disputed",
+        "D": "Football team with white and red shirts"
+      },
+      "answer": "D",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": "4057",
+      "question": "What is the overall event happening in the image, and where is it taking place?",
+      "class": "visual_reasoning",
+      "img": "242",
+      "img_path": "./data/datasets/seed/imgs/visual_reasoning/242.jpg",
+      "is_open": false,
+      "options": {
+        "A": "A graduation ceremony in a large stadium",
+        "B": "A music concert in an open field",
+        "C": "A religious wedding ceremony in a church",
+        "D": "A fashion show on a runway"
+      },
+      "answer": "C",
+      "response": "<NOT_FOUND>"
     },
     {
       "question_id": "3833",
@@ -2403,8 +2389,23 @@
         "D": "At the back row of the crowd"
       },
       "answer": "C",
-      "response": "A"
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": "4085",
+      "question": "If you had to clean up the mess in the front yard, which of the following tasks would be required?",
+      "class": "visual_reasoning",
+      "img": "270",
+      "img_path": "./data/datasets/seed/imgs/visual_reasoning/270.jpg",
+      "is_open": false,
+      "options": {
+        "A": "Clearing fallen palm tree debris",
+        "B": "Raking leaves",
+        "C": "Removing snow",
+        "D": "Clearing fallen oak tree branches"
+      },
+      "answer": "A",
+      "response": "<NOT_FOUND>"
     }
-  ],
-  "invalid_resp": []
+  ]
 }

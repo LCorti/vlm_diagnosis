@@ -3,7 +3,6 @@ import sys
 from evaluate import load
 from pathlib import Path
 from eval_utils import (
-    cleanup_resp,
     get_eval_dict,
     prep_for_split,
     prep_resp,
@@ -19,7 +18,6 @@ from config_handlers.eval_handler import EvalHandler
 from config_handlers.rk_handler import RKHandler
 from utils.data_io import load_jsonl, make_dir, save_json
 
-PROMPT_VERSION = 4
 REF_MC_ANSWERS = ["A", "B", "C", "D"]
 
 START = 0
@@ -45,10 +43,13 @@ if __name__ == "__main__":
         # Load responses for current model + dataset combo
         rk_hdl.set_curr_model(model)
         rk_hdl.set_curr_ds(ds)
-        resp_path = Path("..", rk_hdl.get_rk_parsed_path())
-        resp_path = resp_path.format(PROMPT_VERSION)
+        resp_path = Path("..", rk_hdl.get_rk_final_path())
         resp_data = load_jsonl(resp_path)
         count_ok = 0
+
+        # For open-ended VQA datasets, we compute BERTScore-F1
+        if ds in ["llava-bench", "mmbench"]:
+            bertscore = load("bertscore")
 
         # Iterate through datasets' paths
         ds_hdl.set_curr_ds(ds)
@@ -58,22 +59,20 @@ if __name__ == "__main__":
             q_path = ds_hdl.get_sampled_questions_path()
             questions = load_jsonl(Path("..", q_path))
 
-            if ds in ["llava-bench", "mmbench"]:
-                # For open-ended VQA datasets, we compute BERTScore-F1
-                bertscore = load("bertscore")
-
-                for q in questions:
-                    resp = next(
-                        (r for r in resp_data if r["question_id"] == q["question_id"]),
-                        None,
+            for q in questions:
+                print(f"Processing question {q['question_id']}")
+                resp = next(
+                    (r for r in resp_data if r["question_id"] == q["question_id"]),
+                    None,
+                )
+                if not resp:
+                    print("> Not found.")
+                    eval_dict[model][ds]["invalid_resp"].append(
+                        prep_resp(q, "<NOT_FOUND>")
                     )
+                    continue
 
-                    if not resp:
-                        eval_dict[model][ds]["invalid_resp"].append(
-                            prep_resp(q, "<NOT_FOUND>")
-                        )
-                        continue
-
+                if ds in ["llava-bench", "mmbench"]:
                     # Compute accuracy on single data instance
                     # Using microsoft/deberta-xlarge-mnli suggested by authors
                     # https://github.com/Tiiiger/bert_score
@@ -109,104 +108,50 @@ if __name__ == "__main__":
                             prep_for_split(q, resp["response"], measures)
                         )
 
-                # Save bertscore info
-                bertscore_hash_path = Path(
-                    "..", "data", "eval_performance", "bertscore_hash.txt"
-                )
-                save_bertscore_hash(scores["hashcode"], bertscore_hash_path)
-            elif ds in ["seed", "vqav2"]:
-                for q in questions:
-                    resp = next(
-                        (r for r in resp_data if r["question_id"] == q["question_id"]),
-                        None,
-                    )
-                    if not resp:
-                        eval_dict[model][ds]["invalid_resp"].append(
-                            prep_resp(q, "<NOT_FOUND>")
-                        )
-                        continue
-
-                    # Clean up text
-                    clean_resp = cleanup_resp(resp["response"])
+                elif ds in ["seed", "vqav2"]:
                     # If nothing is left after this simple cleaining, save as invalid
-                    if len(clean_resp) == 0:
+                    if resp["response"] is None or len(resp["response"]) == 0:
                         eval_dict[model][ds]["invalid_resp"].append(
                             prep_resp(q, "<INV>")
                         )
                         continue
-
                     if ds == "seed":
                         # If option letter matches directly
-                        if q["answer"] == clean_resp:
-                            eval_dict[model][ds]["correct_resp"].append(
-                                prep_resp(q, clean_resp)
-                            )
-                            count_ok += 1
-                        # If model answer is present as-is in the list of alternatives
-                        # even with no letter.
-                        elif q["options"] is not None and clean_resp in list(
-                            q["options"].values()
+                        if (
+                            "options" in q
+                            and resp["response"] in q["options"]
+                            and q["answer"] == resp["response"]
                         ):
-                            # Get corresponding letter and save that
-                            ref_letter = next(
-                                k for k, v in q["options"] if v == clean_resp
-                            )
                             eval_dict[model][ds]["correct_resp"].append(
-                                prep_resp(q, ref_letter)
-                            )
-                            count_ok += 1
-                        # If either ':' or '.' is present try to parse as
-                        # '<letter>: <explanation>'. They seem to be used frequently
-                        # by the MLLMs tested.
-                        elif clean_resp.find(":") != -1 or clean_resp.find(".") != -1:
-                            # Figure out which character it is
-                            if clean_resp.find(":") != -1:
-                                char = ":"
-                            else:
-                                char = "."
-
-                            ref_letter = clean_resp.split(char)[0]
-                            if (
-                                len(ref_letter) == 1
-                                and ref_letter in REF_MC_ANSWERS
-                                and ref_letter == q["answer"]
-                            ):
-                                eval_dict[model][ds]["correct_resp"].append(
-                                    prep_resp(q, ref_letter)
-                                )
-                                count_ok += 1
-                            else:
-                                eval_dict[model][ds]["wrong_resp"].append(
-                                    prep_resp(q, ref_letter)
-                                )
-                        # Sometimes, models use 'The correct answer is'.
-                        # The letter indicating the reponse appears right before.
-                        elif clean_resp[-1] == q["answer"]:
-                            eval_dict[model][ds]["correct_resp"].append(
-                                prep_resp(q, clean_resp)
+                                prep_resp(q, resp["response"])
                             )
                             count_ok += 1
                         else:
                             eval_dict[model][ds]["wrong_resp"].append(
-                                prep_resp(q, clean_resp)
+                                prep_resp(q, resp["response"])
                             )
                     elif ds == "vqav2":
                         # For VQA v2, consider as correct
                         # - exact matches
                         # - reponses that contain the ground truth answer
-                        if q["answer"].lower() in clean_resp.lower():
+                        if q["answer"].lower() in resp["response"].lower():
                             eval_dict[model][ds]["correct_resp"].append(
-                                prep_resp(q, clean_resp)
+                                prep_resp(q, resp["response"])
                             )
                             count_ok += 1
                         else:
                             eval_dict[model][ds]["wrong_resp"].append(
-                                prep_resp(q, clean_resp)
+                                prep_resp(q, resp["response"])
                             )
-            else:
-                print("Something went very wrong.")
+                else:
+                    print("Something went very wrong.")
 
         if ds in ["llava-bench", "mmbench"]:
+            # Save bertscore info
+            bertscore_hash_path = Path(
+                "..", "data", "eval_performance", "bertscore_hash.txt"
+            )
+            save_bertscore_hash(scores["hashcode"], bertscore_hash_path)
             # Compute average scores for open-ended datasets
             eval_dict[model][ds]["measures"]["precision"] /= len(resp_data)
             eval_dict[model][ds]["measures"]["recall"] /= len(resp_data)
@@ -229,6 +174,6 @@ if __name__ == "__main__":
         # Make dirs, if necessary
         eval_hdl.set_curr_model(model)
         eval_hdl.set_curr_ds(ds)
-        out_path = Path("..", eval_hdl.get_eval_path(model, ds))
+        out_path = Path("..", eval_hdl.get_eval_path())
         make_dir(Path(out_path).parent)
         save_json(eval_dict[model][ds], out_path)

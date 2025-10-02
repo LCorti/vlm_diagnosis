@@ -1,8 +1,8 @@
 {
   "measures": {
-    "precision": 0.6567788428539852,
-    "recall": 0.7797276472016205,
-    "f1": 0.706452087532702
+    "precision": 0.655613312014827,
+    "recall": 0.7774261487854852,
+    "f1": 0.704683353724303
   },
   "ranges": {
     "0_20": [],
@@ -82,11 +82,11 @@
         "is_open": false,
         "options": null,
         "answer": "A car driving on a highway at night",
-        "response": "The image captures a scene of a highway at dusk. The sky, painted in hues of pink and purple, casts a soft glow on the scene below. The highway, a ribbon of gray, stretches out ahead, flanked by a series of cars. \n\nIn the foreground, a blue car is captured mid-motion, driving away from the camera. Its headlights are on, piercing the twilight. Further down the road, a yellow car can be seen, its taillights glowing red. The cars, though distant, are clearly visible, adding a sense of depth to the image.\n\nOn the right side of the image, a highway sign stands tall. Its details are not clear, but it adds another layer of interest to the scene. The overall image is a snapshot of a moment in time, a glimpse into the everyday life of a highway at dusk.",
+        "response": "The image captures a scene of a highway at dusk. The sky, painted in hues of pink and purple, casts a soft glow on the scene below. The highway, a ribbon of gray, stretches out ahead, flanked by a series of cars. In the foreground, a blue car is captured mid-motion, driving away from the camera. Its headlights are on, piercing the twilight. Further down the road, a yellow car can be seen, its taillights glowing red. The cars, though distant, are clearly visible, adding a sense of depth to the image.On the right side of the image, a highway sign stands tall. Its details are not clear, but it adds another layer of interest to the scene. The overall image is a snapshot of a moment in time, a glimpse into the everyday life of a highway at dusk.",
         "measures": {
-          "precision": 0.4406658709049225,
-          "recall": 0.6982974410057068,
-          "f1": 0.5403437614440918
+          "precision": 0.44646739959716797,
+          "recall": 0.6997881531715393,
+          "f1": 0.545136034488678
         }
       },
       {
@@ -98,11 +98,11 @@
         "is_open": false,
         "options": null,
         "answer": "A woman getting a pedicure at a salon",
-        "response": "In the image, a woman is seated comfortably in a black salon chair, her legs elegantly crossed. She is dressed in a pristine white robe, adding to the serene ambiance of the setting. A pair of white gloves are worn by the woman, perhaps indicating a professional setting.\n\nStanding next to the seated woman is another woman, also dressed in a white robe and gloves. She is in the process of performing a pedicure on the seated woman's feet. The pedicure is taking place on a wooden table, which is positioned next to a brick wall.\n\nThe image captures a moment of relaxation and care, as the woman receives a pedicure in a calm and professional environment. The precise positioning of the objects and individuals suggests a well-organized and efficient salon setup. The image does not contain any discernible text. The relative positions of the objects and individuals are accurately represented, providing a clear and detailed depiction of the scene.",
+        "response": "In the image, a woman is seated comfortably in a black salon chair, her legs elegantly crossed. She is dressed in a pristine white robe, adding to the serene ambiance of the setting. A pair of white gloves are worn by the woman, perhaps indicating a professional setting.Standing next to the seated woman is another woman, also dressed in a white robe and gloves. She is in the process of performing a pedicure on the seated woman's feet. The pedicure is taking place on a wooden table, which is positioned next to a brick wall.The image captures a moment of relaxation and care, as the woman receives a pedicure in a calm and professional environment. The precise positioning of the objects and individuals suggests a well-organized and efficient salon setup. The image does not contain any discernible text. The relative positions of the objects and individuals are accurately represented, providing a clear and detailed depiction of the scene.",
         "measures": {
-          "precision": 0.4328063726425171,
-          "recall": 0.6896489858627319,
-          "f1": 0.531842052936554
+          "precision": 0.4370754659175873,
+          "recall": 0.687251627445221,
+          "f1": 0.5343299508094788
         }
       },
       {
@@ -130,11 +130,11 @@
         "is_open": false,
         "options": null,
         "answer": "A woman getting a pedicure at a salon",
-        "response": "In the image, a woman is seated comfortably in a black salon chair, her legs elegantly crossed. She is dressed in a pristine white robe, adding to the serene ambiance of the setting. A pair of white gloves are worn by the woman, perhaps indicating a professional setting.\n\nStanding next to the seated woman is another woman, also dressed in a white robe and gloves. She is in the process of performing a pedicure on the seated woman's feet. The pedicure is taking place on a wooden table, which is positioned next to a brick wall.\n\nThe image captures a moment of relaxation and care, as the woman receives a pedicure in a calm and professional environment. The precise positioning of the objects and individuals suggests a well-organized and efficient salon setup. The image does not contain any discernible text. The relative positions of the objects and individuals are accurately represented, providing a clear and detailed depiction of the scene.",
+        "response": "In the image, a woman is seated comfortably in a black salon chair, her legs elegantly crossed. She is dressed in a pristine white robe, adding to the serene ambiance of the setting. A pair of white gloves are worn by the woman, perhaps indicating a professional setting.Standing next to the seated woman is another woman, also dressed in a white robe and gloves. She is in the process of performing a pedicure on the seated woman's feet. The pedicure is taking place on a wooden table, which is positioned next to a brick wall.The image captures a moment of relaxation and care, as the woman receives a pedicure in a calm and professional environment. The precise positioning of the objects and individuals suggests a well-organized and efficient salon setup. The image does not contain any discernible text. The relative positions of the objects and individuals are accurately represented, providing a clear and detailed depiction of the scene.",
         "measures": {
-          "precision": 0.4328063726425171,
-          "recall": 0.6896489858627319,
-          "f1": 0.531842052936554
+          "precision": 0.4370754659175873,
+          "recall": 0.687251627445221,
+          "f1": 0.5343299508094788
         }
       },
       {
@@ -242,11 +242,11 @@
         "is_open": false,
         "options": null,
         "answer": "A car driving on a highway at night",
-        "response": "The image captures a scene of a highway at dusk. The sky, painted in hues of pink and purple, casts a soft glow on the scene below. The highway, a ribbon of gray, stretches out ahead, flanked by a series of cars. \n\nIn the foreground, a blue car is captured mid-motion, driving away from the camera. Its headlights are on, piercing the twilight. Further down the road, a yellow car can be seen, its taillights glowing red. The cars, though distant, are clearly visible, adding a sense of depth to the image.\n\nOn the right side of the image, a highway sign stands tall. Its details are not clear, but it adds another layer of interest to the scene. The overall image is a snapshot of a moment in time, a glimpse into the everyday life of a highway at dusk.",
+        "response": "The image captures a scene of a highway at dusk. The sky, painted in hues of pink and purple, casts a soft glow on the scene below. The highway, a ribbon of gray, stretches out ahead, flanked by a series of cars. In the foreground, a blue car is captured mid-motion, driving away from the camera. Its headlights are on, piercing the twilight. Further down the road, a yellow car can be seen, its taillights glowing red. The cars, though distant, are clearly visible, adding a sense of depth to the image.On the right side of the image, a highway sign stands tall. Its details are not clear, but it adds another layer of interest to the scene. The overall image is a snapshot of a moment in time, a glimpse into the everyday life of a highway at dusk.",
         "measures": {
-          "precision": 0.4406658709049225,
-          "recall": 0.6982974410057068,
-          "f1": 0.5403437614440918
+          "precision": 0.44646739959716797,
+          "recall": 0.6997881531715393,
+          "f1": 0.545136034488678
         }
       },
       {
@@ -306,11 +306,11 @@
         "is_open": false,
         "options": null,
         "answer": "A car driving on a highway at night",
-        "response": "The image captures a scene of a highway at dusk. The sky, painted in hues of pink and purple, casts a soft glow on the scene below. The highway, a ribbon of gray, stretches out ahead, flanked by a series of cars. \n\nIn the foreground, a blue car is captured mid-motion, driving away from the camera. Its headlights are on, piercing the twilight. Further down the road, a yellow car can be seen, its taillights glowing red. The cars, though distant, are clearly visible, adding a sense of depth to the image.\n\nOn the right side of the image, a highway sign stands tall. Its details are not clear, but it adds another layer of interest to the scene. The overall image is a snapshot of a moment in time, a glimpse into the everyday life of a highway at dusk.",
+        "response": "The image captures a scene of a highway at dusk. The sky, painted in hues of pink and purple, casts a soft glow on the scene below. The highway, a ribbon of gray, stretches out ahead, flanked by a series of cars. In the foreground, a blue car is captured mid-motion, driving away from the camera. Its headlights are on, piercing the twilight. Further down the road, a yellow car can be seen, its taillights glowing red. The cars, though distant, are clearly visible, adding a sense of depth to the image.On the right side of the image, a highway sign stands tall. Its details are not clear, but it adds another layer of interest to the scene. The overall image is a snapshot of a moment in time, a glimpse into the everyday life of a highway at dusk.",
         "measures": {
-          "precision": 0.4406658709049225,
-          "recall": 0.6982974410057068,
-          "f1": 0.5403437614440918
+          "precision": 0.44646739959716797,
+          "recall": 0.6997881531715393,
+          "f1": 0.545136034488678
         }
       },
       {
@@ -338,11 +338,11 @@
         "is_open": false,
         "options": null,
         "answer": "A woman getting a pedicure at a salon",
-        "response": "In the image, a woman is seated comfortably in a black salon chair, her legs elegantly crossed. She is dressed in a pristine white robe, adding to the serene ambiance of the setting. A pair of white gloves are worn by the woman, perhaps indicating a professional setting.\n\nStanding next to the seated woman is another woman, also dressed in a white robe and gloves. She is in the process of performing a pedicure on the seated woman's feet. The pedicure is taking place on a wooden table, which is positioned next to a brick wall.\n\nThe image captures a moment of relaxation and care, as the woman receives a pedicure in a calm and professional environment. The precise positioning of the objects and individuals suggests a well-organized and efficient salon setup. The image does not contain any discernible text. The relative positions of the objects and individuals are accurately represented, providing a clear and detailed depiction of the scene.",
+        "response": "In the image, a woman is seated comfortably in a black salon chair, her legs elegantly crossed. She is dressed in a pristine white robe, adding to the serene ambiance of the setting. A pair of white gloves are worn by the woman, perhaps indicating a professional setting.Standing next to the seated woman is another woman, also dressed in a white robe and gloves. She is in the process of performing a pedicure on the seated woman's feet. The pedicure is taking place on a wooden table, which is positioned next to a brick wall.The image captures a moment of relaxation and care, as the woman receives a pedicure in a calm and professional environment. The precise positioning of the objects and individuals suggests a well-organized and efficient salon setup. The image does not contain any discernible text. The relative positions of the objects and individuals are accurately represented, providing a clear and detailed depiction of the scene.",
         "measures": {
-          "precision": 0.4328063726425171,
-          "recall": 0.6896489858627319,
-          "f1": 0.531842052936554
+          "precision": 0.4370754659175873,
+          "recall": 0.687251627445221,
+          "f1": 0.5343299508094788
         }
       },
       {
@@ -588,22 +588,6 @@
         }
       },
       {
-        "question_id": 2000058,
-        "question": "Provide a concise and descriptive caption for the given image.",
-        "class": "image_scene",
-        "img": "141",
-        "img_path": "./data/datasets/mmbench/imgs/image_scene/141.jpg",
-        "is_open": false,
-        "options": null,
-        "answer": "A red and blue train on a bridge during a cloudy day.",
-        "response": "A train is crossing a bridge over a body of water. The train is blue and red, and it has the number 100 on the side. The bridge is supported by concrete pillars. The sky above is cloudy.",
-        "measures": {
-          "precision": 0.6425677537918091,
-          "recall": 0.821567952632904,
-          "f1": 0.7211259603500366
-        }
-      },
-      {
         "question_id": 3001809,
         "question": "Provide a concise and descriptive caption for the given image.",
         "class": "image_scene",
@@ -617,22 +601,6 @@
           "precision": 0.6426134705543518,
           "recall": 0.7213740348815918,
           "f1": 0.679719865322113
-        }
-      },
-      {
-        "question_id": 58,
-        "question": "Provide a concise and descriptive caption for the given image.",
-        "class": "image_scene",
-        "img": "13",
-        "img_path": "./data/datasets/mmbench/imgs/image_scene/13.jpg",
-        "is_open": false,
-        "options": null,
-        "answer": "A red and blue train on a bridge during a cloudy day.",
-        "response": "A train is crossing a bridge over a body of water. The train is blue and red, and it has the number 100 on the side. The bridge is supported by concrete pillars. The sky above is cloudy.",
-        "measures": {
-          "precision": 0.6425677537918091,
-          "recall": 0.821567952632904,
-          "f1": 0.7211259603500366
         }
       },
       {
@@ -729,22 +697,6 @@
           "precision": 0.5240730047225952,
           "recall": 0.7483811378479004,
           "f1": 0.6164565682411194
-        }
-      },
-      {
-        "question_id": 3000058,
-        "question": "Provide a concise and descriptive caption for the given image.",
-        "class": "image_scene",
-        "img": "204",
-        "img_path": "./data/datasets/mmbench/imgs/image_scene/204.jpg",
-        "is_open": false,
-        "options": null,
-        "answer": "A red and blue train on a bridge during a cloudy day.",
-        "response": "A train is crossing a bridge over a body of water. The train is blue and red, and it has the number 100 on the side. The bridge is supported by concrete pillars. The sky above is cloudy.",
-        "measures": {
-          "precision": 0.6425677537918091,
-          "recall": 0.821567952632904,
-          "f1": 0.7211259603500366
         }
       },
       {
@@ -1710,22 +1662,6 @@
         }
       },
       {
-        "question_id": 1000049,
-        "question": "Provide a concise and descriptive caption for the given image.",
-        "class": "image_scene",
-        "img": "73",
-        "img_path": "./data/datasets/mmbench/imgs/image_scene/73.jpg",
-        "is_open": false,
-        "options": null,
-        "answer": "A yellow and blue fire hydrant sitting on a sidewalk.",
-        "response": "A yellow and blue fire hydrant sits on a sidewalk next to a street.",
-        "measures": {
-          "precision": 0.8869706392288208,
-          "recall": 0.9621890783309937,
-          "f1": 0.923050045967102
-        }
-      },
-      {
         "question_id": 1001802,
         "question": "Provide a concise and descriptive caption for the given image.",
         "class": "image_scene",
@@ -2239,5 +2175,50 @@
       }
     ]
   },
-  "invalid_resp": []
+  "invalid_resp": [
+    {
+      "question_id": 2000058,
+      "question": "Provide a concise and descriptive caption for the given image.",
+      "class": "image_scene",
+      "img": "141",
+      "img_path": "./data/datasets/mmbench/imgs/image_scene/141.jpg",
+      "is_open": false,
+      "options": null,
+      "answer": "A red and blue train on a bridge during a cloudy day.",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": 58,
+      "question": "Provide a concise and descriptive caption for the given image.",
+      "class": "image_scene",
+      "img": "13",
+      "img_path": "./data/datasets/mmbench/imgs/image_scene/13.jpg",
+      "is_open": false,
+      "options": null,
+      "answer": "A red and blue train on a bridge during a cloudy day.",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": 1000049,
+      "question": "Provide a concise and descriptive caption for the given image.",
+      "class": "image_scene",
+      "img": "73",
+      "img_path": "./data/datasets/mmbench/imgs/image_scene/73.jpg",
+      "is_open": false,
+      "options": null,
+      "answer": "A yellow and blue fire hydrant sitting on a sidewalk.",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": 3000058,
+      "question": "Provide a concise and descriptive caption for the given image.",
+      "class": "image_scene",
+      "img": "204",
+      "img_path": "./data/datasets/mmbench/imgs/image_scene/204.jpg",
+      "is_open": false,
+      "options": null,
+      "answer": "A red and blue train on a bridge during a cloudy day.",
+      "response": "<NOT_FOUND>"
+    }
+  ]
 }

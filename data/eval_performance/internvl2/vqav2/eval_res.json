@@ -1,6 +1,6 @@
 {
   "measures": {
-    "accuracy": 0.66
+    "accuracy": 0.6666666666666666
   },
   "correct_resp": [
     {
@@ -378,6 +378,17 @@
       "response": "3"
     },
     {
+      "question_id": 433204004,
+      "question": "How many people are wearing similar clothing?",
+      "class": "how_many_people_are",
+      "img": "433204",
+      "img_path": "./data/datasets/vqav2/imgs/how_many_people_are/433204.jpg",
+      "is_open": true,
+      "options": null,
+      "answer": "3",
+      "response": "3"
+    },
+    {
       "question_id": 563775002,
       "question": "How many people are shown?",
       "class": "how_many_people_are",
@@ -408,7 +419,7 @@
       "is_open": true,
       "options": null,
       "answer": "many",
-      "response": "Many"
+      "response": "many"
     },
     {
       "question_id": 50926004,
@@ -573,7 +584,7 @@
       "is_open": true,
       "options": null,
       "answer": "surfboard",
-      "response": "Surfboard"
+      "response": "surfboard"
     },
     {
       "question_id": 18336006,
@@ -584,7 +595,7 @@
       "is_open": true,
       "options": null,
       "answer": "apple",
-      "response": "Apple"
+      "response": "apple"
     },
     {
       "question_id": 538414002,
@@ -595,7 +606,7 @@
       "is_open": true,
       "options": null,
       "answer": "bat",
-      "response": "Bat"
+      "response": "bat"
     },
     {
       "question_id": 431799001,
@@ -606,7 +617,7 @@
       "is_open": true,
       "options": null,
       "answer": "kite",
-      "response": "Kite"
+      "response": "kite"
     },
     {
       "question_id": 473299000,
@@ -617,7 +628,7 @@
       "is_open": true,
       "options": null,
       "answer": "snowboarding",
-      "response": "Snowboarding"
+      "response": "snowboarding"
     },
     {
       "question_id": 64059005,
@@ -628,7 +639,7 @@
       "is_open": true,
       "options": null,
       "answer": "field",
-      "response": "Field"
+      "response": "field"
     },
     {
       "question_id": 202981008,
@@ -639,7 +650,7 @@
       "is_open": true,
       "options": null,
       "answer": "sunglasses",
-      "response": "Sunglasses"
+      "response": "sunglasses"
     },
     {
       "question_id": 186130000,
@@ -650,7 +661,7 @@
       "is_open": true,
       "options": null,
       "answer": "cake",
-      "response": "Cake"
+      "response": "cake"
     },
     {
       "question_id": 291286004,
@@ -661,7 +672,7 @@
       "is_open": true,
       "options": null,
       "answer": "skateboard",
-      "response": "Skateboard"
+      "response": "skateboard"
     },
     {
       "question_id": 154520073,
@@ -672,7 +683,7 @@
       "is_open": true,
       "options": null,
       "answer": "flying kite",
-      "response": "Flying kite"
+      "response": "flying kite"
     },
     {
       "question_id": 249046003,
@@ -683,7 +694,7 @@
       "is_open": true,
       "options": null,
       "answer": "snowboarding",
-      "response": "Snowboarding"
+      "response": "snowboarding"
     },
     {
       "question_id": 77063003,
@@ -694,7 +705,7 @@
       "is_open": true,
       "options": null,
       "answer": "horse",
-      "response": "Horse"
+      "response": "horse"
     },
     {
       "question_id": 249883001,
@@ -705,7 +716,7 @@
       "is_open": true,
       "options": null,
       "answer": "skateboarding",
-      "response": "Skateboarding"
+      "response": "skateboarding"
     },
     {
       "question_id": 69965002,
@@ -716,7 +727,7 @@
       "is_open": true,
       "options": null,
       "answer": "surfboard",
-      "response": "Surfboard"
+      "response": "surfboard"
     },
     {
       "question_id": 517612002,
@@ -727,7 +738,7 @@
       "is_open": true,
       "options": null,
       "answer": "skateboard",
-      "response": "Skateboard"
+      "response": "skateboard"
     },
     {
       "question_id": 6719001,
@@ -738,7 +749,7 @@
       "is_open": true,
       "options": null,
       "answer": "sitting",
-      "response": "Sitting"
+      "response": "sitting"
     },
     {
       "question_id": 391375002,
@@ -749,7 +760,7 @@
       "is_open": true,
       "options": null,
       "answer": "sitting",
-      "response": "Sitting"
+      "response": "sitting"
     },
     {
       "question_id": 409964010,
@@ -760,7 +771,7 @@
       "is_open": true,
       "options": null,
       "answer": "shirt",
-      "response": "T-shirt"
+      "response": "tshirt"
     },
     {
       "question_id": 526371000,
@@ -771,7 +782,7 @@
       "is_open": true,
       "options": null,
       "answer": "hat",
-      "response": "Hat"
+      "response": "hat"
     },
     {
       "question_id": 33005004,
@@ -782,7 +793,7 @@
       "is_open": true,
       "options": null,
       "answer": "tennis racket",
-      "response": "Tennis racket"
+      "response": "tennis racket"
     },
     {
       "question_id": 353136002,
@@ -793,7 +804,7 @@
       "is_open": true,
       "options": null,
       "answer": "brushing",
-      "response": "Brushing"
+      "response": "brushing"
     },
     {
       "question_id": 544519002,
@@ -804,7 +815,7 @@
       "is_open": true,
       "options": null,
       "answer": "toothbrush",
-      "response": "Toothbrush"
+      "response": "toothbrush"
     },
     {
       "question_id": 177919000,
@@ -815,7 +826,7 @@
       "is_open": true,
       "options": null,
       "answer": "skateboarding",
-      "response": "Skateboarding"
+      "response": "skateboarding"
     },
     {
       "question_id": 319095002,
@@ -826,7 +837,7 @@
       "is_open": true,
       "options": null,
       "answer": "snowboarding",
-      "response": "Snowboarding"
+      "response": "snowboarding"
     },
     {
       "question_id": 73832000,
@@ -837,7 +848,7 @@
       "is_open": true,
       "options": null,
       "answer": "fire hydrant",
-      "response": "Fire hydrant"
+      "response": "fire hydrant"
     },
     {
       "question_id": 169076001,
@@ -848,7 +859,7 @@
       "is_open": true,
       "options": null,
       "answer": "suit",
-      "response": "Suit"
+      "response": "suit"
     },
     {
       "question_id": 572900009,
@@ -870,7 +881,7 @@
       "is_open": true,
       "options": null,
       "answer": "water skiing",
-      "response": "Water skiing"
+      "response": "water skiing"
     },
     {
       "question_id": 326664002,
@@ -881,7 +892,7 @@
       "is_open": true,
       "options": null,
       "answer": "skateboard",
-      "response": "Skateboard"
+      "response": "skateboard"
     },
     {
       "question_id": 544857000,
@@ -892,7 +903,7 @@
       "is_open": true,
       "options": null,
       "answer": "snowboarding",
-      "response": "Snowboarding"
+      "response": "snowboarding"
     },
     {
       "question_id": 319350000,
@@ -903,7 +914,7 @@
       "is_open": true,
       "options": null,
       "answer": "wine",
-      "response": "Wine"
+      "response": "wine"
     },
     {
       "question_id": 521306011,
@@ -914,7 +925,7 @@
       "is_open": true,
       "options": null,
       "answer": "wii",
-      "response": "Wii"
+      "response": "wii"
     },
     {
       "question_id": 380711000,
@@ -925,7 +936,7 @@
       "is_open": true,
       "options": null,
       "answer": "surfboard",
-      "response": "Surfboard"
+      "response": "surfboard"
     },
     {
       "question_id": 31542000,
@@ -936,7 +947,7 @@
       "is_open": true,
       "options": null,
       "answer": "skiing",
-      "response": "Skiing"
+      "response": "skiing"
     },
     {
       "question_id": 98434000,
@@ -947,7 +958,7 @@
       "is_open": true,
       "options": null,
       "answer": "banana",
-      "response": "Banana"
+      "response": "banana"
     },
     {
       "question_id": 367953005,
@@ -958,7 +969,7 @@
       "is_open": true,
       "options": null,
       "answer": "umbrella",
-      "response": "Umbrella"
+      "response": "umbrella"
     },
     {
       "question_id": 498453001,
@@ -969,7 +980,7 @@
       "is_open": true,
       "options": null,
       "answer": "surfing",
-      "response": "Surfing"
+      "response": "surfing"
     },
     {
       "question_id": 404780000,
@@ -980,7 +991,7 @@
       "is_open": true,
       "options": null,
       "answer": "flying kite",
-      "response": "Flying kite"
+      "response": "flying kite"
     },
     {
       "question_id": 431256002,
@@ -991,7 +1002,7 @@
       "is_open": true,
       "options": null,
       "answer": "snowboarding",
-      "response": "Snowboarding"
+      "response": "snowboarding"
     },
     {
       "question_id": 1176000,
@@ -1002,7 +1013,7 @@
       "is_open": true,
       "options": null,
       "answer": "skateboard",
-      "response": "Skateboard"
+      "response": "skateboard"
     },
     {
       "question_id": 18519001,
@@ -1013,7 +1024,7 @@
       "is_open": true,
       "options": null,
       "answer": "skateboard",
-      "response": "Skateboard"
+      "response": "skateboard"
     },
     {
       "question_id": 405279002,
@@ -1024,7 +1035,7 @@
       "is_open": true,
       "options": null,
       "answer": "kite",
-      "response": "Kite"
+      "response": "kite"
     },
     {
       "question_id": 37677001,
@@ -1035,7 +1046,7 @@
       "is_open": true,
       "options": null,
       "answer": "umbrella",
-      "response": "Umbrella"
+      "response": "umbrella"
     },
     {
       "question_id": 288201001,
@@ -1046,7 +1057,7 @@
       "is_open": true,
       "options": null,
       "answer": "sandwich",
-      "response": "Sandwich"
+      "response": "sandwich"
     },
     {
       "question_id": 199215001,
@@ -1057,7 +1068,7 @@
       "is_open": true,
       "options": null,
       "answer": "truck",
-      "response": "Truck bed"
+      "response": "truck bed"
     },
     {
       "question_id": 224000000,
@@ -1068,7 +1079,7 @@
       "is_open": true,
       "options": null,
       "answer": "atv",
-      "response": "ATV"
+      "response": "atv"
     },
     {
       "question_id": 469961000,
@@ -1079,7 +1090,7 @@
       "is_open": true,
       "options": null,
       "answer": "skiing",
-      "response": "Skiing"
+      "response": "skiing"
     },
     {
       "question_id": 551966004,
@@ -1090,7 +1101,7 @@
       "is_open": true,
       "options": null,
       "answer": "bench",
-      "response": "Bench"
+      "response": "bench"
     }
   ],
   "wrong_resp": [
@@ -1238,17 +1249,6 @@
       "response": "13"
     },
     {
-      "question_id": 433204004,
-      "question": "How many people are wearing similar clothing?",
-      "class": "how_many_people_are",
-      "img": "433204",
-      "img_path": "./data/datasets/vqav2/imgs/how_many_people_are/433204.jpg",
-      "is_open": true,
-      "options": null,
-      "answer": "3",
-      "response": "Three"
-    },
-    {
       "question_id": 399744001,
       "question": "How many people are shown?",
       "class": "how_many_people_are",
@@ -1367,7 +1367,7 @@
       "is_open": true,
       "options": null,
       "answer": "nothing",
-      "response": "Sleep"
+      "response": "sleep"
     },
     {
       "question_id": 279490024,
@@ -1378,7 +1378,7 @@
       "is_open": true,
       "options": null,
       "answer": "eating cake",
-      "response": "Eating"
+      "response": "eating"
     },
     {
       "question_id": 557812013,
@@ -1389,7 +1389,7 @@
       "is_open": true,
       "options": null,
       "answer": "taking picture",
-      "response": "Taking a picture"
+      "response": "taking a picture"
     },
     {
       "question_id": 439897004,
@@ -1400,7 +1400,7 @@
       "is_open": true,
       "options": null,
       "answer": "fork",
-      "response": "Pizza"
+      "response": "pizza"
     },
     {
       "question_id": 300206000,
@@ -1411,7 +1411,7 @@
       "is_open": true,
       "options": null,
       "answer": "watching",
-      "response": "Walking"
+      "response": "walking"
     },
     {
       "question_id": 163600007,
@@ -1422,7 +1422,7 @@
       "is_open": true,
       "options": null,
       "answer": "smiling",
-      "response": "Pointing"
+      "response": "pointing"
     },
     {
       "question_id": 229889007,
@@ -1433,7 +1433,7 @@
       "is_open": true,
       "options": null,
       "answer": "ski poles",
-      "response": "Pole"
+      "response": "pole"
     },
     {
       "question_id": 322194006,
@@ -1444,7 +1444,7 @@
       "is_open": true,
       "options": null,
       "answer": "water",
-      "response": "Boat"
+      "response": "boat"
     },
     {
       "question_id": 380706001,
@@ -1455,7 +1455,7 @@
       "is_open": true,
       "options": null,
       "answer": "motorcycle",
-      "response": "Scooter"
+      "response": "scooter"
     },
     {
       "question_id": 85584001,
@@ -1466,7 +1466,7 @@
       "is_open": true,
       "options": null,
       "answer": "parasailing",
-      "response": "Surfing"
+      "response": "surfing"
     },
     {
       "question_id": 539386000,
@@ -1488,7 +1488,7 @@
       "is_open": true,
       "options": null,
       "answer": "cooking",
-      "response": "Cutting carrots"
+      "response": "cutting carrots"
     },
     {
       "question_id": 437494002,
@@ -1499,7 +1499,7 @@
       "is_open": true,
       "options": null,
       "answer": "paddle",
-      "response": "Dog"
+      "response": "dog"
     },
     {
       "question_id": 65008001,
@@ -1510,7 +1510,7 @@
       "is_open": true,
       "options": null,
       "answer": "flying",
-      "response": "Running"
+      "response": "running"
     },
     {
       "question_id": 302107002,
@@ -1521,7 +1521,7 @@
       "is_open": true,
       "options": null,
       "answer": "playing baseball",
-      "response": "Swinging"
+      "response": "swinging"
     },
     {
       "question_id": 92644001,
@@ -1532,7 +1532,7 @@
       "is_open": true,
       "options": null,
       "answer": "jet skiing",
-      "response": "Water skiing"
+      "response": "water skiing"
     },
     {
       "question_id": 323851001,
@@ -1543,7 +1543,7 @@
       "is_open": true,
       "options": null,
       "answer": "frisbee",
-      "response": "Disc"
+      "response": "disc"
     },
     {
       "question_id": 44856002,
@@ -1554,7 +1554,7 @@
       "is_open": true,
       "options": null,
       "answer": "ski poles",
-      "response": "Pole"
+      "response": "pole"
     },
     {
       "question_id": 251824001,
@@ -1565,7 +1565,7 @@
       "is_open": true,
       "options": null,
       "answer": "plastic",
-      "response": "Scissors"
+      "response": "scissors"
     },
     {
       "question_id": 405740008,
@@ -1576,7 +1576,7 @@
       "is_open": true,
       "options": null,
       "answer": "wine glass",
-      "response": "Glasses"
+      "response": "glasses"
     },
     {
       "question_id": 136458001,
@@ -1587,7 +1587,7 @@
       "is_open": true,
       "options": null,
       "answer": "nothing",
-      "response": "Work"
+      "response": "work"
     },
     {
       "question_id": 402109004,
@@ -1598,7 +1598,7 @@
       "is_open": true,
       "options": null,
       "answer": "using computer",
-      "response": "Working"
+      "response": "working"
     },
     {
       "question_id": 310543001,
@@ -1609,7 +1609,7 @@
       "is_open": true,
       "options": null,
       "answer": "standing",
-      "response": "Using the toilet"
+      "response": "using the toilet"
     },
     {
       "question_id": 133933036,
@@ -1620,7 +1620,7 @@
       "is_open": true,
       "options": null,
       "answer": "phone",
-      "response": "Wii controller"
+      "response": "wii controller"
     },
     {
       "question_id": 470070003,
@@ -1631,7 +1631,7 @@
       "is_open": true,
       "options": null,
       "answer": "standing",
-      "response": "Umpire"
+      "response": "umpire"
     },
     {
       "question_id": 79721005,
@@ -1642,7 +1642,7 @@
       "is_open": true,
       "options": null,
       "answer": "scale",
-      "response": "Phone"
+      "response": "phone"
     },
     {
       "question_id": 451406003,
@@ -1653,7 +1653,7 @@
       "is_open": true,
       "options": null,
       "answer": "judging",
-      "response": "Sitting"
+      "response": "sitting"
     }
   ],
   "invalid_resp": []

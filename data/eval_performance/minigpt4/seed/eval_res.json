@@ -1,6 +1,6 @@
 {
   "measures": {
-    "accuracy": 0.12666666666666668
+    "accuracy": 0.19148936170212766
   },
   "correct_resp": [
     {
@@ -18,6 +18,38 @@
       },
       "answer": "A",
       "response": "A"
+    },
+    {
+      "question_id": "743",
+      "question": "What is Santa Claus doing in the image?",
+      "class": "scene_understanding",
+      "img": "743",
+      "img_path": "./data/datasets/seed/imgs/scene_understanding/743.jpg",
+      "is_open": false,
+      "options": {
+        "A": "Delivering gifts to houses",
+        "B": "Resting on a rooftop",
+        "C": "Building a snowman",
+        "D": "Flying in a sleigh with reindeer"
+      },
+      "answer": "D",
+      "response": "D"
+    },
+    {
+      "question_id": "1873",
+      "question": "Which object is majority present in the image?",
+      "class": "scene_understanding",
+      "img": "1873",
+      "img_path": "./data/datasets/seed/imgs/scene_understanding/1873.jpg",
+      "is_open": false,
+      "options": {
+        "A": "Girls",
+        "B": "Umbrella",
+        "C": "Boots",
+        "D": "Woman"
+      },
+      "answer": "B",
+      "response": "B"
     },
     {
       "question_id": "158",
@@ -68,6 +100,38 @@
       "response": "C"
     },
     {
+      "question_id": "1271",
+      "question": "What is the relation between the man and the plants?",
+      "class": "scene_understanding",
+      "img": "1271",
+      "img_path": "./data/datasets/seed/imgs/scene_understanding/1271.jpg",
+      "is_open": false,
+      "options": {
+        "A": "He is picking the plants",
+        "B": "He is watering the plants",
+        "C": "He is planting the plants",
+        "D": "He is admiring the plants"
+      },
+      "answer": "A",
+      "response": "A"
+    },
+    {
+      "question_id": "1711",
+      "question": "What is the overall color scheme of this image?",
+      "class": "scene_understanding",
+      "img": "1711",
+      "img_path": "./data/datasets/seed/imgs/scene_understanding/1711.jpg",
+      "is_open": false,
+      "options": {
+        "A": "Red and yellow",
+        "B": "Blue and green",
+        "C": "Black and white",
+        "D": "Purple and pink"
+      },
+      "answer": "B",
+      "response": "B"
+    },
+    {
       "question_id": "2812",
       "question": "What is the main activity occurring in the image?",
       "class": "scene_understanding",
@@ -116,6 +180,22 @@
       "response": "A"
     },
     {
+      "question_id": "4106",
+      "question": "What is the material of the pole in the image?",
+      "class": "visual_reasoning",
+      "img": "291",
+      "img_path": "./data/datasets/seed/imgs/visual_reasoning/291.jpg",
+      "is_open": false,
+      "options": {
+        "A": "Metal",
+        "B": "Concrete",
+        "C": "Wood",
+        "D": "Plastic"
+      },
+      "answer": "C",
+      "response": "C"
+    },
+    {
       "question_id": "4112",
       "question": "What type of terrain dominates the scene?",
       "class": "visual_reasoning",
@@ -148,20 +228,20 @@
       "response": "A"
     },
     {
-      "question_id": "3845",
-      "question": "What holiday are the children celebrating in the image?",
+      "question_id": "4124",
+      "question": "In terms of size, which object would it take more of to cover the same area as one of the round white balloons?",
       "class": "visual_reasoning",
-      "img": "30",
-      "img_path": "./data/datasets/seed/imgs/visual_reasoning/30.jpg",
+      "img": "309",
+      "img_path": "./data/datasets/seed/imgs/visual_reasoning/309.jpg",
       "is_open": false,
       "options": {
-        "A": "Christmas",
-        "B": "Easter",
-        "C": "Halloween",
-        "D": "Thanksgiving"
+        "A": "The grass",
+        "B": "Yellow flowers",
+        "C": "The rock",
+        "D": "A blue-white balloon"
       },
-      "answer": "A",
-      "response": "A"
+      "answer": "B",
+      "response": "B"
     },
     {
       "question_id": "3956",
@@ -180,6 +260,22 @@
       "response": "A"
     },
     {
+      "question_id": "3840",
+      "question": "What is the main subject of this image?",
+      "class": "visual_reasoning",
+      "img": "25",
+      "img_path": "./data/datasets/seed/imgs/visual_reasoning/25.jpg",
+      "is_open": false,
+      "options": {
+        "A": "Statues of liberty floating in the water near a building",
+        "B": "A city lit up at night with bodies of water and buildings along a canal",
+        "C": "A city lit up at night with statues floating on the water",
+        "D": "None of the above"
+      },
+      "answer": "D",
+      "response": "D"
+    },
+    {
       "question_id": "3903",
       "question": "What advice would you give to the couple if they want to enhance their dance performance in this kind of environment?",
       "class": "visual_reasoning",
@@ -191,6 +287,22 @@
         "B": "Bring umbrellas and raincoats",
         "C": "Wear sunglasses and apply sunscreen",
         "D": "Bring more layers of clothing"
+      },
+      "answer": "A",
+      "response": "A"
+    },
+    {
+      "question_id": "3853",
+      "question": "What is the relation between the guitar player and the drummer?",
+      "class": "visual_reasoning",
+      "img": "38",
+      "img_path": "./data/datasets/seed/imgs/visual_reasoning/38.jpg",
+      "is_open": false,
+      "options": {
+        "A": "The guitar player is performing music with the drummer",
+        "B": "The guitar player is playing music for the drummer's dance",
+        "C": "The guitar player is singing with the drummer",
+        "D": "The guitar player is walking past the drummer"
       },
       "answer": "A",
       "response": "A"
@@ -210,6 +322,22 @@
       },
       "answer": "C",
       "response": "C"
+    },
+    {
+      "question_id": "4054",
+      "question": "Based on the image, which of these statements is most likely true?",
+      "class": "visual_reasoning",
+      "img": "239",
+      "img_path": "./data/datasets/seed/imgs/visual_reasoning/239.jpg",
+      "is_open": false,
+      "options": {
+        "A": "The audience is seated or standing, observing the performance",
+        "B": "There is no furniture in the room",
+        "C": "The performer is playing a piano",
+        "D": "There are more than 100 people in the audience"
+      },
+      "answer": "A",
+      "response": "A"
     },
     {
       "question_id": "3912",
@@ -323,23 +451,7 @@
         "D": "A pool table"
       },
       "answer": "C",
-      "response": "The main feature of the room in the image is a bar counter"
-    },
-    {
-      "question_id": "3057",
-      "question": "What is the primary color scheme of the image?",
-      "class": "scene_understanding",
-      "img": "3057",
-      "img_path": "./data/datasets/seed/imgs/scene_understanding/3057.jpg",
-      "is_open": false,
-      "options": {
-        "A": "Green and yellow",
-        "B": "Red and green",
-        "C": "Blue and purple",
-        "D": "Orange and pink"
-      },
-      "answer": "B",
-      "response": "A"
+      "response": "R"
     },
     {
       "question_id": "2173",
@@ -355,7 +467,7 @@
         "D": "Sad"
       },
       "answer": "C",
-      "response": "The woman's facial expression is a neutral expression"
+      "response": "Y"
     },
     {
       "question_id": "3104",
@@ -387,7 +499,7 @@
         "D": "A drum"
       },
       "answer": "D",
-      "response": "The other large instrument in the image besides the guitar is a drum"
+      "response": "T"
     },
     {
       "question_id": "2387",
@@ -403,7 +515,7 @@
         "D": "White"
       },
       "answer": "C",
-      "response": "The most prominent color in the image is green"
+      "response": "N"
     },
     {
       "question_id": "2156",
@@ -419,7 +531,7 @@
         "D": "A model in a coat and boots on the catwalk at the show during event"
       },
       "answer": "D",
-      "response": "The primary focus of the image is a woman walking down a runway in a grey coat and boots"
+      "response": "S"
     },
     {
       "question_id": "3131",
@@ -518,22 +630,6 @@
       "response": "A"
     },
     {
-      "question_id": "743",
-      "question": "What is Santa Claus doing in the image?",
-      "class": "scene_understanding",
-      "img": "743",
-      "img_path": "./data/datasets/seed/imgs/scene_understanding/743.jpg",
-      "is_open": false,
-      "options": {
-        "A": "Delivering gifts to houses",
-        "B": "Resting on a rooftop",
-        "C": "Building a snowman",
-        "D": "Flying in a sleigh with reindeer"
-      },
-      "answer": "D",
-      "response": "The image shows Santa Claus riding in a sleigh pulled by reindeer through the night sky"
-    },
-    {
       "question_id": "2496",
       "question": "What is the lighting like in the room?",
       "class": "scene_understanding",
@@ -547,7 +643,7 @@
         "D": "It's well-lit"
       },
       "answer": "A",
-      "response": "Based on the image, it appears that the lighting in the room is quite bright"
+      "response": "E"
     },
     {
       "question_id": "691",
@@ -563,23 +659,7 @@
         "D": "Gray"
       },
       "answer": "C",
-      "response": "The main color of the dining table in the living room is white"
-    },
-    {
-      "question_id": "1873",
-      "question": "Which object is majority present in the image?",
-      "class": "scene_understanding",
-      "img": "1873",
-      "img_path": "./data/datasets/seed/imgs/scene_understanding/1873.jpg",
-      "is_open": false,
-      "options": {
-        "A": "Girls",
-        "B": "Umbrella",
-        "C": "Boots",
-        "D": "Woman"
-      },
-      "answer": "B",
-      "response": "The object that is majority present in the image is"
+      "response": "E"
     },
     {
       "question_id": "2607",
@@ -595,7 +675,7 @@
         "D": "Water sports"
       },
       "answer": "C",
-      "response": "The overall theme of the image is"
+      "response": "B"
     },
     {
       "question_id": "1419",
@@ -611,7 +691,7 @@
         "D": "Building"
       },
       "answer": "C",
-      "response": "The structure most prominently featured in the image is"
+      "response": "A"
     },
     {
       "question_id": "2794",
@@ -627,7 +707,7 @@
         "D": "Green"
       },
       "answer": "C",
-      "response": "The most prominent color in the image is red"
+      "response": "D"
     },
     {
       "question_id": "252",
@@ -643,7 +723,7 @@
         "D": "The blue and white cloudy sky"
       },
       "answer": "A",
-      "response": "What is the color of the sky in the image?- A"
+      "response": "W"
     },
     {
       "question_id": "1363",
@@ -675,7 +755,7 @@
         "D": "Playing guitar"
       },
       "answer": "D",
-      "response": "The theme of the image is B"
+      "response": "B"
     },
     {
       "question_id": "1592",
@@ -691,7 +771,7 @@
         "D": "Church"
       },
       "answer": "B",
-      "response": "The prominent feature in the background of the image is a river"
+      "response": "E"
     },
     {
       "question_id": "2865",
@@ -707,7 +787,7 @@
         "D": "People are attending a concert in a park"
       },
       "answer": "B",
-      "response": "The main activity happening in the image is that a band is on stage at night with people"
+      "response": "S"
     },
     {
       "question_id": "1962",
@@ -723,7 +803,7 @@
         "D": "A car parked in a garage"
       },
       "answer": "A",
-      "response": "The overall theme of the image is A, a yellow and black pattern on the ceiling of a garage"
+      "response": "E"
     },
     {
       "question_id": "2356",
@@ -739,7 +819,7 @@
         "D": "Several trees lined up on the street"
       },
       "answer": "C",
-      "response": "The primary focus of the image is a woman walking on the sidewalk"
+      "response": "E"
     },
     {
       "question_id": "1286",
@@ -755,7 +835,7 @@
         "D": "Classical concert"
       },
       "answer": "C",
-      "response": "The image shows a group of musicians performing on stage"
+      "response": "T"
     },
     {
       "question_id": "1753",
@@ -771,7 +851,7 @@
         "D": "Fashion"
       },
       "answer": "C",
-      "response": "The overall theme of the image is nature"
+      "response": "T"
     },
     {
       "question_id": "894",
@@ -803,7 +883,7 @@
         "D": "A bathroom"
       },
       "answer": "A",
-      "response": "The image depicts a modern, industrial-style staircase leading to a loft space with a bar and seating area"
+      "response": "Y"
     },
     {
       "question_id": "129",
@@ -819,7 +899,7 @@
         "D": "Rustic and traditional"
       },
       "answer": "C",
-      "response": "The atmosphere of the room appears to be clean and bright, which suggests that it is well-maintained and organized"
+      "response": "G"
     },
     {
       "question_id": "503",
@@ -867,7 +947,7 @@
         "D": "Swimming"
       },
       "answer": "C",
-      "response": "A woman is most likely shopping for groceries in a supermarket with a shopping cart"
+      "response": "E"
     },
     {
       "question_id": "2104",
@@ -883,7 +963,7 @@
         "D": "Lips"
       },
       "answer": "D",
-      "response": "The lipstick is present on the lips"
+      "response": "S"
     },
     {
       "question_id": "2358",
@@ -902,22 +982,6 @@
       "response": "A"
     },
     {
-      "question_id": "1271",
-      "question": "What is the relation between the man and the plants?",
-      "class": "scene_understanding",
-      "img": "1271",
-      "img_path": "./data/datasets/seed/imgs/scene_understanding/1271.jpg",
-      "is_open": false,
-      "options": {
-        "A": "He is picking the plants",
-        "B": "He is watering the plants",
-        "C": "He is planting the plants",
-        "D": "He is admiring the plants"
-      },
-      "answer": "A",
-      "response": "What is the relation between the man and the plants?- A"
-    },
-    {
       "question_id": "1561",
       "question": "What object(s) are prominently featured in the image?",
       "class": "scene_understanding",
@@ -931,7 +995,7 @@
         "D": "Drums"
       },
       "answer": "C",
-      "response": "The object(s) prominently featured in the image are"
+      "response": "E"
     },
     {
       "question_id": "1569",
@@ -947,7 +1011,7 @@
         "D": "Bridge"
       },
       "answer": "C",
-      "response": "A"
+      "response": "L"
     },
     {
       "question_id": "2960",
@@ -963,7 +1027,7 @@
         "D": "The patio"
       },
       "answer": "C",
-      "response": "The prominent piece of furniture in the living room is the fireplace"
+      "response": "E"
     },
     {
       "question_id": "1018",
@@ -995,7 +1059,7 @@
         "D": "Photography"
       },
       "answer": "D",
-      "response": "The overall theme of the image is A"
+      "response": "A"
     },
     {
       "question_id": "297",
@@ -1011,7 +1075,7 @@
         "D": "Inside a classroom"
       },
       "answer": "A",
-      "response": "Based on the image, it appears to be outside in a park"
+      "response": "T"
     },
     {
       "question_id": "1948",
@@ -1027,23 +1091,7 @@
         "D": "A college library with many books on the shelves"
       },
       "answer": "C",
-      "response": "The establishment shown in the image is a bar or tavern"
-    },
-    {
-      "question_id": "1711",
-      "question": "What is the overall color scheme of this image?",
-      "class": "scene_understanding",
-      "img": "1711",
-      "img_path": "./data/datasets/seed/imgs/scene_understanding/1711.jpg",
-      "is_open": false,
-      "options": {
-        "A": "Red and yellow",
-        "B": "Blue and green",
-        "C": "Black and white",
-        "D": "Purple and pink"
-      },
-      "answer": "B",
-      "response": "The overall color scheme of this image is B"
+      "response": "D"
     },
     {
       "question_id": "1350",
@@ -1059,7 +1107,7 @@
         "D": "Christmas trees and balloons"
       },
       "answer": "C",
-      "response": "The holiday decorations present in the image are Christmas trees and flowers"
+      "response": "S"
     },
     {
       "question_id": "1549",
@@ -1075,7 +1123,7 @@
         "D": "Nowhere in particular"
       },
       "answer": "A",
-      "response": "The main focus of the image is on the woman"
+      "response": "E"
     },
     {
       "question_id": "2180",
@@ -1107,7 +1155,7 @@
         "D": "Blue"
       },
       "answer": "B",
-      "response": "The predominant color of the clothes worn by the baseball players in the image is white"
+      "response": "S"
     },
     {
       "question_id": "2048",
@@ -1123,7 +1171,7 @@
         "D": "Basketball"
       },
       "answer": "B",
-      "response": "The sport being played in the image is soccer"
+      "response": "D"
     },
     {
       "question_id": "199",
@@ -1155,7 +1203,7 @@
         "D": "Pedestrians"
       },
       "answer": "D",
-      "response": "The most prominent object in the image is the pedestrians"
+      "response": "S"
     },
     {
       "question_id": "1664",
@@ -1171,7 +1219,7 @@
         "D": "Gold"
       },
       "answer": "B",
-      "response": "The predominant color of the objects in the image is white"
+      "response": "R"
     },
     {
       "question_id": "1595",
@@ -1187,7 +1235,7 @@
         "D": "Food and dining"
       },
       "answer": "B",
-      "response": "The main theme of this image is food and dining"
+      "response": "S"
     },
     {
       "question_id": "1533",
@@ -1203,7 +1251,7 @@
         "D": "White, brown, and beige"
       },
       "answer": "D",
-      "response": "Based on the image, the color scheme commonly seen in the living room decor is white, brown, and beige"
+      "response": "E"
     },
     {
       "question_id": "1111",
@@ -1219,7 +1267,7 @@
         "D": "Dining"
       },
       "answer": "D",
-      "response": "The main purpose of the outdoor space in the image is dining"
+      "response": "E"
     },
     {
       "question_id": "913",
@@ -1251,7 +1299,7 @@
         "D": "Green"
       },
       "answer": "B",
-      "response": "The dominant color in the image is yellow"
+      "response": "W"
     },
     {
       "question_id": "1620",
@@ -1267,7 +1315,7 @@
         "D": "Playing music on stage"
       },
       "answer": "D",
-      "response": "The main activity happening in the image is playing music on stage"
+      "response": "E"
     },
     {
       "question_id": "2906",
@@ -1299,7 +1347,7 @@
         "D": "Dresser"
       },
       "answer": "B",
-      "response": "A chandelier is located closest to the wall in the bedroom"
+      "response": "M"
     },
     {
       "question_id": "2847",
@@ -1318,22 +1366,6 @@
       "response": "A"
     },
     {
-      "question_id": "4106",
-      "question": "What is the material of the pole in the image?",
-      "class": "visual_reasoning",
-      "img": "291",
-      "img_path": "./data/datasets/seed/imgs/visual_reasoning/291.jpg",
-      "is_open": false,
-      "options": {
-        "A": "Metal",
-        "B": "Concrete",
-        "C": "Wood",
-        "D": "Plastic"
-      },
-      "answer": "C",
-      "response": "A"
-    },
-    {
       "question_id": "4072",
       "question": "What is the main theme of the image?",
       "class": "visual_reasoning",
@@ -1347,7 +1379,7 @@
         "D": "Food"
       },
       "answer": "B",
-      "response": "The main theme of the image is fantasy creatures"
+      "response": "E"
     },
     {
       "question_id": "3921",
@@ -1379,7 +1411,7 @@
         "D": "Early morning"
       },
       "answer": "B",
-      "response": "What is the main activity in the image?- A"
+      "response": "G"
     },
     {
       "question_id": "3999",
@@ -1395,23 +1427,23 @@
         "D": "It is a large concert hall"
       },
       "answer": "B",
-      "response": "Based on the image, it can be inferred that the event is a small live performance"
+      "response": "E"
     },
     {
-      "question_id": "4124",
-      "question": "In terms of size, which object would it take more of to cover the same area as one of the round white balloons?",
+      "question_id": "3845",
+      "question": "What holiday are the children celebrating in the image?",
       "class": "visual_reasoning",
-      "img": "309",
-      "img_path": "./data/datasets/seed/imgs/visual_reasoning/309.jpg",
+      "img": "30",
+      "img_path": "./data/datasets/seed/imgs/visual_reasoning/30.jpg",
       "is_open": false,
       "options": {
-        "A": "The grass",
-        "B": "Yellow flowers",
-        "C": "The rock",
-        "D": "A blue-white balloon"
+        "A": "Christmas",
+        "B": "Easter",
+        "C": "Halloween",
+        "D": "Thanksgiving"
       },
-      "answer": "B",
-      "response": "The correct answer is B"
+      "answer": "A",
+      "response": "E"
     },
     {
       "question_id": "4121",
@@ -1427,7 +1459,7 @@
         "D": "Kicking the ball."
       },
       "answer": "A",
-      "response": "The athlete in the image is tackling the rugby player"
+      "response": "R"
     },
     {
       "question_id": "4016",
@@ -1443,7 +1475,7 @@
         "D": "A sporting event"
       },
       "answer": "C",
-      "response": "The occasion outside the building that has caused a crowd to form is a flag-lowering ceremony"
+      "response": "Y"
     },
     {
       "question_id": "4027",
@@ -1459,7 +1491,7 @@
         "D": "Cannot be determined from the image."
       },
       "answer": "C",
-      "response": "The team in white uniforms is winning"
+      "response": "D"
     },
     {
       "question_id": "3816",
@@ -1507,7 +1539,7 @@
         "D": "A formal dinner"
       },
       "answer": "A",
-      "response": "Based on the image, it appears that the woman is wearing a pink and blue wig with red lipstick and has a glamorous makeup look"
+      "response": "Y"
     },
     {
       "question_id": "3922",
@@ -1523,7 +1555,7 @@
         "D": "Decorative pillow and framed pictures"
       },
       "answer": "A",
-      "response": "The most accurate answer would be C"
+      "response": "C"
     },
     {
       "question_id": "4071",
@@ -1539,7 +1571,7 @@
         "D": "It is raining"
       },
       "answer": "A",
-      "response": "The weather conditions in the image are clear and sunny"
+      "response": "R"
     },
     {
       "question_id": "3819",
@@ -1555,7 +1587,7 @@
         "D": "The game is ongoing, and the player is making an impressive play."
       },
       "answer": "D",
-      "response": "Based on the image, it can be inferred that the game is ongoing and the player is making an impressive play"
+      "response": "G"
     },
     {
       "question_id": "4063",
@@ -1571,7 +1603,7 @@
         "D": "Appetizer"
       },
       "answer": "D",
-      "response": "The image shows small, round, flatbread-like dishes topped with a tomato sauce and mozzarella cheese. The dishes are served on a blue plate with a white background. There is also a bowl of salad on the same table.Therefore, the answer is C"
+      "response": "C"
     },
     {
       "question_id": "4039",
@@ -1587,39 +1619,7 @@
         "D": "To let fresh air in"
       },
       "answer": "D",
-      "response": "The most likely reason for the glass door in the living room to be open is to let fresh air in"
-    },
-    {
-      "question_id": "4097",
-      "question": "Based on the people's expressions and actions in the image, what is the most probable phase of the basketball game?",
-      "class": "visual_reasoning",
-      "img": "282",
-      "img_path": "./data/datasets/seed/imgs/visual_reasoning/282.jpg",
-      "is_open": false,
-      "options": {
-        "A": "A crucial moment during the game",
-        "B": "Half-time",
-        "C": "Warm-up",
-        "D": "After the game has ended"
-      },
-      "answer": "A",
-      "response": "Based on the image, it is most likely that the basketball game is in the middle of the second quarter"
-    },
-    {
-      "question_id": "3840",
-      "question": "What is the main subject of this image?",
-      "class": "visual_reasoning",
-      "img": "25",
-      "img_path": "./data/datasets/seed/imgs/visual_reasoning/25.jpg",
-      "is_open": false,
-      "options": {
-        "A": "Statues of liberty floating in the water near a building",
-        "B": "A city lit up at night with bodies of water and buildings along a canal",
-        "C": "A city lit up at night with statues floating on the water",
-        "D": "None of the above"
-      },
-      "answer": "D",
-      "response": "The main subject of this image is the statues of liberty floating in the water near a building"
+      "response": "E"
     },
     {
       "question_id": "3973",
@@ -1635,7 +1635,7 @@
         "D": "In a sports stadium"
       },
       "answer": "C",
-      "response": "The musicians are performing in a church"
+      "response": "H"
     },
     {
       "question_id": "3879",
@@ -1649,22 +1649,6 @@
         "B": "The waterfall is located near a volcanic area, causing mineral deposits to color the water.",
         "C": "Pollution from a nearby industrial site has contaminated the water.",
         "D": "The autumn leaves and soil from the surrounding forest might be affecting the water's color."
-      },
-      "answer": "D",
-      "response": "Based on the image, what could be a potential reason for the water appearing muddy and brown?- A"
-    },
-    {
-      "question_id": "3992",
-      "question": "What is the weather like in the image?",
-      "class": "visual_reasoning",
-      "img": "177",
-      "img_path": "./data/datasets/seed/imgs/visual_reasoning/177.jpg",
-      "is_open": false,
-      "options": {
-        "A": "Clear",
-        "B": "Cloudy",
-        "C": "Rainy",
-        "D": "Stormy"
       },
       "answer": "D",
       "response": "A"
@@ -1683,7 +1667,7 @@
         "D": "The team with the most players on the field"
       },
       "answer": "A",
-      "response": "The team in white is likely winning the game"
+      "response": "R"
     },
     {
       "question_id": "3868",
@@ -1699,7 +1683,7 @@
         "D": "Indifferent"
       },
       "answer": "B",
-      "response": "Based on the image, it is difficult to determine how the soccer team might be feeling at this moment"
+      "response": "N"
     },
     {
       "question_id": "4026",
@@ -1715,7 +1699,7 @@
         "D": "For a peaceful environment with lush greenery"
       },
       "answer": "D",
-      "response": "The house in the image is located in a peaceful environment with lush greenery"
+      "response": "Y"
     },
     {
       "question_id": "3846",
@@ -1731,7 +1715,7 @@
         "D": "Performing a ritual"
       },
       "answer": "C",
-      "response": "The most likely reason for the fire in the fireplace is for heating the room"
+      "response": "E"
     },
     {
       "question_id": "4030",
@@ -1763,7 +1747,7 @@
         "D": "A fly ball"
       },
       "answer": "B",
-      "response": "Based on the player's body position, it is most likely that the ball will be a ground ball"
+      "response": "R"
     },
     {
       "question_id": "3982",
@@ -1827,7 +1811,7 @@
         "D": "The water is frozen solid."
       },
       "answer": "B",
-      "response": "What can be inferred about the condition of the house in the image?- A"
+      "response": "G"
     },
     {
       "question_id": "4110",
@@ -1844,22 +1828,6 @@
       },
       "answer": "D",
       "response": "A"
-    },
-    {
-      "question_id": "3853",
-      "question": "What is the relation between the guitar player and the drummer?",
-      "class": "visual_reasoning",
-      "img": "38",
-      "img_path": "./data/datasets/seed/imgs/visual_reasoning/38.jpg",
-      "is_open": false,
-      "options": {
-        "A": "The guitar player is performing music with the drummer",
-        "B": "The guitar player is playing music for the drummer's dance",
-        "C": "The guitar player is singing with the drummer",
-        "D": "The guitar player is walking past the drummer"
-      },
-      "answer": "A",
-      "response": "What is the relation between the guitar player and the drummer?- A"
     },
     {
       "question_id": "3935",
@@ -1891,7 +1859,7 @@
         "D": "The crowd is booing the players"
       },
       "answer": "C",
-      "response": "The players are cheering the crowd"
+      "response": "D"
     },
     {
       "question_id": "4129",
@@ -1907,7 +1875,7 @@
         "D": "Silver"
       },
       "answer": "C",
-      "response": "The color of the car mirror on the left side is green"
+      "response": "N"
     },
     {
       "question_id": "4028",
@@ -1923,7 +1891,7 @@
         "D": "South"
       },
       "answer": "B",
-      "response": "A"
+      "response": "W"
     },
     {
       "question_id": "4099",
@@ -1939,23 +1907,7 @@
         "D": "The weather forecast"
       },
       "answer": "B",
-      "response": "The referee is most likely discussing with the soccer players on the field about the rules or decisions related to the game"
-    },
-    {
-      "question_id": "4054",
-      "question": "Based on the image, which of these statements is most likely true?",
-      "class": "visual_reasoning",
-      "img": "239",
-      "img_path": "./data/datasets/seed/imgs/visual_reasoning/239.jpg",
-      "is_open": false,
-      "options": {
-        "A": "The audience is seated or standing, observing the performance",
-        "B": "There is no furniture in the room",
-        "C": "The performer is playing a piano",
-        "D": "There are more than 100 people in the audience"
-      },
-      "answer": "A",
-      "response": "Based on the image, it is most likely that the audience is seated or standing, observing the performance"
+      "response": "E"
     },
     {
       "question_id": "3984",
@@ -1971,7 +1923,7 @@
         "D": "A crowd gathered to watch a baseball game"
       },
       "answer": "D",
-      "response": "The image shows a group of kids playing baseball in a stadium"
+      "response": "S"
     },
     {
       "question_id": "4013",
@@ -2003,7 +1955,7 @@
         "D": "A pop song with choreographed dance moves"
       },
       "answer": "A",
-      "response": "Based on the image, it appears that the singers are performing a pop song with choreographed dance moves"
+      "response": "S"
     },
     {
       "question_id": "3905",
@@ -2019,7 +1971,7 @@
         "D": "\"A Mountain Adventure\""
       },
       "answer": "B",
-      "response": "Based on the image, what could be an appropriate title for this scene?- A"
+      "response": "A"
     },
     {
       "question_id": "4060",
@@ -2051,7 +2003,7 @@
         "D": "From the bottom of the image"
       },
       "answer": "A",
-      "response": "The majority of the light in the scene is coming from the top of the image"
+      "response": "E"
     },
     {
       "question_id": "3998",
@@ -2099,7 +2051,7 @@
         "D": "A man singing in front of a crowd at a concert"
       },
       "answer": "A",
-      "response": "A man playing guitar with a dimmer light behind him"
+      "response": "M"
     },
     {
       "question_id": "3970",
@@ -2115,7 +2067,7 @@
         "D": "The protesting players"
       },
       "answer": "B",
-      "response": "The main focus of the image is the referee speaking to a group of players"
+      "response": "D"
     },
     {
       "question_id": "3990",
@@ -2131,7 +2083,7 @@
         "D": "Football team with white and red shirts"
       },
       "answer": "D",
-      "response": "Based on the image, it appears that the team in red and white shirts is scoring a goal. The player in the middle of the image is celebrating by raising his arms in the air, which is a common celebration for scoring a goal in soccer. The other player on the team is also jumping up and down in celebration. Therefore, the answer is A"
+      "response": "S"
     },
     {
       "question_id": "4057",
@@ -2147,7 +2099,7 @@
         "D": "A fashion show on a runway"
       },
       "answer": "C",
-      "response": "The overall event happening in the image is a religious wedding ceremony in a church"
+      "response": "E"
     },
     {
       "question_id": "4025",
@@ -2163,7 +2115,7 @@
         "D": "Accepting an award for his achievements"
       },
       "answer": "D",
-      "response": "The man on stage is wearing a suit and tie, and he appears to be standing in front of a microphone"
+      "response": "S"
     },
     {
       "question_id": "4145",
@@ -2211,7 +2163,7 @@
         "D": "Skin products"
       },
       "answer": "D",
-      "response": "The main subject of the flyer seen in the image is"
+      "response": "B"
     },
     {
       "question_id": "3833",
@@ -2227,7 +2179,7 @@
         "D": "At the back row of the crowd"
       },
       "answer": "C",
-      "response": "The person should look towards the front row of the crowd"
+      "response": "N"
     },
     {
       "question_id": "4081",
@@ -2243,7 +2195,7 @@
         "D": "Stone"
       },
       "answer": "C",
-      "response": "The main material used at the construction site is cement or concrete, as seen in the image"
+      "response": "N"
     },
     {
       "question_id": "4130",
@@ -2259,7 +2211,7 @@
         "D": "In a library"
       },
       "answer": "A",
-      "response": "Based on the image provided, the young man is likely at a casual outdoor event"
+      "response": "C"
     }
   ],
   "invalid_resp": [
@@ -2277,7 +2229,23 @@
         "D": "White"
       },
       "answer": "D",
-      "response": "<INV>"
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": "3057",
+      "question": "What is the primary color scheme of the image?",
+      "class": "scene_understanding",
+      "img": "3057",
+      "img_path": "./data/datasets/seed/imgs/scene_understanding/3057.jpg",
+      "is_open": false,
+      "options": {
+        "A": "Green and yellow",
+        "B": "Red and green",
+        "C": "Blue and purple",
+        "D": "Orange and pink"
+      },
+      "answer": "B",
+      "response": "<NOT_FOUND>"
     },
     {
       "question_id": "58",
@@ -2293,7 +2261,7 @@
         "D": "The Living Room"
       },
       "answer": "B",
-      "response": "<INV>"
+      "response": "<NOT_FOUND>"
     },
     {
       "question_id": "2408",
@@ -2325,7 +2293,7 @@
         "D": "Blue"
       },
       "answer": "A",
-      "response": "<INV>"
+      "response": "<NOT_FOUND>"
     },
     {
       "question_id": "2928",
@@ -2341,7 +2309,7 @@
         "D": "A study"
       },
       "answer": "B",
-      "response": "<INV>"
+      "response": "<NOT_FOUND>"
     },
     {
       "question_id": "3856",
@@ -2357,7 +2325,39 @@
         "D": "Parenting challenges"
       },
       "answer": "B",
-      "response": "<INV>"
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": "4097",
+      "question": "Based on the people's expressions and actions in the image, what is the most probable phase of the basketball game?",
+      "class": "visual_reasoning",
+      "img": "282",
+      "img_path": "./data/datasets/seed/imgs/visual_reasoning/282.jpg",
+      "is_open": false,
+      "options": {
+        "A": "A crucial moment during the game",
+        "B": "Half-time",
+        "C": "Warm-up",
+        "D": "After the game has ended"
+      },
+      "answer": "A",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": "3992",
+      "question": "What is the weather like in the image?",
+      "class": "visual_reasoning",
+      "img": "177",
+      "img_path": "./data/datasets/seed/imgs/visual_reasoning/177.jpg",
+      "is_open": false,
+      "options": {
+        "A": "Clear",
+        "B": "Cloudy",
+        "C": "Rainy",
+        "D": "Stormy"
+      },
+      "answer": "D",
+      "response": "<NOT_FOUND>"
     },
     {
       "question_id": "3929",
@@ -2389,7 +2389,7 @@
         "D": "He is playing with his pet bird."
       },
       "answer": "C",
-      "response": "<INV>"
+      "response": "<NOT_FOUND>"
     },
     {
       "question_id": "3930",

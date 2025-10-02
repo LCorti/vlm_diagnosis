@@ -1,8 +1,8 @@
 {
   "measures": {
-    "precision": 0.5448453177651056,
-    "recall": 0.7555704489886332,
-    "f1": 0.6321217507767163
+    "precision": 0.5317525790602553,
+    "recall": 0.7565248193694096,
+    "f1": 0.6238570032166499
   },
   "ranges": {
     "0_20": [],
@@ -17,11 +17,11 @@
         "is_open": false,
         "options": null,
         "answer": "A group of people watching a play in a theater.",
-        "response": "The given image shows a large auditorium with a stage and a red curtain in the background. The audience is seated on chairs, looking up at the stage. There is a microphone on the stage, and a person standing behind it. The person is wearing a black suit and holding a white paper in their hand. The audience is focused on the person speaking on the stage.\n\nThe atmosphere of the scene is lively and engaging, as the audience is listening intently to the speaker. The red curtain adds a dramatic touch to the image, making it feel like a theatrical performance. The overall mood is one of excitement and anticipation.",
+        "response": "The given image shows a large auditorium with a stage and a red curtain in the background. The audience is seated on chairs, looking up at the stage. There is a microphone on the stage, and a person standing behind it. The person is wearing a black suit and holding a white paper in their hand. The audience is focused on the person speaking on the stage.The atmosphere of the scene is lively and engaging, as the audience is listening intently to the speaker. The red curtain adds a dramatic touch to the image, making it feel like a theatrical performance. The overall mood is one of excitement and anticipation.",
         "measures": {
-          "precision": 0.48880016803741455,
-          "recall": 0.6742768883705139,
-          "f1": 0.5667494535446167
+          "precision": 0.49228474497795105,
+          "recall": 0.6821997761726379,
+          "f1": 0.5718875527381897
         }
       },
       {
@@ -161,11 +161,11 @@
         "is_open": false,
         "options": null,
         "answer": "A group of people watching a play in a theater.",
-        "response": "The given image shows a large auditorium with a stage and a red curtain in the background. The audience is seated on chairs, looking up at the stage. There is a microphone on the stage, and a person standing behind it. The person is wearing a black suit and holding a white paper in their hand. The audience is focused on the person speaking on the stage.\n\nThe atmosphere of the scene is lively and engaging, as the audience is listening intently to the speaker. The red curtain adds a dramatic touch to the image, making it feel like a theatrical performance. The overall mood is one of excitement and anticipation.",
+        "response": "The given image shows a large auditorium with a stage and a red curtain in the background. The audience is seated on chairs, looking up at the stage. There is a microphone on the stage, and a person standing behind it. The person is wearing a black suit and holding a white paper in their hand. The audience is focused on the person speaking on the stage.The atmosphere of the scene is lively and engaging, as the audience is listening intently to the speaker. The red curtain adds a dramatic touch to the image, making it feel like a theatrical performance. The overall mood is one of excitement and anticipation.",
         "measures": {
-          "precision": 0.48880016803741455,
-          "recall": 0.6742768883705139,
-          "f1": 0.5667494535446167
+          "precision": 0.49228474497795105,
+          "recall": 0.6821997761726379,
+          "f1": 0.5718875527381897
         }
       },
       {
@@ -241,11 +241,11 @@
         "is_open": false,
         "options": null,
         "answer": "A group of people watching a play in a theater.",
-        "response": "The given image shows a large auditorium with a stage and a red curtain in the background. The audience is seated on chairs, looking up at the stage. There is a microphone on the stage, and a person standing behind it. The person is wearing a black suit and holding a white paper in their hand. The audience is focused on the person speaking on the stage.\n\nThe atmosphere of the scene is lively and engaging, as the audience is listening intently to the speaker. The red curtain adds a dramatic touch to the image, making it feel like a theatrical performance. The overall mood is one of excitement and anticipation.",
+        "response": "The given image shows a large auditorium with a stage and a red curtain in the background. The audience is seated on chairs, looking up at the stage. There is a microphone on the stage, and a person standing behind it. The person is wearing a black suit and holding a white paper in their hand. The audience is focused on the person speaking on the stage.The atmosphere of the scene is lively and engaging, as the audience is listening intently to the speaker. The red curtain adds a dramatic touch to the image, making it feel like a theatrical performance. The overall mood is one of excitement and anticipation.",
         "measures": {
-          "precision": 0.48880016803741455,
-          "recall": 0.6742768883705139,
-          "f1": 0.5667494535446167
+          "precision": 0.49228474497795105,
+          "recall": 0.6821997761726379,
+          "f1": 0.5718875527381897
         }
       },
       {
@@ -273,11 +273,11 @@
         "is_open": false,
         "options": null,
         "answer": "A triangle sign with an English and foreign warning",
-        "response": "1. The image shows a road sign that reads \"low gear now\" in Chinese.\n2. The sign is placed on the side of a road, with trees and buildings visible in the background.\n3. The sign is made of metal and has a red background with white text.\n4. The text is written in black and is easy to read.\n5. The sign appears to be warning drivers to shift into low gear when approaching a certain area.\n6. The sign is likely located in a city or urban area, as there are buildings and trees nearby.\n7. The sign is an important safety measure for drivers, as it helps them adjust their speed and gear to navigate the road safely.",
+        "response": "1. The image shows a road sign that reads \"low gear now\" in Chinese.2. The sign is placed on the side of a road, with trees and buildings visible in the background.3. The sign is made of metal and has a red background with white text.4. The text is written in black and is easy to read.5. The sign appears to be warning drivers to shift into low gear when approaching a certain area.6. The sign is likely located in a city or urban area, as there are buildings and trees nearby.7. The sign is an important safety measure for drivers, as it helps them adjust their speed and gear to navigate the road safely.",
         "measures": {
-          "precision": 0.4293472170829773,
-          "recall": 0.6204570531845093,
-          "f1": 0.5075070261955261
+          "precision": 0.4413825571537018,
+          "recall": 0.622787594795227,
+          "f1": 0.5166233777999878
         }
       },
       {
@@ -305,27 +305,11 @@
         "is_open": false,
         "options": null,
         "answer": "A triangle sign with an English and foreign warning",
-        "response": "1. The image shows a road sign that reads \"low gear now\" in Chinese.\n2. The sign is placed on the side of a road, with trees and buildings visible in the background.\n3. The sign is made of metal and has a red background with white text.\n4. The text is written in black and is easy to read.\n5. The sign appears to be warning drivers to shift into low gear when approaching a certain area.\n6. The sign is likely located in a city or urban area, as there are buildings and trees nearby.\n7. The sign is an important safety measure for drivers, as it helps them adjust their speed and gear to navigate the road safely.",
+        "response": "1. The image shows a road sign that reads \"low gear now\" in Chinese.2. The sign is placed on the side of a road, with trees and buildings visible in the background.3. The sign is made of metal and has a red background with white text.4. The text is written in black and is easy to read.5. The sign appears to be warning drivers to shift into low gear when approaching a certain area.6. The sign is likely located in a city or urban area, as there are buildings and trees nearby.7. The sign is an important safety measure for drivers, as it helps them adjust their speed and gear to navigate the road safely.",
         "measures": {
-          "precision": 0.4293472170829773,
-          "recall": 0.6204570531845093,
-          "f1": 0.5075070261955261
-        }
-      },
-      {
-        "question_id": 1000067,
-        "question": "Provide a concise and descriptive caption for the given image.",
-        "class": "image_topic",
-        "img": "20",
-        "img_path": "./data/datasets/mmbench/imgs/image_topic/20.jpg",
-        "is_open": false,
-        "options": null,
-        "answer": "A furry cat sleeping inside a packed suitcase",
-        "response": "This image shows a cat sitting in an open suitcase. The cat is brown and white with its eyes closed, and it appears to be relaxed. The suitcase is black and has various items of clothing and other objects visible inside it. The background is a messy room with clothes and other items scattered around.",
-        "measures": {
-          "precision": 0.5116381049156189,
-          "recall": 0.7078781127929688,
-          "f1": 0.59396892786026
+          "precision": 0.4413825571537018,
+          "recall": 0.622787594795227,
+          "f1": 0.5166233777999878
         }
       },
       {
@@ -353,43 +337,11 @@
         "is_open": false,
         "options": null,
         "answer": "A triangle sign with an English and foreign warning",
-        "response": "1. The image shows a road sign that reads \"low gear now\" in Chinese.\n2. The sign is placed on the side of a road, with trees and buildings visible in the background.\n3. The sign is made of metal and has a red background with white text.\n4. The text is written in black and is easy to read.\n5. The sign appears to be warning drivers to shift into low gear when approaching a certain area.\n6. The sign is likely located in a city or urban area, as there are buildings and trees nearby.\n7. The sign is an important safety measure for drivers, as it helps them adjust their speed and gear to navigate the road safely.",
+        "response": "1. The image shows a road sign that reads \"low gear now\" in Chinese.2. The sign is placed on the side of a road, with trees and buildings visible in the background.3. The sign is made of metal and has a red background with white text.4. The text is written in black and is easy to read.5. The sign appears to be warning drivers to shift into low gear when approaching a certain area.6. The sign is likely located in a city or urban area, as there are buildings and trees nearby.7. The sign is an important safety measure for drivers, as it helps them adjust their speed and gear to navigate the road safely.",
         "measures": {
-          "precision": 0.4293472170829773,
-          "recall": 0.6204570531845093,
-          "f1": 0.5075070261955261
-        }
-      },
-      {
-        "question_id": 2000067,
-        "question": "Provide a concise and descriptive caption for the given image.",
-        "class": "image_topic",
-        "img": "36",
-        "img_path": "./data/datasets/mmbench/imgs/image_topic/36.jpg",
-        "is_open": false,
-        "options": null,
-        "answer": "A furry cat sleeping inside a packed suitcase",
-        "response": "This image shows a cat sitting in an open suitcase. The cat is brown and white with its eyes closed, and it appears to be relaxed. The suitcase is black and has various items of clothing and other objects visible inside it. The background is a messy room with clothes and other items scattered around.",
-        "measures": {
-          "precision": 0.5116381049156189,
-          "recall": 0.7078781127929688,
-          "f1": 0.59396892786026
-        }
-      },
-      {
-        "question_id": 67,
-        "question": "Provide a concise and descriptive caption for the given image.",
-        "class": "image_topic",
-        "img": "4",
-        "img_path": "./data/datasets/mmbench/imgs/image_topic/4.jpg",
-        "is_open": false,
-        "options": null,
-        "answer": "A furry cat sleeping inside a packed suitcase",
-        "response": "This image shows a cat sitting in an open suitcase. The cat is brown and white with its eyes closed, and it appears to be relaxed. The suitcase is black and has various items of clothing and other objects visible inside it. The background is a messy room with clothes and other items scattered around.",
-        "measures": {
-          "precision": 0.5116381049156189,
-          "recall": 0.7078781127929688,
-          "f1": 0.59396892786026
+          "precision": 0.4413825571537018,
+          "recall": 0.622787594795227,
+          "f1": 0.5166233777999878
         }
       },
       {
@@ -417,27 +369,11 @@
         "is_open": false,
         "options": null,
         "answer": "A triangle sign with an English and foreign warning",
-        "response": "1. The image shows a road sign that reads \"low gear now\" in Chinese.\n2. The sign is placed on the side of a road, with trees and buildings visible in the background.\n3. The sign is made of metal and has a red background with white text.\n4. The text is written in black and is easy to read.\n5. The sign appears to be warning drivers to shift into low gear when approaching a certain area.\n6. The sign is likely located in a city or urban area, as there are buildings and trees nearby.\n7. The sign is an important safety measure for drivers, as it helps them adjust their speed and gear to navigate the road safely.",
+        "response": "1. The image shows a road sign that reads \"low gear now\" in Chinese.2. The sign is placed on the side of a road, with trees and buildings visible in the background.3. The sign is made of metal and has a red background with white text.4. The text is written in black and is easy to read.5. The sign appears to be warning drivers to shift into low gear when approaching a certain area.6. The sign is likely located in a city or urban area, as there are buildings and trees nearby.7. The sign is an important safety measure for drivers, as it helps them adjust their speed and gear to navigate the road safely.",
         "measures": {
-          "precision": 0.4293472170829773,
-          "recall": 0.6204570531845093,
-          "f1": 0.5075070261955261
-        }
-      },
-      {
-        "question_id": 3000067,
-        "question": "Provide a concise and descriptive caption for the given image.",
-        "class": "image_topic",
-        "img": "52",
-        "img_path": "./data/datasets/mmbench/imgs/image_topic/52.jpg",
-        "is_open": false,
-        "options": null,
-        "answer": "A furry cat sleeping inside a packed suitcase",
-        "response": "This image shows a cat sitting in an open suitcase. The cat is brown and white with its eyes closed, and it appears to be relaxed. The suitcase is black and has various items of clothing and other objects visible inside it. The background is a messy room with clothes and other items scattered around.",
-        "measures": {
-          "precision": 0.5116381049156189,
-          "recall": 0.7078781127929688,
-          "f1": 0.59396892786026
+          "precision": 0.4413825571537018,
+          "recall": 0.622787594795227,
+          "f1": 0.5166233777999878
         }
       }
     ],
@@ -504,22 +440,6 @@
           "precision": 0.5553207397460938,
           "recall": 0.7523794770240784,
           "f1": 0.6390026211738586
-        }
-      },
-      {
-        "question_id": 47,
-        "question": "Provide a concise and descriptive caption for the given image.",
-        "class": "image_scene",
-        "img": "7",
-        "img_path": "./data/datasets/mmbench/imgs/image_scene/7.jpg",
-        "is_open": false,
-        "options": null,
-        "answer": "A fire hydrant with a pair of eye stickers making a face on it.",
-        "response": "This image shows a fire hydrant with a pair of eyes drawn on it, sitting on the sidewalk next to a bike rack. The hydrant is black and has a white stripe down the middle. There are no other objects in the image.",
-        "measures": {
-          "precision": 0.6034497618675232,
-          "recall": 0.7697640657424927,
-          "f1": 0.6765354871749878
         }
       },
       {
@@ -715,38 +635,6 @@
         }
       },
       {
-        "question_id": 3000047,
-        "question": "Provide a concise and descriptive caption for the given image.",
-        "class": "image_scene",
-        "img": "198",
-        "img_path": "./data/datasets/mmbench/imgs/image_scene/198.jpg",
-        "is_open": false,
-        "options": null,
-        "answer": "A fire hydrant with a pair of eye stickers making a face on it.",
-        "response": "This image shows a fire hydrant with a pair of eyes drawn on it, sitting on the sidewalk next to a bike rack. The hydrant is black and has a white stripe down the middle. There are no other objects in the image.",
-        "measures": {
-          "precision": 0.6034497618675232,
-          "recall": 0.7697640657424927,
-          "f1": 0.6765354871749878
-        }
-      },
-      {
-        "question_id": 1000049,
-        "question": "Provide a concise and descriptive caption for the given image.",
-        "class": "image_scene",
-        "img": "73",
-        "img_path": "./data/datasets/mmbench/imgs/image_scene/73.jpg",
-        "is_open": false,
-        "options": null,
-        "answer": "A yellow and blue fire hydrant sitting on a sidewalk.",
-        "response": "This image shows a fire hydrant on the side of a road. The hydrant is painted in bright yellow and blue, with a sign next to it indicating that it is a fire hydrant. There is a green traffic light in the distance, and a street sign pointing towards Las Vegas. The image is taken from a low angle, looking down the road towards the hydrant.",
-        "measures": {
-          "precision": 0.5705225467681885,
-          "recall": 0.8053039312362671,
-          "f1": 0.6678807735443115
-        }
-      },
-      {
         "question_id": 3001835,
         "question": "Provide a concise and descriptive caption for the given image.",
         "class": "image_scene",
@@ -779,22 +667,6 @@
         }
       },
       {
-        "question_id": 1000027,
-        "question": "Provide a concise and descriptive caption for the given image.",
-        "class": "image_scene",
-        "img": "66",
-        "img_path": "./data/datasets/mmbench/imgs/image_scene/66.jpg",
-        "is_open": false,
-        "options": null,
-        "answer": "A bathroom with multicolored tile, bathtub and pedestal sink.",
-        "response": "This is a bathroom with a colorful tiled floor and walls. The sink, toilet, and bathtub are all white. There is a large mirror on the wall above the sink. The toilet has a white seat and tank. The shower has a blue curtain. The floor is tiled in various colors of blue, green, and yellow. There are two windows on opposite walls, each with a small potted plant. The room is well lit by overhead lighting.",
-        "measures": {
-          "precision": 0.5718201994895935,
-          "recall": 0.7381110191345215,
-          "f1": 0.6444105505943298
-        }
-      },
-      {
         "question_id": 1808,
         "question": "Provide a concise and descriptive caption for the given image.",
         "class": "image_scene",
@@ -808,22 +680,6 @@
           "precision": 0.5527008175849915,
           "recall": 0.8282610177993774,
           "f1": 0.6629879474639893
-        }
-      },
-      {
-        "question_id": 2000062,
-        "question": "Provide a concise and descriptive caption for the given image.",
-        "class": "image_scene",
-        "img": "142",
-        "img_path": "./data/datasets/mmbench/imgs/image_scene/142.jpg",
-        "is_open": false,
-        "options": null,
-        "answer": "A small cat is sitting on the wooden beam.",
-        "response": "This image shows a cat sitting on the edge of a wooden boat in front of a blue building. The cat is looking off into the distance, and there is a tire lying next to it. The background is made up of wooden planks and a thatched roof. The overall atmosphere of the image is peaceful and serene.",
-        "measures": {
-          "precision": 0.5759563446044922,
-          "recall": 0.7682693600654602,
-          "f1": 0.6583561897277832
         }
       },
       {
@@ -891,22 +747,6 @@
         }
       },
       {
-        "question_id": 1000069,
-        "question": "Provide a concise and descriptive caption for the given image.",
-        "class": "image_scene",
-        "img": "79",
-        "img_path": "./data/datasets/mmbench/imgs/image_scene/79.jpg",
-        "is_open": false,
-        "options": null,
-        "answer": "Cows are walking through tall grass near many trees.",
-        "response": "This image shows a group of cows grazing in a lush, green pasture. The cows are black and appear to be healthy and well-fed. In the background, there are trees and hills covered in green foliage. The sky is clear and blue, with a few clouds visible in the distance. The overall scene is peaceful and serene, with no signs of disturbance or human activity.",
-        "measures": {
-          "precision": 0.5604580044746399,
-          "recall": 0.7461219429969788,
-          "f1": 0.6400986313819885
-        }
-      },
-      {
         "question_id": 78,
         "question": "Provide a concise and descriptive caption for the given image.",
         "class": "image_scene",
@@ -920,22 +760,6 @@
           "precision": 0.5553207397460938,
           "recall": 0.7523794770240784,
           "f1": 0.6390026211738586
-        }
-      },
-      {
-        "question_id": 62,
-        "question": "Provide a concise and descriptive caption for the given image.",
-        "class": "image_scene",
-        "img": "14",
-        "img_path": "./data/datasets/mmbench/imgs/image_scene/14.jpg",
-        "is_open": false,
-        "options": null,
-        "answer": "A small cat is sitting on the wooden beam.",
-        "response": "This image shows a cat sitting on the edge of a wooden boat in front of a blue building. The cat is looking off into the distance, and there is a tire lying next to it. The background is made up of wooden planks and a thatched roof. The overall atmosphere of the image is peaceful and serene.",
-        "measures": {
-          "precision": 0.5759563446044922,
-          "recall": 0.7682693600654602,
-          "f1": 0.6583561897277832
         }
       },
       {
@@ -1211,22 +1035,6 @@
         }
       },
       {
-        "question_id": 1000062,
-        "question": "Provide a concise and descriptive caption for the given image.",
-        "class": "image_scene",
-        "img": "78",
-        "img_path": "./data/datasets/mmbench/imgs/image_scene/78.jpg",
-        "is_open": false,
-        "options": null,
-        "answer": "A small cat is sitting on the wooden beam.",
-        "response": "This image shows a cat sitting on the edge of a wooden boat in front of a blue building. The cat is looking off into the distance, and there is a tire lying next to it. The background is made up of wooden planks and a thatched roof. The overall atmosphere of the image is peaceful and serene.",
-        "measures": {
-          "precision": 0.5759563446044922,
-          "recall": 0.7682693600654602,
-          "f1": 0.6583561897277832
-        }
-      },
-      {
         "question_id": 2001798,
         "question": "Provide a concise and descriptive caption for the given image.",
         "class": "image_scene",
@@ -1288,22 +1096,6 @@
           "precision": 0.5542013645172119,
           "recall": 0.7818886637687683,
           "f1": 0.6486445665359497
-        }
-      },
-      {
-        "question_id": 1000047,
-        "question": "Provide a concise and descriptive caption for the given image.",
-        "class": "image_scene",
-        "img": "71",
-        "img_path": "./data/datasets/mmbench/imgs/image_scene/71.jpg",
-        "is_open": false,
-        "options": null,
-        "answer": "A fire hydrant with a pair of eye stickers making a face on it.",
-        "response": "This image shows a fire hydrant with a pair of eyes drawn on it, sitting on the sidewalk next to a bike rack. The hydrant is black and has a white stripe down the middle. There are no other objects in the image.",
-        "measures": {
-          "precision": 0.6034497618675232,
-          "recall": 0.7697640657424927,
-          "f1": 0.6765354871749878
         }
       },
       {
@@ -1419,38 +1211,6 @@
         }
       },
       {
-        "question_id": 97,
-        "question": "Provide a concise and descriptive caption for the given image.",
-        "class": "image_topic",
-        "img": "11",
-        "img_path": "./data/datasets/mmbench/imgs/image_topic/11.jpg",
-        "is_open": false,
-        "options": null,
-        "answer": "The clock on the building is in the shape of a coffee cup.",
-        "response": "This image shows a clock with a blue and white background, with a red and white border. The clock has a white face with black numbers and hands. The clock is mounted on a metal pole that is attached to the side of a building. The sky in the background is cloudy and blue.",
-        "measures": {
-          "precision": 0.551322340965271,
-          "recall": 0.7021116614341736,
-          "f1": 0.6176469922065735
-        }
-      },
-      {
-        "question_id": 101,
-        "question": "Provide a concise and descriptive caption for the given image.",
-        "class": "image_topic",
-        "img": "12",
-        "img_path": "./data/datasets/mmbench/imgs/image_topic/12.jpg",
-        "is_open": false,
-        "options": null,
-        "answer": "A foot long hot dog on top of two buns.",
-        "response": "This image shows a hot dog in a bun on a white plate. The hot dog is topped with mustard and ketchup, and there are no other ingredients visible. The plate is on a wooden table.",
-        "measures": {
-          "precision": 0.5925191640853882,
-          "recall": 0.719189465045929,
-          "f1": 0.649738073348999
-        }
-      },
-      {
         "question_id": 102,
         "question": "Provide a concise and descriptive caption for the given image.",
         "class": "image_topic",
@@ -1464,22 +1224,6 @@
           "precision": 0.5044247508049011,
           "recall": 0.7622627019882202,
           "f1": 0.6071019172668457
-        }
-      },
-      {
-        "question_id": 108,
-        "question": "Provide a concise and descriptive caption for the given image.",
-        "class": "image_topic",
-        "img": "14",
-        "img_path": "./data/datasets/mmbench/imgs/image_topic/14.jpg",
-        "is_open": false,
-        "options": null,
-        "answer": "A birthday cake with candles and a cell phone.",
-        "response": "This image shows a birthday cake with a cell phone on top of it. The cake is decorated with blue and yellow frosting and has candles on it. The cell phone appears to be playing music, as there are speakers on either side of it. The cake is surrounded by plates, cups, and other birthday decorations.",
-        "measures": {
-          "precision": 0.5250595808029175,
-          "recall": 0.7894600033760071,
-          "f1": 0.6306691765785217
         }
       },
       {
@@ -1499,22 +1243,6 @@
         }
       },
       {
-        "question_id": 1000054,
-        "question": "Provide a concise and descriptive caption for the given image.",
-        "class": "image_topic",
-        "img": "18",
-        "img_path": "./data/datasets/mmbench/imgs/image_topic/18.jpg",
-        "is_open": false,
-        "options": null,
-        "answer": "A grey and white bird with red feet and eyes perches on a branch.",
-        "response": "This is an image of a grey and white bird perched on a tree branch. The bird has a red beak and black feathers on its back. Its wings are spread out and it appears to be looking down at something in the distance. The background is made up of green leaves and branches.",
-        "measures": {
-          "precision": 0.6458583474159241,
-          "recall": 0.8372820019721985,
-          "f1": 0.729216992855072
-        }
-      },
-      {
         "question_id": 1000064,
         "question": "Provide a concise and descriptive caption for the given image.",
         "class": "image_topic",
@@ -1528,38 +1256,6 @@
           "precision": 0.5243740081787109,
           "recall": 0.7439533472061157,
           "f1": 0.615156352519989
-        }
-      },
-      {
-        "question_id": 54,
-        "question": "Provide a concise and descriptive caption for the given image.",
-        "class": "image_topic",
-        "img": "2",
-        "img_path": "./data/datasets/mmbench/imgs/image_topic/2.jpg",
-        "is_open": false,
-        "options": null,
-        "answer": "A grey and white bird with red feet and eyes perches on a branch.",
-        "response": "This is an image of a grey and white bird perched on a tree branch. The bird has a red beak and black feathers on its back. Its wings are spread out and it appears to be looking down at something in the distance. The background is made up of green leaves and branches.",
-        "measures": {
-          "precision": 0.6458583474159241,
-          "recall": 0.8372820019721985,
-          "f1": 0.729216992855072
-        }
-      },
-      {
-        "question_id": 1000068,
-        "question": "Provide a concise and descriptive caption for the given image.",
-        "class": "image_topic",
-        "img": "21",
-        "img_path": "./data/datasets/mmbench/imgs/image_topic/21.jpg",
-        "is_open": false,
-        "options": null,
-        "answer": "A gray chair and a black chair sit in a room near a lamp.",
-        "response": "This image shows a cat sitting on a recliner chair in a living room. The chair is pink and has a cushion on it. There is a wooden table with a lamp on it in the foreground, and a window with curtains in the background. The cat appears to be staring at something outside the window.",
-        "measures": {
-          "precision": 0.595248818397522,
-          "recall": 0.7408900260925293,
-          "f1": 0.6601318717002869
         }
       },
       {
@@ -1595,22 +1291,6 @@
         }
       },
       {
-        "question_id": 1000092,
-        "question": "Provide a concise and descriptive caption for the given image.",
-        "class": "image_topic",
-        "img": "24",
-        "img_path": "./data/datasets/mmbench/imgs/image_topic/24.jpg",
-        "is_open": false,
-        "options": null,
-        "answer": "A wooden table with a white plate of fresh fruit sitting on it.",
-        "response": "This image shows a bowl of apples and bananas on a table. The apples are red and the bananas are yellow. There is a pink tablecloth on the table.",
-        "measures": {
-          "precision": 0.6564316749572754,
-          "recall": 0.7502423524856567,
-          "f1": 0.7002089023590088
-        }
-      },
-      {
         "question_id": 1000094,
         "question": "Provide a concise and descriptive caption for the given image.",
         "class": "image_topic",
@@ -1640,38 +1320,6 @@
           "precision": 0.5233372449874878,
           "recall": 0.7304672598838806,
           "f1": 0.6097932457923889
-        }
-      },
-      {
-        "question_id": 1000097,
-        "question": "Provide a concise and descriptive caption for the given image.",
-        "class": "image_topic",
-        "img": "27",
-        "img_path": "./data/datasets/mmbench/imgs/image_topic/27.jpg",
-        "is_open": false,
-        "options": null,
-        "answer": "The clock on the building is in the shape of a coffee cup.",
-        "response": "This image shows a clock with a blue and white background, with a red and white border. The clock has a white face with black numbers and hands. The clock is mounted on a metal pole that is attached to the side of a building. The sky in the background is cloudy and blue.",
-        "measures": {
-          "precision": 0.551322340965271,
-          "recall": 0.7021116614341736,
-          "f1": 0.6176469922065735
-        }
-      },
-      {
-        "question_id": 1000101,
-        "question": "Provide a concise and descriptive caption for the given image.",
-        "class": "image_topic",
-        "img": "28",
-        "img_path": "./data/datasets/mmbench/imgs/image_topic/28.jpg",
-        "is_open": false,
-        "options": null,
-        "answer": "A foot long hot dog on top of two buns.",
-        "response": "This image shows a hot dog in a bun on a white plate. The hot dog is topped with mustard and ketchup, and there are no other ingredients visible. The plate is on a wooden table.",
-        "measures": {
-          "precision": 0.5925191640853882,
-          "recall": 0.719189465045929,
-          "f1": 0.649738073348999
         }
       },
       {
@@ -1707,22 +1355,6 @@
         }
       },
       {
-        "question_id": 1000108,
-        "question": "Provide a concise and descriptive caption for the given image.",
-        "class": "image_topic",
-        "img": "30",
-        "img_path": "./data/datasets/mmbench/imgs/image_topic/30.jpg",
-        "is_open": false,
-        "options": null,
-        "answer": "A birthday cake with candles and a cell phone.",
-        "response": "This image shows a birthday cake with a cell phone on top of it. The cake is decorated with blue and yellow frosting and has candles on it. The cell phone appears to be playing music, as there are speakers on either side of it. The cake is surrounded by plates, cups, and other birthday decorations.",
-        "measures": {
-          "precision": 0.5250595808029175,
-          "recall": 0.7894600033760071,
-          "f1": 0.6306691765785217
-        }
-      },
-      {
         "question_id": 1000114,
         "question": "Provide a concise and descriptive caption for the given image.",
         "class": "image_topic",
@@ -1739,22 +1371,6 @@
         }
       },
       {
-        "question_id": 2000054,
-        "question": "Provide a concise and descriptive caption for the given image.",
-        "class": "image_topic",
-        "img": "34",
-        "img_path": "./data/datasets/mmbench/imgs/image_topic/34.jpg",
-        "is_open": false,
-        "options": null,
-        "answer": "A grey and white bird with red feet and eyes perches on a branch.",
-        "response": "This is an image of a grey and white bird perched on a tree branch. The bird has a red beak and black feathers on its back. Its wings are spread out and it appears to be looking down at something in the distance. The background is made up of green leaves and branches.",
-        "measures": {
-          "precision": 0.6458583474159241,
-          "recall": 0.8372820019721985,
-          "f1": 0.729216992855072
-        }
-      },
-      {
         "question_id": 2000064,
         "question": "Provide a concise and descriptive caption for the given image.",
         "class": "image_topic",
@@ -1768,22 +1384,6 @@
           "precision": 0.5243740081787109,
           "recall": 0.7439533472061157,
           "f1": 0.615156352519989
-        }
-      },
-      {
-        "question_id": 2000068,
-        "question": "Provide a concise and descriptive caption for the given image.",
-        "class": "image_topic",
-        "img": "37",
-        "img_path": "./data/datasets/mmbench/imgs/image_topic/37.jpg",
-        "is_open": false,
-        "options": null,
-        "answer": "A gray chair and a black chair sit in a room near a lamp.",
-        "response": "This image shows a cat sitting on a recliner chair in a living room. The chair is pink and has a cushion on it. There is a wooden table with a lamp on it in the foreground, and a window with curtains in the background. The cat appears to be staring at something outside the window.",
-        "measures": {
-          "precision": 0.595248818397522,
-          "recall": 0.7408900260925293,
-          "f1": 0.6601318717002869
         }
       },
       {
@@ -1819,22 +1419,6 @@
         }
       },
       {
-        "question_id": 2000092,
-        "question": "Provide a concise and descriptive caption for the given image.",
-        "class": "image_topic",
-        "img": "40",
-        "img_path": "./data/datasets/mmbench/imgs/image_topic/40.jpg",
-        "is_open": false,
-        "options": null,
-        "answer": "A wooden table with a white plate of fresh fruit sitting on it.",
-        "response": "This image shows a bowl of apples and bananas on a table. The apples are red and the bananas are yellow. There is a pink tablecloth on the table.",
-        "measures": {
-          "precision": 0.6564316749572754,
-          "recall": 0.7502423524856567,
-          "f1": 0.7002089023590088
-        }
-      },
-      {
         "question_id": 2000094,
         "question": "Provide a concise and descriptive caption for the given image.",
         "class": "image_topic",
@@ -1867,38 +1451,6 @@
         }
       },
       {
-        "question_id": 2000097,
-        "question": "Provide a concise and descriptive caption for the given image.",
-        "class": "image_topic",
-        "img": "43",
-        "img_path": "./data/datasets/mmbench/imgs/image_topic/43.jpg",
-        "is_open": false,
-        "options": null,
-        "answer": "The clock on the building is in the shape of a coffee cup.",
-        "response": "This image shows a clock with a blue and white background, with a red and white border. The clock has a white face with black numbers and hands. The clock is mounted on a metal pole that is attached to the side of a building. The sky in the background is cloudy and blue.",
-        "measures": {
-          "precision": 0.551322340965271,
-          "recall": 0.7021116614341736,
-          "f1": 0.6176469922065735
-        }
-      },
-      {
-        "question_id": 2000101,
-        "question": "Provide a concise and descriptive caption for the given image.",
-        "class": "image_topic",
-        "img": "44",
-        "img_path": "./data/datasets/mmbench/imgs/image_topic/44.jpg",
-        "is_open": false,
-        "options": null,
-        "answer": "A foot long hot dog on top of two buns.",
-        "response": "This image shows a hot dog in a bun on a white plate. The hot dog is topped with mustard and ketchup, and there are no other ingredients visible. The plate is on a wooden table.",
-        "measures": {
-          "precision": 0.5925191640853882,
-          "recall": 0.719189465045929,
-          "f1": 0.649738073348999
-        }
-      },
-      {
         "question_id": 2000102,
         "question": "Provide a concise and descriptive caption for the given image.",
         "class": "image_topic",
@@ -1912,22 +1464,6 @@
           "precision": 0.5044247508049011,
           "recall": 0.7622627019882202,
           "f1": 0.6071019172668457
-        }
-      },
-      {
-        "question_id": 2000108,
-        "question": "Provide a concise and descriptive caption for the given image.",
-        "class": "image_topic",
-        "img": "46",
-        "img_path": "./data/datasets/mmbench/imgs/image_topic/46.jpg",
-        "is_open": false,
-        "options": null,
-        "answer": "A birthday cake with candles and a cell phone.",
-        "response": "This image shows a birthday cake with a cell phone on top of it. The cake is decorated with blue and yellow frosting and has candles on it. The cell phone appears to be playing music, as there are speakers on either side of it. The cake is surrounded by plates, cups, and other birthday decorations.",
-        "measures": {
-          "precision": 0.5250595808029175,
-          "recall": 0.7894600033760071,
-          "f1": 0.6306691765785217
         }
       },
       {
@@ -1947,38 +1483,6 @@
         }
       },
       {
-        "question_id": 68,
-        "question": "Provide a concise and descriptive caption for the given image.",
-        "class": "image_topic",
-        "img": "5",
-        "img_path": "./data/datasets/mmbench/imgs/image_topic/5.jpg",
-        "is_open": false,
-        "options": null,
-        "answer": "A gray chair and a black chair sit in a room near a lamp.",
-        "response": "This image shows a cat sitting on a recliner chair in a living room. The chair is pink and has a cushion on it. There is a wooden table with a lamp on it in the foreground, and a window with curtains in the background. The cat appears to be staring at something outside the window.",
-        "measures": {
-          "precision": 0.595248818397522,
-          "recall": 0.7408900260925293,
-          "f1": 0.6601318717002869
-        }
-      },
-      {
-        "question_id": 3000054,
-        "question": "Provide a concise and descriptive caption for the given image.",
-        "class": "image_topic",
-        "img": "50",
-        "img_path": "./data/datasets/mmbench/imgs/image_topic/50.jpg",
-        "is_open": false,
-        "options": null,
-        "answer": "A grey and white bird with red feet and eyes perches on a branch.",
-        "response": "This is an image of a grey and white bird perched on a tree branch. The bird has a red beak and black feathers on its back. Its wings are spread out and it appears to be looking down at something in the distance. The background is made up of green leaves and branches.",
-        "measures": {
-          "precision": 0.6458583474159241,
-          "recall": 0.8372820019721985,
-          "f1": 0.729216992855072
-        }
-      },
-      {
         "question_id": 3000064,
         "question": "Provide a concise and descriptive caption for the given image.",
         "class": "image_topic",
@@ -1992,22 +1496,6 @@
           "precision": 0.5243740081787109,
           "recall": 0.7439533472061157,
           "f1": 0.615156352519989
-        }
-      },
-      {
-        "question_id": 3000068,
-        "question": "Provide a concise and descriptive caption for the given image.",
-        "class": "image_topic",
-        "img": "53",
-        "img_path": "./data/datasets/mmbench/imgs/image_topic/53.jpg",
-        "is_open": false,
-        "options": null,
-        "answer": "A gray chair and a black chair sit in a room near a lamp.",
-        "response": "This image shows a cat sitting on a recliner chair in a living room. The chair is pink and has a cushion on it. There is a wooden table with a lamp on it in the foreground, and a window with curtains in the background. The cat appears to be staring at something outside the window.",
-        "measures": {
-          "precision": 0.595248818397522,
-          "recall": 0.7408900260925293,
-          "f1": 0.6601318717002869
         }
       },
       {
@@ -2043,22 +1531,6 @@
         }
       },
       {
-        "question_id": 3000092,
-        "question": "Provide a concise and descriptive caption for the given image.",
-        "class": "image_topic",
-        "img": "56",
-        "img_path": "./data/datasets/mmbench/imgs/image_topic/56.jpg",
-        "is_open": false,
-        "options": null,
-        "answer": "A wooden table with a white plate of fresh fruit sitting on it.",
-        "response": "This image shows a bowl of apples and bananas on a table. The apples are red and the bananas are yellow. There is a pink tablecloth on the table.",
-        "measures": {
-          "precision": 0.6564316749572754,
-          "recall": 0.7502423524856567,
-          "f1": 0.7002089023590088
-        }
-      },
-      {
         "question_id": 3000094,
         "question": "Provide a concise and descriptive caption for the given image.",
         "class": "image_topic",
@@ -2091,22 +1563,6 @@
         }
       },
       {
-        "question_id": 3000097,
-        "question": "Provide a concise and descriptive caption for the given image.",
-        "class": "image_topic",
-        "img": "59",
-        "img_path": "./data/datasets/mmbench/imgs/image_topic/59.jpg",
-        "is_open": false,
-        "options": null,
-        "answer": "The clock on the building is in the shape of a coffee cup.",
-        "response": "This image shows a clock with a blue and white background, with a red and white border. The clock has a white face with black numbers and hands. The clock is mounted on a metal pole that is attached to the side of a building. The sky in the background is cloudy and blue.",
-        "measures": {
-          "precision": 0.551322340965271,
-          "recall": 0.7021116614341736,
-          "f1": 0.6176469922065735
-        }
-      },
-      {
         "question_id": 72,
         "question": "Provide a concise and descriptive caption for the given image.",
         "class": "image_topic",
@@ -2123,22 +1579,6 @@
         }
       },
       {
-        "question_id": 3000101,
-        "question": "Provide a concise and descriptive caption for the given image.",
-        "class": "image_topic",
-        "img": "60",
-        "img_path": "./data/datasets/mmbench/imgs/image_topic/60.jpg",
-        "is_open": false,
-        "options": null,
-        "answer": "A foot long hot dog on top of two buns.",
-        "response": "This image shows a hot dog in a bun on a white plate. The hot dog is topped with mustard and ketchup, and there are no other ingredients visible. The plate is on a wooden table.",
-        "measures": {
-          "precision": 0.5925191640853882,
-          "recall": 0.719189465045929,
-          "f1": 0.649738073348999
-        }
-      },
-      {
         "question_id": 3000102,
         "question": "Provide a concise and descriptive caption for the given image.",
         "class": "image_topic",
@@ -2152,22 +1592,6 @@
           "precision": 0.5044247508049011,
           "recall": 0.7622627019882202,
           "f1": 0.6071019172668457
-        }
-      },
-      {
-        "question_id": 3000108,
-        "question": "Provide a concise and descriptive caption for the given image.",
-        "class": "image_topic",
-        "img": "62",
-        "img_path": "./data/datasets/mmbench/imgs/image_topic/62.jpg",
-        "is_open": false,
-        "options": null,
-        "answer": "A birthday cake with candles and a cell phone.",
-        "response": "This image shows a birthday cake with a cell phone on top of it. The cake is decorated with blue and yellow frosting and has candles on it. The cell phone appears to be playing music, as there are speakers on either side of it. The cake is surrounded by plates, cups, and other birthday decorations.",
-        "measures": {
-          "precision": 0.5250595808029175,
-          "recall": 0.7894600033760071,
-          "f1": 0.6306691765785217
         }
       },
       {
@@ -2203,22 +1627,6 @@
         }
       },
       {
-        "question_id": 92,
-        "question": "Provide a concise and descriptive caption for the given image.",
-        "class": "image_topic",
-        "img": "8",
-        "img_path": "./data/datasets/mmbench/imgs/image_topic/8.jpg",
-        "is_open": false,
-        "options": null,
-        "answer": "A wooden table with a white plate of fresh fruit sitting on it.",
-        "response": "This image shows a bowl of apples and bananas on a table. The apples are red and the bananas are yellow. There is a pink tablecloth on the table.",
-        "measures": {
-          "precision": 0.6564316749572754,
-          "recall": 0.7502423524856567,
-          "f1": 0.7002089023590088
-        }
-      },
-      {
         "question_id": 94,
         "question": "Provide a concise and descriptive caption for the given image.",
         "class": "image_topic",
@@ -2237,5 +1645,413 @@
     ],
     "80_100": []
   },
-  "invalid_resp": []
+  "invalid_resp": [
+    {
+      "question_id": 47,
+      "question": "Provide a concise and descriptive caption for the given image.",
+      "class": "image_scene",
+      "img": "7",
+      "img_path": "./data/datasets/mmbench/imgs/image_scene/7.jpg",
+      "is_open": false,
+      "options": null,
+      "answer": "A fire hydrant with a pair of eye stickers making a face on it.",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": 3000047,
+      "question": "Provide a concise and descriptive caption for the given image.",
+      "class": "image_scene",
+      "img": "198",
+      "img_path": "./data/datasets/mmbench/imgs/image_scene/198.jpg",
+      "is_open": false,
+      "options": null,
+      "answer": "A fire hydrant with a pair of eye stickers making a face on it.",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": 1000049,
+      "question": "Provide a concise and descriptive caption for the given image.",
+      "class": "image_scene",
+      "img": "73",
+      "img_path": "./data/datasets/mmbench/imgs/image_scene/73.jpg",
+      "is_open": false,
+      "options": null,
+      "answer": "A yellow and blue fire hydrant sitting on a sidewalk.",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": 1000027,
+      "question": "Provide a concise and descriptive caption for the given image.",
+      "class": "image_scene",
+      "img": "66",
+      "img_path": "./data/datasets/mmbench/imgs/image_scene/66.jpg",
+      "is_open": false,
+      "options": null,
+      "answer": "A bathroom with multicolored tile, bathtub and pedestal sink.",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": 2000062,
+      "question": "Provide a concise and descriptive caption for the given image.",
+      "class": "image_scene",
+      "img": "142",
+      "img_path": "./data/datasets/mmbench/imgs/image_scene/142.jpg",
+      "is_open": false,
+      "options": null,
+      "answer": "A small cat is sitting on the wooden beam.",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": 1000069,
+      "question": "Provide a concise and descriptive caption for the given image.",
+      "class": "image_scene",
+      "img": "79",
+      "img_path": "./data/datasets/mmbench/imgs/image_scene/79.jpg",
+      "is_open": false,
+      "options": null,
+      "answer": "Cows are walking through tall grass near many trees.",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": 62,
+      "question": "Provide a concise and descriptive caption for the given image.",
+      "class": "image_scene",
+      "img": "14",
+      "img_path": "./data/datasets/mmbench/imgs/image_scene/14.jpg",
+      "is_open": false,
+      "options": null,
+      "answer": "A small cat is sitting on the wooden beam.",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": 1000062,
+      "question": "Provide a concise and descriptive caption for the given image.",
+      "class": "image_scene",
+      "img": "78",
+      "img_path": "./data/datasets/mmbench/imgs/image_scene/78.jpg",
+      "is_open": false,
+      "options": null,
+      "answer": "A small cat is sitting on the wooden beam.",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": 1000047,
+      "question": "Provide a concise and descriptive caption for the given image.",
+      "class": "image_scene",
+      "img": "71",
+      "img_path": "./data/datasets/mmbench/imgs/image_scene/71.jpg",
+      "is_open": false,
+      "options": null,
+      "answer": "A fire hydrant with a pair of eye stickers making a face on it.",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": 97,
+      "question": "Provide a concise and descriptive caption for the given image.",
+      "class": "image_topic",
+      "img": "11",
+      "img_path": "./data/datasets/mmbench/imgs/image_topic/11.jpg",
+      "is_open": false,
+      "options": null,
+      "answer": "The clock on the building is in the shape of a coffee cup.",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": 101,
+      "question": "Provide a concise and descriptive caption for the given image.",
+      "class": "image_topic",
+      "img": "12",
+      "img_path": "./data/datasets/mmbench/imgs/image_topic/12.jpg",
+      "is_open": false,
+      "options": null,
+      "answer": "A foot long hot dog on top of two buns.",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": 108,
+      "question": "Provide a concise and descriptive caption for the given image.",
+      "class": "image_topic",
+      "img": "14",
+      "img_path": "./data/datasets/mmbench/imgs/image_topic/14.jpg",
+      "is_open": false,
+      "options": null,
+      "answer": "A birthday cake with candles and a cell phone.",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": 1000054,
+      "question": "Provide a concise and descriptive caption for the given image.",
+      "class": "image_topic",
+      "img": "18",
+      "img_path": "./data/datasets/mmbench/imgs/image_topic/18.jpg",
+      "is_open": false,
+      "options": null,
+      "answer": "A grey and white bird with red feet and eyes perches on a branch.",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": 54,
+      "question": "Provide a concise and descriptive caption for the given image.",
+      "class": "image_topic",
+      "img": "2",
+      "img_path": "./data/datasets/mmbench/imgs/image_topic/2.jpg",
+      "is_open": false,
+      "options": null,
+      "answer": "A grey and white bird with red feet and eyes perches on a branch.",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": 1000067,
+      "question": "Provide a concise and descriptive caption for the given image.",
+      "class": "image_topic",
+      "img": "20",
+      "img_path": "./data/datasets/mmbench/imgs/image_topic/20.jpg",
+      "is_open": false,
+      "options": null,
+      "answer": "A furry cat sleeping inside a packed suitcase",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": 1000068,
+      "question": "Provide a concise and descriptive caption for the given image.",
+      "class": "image_topic",
+      "img": "21",
+      "img_path": "./data/datasets/mmbench/imgs/image_topic/21.jpg",
+      "is_open": false,
+      "options": null,
+      "answer": "A gray chair and a black chair sit in a room near a lamp.",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": 1000092,
+      "question": "Provide a concise and descriptive caption for the given image.",
+      "class": "image_topic",
+      "img": "24",
+      "img_path": "./data/datasets/mmbench/imgs/image_topic/24.jpg",
+      "is_open": false,
+      "options": null,
+      "answer": "A wooden table with a white plate of fresh fruit sitting on it.",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": 1000097,
+      "question": "Provide a concise and descriptive caption for the given image.",
+      "class": "image_topic",
+      "img": "27",
+      "img_path": "./data/datasets/mmbench/imgs/image_topic/27.jpg",
+      "is_open": false,
+      "options": null,
+      "answer": "The clock on the building is in the shape of a coffee cup.",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": 1000101,
+      "question": "Provide a concise and descriptive caption for the given image.",
+      "class": "image_topic",
+      "img": "28",
+      "img_path": "./data/datasets/mmbench/imgs/image_topic/28.jpg",
+      "is_open": false,
+      "options": null,
+      "answer": "A foot long hot dog on top of two buns.",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": 1000108,
+      "question": "Provide a concise and descriptive caption for the given image.",
+      "class": "image_topic",
+      "img": "30",
+      "img_path": "./data/datasets/mmbench/imgs/image_topic/30.jpg",
+      "is_open": false,
+      "options": null,
+      "answer": "A birthday cake with candles and a cell phone.",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": 2000054,
+      "question": "Provide a concise and descriptive caption for the given image.",
+      "class": "image_topic",
+      "img": "34",
+      "img_path": "./data/datasets/mmbench/imgs/image_topic/34.jpg",
+      "is_open": false,
+      "options": null,
+      "answer": "A grey and white bird with red feet and eyes perches on a branch.",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": 2000067,
+      "question": "Provide a concise and descriptive caption for the given image.",
+      "class": "image_topic",
+      "img": "36",
+      "img_path": "./data/datasets/mmbench/imgs/image_topic/36.jpg",
+      "is_open": false,
+      "options": null,
+      "answer": "A furry cat sleeping inside a packed suitcase",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": 2000068,
+      "question": "Provide a concise and descriptive caption for the given image.",
+      "class": "image_topic",
+      "img": "37",
+      "img_path": "./data/datasets/mmbench/imgs/image_topic/37.jpg",
+      "is_open": false,
+      "options": null,
+      "answer": "A gray chair and a black chair sit in a room near a lamp.",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": 67,
+      "question": "Provide a concise and descriptive caption for the given image.",
+      "class": "image_topic",
+      "img": "4",
+      "img_path": "./data/datasets/mmbench/imgs/image_topic/4.jpg",
+      "is_open": false,
+      "options": null,
+      "answer": "A furry cat sleeping inside a packed suitcase",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": 2000092,
+      "question": "Provide a concise and descriptive caption for the given image.",
+      "class": "image_topic",
+      "img": "40",
+      "img_path": "./data/datasets/mmbench/imgs/image_topic/40.jpg",
+      "is_open": false,
+      "options": null,
+      "answer": "A wooden table with a white plate of fresh fruit sitting on it.",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": 2000097,
+      "question": "Provide a concise and descriptive caption for the given image.",
+      "class": "image_topic",
+      "img": "43",
+      "img_path": "./data/datasets/mmbench/imgs/image_topic/43.jpg",
+      "is_open": false,
+      "options": null,
+      "answer": "The clock on the building is in the shape of a coffee cup.",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": 2000101,
+      "question": "Provide a concise and descriptive caption for the given image.",
+      "class": "image_topic",
+      "img": "44",
+      "img_path": "./data/datasets/mmbench/imgs/image_topic/44.jpg",
+      "is_open": false,
+      "options": null,
+      "answer": "A foot long hot dog on top of two buns.",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": 2000108,
+      "question": "Provide a concise and descriptive caption for the given image.",
+      "class": "image_topic",
+      "img": "46",
+      "img_path": "./data/datasets/mmbench/imgs/image_topic/46.jpg",
+      "is_open": false,
+      "options": null,
+      "answer": "A birthday cake with candles and a cell phone.",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": 68,
+      "question": "Provide a concise and descriptive caption for the given image.",
+      "class": "image_topic",
+      "img": "5",
+      "img_path": "./data/datasets/mmbench/imgs/image_topic/5.jpg",
+      "is_open": false,
+      "options": null,
+      "answer": "A gray chair and a black chair sit in a room near a lamp.",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": 3000054,
+      "question": "Provide a concise and descriptive caption for the given image.",
+      "class": "image_topic",
+      "img": "50",
+      "img_path": "./data/datasets/mmbench/imgs/image_topic/50.jpg",
+      "is_open": false,
+      "options": null,
+      "answer": "A grey and white bird with red feet and eyes perches on a branch.",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": 3000067,
+      "question": "Provide a concise and descriptive caption for the given image.",
+      "class": "image_topic",
+      "img": "52",
+      "img_path": "./data/datasets/mmbench/imgs/image_topic/52.jpg",
+      "is_open": false,
+      "options": null,
+      "answer": "A furry cat sleeping inside a packed suitcase",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": 3000068,
+      "question": "Provide a concise and descriptive caption for the given image.",
+      "class": "image_topic",
+      "img": "53",
+      "img_path": "./data/datasets/mmbench/imgs/image_topic/53.jpg",
+      "is_open": false,
+      "options": null,
+      "answer": "A gray chair and a black chair sit in a room near a lamp.",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": 3000092,
+      "question": "Provide a concise and descriptive caption for the given image.",
+      "class": "image_topic",
+      "img": "56",
+      "img_path": "./data/datasets/mmbench/imgs/image_topic/56.jpg",
+      "is_open": false,
+      "options": null,
+      "answer": "A wooden table with a white plate of fresh fruit sitting on it.",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": 3000097,
+      "question": "Provide a concise and descriptive caption for the given image.",
+      "class": "image_topic",
+      "img": "59",
+      "img_path": "./data/datasets/mmbench/imgs/image_topic/59.jpg",
+      "is_open": false,
+      "options": null,
+      "answer": "The clock on the building is in the shape of a coffee cup.",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": 3000101,
+      "question": "Provide a concise and descriptive caption for the given image.",
+      "class": "image_topic",
+      "img": "60",
+      "img_path": "./data/datasets/mmbench/imgs/image_topic/60.jpg",
+      "is_open": false,
+      "options": null,
+      "answer": "A foot long hot dog on top of two buns.",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": 3000108,
+      "question": "Provide a concise and descriptive caption for the given image.",
+      "class": "image_topic",
+      "img": "62",
+      "img_path": "./data/datasets/mmbench/imgs/image_topic/62.jpg",
+      "is_open": false,
+      "options": null,
+      "answer": "A birthday cake with candles and a cell phone.",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": 92,
+      "question": "Provide a concise and descriptive caption for the given image.",
+      "class": "image_topic",
+      "img": "8",
+      "img_path": "./data/datasets/mmbench/imgs/image_topic/8.jpg",
+      "is_open": false,
+      "options": null,
+      "answer": "A wooden table with a white plate of fresh fruit sitting on it.",
+      "response": "<NOT_FOUND>"
+    }
+  ]
 }

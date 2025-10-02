@@ -1,8 +1,8 @@
 {
   "measures": {
-    "precision": 0.8132700341210949,
-    "recall": 0.7770241215932283,
-    "f1": 0.7926632067282423
+    "precision": 0.8110027479049855,
+    "recall": 0.7783241935242388,
+    "f1": 0.7924139997116605
   },
   "ranges": {
     "0_20": [],
@@ -539,22 +539,6 @@
         }
       },
       {
-        "question_id": 2001798,
-        "question": "Provide a concise and descriptive caption for the given image.",
-        "class": "image_scene",
-        "img": "165",
-        "img_path": "./data/datasets/mmbench/imgs/image_scene/165.jpg",
-        "is_open": false,
-        "options": null,
-        "answer": "A group of people dancing at a party",
-        "response": "Group of young people dancing and having fun.",
-        "measures": {
-          "precision": 0.7797994613647461,
-          "recall": 0.8165798187255859,
-          "f1": 0.7977659702301025
-        }
-      },
-      {
         "question_id": 3001830,
         "question": "Provide a concise and descriptive caption for the given image.",
         "class": "image_scene",
@@ -600,22 +584,6 @@
           "precision": 0.5961833000183105,
           "recall": 0.7275485992431641,
           "f1": 0.6553477048873901
-        }
-      },
-      {
-        "question_id": 1798,
-        "question": "Provide a concise and descriptive caption for the given image.",
-        "class": "image_scene",
-        "img": "37",
-        "img_path": "./data/datasets/mmbench/imgs/image_scene/37.jpg",
-        "is_open": false,
-        "options": null,
-        "answer": "A group of people dancing at a party",
-        "response": "Group of young people dancing and having fun.",
-        "measures": {
-          "precision": 0.7797994613647461,
-          "recall": 0.8165798187255859,
-          "f1": 0.7977659702301025
         }
       },
       {
@@ -680,22 +648,6 @@
           "precision": 0.86031174659729,
           "recall": 0.7073011994361877,
           "f1": 0.7763389945030212
-        }
-      },
-      {
-        "question_id": 101,
-        "question": "Provide a concise and descriptive caption for the given image.",
-        "class": "image_topic",
-        "img": "12",
-        "img_path": "./data/datasets/mmbench/imgs/image_topic/12.jpg",
-        "is_open": false,
-        "options": null,
-        "answer": "A foot long hot dog on top of two buns.",
-        "response": "A hot dog in a bun.",
-        "measures": {
-          "precision": 0.905392587184906,
-          "recall": 0.7140188813209534,
-          "f1": 0.798397958278656
         }
       },
       {
@@ -795,22 +747,6 @@
         }
       },
       {
-        "question_id": 1000101,
-        "question": "Provide a concise and descriptive caption for the given image.",
-        "class": "image_topic",
-        "img": "28",
-        "img_path": "./data/datasets/mmbench/imgs/image_topic/28.jpg",
-        "is_open": false,
-        "options": null,
-        "answer": "A foot long hot dog on top of two buns.",
-        "response": "A hot dog in a bun.",
-        "measures": {
-          "precision": 0.905392587184906,
-          "recall": 0.7140188813209534,
-          "f1": 0.798397958278656
-        }
-      },
-      {
         "question_id": 1000114,
         "question": "Provide a concise and descriptive caption for the given image.",
         "class": "image_topic",
@@ -904,22 +840,6 @@
           "precision": 0.86031174659729,
           "recall": 0.7073011994361877,
           "f1": 0.7763389945030212
-        }
-      },
-      {
-        "question_id": 2000101,
-        "question": "Provide a concise and descriptive caption for the given image.",
-        "class": "image_topic",
-        "img": "44",
-        "img_path": "./data/datasets/mmbench/imgs/image_topic/44.jpg",
-        "is_open": false,
-        "options": null,
-        "answer": "A foot long hot dog on top of two buns.",
-        "response": "A hot dog in a bun.",
-        "measures": {
-          "precision": 0.905392587184906,
-          "recall": 0.7140188813209534,
-          "f1": 0.798397958278656
         }
       },
       {
@@ -1032,22 +952,6 @@
           "precision": 0.86031174659729,
           "recall": 0.7073011994361877,
           "f1": 0.7763389945030212
-        }
-      },
-      {
-        "question_id": 3000101,
-        "question": "Provide a concise and descriptive caption for the given image.",
-        "class": "image_topic",
-        "img": "60",
-        "img_path": "./data/datasets/mmbench/imgs/image_topic/60.jpg",
-        "is_open": false,
-        "options": null,
-        "answer": "A foot long hot dog on top of two buns.",
-        "response": "A hot dog in a bun.",
-        "measures": {
-          "precision": 0.905392587184906,
-          "recall": 0.7140188813209534,
-          "f1": 0.798397958278656
         }
       },
       {
@@ -2238,5 +2142,72 @@
       }
     ]
   },
-  "invalid_resp": []
+  "invalid_resp": [
+    {
+      "question_id": 2001798,
+      "question": "Provide a concise and descriptive caption for the given image.",
+      "class": "image_scene",
+      "img": "165",
+      "img_path": "./data/datasets/mmbench/imgs/image_scene/165.jpg",
+      "is_open": false,
+      "options": null,
+      "answer": "A group of people dancing at a party",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": 1798,
+      "question": "Provide a concise and descriptive caption for the given image.",
+      "class": "image_scene",
+      "img": "37",
+      "img_path": "./data/datasets/mmbench/imgs/image_scene/37.jpg",
+      "is_open": false,
+      "options": null,
+      "answer": "A group of people dancing at a party",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": 101,
+      "question": "Provide a concise and descriptive caption for the given image.",
+      "class": "image_topic",
+      "img": "12",
+      "img_path": "./data/datasets/mmbench/imgs/image_topic/12.jpg",
+      "is_open": false,
+      "options": null,
+      "answer": "A foot long hot dog on top of two buns.",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": 1000101,
+      "question": "Provide a concise and descriptive caption for the given image.",
+      "class": "image_topic",
+      "img": "28",
+      "img_path": "./data/datasets/mmbench/imgs/image_topic/28.jpg",
+      "is_open": false,
+      "options": null,
+      "answer": "A foot long hot dog on top of two buns.",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": 2000101,
+      "question": "Provide a concise and descriptive caption for the given image.",
+      "class": "image_topic",
+      "img": "44",
+      "img_path": "./data/datasets/mmbench/imgs/image_topic/44.jpg",
+      "is_open": false,
+      "options": null,
+      "answer": "A foot long hot dog on top of two buns.",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": 3000101,
+      "question": "Provide a concise and descriptive caption for the given image.",
+      "class": "image_topic",
+      "img": "60",
+      "img_path": "./data/datasets/mmbench/imgs/image_topic/60.jpg",
+      "is_open": false,
+      "options": null,
+      "answer": "A foot long hot dog on top of two buns.",
+      "response": "<NOT_FOUND>"
+    }
+  ]
 }

@@ -1,6 +1,6 @@
 {
   "measures": {
-    "accuracy": 0.6866666666666666
+    "accuracy": 0.6666666666666666
   },
   "correct_resp": [
     {
@@ -98,38 +98,6 @@
       },
       "answer": "B",
       "response": "B"
-    },
-    {
-      "question_id": "2980",
-      "question": "What is the main feature of the image?",
-      "class": "scene_understanding",
-      "img": "2980",
-      "img_path": "./data/datasets/seed/imgs/scene_understanding/2980.jpg",
-      "is_open": false,
-      "options": {
-        "A": "A tall building in the foreground",
-        "B": "A bridge over the water",
-        "C": "A large group of buildings along the coast",
-        "D": "A beach with many umbrellas"
-      },
-      "answer": "C",
-      "response": "C"
-    },
-    {
-      "question_id": "2408",
-      "question": "What is the main activity happening on this street in the image?",
-      "class": "scene_understanding",
-      "img": "2408",
-      "img_path": "./data/datasets/seed/imgs/scene_understanding/2408.jpg",
-      "is_open": false,
-      "options": {
-        "A": "A parade is occurring",
-        "B": "People are shopping at the market",
-        "C": "Cars are driving down the street",
-        "D": "People are walking around and exploring"
-      },
-      "answer": "D",
-      "response": "D"
     },
     {
       "question_id": "2386",
@@ -274,22 +242,6 @@
       },
       "answer": "A",
       "response": "A"
-    },
-    {
-      "question_id": "2865",
-      "question": "What is the main activity happening in the image?",
-      "class": "scene_understanding",
-      "img": "2865",
-      "img_path": "./data/datasets/seed/imgs/scene_understanding/2865.jpg",
-      "is_open": false,
-      "options": {
-        "A": "A band is on stage at night with people",
-        "B": "People are playing music in a bar",
-        "C": "People are having a party outdoors",
-        "D": "People are attending a concert in a park"
-      },
-      "answer": "B",
-      "response": "B"
     },
     {
       "question_id": "1962",
@@ -516,22 +468,6 @@
       "response": "C"
     },
     {
-      "question_id": "1018",
-      "question": "What can be inferred about the weather from the image?",
-      "class": "scene_understanding",
-      "img": "1018",
-      "img_path": "./data/datasets/seed/imgs/scene_understanding/1018.jpg",
-      "is_open": false,
-      "options": {
-        "A": "It's a cloudy day",
-        "B": "It's a clear day",
-        "C": "It's a stormy day",
-        "D": "It cannot be inferred"
-      },
-      "answer": "B",
-      "response": "B"
-    },
-    {
       "question_id": "297",
       "question": "Where is the scene taking place?",
       "class": "scene_understanding",
@@ -724,22 +660,6 @@
       "response": "B"
     },
     {
-      "question_id": "3051",
-      "question": "What is the overall theme of the image?",
-      "class": "scene_understanding",
-      "img": "3051",
-      "img_path": "./data/datasets/seed/imgs/scene_understanding/3051.jpg",
-      "is_open": false,
-      "options": {
-        "A": "A juice bar scene",
-        "B": "A picnic scene",
-        "C": "A fruit market scene",
-        "D": "A breakfast scene"
-      },
-      "answer": "A",
-      "response": "A"
-    },
-    {
       "question_id": "1111",
       "question": "What is the main purpose of the outdoor space in the image?",
       "class": "scene_understanding",
@@ -770,22 +690,6 @@
       },
       "answer": "B",
       "response": "B"
-    },
-    {
-      "question_id": "1620",
-      "question": "What is the main activity happening in the image?",
-      "class": "scene_understanding",
-      "img": "1620",
-      "img_path": "./data/datasets/seed/imgs/scene_understanding/1620.jpg",
-      "is_open": false,
-      "options": {
-        "A": "Cooking in the kitchen",
-        "B": "Dancing in a club",
-        "C": "Playing basketball",
-        "D": "Playing music on stage"
-      },
-      "answer": "D",
-      "response": "D"
     },
     {
       "question_id": "2906",
@@ -932,22 +836,6 @@
       "response": "B"
     },
     {
-      "question_id": "4016",
-      "question": "What is the occasion outside the building that has caused a crowd to form?",
-      "class": "visual_reasoning",
-      "img": "201",
-      "img_path": "./data/datasets/seed/imgs/visual_reasoning/201.jpg",
-      "is_open": false,
-      "options": {
-        "A": "A concert",
-        "B": "A political rally",
-        "C": "A flag-lowering ceremony",
-        "D": "A sporting event"
-      },
-      "answer": "C",
-      "response": "C"
-    },
-    {
       "question_id": "4027",
       "question": "Which team is winning in the image?",
       "class": "visual_reasoning",
@@ -1028,38 +916,6 @@
       "response": "A"
     },
     {
-      "question_id": "3819",
-      "question": "Based on the scene, what can be inferred about the current state of the game?",
-      "class": "visual_reasoning",
-      "img": "4",
-      "img_path": "./data/datasets/seed/imgs/visual_reasoning/4.jpg",
-      "is_open": false,
-      "options": {
-        "A": "The game has just begun and players are warming up.",
-        "B": "The game is paused for a timeout.",
-        "C": "The game has ended, and players are leaving the court.",
-        "D": "The game is ongoing, and the player is making an impressive play."
-      },
-      "answer": "D",
-      "response": "D"
-    },
-    {
-      "question_id": "4063",
-      "question": "What type of food is on the plate in the image?",
-      "class": "visual_reasoning",
-      "img": "248",
-      "img_path": "./data/datasets/seed/imgs/visual_reasoning/248.jpg",
-      "is_open": false,
-      "options": {
-        "A": "Salad",
-        "B": "Sandwich",
-        "C": "Burger",
-        "D": "Appetizer"
-      },
-      "answer": "D",
-      "response": "D"
-    },
-    {
       "question_id": "4097",
       "question": "Based on the people's expressions and actions in the image, what is the most probable phase of the basketball game?",
       "class": "visual_reasoning",
@@ -1103,38 +959,6 @@
         "B": "The waterfall is located near a volcanic area, causing mineral deposits to color the water.",
         "C": "Pollution from a nearby industrial site has contaminated the water.",
         "D": "The autumn leaves and soil from the surrounding forest might be affecting the water's color."
-      },
-      "answer": "D",
-      "response": "D"
-    },
-    {
-      "question_id": "3868",
-      "question": "Based on the image, how might the soccer team be feeling at this moment?",
-      "class": "visual_reasoning",
-      "img": "53",
-      "img_path": "./data/datasets/seed/imgs/visual_reasoning/53.jpg",
-      "is_open": false,
-      "options": {
-        "A": "Frustrated",
-        "B": "Celebratory",
-        "C": "Confused",
-        "D": "Indifferent"
-      },
-      "answer": "B",
-      "response": "B"
-    },
-    {
-      "question_id": "4026",
-      "question": "Why would someone likely choose to live in the house found in the image?",
-      "class": "visual_reasoning",
-      "img": "211",
-      "img_path": "./data/datasets/seed/imgs/visual_reasoning/211.jpg",
-      "is_open": false,
-      "options": {
-        "A": "To be close to a large shopping mall",
-        "B": "For the vibrant city life",
-        "C": "To be near a major highway",
-        "D": "For a peaceful environment with lush greenery"
       },
       "answer": "D",
       "response": "D"
@@ -1252,22 +1076,6 @@
       "response": "A"
     },
     {
-      "question_id": "3858",
-      "question": "Which scenario is most likely taking place in the image?",
-      "class": "visual_reasoning",
-      "img": "43",
-      "img_path": "./data/datasets/seed/imgs/visual_reasoning/43.jpg",
-      "is_open": false,
-      "options": {
-        "A": "A man sitting on a park bench",
-        "B": "A woman walking her dog",
-        "C": "A man in a suit stepping on a bug",
-        "D": "Children playing on a playground"
-      },
-      "answer": "C",
-      "response": "C"
-    },
-    {
       "question_id": "3935",
       "question": "Where is the person standing while writing in the book?",
       "class": "visual_reasoning",
@@ -1364,38 +1172,6 @@
       "response": "A"
     },
     {
-      "question_id": "3984",
-      "question": "What kind of activity is depicted in the image?",
-      "class": "visual_reasoning",
-      "img": "169",
-      "img_path": "./data/datasets/seed/imgs/visual_reasoning/169.jpg",
-      "is_open": false,
-      "options": {
-        "A": "A group of kids playing video games",
-        "B": "People watching a movie in a theater",
-        "C": "Passengers waiting to board a flight",
-        "D": "A crowd gathered to watch a baseball game"
-      },
-      "answer": "D",
-      "response": "D"
-    },
-    {
-      "question_id": "4013",
-      "question": "Where are the children most likely located, based on the objects surrounding them?",
-      "class": "visual_reasoning",
-      "img": "198",
-      "img_path": "./data/datasets/seed/imgs/visual_reasoning/198.jpg",
-      "is_open": false,
-      "options": {
-        "A": "Living room",
-        "B": "Bedroom",
-        "C": "Classroom",
-        "D": "Kitchen"
-      },
-      "answer": "D",
-      "response": "D"
-    },
-    {
       "question_id": "4113",
       "question": "Based on the image, what kind of song might the singers be performing?",
       "class": "visual_reasoning",
@@ -1442,22 +1218,6 @@
       },
       "answer": "A",
       "response": "A"
-    },
-    {
-      "question_id": "3981",
-      "question": "Imagine you are a photographer at the event, and you want to capture a candid photo of people enjoying the display without disturbing them. What advice would you give to the photographer?",
-      "class": "visual_reasoning",
-      "img": "166",
-      "img_path": "./data/datasets/seed/imgs/visual_reasoning/166.jpg",
-      "is_open": false,
-      "options": {
-        "A": "Use a flash to light up the scene",
-        "B": "Shoot from a distance using a zoom lens",
-        "C": "Yell loudly to notify people before taking the photo",
-        "D": "Stand very close to the subjects for better details"
-      },
-      "answer": "B",
-      "response": "B"
     },
     {
       "question_id": "3866",
@@ -1522,22 +1282,6 @@
       },
       "answer": "D",
       "response": "D"
-    },
-    {
-      "question_id": "4109",
-      "question": "What is the man most likely doing in this scene?",
-      "class": "visual_reasoning",
-      "img": "294",
-      "img_path": "./data/datasets/seed/imgs/visual_reasoning/294.jpg",
-      "is_open": false,
-      "options": {
-        "A": "Work from home",
-        "B": "Cooking",
-        "C": "Exercising",
-        "D": "Playing video games"
-      },
-      "answer": "A",
-      "response": "A"
     },
     {
       "question_id": "4057",
@@ -1634,22 +1378,6 @@
       },
       "answer": "A",
       "response": "A"
-    },
-    {
-      "question_id": "4130",
-      "question": "Based on the young man's appearance, where might he be?",
-      "class": "visual_reasoning",
-      "img": "315",
-      "img_path": "./data/datasets/seed/imgs/visual_reasoning/315.jpg",
-      "is_open": false,
-      "options": {
-        "A": "At a casual outdoor event",
-        "B": "In a meeting",
-        "C": "At a formal event",
-        "D": "In a library"
-      },
-      "answer": "A",
-      "response": "A"
     }
   ],
   "wrong_resp": [
@@ -1700,22 +1428,6 @@
       },
       "answer": "C",
       "response": "B"
-    },
-    {
-      "question_id": "58",
-      "question": "What would be a suitable title for this image?",
-      "class": "scene_understanding",
-      "img": "58",
-      "img_path": "./data/datasets/seed/imgs/scene_understanding/58.jpg",
-      "is_open": false,
-      "options": {
-        "A": "The Conference Room",
-        "B": "The Office Space",
-        "C": "The Dining Room",
-        "D": "The Living Room"
-      },
-      "answer": "B",
-      "response": "A"
     },
     {
       "question_id": "2387",
@@ -1990,22 +1702,6 @@
       "response": "A"
     },
     {
-      "question_id": "1595",
-      "question": "What is the main theme of this image?",
-      "class": "scene_understanding",
-      "img": "1595",
-      "img_path": "./data/datasets/seed/imgs/scene_understanding/1595.jpg",
-      "is_open": false,
-      "options": {
-        "A": "Sports and recreation",
-        "B": "Nature and wildlife",
-        "C": "Fashion and footwear",
-        "D": "Food and dining"
-      },
-      "answer": "B",
-      "response": "D"
-    },
-    {
       "question_id": "1021",
       "question": "What is the dominant color in the image?",
       "class": "scene_understanding",
@@ -2033,38 +1729,6 @@
         "B": "Bed",
         "C": "Footboard",
         "D": "Dresser"
-      },
-      "answer": "B",
-      "response": "C"
-    },
-    {
-      "question_id": "4072",
-      "question": "What is the main theme of the image?",
-      "class": "visual_reasoning",
-      "img": "257",
-      "img_path": "./data/datasets/seed/imgs/visual_reasoning/257.jpg",
-      "is_open": false,
-      "options": {
-        "A": "Fantasy creatures",
-        "B": "Birthday party",
-        "C": "Animals",
-        "D": "Food"
-      },
-      "answer": "B",
-      "response": "A"
-    },
-    {
-      "question_id": "3999",
-      "question": "Based on the image, what can be inferred about the event?",
-      "class": "visual_reasoning",
-      "img": "184",
-      "img_path": "./data/datasets/seed/imgs/visual_reasoning/184.jpg",
-      "is_open": false,
-      "options": {
-        "A": "It is a formal conference",
-        "B": "It is a small live performance",
-        "C": "It is an outdoor concert",
-        "D": "It is a large concert hall"
       },
       "answer": "B",
       "response": "C"
@@ -2406,5 +2070,342 @@
       "response": "A"
     }
   ],
-  "invalid_resp": []
+  "invalid_resp": [
+    {
+      "question_id": "58",
+      "question": "What would be a suitable title for this image?",
+      "class": "scene_understanding",
+      "img": "58",
+      "img_path": "./data/datasets/seed/imgs/scene_understanding/58.jpg",
+      "is_open": false,
+      "options": {
+        "A": "The Conference Room",
+        "B": "The Office Space",
+        "C": "The Dining Room",
+        "D": "The Living Room"
+      },
+      "answer": "B",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": "2980",
+      "question": "What is the main feature of the image?",
+      "class": "scene_understanding",
+      "img": "2980",
+      "img_path": "./data/datasets/seed/imgs/scene_understanding/2980.jpg",
+      "is_open": false,
+      "options": {
+        "A": "A tall building in the foreground",
+        "B": "A bridge over the water",
+        "C": "A large group of buildings along the coast",
+        "D": "A beach with many umbrellas"
+      },
+      "answer": "C",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": "2408",
+      "question": "What is the main activity happening on this street in the image?",
+      "class": "scene_understanding",
+      "img": "2408",
+      "img_path": "./data/datasets/seed/imgs/scene_understanding/2408.jpg",
+      "is_open": false,
+      "options": {
+        "A": "A parade is occurring",
+        "B": "People are shopping at the market",
+        "C": "Cars are driving down the street",
+        "D": "People are walking around and exploring"
+      },
+      "answer": "D",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": "2865",
+      "question": "What is the main activity happening in the image?",
+      "class": "scene_understanding",
+      "img": "2865",
+      "img_path": "./data/datasets/seed/imgs/scene_understanding/2865.jpg",
+      "is_open": false,
+      "options": {
+        "A": "A band is on stage at night with people",
+        "B": "People are playing music in a bar",
+        "C": "People are having a party outdoors",
+        "D": "People are attending a concert in a park"
+      },
+      "answer": "B",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": "1018",
+      "question": "What can be inferred about the weather from the image?",
+      "class": "scene_understanding",
+      "img": "1018",
+      "img_path": "./data/datasets/seed/imgs/scene_understanding/1018.jpg",
+      "is_open": false,
+      "options": {
+        "A": "It's a cloudy day",
+        "B": "It's a clear day",
+        "C": "It's a stormy day",
+        "D": "It cannot be inferred"
+      },
+      "answer": "B",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": "1595",
+      "question": "What is the main theme of this image?",
+      "class": "scene_understanding",
+      "img": "1595",
+      "img_path": "./data/datasets/seed/imgs/scene_understanding/1595.jpg",
+      "is_open": false,
+      "options": {
+        "A": "Sports and recreation",
+        "B": "Nature and wildlife",
+        "C": "Fashion and footwear",
+        "D": "Food and dining"
+      },
+      "answer": "B",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": "3051",
+      "question": "What is the overall theme of the image?",
+      "class": "scene_understanding",
+      "img": "3051",
+      "img_path": "./data/datasets/seed/imgs/scene_understanding/3051.jpg",
+      "is_open": false,
+      "options": {
+        "A": "A juice bar scene",
+        "B": "A picnic scene",
+        "C": "A fruit market scene",
+        "D": "A breakfast scene"
+      },
+      "answer": "A",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": "1620",
+      "question": "What is the main activity happening in the image?",
+      "class": "scene_understanding",
+      "img": "1620",
+      "img_path": "./data/datasets/seed/imgs/scene_understanding/1620.jpg",
+      "is_open": false,
+      "options": {
+        "A": "Cooking in the kitchen",
+        "B": "Dancing in a club",
+        "C": "Playing basketball",
+        "D": "Playing music on stage"
+      },
+      "answer": "D",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": "4072",
+      "question": "What is the main theme of the image?",
+      "class": "visual_reasoning",
+      "img": "257",
+      "img_path": "./data/datasets/seed/imgs/visual_reasoning/257.jpg",
+      "is_open": false,
+      "options": {
+        "A": "Fantasy creatures",
+        "B": "Birthday party",
+        "C": "Animals",
+        "D": "Food"
+      },
+      "answer": "B",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": "3999",
+      "question": "Based on the image, what can be inferred about the event?",
+      "class": "visual_reasoning",
+      "img": "184",
+      "img_path": "./data/datasets/seed/imgs/visual_reasoning/184.jpg",
+      "is_open": false,
+      "options": {
+        "A": "It is a formal conference",
+        "B": "It is a small live performance",
+        "C": "It is an outdoor concert",
+        "D": "It is a large concert hall"
+      },
+      "answer": "B",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": "4016",
+      "question": "What is the occasion outside the building that has caused a crowd to form?",
+      "class": "visual_reasoning",
+      "img": "201",
+      "img_path": "./data/datasets/seed/imgs/visual_reasoning/201.jpg",
+      "is_open": false,
+      "options": {
+        "A": "A concert",
+        "B": "A political rally",
+        "C": "A flag-lowering ceremony",
+        "D": "A sporting event"
+      },
+      "answer": "C",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": "3819",
+      "question": "Based on the scene, what can be inferred about the current state of the game?",
+      "class": "visual_reasoning",
+      "img": "4",
+      "img_path": "./data/datasets/seed/imgs/visual_reasoning/4.jpg",
+      "is_open": false,
+      "options": {
+        "A": "The game has just begun and players are warming up.",
+        "B": "The game is paused for a timeout.",
+        "C": "The game has ended, and players are leaving the court.",
+        "D": "The game is ongoing, and the player is making an impressive play."
+      },
+      "answer": "D",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": "4063",
+      "question": "What type of food is on the plate in the image?",
+      "class": "visual_reasoning",
+      "img": "248",
+      "img_path": "./data/datasets/seed/imgs/visual_reasoning/248.jpg",
+      "is_open": false,
+      "options": {
+        "A": "Salad",
+        "B": "Sandwich",
+        "C": "Burger",
+        "D": "Appetizer"
+      },
+      "answer": "D",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": "3868",
+      "question": "Based on the image, how might the soccer team be feeling at this moment?",
+      "class": "visual_reasoning",
+      "img": "53",
+      "img_path": "./data/datasets/seed/imgs/visual_reasoning/53.jpg",
+      "is_open": false,
+      "options": {
+        "A": "Frustrated",
+        "B": "Celebratory",
+        "C": "Confused",
+        "D": "Indifferent"
+      },
+      "answer": "B",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": "4026",
+      "question": "Why would someone likely choose to live in the house found in the image?",
+      "class": "visual_reasoning",
+      "img": "211",
+      "img_path": "./data/datasets/seed/imgs/visual_reasoning/211.jpg",
+      "is_open": false,
+      "options": {
+        "A": "To be close to a large shopping mall",
+        "B": "For the vibrant city life",
+        "C": "To be near a major highway",
+        "D": "For a peaceful environment with lush greenery"
+      },
+      "answer": "D",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": "3858",
+      "question": "Which scenario is most likely taking place in the image?",
+      "class": "visual_reasoning",
+      "img": "43",
+      "img_path": "./data/datasets/seed/imgs/visual_reasoning/43.jpg",
+      "is_open": false,
+      "options": {
+        "A": "A man sitting on a park bench",
+        "B": "A woman walking her dog",
+        "C": "A man in a suit stepping on a bug",
+        "D": "Children playing on a playground"
+      },
+      "answer": "C",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": "3984",
+      "question": "What kind of activity is depicted in the image?",
+      "class": "visual_reasoning",
+      "img": "169",
+      "img_path": "./data/datasets/seed/imgs/visual_reasoning/169.jpg",
+      "is_open": false,
+      "options": {
+        "A": "A group of kids playing video games",
+        "B": "People watching a movie in a theater",
+        "C": "Passengers waiting to board a flight",
+        "D": "A crowd gathered to watch a baseball game"
+      },
+      "answer": "D",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": "4013",
+      "question": "Where are the children most likely located, based on the objects surrounding them?",
+      "class": "visual_reasoning",
+      "img": "198",
+      "img_path": "./data/datasets/seed/imgs/visual_reasoning/198.jpg",
+      "is_open": false,
+      "options": {
+        "A": "Living room",
+        "B": "Bedroom",
+        "C": "Classroom",
+        "D": "Kitchen"
+      },
+      "answer": "D",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": "3981",
+      "question": "Imagine you are a photographer at the event, and you want to capture a candid photo of people enjoying the display without disturbing them. What advice would you give to the photographer?",
+      "class": "visual_reasoning",
+      "img": "166",
+      "img_path": "./data/datasets/seed/imgs/visual_reasoning/166.jpg",
+      "is_open": false,
+      "options": {
+        "A": "Use a flash to light up the scene",
+        "B": "Shoot from a distance using a zoom lens",
+        "C": "Yell loudly to notify people before taking the photo",
+        "D": "Stand very close to the subjects for better details"
+      },
+      "answer": "B",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": "4109",
+      "question": "What is the man most likely doing in this scene?",
+      "class": "visual_reasoning",
+      "img": "294",
+      "img_path": "./data/datasets/seed/imgs/visual_reasoning/294.jpg",
+      "is_open": false,
+      "options": {
+        "A": "Work from home",
+        "B": "Cooking",
+        "C": "Exercising",
+        "D": "Playing video games"
+      },
+      "answer": "A",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": "4130",
+      "question": "Based on the young man's appearance, where might he be?",
+      "class": "visual_reasoning",
+      "img": "315",
+      "img_path": "./data/datasets/seed/imgs/visual_reasoning/315.jpg",
+      "is_open": false,
+      "options": {
+        "A": "At a casual outdoor event",
+        "B": "In a meeting",
+        "C": "At a formal event",
+        "D": "In a library"
+      },
+      "answer": "A",
+      "response": "<NOT_FOUND>"
+    }
+  ]
 }

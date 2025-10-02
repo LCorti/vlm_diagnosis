@@ -1,6 +1,6 @@
 {
   "measures": {
-    "accuracy": 0.26
+    "accuracy": 0.25203252032520324
   },
   "correct_resp": [
     {
@@ -34,18 +34,7 @@
       "is_open": true,
       "options": null,
       "answer": "1",
-      "response": "1 person."
-    },
-    {
-      "question_id": 573214003,
-      "question": "How many people are on the bike?",
-      "class": "how_many_people_are",
-      "img": "573214",
-      "img_path": "./data/datasets/vqav2/imgs/how_many_people_are/573214.jpg",
-      "is_open": true,
-      "options": null,
-      "answer": "2",
-      "response": "2"
+      "response": "1"
     },
     {
       "question_id": 460684004,
@@ -67,7 +56,7 @@
       "is_open": true,
       "options": null,
       "answer": "6",
-      "response": "6 people are probably sitting at this table."
+      "response": "6"
     },
     {
       "question_id": 544533000,
@@ -78,7 +67,7 @@
       "is_open": true,
       "options": null,
       "answer": "0",
-      "response": "10 people are riding bicycles."
+      "response": "10"
     },
     {
       "question_id": 33683009,
@@ -89,7 +78,7 @@
       "is_open": true,
       "options": null,
       "answer": "2",
-      "response": "2 people."
+      "response": "2"
     },
     {
       "question_id": 21979005,
@@ -100,7 +89,7 @@
       "is_open": true,
       "options": null,
       "answer": "2",
-      "response": "2 people are pictured."
+      "response": "2"
     },
     {
       "question_id": 175615001,
@@ -108,17 +97,6 @@
       "class": "how_many_people_are",
       "img": "175615",
       "img_path": "./data/datasets/vqav2/imgs/how_many_people_are/175615.jpg",
-      "is_open": true,
-      "options": null,
-      "answer": "2",
-      "response": "2."
-    },
-    {
-      "question_id": 207108000,
-      "question": "How many people are wearing white shirts?",
-      "class": "how_many_people_are",
-      "img": "207108",
-      "img_path": "./data/datasets/vqav2/imgs/how_many_people_are/207108.jpg",
       "is_open": true,
       "options": null,
       "answer": "2",
@@ -133,17 +111,6 @@
       "is_open": true,
       "options": null,
       "answer": "2",
-      "response": "2."
-    },
-    {
-      "question_id": 563775002,
-      "question": "How many people are shown?",
-      "class": "how_many_people_are",
-      "img": "563775",
-      "img_path": "./data/datasets/vqav2/imgs/how_many_people_are/563775.jpg",
-      "is_open": true,
-      "options": null,
-      "answer": "2",
       "response": "2"
     },
     {
@@ -155,7 +122,7 @@
       "is_open": true,
       "options": null,
       "answer": "2",
-      "response": "2."
+      "response": "2"
     },
     {
       "question_id": 522727001,
@@ -167,17 +134,6 @@
       "options": null,
       "answer": "3",
       "response": "3"
-    },
-    {
-      "question_id": 473299002,
-      "question": "How many people are there?",
-      "class": "how_many_people_are",
-      "img": "473299",
-      "img_path": "./data/datasets/vqav2/imgs/how_many_people_are/473299.jpg",
-      "is_open": true,
-      "options": null,
-      "answer": "2",
-      "response": "2 people."
     },
     {
       "question_id": 579060002,
@@ -210,7 +166,7 @@
       "is_open": true,
       "options": null,
       "answer": "eating cake",
-      "response": "* Eating cake"
+      "response": "eating cake"
     },
     {
       "question_id": 431799001,
@@ -221,7 +177,7 @@
       "is_open": true,
       "options": null,
       "answer": "kite",
-      "response": "A kite."
+      "response": "a kite"
     },
     {
       "question_id": 473299000,
@@ -232,7 +188,7 @@
       "is_open": true,
       "options": null,
       "answer": "snowboarding",
-      "response": "Snowboarding."
+      "response": "snowboarding"
     },
     {
       "question_id": 439897004,
@@ -243,7 +199,7 @@
       "is_open": true,
       "options": null,
       "answer": "fork",
-      "response": "The person is holding a fork in their hand."
+      "response": "the person is holding a fork in their hand"
     },
     {
       "question_id": 77063003,
@@ -254,7 +210,7 @@
       "is_open": true,
       "options": null,
       "answer": "horse",
-      "response": "The person in this picture is riding a horse."
+      "response": "the person in this picture is riding a horse"
     },
     {
       "question_id": 69965002,
@@ -265,7 +221,7 @@
       "is_open": true,
       "options": null,
       "answer": "surfboard",
-      "response": "The person is holding onto a surfboard."
+      "response": "the person is holding onto a surfboard"
     },
     {
       "question_id": 517612002,
@@ -276,29 +232,7 @@
       "is_open": true,
       "options": null,
       "answer": "skateboard",
-      "response": "The person on the left is standing on a skateboard."
-    },
-    {
-      "question_id": 6719001,
-      "question": "What is the person doing?",
-      "class": "what_is_the_person",
-      "img": "6719",
-      "img_path": "./data/datasets/vqav2/imgs/what_is_the_person/6719.jpg",
-      "is_open": true,
-      "options": null,
-      "answer": "sitting",
-      "response": "The person is sitting on a yellow surfboard on the beach."
-    },
-    {
-      "question_id": 391375002,
-      "question": "What is the person doing?",
-      "class": "what_is_the_person",
-      "img": "391375",
-      "img_path": "./data/datasets/vqav2/imgs/what_is_the_person/391375.jpg",
-      "is_open": true,
-      "options": null,
-      "answer": "sitting",
-      "response": "The person is sitting on a bench in front of an old stone wall. The person is wearing a black jacket and white tights, and has their arms crossed in front of them. The image appears to be taken at night, with the only light coming from the moon shining through the clouds. The person looks pensive and lost in thought."
+      "response": "the person on the left is standing on a skateboard"
     },
     {
       "question_id": 322194006,
@@ -309,7 +243,7 @@
       "is_open": true,
       "options": null,
       "answer": "water",
-      "response": "The person is looking at the water."
+      "response": "the person is looking at the water"
     },
     {
       "question_id": 544519002,
@@ -320,7 +254,7 @@
       "is_open": true,
       "options": null,
       "answer": "toothbrush",
-      "response": "A toothbrush."
+      "response": "a toothbrush"
     },
     {
       "question_id": 380706001,
@@ -331,7 +265,7 @@
       "is_open": true,
       "options": null,
       "answer": "motorcycle",
-      "response": "The person is sitting on a motorcycle."
+      "response": "the person is sitting on a motorcycle"
     },
     {
       "question_id": 437494002,
@@ -342,7 +276,7 @@
       "is_open": true,
       "options": null,
       "answer": "paddle",
-      "response": "A paddle."
+      "response": "a paddle"
     },
     {
       "question_id": 232692003,
@@ -353,18 +287,7 @@
       "is_open": true,
       "options": null,
       "answer": "water skiing",
-      "response": "Water skiing."
-    },
-    {
-      "question_id": 367953005,
-      "question": "What is the person holding?",
-      "class": "what_is_the_person",
-      "img": "367953",
-      "img_path": "./data/datasets/vqav2/imgs/what_is_the_person/367953.jpg",
-      "is_open": true,
-      "options": null,
-      "answer": "umbrella",
-      "response": "* An umbrella."
+      "response": "water skiing"
     },
     {
       "question_id": 405740008,
@@ -375,7 +298,7 @@
       "is_open": true,
       "options": null,
       "answer": "wine glass",
-      "response": "Wine glass."
+      "response": "wine glass"
     },
     {
       "question_id": 498453001,
@@ -386,7 +309,7 @@
       "is_open": true,
       "options": null,
       "answer": "surfing",
-      "response": "The person is surfing on a board in the ocean."
+      "response": "the person is surfing on a board in the ocean"
     },
     {
       "question_id": 37677001,
@@ -397,7 +320,7 @@
       "is_open": true,
       "options": null,
       "answer": "umbrella",
-      "response": "* Umbrella"
+      "response": "umbrella"
     },
     {
       "question_id": 199215001,
@@ -408,7 +331,7 @@
       "is_open": true,
       "options": null,
       "answer": "truck",
-      "response": "The person is sitting on a truck."
+      "response": "the person is sitting on a truck"
     },
     {
       "question_id": 469961000,
@@ -419,32 +342,10 @@
       "is_open": true,
       "options": null,
       "answer": "skiing",
-      "response": "The person is cross-country skiing."
-    },
-    {
-      "question_id": 551966004,
-      "question": "What is the person sitting on?",
-      "class": "what_is_the_person",
-      "img": "551966",
-      "img_path": "./data/datasets/vqav2/imgs/what_is_the_person/551966.jpg",
-      "is_open": true,
-      "options": null,
-      "answer": "bench",
-      "response": "The person is sitting on a bench."
+      "response": "the person is crosscountry skiing"
     }
   ],
   "wrong_resp": [
-    {
-      "question_id": 337814001,
-      "question": "How many people are shown?",
-      "class": "how_many_people_are",
-      "img": "337814",
-      "img_path": "./data/datasets/vqav2/imgs/how_many_people_are/337814.jpg",
-      "is_open": true,
-      "options": null,
-      "answer": "3",
-      "response": "2"
-    },
     {
       "question_id": 549390000,
       "question": "How many people are riding  bikes?",
@@ -454,7 +355,7 @@
       "is_open": true,
       "options": null,
       "answer": "6",
-      "response": "Two people are riding bikes."
+      "response": "2"
     },
     {
       "question_id": 502456011,
@@ -476,7 +377,7 @@
       "is_open": true,
       "options": null,
       "answer": "5",
-      "response": "1 person is watching."
+      "response": "1"
     },
     {
       "question_id": 58157004,
@@ -498,18 +399,7 @@
       "is_open": true,
       "options": null,
       "answer": "1",
-      "response": "3."
-    },
-    {
-      "question_id": 18699005,
-      "question": "How many people are posed?",
-      "class": "how_many_people_are",
-      "img": "18699",
-      "img_path": "./data/datasets/vqav2/imgs/how_many_people_are/18699.jpg",
-      "is_open": true,
-      "options": null,
-      "answer": "8",
-      "response": "5"
+      "response": "3"
     },
     {
       "question_id": 266922002,
@@ -520,18 +410,7 @@
       "is_open": true,
       "options": null,
       "answer": "3",
-      "response": "2 people are shown."
-    },
-    {
-      "question_id": 313948000,
-      "question": "How many people are looking at the motorcycle?",
-      "class": "how_many_people_are",
-      "img": "313948",
-      "img_path": "./data/datasets/vqav2/imgs/how_many_people_are/313948.jpg",
-      "is_open": true,
-      "options": null,
-      "answer": "0",
-      "response": "2 people are looking at the motorcycle."
+      "response": "2"
     },
     {
       "question_id": 372024000,
@@ -542,7 +421,7 @@
       "is_open": true,
       "options": null,
       "answer": "1",
-      "response": "2 people are wearing blue shorts."
+      "response": "2"
     },
     {
       "question_id": 284152001,
@@ -564,7 +443,7 @@
       "is_open": true,
       "options": null,
       "answer": "4",
-      "response": "2 people are standing."
+      "response": "2"
     },
     {
       "question_id": 410446000,
@@ -586,7 +465,7 @@
       "is_open": true,
       "options": null,
       "answer": "5",
-      "response": "4."
+      "response": "4"
     },
     {
       "question_id": 378538002,
@@ -597,18 +476,7 @@
       "is_open": true,
       "options": null,
       "answer": "1",
-      "response": "3 people are wearing backpacks."
-    },
-    {
-      "question_id": 525616002,
-      "question": "How many people are wearing hats?",
-      "class": "how_many_people_are",
-      "img": "525616",
-      "img_path": "./data/datasets/vqav2/imgs/how_many_people_are/525616.jpg",
-      "is_open": true,
-      "options": null,
-      "answer": "0",
-      "response": "2"
+      "response": "3"
     },
     {
       "question_id": 332607000,
@@ -619,7 +487,7 @@
       "is_open": true,
       "options": null,
       "answer": "1",
-      "response": "Two people are shown."
+      "response": "2"
     },
     {
       "question_id": 296657000,
@@ -630,7 +498,7 @@
       "is_open": true,
       "options": null,
       "answer": "6",
-      "response": "5 people."
+      "response": "5"
     },
     {
       "question_id": 162543000,
@@ -641,7 +509,7 @@
       "is_open": true,
       "options": null,
       "answer": "0",
-      "response": "3 people are sitting on top of the animals."
+      "response": "3"
     },
     {
       "question_id": 194277000,
@@ -663,7 +531,7 @@
       "is_open": true,
       "options": null,
       "answer": "1",
-      "response": "4 people are on the white animal."
+      "response": "4"
     },
     {
       "question_id": 388619000,
@@ -685,7 +553,7 @@
       "is_open": true,
       "options": null,
       "answer": "10",
-      "response": "5 people are walking."
+      "response": "5"
     },
     {
       "question_id": 56983014,
@@ -696,7 +564,7 @@
       "is_open": true,
       "options": null,
       "answer": "1",
-      "response": "2 people are shown."
+      "response": "2"
     },
     {
       "question_id": 464831006,
@@ -707,7 +575,7 @@
       "is_open": true,
       "options": null,
       "answer": "9",
-      "response": "5 people are sitting down."
+      "response": "5"
     },
     {
       "question_id": 190018000,
@@ -729,7 +597,7 @@
       "is_open": true,
       "options": null,
       "answer": "7",
-      "response": "4 people are sitting on the ground."
+      "response": "4"
     },
     {
       "question_id": 67551000,
@@ -740,7 +608,7 @@
       "is_open": true,
       "options": null,
       "answer": "3",
-      "response": "2 people are riding the elephant."
+      "response": "2"
     },
     {
       "question_id": 4840001,
@@ -751,7 +619,7 @@
       "is_open": true,
       "options": null,
       "answer": "1",
-      "response": "2 people are wearing vests."
+      "response": "2"
     },
     {
       "question_id": 301641001,
@@ -762,7 +630,7 @@
       "is_open": true,
       "options": null,
       "answer": "1",
-      "response": "2 people are on the boat."
+      "response": "2"
     },
     {
       "question_id": 377949002,
@@ -774,17 +642,6 @@
       "options": null,
       "answer": "0",
       "response": "2"
-    },
-    {
-      "question_id": 318284007,
-      "question": "How many people are wearing a catcher's mitt?",
-      "class": "how_many_people_are",
-      "img": "318284",
-      "img_path": "./data/datasets/vqav2/imgs/how_many_people_are/318284.jpg",
-      "is_open": true,
-      "options": null,
-      "answer": "0",
-      "response": "1"
     },
     {
       "question_id": 154520018,
@@ -806,7 +663,7 @@
       "is_open": true,
       "options": null,
       "answer": "8",
-      "response": "5 people are pushing the bus."
+      "response": "5"
     },
     {
       "question_id": 420916000,
@@ -817,7 +674,7 @@
       "is_open": true,
       "options": null,
       "answer": "3",
-      "response": "2 people are on the bench."
+      "response": "2"
     },
     {
       "question_id": 433204004,
@@ -839,7 +696,7 @@
       "is_open": true,
       "options": null,
       "answer": "11",
-      "response": "4 people are shown."
+      "response": "4"
     },
     {
       "question_id": 216520003,
@@ -861,7 +718,7 @@
       "is_open": true,
       "options": null,
       "answer": "many",
-      "response": "20 people are sitting on the grass."
+      "response": "20"
     },
     {
       "question_id": 17869002,
@@ -894,7 +751,7 @@
       "is_open": true,
       "options": null,
       "answer": "1",
-      "response": "2 people are singing."
+      "response": "2"
     },
     {
       "question_id": 526394000,
@@ -905,7 +762,7 @@
       "is_open": true,
       "options": null,
       "answer": "3",
-      "response": "1 person is sharing this cake."
+      "response": "1"
     },
     {
       "question_id": 224757004,
@@ -916,7 +773,7 @@
       "is_open": true,
       "options": null,
       "answer": "9",
-      "response": "5 people are shown."
+      "response": "5"
     },
     {
       "question_id": 2613006,
@@ -941,17 +798,6 @@
       "response": "2"
     },
     {
-      "question_id": 147179001,
-      "question": "How many people are wearing bracelets?",
-      "class": "how_many_people_are",
-      "img": "147179",
-      "img_path": "./data/datasets/vqav2/imgs/how_many_people_are/147179.jpg",
-      "is_open": true,
-      "options": null,
-      "answer": "3",
-      "response": "2"
-    },
-    {
       "question_id": 157063001,
       "question": "How many people are wearing hats?",
       "class": "how_many_people_are",
@@ -971,7 +817,7 @@
       "is_open": true,
       "options": null,
       "answer": "10",
-      "response": "2."
+      "response": "2"
     },
     {
       "question_id": 430788008,
@@ -983,17 +829,6 @@
       "options": null,
       "answer": "0",
       "response": "1"
-    },
-    {
-      "question_id": 471893002,
-      "question": "How many people are sitting down?",
-      "class": "how_many_people_are",
-      "img": "471893",
-      "img_path": "./data/datasets/vqav2/imgs/how_many_people_are/471893.jpg",
-      "is_open": true,
-      "options": null,
-      "answer": "0",
-      "response": "2"
     },
     {
       "question_id": 88682001,
@@ -1015,7 +850,7 @@
       "is_open": true,
       "options": null,
       "answer": "8",
-      "response": "5 people are near the bus."
+      "response": "5"
     },
     {
       "question_id": 333538005,
@@ -1026,7 +861,7 @@
       "is_open": true,
       "options": null,
       "answer": "1",
-      "response": "2."
+      "response": "2"
     },
     {
       "question_id": 415798004,
@@ -1048,7 +883,7 @@
       "is_open": true,
       "options": null,
       "answer": "2",
-      "response": "3 people are sitting on the side of the road."
+      "response": "3"
     },
     {
       "question_id": 570381003,
@@ -1059,18 +894,7 @@
       "is_open": true,
       "options": null,
       "answer": "0",
-      "response": "4."
-    },
-    {
-      "question_id": 418275002,
-      "question": "What is the person trying to do with the hair?",
-      "class": "what_is_the_person",
-      "img": "418275",
-      "img_path": "./data/datasets/vqav2/imgs/what_is_the_person/418275.jpg",
-      "is_open": true,
-      "options": null,
-      "answer": "nothing",
-      "response": "The person is trying to sleep on the bed with their cat."
+      "response": "4"
     },
     {
       "question_id": 557812013,
@@ -1081,18 +905,7 @@
       "is_open": true,
       "options": null,
       "answer": "taking picture",
-      "response": "The person is skiing."
-    },
-    {
-      "question_id": 300206000,
-      "question": "What is the person not surfing doing?",
-      "class": "what_is_the_person",
-      "img": "300206",
-      "img_path": "./data/datasets/vqav2/imgs/what_is_the_person/300206.jpg",
-      "is_open": true,
-      "options": null,
-      "answer": "watching",
-      "response": "The person not surfing is standing on the side of the river."
+      "response": "the person is skiing"
     },
     {
       "question_id": 291286004,
@@ -1103,7 +916,7 @@
       "is_open": true,
       "options": null,
       "answer": "skateboard",
-      "response": "Scooter."
+      "response": "scooter"
     },
     {
       "question_id": 154520073,
@@ -1114,7 +927,7 @@
       "is_open": true,
       "options": null,
       "answer": "flying kite",
-      "response": "Flying a kite."
+      "response": "flying a kite"
     },
     {
       "question_id": 163600007,
@@ -1125,7 +938,18 @@
       "is_open": true,
       "options": null,
       "answer": "smiling",
-      "response": "The person is holding a piece of paper with the word \"thank you\" written on it."
+      "response": "the person is holding a piece of paper with the word thank you written on it"
+    },
+    {
+      "question_id": 391375002,
+      "question": "What is the person doing?",
+      "class": "what_is_the_person",
+      "img": "391375",
+      "img_path": "./data/datasets/vqav2/imgs/what_is_the_person/391375.jpg",
+      "is_open": true,
+      "options": null,
+      "answer": "sitting",
+      "response": "0"
     },
     {
       "question_id": 77050001,
@@ -1136,7 +960,7 @@
       "is_open": true,
       "options": null,
       "answer": "cooking",
-      "response": "The person is cutting carrots."
+      "response": "the person is cutting carrots"
     },
     {
       "question_id": 169076001,
@@ -1147,7 +971,7 @@
       "is_open": true,
       "options": null,
       "answer": "suit",
-      "response": "Clothing."
+      "response": "clothing"
     },
     {
       "question_id": 65008001,
@@ -1158,18 +982,7 @@
       "is_open": true,
       "options": null,
       "answer": "flying",
-      "response": "Winding the string."
-    },
-    {
-      "question_id": 302107002,
-      "question": "What is the person with the bat doing?",
-      "class": "what_is_the_person",
-      "img": "302107",
-      "img_path": "./data/datasets/vqav2/imgs/what_is_the_person/302107.jpg",
-      "is_open": true,
-      "options": null,
-      "answer": "playing baseball",
-      "response": "The person with the bat is swinging it."
+      "response": "winding the string"
     },
     {
       "question_id": 92644001,
@@ -1180,7 +993,7 @@
       "is_open": true,
       "options": null,
       "answer": "jet skiing",
-      "response": "The person is riding a jet ski in the water."
+      "response": "the person is riding a jet ski in the water"
     },
     {
       "question_id": 326664002,
@@ -1191,7 +1004,7 @@
       "is_open": true,
       "options": null,
       "answer": "skateboard",
-      "response": "Scooter."
+      "response": "scooter"
     },
     {
       "question_id": 323851001,
@@ -1202,7 +1015,7 @@
       "is_open": true,
       "options": null,
       "answer": "frisbee",
-      "response": "A dog."
+      "response": "a dog"
     },
     {
       "question_id": 44856002,
@@ -1213,7 +1026,7 @@
       "is_open": true,
       "options": null,
       "answer": "ski poles",
-      "response": "The person is holding two dogs on skis."
+      "response": "2"
     },
     {
       "question_id": 251824001,
@@ -1224,7 +1037,7 @@
       "is_open": true,
       "options": null,
       "answer": "plastic",
-      "response": "The person is holding a pair of scissors."
+      "response": "the person is holding a pair of scissors"
     },
     {
       "question_id": 404780000,
@@ -1235,7 +1048,7 @@
       "is_open": true,
       "options": null,
       "answer": "flying kite",
-      "response": "Walking on the beach."
+      "response": "walking on the beach"
     },
     {
       "question_id": 431256002,
@@ -1246,7 +1059,7 @@
       "is_open": true,
       "options": null,
       "answer": "snowboarding",
-      "response": "The person is riding a snowboard."
+      "response": "the person is riding a snowboard"
     },
     {
       "question_id": 1176000,
@@ -1257,7 +1070,7 @@
       "is_open": true,
       "options": null,
       "answer": "skateboard",
-      "response": "Scooter."
+      "response": "scooter"
     },
     {
       "question_id": 402109004,
@@ -1268,7 +1081,7 @@
       "is_open": true,
       "options": null,
       "answer": "using computer",
-      "response": "The person in the background is typing on a computer."
+      "response": "the person in the background is typing on a computer"
     },
     {
       "question_id": 310543001,
@@ -1279,7 +1092,7 @@
       "is_open": true,
       "options": null,
       "answer": "standing",
-      "response": "Washing hands."
+      "response": "washing hands"
     },
     {
       "question_id": 470070003,
@@ -1290,7 +1103,7 @@
       "is_open": true,
       "options": null,
       "answer": "standing",
-      "response": "The person in the black shirt is a umpire."
+      "response": "the person in the black shirt is a umpire"
     },
     {
       "question_id": 224000000,
@@ -1301,7 +1114,7 @@
       "is_open": true,
       "options": null,
       "answer": "atv",
-      "response": "The person is sitting on a motorcycle."
+      "response": "the person is sitting on a motorcycle"
     },
     {
       "question_id": 79721005,
@@ -1312,10 +1125,142 @@
       "is_open": true,
       "options": null,
       "answer": "scale",
-      "response": "A piece of metal."
+      "response": "a piece of metal"
     }
   ],
   "invalid_resp": [
+    {
+      "question_id": 337814001,
+      "question": "How many people are shown?",
+      "class": "how_many_people_are",
+      "img": "337814",
+      "img_path": "./data/datasets/vqav2/imgs/how_many_people_are/337814.jpg",
+      "is_open": true,
+      "options": null,
+      "answer": "3",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": 18699005,
+      "question": "How many people are posed?",
+      "class": "how_many_people_are",
+      "img": "18699",
+      "img_path": "./data/datasets/vqav2/imgs/how_many_people_are/18699.jpg",
+      "is_open": true,
+      "options": null,
+      "answer": "8",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": 573214003,
+      "question": "How many people are on the bike?",
+      "class": "how_many_people_are",
+      "img": "573214",
+      "img_path": "./data/datasets/vqav2/imgs/how_many_people_are/573214.jpg",
+      "is_open": true,
+      "options": null,
+      "answer": "2",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": 313948000,
+      "question": "How many people are looking at the motorcycle?",
+      "class": "how_many_people_are",
+      "img": "313948",
+      "img_path": "./data/datasets/vqav2/imgs/how_many_people_are/313948.jpg",
+      "is_open": true,
+      "options": null,
+      "answer": "0",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": 525616002,
+      "question": "How many people are wearing hats?",
+      "class": "how_many_people_are",
+      "img": "525616",
+      "img_path": "./data/datasets/vqav2/imgs/how_many_people_are/525616.jpg",
+      "is_open": true,
+      "options": null,
+      "answer": "0",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": 318284007,
+      "question": "How many people are wearing a catcher's mitt?",
+      "class": "how_many_people_are",
+      "img": "318284",
+      "img_path": "./data/datasets/vqav2/imgs/how_many_people_are/318284.jpg",
+      "is_open": true,
+      "options": null,
+      "answer": "0",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": 207108000,
+      "question": "How many people are wearing white shirts?",
+      "class": "how_many_people_are",
+      "img": "207108",
+      "img_path": "./data/datasets/vqav2/imgs/how_many_people_are/207108.jpg",
+      "is_open": true,
+      "options": null,
+      "answer": "2",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": 563775002,
+      "question": "How many people are shown?",
+      "class": "how_many_people_are",
+      "img": "563775",
+      "img_path": "./data/datasets/vqav2/imgs/how_many_people_are/563775.jpg",
+      "is_open": true,
+      "options": null,
+      "answer": "2",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": 147179001,
+      "question": "How many people are wearing bracelets?",
+      "class": "how_many_people_are",
+      "img": "147179",
+      "img_path": "./data/datasets/vqav2/imgs/how_many_people_are/147179.jpg",
+      "is_open": true,
+      "options": null,
+      "answer": "3",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": 471893002,
+      "question": "How many people are sitting down?",
+      "class": "how_many_people_are",
+      "img": "471893",
+      "img_path": "./data/datasets/vqav2/imgs/how_many_people_are/471893.jpg",
+      "is_open": true,
+      "options": null,
+      "answer": "0",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": 473299002,
+      "question": "How many people are there?",
+      "class": "how_many_people_are",
+      "img": "473299",
+      "img_path": "./data/datasets/vqav2/imgs/how_many_people_are/473299.jpg",
+      "is_open": true,
+      "options": null,
+      "answer": "2",
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": 418275002,
+      "question": "What is the person trying to do with the hair?",
+      "class": "what_is_the_person",
+      "img": "418275",
+      "img_path": "./data/datasets/vqav2/imgs/what_is_the_person/418275.jpg",
+      "is_open": true,
+      "options": null,
+      "answer": "nothing",
+      "response": "<NOT_FOUND>"
+    },
     {
       "question_id": 240275005,
       "question": "What is the person standing on?",
@@ -1325,7 +1270,7 @@
       "is_open": true,
       "options": null,
       "answer": "surfboard",
-      "response": "<INV>"
+      "response": "<NOT_FOUND>"
     },
     {
       "question_id": 18336006,
@@ -1336,7 +1281,7 @@
       "is_open": true,
       "options": null,
       "answer": "apple",
-      "response": "<INV>"
+      "response": "<NOT_FOUND>"
     },
     {
       "question_id": 538414002,
@@ -1380,7 +1325,18 @@
       "is_open": true,
       "options": null,
       "answer": "cake",
-      "response": "<INV>"
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": 300206000,
+      "question": "What is the person not surfing doing?",
+      "class": "what_is_the_person",
+      "img": "300206",
+      "img_path": "./data/datasets/vqav2/imgs/what_is_the_person/300206.jpg",
+      "is_open": true,
+      "options": null,
+      "answer": "watching",
+      "response": "<NOT_FOUND>"
     },
     {
       "question_id": 249046003,
@@ -1405,6 +1361,17 @@
       "response": "<INV>"
     },
     {
+      "question_id": 6719001,
+      "question": "What is the person doing?",
+      "class": "what_is_the_person",
+      "img": "6719",
+      "img_path": "./data/datasets/vqav2/imgs/what_is_the_person/6719.jpg",
+      "is_open": true,
+      "options": null,
+      "answer": "sitting",
+      "response": "<NOT_FOUND>"
+    },
+    {
       "question_id": 229889007,
       "question": "What is the person holding?",
       "class": "what_is_the_person",
@@ -1413,7 +1380,7 @@
       "is_open": true,
       "options": null,
       "answer": "ski poles",
-      "response": "<INV>"
+      "response": "<NOT_FOUND>"
     },
     {
       "question_id": 409964010,
@@ -1512,7 +1479,7 @@
       "is_open": true,
       "options": null,
       "answer": "string",
-      "response": "<INV>"
+      "response": "<NOT_FOUND>"
     },
     {
       "question_id": 572900009,
@@ -1523,7 +1490,18 @@
       "is_open": true,
       "options": null,
       "answer": "frisbee",
-      "response": "<INV>"
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": 302107002,
+      "question": "What is the person with the bat doing?",
+      "class": "what_is_the_person",
+      "img": "302107",
+      "img_path": "./data/datasets/vqav2/imgs/what_is_the_person/302107.jpg",
+      "is_open": true,
+      "options": null,
+      "answer": "playing baseball",
+      "response": "<NOT_FOUND>"
     },
     {
       "question_id": 544857000,
@@ -1545,7 +1523,7 @@
       "is_open": true,
       "options": null,
       "answer": "wine",
-      "response": "<INV>"
+      "response": "<NOT_FOUND>"
     },
     {
       "question_id": 521306011,
@@ -1589,7 +1567,18 @@
       "is_open": true,
       "options": null,
       "answer": "banana",
-      "response": "<INV>"
+      "response": "<NOT_FOUND>"
+    },
+    {
+      "question_id": 367953005,
+      "question": "What is the person holding?",
+      "class": "what_is_the_person",
+      "img": "367953",
+      "img_path": "./data/datasets/vqav2/imgs/what_is_the_person/367953.jpg",
+      "is_open": true,
+      "options": null,
+      "answer": "umbrella",
+      "response": "<NOT_FOUND>"
     },
     {
       "question_id": 136458001,
@@ -1622,7 +1611,7 @@
       "is_open": true,
       "options": null,
       "answer": "kite",
-      "response": "<INV>"
+      "response": "<NOT_FOUND>"
     },
     {
       "question_id": 288201001,
@@ -1633,7 +1622,7 @@
       "is_open": true,
       "options": null,
       "answer": "sandwich",
-      "response": "<INV>"
+      "response": "<NOT_FOUND>"
     },
     {
       "question_id": 133933036,
@@ -1656,6 +1645,17 @@
       "options": null,
       "answer": "judging",
       "response": "<INV>"
+    },
+    {
+      "question_id": 551966004,
+      "question": "What is the person sitting on?",
+      "class": "what_is_the_person",
+      "img": "551966",
+      "img_path": "./data/datasets/vqav2/imgs/what_is_the_person/551966.jpg",
+      "is_open": true,
+      "options": null,
+      "answer": "bench",
+      "response": "<NOT_FOUND>"
     }
   ]
 }
