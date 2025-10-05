@@ -402,7 +402,7 @@ def plot_similarity(
 def plot_behaviour_counts(data, out_path) -> None:
     _, axes = plt.subplots(1, 3, sharey=True, layout="constrained", figsize=(15, 4))
 
-    type_map = {0: "Type 1 Behaviours", 1: "Type 2 Behaviours", 2: "Type 3 Behaviours"}
+    type_map = {1: "Type 1 Behaviours", 2: "Type 2 Behaviours", 3: "Type 3 Behaviours"}
 
     color_map = {
         "llava-bench": "#DC602E",
@@ -419,14 +419,14 @@ def plot_behaviour_counts(data, out_path) -> None:
     max_y = max(vals_list) + 60
 
     for idx, ax in enumerate(axes):
-        ax.set_title(type_map[idx])
+        ax.set_title(type_map[idx + 1])
         ax.tick_params(bottom=False)
         ax.set_ylim(top=max_y)
         x = np.arange(len(MODEL_MAP))
         ax.yaxis.grid(True, linestyle="-", which="major", color="lightgrey", alpha=0.7)
 
         multiplier = 0
-        curr_failure = data[idx]
+        curr_failure = data[idx + 1]
         for ds, values in curr_failure.items():
             offset = width * multiplier
             bars = ax.bar(x + offset, values, width, color=color_map[ds], label=ds)
