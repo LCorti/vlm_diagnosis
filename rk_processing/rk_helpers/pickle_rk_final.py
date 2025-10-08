@@ -12,15 +12,14 @@ from utils import data_io, graph_utils
 if __name__ == "__main__":
     rk_hdl = RKHandler()
     model_list = rk_hdl.get_model_list()
-    prompt_version = 4
 
     for model in model_list:
         rk_hdl.set_curr_model(model)
         for ds in rk_hdl.get_ds_list():
             rk_hdl.set_curr_ds(ds)
-            input_path = str(rk_hdl.get_rk_parsed_path()).format(prompt_version)
+            input_path = str(rk_hdl.get_rk_final_path())
             parsed_rk = data_io.load_jsonl(Path("..", "..", input_path))
-            out_file = Path("..", "..", rk_hdl.get_parsed_pkl_path())
+            out_file = Path("..", "..", rk_hdl.get_final_pkl_path())
             data_io.make_dir(out_file.parent)
 
             graphs = {}
