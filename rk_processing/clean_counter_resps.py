@@ -8,7 +8,6 @@ if module_path not in sys.path:
 
 from config_handlers.causal_handler import CausalHandler
 from config_handlers.dataset_handler import DatasetHandler
-from config_handlers.rk_handler import RKHandler
 from utils.data_io import load_jsonl, save_jsonl
 from utils.text_utils import clean_response
 

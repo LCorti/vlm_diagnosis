@@ -68,14 +68,21 @@ def parse_args():
 
 # Formatting utils
 def fix_word_numbers(parser, x):
+    res = "<UNK>"
     try:
         res = int(x)
-    except Exception as _:
+    except ValueError as _:
+        # Casting to int failed, silently move on to parser.
+        pass
+    try:
         res = parser.parse(x)
         if not res:
             res = x  # If parse fails, it is probably a string
         else:
             res = int(res)  # If parse works, make sure an int is returned
+    except Exception as e:
+        # Parser failed
+        print(e)
     finally:
         return res
 
