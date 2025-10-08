@@ -21,7 +21,7 @@ def load_merge_sk_data(sk_hdl: SKHandler) -> list:
     sk_data = []
     for ds_class in sk_hdl.get_classes():
         sk_hdl.set_curr_class(ds_class)
-        sk_data.extend(load_jsonl(Path("..", sk_hdl.get_sk_final_path())))
+        sk_data.extend(load_jsonl(Path("..", sk_hdl.get_sk_exp_path())))
     return sk_data
 
 
@@ -85,17 +85,13 @@ def get_similar_concept(
         sim_to_concept = compute_similarity(
             emb_model, concept, elem["from_concept"]["bb_label"]["bb_label_text"]
         )
-        # print(sim_from_concept)
-        # print(sim_to_concept)
         # Keep track of max sim and corresponding data
         if sim_from_concept > sim_th and sim_from_concept > max_sim:
             max_sim = sim_from_concept
             curr_concept = elem["from_concept"]
-            # print("taking from_concept")
         if sim_to_concept > sim_th and sim_to_concept > max_sim:
             max_sim = sim_to_concept
             curr_concept = elem["to_concept"]
-            # print("taking to_concept")
 
     return curr_concept
 
@@ -142,10 +138,8 @@ if __name__ == "__main__":
     ds_list = sk_hdl.get_ds_list()
     ds_list = ds_list * 4
     model_list.sort()
-
     # Load sgg dict
     sgg_dict = load_json(Path("..", "data", "common", "sgg_dicts.json"))
-
     # Variables to check what is happening
     counts = {}
 

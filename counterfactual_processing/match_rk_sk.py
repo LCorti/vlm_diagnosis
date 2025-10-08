@@ -58,7 +58,7 @@ def load_merge_sk_data(sk_hdl: SKHandler) -> list:
     sk_data = []
     for ds_class in sk_hdl.get_classes():
         sk_hdl.set_curr_class(ds_class)
-        sk_data.extend(load_jsonl(Path("..", sk_hdl.get_sk_final_path())))
+        sk_data.extend(load_jsonl(Path("..", sk_hdl.get_sk_exp_path())))
     return sk_data
 
 
@@ -173,13 +173,10 @@ if __name__ == "__main__":
     ds_list = sk_hdl.get_ds_list()
     ds_list = ds_list * 4
     model_list.sort()
-
     # Load sgg dict
     sgg_dict = load_json(Path("..", "data", "common", "sgg_dicts.json"))
-
     # Variables to check what is happening
     counts = {}
-
     # Load sentence-transformers for computing embeddings
     emb_model = SentenceTransformer("sentence-transformers/all-mpnet-base-v2")
 
