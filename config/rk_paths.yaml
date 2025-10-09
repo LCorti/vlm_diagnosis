@@ -4,81 +4,97 @@ internvl2:
     parsed: results_v{}.jsonl
     parsed_pkl: results.pkl
     final: results.jsonl
+    final_pkl: results.pkl
   mmbench: 
     raw: results_v{}.jsonl
     parsed: results_v{}.jsonl
     parsed_pkl: results.pkl
     final: results.jsonl
+    final_pkl: results.pkl
   seed: 
     raw: results_v{}.jsonl
     parsed: results_v{}.jsonl
     parsed_pkl: results.pkl
     final: results.jsonl
+    final_pkl: results.pkl
   vqav2: 
     raw: results_v{}.jsonl
     parsed: results_v{}.jsonl
     parsed_pkl: results.pkl
     final: results.jsonl
+    final_pkl: results.pkl
 llava-1.6:
   llava-bench: 
     raw: results_v{}.jsonl
     parsed: results_v{}.jsonl
     parsed_pkl: results.pkl
     final: results.jsonl
+    final_pkl: results.pkl
   mmbench: 
     raw: results_v{}.jsonl
     parsed: results_v{}.jsonl
     parsed_pkl: results.pkl
     final: results.jsonl
+    final_pkl: results.pkl
   seed: 
     raw: results_v{}.jsonl
     parsed: results_v{}.jsonl
     parsed_pkl: results.pkl
     final: results.jsonl
+    final_pkl: results.pkl
   vqav2: 
     raw: results_v{}.jsonl
     parsed: results_v{}.jsonl
     parsed_pkl: results.pkl
     final: results.jsonl
+    final_pkl: results.pkl
 minigpt4:
   llava-bench: 
     raw: results_v{}.jsonl
     parsed: results_v{}.jsonl
     parsed_pkl: results.pkl
     final: results.jsonl
+    final_pkl: results.pkl
   mmbench: 
     raw: results_v{}.jsonl
     parsed: results_v{}.jsonl
     parsed_pkl: results.pkl
     final: results.jsonl
+    final_pkl: results.pkl
   seed: 
     raw: results_v{}.jsonl
     parsed: results_v{}.jsonl
     parsed_pkl: results.pkl
     final: results.jsonl
+    final_pkl: results.pkl
   vqav2: 
     raw: results_v{}.jsonl
     parsed: results_v{}.jsonl
     parsed_pkl: results.pkl
     final: results.jsonl
+    final_pkl: results.pkl
 sharegpt4v:
   llava-bench: 
     raw: results_v{}.jsonl
     parsed: results_v{}.jsonl
     parsed_pkl: results.pkl
     final: results.jsonl
+    final_pkl: results.pkl
   mmbench: 
     raw: results_v{}.jsonl
     parsed: results_v{}.jsonl
     parsed_pkl: results.pkl
     final: results.jsonl
+    final_pkl: results.pkl
   seed: 
     raw: results_v{}.jsonl
     parsed: results_v{}.jsonl
     parsed_pkl: results.pkl
     final: results.jsonl
+    final_pkl: results.pkl
   vqav2: 
     raw: results_v{}.jsonl
     parsed: results_v{}.jsonl
     parsed_pkl: results.pkl
     final: results.jsonl
+    final_pkl: results.pkl
