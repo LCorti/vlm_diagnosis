@@ -81,14 +81,21 @@ def load_sk(sk_hdl: SKHandler) -> dict:
 
 
 def load_rk(rk_hdl: RKHandler) -> dict:
-    return data_io.load_pickle(Path("..", rk_hdl.get_parsed_pkl_path()))
+    return data_io.load_pickle(Path("..", rk_hdl.get_final_pkl_path()))
 
 
 if __name__ == "__main__":
     sk_hdl = SKHandler()
     rk_hdl = RKHandler()
-    emb_model = SentenceTransformer("sentence-transformers/all-mpnet-base-v2")
-    # emb_model = SentenceTransformer("ibm-granite/granite-embedding-english-r2")
+    # emb_model_path = "ibm-granite/granite-embedding-english-r2"
+    emb_model_path = "sentence-transformers/all-mpnet-base-v2"
+    if emb_model_path == "sentence-transformers/all-mpnet-base-v2":
+        emb_model_suffix = "mpnet"
+    elif emb_model_path == "ibm-granite/granite-embedding-english-r2":
+        emb_model_suffix = "granite"
+    else:
+        emb_model_suffix = ""
+    emb_model = SentenceTransformer(emb_model_path)
     all_datasets = sk_hdl.get_ds_list() * 4
     all_models = rk_hdl.get_model_list() * 4
     all_models.sort()
@@ -126,7 +133,6 @@ if __name__ == "__main__":
                 "cosine": compute_cosine(emb_model, sk_data[g_idx], rk_data[g_idx]),
             }
             sim_sample[model][ds][g_idx] = measures
-            # print(sim_sample[model][ds][g_idx])
 
             # Append individual measures to summary for later
             if "ged" not in sim_summary[model][ds]:
@@ -178,7 +184,7 @@ if __name__ == "__main__":
         sim_summary[model][ds].pop("cosine", None)
 
         # Save
-        out_path = Path("0_stats", "similarity", model, ds)
+        out_path = Path("raw_stats", f"sim_{emb_model_suffix}", model, ds)
         data_io.make_dir(out_path)
         data_io.save_json(sim_sample[model][ds], out_path.joinpath("samples.json"))
         data_io.save_json(sim_summary[model][ds], out_path.joinpath("summary.json"))
