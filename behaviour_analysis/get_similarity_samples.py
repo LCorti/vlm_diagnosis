@@ -124,7 +124,7 @@ if __name__ == "__main__":
             sim_summary[model][ds] = {}
 
         print(f"> {len(rk_data)} samples to process...")
-        for g_idx, g_data in rk_data.items():
+        for g_idx in rk_data.keys():
             print(f"Processing {g_idx}")
             # Compute sample-level measures
             measures = {
