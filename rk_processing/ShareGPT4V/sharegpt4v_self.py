@@ -4,7 +4,6 @@ import torch
 
 from pathlib import Path
 
-from rk_processing.utils.gen_utils import GenUtils
 from share4v.constants import IMAGE_TOKEN_INDEX
 from share4v.mm_utils import get_model_name_from_path, tokenizer_image_token
 from share4v.model.builder import load_pretrained_model
@@ -26,6 +25,7 @@ import utils.data_io as data_io
 import utils.image_utils as image_utils
 
 from config_handlers.rk_handler import RKHandler
+from rk_processing.utils.gen_utils import GenUtils
 
 
 PROMPT_VERSION = 4

@@ -8,7 +8,6 @@ from llava.constants import IMAGE_TOKEN_INDEX
 from llava.mm_utils import tokenizer_image_token, get_model_name_from_path
 from llava.model.builder import load_pretrained_model
 from llava.utils import disable_torch_init
-from rk_processing.utils.gen_utils import GenUtils
 from utils.model_utils import (
     set_conv_mode,
     make_message,
@@ -24,6 +23,7 @@ import utils.data_io as data_io
 import utils.image_utils as image_utils
 
 from config_handlers.rk_handler import RKHandler
+from rk_processing.utils.gen_utils import GenUtils
 
 PROMPT_VERSION = 4
 MODEL_NAME = "llava-1.6"
