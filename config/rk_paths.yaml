@@ -98,3 +98,28 @@ sharegpt4v:
     parsed_pkl: results.pkl
     final: results.jsonl
     final_pkl: results.pkl
+qwen2_5_vl:
+  llava-bench: 
+    raw: results_v{}.jsonl
+    parsed: results_v{}.jsonl
+    parsed_pkl: results.pkl
+    final: results.jsonl
+    final_pkl: results.pkl
+  mmbench: 
+    raw: results_v{}.jsonl
+    parsed: results_v{}.jsonl
+    parsed_pkl: results.pkl
+    final: results.jsonl
+    final_pkl: results.pkl
+  seed: 
+    raw: results_v{}.jsonl
+    parsed: results_v{}.jsonl
+    parsed_pkl: results.pkl
+    final: results.jsonl
+    final_pkl: results.pkl
+  vqav2: 
+    raw: results_v{}.jsonl
+    parsed: results_v{}.jsonl
+    parsed_pkl: results.pkl
+    final: results.jsonl
+    final_pkl: results.pkl

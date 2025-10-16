@@ -9,6 +9,7 @@ from transformers import (
     AutoProcessor,
     AutoTokenizer,
     GenerationConfig,
+    Qwen2_5_VLForConditionalGeneration,
 )
 from typing import Any
 
@@ -75,6 +76,13 @@ class GenUtils:
         elif self.MODEL_NAME == "sharegpt4v":
             config_dict["num_beams"] = num_beams
             config_dict["use_cache"] = use_cache
+            self.GEN_CONFIG = GenerationConfig.from_dict(config_dict)
+        elif self.MODEL_NAME == "qwen2_5_vl":
+            # Parameters taken from https://huggingface.co/Qwen/Qwen2.5-VL-7B-Instruct/blob/main/generation_config.json
+            config_dict["bos_token_id"] = 151643
+            config_dict["pad_token_id"] = 151643
+            config_dict["eos_token_id"] = [151645, 151643]
+            config_dict["repetition_penalty"] = 1.05
             self.GEN_CONFIG = GenerationConfig.from_dict(config_dict)
         return self.GEN_CONFIG
 
@@ -143,6 +151,30 @@ class GenUtils:
             outputs = outputs[: -len(stop_str)]
         outputs = outputs.strip()
         return outputs
+
+    def generate_qwen2_5_vl(
+        self,
+        model: Qwen2_5_VLForConditionalGeneration,
+        processor: AutoProcessor,
+        inputs: dict,
+    ) -> str:
+        with torch.inference_mode():
+            output_ids = model.generate(
+                **inputs,
+                generation_config=self.GEN_CONFIG,
+            )
+        # Trim and decode generated ids
+        output_ids_trimmed = [
+            out_ids[len(in_ids) :]
+            for in_ids, out_ids in zip(inputs.input_ids, output_ids)
+        ]
+        output = processor.batch_decode(
+            output_ids_trimmed,
+            skip_special_tokens=True,
+            clean_up_tokenization_spaces=False,
+        )[0]
+        output = output.strip()
+        return output
 
     def clean_rk(self, rk: dict) -> dict:
         return {k: v.strip() for k, v in rk.items()}
