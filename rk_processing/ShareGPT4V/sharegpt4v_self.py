@@ -162,7 +162,7 @@ if __name__ == "__main__":
         stopping_criteria = get_stopping_criteria(input_ids, stop_str, tokenizer)
 
         # First generation step: get answer from the model
-        curr_rk["response"] = gen_utils.gen_response_sharegpt4v(
+        curr_rk["response"] = gen_utils.generate_sharegpt4v(
             model, tokenizer, image_tensor, input_ids, stopping_criteria, stop_str
         )
         print("Response: {}".format(curr_rk["response"]))
@@ -181,7 +181,7 @@ if __name__ == "__main__":
             .cuda()
         )
         stopping_criteria = get_stopping_criteria(input_ids, stop_str, tokenizer)
-        curr_rk["rationales"] = gen_utils.gen_response_sharegpt4v(
+        curr_rk["rationales"] = gen_utils.generate_sharegpt4v(
             model, tokenizer, image_tensor, input_ids, stopping_criteria, stop_str
         )
         # print(model_rk['rationales'])
@@ -200,7 +200,7 @@ if __name__ == "__main__":
             .cuda()
         )
         stopping_criteria = get_stopping_criteria(input_ids, stop_str, tokenizer)
-        curr_rk["triples"] = gen_utils.gen_response_sharegpt4v(
+        curr_rk["triples"] = gen_utils.generate_sharegpt4v(
             model, tokenizer, image_tensor, input_ids, stopping_criteria, stop_str
         )
         print(curr_rk["triples"])

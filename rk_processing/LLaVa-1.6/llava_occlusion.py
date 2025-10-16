@@ -177,7 +177,7 @@ if __name__ == "__main__":
                     .cuda()
                 )
                 # Get response
-                curr_cr["response"] = gen_utils.gen_response_llava_next(
+                curr_cr["response"] = gen_utils.generate_llava_next(
                     model, tokenizer, image_tensor, input_ids
                 )
                 curr_cr_list.append(curr_cr)

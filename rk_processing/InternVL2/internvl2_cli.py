@@ -109,9 +109,7 @@ if __name__ == "__main__":
         # Format text input
         message = make_message(question_template, curr_q)
 
-        response = gen_utils.gen_response_internvl2(
-            model, tokenizer, image_tensor, message
-        )
+        response = gen_utils.generate_internvl2(model, tokenizer, image_tensor, message)
 
         all_responses.append(
             {

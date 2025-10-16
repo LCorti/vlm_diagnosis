@@ -157,7 +157,7 @@ if __name__ == "__main__":
         )
 
         # First generation step: get answer from the model
-        curr_rk["response"] = gen_utils.gen_response_llava_next(
+        curr_rk["response"] = gen_utils.generate_llava_next(
             model, tokenizer, image_tensor, input_ids
         )
         print("Response: {}".format(curr_rk["response"]))
@@ -174,7 +174,7 @@ if __name__ == "__main__":
             .unsqueeze(0)
             .cuda()
         )
-        curr_rk["rationales"] = gen_utils.gen_response_llava_next(
+        curr_rk["rationales"] = gen_utils.generate_llava_next(
             model, tokenizer, image_tensor, input_ids
         )
         # print(model_rk['rationales'])
@@ -191,7 +191,7 @@ if __name__ == "__main__":
             .unsqueeze(0)
             .cuda()
         )
-        curr_rk["triples"] = gen_utils.gen_response_llava_next(
+        curr_rk["triples"] = gen_utils.generate_llava_next(
             model, tokenizer, image_tensor, input_ids
         )
         print(curr_rk["triples"])

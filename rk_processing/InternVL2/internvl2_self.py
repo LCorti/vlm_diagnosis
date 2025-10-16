@@ -145,14 +145,14 @@ if __name__ == "__main__":
         message = make_message(question_template, curr_q)
 
         # First generation step: get answer from the model
-        curr_rk["response"], history = gen_utils.gen_response_internvl2(
+        curr_rk["response"], history = gen_utils.generate_internvl2(
             model, tokenizer, image_tensor, message
         )
         print(curr_rk["response"])
         print("=" * 25)
 
         # Second generation step: get unstructured rationales for model output
-        curr_rk["rationales"], history = gen_utils.gen_response_internvl2(
+        curr_rk["rationales"], history = gen_utils.generate_internvl2(
             model,
             tokenizer,
             image_tensor,
@@ -163,7 +163,7 @@ if __name__ == "__main__":
         print("=" * 25)
 
         # Third step: triple extraction and structuring from rationales
-        curr_rk["triples"], history = gen_utils.gen_response_internvl2(
+        curr_rk["triples"], history = gen_utils.generate_internvl2(
             model,
             tokenizer,
             image_tensor,

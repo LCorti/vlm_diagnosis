@@ -164,7 +164,7 @@ if __name__ == "__main__":
                 # Format text input
                 message = make_message(question_template, question)
                 # Get response
-                curr_cr["response"], _ = gen_utils.gen_response_internvl2(
+                curr_cr["response"], _ = gen_utils.generate_internvl2(
                     model, tokenizer, image_tensor, message
                 )
                 curr_cr_list.append(curr_cr)

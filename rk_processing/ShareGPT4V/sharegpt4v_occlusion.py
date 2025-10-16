@@ -182,7 +182,7 @@ if __name__ == "__main__":
                     input_ids, stop_str, tokenizer
                 )
                 # Get response
-                curr_cr["response"] = gen_utils.gen_response_sharegpt4v(
+                curr_cr["response"] = gen_utils.generate_sharegpt4v(
                     model,
                     tokenizer,
                     image_tensor,

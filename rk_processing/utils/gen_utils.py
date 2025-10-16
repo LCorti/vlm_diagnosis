@@ -4,9 +4,10 @@ import torch
 
 from pathlib import Path
 from transformers import (
-    AutoTokenizer,
     AutoModel,
     AutoModelForCausalLM,
+    AutoProcessor,
+    AutoTokenizer,
     GenerationConfig,
 )
 from typing import Any
@@ -77,7 +78,7 @@ class GenUtils:
             self.GEN_CONFIG = GenerationConfig.from_dict(config_dict)
         return self.GEN_CONFIG
 
-    def gen_response_internvl2(
+    def generate_internvl2(
         self,
         model: AutoModel,
         tokenizer: AutoTokenizer,
@@ -94,7 +95,7 @@ class GenUtils:
             return_history=True,
         )
 
-    def gen_response_llava_next(
+    def generate_llava_next(
         self,
         model: AutoModelForCausalLM,
         tokenizer: AutoTokenizer,
@@ -107,7 +108,7 @@ class GenUtils:
             )
         return tokenizer.batch_decode(output_ids, skip_special_tokens=True)[0].strip()
 
-    def gen_response_sharegpt4v(
+    def generate_sharegpt4v(
         self,
         model: AutoModelForCausalLM,
         tokenizer: AutoTokenizer,
