@@ -15,13 +15,13 @@ def get_next_role(conv):
 
 
 def add_conv_step(conv, user_q, image, prev_resp=None):
-    role = get_next_role(conv)
-
     if prev_resp:
+        role = get_next_role(conv)
         # If a previous response is passed, add it to the conversation
         # Append the agent's response at previous turn
         conv.append({"role": role, "content": [{"type": "text", "text": prev_resp}]})
 
+    role = get_next_role(conv)
     new_message = {
         "role": role,
         "content": [
