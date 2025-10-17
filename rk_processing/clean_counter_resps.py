@@ -27,9 +27,9 @@ if __name__ == "__main__":
     causal_hdl = CausalHandler()
     model_list = causal_hdl.get_model_list()
     ds_list = ds_hdl.get_ds_list()
-    all_models = model_list * 4
+    all_models = model_list * len(ds_list)
     all_models.sort()
-    all_ds = ds_list * 4
+    all_ds = ds_list * len(model_list)
 
     for model, ds in zip(all_models, all_ds):
         ds_hdl.set_curr_ds(ds)

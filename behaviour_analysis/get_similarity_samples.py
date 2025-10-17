@@ -96,8 +96,10 @@ if __name__ == "__main__":
     else:
         emb_model_suffix = ""
     emb_model = SentenceTransformer(emb_model_path)
-    all_datasets = sk_hdl.get_ds_list() * 4
-    all_models = rk_hdl.get_model_list() * 4
+    ds_list = sk_hdl.get_ds_list()
+    model_list = rk_hdl.get_model_list()
+    all_datasets = sk_hdl.get_ds_list() * len(model_list)
+    all_models = rk_hdl.get_model_list() * len(ds_list)
     all_models.sort()
 
     # Just init the final dict

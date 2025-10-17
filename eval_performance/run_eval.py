@@ -32,9 +32,9 @@ if __name__ == "__main__":
     ds_list = ds_hdl.get_ds_list()
     model_list = rk_hdl.get_model_list()
 
-    all_models = model_list * 4
+    all_models = model_list * len(ds_list)
     all_models.sort()
-    all_ds = ds_list * 4
+    all_ds = ds_list * len(model_list)
 
     eval_dict = get_eval_dict(all_models, all_ds, start=START, end=END, step=STEP)
 
