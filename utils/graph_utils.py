@@ -136,7 +136,7 @@ def rk_to_nx(raw_rk_rels: dict) -> nx.DiGraph:
     return nx_graph
 
 
-def og_rk_to_nx(rk_rels: list) -> nx.DiGraph:
+def simple_rk_to_nx(rk_rels: list) -> nx.DiGraph:
     nx_graph = nx.DiGraph()
     for rk in rk_rels:
         nx_graph = add_to_graph(nx_graph, rk)
