@@ -89,7 +89,14 @@ if __name__ == "__main__":
     model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
         HF_MODEL_NAME, torch_dtype="auto", device_map="auto"
     )
-    processor = AutoProcessor.from_pretrained(HF_MODEL_NAME)
+    # The default range for the number of visual tokens per image in the model is 4-16384.
+    # You can set min_pixels and max_pixels according to your needs, such as a token
+    # range of 256-1280, to balance performance and cost.
+    min_pixels = 4 * 28 * 28
+    max_pixels = 1280 * 28 * 28
+    processor = AutoProcessor.from_pretrained(
+        HF_MODEL_NAME, min_pixels=min_pixels, max_pixels=max_pixels
+    )
     print("Model loaded.")
 
     # Load data
@@ -157,7 +164,7 @@ if __name__ == "__main__":
                     padding=True,
                     return_tensors="pt",
                 )
-                # inputs = inputs.to("cuda")
+                inputs = inputs.to("cuda")
 
                 curr_cr["response"] = gen_utils.generate_qwen2_5_vl(
                     model, processor, inputs

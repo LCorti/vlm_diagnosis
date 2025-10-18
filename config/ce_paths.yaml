@@ -66,3 +66,20 @@ sharegpt4v:
     counter_resps: counter_resps.jsonl
     ca_data: ca_data.jsonl
     estimates: ce.jsonl
+qwen2_5_vl:
+  llava-bench:
+    counter_resps: counter_resps.jsonl
+    ca_data: ca_data.jsonl
+    estimates: ce.jsonl
+  mmbench:
+    counter_resps: counter_resps.jsonl
+    ca_data: ca_data.jsonl
+    estimates: ce.jsonl
+  seed:
+    counter_resps: counter_resps.jsonl
+    ca_data: ca_data.jsonl
+    estimates: ce.jsonl
+  vqav2:
+    counter_resps: counter_resps.jsonl
+    ca_data: ca_data.jsonl
+    estimates: ce.jsonl
