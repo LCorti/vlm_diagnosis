@@ -134,10 +134,11 @@ if __name__ == "__main__":
     # Loading config files
     sk_hdl = SKHandler()
     rk_hdl = RKHandler()
-    model_list = rk_hdl.get_model_list() * 4
     ds_list = sk_hdl.get_ds_list()
-    ds_list = ds_list * 4
-    model_list.sort()
+    model_list = rk_hdl.get_model_list()
+    all_ds = ds_list * len(model_list)
+    all_models = model_list * len(ds_list)
+    all_models.sort()
     # Load sgg dict
     sgg_dict = load_json(Path("..", "data", "common", "sgg_dicts.json"))
     # Variables to check what is happening
@@ -154,7 +155,7 @@ if __name__ == "__main__":
     ovd_model.eval()
     ovd_th = 0.1
 
-    for model, ds in zip(model_list, ds_list):
+    for model, ds in zip(all_models, all_ds):
         print(f"{model} -- {ds}")
         # Initialise counters
         if model not in counts:
