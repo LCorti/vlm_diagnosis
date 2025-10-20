@@ -18,3 +18,8 @@ sharegpt4v:
   mmbench: eval_res.json
   seed: eval_res.json
   vqav2: eval_res.json
+qwen2_5_vl:
+  llava-bench: eval_res.json
+  mmbench: eval_res.json
+  seed: eval_res.json
+  vqav2: eval_res.json
