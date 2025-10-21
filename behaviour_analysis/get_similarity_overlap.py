@@ -133,8 +133,8 @@ def compute_cosine(
 if __name__ == "__main__":
     sk_hdl = SKHandler()
     rk_hdl = RKHandler()
-    emb_model_path = "ibm-granite/granite-embedding-english-r2"
-    # emb_model_path = "sentence-transformers/all-mpnet-base-v2"
+    # emb_model_path = "ibm-granite/granite-embedding-english-r2"
+    emb_model_path = "sentence-transformers/all-mpnet-base-v2"
     if emb_model_path == "sentence-transformers/all-mpnet-base-v2":
         emb_model_suffix = "mpnet"
     elif emb_model_path == "ibm-granite/granite-embedding-english-r2":
@@ -153,12 +153,6 @@ if __name__ == "__main__":
     sim_summary = {}
 
     for ds, model in zip(all_datasets, all_models):
-        """
-        TEMPORARY: skipping qwen2_5_vl because we don't have the data yet
-        """
-        if model == "qwen2_5_vl":
-            continue
-
         print(f"Working on {ds.upper()} x {model.upper()}")
         sk_hdl.set_curr_ds(ds)
         rk_hdl.set_curr_model(model)
