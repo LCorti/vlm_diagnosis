@@ -400,7 +400,7 @@ def plot_similarity(
     plt.close()
 
 
-def plot_behaviour_counts(data, out_path) -> None:
+def plot_behaviour_counts(data, out_path, to_skip=None) -> None:
     _, axes = plt.subplots(1, 3, sharey=True, layout="constrained", figsize=(15, 4))
 
     type_map = {1: "Type 1 Behaviours", 2: "Type 2 Behaviours", 3: "Type 3 Behaviours"}
@@ -419,11 +419,21 @@ def plot_behaviour_counts(data, out_path) -> None:
     )
     max_y = max(vals_list) + 60
 
+    if to_skip:
+        if to_skip in MODEL_MAP:
+            models = MODEL_MAP.copy()
+            models.pop(to_skip)
+            print(f"Skipping data for {to_skip}")
+        else:
+            print(f"Did not find {to_skip} in MODEL_MAP: {MODEL_MAP}")
+    else:
+        models = MODEL_MAP.copy()
+
     for idx, ax in enumerate(axes):
         ax.set_title(type_map[idx + 1])
         ax.tick_params(bottom=False)
         ax.set_ylim(top=max_y)
-        x = np.arange(len(MODEL_MAP))
+        x = np.arange(len(models))
         ax.yaxis.grid(True, linestyle="-", which="major", color="lightgrey", alpha=0.7)
 
         multiplier = 0
@@ -440,7 +450,7 @@ def plot_behaviour_counts(data, out_path) -> None:
 
             multiplier += 1
 
-        ax.set_xticks(x + width * 1.5, list(MODEL_MAP.values()))
+        ax.set_xticks(x + width * 1.5, list(models.values()))
 
     ax.legend(list(DS_MAP.values()), loc="upper right", ncol=1)
     axes[0].set_ylabel("N. Samples per Behaviour Type")
