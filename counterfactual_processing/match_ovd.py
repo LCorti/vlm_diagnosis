@@ -1,3 +1,4 @@
+import copy
 import numpy as np
 import sys
 import torch
@@ -83,7 +84,7 @@ def get_similar_concept(
             elem["from_concept"]["bb_label"]["bb_label_text"],
         )
         sim_to_concept = compute_similarity(
-            emb_model, concept, elem["from_concept"]["bb_label"]["bb_label_text"]
+            emb_model, concept, elem["to_concept"]["bb_label"]["bb_label_text"]
         )
         # Keep track of max sim and corresponding data
         if sim_from_concept > sim_th and sim_from_concept > max_sim:
@@ -204,7 +205,6 @@ if __name__ == "__main__":
 
             # Make SK into a format that can be easily compared with SK
             # RK format: {'from_concept': ..., 'relationship': ..., 'to_concept': ...}
-            curr_sk_rels = curr_sk["relations"]
             # Go relation by relation and try to match
             curr_rk_matches = []
             for rk_rel in rk["triple_objs"]:
@@ -215,7 +215,7 @@ if __name__ == "__main__":
                 # First try: exact match -- look for the RK in the list of SK
                 # The matching is done at the triple-level to void the "wrong" concepts
                 # to be matched by mistake
-                match_sk_rel = exact_match_sk(rk_rel, curr_sk_rels)
+                match_sk_rel = exact_match_sk(rk_rel, curr_sk["relations"])
                 # If a match is found, just use that (and update count)
                 # and go to next iteration
                 if match_sk_rel:
@@ -261,35 +261,35 @@ if __name__ == "__main__":
                 if rk_rel["from_concept"] in filtered_res:
                     # Present, just need to format data
                     print("from_concept found")
-                    matched_rk["from_concept"] = format_concept(
+                    matched_from_rk = format_concept(
                         rk_rel["from_concept"], filtered_res[rk_rel["from_concept"]]
                     )
                 else:
                     # Missing, need to run cosine sim
                     print(
-                        f"Searching from_concept ({rk_rel['to_concept']}) with cosine sim."
+                        f"Searching from_concept ({rk_rel['from_concept']}) with cosine sim."
                     )
-                    sim_concept = get_similar_concept(
+                    sim_from_concept = get_similar_concept(
                         emb_model, rk_rel["from_concept"], curr_sk["relations"]
                     )
-                    print(sim_concept)
-                    if not sim_concept:
+                    if not sim_from_concept:
                         print("cosine sim. did not find anything")
                         continue
 
-                    matched_rk["from_concept"] = sim_concept
+                    matched_from_rk = copy.deepcopy(sim_from_concept)
                     label = rk_rel["from_concept"]
                     concept_id = get_concept_id(label, sgg_dict)
-                    matched_rk["from_concept"]["bb_label"]["bb_label_idx"] = concept_id
-                    matched_rk["from_concept"]["bb_label"]["bb_label_text"] = label
-                    matched_rk["from_concept"]["bb_label"]["bb_label_full"] = (
+                    matched_from_rk["bb_label"]["bb_label_idx"] = concept_id
+                    matched_from_rk["bb_label"]["bb_label_text"] = label
+                    matched_from_rk["bb_label"]["bb_label_full"] = (
                         f"{concept_id}-{label}"
                     )
+
                 # Handle 'to_concept'
                 if rk_rel["to_concept"] in filtered_res:
                     # Present, just need to format data
                     print("to_concept found")
-                    matched_rk["to_concept"] = format_concept(
+                    matched_to_rk = format_concept(
                         rk_rel["to_concept"], filtered_res[rk_rel["to_concept"]]
                     )
                 else:
@@ -297,22 +297,23 @@ if __name__ == "__main__":
                     print(
                         f"Searching to_concept ({rk_rel['to_concept']}) with cosine sim."
                     )
-                    sim_concept = get_similar_concept(
+                    sim_to_concept = get_similar_concept(
                         emb_model, rk_rel["to_concept"], curr_sk["relations"]
                     )
-                    print(sim_concept)
-                    if not sim_concept:
+                    # print(f"Similar to_concept found: {sim_to_concept}")
+                    if not sim_to_concept:
                         print("cosine sim. did not find anything")
                         continue
 
-                    matched_rk["to_concept"] = sim_concept
+                    matched_to_rk = copy.deepcopy(sim_to_concept)
                     label = rk_rel["to_concept"]
                     concept_id = get_concept_id(label, sgg_dict)
-                    matched_rk["to_concept"]["bb_label"]["bb_label_idx"] = concept_id
-                    matched_rk["to_concept"]["bb_label"]["bb_label_text"] = label
-                    matched_rk["to_concept"]["bb_label"]["bb_label_full"] = (
-                        f"{concept_id}-{label}"
-                    )
+                    matched_to_rk["bb_label"]["bb_label_idx"] = concept_id
+                    matched_to_rk["bb_label"]["bb_label_text"] = label
+                    matched_to_rk["bb_label"]["bb_label_full"] = f"{concept_id}-{label}"
+
+                matched_rk["from_concept"] = matched_from_rk
+                matched_rk["to_concept"] = matched_to_rk
 
                 if (
                     doing_cosine
