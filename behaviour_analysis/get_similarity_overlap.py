@@ -189,8 +189,14 @@ if __name__ == "__main__":
                 sim_summary[model][ds]["cosine"].extend(cosine_vals)
 
         # Compute mean values for measures
-        sim_summary[model][ds]["cosine_avg"] = np.mean(sim_summary[model][ds]["cosine"])
-        sim_summary[model][ds]["cosine_std"] = np.std(sim_summary[model][ds]["cosine"])
+        summary_avg = np.mean(sim_summary[model][ds]["cosine"])
+        sim_summary[model][ds]["cosine_avg"] = (
+            summary_avg.item() if not np.isnan(summary_avg) else 0.0
+        )
+        summary_std = np.std(sim_summary[model][ds]["cosine"])
+        sim_summary[model][ds]["cosine_std"] = (
+            summary_std.item() if not np.isnan(summary_std) else 0.0
+        )
         sim_summary[model][ds].pop("cosine", None)
 
         # Save
