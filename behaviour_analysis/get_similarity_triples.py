@@ -116,9 +116,10 @@ if __name__ == "__main__":
             # Compute triple-level measures
             measures = compute_cosine(emb_model, sk_data[g_idx], rk_data[g_idx])
             # Format data and aggregate for each sample as mean-of-max
+            sample_avg = np.mean([m["cosine"] for m in measures])
             sim_sample[model][ds][g_idx] = {
                 "measures": measures,
-                "avg": np.mean([m["cosine"] for m in measures]).item(),
+                "avg": sample_avg.item() if not np.isnan(sample_avg) else 0.0,
             }
 
             # Append individual measures to summary for later
