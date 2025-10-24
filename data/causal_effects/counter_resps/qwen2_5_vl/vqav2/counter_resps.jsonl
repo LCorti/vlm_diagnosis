@@ -19,17 +19,17 @@
 {"question_id": 502456011, "occluded": ["43809-person", "52775-shirt", "28784-ground"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_502456011_i_502456/12.jpg", "response": "One"}
 {"question_id": 502456011, "occluded": ["44078-phone", "52775-shirt", "28784-ground"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_502456011_i_502456/13.jpg", "response": "One"}
 {"question_id": 502456011, "occluded": ["43809-person", "44078-phone", "52775-shirt", "28784-ground"], "size": 4, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_502456011_i_502456/14.jpg", "response": "One"}
-{"question_id": 547487002, "occluded": ["43809-person"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_547487002_i_547487/0.jpg", "response": "Six"}
-{"question_id": 547487002, "occluded": ["44078-phone"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_547487002_i_547487/1.jpg", "response": "Three"}
+{"question_id": 547487002, "occluded": ["43809-person"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_547487002_i_547487/0.jpg", "response": "Five"}
+{"question_id": 547487002, "occluded": ["44078-phone"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_547487002_i_547487/1.jpg", "response": "Four"}
 {"question_id": 547487002, "occluded": ["51582-screen"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_547487002_i_547487/2.jpg", "response": "Five"}
-{"question_id": 547487002, "occluded": ["43809-person", "44078-phone"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_547487002_i_547487/3.jpg", "response": "Four"}
-{"question_id": 547487002, "occluded": ["43809-person", "51582-screen"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_547487002_i_547487/4.jpg", "response": "Six"}
-{"question_id": 547487002, "occluded": ["44078-phone", "51582-screen"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_547487002_i_547487/5.jpg", "response": "Three"}
-{"question_id": 547487002, "occluded": ["43809-person", "44078-phone", "51582-screen"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_547487002_i_547487/6.jpg", "response": "Four"}
+{"question_id": 547487002, "occluded": ["43809-person", "44078-phone"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_547487002_i_547487/3.jpg", "response": "Five"}
+{"question_id": 547487002, "occluded": ["43809-person", "51582-screen"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_547487002_i_547487/4.jpg", "response": "Five"}
+{"question_id": 547487002, "occluded": ["44078-phone", "51582-screen"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_547487002_i_547487/5.jpg", "response": "Four"}
+{"question_id": 547487002, "occluded": ["43809-person", "44078-phone", "51582-screen"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_547487002_i_547487/6.jpg", "response": "Five"}
 {"question_id": 60596018, "occluded": ["43809-person"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_60596018_i_60596/0.jpg", "response": "One"}
 {"question_id": 60596018, "occluded": ["54155-skateboard"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_60596018_i_60596/1.jpg", "response": "One"}
 {"question_id": 60596018, "occluded": ["new-wheels"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_60596018_i_60596/2.jpg", "response": "One"}
-{"question_id": 60596018, "occluded": ["43809-person", "54155-skateboard"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_60596018_i_60596/3.jpg", "response": "0"}
+{"question_id": 60596018, "occluded": ["43809-person", "54155-skateboard"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_60596018_i_60596/3.jpg", "response": "One"}
 {"question_id": 60596018, "occluded": ["43809-person", "new-wheels"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_60596018_i_60596/4.jpg", "response": "One"}
 {"question_id": 60596018, "occluded": ["54155-skateboard", "new-wheels"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_60596018_i_60596/5.jpg", "response": "One"}
 {"question_id": 60596018, "occluded": ["43809-person", "54155-skateboard", "new-wheels"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_60596018_i_60596/6.jpg", "response": "0"}
@@ -39,7 +39,7 @@
 {"question_id": 58157004, "occluded": ["45676-player", "64842-wall"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_58157004_i_58157/3.jpg", "response": "1"}
 {"question_id": 58157004, "occluded": ["45676-player", "28784-ground"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_58157004_i_58157/4.jpg", "response": "One"}
 {"question_id": 58157004, "occluded": ["64842-wall", "28784-ground"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_58157004_i_58157/5.jpg", "response": "1"}
-{"question_id": 58157004, "occluded": ["45676-player", "64842-wall", "28784-ground"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_58157004_i_58157/6.jpg", "response": "One"}
+{"question_id": 58157004, "occluded": ["45676-player", "64842-wall", "28784-ground"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_58157004_i_58157/6.jpg", "response": "1"}
 {"question_id": 356622000, "occluded": ["43809-person"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_356622000_i_356622/0.jpg", "response": "Three"}
 {"question_id": 356622000, "occluded": ["63586-umbrella"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_356622000_i_356622/1.jpg", "response": "0"}
 {"question_id": 356622000, "occluded": ["43809-person", "63586-umbrella"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_356622000_i_356622/2.jpg", "response": "0"}
@@ -60,23 +60,23 @@
 {"question_id": 18699005, "occluded": ["43809-person", "14957-clothing"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_18699005_i_18699/4.jpg", "response": "Seven"}
 {"question_id": 18699005, "occluded": ["40457-object", "14957-clothing"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_18699005_i_18699/5.jpg", "response": "Eight"}
 {"question_id": 18699005, "occluded": ["43809-person", "40457-object", "14957-clothing"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_18699005_i_18699/6.jpg", "response": "Seven"}
-{"question_id": 573214003, "occluded": ["43809-person"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_573214003_i_573214/0.jpg", "response": "Two"}
+{"question_id": 573214003, "occluded": ["43809-person"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_573214003_i_573214/0.jpg", "response": "1"}
 {"question_id": 573214003, "occluded": ["5283-bicycle"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_573214003_i_573214/1.jpg", "response": "Two"}
-{"question_id": 573214003, "occluded": ["51769-seat"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_573214003_i_573214/2.jpg", "response": "1"}
-{"question_id": 573214003, "occluded": ["43809-person", "5283-bicycle"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_573214003_i_573214/3.jpg", "response": "Two"}
+{"question_id": 573214003, "occluded": ["51769-seat"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_573214003_i_573214/2.jpg", "response": "Two"}
+{"question_id": 573214003, "occluded": ["43809-person", "5283-bicycle"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_573214003_i_573214/3.jpg", "response": "1"}
 {"question_id": 573214003, "occluded": ["43809-person", "51769-seat"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_573214003_i_573214/4.jpg", "response": "1"}
-{"question_id": 573214003, "occluded": ["5283-bicycle", "51769-seat"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_573214003_i_573214/5.jpg", "response": "1"}
-{"question_id": 573214003, "occluded": ["43809-person", "5283-bicycle", "51769-seat"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_573214003_i_573214/6.jpg", "response": "0"}
+{"question_id": 573214003, "occluded": ["5283-bicycle", "51769-seat"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_573214003_i_573214/5.jpg", "response": "Two"}
+{"question_id": 573214003, "occluded": ["43809-person", "5283-bicycle", "51769-seat"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_573214003_i_573214/6.jpg", "response": "1"}
 {"question_id": 266922002, "occluded": ["44078-phone"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_266922002_i_266922/0.jpg", "response": "Three"}
 {"question_id": 266922002, "occluded": ["43809-person"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_266922002_i_266922/1.jpg", "response": "Two"}
 {"question_id": 266922002, "occluded": ["44078-phone", "43809-person"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_266922002_i_266922/2.jpg", "response": "Two"}
 {"question_id": 313948000, "occluded": ["38682-motorcycle"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_313948000_i_313948/0.jpg", "response": "One"}
 {"question_id": 313948000, "occluded": ["49793-road"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_313948000_i_313948/1.jpg", "response": "0"}
-{"question_id": 313948000, "occluded": ["43809-person"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_313948000_i_313948/2.jpg", "response": "0"}
-{"question_id": 313948000, "occluded": ["38682-motorcycle", "49793-road"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_313948000_i_313948/3.jpg", "response": "One"}
+{"question_id": 313948000, "occluded": ["43809-person"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_313948000_i_313948/2.jpg", "response": "One"}
+{"question_id": 313948000, "occluded": ["38682-motorcycle", "49793-road"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_313948000_i_313948/3.jpg", "response": "0"}
 {"question_id": 313948000, "occluded": ["38682-motorcycle", "43809-person"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_313948000_i_313948/4.jpg", "response": "One"}
-{"question_id": 313948000, "occluded": ["49793-road", "43809-person"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_313948000_i_313948/5.jpg", "response": "One"}
-{"question_id": 313948000, "occluded": ["38682-motorcycle", "49793-road", "43809-person"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_313948000_i_313948/6.jpg", "response": "One"}
+{"question_id": 313948000, "occluded": ["49793-road", "43809-person"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_313948000_i_313948/5.jpg", "response": "0"}
+{"question_id": 313948000, "occluded": ["38682-motorcycle", "49793-road", "43809-person"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_313948000_i_313948/6.jpg", "response": "None"}
 {"question_id": 372024000, "occluded": ["43809-person"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_372024000_i_372024/0.jpg", "response": "1"}
 {"question_id": 372024000, "occluded": ["7760-blue shorts"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_372024000_i_372024/1.jpg", "response": "1"}
 {"question_id": 372024000, "occluded": ["43809-person", "7760-blue shorts"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_372024000_i_372024/2.jpg", "response": "0"}
@@ -90,7 +90,7 @@
 {"question_id": 25804000, "occluded": ["21315-elephant"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_25804000_i_25804/0.jpg", "response": "Five"}
 {"question_id": 25804000, "occluded": ["43809-person"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_25804000_i_25804/1.jpg", "response": "Four"}
 {"question_id": 25804000, "occluded": ["21315-elephant", "43809-person"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_25804000_i_25804/2.jpg", "response": "Four"}
-{"question_id": 378538002, "occluded": ["43809-person"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_378538002_i_378538/0.jpg", "response": "1"}
+{"question_id": 378538002, "occluded": ["43809-person"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_378538002_i_378538/0.jpg", "response": "One"}
 {"question_id": 378538002, "occluded": ["63586-umbrella"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_378538002_i_378538/1.jpg", "response": "0"}
 {"question_id": 378538002, "occluded": ["43809-person", "63586-umbrella"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_378538002_i_378538/2.jpg", "response": "0"}
 {"question_id": 525616002, "occluded": ["43809-person"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_525616002_i_525616/0.jpg", "response": "0"}
@@ -100,8 +100,12 @@
 {"question_id": 460684004, "occluded": ["43809-person"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_460684004_i_460684/1.jpg", "response": "Two"}
 {"question_id": 460684004, "occluded": ["44078-phone", "43809-person"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_460684004_i_460684/2.jpg", "response": "Two"}
 {"question_id": 332607000, "occluded": ["64842-wall"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_332607000_i_332607/0.jpg", "response": "One"}
-{"question_id": 332607000, "occluded": ["43809-person"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_332607000_i_332607/1.jpg", "response": "0"}
-{"question_id": 332607000, "occluded": ["64842-wall", "43809-person"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_332607000_i_332607/2.jpg", "response": "0"}
+{"question_id": 332607000, "occluded": ["67544-window"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_332607000_i_332607/1.jpg", "response": "One"}
+{"question_id": 332607000, "occluded": ["43809-person"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_332607000_i_332607/2.jpg", "response": "One"}
+{"question_id": 332607000, "occluded": ["64842-wall", "67544-window"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_332607000_i_332607/3.jpg", "response": "One"}
+{"question_id": 332607000, "occluded": ["64842-wall", "43809-person"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_332607000_i_332607/4.jpg", "response": "0"}
+{"question_id": 332607000, "occluded": ["67544-window", "43809-person"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_332607000_i_332607/5.jpg", "response": "One"}
+{"question_id": 332607000, "occluded": ["64842-wall", "67544-window", "43809-person"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_332607000_i_332607/6.jpg", "response": "0"}
 {"question_id": 296657000, "occluded": ["43809-person"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_296657000_i_296657/0.jpg", "response": "Three"}
 {"question_id": 296657000, "occluded": ["40457-object"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_296657000_i_296657/1.jpg", "response": "Six"}
 {"question_id": 296657000, "occluded": ["43809-person", "40457-object"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_296657000_i_296657/2.jpg", "response": "Three"}
@@ -112,9 +116,9 @@
 {"question_id": 162543000, "occluded": ["64842-wall", "43809-person"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_162543000_i_162543/4.jpg", "response": "0"}
 {"question_id": 162543000, "occluded": ["9400-brick", "43809-person"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_162543000_i_162543/5.jpg", "response": "0"}
 {"question_id": 162543000, "occluded": ["64842-wall", "9400-brick", "43809-person"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_162543000_i_162543/6.jpg", "response": "0"}
-{"question_id": 63939005, "occluded": ["44078-phone"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_63939005_i_63939/0.jpg", "response": "10"}
+{"question_id": 63939005, "occluded": ["44078-phone"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_63939005_i_63939/0.jpg", "response": "Four"}
 {"question_id": 63939005, "occluded": ["43809-person"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_63939005_i_63939/1.jpg", "response": "Six"}
-{"question_id": 63939005, "occluded": ["44078-phone", "43809-person"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_63939005_i_63939/2.jpg", "response": "Six"}
+{"question_id": 63939005, "occluded": ["44078-phone", "43809-person"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_63939005_i_63939/2.jpg", "response": "10"}
 {"question_id": 544533000, "occluded": ["43809-person"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_544533000_i_544533/0.jpg", "response": "0"}
 {"question_id": 544533000, "occluded": ["5283-bicycle"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_544533000_i_544533/1.jpg", "response": "0"}
 {"question_id": 544533000, "occluded": ["43809-person", "5283-bicycle"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_544533000_i_544533/2.jpg", "response": "0"}
@@ -125,12 +129,16 @@
 {"question_id": 194277000, "occluded": ["43809-person", "57976-string"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_194277000_i_194277/4.jpg", "response": "One"}
 {"question_id": 194277000, "occluded": ["32758-kite", "57976-string"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_194277000_i_194277/5.jpg", "response": "0"}
 {"question_id": 194277000, "occluded": ["43809-person", "32758-kite", "57976-string"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_194277000_i_194277/6.jpg", "response": "One"}
-{"question_id": 33683009, "occluded": ["44078-phone"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_33683009_i_33683/0.jpg", "response": "Two"}
+{"question_id": 33683009, "occluded": ["44078-phone"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_33683009_i_33683/0.jpg", "response": "0"}
 {"question_id": 33683009, "occluded": ["43809-person"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_33683009_i_33683/1.jpg", "response": "One"}
-{"question_id": 33683009, "occluded": ["44078-phone", "43809-person"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_33683009_i_33683/2.jpg", "response": "One"}
-{"question_id": 528458004, "occluded": ["5663-bird"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_528458004_i_528458/0.jpg", "response": "1"}
+{"question_id": 33683009, "occluded": ["44078-phone", "43809-person"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_33683009_i_33683/2.jpg", "response": "0"}
+{"question_id": 528458004, "occluded": ["12592-cat"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_528458004_i_528458/0.jpg", "response": "1"}
 {"question_id": 528458004, "occluded": ["13276-chair"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_528458004_i_528458/1.jpg", "response": "1"}
-{"question_id": 528458004, "occluded": ["5663-bird", "13276-chair"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_528458004_i_528458/2.jpg", "response": "1"}
+{"question_id": 528458004, "occluded": ["5663-bird"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_528458004_i_528458/2.jpg", "response": "1"}
+{"question_id": 528458004, "occluded": ["12592-cat", "13276-chair"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_528458004_i_528458/3.jpg", "response": "1"}
+{"question_id": 528458004, "occluded": ["12592-cat", "5663-bird"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_528458004_i_528458/4.jpg", "response": "1"}
+{"question_id": 528458004, "occluded": ["13276-chair", "5663-bird"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_528458004_i_528458/5.jpg", "response": "1"}
+{"question_id": 528458004, "occluded": ["12592-cat", "13276-chair", "5663-bird"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_528458004_i_528458/6.jpg", "response": "1"}
 {"question_id": 388619000, "occluded": ["5283-bicycle"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_388619000_i_388619/0.jpg", "response": "0"}
 {"question_id": 388619000, "occluded": ["new-wheels"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_388619000_i_388619/1.jpg", "response": "0"}
 {"question_id": 388619000, "occluded": ["51769-seat"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_388619000_i_388619/2.jpg", "response": "0"}
@@ -163,8 +171,12 @@
 {"question_id": 388619000, "occluded": ["new-wheels", "51769-seat", "new-pedals", "new-handlebars"], "size": 4, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_388619000_i_388619/29.jpg", "response": "0"}
 {"question_id": 388619000, "occluded": ["5283-bicycle", "new-wheels", "51769-seat", "new-pedals", "new-handlebars"], "size": 5, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_388619000_i_388619/30.jpg", "response": "0"}
 {"question_id": 21979005, "occluded": ["43809-person"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_21979005_i_21979/0.jpg", "response": "One"}
-{"question_id": 21979005, "occluded": ["52775-shirt"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_21979005_i_21979/1.jpg", "response": "Two"}
-{"question_id": 21979005, "occluded": ["43809-person", "52775-shirt"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_21979005_i_21979/2.jpg", "response": "One"}
+{"question_id": 21979005, "occluded": ["40457-object"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_21979005_i_21979/1.jpg", "response": "Two"}
+{"question_id": 21979005, "occluded": ["52775-shirt"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_21979005_i_21979/2.jpg", "response": "Two"}
+{"question_id": 21979005, "occluded": ["43809-person", "40457-object"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_21979005_i_21979/3.jpg", "response": "One"}
+{"question_id": 21979005, "occluded": ["43809-person", "52775-shirt"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_21979005_i_21979/4.jpg", "response": "One"}
+{"question_id": 21979005, "occluded": ["40457-object", "52775-shirt"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_21979005_i_21979/5.jpg", "response": "Two"}
+{"question_id": 21979005, "occluded": ["43809-person", "40457-object", "52775-shirt"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_21979005_i_21979/6.jpg", "response": "One"}
 {"question_id": 218189016, "occluded": ["53408-sidewalk"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_218189016_i_218189/0.jpg", "response": "Several"}
 {"question_id": 218189016, "occluded": ["10664-building"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_218189016_i_218189/1.jpg", "response": "Several"}
 {"question_id": 218189016, "occluded": ["43809-person"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_218189016_i_218189/2.jpg", "response": "Several"}
@@ -181,8 +193,12 @@
 {"question_id": 218189016, "occluded": ["10664-building", "43809-person", "57845-street"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_218189016_i_218189/13.jpg", "response": "Many"}
 {"question_id": 218189016, "occluded": ["53408-sidewalk", "10664-building", "43809-person", "57845-street"], "size": 4, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_218189016_i_218189/14.jpg", "response": "Many"}
 {"question_id": 56983014, "occluded": ["64842-wall"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_56983014_i_56983/0.jpg", "response": "One"}
-{"question_id": 56983014, "occluded": ["43809-person"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_56983014_i_56983/1.jpg", "response": "1"}
-{"question_id": 56983014, "occluded": ["64842-wall", "43809-person"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_56983014_i_56983/2.jpg", "response": "0"}
+{"question_id": 56983014, "occluded": ["67544-window"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_56983014_i_56983/1.jpg", "response": "One"}
+{"question_id": 56983014, "occluded": ["43809-person"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_56983014_i_56983/2.jpg", "response": "0"}
+{"question_id": 56983014, "occluded": ["64842-wall", "67544-window"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_56983014_i_56983/3.jpg", "response": "One"}
+{"question_id": 56983014, "occluded": ["64842-wall", "43809-person"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_56983014_i_56983/4.jpg", "response": "0"}
+{"question_id": 56983014, "occluded": ["67544-window", "43809-person"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_56983014_i_56983/5.jpg", "response": "0"}
+{"question_id": 56983014, "occluded": ["64842-wall", "67544-window", "43809-person"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_56983014_i_56983/6.jpg", "response": "0"}
 {"question_id": 464831006, "occluded": ["43809-person"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_464831006_i_464831/0.jpg", "response": "Seven"}
 {"question_id": 464831006, "occluded": ["40457-object"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_464831006_i_464831/1.jpg", "response": "7"}
 {"question_id": 464831006, "occluded": ["43809-person", "40457-object"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_464831006_i_464831/2.jpg", "response": "Six"}
@@ -206,11 +222,11 @@
 {"question_id": 301641001, "occluded": ["65157-water", "43809-person"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_301641001_i_301641/5.jpg", "response": "One"}
 {"question_id": 301641001, "occluded": ["8225-boat", "65157-water", "43809-person"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_301641001_i_301641/6.jpg", "response": "0"}
 {"question_id": 175615001, "occluded": ["43809-person"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_175615001_i_175615/0.jpg", "response": "1"}
-{"question_id": 175615001, "occluded": ["28784-ground"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_175615001_i_175615/1.jpg", "response": "Two"}
+{"question_id": 175615001, "occluded": ["28784-ground"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_175615001_i_175615/1.jpg", "response": "2"}
 {"question_id": 175615001, "occluded": ["29750-hat"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_175615001_i_175615/2.jpg", "response": "1"}
 {"question_id": 175615001, "occluded": ["43809-person", "28784-ground"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_175615001_i_175615/3.jpg", "response": "1"}
 {"question_id": 175615001, "occluded": ["43809-person", "29750-hat"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_175615001_i_175615/4.jpg", "response": "1"}
-{"question_id": 175615001, "occluded": ["28784-ground", "29750-hat"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_175615001_i_175615/5.jpg", "response": "Two"}
+{"question_id": 175615001, "occluded": ["28784-ground", "29750-hat"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_175615001_i_175615/5.jpg", "response": "2"}
 {"question_id": 175615001, "occluded": ["43809-person", "28784-ground", "29750-hat"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_175615001_i_175615/6.jpg", "response": "1"}
 {"question_id": 377949002, "occluded": ["3232-backpack"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_377949002_i_377949/0.jpg", "response": "0"}
 {"question_id": 377949002, "occluded": ["43809-person"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_377949002_i_377949/1.jpg", "response": "0"}
@@ -225,12 +241,12 @@
 {"question_id": 154520018, "occluded": ["43809-person"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_154520018_i_154520/0.jpg", "response": "0"}
 {"question_id": 154520018, "occluded": ["63586-umbrella"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_154520018_i_154520/1.jpg", "response": "0"}
 {"question_id": 154520018, "occluded": ["43809-person", "63586-umbrella"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_154520018_i_154520/2.jpg", "response": "0"}
-{"question_id": 207108000, "occluded": ["43809-person"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_207108000_i_207108/0.jpg", "response": "1"}
+{"question_id": 207108000, "occluded": ["43809-person"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_207108000_i_207108/0.jpg", "response": "2"}
 {"question_id": 207108000, "occluded": ["66824-white shirt"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_207108000_i_207108/1.jpg", "response": "1"}
-{"question_id": 207108000, "occluded": ["28784-ground"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_207108000_i_207108/2.jpg", "response": "2"}
-{"question_id": 207108000, "occluded": ["43809-person", "66824-white shirt"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_207108000_i_207108/3.jpg", "response": "1"}
+{"question_id": 207108000, "occluded": ["28784-ground"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_207108000_i_207108/2.jpg", "response": "1"}
+{"question_id": 207108000, "occluded": ["43809-person", "66824-white shirt"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_207108000_i_207108/3.jpg", "response": "2"}
 {"question_id": 207108000, "occluded": ["43809-person", "28784-ground"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_207108000_i_207108/4.jpg", "response": "1"}
-{"question_id": 207108000, "occluded": ["66824-white shirt", "28784-ground"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_207108000_i_207108/5.jpg", "response": "2"}
+{"question_id": 207108000, "occluded": ["66824-white shirt", "28784-ground"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_207108000_i_207108/5.jpg", "response": "1"}
 {"question_id": 207108000, "occluded": ["43809-person", "66824-white shirt", "28784-ground"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_207108000_i_207108/6.jpg", "response": "1"}
 {"question_id": 353180002, "occluded": ["43809-person"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_353180002_i_353180/0.jpg", "response": "Eight"}
 {"question_id": 353180002, "occluded": ["12446-cart"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_353180002_i_353180/1.jpg", "response": "Eight"}
@@ -257,13 +273,69 @@
 {"question_id": 420916000, "occluded": ["5111-bench", "51769-seat", "43809-person"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_420916000_i_420916/12.jpg", "response": "Three"}
 {"question_id": 420916000, "occluded": ["3248-backrest", "51769-seat", "43809-person"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_420916000_i_420916/13.jpg", "response": "Three"}
 {"question_id": 420916000, "occluded": ["5111-bench", "3248-backrest", "51769-seat", "43809-person"], "size": 4, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_420916000_i_420916/14.jpg", "response": "Two"}
-{"question_id": 433204004, "occluded": ["69245-yarn"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/0.jpg", "response": "Three"}
-{"question_id": 433204004, "occluded": ["52523-sheep"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/1.jpg", "response": "Three"}
-{"question_id": 433204004, "occluded": ["43809-person"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/2.jpg", "response": "Two"}
-{"question_id": 433204004, "occluded": ["69245-yarn", "52523-sheep"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/3.jpg", "response": "Three"}
-{"question_id": 433204004, "occluded": ["69245-yarn", "43809-person"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/4.jpg", "response": "Two"}
-{"question_id": 433204004, "occluded": ["52523-sheep", "43809-person"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/5.jpg", "response": "Two"}
-{"question_id": 433204004, "occluded": ["69245-yarn", "52523-sheep", "43809-person"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/6.jpg", "response": "Two"}
+{"question_id": 433204004, "occluded": ["22222-fabric"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/0.jpg", "response": "Three"}
+{"question_id": 433204004, "occluded": ["69245-yarn"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/1.jpg", "response": "Three"}
+{"question_id": 433204004, "occluded": ["52775-shirt"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/2.jpg", "response": "Three"}
+{"question_id": 433204004, "occluded": ["43809-person"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/3.jpg", "response": "Two"}
+{"question_id": 433204004, "occluded": ["68727-wool"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/4.jpg", "response": "Three"}
+{"question_id": 433204004, "occluded": ["52523-sheep"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/5.jpg", "response": "Three"}
+{"question_id": 433204004, "occluded": ["22222-fabric", "69245-yarn"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/6.jpg", "response": "Three"}
+{"question_id": 433204004, "occluded": ["22222-fabric", "52775-shirt"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/7.jpg", "response": "Three"}
+{"question_id": 433204004, "occluded": ["22222-fabric", "43809-person"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/8.jpg", "response": "Two"}
+{"question_id": 433204004, "occluded": ["22222-fabric", "68727-wool"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/9.jpg", "response": "Three"}
+{"question_id": 433204004, "occluded": ["22222-fabric", "52523-sheep"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/10.jpg", "response": "Three"}
+{"question_id": 433204004, "occluded": ["69245-yarn", "52775-shirt"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/11.jpg", "response": "Three"}
+{"question_id": 433204004, "occluded": ["69245-yarn", "43809-person"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/12.jpg", "response": "Two"}
+{"question_id": 433204004, "occluded": ["69245-yarn", "68727-wool"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/13.jpg", "response": "Three"}
+{"question_id": 433204004, "occluded": ["69245-yarn", "52523-sheep"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/14.jpg", "response": "Three"}
+{"question_id": 433204004, "occluded": ["52775-shirt", "43809-person"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/15.jpg", "response": "Two"}
+{"question_id": 433204004, "occluded": ["52775-shirt", "68727-wool"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/16.jpg", "response": "Three"}
+{"question_id": 433204004, "occluded": ["52775-shirt", "52523-sheep"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/17.jpg", "response": "Three"}
+{"question_id": 433204004, "occluded": ["43809-person", "68727-wool"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/18.jpg", "response": "Two"}
+{"question_id": 433204004, "occluded": ["43809-person", "52523-sheep"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/19.jpg", "response": "Two"}
+{"question_id": 433204004, "occluded": ["68727-wool", "52523-sheep"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/20.jpg", "response": "Three"}
+{"question_id": 433204004, "occluded": ["22222-fabric", "69245-yarn", "52775-shirt"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/21.jpg", "response": "Three"}
+{"question_id": 433204004, "occluded": ["22222-fabric", "69245-yarn", "43809-person"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/22.jpg", "response": "Two"}
+{"question_id": 433204004, "occluded": ["22222-fabric", "69245-yarn", "68727-wool"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/23.jpg", "response": "Three"}
+{"question_id": 433204004, "occluded": ["22222-fabric", "69245-yarn", "52523-sheep"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/24.jpg", "response": "Three"}
+{"question_id": 433204004, "occluded": ["22222-fabric", "52775-shirt", "43809-person"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/25.jpg", "response": "Two"}
+{"question_id": 433204004, "occluded": ["22222-fabric", "52775-shirt", "68727-wool"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/26.jpg", "response": "Three"}
+{"question_id": 433204004, "occluded": ["22222-fabric", "52775-shirt", "52523-sheep"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/27.jpg", "response": "Three"}
+{"question_id": 433204004, "occluded": ["22222-fabric", "43809-person", "68727-wool"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/28.jpg", "response": "Two"}
+{"question_id": 433204004, "occluded": ["22222-fabric", "43809-person", "52523-sheep"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/29.jpg", "response": "Two"}
+{"question_id": 433204004, "occluded": ["22222-fabric", "68727-wool", "52523-sheep"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/30.jpg", "response": "Three"}
+{"question_id": 433204004, "occluded": ["69245-yarn", "52775-shirt", "43809-person"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/31.jpg", "response": "Two"}
+{"question_id": 433204004, "occluded": ["69245-yarn", "52775-shirt", "68727-wool"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/32.jpg", "response": "Three"}
+{"question_id": 433204004, "occluded": ["69245-yarn", "52775-shirt", "52523-sheep"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/33.jpg", "response": "Three"}
+{"question_id": 433204004, "occluded": ["69245-yarn", "43809-person", "68727-wool"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/34.jpg", "response": "Two"}
+{"question_id": 433204004, "occluded": ["69245-yarn", "43809-person", "52523-sheep"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/35.jpg", "response": "Two"}
+{"question_id": 433204004, "occluded": ["69245-yarn", "68727-wool", "52523-sheep"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/36.jpg", "response": "Three"}
+{"question_id": 433204004, "occluded": ["52775-shirt", "43809-person", "68727-wool"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/37.jpg", "response": "Two"}
+{"question_id": 433204004, "occluded": ["52775-shirt", "43809-person", "52523-sheep"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/38.jpg", "response": "Two"}
+{"question_id": 433204004, "occluded": ["52775-shirt", "68727-wool", "52523-sheep"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/39.jpg", "response": "Three"}
+{"question_id": 433204004, "occluded": ["43809-person", "68727-wool", "52523-sheep"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/40.jpg", "response": "Two"}
+{"question_id": 433204004, "occluded": ["22222-fabric", "69245-yarn", "52775-shirt", "43809-person"], "size": 4, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/41.jpg", "response": "Two"}
+{"question_id": 433204004, "occluded": ["22222-fabric", "69245-yarn", "52775-shirt", "68727-wool"], "size": 4, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/42.jpg", "response": "Three"}
+{"question_id": 433204004, "occluded": ["22222-fabric", "69245-yarn", "52775-shirt", "52523-sheep"], "size": 4, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/43.jpg", "response": "Three"}
+{"question_id": 433204004, "occluded": ["22222-fabric", "69245-yarn", "43809-person", "68727-wool"], "size": 4, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/44.jpg", "response": "Two"}
+{"question_id": 433204004, "occluded": ["22222-fabric", "69245-yarn", "43809-person", "52523-sheep"], "size": 4, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/45.jpg", "response": "Two"}
+{"question_id": 433204004, "occluded": ["22222-fabric", "69245-yarn", "68727-wool", "52523-sheep"], "size": 4, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/46.jpg", "response": "Three"}
+{"question_id": 433204004, "occluded": ["22222-fabric", "52775-shirt", "43809-person", "68727-wool"], "size": 4, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/47.jpg", "response": "Two"}
+{"question_id": 433204004, "occluded": ["22222-fabric", "52775-shirt", "43809-person", "52523-sheep"], "size": 4, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/48.jpg", "response": "Two"}
+{"question_id": 433204004, "occluded": ["22222-fabric", "52775-shirt", "68727-wool", "52523-sheep"], "size": 4, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/49.jpg", "response": "Three"}
+{"question_id": 433204004, "occluded": ["22222-fabric", "43809-person", "68727-wool", "52523-sheep"], "size": 4, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/50.jpg", "response": "Two"}
+{"question_id": 433204004, "occluded": ["69245-yarn", "52775-shirt", "43809-person", "68727-wool"], "size": 4, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/51.jpg", "response": "Two"}
+{"question_id": 433204004, "occluded": ["69245-yarn", "52775-shirt", "43809-person", "52523-sheep"], "size": 4, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/52.jpg", "response": "Two"}
+{"question_id": 433204004, "occluded": ["69245-yarn", "52775-shirt", "68727-wool", "52523-sheep"], "size": 4, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/53.jpg", "response": "Three"}
+{"question_id": 433204004, "occluded": ["69245-yarn", "43809-person", "68727-wool", "52523-sheep"], "size": 4, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/54.jpg", "response": "Two"}
+{"question_id": 433204004, "occluded": ["52775-shirt", "43809-person", "68727-wool", "52523-sheep"], "size": 4, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/55.jpg", "response": "Two"}
+{"question_id": 433204004, "occluded": ["22222-fabric", "69245-yarn", "52775-shirt", "43809-person", "68727-wool"], "size": 5, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/56.jpg", "response": "Two"}
+{"question_id": 433204004, "occluded": ["22222-fabric", "69245-yarn", "52775-shirt", "43809-person", "52523-sheep"], "size": 5, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/57.jpg", "response": "Two"}
+{"question_id": 433204004, "occluded": ["22222-fabric", "69245-yarn", "52775-shirt", "68727-wool", "52523-sheep"], "size": 5, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/58.jpg", "response": "Three"}
+{"question_id": 433204004, "occluded": ["22222-fabric", "69245-yarn", "43809-person", "68727-wool", "52523-sheep"], "size": 5, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/59.jpg", "response": "Two"}
+{"question_id": 433204004, "occluded": ["22222-fabric", "52775-shirt", "43809-person", "68727-wool", "52523-sheep"], "size": 5, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/60.jpg", "response": "Two"}
+{"question_id": 433204004, "occluded": ["69245-yarn", "52775-shirt", "43809-person", "68727-wool", "52523-sheep"], "size": 5, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/61.jpg", "response": "Two"}
+{"question_id": 433204004, "occluded": ["22222-fabric", "69245-yarn", "52775-shirt", "43809-person", "68727-wool", "52523-sheep"], "size": 6, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_433204004_i_433204/62.jpg", "response": "Two"}
 {"question_id": 563775002, "occluded": ["44078-phone"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_563775002_i_563775/0.jpg", "response": "Two"}
 {"question_id": 563775002, "occluded": ["43809-person"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_563775002_i_563775/1.jpg", "response": "One"}
 {"question_id": 563775002, "occluded": ["44078-phone", "43809-person"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_563775002_i_563775/2.jpg", "response": "One"}
@@ -277,42 +349,58 @@
 {"question_id": 50100017, "occluded": ["26931-grass"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_50100017_i_50100/1.jpg", "response": "Many"}
 {"question_id": 50100017, "occluded": ["43809-person", "26931-grass"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_50100017_i_50100/2.jpg", "response": "Many"}
 {"question_id": 17869002, "occluded": ["43809-person"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_17869002_i_17869/0.jpg", "response": "Six"}
-{"question_id": 17869002, "occluded": ["51582-screen"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_17869002_i_17869/1.jpg", "response": "0"}
-{"question_id": 17869002, "occluded": ["43809-person", "51582-screen"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_17869002_i_17869/2.jpg", "response": "0"}
+{"question_id": 17869002, "occluded": ["44078-phone"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_17869002_i_17869/1.jpg", "response": "Six"}
+{"question_id": 17869002, "occluded": ["51582-screen"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_17869002_i_17869/2.jpg", "response": "10"}
+{"question_id": 17869002, "occluded": ["43809-person", "44078-phone"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_17869002_i_17869/3.jpg", "response": "Six"}
+{"question_id": 17869002, "occluded": ["43809-person", "51582-screen"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_17869002_i_17869/4.jpg", "response": "10"}
+{"question_id": 17869002, "occluded": ["44078-phone", "51582-screen"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_17869002_i_17869/5.jpg", "response": "0"}
+{"question_id": 17869002, "occluded": ["43809-person", "44078-phone", "51582-screen"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_17869002_i_17869/6.jpg", "response": "0"}
 {"question_id": 50926004, "occluded": ["44078-phone"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_50926004_i_50926/0.jpg", "response": "Three"}
 {"question_id": 50926004, "occluded": ["43809-person"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_50926004_i_50926/1.jpg", "response": "Three"}
 {"question_id": 50926004, "occluded": ["44078-phone", "43809-person"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_50926004_i_50926/2.jpg", "response": "Two"}
 {"question_id": 474608001, "occluded": ["43809-person"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_474608001_i_474608/0.jpg", "response": "One"}
 {"question_id": 474608001, "occluded": ["37990-microphone"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_474608001_i_474608/1.jpg", "response": "Two"}
-{"question_id": 474608001, "occluded": ["56932-stand"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_474608001_i_474608/2.jpg", "response": "One"}
+{"question_id": 474608001, "occluded": ["56932-stand"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_474608001_i_474608/2.jpg", "response": "One."}
 {"question_id": 474608001, "occluded": ["43809-person", "37990-microphone"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_474608001_i_474608/3.jpg", "response": "One"}
 {"question_id": 474608001, "occluded": ["43809-person", "56932-stand"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_474608001_i_474608/4.jpg", "response": "One"}
 {"question_id": 474608001, "occluded": ["37990-microphone", "56932-stand"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_474608001_i_474608/5.jpg", "response": "Two"}
 {"question_id": 474608001, "occluded": ["43809-person", "37990-microphone", "56932-stand"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_474608001_i_474608/6.jpg", "response": "One"}
 {"question_id": 526394000, "occluded": ["51582-screen"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_526394000_i_526394/0.jpg", "response": "Three"}
-{"question_id": 526394000, "occluded": ["43809-person"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_526394000_i_526394/1.jpg", "response": "0"}
-{"question_id": 526394000, "occluded": ["51582-screen", "43809-person"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_526394000_i_526394/2.jpg", "response": "0"}
+{"question_id": 526394000, "occluded": ["31448-image"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_526394000_i_526394/1.jpg", "response": "Three"}
+{"question_id": 526394000, "occluded": ["43809-person"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_526394000_i_526394/2.jpg", "response": "Three"}
+{"question_id": 526394000, "occluded": ["44078-phone"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_526394000_i_526394/3.jpg", "response": "Two"}
+{"question_id": 526394000, "occluded": ["51582-screen", "31448-image"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_526394000_i_526394/4.jpg", "response": "Three"}
+{"question_id": 526394000, "occluded": ["51582-screen", "43809-person"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_526394000_i_526394/5.jpg", "response": "Three"}
+{"question_id": 526394000, "occluded": ["51582-screen", "44078-phone"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_526394000_i_526394/6.jpg", "response": "Two"}
+{"question_id": 526394000, "occluded": ["31448-image", "43809-person"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_526394000_i_526394/7.jpg", "response": "Three"}
+{"question_id": 526394000, "occluded": ["31448-image", "44078-phone"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_526394000_i_526394/8.jpg", "response": "Two"}
+{"question_id": 526394000, "occluded": ["43809-person", "44078-phone"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_526394000_i_526394/9.jpg", "response": "Two"}
+{"question_id": 526394000, "occluded": ["51582-screen", "31448-image", "43809-person"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_526394000_i_526394/10.jpg", "response": "Three"}
+{"question_id": 526394000, "occluded": ["51582-screen", "31448-image", "44078-phone"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_526394000_i_526394/11.jpg", "response": "Two"}
+{"question_id": 526394000, "occluded": ["51582-screen", "43809-person", "44078-phone"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_526394000_i_526394/12.jpg", "response": "Two"}
+{"question_id": 526394000, "occluded": ["31448-image", "43809-person", "44078-phone"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_526394000_i_526394/13.jpg", "response": "Two"}
+{"question_id": 526394000, "occluded": ["51582-screen", "31448-image", "43809-person", "44078-phone"], "size": 4, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_526394000_i_526394/14.jpg", "response": "Two"}
 {"question_id": 224757004, "occluded": ["43809-person"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_224757004_i_224757/0.jpg", "response": "8"}
-{"question_id": 224757004, "occluded": ["40457-object"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_224757004_i_224757/1.jpg", "response": "0"}
-{"question_id": 224757004, "occluded": ["43809-person", "40457-object"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_224757004_i_224757/2.jpg", "response": "0"}
+{"question_id": 224757004, "occluded": ["40457-object"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_224757004_i_224757/1.jpg", "response": "Nine"}
+{"question_id": 224757004, "occluded": ["43809-person", "40457-object"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_224757004_i_224757/2.jpg", "response": "8"}
 {"question_id": 2613006, "occluded": ["44078-phone"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_2613006_i_2613/0.jpg", "response": "0"}
 {"question_id": 2613006, "occluded": ["43809-person"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_2613006_i_2613/1.jpg", "response": "1"}
-{"question_id": 2613006, "occluded": ["44078-phone", "43809-person"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_2613006_i_2613/2.jpg", "response": "1"}
-{"question_id": 161231000, "occluded": ["43809-person"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_161231000_i_161231/0.jpg", "response": "Two"}
-{"question_id": 161231000, "occluded": ["44078-phone"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_161231000_i_161231/1.jpg", "response": "Four"}
-{"question_id": 161231000, "occluded": ["64842-wall"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_161231000_i_161231/2.jpg", "response": "Four"}
-{"question_id": 161231000, "occluded": ["31995-jacket"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_161231000_i_161231/3.jpg", "response": "Four"}
-{"question_id": 161231000, "occluded": ["43809-person", "44078-phone"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_161231000_i_161231/4.jpg", "response": "Two"}
-{"question_id": 161231000, "occluded": ["43809-person", "64842-wall"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_161231000_i_161231/5.jpg", "response": "Three"}
-{"question_id": 161231000, "occluded": ["43809-person", "31995-jacket"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_161231000_i_161231/6.jpg", "response": "Two"}
-{"question_id": 161231000, "occluded": ["44078-phone", "64842-wall"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_161231000_i_161231/7.jpg", "response": "Four"}
-{"question_id": 161231000, "occluded": ["44078-phone", "31995-jacket"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_161231000_i_161231/8.jpg", "response": "Four"}
-{"question_id": 161231000, "occluded": ["64842-wall", "31995-jacket"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_161231000_i_161231/9.jpg", "response": "Four"}
-{"question_id": 161231000, "occluded": ["43809-person", "44078-phone", "64842-wall"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_161231000_i_161231/10.jpg", "response": "Three"}
-{"question_id": 161231000, "occluded": ["43809-person", "44078-phone", "31995-jacket"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_161231000_i_161231/11.jpg", "response": "Two"}
-{"question_id": 161231000, "occluded": ["43809-person", "64842-wall", "31995-jacket"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_161231000_i_161231/12.jpg", "response": "Three"}
-{"question_id": 161231000, "occluded": ["44078-phone", "64842-wall", "31995-jacket"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_161231000_i_161231/13.jpg", "response": "Four"}
-{"question_id": 161231000, "occluded": ["43809-person", "44078-phone", "64842-wall", "31995-jacket"], "size": 4, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_161231000_i_161231/14.jpg", "response": "Three"}
+{"question_id": 2613006, "occluded": ["44078-phone", "43809-person"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_2613006_i_2613/2.jpg", "response": "0"}
+{"question_id": 161231000, "occluded": ["43809-person"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_161231000_i_161231/0.jpg", "response": "Four"}
+{"question_id": 161231000, "occluded": ["44078-phone"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_161231000_i_161231/1.jpg", "response": "Three"}
+{"question_id": 161231000, "occluded": ["64842-wall"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_161231000_i_161231/2.jpg", "response": "Three"}
+{"question_id": 161231000, "occluded": ["31995-jacket"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_161231000_i_161231/3.jpg", "response": "Three"}
+{"question_id": 161231000, "occluded": ["43809-person", "44078-phone"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_161231000_i_161231/4.jpg", "response": "Four"}
+{"question_id": 161231000, "occluded": ["43809-person", "64842-wall"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_161231000_i_161231/5.jpg", "response": "Four"}
+{"question_id": 161231000, "occluded": ["43809-person", "31995-jacket"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_161231000_i_161231/6.jpg", "response": "Four"}
+{"question_id": 161231000, "occluded": ["44078-phone", "64842-wall"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_161231000_i_161231/7.jpg", "response": "Three"}
+{"question_id": 161231000, "occluded": ["44078-phone", "31995-jacket"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_161231000_i_161231/8.jpg", "response": "Three"}
+{"question_id": 161231000, "occluded": ["64842-wall", "31995-jacket"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_161231000_i_161231/9.jpg", "response": "Three"}
+{"question_id": 161231000, "occluded": ["43809-person", "44078-phone", "64842-wall"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_161231000_i_161231/10.jpg", "response": "Two"}
+{"question_id": 161231000, "occluded": ["43809-person", "44078-phone", "31995-jacket"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_161231000_i_161231/11.jpg", "response": "Four"}
+{"question_id": 161231000, "occluded": ["43809-person", "64842-wall", "31995-jacket"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_161231000_i_161231/12.jpg", "response": "Four"}
+{"question_id": 161231000, "occluded": ["44078-phone", "64842-wall", "31995-jacket"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_161231000_i_161231/13.jpg", "response": "Two"}
+{"question_id": 161231000, "occluded": ["43809-person", "44078-phone", "64842-wall", "31995-jacket"], "size": 4, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_161231000_i_161231/14.jpg", "response": "Two"}
 {"question_id": 147179001, "occluded": ["43809-person"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_147179001_i_147179/0.jpg", "response": "1"}
 {"question_id": 147179001, "occluded": ["9107-bracelet"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_147179001_i_147179/1.jpg", "response": "Two"}
 {"question_id": 147179001, "occluded": ["44078-phone"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_147179001_i_147179/2.jpg", "response": "Three"}
@@ -350,18 +438,18 @@
 {"question_id": 471893002, "occluded": ["28784-ground"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_471893002_i_471893/3.jpg", "response": "1"}
 {"question_id": 471893002, "occluded": ["43809-person", "new-pants"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_471893002_i_471893/4.jpg", "response": "2"}
 {"question_id": 471893002, "occluded": ["43809-person", "52775-shirt"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_471893002_i_471893/5.jpg", "response": "2"}
-{"question_id": 471893002, "occluded": ["43809-person", "28784-ground"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_471893002_i_471893/6.jpg", "response": "2"}
+{"question_id": 471893002, "occluded": ["43809-person", "28784-ground"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_471893002_i_471893/6.jpg", "response": "1"}
 {"question_id": 471893002, "occluded": ["new-pants", "52775-shirt"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_471893002_i_471893/7.jpg", "response": "1"}
 {"question_id": 471893002, "occluded": ["new-pants", "28784-ground"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_471893002_i_471893/8.jpg", "response": "1"}
 {"question_id": 471893002, "occluded": ["52775-shirt", "28784-ground"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_471893002_i_471893/9.jpg", "response": "1"}
 {"question_id": 471893002, "occluded": ["43809-person", "new-pants", "52775-shirt"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_471893002_i_471893/10.jpg", "response": "2"}
-{"question_id": 471893002, "occluded": ["43809-person", "new-pants", "28784-ground"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_471893002_i_471893/11.jpg", "response": "2"}
+{"question_id": 471893002, "occluded": ["43809-person", "new-pants", "28784-ground"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_471893002_i_471893/11.jpg", "response": "1"}
 {"question_id": 471893002, "occluded": ["43809-person", "52775-shirt", "28784-ground"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_471893002_i_471893/12.jpg", "response": "2"}
 {"question_id": 471893002, "occluded": ["new-pants", "52775-shirt", "28784-ground"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_471893002_i_471893/13.jpg", "response": "1"}
-{"question_id": 471893002, "occluded": ["43809-person", "new-pants", "52775-shirt", "28784-ground"], "size": 4, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_471893002_i_471893/14.jpg", "response": "2"}
-{"question_id": 522727001, "occluded": ["44078-phone"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_522727001_i_522727/0.jpg", "response": "Three"}
+{"question_id": 471893002, "occluded": ["43809-person", "new-pants", "52775-shirt", "28784-ground"], "size": 4, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_471893002_i_471893/14.jpg", "response": "1"}
+{"question_id": 522727001, "occluded": ["44078-phone"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_522727001_i_522727/0.jpg", "response": "One"}
 {"question_id": 522727001, "occluded": ["43809-person"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_522727001_i_522727/1.jpg", "response": "Two"}
-{"question_id": 522727001, "occluded": ["44078-phone", "43809-person"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_522727001_i_522727/2.jpg", "response": "Two"}
+{"question_id": 522727001, "occluded": ["44078-phone", "43809-person"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_522727001_i_522727/2.jpg", "response": "0"}
 {"question_id": 473299002, "occluded": ["44078-phone"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_473299002_i_473299/0.jpg", "response": "Two"}
 {"question_id": 473299002, "occluded": ["43809-person"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_473299002_i_473299/1.jpg", "response": "One"}
 {"question_id": 473299002, "occluded": ["44078-phone", "43809-person"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_473299002_i_473299/2.jpg", "response": "1"}
@@ -583,11 +671,11 @@
 {"question_id": 249883001, "occluded": ["54192-skateboarder", "54155-skateboard", "54200-skateboarding"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_249883001_i_249883/6.jpg", "response": "Walking"}
 {"question_id": 69965002, "occluded": ["58673-surfboard"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_69965002_i_69965/0.jpg", "response": "surfboard"}
 {"question_id": 69965002, "occluded": ["43809-person"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_69965002_i_69965/1.jpg", "response": "Surfboard"}
-{"question_id": 69965002, "occluded": ["4528-beach"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_69965002_i_69965/2.jpg", "response": "Surfboard"}
+{"question_id": 69965002, "occluded": ["4528-beach"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_69965002_i_69965/2.jpg", "response": "surfboard"}
 {"question_id": 69965002, "occluded": ["58673-surfboard", "43809-person"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_69965002_i_69965/3.jpg", "response": "Surfboard"}
 {"question_id": 69965002, "occluded": ["58673-surfboard", "4528-beach"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_69965002_i_69965/4.jpg", "response": "surfboard"}
-{"question_id": 69965002, "occluded": ["43809-person", "4528-beach"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_69965002_i_69965/5.jpg", "response": "Surfboard"}
-{"question_id": 69965002, "occluded": ["58673-surfboard", "43809-person", "4528-beach"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_69965002_i_69965/6.jpg", "response": "Surfboard"}
+{"question_id": 69965002, "occluded": ["43809-person", "4528-beach"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_69965002_i_69965/5.jpg", "response": "surfboard"}
+{"question_id": 69965002, "occluded": ["58673-surfboard", "43809-person", "4528-beach"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_69965002_i_69965/6.jpg", "response": "surfboard"}
 {"question_id": 517612002, "occluded": ["54155-skateboard"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_517612002_i_517612/0.jpg", "response": "Pavement"}
 {"question_id": 517612002, "occluded": ["43809-person"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_517612002_i_517612/1.jpg", "response": "Skateboard"}
 {"question_id": 517612002, "occluded": ["54155-skateboard", "43809-person"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_517612002_i_517612/2.jpg", "response": "Pavement"}
@@ -598,7 +686,7 @@
 {"question_id": 163600007, "occluded": ["29310-hand"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_163600007_i_163600/1.jpg", "response": "Holding sign"}
 {"question_id": 163600007, "occluded": ["12201-card", "29310-hand"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_163600007_i_163600/2.jpg", "response": "Brushing teeth."}
 {"question_id": 229889007, "occluded": ["55451-snow"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_229889007_i_229889/0.jpg", "response": "nothing"}
-{"question_id": 229889007, "occluded": ["28784-ground"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_229889007_i_229889/1.jpg", "response": "Ski poles"}
+{"question_id": 229889007, "occluded": ["28784-ground"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_229889007_i_229889/1.jpg", "response": "ski poles"}
 {"question_id": 229889007, "occluded": ["54431-skier"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_229889007_i_229889/2.jpg", "response": "Ski poles."}
 {"question_id": 229889007, "occluded": ["54368-ski poles"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_229889007_i_229889/3.jpg", "response": "Ski poles"}
 {"question_id": 229889007, "occluded": ["55451-snow", "28784-ground"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_229889007_i_229889/4.jpg", "response": "nothing"}
@@ -610,7 +698,7 @@
 {"question_id": 229889007, "occluded": ["55451-snow", "28784-ground", "54431-skier"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_229889007_i_229889/10.jpg", "response": "nothing"}
 {"question_id": 229889007, "occluded": ["55451-snow", "28784-ground", "54368-ski poles"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_229889007_i_229889/11.jpg", "response": "nothing"}
 {"question_id": 229889007, "occluded": ["55451-snow", "54431-skier", "54368-ski poles"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_229889007_i_229889/12.jpg", "response": "nothing"}
-{"question_id": 229889007, "occluded": ["28784-ground", "54431-skier", "54368-ski poles"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_229889007_i_229889/13.jpg", "response": "Ski poles."}
+{"question_id": 229889007, "occluded": ["28784-ground", "54431-skier", "54368-ski poles"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_229889007_i_229889/13.jpg", "response": "Snowboard"}
 {"question_id": 229889007, "occluded": ["55451-snow", "28784-ground", "54431-skier", "54368-ski poles"], "size": 4, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_229889007_i_229889/14.jpg", "response": "nothing"}
 {"question_id": 391375002, "occluded": ["13276-chair"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_391375002_i_391375/0.jpg", "response": "Standing"}
 {"question_id": 391375002, "occluded": ["3248-backrest"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_391375002_i_391375/1.jpg", "response": "Standing"}
@@ -630,8 +718,20 @@
 {"question_id": 526371000, "occluded": ["29750-hat"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_526371000_i_526371/1.jpg", "response": "Hat"}
 {"question_id": 526371000, "occluded": ["43809-person", "29750-hat"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_526371000_i_526371/2.jpg", "response": "Hat"}
 {"question_id": 322194006, "occluded": ["54593-sky"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_322194006_i_322194/0.jpg", "response": "Water"}
-{"question_id": 322194006, "occluded": ["49754-river"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_322194006_i_322194/1.jpg", "response": "Water"}
-{"question_id": 322194006, "occluded": ["54593-sky", "49754-river"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_322194006_i_322194/2.jpg", "response": "Trees"}
+{"question_id": 322194006, "occluded": ["new-clouds"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_322194006_i_322194/1.jpg", "response": "Trees"}
+{"question_id": 322194006, "occluded": ["65157-water"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_322194006_i_322194/2.jpg", "response": "Trees"}
+{"question_id": 322194006, "occluded": ["49754-river"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_322194006_i_322194/3.jpg", "response": "Water"}
+{"question_id": 322194006, "occluded": ["54593-sky", "new-clouds"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_322194006_i_322194/4.jpg", "response": "Trees"}
+{"question_id": 322194006, "occluded": ["54593-sky", "65157-water"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_322194006_i_322194/5.jpg", "response": "Trees"}
+{"question_id": 322194006, "occluded": ["54593-sky", "49754-river"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_322194006_i_322194/6.jpg", "response": "Water"}
+{"question_id": 322194006, "occluded": ["new-clouds", "65157-water"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_322194006_i_322194/7.jpg", "response": "Water"}
+{"question_id": 322194006, "occluded": ["new-clouds", "49754-river"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_322194006_i_322194/8.jpg", "response": "Water"}
+{"question_id": 322194006, "occluded": ["65157-water", "49754-river"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_322194006_i_322194/9.jpg", "response": "Water"}
+{"question_id": 322194006, "occluded": ["54593-sky", "new-clouds", "65157-water"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_322194006_i_322194/10.jpg", "response": "Water"}
+{"question_id": 322194006, "occluded": ["54593-sky", "new-clouds", "49754-river"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_322194006_i_322194/11.jpg", "response": "Water"}
+{"question_id": 322194006, "occluded": ["54593-sky", "65157-water", "49754-river"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_322194006_i_322194/12.jpg", "response": "Water"}
+{"question_id": 322194006, "occluded": ["new-clouds", "65157-water", "49754-river"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_322194006_i_322194/13.jpg", "response": "Trees"}
+{"question_id": 322194006, "occluded": ["54593-sky", "new-clouds", "65157-water", "49754-river"], "size": 4, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_322194006_i_322194/14.jpg", "response": "Trees"}
 {"question_id": 33005004, "occluded": ["43809-person"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_33005004_i_33005/0.jpg", "response": "Tennis racket"}
 {"question_id": 33005004, "occluded": ["28784-ground"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_33005004_i_33005/1.jpg", "response": "Tennis racket"}
 {"question_id": 33005004, "occluded": ["47366-racket"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_33005004_i_33005/2.jpg", "response": "Tennis racket"}
@@ -684,17 +784,17 @@
 {"question_id": 85584001, "occluded": ["32758-kite"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_85584001_i_85584/0.jpg", "response": "Kitesurfing"}
 {"question_id": 85584001, "occluded": ["32801-kiteboarder"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_85584001_i_85584/1.jpg", "response": "Kitesurfing"}
 {"question_id": 85584001, "occluded": ["62559-trick"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_85584001_i_85584/2.jpg", "response": "Kitesurfing"}
-{"question_id": 85584001, "occluded": ["8163-board"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_85584001_i_85584/3.jpg", "response": "Kitesurfing"}
+{"question_id": 85584001, "occluded": ["8163-board"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_85584001_i_85584/3.jpg", "response": "Surfing"}
 {"question_id": 85584001, "occluded": ["32758-kite", "32801-kiteboarder"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_85584001_i_85584/4.jpg", "response": "Kitesurfing"}
-{"question_id": 85584001, "occluded": ["32758-kite", "62559-trick"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_85584001_i_85584/5.jpg", "response": "Surfing"}
-{"question_id": 85584001, "occluded": ["32758-kite", "8163-board"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_85584001_i_85584/6.jpg", "response": "Kitesurfing"}
+{"question_id": 85584001, "occluded": ["32758-kite", "62559-trick"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_85584001_i_85584/5.jpg", "response": "Kitesurfing"}
+{"question_id": 85584001, "occluded": ["32758-kite", "8163-board"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_85584001_i_85584/6.jpg", "response": "Surfing"}
 {"question_id": 85584001, "occluded": ["32801-kiteboarder", "62559-trick"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_85584001_i_85584/7.jpg", "response": "Kitesurfing"}
-{"question_id": 85584001, "occluded": ["32801-kiteboarder", "8163-board"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_85584001_i_85584/8.jpg", "response": "Kitesurfing"}
-{"question_id": 85584001, "occluded": ["62559-trick", "8163-board"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_85584001_i_85584/9.jpg", "response": "Kitesurfing"}
-{"question_id": 85584001, "occluded": ["32758-kite", "32801-kiteboarder", "62559-trick"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_85584001_i_85584/10.jpg", "response": "Surfing"}
-{"question_id": 85584001, "occluded": ["32758-kite", "32801-kiteboarder", "8163-board"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_85584001_i_85584/11.jpg", "response": "Kitesurfing"}
+{"question_id": 85584001, "occluded": ["32801-kiteboarder", "8163-board"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_85584001_i_85584/8.jpg", "response": "Surfing"}
+{"question_id": 85584001, "occluded": ["62559-trick", "8163-board"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_85584001_i_85584/9.jpg", "response": "Surfing"}
+{"question_id": 85584001, "occluded": ["32758-kite", "32801-kiteboarder", "62559-trick"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_85584001_i_85584/10.jpg", "response": "Kitesurfing"}
+{"question_id": 85584001, "occluded": ["32758-kite", "32801-kiteboarder", "8163-board"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_85584001_i_85584/11.jpg", "response": "Surfing"}
 {"question_id": 85584001, "occluded": ["32758-kite", "62559-trick", "8163-board"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_85584001_i_85584/12.jpg", "response": "Surfing"}
-{"question_id": 85584001, "occluded": ["32801-kiteboarder", "62559-trick", "8163-board"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_85584001_i_85584/13.jpg", "response": "Kitesurfing"}
+{"question_id": 85584001, "occluded": ["32801-kiteboarder", "62559-trick", "8163-board"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_85584001_i_85584/13.jpg", "response": "Surfing"}
 {"question_id": 85584001, "occluded": ["32758-kite", "32801-kiteboarder", "62559-trick", "8163-board"], "size": 4, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_85584001_i_85584/14.jpg", "response": "Surfing"}
 {"question_id": 539386000, "occluded": ["50302-rope"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_539386000_i_539386/0.jpg", "response": "Paddle"}
 {"question_id": 539386000, "occluded": ["40457-object"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_539386000_i_539386/1.jpg", "response": "Rope"}
@@ -744,7 +844,7 @@
 {"question_id": 232692003, "occluded": ["54431-skier"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_232692003_i_232692/0.jpg", "response": "Water skiing"}
 {"question_id": 232692003, "occluded": ["65157-water"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_232692003_i_232692/1.jpg", "response": "Water skiing"}
 {"question_id": 232692003, "occluded": ["33184-lake"], "size": 1, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_232692003_i_232692/2.jpg", "response": "Water skiing"}
-{"question_id": 232692003, "occluded": ["54431-skier", "65157-water"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_232692003_i_232692/3.jpg", "response": "Fishing"}
+{"question_id": 232692003, "occluded": ["54431-skier", "65157-water"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_232692003_i_232692/3.jpg", "response": "Water skiing"}
 {"question_id": 232692003, "occluded": ["54431-skier", "33184-lake"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_232692003_i_232692/4.jpg", "response": "Water skiing"}
 {"question_id": 232692003, "occluded": ["65157-water", "33184-lake"], "size": 2, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_232692003_i_232692/5.jpg", "response": "Water skiing"}
 {"question_id": 232692003, "occluded": ["54431-skier", "65157-water", "33184-lake"], "size": 3, "path": "causal_effects/imgs_occluded/qwen2_5_vl/vqav2/q_232692003_i_232692/6.jpg", "response": "Fishing"}
