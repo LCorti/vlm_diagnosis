@@ -117,9 +117,9 @@ def rk_to_nx(raw_rk_rels: dict) -> nx.DiGraph:
     nx_graph = nx.DiGraph()
     for rk in raw_rk_rels:
         rk_triple = {
-            "from_concept": rk["from_concept"]["bb_label"]["bb_label_full"],
+            "from_concept": rk["from_concept"]["bb_label"]["bb_label_text"],
             "relationship": rk["rel_label"]["rel_label_text"],
-            "to_concept": rk["to_concept"]["bb_label"]["bb_label_full"],
+            "to_concept": rk["to_concept"]["bb_label"]["bb_label_text"],
         }
         nx_graph = add_to_graph(nx_graph, rk_triple)
 
