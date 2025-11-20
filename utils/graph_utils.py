@@ -113,14 +113,18 @@ def sk_to_nx(raw_sk_rels: list) -> nx.DiGraph:
     return nx_graph
 
 
-def rk_to_nx(raw_rk_rels: dict) -> nx.DiGraph:
+def rk_to_nx(raw_rk_rels: dict, return_full=False) -> nx.DiGraph:
     nx_graph = nx.DiGraph()
     for rk in raw_rk_rels:
         rk_triple = {
-            "from_concept": rk["from_concept"]["bb_label"]["bb_label_text"],
             "relationship": rk["rel_label"]["rel_label_text"],
-            "to_concept": rk["to_concept"]["bb_label"]["bb_label_text"],
         }
+        if return_full:
+            rk_triple["from_concept"] = rk["from_concept"]["bb_label"]["bb_label_full"]
+            rk_triple["to_concept"] = rk["to_concept"]["bb_label"]["bb_label_full"]
+        else:
+            rk_triple["from_concept"] = rk["from_concept"]["bb_label"]["bb_label_text"]
+            rk_triple["to_concept"] = rk["to_concept"]["bb_label"]["bb_label_text"]
         nx_graph = add_to_graph(nx_graph, rk_triple)
 
     # Removing self loops for causal analysis

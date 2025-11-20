@@ -91,7 +91,9 @@ def make_nx_graphs(resps):
     graphs = {}
     for r in resps:
         print(f"Processing sample id: {r['question_id']}")
-        graphs[r["question_id"]] = graph_utils.rk_to_nx(r["triple_objs"])
+        graphs[r["question_id"]] = graph_utils.rk_to_nx(
+            r["triple_objs"], return_full=True
+        )
         print("-" * 40)
     return graphs
 
