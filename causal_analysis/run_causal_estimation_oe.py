@@ -400,10 +400,14 @@ if __name__ == "__main__":
 
     df = pd.DataFrame(all_resps)
     df.drop(["path"], axis=1, inplace=True)
+    # Force question_id column type to string
+    df["question_id"] = df["question_id"].map(str)
     df["response"] = df["response"].apply(lambda x: x.lower())
 
     max_triplets = {
-        q_idx: max([int(q["size"]) for q in all_resps if q["question_id"] == q_idx])
+        str(q_idx): max(
+            [int(q["size"]) for q in all_resps if q["question_id"] == q_idx]
+        )
         for q_idx in resps_ids
     }
     # This is done to extract an actual list of concepts, not any other PD objects.
@@ -417,7 +421,7 @@ if __name__ == "__main__":
     # Make dictionary of dataframes w.r.t. question id
     file_name = Path(f"df_dict_{MODEL}_{DATASET}.pkl")  # Creating this for later
     df_dict = {
-        str(q_idx): df[df["question_id"] == q_idx] for q_idx in dict_counter_resp
+        str(q_idx): df[df["question_id"] == str(q_idx)] for q_idx in dict_counter_resp
     }
 
     # Taking the list of occluded concepts and splitting it
@@ -434,34 +438,44 @@ if __name__ == "__main__":
     print("Finish setting up df_dict.")
     spacy_model_name = "en_core_web_trf"
     print(f"Loading spaCy model: {spacy_model_name}...")
-    nlp = load_spacy(spacy_model_name)
+    to_exclude = ["ner", "parser"]  # do not load NER and dependency parsing modules
+    nlp = load_spacy(spacy_model_name, exclude=to_exclude)
+
+    """Only use the nouns that are present in the original response to do estimation."""
 
     # Prepare columns with nouns extracted from the responses
-    unique_nouns = {}
+    unique_counter = {}
+    unique_og = {}
     for q_idx, q_df in df_dict.items():
-        # Parse all responses
+        # Parse original response (i.e., the non-counterfactual one) separately
         q_nouns = {}
         for idx in q_df.index.tolist():
-            q_nouns[idx] = get_nouns(nlp(q_df.loc[idx]["response"]), return_dict=False)
+            size = q_df.loc[idx]["size"]
+            # These are lemmas already
+            nouns = get_nouns(nlp(q_df.loc[idx]["response"]), return_dict=False)
+            if size == 0:
+                unique_og[q_idx] = list(set(nouns))
+            else:
+                q_nouns[idx] = nouns
 
-        # Merge all list of nouns are reduce to a single set
-        unique = set(elem for curr in q_nouns.values() for elem in curr)
-        # Remove from the unique nouns the ones that are mentioned in the RKs.
-        # Otherwise, a concept (variable) is used to estimate itself (i.e., as outcome)
-        clean_concepts = ["-".join(e.split("-")[1:]) for e in dict_concepts[q_idx]]
-        lemma_concepts = set(
-            [token.lemma_ for cc in clean_concepts for token in nlp(cc)]
+        # Merge all lists of nouns from counterfatuals to a single set
+        unique_counter[q_idx] = list(
+            set(elem for curr in q_nouns.values() for elem in curr)
         )
-        unique_nouns[q_idx] = list(unique.difference(lemma_concepts))
 
-        # Add binary columns for each noun found in the response. Initialise with 1s.
-        for noun in unique_nouns[q_idx]:
+        # Add binary columns for each noun found in the OG response. Initialise with 1s.
+        for noun in unique_og[q_idx]:
             q_df[f"y_{noun}"] = 1
-        for id, row in q_df.iterrows():
-            for noun in unique_nouns[q_idx]:
-                if noun not in q_nouns[id]:
-                    q_df.loc[id, f"y_{noun}"] = 0
-        print(f"Handled question w/ id: {q_idx} -> {len(q_df)} rows")
+
+        # Iterate over the rows and if a column is not included in the list
+        for row_id in q_df.index:
+            for noun in unique_og[q_idx]:
+                if noun not in unique_counter[q_idx]:
+                    q_df.loc[row_id, f"y_{noun}"] = 0
+
+        print(
+            f"Handled question: {q_idx} -> {q_df.shape[0]} rows x {q_df.shape[1]} cols."
+        )
 
     print("Completed creation of df_dict. Saving copy to disk...")
     pd.to_pickle(df_dict, file_name)
@@ -482,7 +496,7 @@ if __name__ == "__main__":
     exp_rk_graphs = {}
     for rk_idx, rk_g in rk_graphs.items():
         exp_rk_graphs[rk_idx] = {}
-        for noun in unique_nouns[rk_idx]:
+        for noun in unique_og[rk_idx]:
             exp_rk_graphs[rk_idx][f"y_{noun}"] = copy.deepcopy(rk_g)
             exp_rk_graphs[rk_idx][f"y_{noun}"].add_node(f"y_{noun}", label=f"y_{noun}")
 
@@ -538,7 +552,6 @@ if __name__ == "__main__":
                 confidence_intervals=CONF_INTERVALS,
                 std_error=OUTPUT_STDERR,
             )
-
         # Still save data after every sample is done
         data_io.append_to_jsonl([out_data], causal_out_path)
 
