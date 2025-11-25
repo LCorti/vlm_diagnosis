@@ -448,20 +448,14 @@ if __name__ == "__main__":
     unique_og = {}
     for q_idx, q_df in df_dict.items():
         # Parse original response (i.e., the non-counterfactual one) separately
-        q_nouns = {}
+        unique_counter[q_idx] = {}
         for idx in q_df.index.tolist():
             size = q_df.loc[idx]["size"]
             # These are lemmas already
             nouns = get_nouns(nlp(q_df.loc[idx]["response"]), return_dict=False)
+            unique_counter[q_idx][idx] = list(set(nouns))
             if size == 0:
                 unique_og[q_idx] = list(set(nouns))
-            else:
-                q_nouns[idx] = nouns
-
-        # Merge all lists of nouns from counterfatuals to a single set
-        unique_counter[q_idx] = list(
-            set(elem for curr in q_nouns.values() for elem in curr)
-        )
 
         # Add binary columns for each noun found in the OG response. Initialise with 1s.
         for noun in unique_og[q_idx]:
@@ -470,7 +464,7 @@ if __name__ == "__main__":
         # Iterate over the rows and if a column is not included in the list
         for row_id in q_df.index:
             for noun in unique_og[q_idx]:
-                if noun not in unique_counter[q_idx]:
+                if noun not in unique_counter[q_idx][row_id]:
                     q_df.loc[row_id, f"y_{noun}"] = 0
 
         print(
