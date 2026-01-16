@@ -424,10 +424,14 @@ def plot_similarity(
     plt.close()
 
 
-def plot_behaviour_counts(data, out_path, to_skip=None) -> None:
+def plot_triple_behaviours(data, out_path, to_skip=None) -> None:
     _, axes = plt.subplots(1, 3, sharey=True, layout="constrained", figsize=(15, 4))
 
-    type_map = {1: "Type 1 Behaviours", 2: "Type 2 Behaviours", 3: "Type 3 Behaviours"}
+    type_map = {
+        1: "Aligned Behaviours",
+        2: "Expanded Behaviours",
+        3: "Divergent Behaviours",
+    }
 
     width = 0.2
     # Compute max value to scale y nicely
@@ -437,12 +441,13 @@ def plot_behaviour_counts(data, out_path, to_skip=None) -> None:
     max_y = max(vals_list) + 60
 
     if to_skip:
-        if to_skip in MODEL_MAP:
-            models = MODEL_MAP.copy()
-            models.pop(to_skip)
-            print(f"Skipping data for {to_skip}")
-        else:
-            print(f"Did not find {to_skip} in MODEL_MAP: {MODEL_MAP}")
+        for ts in to_skip:
+            if ts in MODEL_MAP:
+                models = MODEL_MAP.copy()
+                models.pop(ts)
+                print(f"Skipping data for {ts}")
+            else:
+                print(f"Did not find {ts} in MODEL_MAP: {MODEL_MAP}")
     else:
         models = MODEL_MAP.copy()
 
@@ -470,7 +475,7 @@ def plot_behaviour_counts(data, out_path, to_skip=None) -> None:
         ax.set_xticks(x + width * 1.5, list(models.values()))
 
     ax.legend(list(DS_MAP.values()), loc="upper right", ncol=1)
-    axes[0].set_ylabel("N. Samples per Behaviour Type")
+    axes[0].set_ylabel("N. Triples")
 
     plt.tight_layout()
     plt.savefig(out_path)
