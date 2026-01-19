@@ -25,6 +25,25 @@ MODEL_MAP = {
     "sharegpt4v": "ShareGPT4V",
 }
 
+COLOR_MAP = {
+    "llava-bench": "#DC602E",
+    "mmbench": "#D7B49E",
+    "seed": "#B8D5B8",
+    "vqav2": "#05A8AA",
+}
+
+COLOR_LIST = [
+    "#DC602E",  # llava-bench
+    "#D7B49E",  # mmbench
+    "#B8D5B8",  # seed
+    "#05A8AA",  # vqav2
+]
+
+CROWD_COLOR_MAP = {
+    "concept": ["#b27795", "#c18750", "#7f9a46"],
+    "relation": ["#2291a2", "#e0a2a3", "#d8d330"],
+}
+
 # -- -- -- -- -- -- -- -- -- -- -- --
 # Individual charts
 # -- -- -- -- -- -- -- -- -- -- -- --
@@ -103,15 +122,16 @@ def plot_concepts_vs_relations(sample_stats_df: pd.DataFrame, output_path: str) 
 
 def set_custom_patch_sk(b_plot: plt.boxplot, color_key: str = "concept") -> None:
     # Palette taken from https://venngage.com/tools/accessible-color-palette-generator
-    color_map = {
-        "concept": ["#b27795", "#c18750", "#7f9a46"],
-        "relation": ["#2291a2", "#e0a2a3", "#d8d330"],
-    }
-    hatches = ["...", "///", "xxx"]
+    # hatch_density = 2
+    # hatches = [
+    #     "." * hatch_density,
+    #     "/" * hatch_density,
+    #     "x" * hatch_density,
+    # ]
 
     for idx_col, patch in enumerate(b_plot["boxes"]):
-        patch.set(facecolor=color_map[color_key][idx_col])
-        patch.set(hatch=hatches[idx_col])
+        patch.set(facecolor=CROWD_COLOR_MAP[color_key][idx_col])
+        # patch.set(hatch=hatches[idx_col])
 
 
 def plot_sk(count_concepts: dict, count_preds: dict, output_path: str | Path) -> None:
@@ -211,12 +231,17 @@ def plot_sk_rels(all_relation_counts: dict, output_path: str | Path) -> None:
 
 def set_custom_patch_rk(b_plot: plt.boxplot) -> None:
     # Palette taken from https://venngage.com/tools/accessible-color-palette-generator
-    color_map = ["#e6a6a3", "#f1c3c2", "#b0d3dc", "#8cbcc7"]
-    hatches = ["...", "///", "xxx", "+++"]
+    # hatch_density = 2
+    # hatches = [
+    #     "." * hatch_density,
+    #     "/" * hatch_density,
+    #     "x" * hatch_density,
+    #     "+" * hatch_density,
+    # ]
 
     for idx_col, patch in enumerate(b_plot["boxes"]):
-        patch.set(facecolor=color_map[idx_col])
-        patch.set(hatch=hatches[idx_col])
+        patch.set(facecolor=COLOR_LIST[idx_col])
+        # patch.set(hatch=hatches[idx_col])
 
 
 def plot_rk(
@@ -339,18 +364,17 @@ def plot_rk_rels(all_relation_counts: dict, output_path: str | Path) -> None:
 
 def set_custom_patch_sim(b_plot: plt.boxplot, pos: int) -> None:
     # Palette taken from https://venngage.com/tools/accessible-color-palette-generator
-    color_map = ["#e6a6a3", "#f1c3c2", "#b0d3dc", "#8cbcc7"]
-    hatch_density = 2
-    hatches = [
-        "." * hatch_density,
-        "/" * hatch_density,
-        "x" * hatch_density,
-        "+" * hatch_density,
-    ]
+    # hatch_density = 2
+    # hatches = [
+    #     "." * hatch_density,
+    #     "/" * hatch_density,
+    #     "x" * hatch_density,
+    #     "+" * hatch_density,
+    # ]
 
     for _, patch in enumerate(b_plot["boxes"]):
-        patch.set(facecolor=color_map[pos - 1])
-        patch.set(hatch=hatches[pos - 1])
+        patch.set(facecolor=COLOR_LIST[pos - 1])
+        # patch.set(hatch=hatches[pos - 1])
 
 
 def plot_similarity(
@@ -400,16 +424,13 @@ def plot_similarity(
     plt.close()
 
 
-def plot_behaviour_counts(data, out_path, to_skip=None) -> None:
+def plot_triple_behaviours(data, out_path, to_skip=None) -> None:
     _, axes = plt.subplots(1, 3, sharey=True, layout="constrained", figsize=(15, 4))
 
-    type_map = {1: "Type 1 Behaviours", 2: "Type 2 Behaviours", 3: "Type 3 Behaviours"}
-
-    color_map = {
-        "llava-bench": "#DC602E",
-        "mmbench": "#D7B49E",
-        "seed": "#B8D5B8",
-        "vqav2": "#05A8AA",
+    type_map = {
+        1: "Aligned Behaviours",
+        2: "Expanded Behaviours",
+        3: "Divergent Behaviours",
     }
 
     width = 0.2
@@ -420,12 +441,13 @@ def plot_behaviour_counts(data, out_path, to_skip=None) -> None:
     max_y = max(vals_list) + 60
 
     if to_skip:
-        if to_skip in MODEL_MAP:
-            models = MODEL_MAP.copy()
-            models.pop(to_skip)
-            print(f"Skipping data for {to_skip}")
-        else:
-            print(f"Did not find {to_skip} in MODEL_MAP: {MODEL_MAP}")
+        for ts in to_skip:
+            if ts in MODEL_MAP:
+                models = MODEL_MAP.copy()
+                models.pop(ts)
+                print(f"Skipping data for {ts}")
+            else:
+                print(f"Did not find {ts} in MODEL_MAP: {MODEL_MAP}")
     else:
         models = MODEL_MAP.copy()
 
@@ -440,7 +462,7 @@ def plot_behaviour_counts(data, out_path, to_skip=None) -> None:
         curr_failure = data[idx + 1]
         for ds, values in curr_failure.items():
             offset = width * multiplier
-            bars = ax.bar(x + offset, values, width, color=color_map[ds], label=ds)
+            bars = ax.bar(x + offset, values, width, color=COLOR_MAP[ds], label=ds)
             ax.bar_label(bars, fontsize=8, padding=3)
 
             # Draw line over group
@@ -453,7 +475,7 @@ def plot_behaviour_counts(data, out_path, to_skip=None) -> None:
         ax.set_xticks(x + width * 1.5, list(models.values()))
 
     ax.legend(list(DS_MAP.values()), loc="upper right", ncol=1)
-    axes[0].set_ylabel("N. Samples per Behaviour Type")
+    axes[0].set_ylabel("N. Triples")
 
     plt.tight_layout()
     plt.savefig(out_path)
