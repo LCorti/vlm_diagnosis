@@ -4,6 +4,7 @@ import networkx as nx
 import numpy as np
 import pandas as pd
 
+from matplotlib.patches import Patch
 from matplotlib.transforms import ScaledTranslation
 from pathlib import Path
 
@@ -32,12 +33,12 @@ COLOR_MAP = {
     "vqav2": "#05A8AA",
 }
 
-COLOR_LIST = [
-    "#DC602E",  # llava-bench
-    "#D7B49E",  # mmbench
-    "#B8D5B8",  # seed
-    "#05A8AA",  # vqav2
-]
+COLOR_MAP_EXT = {
+    "llava-bench": "#033F63",
+    "mmbench": "#7E6B8F",
+    "seed": "#590004",
+    "vqav2": "#E2C044",
+}
 
 CROWD_COLOR_MAP = {
     "concept": ["#b27795", "#c18750", "#7f9a46"],
@@ -240,7 +241,7 @@ def set_custom_patch_rk(b_plot: plt.boxplot) -> None:
     # ]
 
     for idx_col, patch in enumerate(b_plot["boxes"]):
-        patch.set(facecolor=COLOR_LIST[idx_col])
+        patch.set(facecolor=list(COLOR_MAP.values())[idx_col])
         # patch.set(hatch=hatches[idx_col])
 
 
@@ -373,7 +374,7 @@ def set_custom_patch_sim(b_plot: plt.boxplot, pos: int) -> None:
     # ]
 
     for _, patch in enumerate(b_plot["boxes"]):
-        patch.set(facecolor=COLOR_LIST[pos - 1])
+        patch.set(facecolor=list(COLOR_MAP.values())[pos - 1])
         # patch.set(hatch=hatches[pos - 1])
 
 
