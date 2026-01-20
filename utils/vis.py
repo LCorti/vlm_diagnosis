@@ -481,3 +481,83 @@ def plot_triple_behaviours(data, out_path, to_skip=None) -> None:
     plt.tight_layout()
     plt.savefig(out_path)
     plt.close()
+
+
+def plot_sample_behaviours(data, out_path, split=False, to_skip=None) -> None:
+    _, axes = plt.subplots(1, 3, sharey=True, layout="constrained", figsize=(15, 4))
+
+    type_map = {
+        1: "Aligned Behaviours",
+        2: "Expanded Behaviours",
+        3: "Divergent Behaviours",
+    }
+
+    width = 0.2
+    # Compute max value to scale y nicely
+    vals_list = list(
+        itertools.chain.from_iterable(
+            [v for ds in data.values() for split in ds.values() for v in split.values()]
+        )
+    )
+    max_y = max(vals_list) + 40
+
+    if to_skip:
+        for ts in to_skip:
+            if ts in MODEL_MAP:
+                models = MODEL_MAP.copy()
+                models.pop(ts)
+                print(f"Skipping data for {ts}")
+            else:
+                print(f"Did not find {ts} in MODEL_MAP: {MODEL_MAP}")
+    else:
+        models = MODEL_MAP.copy()
+
+    for idx, ax in enumerate(axes):
+        ax.set_title(type_map[idx + 1])
+        ax.tick_params(bottom=False)
+        ax.set_ylim(top=max_y)
+        x = np.arange(len(models))
+        ax.yaxis.grid(True, linestyle="-", which="major", color="lightgrey", alpha=0.7)
+
+        multiplier = 0
+        curr_failure = data[idx + 1]
+        for ds, raw_values in curr_failure.items():
+            offset = width * multiplier
+
+            if not split:
+                # Not splitting data. Need to sum "base" and "slack".
+                values = [sum(x) for x in zip(raw_values["base"], raw_values["slack"])]
+                bars = ax.bar(x + offset, values, width, color=COLOR_MAP[ds], label=ds)
+            else:
+                # Prepare to stack values
+                bottom = np.zeros(4)
+                for split_key, values in raw_values.items():
+                    if split_key == "base":
+                        color = COLOR_MAP[ds]
+                    else:
+                        color = COLOR_MAP_EXT[ds]
+
+                    bars = ax.bar(
+                        x + offset,
+                        values,
+                        width,
+                        color=color,
+                        label=ds,
+                        bottom=bottom,
+                    )
+                    bottom += values
+
+            ax.bar_label(bars, fontsize=8, padding=3)
+
+            multiplier += 1
+
+        ax.set_xticks(x + width * 1.5, list(models.values()))
+
+    handles = [Patch(color=COLOR_MAP[key], label=DS_MAP[key]) for key in DS_MAP]
+
+    ax.legend(handles=handles, loc="upper right", ncol=1)
+    axes[0].set_ylabel("N. Samples")
+
+    plt.tight_layout()
+    plt.savefig(out_path)
+    plt.close()
