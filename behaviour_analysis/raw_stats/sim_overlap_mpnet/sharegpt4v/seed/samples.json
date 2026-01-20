@@ -1,0 +1,3189 @@
+{
+  "3151": [
+    {
+      "from_concept": "bar counter",
+      "rel": "located in",
+      "to_concept": "living room",
+      "text": "bar counter located in living room",
+      "sk_similar": {
+        "cosine": 0.597212016582489,
+        "from_concept": "counter",
+        "rel": "in front of",
+        "to_concept": "wall",
+        "text": "counter in front of wall"
+      }
+    }
+  ],
+  "1656": [
+    {
+      "from_concept": "car",
+      "rel": "is part of",
+      "to_concept": "image",
+      "text": "car is part of image",
+      "sk_similar": {
+        "cosine": 0.363978773355484,
+        "from_concept": "image",
+        "rel": "within",
+        "to_concept": "web page",
+        "text": "image within web page"
+      }
+    }
+  ],
+  "154": [
+    {
+      "from_concept": "candles",
+      "rel": "placed on",
+      "to_concept": "table",
+      "text": "candles placed on table",
+      "sk_similar": {
+        "cosine": 0.7589980363845825,
+        "from_concept": "candle holder",
+        "rel": "sitting on top of",
+        "to_concept": "table",
+        "text": "candle holder sitting on top of table"
+      }
+    },
+    {
+      "from_concept": "candles",
+      "rel": "create",
+      "to_concept": "warm atmosphere",
+      "text": "candles create warm atmosphere",
+      "sk_similar": {
+        "cosine": 0.48774436116218567,
+        "from_concept": "candle",
+        "rel": "on top",
+        "to_concept": "candle holder",
+        "text": "candle on top candle holder"
+      }
+    },
+    {
+      "from_concept": "candles",
+      "rel": "contribute to",
+      "to_concept": "color scheme",
+      "text": "candles contribute to color scheme",
+      "sk_similar": {
+        "cosine": 0.08573811501264572,
+        "from_concept": "knife",
+        "rel": "above",
+        "to_concept": "napkin",
+        "text": "knife above napkin"
+      }
+    },
+    {
+      "from_concept": "pumpkins",
+      "rel": "part of",
+      "to_concept": "table setting",
+      "text": "pumpkins part of table setting",
+      "sk_similar": {
+        "cosine": 0.6563065648078918,
+        "from_concept": "pumpkin",
+        "rel": "sitting on",
+        "to_concept": "tray",
+        "text": "pumpkin sitting on tray"
+      }
+    },
+    {
+      "from_concept": "pumpkins",
+      "rel": "symbolize fall",
+      "to_concept": "harvest",
+      "text": "pumpkins symbolize fall harvest",
+      "sk_similar": {
+        "cosine": 0.22465035319328308,
+        "from_concept": "fruit",
+        "rel": "on",
+        "to_concept": "tray",
+        "text": "fruit on tray"
+      }
+    },
+    {
+      "from_concept": "pumpkins",
+      "rel": "contribute to",
+      "to_concept": "color scheme",
+      "text": "pumpkins contribute to color scheme",
+      "sk_similar": {
+        "cosine": 0.09832131117582321,
+        "from_concept": "candle holder",
+        "rel": "near",
+        "to_concept": "tray",
+        "text": "candle holder near tray"
+      }
+    },
+    {
+      "from_concept": "glassware",
+      "rel": "part of",
+      "to_concept": "table setting",
+      "text": "glassware part of table setting",
+      "sk_similar": {
+        "cosine": 0.7562679648399353,
+        "from_concept": "glass",
+        "rel": "kept on",
+        "to_concept": "table",
+        "text": "glass kept on table"
+      }
+    },
+    {
+      "from_concept": "glassware",
+      "rel": "serve drinks",
+      "to_concept": "meal",
+      "text": "glassware serve drinks meal",
+      "sk_similar": {
+        "cosine": 0.43995964527130127,
+        "from_concept": "tray",
+        "rel": "on",
+        "to_concept": "table",
+        "text": "tray on table"
+      }
+    },
+    {
+      "from_concept": "flowers",
+      "rel": "add elegance",
+      "to_concept": "table setting",
+      "text": "flowers add elegance table setting",
+      "sk_similar": {
+        "cosine": 0.22550895810127258,
+        "from_concept": "plate stack",
+        "rel": "near",
+        "to_concept": "tray",
+        "text": "plate stack near tray"
+      }
+    },
+    {
+      "from_concept": "apples",
+      "rel": "part of",
+      "to_concept": "table setting",
+      "text": "apples part of table setting",
+      "sk_similar": {
+        "cosine": 0.6009331941604614,
+        "from_concept": "green apples",
+        "rel": "sitting on top of",
+        "to_concept": "tray",
+        "text": "green apples sitting on top of tray"
+      }
+    }
+  ],
+  "3057": [
+    {
+      "from_concept": "strawberry",
+      "rel": "growing on",
+      "to_concept": "plant",
+      "text": "strawberry growing on plant",
+      "sk_similar": {
+        "cosine": 0.8273485898971558,
+        "from_concept": "strawberry",
+        "rel": "growing from",
+        "to_concept": "stem",
+        "text": "strawberry growing from stem"
+      }
+    }
+  ],
+  "2173": [
+    {
+      "from_concept": "woman",
+      "rel": "wearing",
+      "to_concept": "makeup",
+      "text": "woman wearing makeup",
+      "sk_similar": {
+        "cosine": 0.5120628476142883,
+        "from_concept": "colourful hair",
+        "rel": "near",
+        "to_concept": "red lipstick",
+        "text": "colourful hair near red lipstick"
+      }
+    }
+  ],
+  "3104": [
+    {
+      "from_concept": "woman",
+      "rel": "shoveling",
+      "to_concept": "snow",
+      "text": "woman shoveling snow",
+      "sk_similar": {
+        "cosine": 0.7249693870544434,
+        "from_concept": "shoveling",
+        "rel": "working",
+        "to_concept": "snow",
+        "text": "shoveling working snow"
+      }
+    }
+  ],
+  "2387": [
+    {
+      "from_concept": "people",
+      "rel": "standing",
+      "to_concept": "grass",
+      "text": "people standing grass",
+      "sk_similar": {
+        "cosine": 0.25722524523735046,
+        "from_concept": "person",
+        "rel": "behind",
+        "to_concept": "person",
+        "text": "person behind person"
+      }
+    }
+  ],
+  "3131": [
+    {
+      "from_concept": "pond",
+      "rel": "surrounded by",
+      "to_concept": "trees",
+      "text": "pond surrounded by trees",
+      "sk_similar": {
+        "cosine": 0.41164103150367737,
+        "from_concept": "tree",
+        "rel": "growing on",
+        "to_concept": "tree",
+        "text": "tree growing on tree"
+      }
+    },
+    {
+      "from_concept": "pond",
+      "rel": "located in",
+      "to_concept": "city",
+      "text": "pond located in city",
+      "sk_similar": {
+        "cosine": 0.8875875473022461,
+        "from_concept": "pond",
+        "rel": "near",
+        "to_concept": "city skyline",
+        "text": "pond near city skyline"
+      }
+    },
+    {
+      "from_concept": "pond",
+      "rel": "in the middle of",
+      "to_concept": "golf course",
+      "text": "pond in the middle of golf course",
+      "sk_similar": {
+        "cosine": 0.2985178232192993,
+        "from_concept": "park",
+        "rel": "in front of",
+        "to_concept": "city",
+        "text": "park in front of city"
+      }
+    },
+    {
+      "from_concept": "city",
+      "rel": "in the background",
+      "to_concept": "buildings",
+      "text": "city in the background buildings",
+      "sk_similar": {
+        "cosine": 0.6846240758895874,
+        "from_concept": "building",
+        "rel": "seen outside",
+        "to_concept": "window",
+        "text": "building seen outside window"
+      }
+    },
+    {
+      "from_concept": "sky",
+      "rel": "above",
+      "to_concept": "pond",
+      "text": "sky above pond",
+      "sk_similar": {
+        "cosine": 0.4816693365573883,
+        "from_concept": "building",
+        "rel": "standing on",
+        "to_concept": "sky",
+        "text": "building standing on sky"
+      }
+    },
+    {
+      "from_concept": "sun",
+      "rel": "shining brightly",
+      "to_concept": "pond",
+      "text": "sun shining brightly pond",
+      "sk_similar": {
+        "cosine": 0.2507006525993347,
+        "from_concept": "building",
+        "rel": "seen",
+        "to_concept": "roof",
+        "text": "building seen roof"
+      }
+    },
+    {
+      "from_concept": "golf course",
+      "rel": "in the city",
+      "to_concept": "buildings",
+      "text": "golf course in the city buildings",
+      "sk_similar": {
+        "cosine": 0.4458620846271515,
+        "from_concept": "tree",
+        "rel": "planted near",
+        "to_concept": "building",
+        "text": "tree planted near building"
+      }
+    }
+  ],
+  "2677": [
+    {
+      "from_concept": "santa claus",
+      "rel": "holding",
+      "to_concept": "mug",
+      "text": "santa claus holding mug",
+      "sk_similar": {
+        "cosine": 0.5076098442077637,
+        "from_concept": "cartoon character",
+        "rel": "holding",
+        "to_concept": "beer glass",
+        "text": "cartoon character holding beer glass"
+      }
+    }
+  ],
+  "2980": [
+    {
+      "from_concept": "buildings",
+      "rel": "along the coast",
+      "to_concept": "ocean",
+      "text": "buildings along the coast ocean",
+      "sk_similar": {
+        "cosine": 0.4717552065849304,
+        "from_concept": "building",
+        "rel": "seen outside",
+        "to_concept": "window",
+        "text": "building seen outside window"
+      }
+    }
+  ],
+  "2408": [
+    {
+      "from_concept": "people",
+      "rel": "shopping at",
+      "to_concept": "market",
+      "text": "people shopping at market",
+      "sk_similar": {
+        "cosine": 0.40244582295417786,
+        "from_concept": "people",
+        "rel": "walking",
+        "to_concept": "street",
+        "text": "people walking street"
+      }
+    }
+  ],
+  "2249": [
+    {
+      "from_concept": "oak tree",
+      "rel": "is part of",
+      "to_concept": "crowd",
+      "text": "oak tree is part of crowd",
+      "sk_similar": {
+        "cosine": 0.6400810480117798,
+        "from_concept": "tree",
+        "rel": "behind",
+        "to_concept": "people",
+        "text": "tree behind people"
+      }
+    }
+  ],
+  "650": [
+    {
+      "from_concept": "house",
+      "rel": "located in",
+      "to_concept": "neighborhood",
+      "text": "house located in neighborhood",
+      "sk_similar": {
+        "cosine": 0.555194616317749,
+        "from_concept": "driveway",
+        "rel": "in front of",
+        "to_concept": "house",
+        "text": "driveway in front of house"
+      }
+    }
+  ],
+  "743": [
+    {
+      "from_concept": "santa claus",
+      "rel": "delivering gifts",
+      "to_concept": "reindeer",
+      "text": "santa claus delivering gifts reindeer",
+      "sk_similar": {
+        "cosine": 0.6955815553665161,
+        "from_concept": "santa claus",
+        "rel": "riding",
+        "to_concept": "reindeer",
+        "text": "santa claus riding reindeer"
+      }
+    }
+  ],
+  "2496": [
+    {
+      "from_concept": "stage",
+      "rel": "set up",
+      "to_concept": "drum set, guitar, microphone",
+      "text": "stage set up drum set, guitar, microphone",
+      "sk_similar": {
+        "cosine": 0.4492185115814209,
+        "from_concept": "drum",
+        "rel": "in front of",
+        "to_concept": "wall",
+        "text": "drum in front of wall"
+      }
+    },
+    {
+      "from_concept": "stage",
+      "rel": "decorated with",
+      "to_concept": "banner",
+      "text": "stage decorated with banner",
+      "sk_similar": {
+        "cosine": 0.6546446681022644,
+        "from_concept": "banner",
+        "rel": "on",
+        "to_concept": "wall",
+        "text": "banner on wall"
+      }
+    }
+  ],
+  "691": [
+    {
+      "from_concept": "table",
+      "rel": "is part of",
+      "to_concept": "living room",
+      "text": "table is part of living room",
+      "sk_similar": {
+        "cosine": 0.6940990090370178,
+        "from_concept": "table",
+        "rel": "on",
+        "to_concept": "floor",
+        "text": "table on floor"
+      }
+    }
+  ],
+  "1873": [
+    {
+      "from_concept": "umbrella",
+      "rel": "majority present",
+      "to_concept": "girls",
+      "text": "umbrella majority present girls",
+      "sk_similar": {
+        "cosine": 0.7420113682746887,
+        "from_concept": "females",
+        "rel": "under",
+        "to_concept": "umbrella",
+        "text": "females under umbrella"
+      }
+    }
+  ],
+  "2607": [
+    {
+      "from_concept": "men",
+      "rel": "standing on",
+      "to_concept": "boat",
+      "text": "men standing on boat",
+      "sk_similar": {
+        "cosine": 0.7194711565971375,
+        "from_concept": "person",
+        "rel": "standing on",
+        "to_concept": "boat",
+        "text": "person standing on boat"
+      }
+    },
+    {
+      "from_concept": "boat",
+      "rel": "located in",
+      "to_concept": "city",
+      "text": "boat located in city",
+      "sk_similar": {
+        "cosine": 0.2894604802131653,
+        "from_concept": "person",
+        "rel": "wearing",
+        "to_concept": "sailor uniform",
+        "text": "person wearing sailor uniform"
+      }
+    },
+    {
+      "from_concept": "crowd",
+      "rel": "in the background",
+      "to_concept": "city",
+      "text": "crowd in the background city",
+      "sk_similar": {
+        "cosine": 0.42719507217407227,
+        "from_concept": "people",
+        "rel": "gathered on",
+        "to_concept": "sidewalk",
+        "text": "people gathered on sidewalk"
+      }
+    }
+  ],
+  "1419": [
+    {
+      "from_concept": "clock tower",
+      "rel": "is part of",
+      "to_concept": "building",
+      "text": "clock tower is part of building",
+      "sk_similar": {
+        "cosine": 0.6978111863136292,
+        "from_concept": "clock",
+        "rel": "attached to side of",
+        "to_concept": "building",
+        "text": "clock attached to side of building"
+      }
+    },
+    {
+      "from_concept": "clock tower",
+      "rel": "is located in",
+      "to_concept": "background",
+      "text": "clock tower is located in background",
+      "sk_similar": {
+        "cosine": 0.3199720084667206,
+        "from_concept": "telephone booth",
+        "rel": "standing on",
+        "to_concept": "sidewalk",
+        "text": "telephone booth standing on sidewalk"
+      }
+    },
+    {
+      "from_concept": "clock tower",
+      "rel": "is a recognizable symbol of",
+      "to_concept": "london",
+      "text": "clock tower is a recognizable symbol of london",
+      "sk_similar": {
+        "cosine": 0.20493371784687042,
+        "from_concept": "light",
+        "rel": "attached on",
+        "to_concept": "pole",
+        "text": "light attached on pole"
+      }
+    },
+    {
+      "from_concept": "clock tower",
+      "rel": "is a functional structure",
+      "to_concept": "provides timekeeping services",
+      "text": "clock tower is a functional structure provides timekeeping services",
+      "sk_similar": {
+        "cosine": 0.7367663979530334,
+        "from_concept": "clock",
+        "rel": "on",
+        "to_concept": "tower",
+        "text": "clock on tower"
+      }
+    },
+    {
+      "from_concept": "clock tower",
+      "rel": "is a well-known landmark",
+      "to_concept": "often associated with london",
+      "text": "clock tower is a well-known landmark often associated with london",
+      "sk_similar": {
+        "cosine": 0.16532480716705322,
+        "from_concept": "wall",
+        "rel": "on the side of",
+        "to_concept": "sidewalk",
+        "text": "wall on the side of sidewalk"
+      }
+    },
+    {
+      "from_concept": "clock tower",
+      "rel": "is a prominent feature of",
+      "to_concept": "image",
+      "text": "clock tower is a prominent feature of image",
+      "sk_similar": {
+        "cosine": 0.22934970259666443,
+        "from_concept": "sidewalk",
+        "rel": "made of",
+        "to_concept": "brick",
+        "text": "sidewalk made of brick"
+      }
+    },
+    {
+      "from_concept": "clock tower",
+      "rel": "draws the viewer's attention",
+      "to_concept": "due to its size and distinctive design",
+      "text": "clock tower draws the viewer's attention due to its size and distinctive design",
+      "sk_similar": {
+        "cosine": 0.19363346695899963,
+        "from_concept": "light",
+        "rel": "standing on",
+        "to_concept": "sidewalk",
+        "text": "light standing on sidewalk"
+      }
+    },
+    {
+      "from_concept": "clock tower",
+      "rel": "is situated in the background",
+      "to_concept": "behind other structures",
+      "text": "clock tower is situated in the background behind other structures",
+      "sk_similar": {
+        "cosine": 0.30478793382644653,
+        "from_concept": "brick",
+        "rel": "covering",
+        "to_concept": "sidewalk",
+        "text": "brick covering sidewalk"
+      }
+    },
+    {
+      "from_concept": "clock tower",
+      "rel": "is a functional structure",
+      "to_concept": "provides timekeeping services to the public",
+      "text": "clock tower is a functional structure provides timekeeping services to the public",
+      "sk_similar": {
+        "cosine": 0.4856458008289337,
+        "from_concept": "tower",
+        "rel": "attached to",
+        "to_concept": "building",
+        "text": "tower attached to building"
+      }
+    }
+  ],
+  "2794": [
+    {
+      "from_concept": "tennis court",
+      "rel": "is part of",
+      "to_concept": "house",
+      "text": "tennis court is part of house",
+      "sk_similar": {
+        "cosine": 0.7529881000518799,
+        "from_concept": "tennis court",
+        "rel": "in front of",
+        "to_concept": "the building",
+        "text": "tennis court in front of the building"
+      }
+    }
+  ],
+  "1363": [
+    {
+      "from_concept": "water surface",
+      "rel": "reflective",
+      "to_concept": "lights and structures",
+      "text": "water surface reflective lights and structures",
+      "sk_similar": {
+        "cosine": 0.7362205386161804,
+        "from_concept": "reflection",
+        "rel": "in surface of",
+        "to_concept": "water",
+        "text": "reflection in surface of water"
+      }
+    }
+  ],
+  "57": [
+    {
+      "from_concept": "woman",
+      "rel": "playing",
+      "to_concept": "guitar",
+      "text": "woman playing guitar",
+      "sk_similar": {
+        "cosine": 0.7270177006721497,
+        "from_concept": "player",
+        "rel": "playing",
+        "to_concept": "guitar",
+        "text": "player playing guitar"
+      }
+    }
+  ],
+  "1194": [
+    {
+      "from_concept": "floor",
+      "rel": "is",
+      "to_concept": "tiles",
+      "text": "floor is tiles",
+      "sk_similar": {
+        "cosine": 0.8472886085510254,
+        "from_concept": "floor",
+        "rel": "made up of",
+        "to_concept": "tile",
+        "text": "floor made up of tile"
+      }
+    }
+  ],
+  "1962": [
+    {
+      "from_concept": "ceiling",
+      "rel": "painted with",
+      "to_concept": "pattern",
+      "text": "ceiling painted with pattern",
+      "sk_similar": {
+        "cosine": 0.611209511756897,
+        "from_concept": "black lines",
+        "rel": "painted on",
+        "to_concept": "ceiling",
+        "text": "black lines painted on ceiling"
+      }
+    }
+  ],
+  "1286": [
+    {
+      "from_concept": "man",
+      "rel": "playing",
+      "to_concept": "guitar",
+      "text": "man playing guitar",
+      "sk_similar": {
+        "cosine": 0.5111561417579651,
+        "from_concept": "hands",
+        "rel": "holding",
+        "to_concept": "guitar",
+        "text": "hands holding guitar"
+      }
+    },
+    {
+      "from_concept": "man",
+      "rel": "playing",
+      "to_concept": "drum set",
+      "text": "man playing drum set",
+      "sk_similar": {
+        "cosine": 0.6673877239227295,
+        "from_concept": "drums",
+        "rel": "behind",
+        "to_concept": "man",
+        "text": "drums behind man"
+      }
+    },
+    {
+      "from_concept": "man",
+      "rel": "wearing",
+      "to_concept": "hat",
+      "text": "man wearing hat",
+      "sk_similar": {
+        "cosine": 0.6009819507598877,
+        "from_concept": "man",
+        "rel": "sheltering",
+        "to_concept": "head",
+        "text": "man sheltering head"
+      }
+    },
+    {
+      "from_concept": "man",
+      "rel": "wearing",
+      "to_concept": "vest",
+      "text": "man wearing vest",
+      "sk_similar": {
+        "cosine": 0.4372790455818176,
+        "from_concept": "man",
+        "rel": "wearing striped",
+        "to_concept": "shirt",
+        "text": "man wearing striped shirt"
+      }
+    },
+    {
+      "from_concept": "man",
+      "rel": "wearing",
+      "to_concept": "sunglasses",
+      "text": "man wearing sunglasses",
+      "sk_similar": {
+        "cosine": 0.661466121673584,
+        "from_concept": "man",
+        "rel": "wearing",
+        "to_concept": "sunglass",
+        "text": "man wearing sunglass"
+      }
+    }
+  ],
+  "894": [
+    {
+      "from_concept": "man",
+      "rel": "wearing",
+      "to_concept": "sunglasses",
+      "text": "man wearing sunglasses",
+      "sk_similar": {
+        "cosine": 0.26367107033729553,
+        "from_concept": "glove",
+        "rel": "on",
+        "to_concept": "hand",
+        "text": "glove on hand"
+      }
+    },
+    {
+      "from_concept": "man",
+      "rel": "smiling",
+      "to_concept": "grill",
+      "text": "man smiling grill",
+      "sk_similar": {
+        "cosine": 0.7322834134101868,
+        "from_concept": "man",
+        "rel": "using",
+        "to_concept": "grill",
+        "text": "man using grill"
+      }
+    },
+    {
+      "from_concept": "grill",
+      "rel": "open",
+      "to_concept": "charcoal",
+      "text": "grill open charcoal",
+      "sk_similar": {
+        "cosine": 0.578559935092926,
+        "from_concept": "hand",
+        "rel": "on",
+        "to_concept": "grill",
+        "text": "hand on grill"
+      }
+    }
+  ],
+  "1657": [
+    {
+      "from_concept": "stairs",
+      "rel": "leading to",
+      "to_concept": "counter",
+      "text": "stairs leading to counter",
+      "sk_similar": {
+        "cosine": 0.6721532940864563,
+        "from_concept": "door",
+        "rel": "leading to",
+        "to_concept": "counter",
+        "text": "door leading to counter"
+      }
+    },
+    {
+      "from_concept": "counter",
+      "rel": "in front of",
+      "to_concept": "couch",
+      "text": "counter in front of couch",
+      "sk_similar": {
+        "cosine": 0.614794909954071,
+        "from_concept": "couch",
+        "rel": "against",
+        "to_concept": "wall",
+        "text": "couch against wall"
+      }
+    }
+  ],
+  "503": [
+    {
+      "from_concept": "police officer",
+      "rel": "directing traffic",
+      "to_concept": "busy street",
+      "text": "police officer directing traffic busy street",
+      "sk_similar": {
+        "cosine": 0.4491453170776367,
+        "from_concept": "person",
+        "rel": "wearing",
+        "to_concept": "police vest",
+        "text": "person wearing police vest"
+      }
+    }
+  ],
+  "2104": [
+    {
+      "from_concept": "celebrity",
+      "rel": "wearing",
+      "to_concept": "lipstick",
+      "text": "celebrity wearing lipstick",
+      "sk_similar": {
+        "cosine": 0.3655199706554413,
+        "from_concept": "face",
+        "rel": "has",
+        "to_concept": "hair",
+        "text": "face has hair"
+      }
+    }
+  ],
+  "2342": [
+    {
+      "from_concept": "stage",
+      "rel": "illuminated by",
+      "to_concept": "lights",
+      "text": "stage illuminated by lights",
+      "sk_similar": {
+        "cosine": 0.48238641023635864,
+        "from_concept": "light",
+        "rel": "on",
+        "to_concept": "floor",
+        "text": "light on floor"
+      }
+    }
+  ],
+  "2358": [],
+  "406": [
+    {
+      "from_concept": "bunk bed",
+      "rel": "has",
+      "to_concept": "blue blanket",
+      "text": "bunk bed has blue blanket",
+      "sk_similar": {
+        "cosine": 0.4912019968032837,
+        "from_concept": "bunk bed",
+        "rel": "against",
+        "to_concept": "wall",
+        "text": "bunk bed against wall"
+      }
+    }
+  ],
+  "1271": [
+    {
+      "from_concept": "man",
+      "rel": "holding",
+      "to_concept": "leaf",
+      "text": "man holding leaf",
+      "sk_similar": {
+        "cosine": 0.8105361461639404,
+        "from_concept": "leaf",
+        "rel": "held in",
+        "to_concept": "hand",
+        "text": "leaf held in hand"
+      }
+    },
+    {
+      "from_concept": "man",
+      "rel": "wearing",
+      "to_concept": "ponytail",
+      "text": "man wearing ponytail",
+      "sk_similar": {
+        "cosine": 0.2861214876174927,
+        "from_concept": "moneybag",
+        "rel": "hanging around",
+        "to_concept": "neck",
+        "text": "moneybag hanging around neck"
+      }
+    },
+    {
+      "from_concept": "man",
+      "rel": "wearing",
+      "to_concept": "hat",
+      "text": "man wearing hat",
+      "sk_similar": {
+        "cosine": 0.7549912929534912,
+        "from_concept": "hat",
+        "rel": "worn on",
+        "to_concept": "head",
+        "text": "hat worn on head"
+      }
+    },
+    {
+      "from_concept": "man",
+      "rel": "wearing",
+      "to_concept": "shirt",
+      "text": "man wearing shirt",
+      "sk_similar": {
+        "cosine": 0.27128714323043823,
+        "from_concept": "hand",
+        "rel": "holding",
+        "to_concept": "leaf",
+        "text": "hand holding leaf"
+      }
+    },
+    {
+      "from_concept": "man",
+      "rel": "standing",
+      "to_concept": "dirt field",
+      "text": "man standing dirt field",
+      "sk_similar": {
+        "cosine": 0.32396286725997925,
+        "from_concept": "plant",
+        "rel": "growing up",
+        "to_concept": "ground",
+        "text": "plant growing up ground"
+      }
+    }
+  ],
+  "2960": [
+    {
+      "from_concept": "chairs",
+      "rel": "encourages social interaction and dining",
+      "to_concept": "dining table",
+      "text": "chairs encourages social interaction and dining dining table",
+      "sk_similar": {
+        "cosine": 0.4795794188976288,
+        "from_concept": "chair",
+        "rel": "next to",
+        "to_concept": "wall",
+        "text": "chair next to wall"
+      }
+    },
+    {
+      "from_concept": "dining table",
+      "rel": "located in front of",
+      "to_concept": "fireplace",
+      "text": "dining table located in front of fireplace",
+      "sk_similar": {
+        "cosine": 0.6054125428199768,
+        "from_concept": "plant",
+        "rel": "placed on top of",
+        "to_concept": "fireplace",
+        "text": "plant placed on top of fireplace"
+      }
+    },
+    {
+      "from_concept": "fireplace",
+      "rel": "a focal point",
+      "to_concept": "living room",
+      "text": "fireplace a focal point living room",
+      "sk_similar": {
+        "cosine": 0.46165746450424194,
+        "from_concept": "light",
+        "rel": "warm up",
+        "to_concept": "room",
+        "text": "light warm up room"
+      }
+    }
+  ],
+  "1018": [
+    {
+      "from_concept": "boy",
+      "rel": "playing with",
+      "to_concept": "frisbee",
+      "text": "boy playing with frisbee",
+      "sk_similar": {
+        "cosine": 0.1336674988269806,
+        "from_concept": "sun",
+        "rel": "in",
+        "to_concept": "sky",
+        "text": "sun in sky"
+      }
+    }
+  ],
+  "1567": [
+    {
+      "from_concept": "man",
+      "rel": "wearing",
+      "to_concept": "suit and tie",
+      "text": "man wearing suit and tie",
+      "sk_similar": {
+        "cosine": 0.5032908320426941,
+        "from_concept": "tie",
+        "rel": "hanging around",
+        "to_concept": "neck",
+        "text": "tie hanging around neck"
+      }
+    },
+    {
+      "from_concept": "man",
+      "rel": "looking off to the side",
+      "to_concept": "deep in thought or contemplating",
+      "text": "man looking off to the side deep in thought or contemplating",
+      "sk_similar": {
+        "cosine": 0.304532915353775,
+        "from_concept": "finger",
+        "rel": "resting on",
+        "to_concept": "arm",
+        "text": "finger resting on arm"
+      }
+    },
+    {
+      "from_concept": "bird",
+      "rel": "in man's hand",
+      "to_concept": "freedom and nature",
+      "text": "bird in man's hand freedom and nature",
+      "sk_similar": {
+        "cosine": 0.6863124966621399,
+        "from_concept": "bird",
+        "rel": "on top",
+        "to_concept": "hand",
+        "text": "bird on top hand"
+      }
+    },
+    {
+      "from_concept": "image",
+      "rel": "in black and white",
+      "to_concept": "timeless and classic feel",
+      "text": "image in black and white timeless and classic feel",
+      "sk_similar": {
+        "cosine": 0.13479560613632202,
+        "from_concept": "bird",
+        "rel": "has",
+        "to_concept": "wing",
+        "text": "bird has wing"
+      }
+    }
+  ],
+  "1948": [
+    {
+      "from_concept": "liquor bottles",
+      "rel": "arranged in rows",
+      "to_concept": "shelves",
+      "text": "liquor bottles arranged in rows shelves",
+      "sk_similar": {
+        "cosine": 0.6517187356948853,
+        "from_concept": "bottle",
+        "rel": "on",
+        "to_concept": "shelf",
+        "text": "bottle on shelf"
+      }
+    }
+  ],
+  "1711": [
+    {
+      "from_concept": "people",
+      "rel": "wearing",
+      "to_concept": "yellow shirts",
+      "text": "people wearing yellow shirts",
+      "sk_similar": {
+        "cosine": 0.4288751780986786,
+        "from_concept": "shirt",
+        "rel": "worn by",
+        "to_concept": "man",
+        "text": "shirt worn by man"
+      }
+    }
+  ],
+  "1549": [
+    {
+      "from_concept": "woman",
+      "rel": "wearing",
+      "to_concept": "dress",
+      "text": "woman wearing dress",
+      "sk_similar": {
+        "cosine": 0.6916600465774536,
+        "from_concept": "dress",
+        "rel": "on",
+        "to_concept": "woman",
+        "text": "dress on woman"
+      }
+    }
+  ],
+  "2180": [
+    {
+      "from_concept": "woman",
+      "rel": "wearing",
+      "to_concept": "dress",
+      "text": "woman wearing dress",
+      "sk_similar": {
+        "cosine": 0.39695844054222107,
+        "from_concept": "lady",
+        "rel": "riding",
+        "to_concept": "horse",
+        "text": "lady riding horse"
+      }
+    }
+  ],
+  "300": [
+    {
+      "from_concept": "baseball players",
+      "rel": "wearing",
+      "to_concept": "gray uniforms",
+      "text": "baseball players wearing gray uniforms",
+      "sk_similar": {
+        "cosine": 0.28659433126449585,
+        "from_concept": "number",
+        "rel": "on",
+        "to_concept": "jersey",
+        "text": "number on jersey"
+      }
+    }
+  ],
+  "2048": [
+    {
+      "from_concept": "soccer ball",
+      "rel": "in the air",
+      "to_concept": "goal",
+      "text": "soccer ball in the air goal",
+      "sk_similar": {
+        "cosine": 0.20197074115276337,
+        "from_concept": "man",
+        "rel": "wearing",
+        "to_concept": "shoe",
+        "text": "man wearing shoe"
+      }
+    }
+  ],
+  "1904": [
+    {
+      "from_concept": "one-way sign",
+      "rel": "located at",
+      "to_concept": "street",
+      "text": "one-way sign located at street",
+      "sk_similar": {
+        "cosine": 0.4938974380493164,
+        "from_concept": "zebra crossing",
+        "rel": "painted on",
+        "to_concept": "street",
+        "text": "zebra crossing painted on street"
+      }
+    }
+  ],
+  "1664": [
+    {
+      "from_concept": "bag",
+      "rel": "is on",
+      "to_concept": "shelf",
+      "text": "bag is on shelf",
+      "sk_similar": {
+        "cosine": 0.49524086713790894,
+        "from_concept": "handbag",
+        "rel": "on",
+        "to_concept": "crystal table",
+        "text": "handbag on crystal table"
+      }
+    }
+  ],
+  "1595": [
+    {
+      "from_concept": "fish",
+      "rel": "arranged in a pile",
+      "to_concept": "surface",
+      "text": "fish arranged in a pile surface",
+      "sk_similar": {
+        "cosine": 0.24792462587356567,
+        "from_concept": "bag",
+        "rel": "on",
+        "to_concept": "floor",
+        "text": "bag on floor"
+      }
+    }
+  ],
+  "1645": [
+    {
+      "from_concept": "forest",
+      "rel": "is the environment",
+      "to_concept": "man and woman",
+      "text": "forest is the environment man and woman",
+      "sk_similar": {
+        "cosine": 0.4425770938396454,
+        "from_concept": "tall trees",
+        "rel": "behind",
+        "to_concept": "people",
+        "text": "tall trees behind people"
+      }
+    }
+  ],
+  "1533": [
+    {
+      "from_concept": "coffee table",
+      "rel": "decorated with",
+      "to_concept": "vases, bowls, books",
+      "text": "coffee table decorated with vases, bowls, books",
+      "sk_similar": {
+        "cosine": 0.6867648959159851,
+        "from_concept": "vase",
+        "rel": "on",
+        "to_concept": "table",
+        "text": "vase on table"
+      }
+    }
+  ],
+  "2928": [
+    {
+      "from_concept": "table and chairs",
+      "rel": "is part of",
+      "to_concept": "dining room",
+      "text": "table and chairs is part of dining room",
+      "sk_similar": {
+        "cosine": 0.7242093682289124,
+        "from_concept": "table",
+        "rel": "next to",
+        "to_concept": "chair",
+        "text": "table next to chair"
+      }
+    },
+    {
+      "from_concept": "countertop",
+      "rel": "is part of",
+      "to_concept": "dining room",
+      "text": "countertop is part of dining room",
+      "sk_similar": {
+        "cosine": 0.4067964255809784,
+        "from_concept": "microwave",
+        "rel": "in",
+        "to_concept": "kitchen",
+        "text": "microwave in kitchen"
+      }
+    },
+    {
+      "from_concept": "wooden floor",
+      "rel": "is part of",
+      "to_concept": "dining room",
+      "text": "wooden floor is part of dining room",
+      "sk_similar": {
+        "cosine": 0.4900473654270172,
+        "from_concept": "floor",
+        "rel": "against",
+        "to_concept": "wall",
+        "text": "floor against wall"
+      }
+    },
+    {
+      "from_concept": "bicycle",
+      "rel": "is near",
+      "to_concept": "dining room",
+      "text": "bicycle is near dining room",
+      "sk_similar": {
+        "cosine": 0.7586560249328613,
+        "from_concept": "bike",
+        "rel": "in",
+        "to_concept": "kitchen",
+        "text": "bike in kitchen"
+      }
+    }
+  ],
+  "3051": [
+    {
+      "from_concept": "orange",
+      "rel": "is part of",
+      "to_concept": "glass of juice",
+      "text": "orange is part of glass of juice",
+      "sk_similar": {
+        "cosine": 0.8513688445091248,
+        "from_concept": "orange juice",
+        "rel": "in",
+        "to_concept": "glass",
+        "text": "orange juice in glass"
+      }
+    },
+    {
+      "from_concept": "oranges",
+      "rel": "are near",
+      "to_concept": "glass of juice",
+      "text": "oranges are near glass of juice",
+      "sk_similar": {
+        "cosine": 0.6426522135734558,
+        "from_concept": "orange skin",
+        "rel": "covering",
+        "to_concept": "fruit",
+        "text": "orange skin covering fruit"
+      }
+    },
+    {
+      "from_concept": "oranges",
+      "rel": "are near",
+      "to_concept": "blanket",
+      "text": "oranges are near blanket",
+      "sk_similar": {
+        "cosine": 0.5447724461555481,
+        "from_concept": "orange",
+        "rel": "has",
+        "to_concept": "light",
+        "text": "orange has light"
+      }
+    },
+    {
+      "from_concept": "oranges",
+      "rel": "are near",
+      "to_concept": "burlap sack",
+      "text": "oranges are near burlap sack",
+      "sk_similar": {
+        "cosine": 0.5521596074104309,
+        "from_concept": "orange",
+        "rel": "next to",
+        "to_concept": "orange",
+        "text": "orange next to orange"
+      }
+    },
+    {
+      "from_concept": "oranges",
+      "rel": "are near",
+      "to_concept": "napkin",
+      "text": "oranges are near napkin",
+      "sk_similar": {
+        "cosine": 0.7088116407394409,
+        "from_concept": "orange",
+        "rel": "on",
+        "to_concept": "table",
+        "text": "orange on table"
+      }
+    },
+    {
+      "from_concept": "napkin",
+      "rel": "is under",
+      "to_concept": "glass of juice",
+      "text": "napkin is under glass of juice",
+      "sk_similar": {
+        "cosine": 0.36692312359809875,
+        "from_concept": "orange",
+        "rel": "behind",
+        "to_concept": "glass",
+        "text": "orange behind glass"
+      }
+    },
+    {
+      "from_concept": "blanket",
+      "rel": "is under",
+      "to_concept": "glass of juice",
+      "text": "blanket is under glass of juice",
+      "sk_similar": {
+        "cosine": 0.23366039991378784,
+        "from_concept": "light",
+        "rel": "shining on",
+        "to_concept": "orange",
+        "text": "light shining on orange"
+      }
+    },
+    {
+      "from_concept": "burlap sack",
+      "rel": "is under",
+      "to_concept": "glass of juice",
+      "text": "burlap sack is under glass of juice",
+      "sk_similar": {
+        "cosine": 0.47065839171409607,
+        "from_concept": "leaves",
+        "rel": "next to",
+        "to_concept": "glass",
+        "text": "leaves next to glass"
+      }
+    }
+  ],
+  "1111": [
+    {
+      "from_concept": "table",
+      "rel": "set up for",
+      "to_concept": "chairs",
+      "text": "table set up for chairs",
+      "sk_similar": {
+        "cosine": 0.48939818143844604,
+        "from_concept": "chair",
+        "rel": "next to",
+        "to_concept": "tree",
+        "text": "chair next to tree"
+      }
+    }
+  ],
+  "913": [
+    {
+      "from_concept": "people",
+      "rel": "posing for",
+      "to_concept": "photo",
+      "text": "people posing for photo",
+      "sk_similar": {
+        "cosine": 0.2010709047317505,
+        "from_concept": "head",
+        "rel": "resting on",
+        "to_concept": "arm",
+        "text": "head resting on arm"
+      }
+    }
+  ],
+  "1021": [
+    {
+      "from_concept": "stage lights",
+      "rel": "colored",
+      "to_concept": "band members",
+      "text": "stage lights colored band members",
+      "sk_similar": {
+        "cosine": 0.1957727074623108,
+        "from_concept": "person",
+        "rel": "striped",
+        "to_concept": "shirt",
+        "text": "person striped shirt"
+      }
+    }
+  ],
+  "1620": [
+    {
+      "from_concept": "musicians",
+      "rel": "playing",
+      "to_concept": "musical instruments",
+      "text": "musicians playing musical instruments",
+      "sk_similar": {
+        "cosine": 0.624962329864502,
+        "from_concept": "band",
+        "rel": "on",
+        "to_concept": "stage",
+        "text": "band on stage"
+      }
+    }
+  ],
+  "2906": [
+    {
+      "from_concept": "floodlights",
+      "rel": "illuminating",
+      "to_concept": "tennis court",
+      "text": "floodlights illuminating tennis court",
+      "sk_similar": {
+        "cosine": 0.7618705034255981,
+        "from_concept": "lights shining",
+        "rel": "over",
+        "to_concept": "court",
+        "text": "lights shining over court"
+      }
+    }
+  ],
+  "1437": [
+    {
+      "from_concept": "chandelier",
+      "rel": "above",
+      "to_concept": "bed",
+      "text": "chandelier above bed",
+      "sk_similar": {
+        "cosine": 0.6483035087585449,
+        "from_concept": "lamp",
+        "rel": "on a side of",
+        "to_concept": "bed",
+        "text": "lamp on a side of bed"
+      }
+    }
+  ],
+  "2847": [
+    {
+      "from_concept": "man",
+      "rel": "playing guitar",
+      "to_concept": "microphone",
+      "text": "man playing guitar microphone",
+      "sk_similar": {
+        "cosine": 0.7439819574356079,
+        "from_concept": "man",
+        "rel": "playing",
+        "to_concept": "guitar",
+        "text": "man playing guitar"
+      }
+    }
+  ],
+  "4072": [
+    {
+      "from_concept": "mermaid",
+      "rel": "blowing",
+      "to_concept": "bubble",
+      "text": "mermaid blowing bubble",
+      "sk_similar": {
+        "cosine": 0.24820636212825775,
+        "from_concept": "birthday wish",
+        "rel": "above",
+        "to_concept": "drawing",
+        "text": "birthday wish above drawing"
+      }
+    }
+  ],
+  "4112": [
+    {
+      "from_concept": "mountain range",
+      "rel": "dominates",
+      "to_concept": "scene",
+      "text": "mountain range dominates scene",
+      "sk_similar": {
+        "cosine": 0.646216630935669,
+        "from_concept": "peak",
+        "rel": "on",
+        "to_concept": "mountain",
+        "text": "peak on mountain"
+      }
+    }
+  ],
+  "3921": [
+    {
+      "from_concept": "bird",
+      "rel": "wearing",
+      "to_concept": "dress",
+      "text": "bird wearing dress",
+      "sk_similar": {
+        "cosine": 0.7753084301948547,
+        "from_concept": "animal",
+        "rel": "wearing",
+        "to_concept": "dress",
+        "text": "animal wearing dress"
+      }
+    },
+    {
+      "from_concept": "bird",
+      "rel": "holding",
+      "to_concept": "heart",
+      "text": "bird holding heart",
+      "sk_similar": {
+        "cosine": 0.5443453192710876,
+        "from_concept": "heart",
+        "rel": "on",
+        "to_concept": "image",
+        "text": "heart on image"
+      }
+    },
+    {
+      "from_concept": "flowers",
+      "rel": "surrounding",
+      "to_concept": "bird",
+      "text": "flowers surrounding bird",
+      "sk_similar": {
+        "cosine": 0.5891538858413696,
+        "from_concept": "flower",
+        "rel": "on",
+        "to_concept": "picture",
+        "text": "flower on picture"
+      }
+    },
+    {
+      "from_concept": "leaves",
+      "rel": "surrounding",
+      "to_concept": "bird",
+      "text": "leaves surrounding bird",
+      "sk_similar": {
+        "cosine": 0.4704454839229584,
+        "from_concept": "animal",
+        "rel": "has",
+        "to_concept": "beak",
+        "text": "animal has beak"
+      }
+    },
+    {
+      "from_concept": "banner",
+      "rel": "above",
+      "to_concept": "bird",
+      "text": "banner above bird",
+      "sk_similar": {
+        "cosine": 0.4454261362552643,
+        "from_concept": "eye",
+        "rel": "over",
+        "to_concept": "beak",
+        "text": "eye over beak"
+      }
+    },
+    {
+      "from_concept": "text",
+      "rel": "on",
+      "to_concept": "banner",
+      "text": "text on banner",
+      "sk_similar": {
+        "cosine": 0.514107882976532,
+        "from_concept": "writing",
+        "rel": "on",
+        "to_concept": "picture",
+        "text": "writing on picture"
+      }
+    },
+    {
+      "from_concept": "text",
+      "rel": "reading",
+      "to_concept": "\"happy birthday\"",
+      "text": "text reading \"happy birthday\"",
+      "sk_similar": {
+        "cosine": 0.6260643005371094,
+        "from_concept": "happy birthday",
+        "rel": "on",
+        "to_concept": "image",
+        "text": "happy birthday on image"
+      }
+    }
+  ],
+  "3948": [
+    {
+      "from_concept": "band",
+      "rel": "performing",
+      "to_concept": "stage",
+      "text": "band performing stage",
+      "sk_similar": {
+        "cosine": 0.5814348459243774,
+        "from_concept": "people",
+        "rel": "watching",
+        "to_concept": "band",
+        "text": "people watching band"
+      }
+    }
+  ],
+  "3999": [
+    {
+      "from_concept": "man",
+      "rel": "playing",
+      "to_concept": "guitar",
+      "text": "man playing guitar",
+      "sk_similar": {
+        "cosine": 0.6608931422233582,
+        "from_concept": "singer",
+        "rel": "playing",
+        "to_concept": "guitar",
+        "text": "singer playing guitar"
+      }
+    },
+    {
+      "from_concept": "crowd",
+      "rel": "gathered",
+      "to_concept": "stadium",
+      "text": "crowd gathered stadium",
+      "sk_similar": {
+        "cosine": 0.11524812877178192,
+        "from_concept": "singer",
+        "rel": "singing into",
+        "to_concept": "microphone",
+        "text": "singer singing into microphone"
+      }
+    }
+  ],
+  "3845": [
+    {
+      "from_concept": "children",
+      "rel": "wearing",
+      "to_concept": "santa hats",
+      "text": "children wearing santa hats",
+      "sk_similar": {
+        "cosine": 0.9222267270088196,
+        "from_concept": "kids",
+        "rel": "wearing",
+        "to_concept": "christmas hat",
+        "text": "kids wearing christmas hat"
+      }
+    },
+    {
+      "from_concept": "children",
+      "rel": "smiling",
+      "to_concept": "gingerbread house",
+      "text": "children smiling gingerbread house",
+      "sk_similar": {
+        "cosine": 0.5752422213554382,
+        "from_concept": "toy snow house",
+        "rel": "in front of",
+        "to_concept": "kids",
+        "text": "toy snow house in front of kids"
+      }
+    },
+    {
+      "from_concept": "kitchen",
+      "rel": "setting",
+      "to_concept": "children",
+      "text": "kitchen setting children",
+      "sk_similar": {
+        "cosine": 0.39282864332199097,
+        "from_concept": "red hat",
+        "rel": "worn by",
+        "to_concept": "kids",
+        "text": "red hat worn by kids"
+      }
+    }
+  ],
+  "4124": [
+    {
+      "from_concept": "flowers",
+      "rel": "smaller",
+      "to_concept": "balloons",
+      "text": "flowers smaller balloons",
+      "sk_similar": {
+        "cosine": 0.3029423654079437,
+        "from_concept": "grass",
+        "rel": "below",
+        "to_concept": "flower",
+        "text": "grass below flower"
+      }
+    }
+  ],
+  "3856": [
+    {
+      "from_concept": "mother",
+      "rel": "holding",
+      "to_concept": "child",
+      "text": "mother holding child",
+      "sk_similar": {
+        "cosine": 0.6614203453063965,
+        "from_concept": "baby",
+        "rel": "hugging",
+        "to_concept": "mother",
+        "text": "baby hugging mother"
+      }
+    }
+  ],
+  "3816": [
+    {
+      "from_concept": "group of people",
+      "rel": "sitting on blanket",
+      "to_concept": "sidewalk",
+      "text": "group of people sitting on blanket sidewalk",
+      "sk_similar": {
+        "cosine": 0.3691105842590332,
+        "from_concept": "dog",
+        "rel": "laying down on",
+        "to_concept": "blanket",
+        "text": "dog laying down on blanket"
+      }
+    },
+    {
+      "from_concept": "man",
+      "rel": "wearing hat",
+      "to_concept": "group of people",
+      "text": "man wearing hat group of people",
+      "sk_similar": {
+        "cosine": 0.5946025848388672,
+        "from_concept": "hat",
+        "rel": "worn on",
+        "to_concept": "head",
+        "text": "hat worn on head"
+      }
+    },
+    {
+      "from_concept": "dog",
+      "rel": "being taken care of",
+      "to_concept": "group of people",
+      "text": "dog being taken care of group of people",
+      "sk_similar": {
+        "cosine": 0.40327709913253784,
+        "from_concept": "dog",
+        "rel": "sticking",
+        "to_concept": "head",
+        "text": "dog sticking head"
+      }
+    }
+  ],
+  "3978": [
+    {
+      "from_concept": "man",
+      "rel": "wearing",
+      "to_concept": "tie",
+      "text": "man wearing tie",
+      "sk_similar": {
+        "cosine": 0.2684043049812317,
+        "from_concept": "man",
+        "rel": "kicking up",
+        "to_concept": "shoe",
+        "text": "man kicking up shoe"
+      }
+    },
+    {
+      "from_concept": "man",
+      "rel": "celebrating",
+      "to_concept": "team",
+      "text": "man celebrating team",
+      "sk_similar": {
+        "cosine": 0.8170310258865356,
+        "from_concept": "coach",
+        "rel": "celebrating",
+        "to_concept": "team",
+        "text": "coach celebrating team"
+      }
+    },
+    {
+      "from_concept": "man",
+      "rel": "pointing",
+      "to_concept": "field",
+      "text": "man pointing field",
+      "sk_similar": {
+        "cosine": 0.47654399275779724,
+        "from_concept": "man",
+        "rel": "in",
+        "to_concept": "football field",
+        "text": "man in football field"
+      }
+    }
+  ],
+  "3915": [
+    {
+      "from_concept": "playing card pattern",
+      "rel": "associated with",
+      "to_concept": "event",
+      "text": "playing card pattern associated with event",
+      "sk_similar": {
+        "cosine": 0.10196307301521301,
+        "from_concept": "hair",
+        "rel": "connected to",
+        "to_concept": "finger",
+        "text": "hair connected to finger"
+      }
+    }
+  ],
+  "3956": [
+    {
+      "from_concept": "woman",
+      "rel": "embracing",
+      "to_concept": "sea",
+      "text": "woman embracing sea",
+      "sk_similar": {
+        "cosine": 0.47109851241111755,
+        "from_concept": "arms",
+        "rel": "stretched out",
+        "to_concept": "sea",
+        "text": "arms stretched out sea"
+      }
+    }
+  ],
+  "4071": [
+    {
+      "from_concept": "planes",
+      "rel": "flying in formation",
+      "to_concept": "sky",
+      "text": "planes flying in formation sky",
+      "sk_similar": {
+        "cosine": 0.6550483703613281,
+        "from_concept": "plane",
+        "rel": "flying in",
+        "to_concept": "sky",
+        "text": "plane flying in sky"
+      }
+    },
+    {
+      "from_concept": "eagle",
+      "rel": "flying",
+      "to_concept": "sky",
+      "text": "eagle flying sky",
+      "sk_similar": {
+        "cosine": 0.5950298309326172,
+        "from_concept": "bird",
+        "rel": "flying in",
+        "to_concept": "sky",
+        "text": "bird flying in sky"
+      }
+    }
+  ],
+  "3819": [
+    {
+      "from_concept": "basketball player",
+      "rel": "attempting to score",
+      "to_concept": "basketball hoop",
+      "text": "basketball player attempting to score basketball hoop",
+      "sk_similar": {
+        "cosine": 0.3889528214931488,
+        "from_concept": "watching the game",
+        "rel": "concentrating on",
+        "to_concept": "ball",
+        "text": "watching the game concentrating on ball"
+      }
+    }
+  ],
+  "4063": [
+    {
+      "from_concept": "appetizers",
+      "rel": "topped with",
+      "to_concept": "tomatoes and cheese",
+      "text": "appetizers topped with tomatoes and cheese",
+      "sk_similar": {
+        "cosine": 0.4910777509212494,
+        "from_concept": "food",
+        "rel": "laid out on",
+        "to_concept": "table",
+        "text": "food laid out on table"
+      }
+    }
+  ],
+  "4039": [
+    {
+      "from_concept": "glass door",
+      "rel": "open",
+      "to_concept": "living room",
+      "text": "glass door open living room",
+      "sk_similar": {
+        "cosine": 0.4812197685241699,
+        "from_concept": "sunlight",
+        "rel": "outside",
+        "to_concept": "window",
+        "text": "sunlight outside window"
+      }
+    }
+  ],
+  "4097": [
+    {
+      "from_concept": "man",
+      "rel": "yelling at",
+      "to_concept": "players",
+      "text": "man yelling at players",
+      "sk_similar": {
+        "cosine": 0.2758701741695404,
+        "from_concept": "man",
+        "rel": "holding",
+        "to_concept": "game plan",
+        "text": "man holding game plan"
+      }
+    },
+    {
+      "from_concept": "man",
+      "rel": "wearing suit",
+      "to_concept": "coach",
+      "text": "man wearing suit coach",
+      "sk_similar": {
+        "cosine": 0.43606868386268616,
+        "from_concept": "man",
+        "rel": "dressed in",
+        "to_concept": "jacket",
+        "text": "man dressed in jacket"
+      }
+    },
+    {
+      "from_concept": "players",
+      "rel": "wearing uniforms",
+      "to_concept": "team",
+      "text": "players wearing uniforms team",
+      "sk_similar": {
+        "cosine": 0.2381546050310135,
+        "from_concept": "jacket",
+        "rel": "matches",
+        "to_concept": "pant",
+        "text": "jacket matches pant"
+      }
+    },
+    {
+      "from_concept": "crowd",
+      "rel": "watching game",
+      "to_concept": "spectators",
+      "text": "crowd watching game spectators",
+      "sk_similar": {
+        "cosine": 0.12863434851169586,
+        "from_concept": "head",
+        "rel": "turning",
+        "to_concept": "man",
+        "text": "head turning man"
+      }
+    }
+  ],
+  "3973": [
+    {
+      "from_concept": "musicians",
+      "rel": "playing in",
+      "to_concept": "church",
+      "text": "musicians playing in church",
+      "sk_similar": {
+        "cosine": 0.39609295129776,
+        "from_concept": "stained glass",
+        "rel": "in",
+        "to_concept": "church",
+        "text": "stained glass in church"
+      }
+    }
+  ],
+  "3879": [
+    {
+      "from_concept": "autumn leaves",
+      "rel": "affecting",
+      "to_concept": "water",
+      "text": "autumn leaves affecting water",
+      "sk_similar": {
+        "cosine": 0.35381007194519043,
+        "from_concept": "water",
+        "rel": "flowing in",
+        "to_concept": "river",
+        "text": "water flowing in river"
+      }
+    }
+  ],
+  "3992": [
+    {
+      "from_concept": "man",
+      "rel": "holding",
+      "to_concept": "umbrella",
+      "text": "man holding umbrella",
+      "sk_similar": {
+        "cosine": 0.8242707252502441,
+        "from_concept": "umbrella",
+        "rel": "is held by",
+        "to_concept": "arm",
+        "text": "umbrella is held by arm"
+      }
+    }
+  ],
+  "3868": [
+    {
+      "from_concept": "man",
+      "rel": "laughing",
+      "to_concept": "soccer players",
+      "text": "man laughing soccer players",
+      "sk_similar": {
+        "cosine": 0.5969510078430176,
+        "from_concept": "coach",
+        "rel": "smiling at",
+        "to_concept": "soccer players",
+        "text": "coach smiling at soccer players"
+      }
+    }
+  ],
+  "3846": [
+    {
+      "from_concept": "fireplace",
+      "rel": "heating",
+      "to_concept": "room",
+      "text": "fireplace heating room",
+      "sk_similar": {
+        "cosine": 0.6216763257980347,
+        "from_concept": "fire",
+        "rel": "in side of",
+        "to_concept": "fireplace",
+        "text": "fire in side of fireplace"
+      }
+    }
+  ],
+  "3903": [
+    {
+      "from_concept": "couple",
+      "rel": "dancing",
+      "to_concept": "wooded area",
+      "text": "couple dancing wooded area",
+      "sk_similar": {
+        "cosine": 0.1096058338880539,
+        "from_concept": "hand",
+        "rel": "holding",
+        "to_concept": "waist",
+        "text": "hand holding waist"
+      }
+    }
+  ],
+  "4030": [
+    {
+      "from_concept": "man",
+      "rel": "sitting on",
+      "to_concept": "bed",
+      "text": "man sitting on bed",
+      "sk_similar": {
+        "cosine": 0.18194076418876648,
+        "from_concept": "man",
+        "rel": "drinking with",
+        "to_concept": "woman",
+        "text": "man drinking with woman"
+      }
+    },
+    {
+      "from_concept": "bed",
+      "rel": "made with",
+      "to_concept": "sheets and pillows",
+      "text": "bed made with sheets and pillows",
+      "sk_similar": {
+        "cosine": 0.0
+      }
+    },
+    {
+      "from_concept": "bed",
+      "rel": "located in",
+      "to_concept": "room",
+      "text": "bed located in room",
+      "sk_similar": {
+        "cosine": 0.0
+      }
+    },
+    {
+      "from_concept": "woman",
+      "rel": "sitting on",
+      "to_concept": "bed",
+      "text": "woman sitting on bed",
+      "sk_similar": {
+        "cosine": 0.005762476474046707,
+        "from_concept": "man and woman",
+        "rel": "celebrating",
+        "to_concept": "drinking",
+        "text": "man and woman celebrating drinking"
+      }
+    },
+    {
+      "from_concept": "room",
+      "rel": "with",
+      "to_concept": "mountain view",
+      "text": "room with mountain view",
+      "sk_similar": {
+        "cosine": 0.0
+      }
+    }
+  ],
+  "3982": [
+    {
+      "from_concept": "stove",
+      "rel": "located in",
+      "to_concept": "kitchen",
+      "text": "stove located in kitchen",
+      "sk_similar": {
+        "cosine": 0.6935042142868042,
+        "from_concept": "stove",
+        "rel": "against",
+        "to_concept": "wall",
+        "text": "stove against wall"
+      }
+    },
+    {
+      "from_concept": "stove",
+      "rel": "person would cook on",
+      "to_concept": "burner",
+      "text": "stove person would cook on burner",
+      "sk_similar": {
+        "cosine": 0.0
+      }
+    },
+    {
+      "from_concept": "window",
+      "rel": "person would face",
+      "to_concept": "stove",
+      "text": "window person would face stove",
+      "sk_similar": {
+        "cosine": 0.2460596263408661,
+        "from_concept": "counter",
+        "rel": "against",
+        "to_concept": "wall",
+        "text": "counter against wall"
+      }
+    },
+    {
+      "from_concept": "sink",
+      "rel": "located to the right of",
+      "to_concept": "stove",
+      "text": "sink located to the right of stove",
+      "sk_similar": {
+        "cosine": 0.0
+      }
+    },
+    {
+      "from_concept": "cabinets",
+      "rel": "located behind",
+      "to_concept": "stove",
+      "text": "cabinets located behind stove",
+      "sk_similar": {
+        "cosine": 0.6224731206893921,
+        "from_concept": "knobs of stove",
+        "rel": "along",
+        "to_concept": "counter",
+        "text": "knobs of stove along counter"
+      }
+    },
+    {
+      "from_concept": "person",
+      "rel": "would face",
+      "to_concept": "stove",
+      "text": "person would face stove",
+      "sk_similar": {
+        "cosine": 0.5119507312774658,
+        "from_concept": "burner",
+        "rel": "against",
+        "to_concept": "wall",
+        "text": "burner against wall"
+      }
+    }
+  ],
+  "4003": [
+    {
+      "from_concept": "road",
+      "rel": "wet",
+      "to_concept": "rainfall",
+      "text": "road wet rainfall",
+      "sk_similar": {
+        "cosine": 0.5271944403648376,
+        "from_concept": "water",
+        "rel": "on",
+        "to_concept": "track",
+        "text": "water on track"
+      }
+    },
+    {
+      "from_concept": "field",
+      "rel": "green",
+      "to_concept": "well-maintained",
+      "text": "field green well-maintained",
+      "sk_similar": {
+        "cosine": 0.18688814342021942,
+        "from_concept": "light",
+        "rel": "illuminating",
+        "to_concept": "track",
+        "text": "light illuminating track"
+      }
+    },
+    {
+      "from_concept": "stadium",
+      "rel": "empty",
+      "to_concept": "dark",
+      "text": "stadium empty dark",
+      "sk_similar": {
+        "cosine": 0.4365715980529785,
+        "from_concept": "track",
+        "rel": "within",
+        "to_concept": "stadium",
+        "text": "track within stadium"
+      }
+    },
+    {
+      "from_concept": "sky",
+      "rel": "dark",
+      "to_concept": "cloudy",
+      "text": "sky dark cloudy",
+      "sk_similar": {
+        "cosine": 0.23662322759628296,
+        "from_concept": "water",
+        "rel": "reflecting",
+        "to_concept": "light",
+        "text": "water reflecting light"
+      }
+    }
+  ],
+  "3858": [
+    {
+      "from_concept": "man",
+      "rel": "wearing",
+      "to_concept": "suit",
+      "text": "man wearing suit",
+      "sk_similar": {
+        "cosine": 0.900937557220459,
+        "from_concept": "person",
+        "rel": "wearing",
+        "to_concept": "suit",
+        "text": "person wearing suit"
+      }
+    },
+    {
+      "from_concept": "man",
+      "rel": "stepping on",
+      "to_concept": "bug",
+      "text": "man stepping on bug",
+      "sk_similar": {
+        "cosine": 0.9048124551773071,
+        "from_concept": "person",
+        "rel": "stepping on",
+        "to_concept": "bug",
+        "text": "person stepping on bug"
+      }
+    }
+  ],
+  "3935": [
+    {
+      "from_concept": "person",
+      "rel": "writing in",
+      "to_concept": "book",
+      "text": "person writing in book",
+      "sk_similar": {
+        "cosine": 0.14821401238441467,
+        "from_concept": "sign",
+        "rel": "hanging from",
+        "to_concept": "ceiling",
+        "text": "sign hanging from ceiling"
+      }
+    }
+  ],
+  "3964": [
+    {
+      "from_concept": "football players",
+      "rel": "celebrating",
+      "to_concept": "crowd",
+      "text": "football players celebrating crowd",
+      "sk_similar": {
+        "cosine": 0.7507874965667725,
+        "from_concept": "crowd",
+        "rel": "cheering",
+        "to_concept": "players",
+        "text": "crowd cheering players"
+      }
+    }
+  ],
+  "3929": [
+    {
+      "from_concept": "desk",
+      "rel": "allows for better lighting",
+      "to_concept": "room",
+      "text": "desk allows for better lighting room",
+      "sk_similar": {
+        "cosine": 0.3334724009037018,
+        "from_concept": "wall decoration",
+        "rel": "decorated with",
+        "to_concept": "pc",
+        "text": "wall decoration decorated with pc"
+      }
+    },
+    {
+      "from_concept": "desk",
+      "rel": "located in",
+      "to_concept": "corner",
+      "text": "desk located in corner",
+      "sk_similar": {
+        "cosine": 0.5213731527328491,
+        "from_concept": "drawer",
+        "rel": "against",
+        "to_concept": "wall",
+        "text": "drawer against wall"
+      }
+    },
+    {
+      "from_concept": "desk",
+      "rel": "placed near",
+      "to_concept": "bed",
+      "text": "desk placed near bed",
+      "sk_similar": {
+        "cosine": 0.6004275679588318,
+        "from_concept": "bed",
+        "rel": "standing inside",
+        "to_concept": "room",
+        "text": "bed standing inside room"
+      }
+    },
+    {
+      "from_concept": "desk",
+      "rel": "provides easy access",
+      "to_concept": "person sleeping in bed",
+      "text": "desk provides easy access person sleeping in bed",
+      "sk_similar": {
+        "cosine": 0.3033854365348816,
+        "from_concept": "arm",
+        "rel": "back of",
+        "to_concept": "chair",
+        "text": "arm back of chair"
+      }
+    },
+    {
+      "from_concept": "desk",
+      "rel": "allows for better organization",
+      "to_concept": "items",
+      "text": "desk allows for better organization items",
+      "sk_similar": {
+        "cosine": 0.29616206884384155,
+        "from_concept": "chair",
+        "rel": "has",
+        "to_concept": "leg",
+        "text": "chair has leg"
+      }
+    }
+  ],
+  "4028": [
+    {
+      "from_concept": "ship",
+      "rel": "is part of",
+      "to_concept": "body of water",
+      "text": "ship is part of body of water",
+      "sk_similar": {
+        "cosine": 0.19222491979599,
+        "from_concept": "word",
+        "rel": "composed of",
+        "to_concept": "letter",
+        "text": "word composed of letter"
+      }
+    }
+  ],
+  "4099": [
+    {
+      "from_concept": "referee",
+      "rel": "talking to",
+      "to_concept": "soccer players",
+      "text": "referee talking to soccer players",
+      "sk_similar": {
+        "cosine": 0.6493879556655884,
+        "from_concept": "referee",
+        "rel": "discussing",
+        "to_concept": "yellow card",
+        "text": "referee discussing yellow card"
+      }
+    }
+  ],
+  "4054": [
+    {
+      "from_concept": "man",
+      "rel": "playing",
+      "to_concept": "guitar",
+      "text": "man playing guitar",
+      "sk_similar": {
+        "cosine": 0.1351647526025772,
+        "from_concept": "person",
+        "rel": "watching",
+        "to_concept": "person",
+        "text": "person watching person"
+      }
+    },
+    {
+      "from_concept": "crowd",
+      "rel": "observing",
+      "to_concept": "performance",
+      "text": "crowd observing performance",
+      "sk_similar": {
+        "cosine": 0.683664858341217,
+        "from_concept": "people",
+        "rel": "watching",
+        "to_concept": "person",
+        "text": "people watching person"
+      }
+    }
+  ],
+  "3912": [
+    {
+      "from_concept": "man",
+      "rel": "standing behind",
+      "to_concept": "counter",
+      "text": "man standing behind counter",
+      "sk_similar": {
+        "cosine": 0.5095958113670349,
+        "from_concept": "plate",
+        "rel": "on",
+        "to_concept": "counter",
+        "text": "plate on counter"
+      }
+    },
+    {
+      "from_concept": "counter",
+      "rel": "has",
+      "to_concept": "bowls",
+      "text": "counter has bowls",
+      "sk_similar": {
+        "cosine": 0.7320894002914429,
+        "from_concept": "bowl",
+        "rel": "on",
+        "to_concept": "countertop",
+        "text": "bowl on countertop"
+      }
+    },
+    {
+      "from_concept": "woman",
+      "rel": "standing behind",
+      "to_concept": "counter",
+      "text": "woman standing behind counter",
+      "sk_similar": {
+        "cosine": 0.6899635791778564,
+        "from_concept": "people",
+        "rel": "behind",
+        "to_concept": "counter",
+        "text": "people behind counter"
+      }
+    }
+  ],
+  "4013": [
+    {
+      "from_concept": "santa hat",
+      "rel": "is associated with",
+      "to_concept": "christmas",
+      "text": "santa hat is associated with christmas",
+      "sk_similar": {
+        "cosine": 0.5578675866127014,
+        "from_concept": "hat",
+        "rel": "worn on",
+        "to_concept": "head",
+        "text": "hat worn on head"
+      }
+    },
+    {
+      "from_concept": "gingerbread house",
+      "rel": "is associated with",
+      "to_concept": "christmas",
+      "text": "gingerbread house is associated with christmas",
+      "sk_similar": {
+        "cosine": 0.16112543642520905,
+        "from_concept": "shelf",
+        "rel": "over",
+        "to_concept": "head",
+        "text": "shelf over head"
+      }
+    },
+    {
+      "from_concept": "gingerbread house",
+      "rel": "is in front of",
+      "to_concept": "children",
+      "text": "gingerbread house is in front of children",
+      "sk_similar": {
+        "cosine": 0.09890571981668472,
+        "from_concept": "nose",
+        "rel": "beneath",
+        "to_concept": "eye",
+        "text": "nose beneath eye"
+      }
+    },
+    {
+      "from_concept": "gingerbread house",
+      "rel": "is in",
+      "to_concept": "home",
+      "text": "gingerbread house is in home",
+      "sk_similar": {
+        "cosine": 0.5276813507080078,
+        "from_concept": "gingerbread",
+        "rel": "smiling at",
+        "to_concept": "bottle",
+        "text": "gingerbread smiling at bottle"
+      }
+    },
+    {
+      "from_concept": "gingerbread house",
+      "rel": "is in",
+      "to_concept": "kitchen",
+      "text": "gingerbread house is in kitchen",
+      "sk_similar": {
+        "cosine": 0.256944477558136,
+        "from_concept": "candy",
+        "rel": "holding",
+        "to_concept": "hat",
+        "text": "candy holding hat"
+      }
+    },
+    {
+      "from_concept": "children",
+      "rel": "are wearing",
+      "to_concept": "santa hat",
+      "text": "children are wearing santa hat",
+      "sk_similar": {
+        "cosine": 0.11123598366975784,
+        "from_concept": "eye",
+        "rel": "over",
+        "to_concept": "nose",
+        "text": "eye over nose"
+      }
+    },
+    {
+      "from_concept": "children",
+      "rel": "are sitting",
+      "to_concept": "kitchen counter",
+      "text": "children are sitting kitchen counter",
+      "sk_similar": {
+        "cosine": -0.05145984888076782,
+        "from_concept": "scarf",
+        "rel": "hanging around",
+        "to_concept": "neck",
+        "text": "scarf hanging around neck"
+      }
+    },
+    {
+      "from_concept": "children",
+      "rel": "are celebrating",
+      "to_concept": "christmas",
+      "text": "children are celebrating christmas",
+      "sk_similar": {
+        "cosine": 0.04813942685723305,
+        "from_concept": "bottle",
+        "rel": "stored in",
+        "to_concept": "shelf",
+        "text": "bottle stored in shelf"
+      }
+    },
+    {
+      "from_concept": "children",
+      "rel": "are in",
+      "to_concept": "home",
+      "text": "children are in home",
+      "sk_similar": {
+        "cosine": 0.062049224972724915,
+        "from_concept": "ear",
+        "rel": "apart of",
+        "to_concept": "face",
+        "text": "ear apart of face"
+      }
+    },
+    {
+      "from_concept": "children",
+      "rel": "are in",
+      "to_concept": "kitchen",
+      "text": "children are in kitchen",
+      "sk_similar": {
+        "cosine": 0.03349435329437256,
+        "from_concept": "shirt",
+        "rel": "wearing",
+        "to_concept": "blue",
+        "text": "shirt wearing blue"
+      }
+    },
+    {
+      "from_concept": "children",
+      "rel": "are in",
+      "to_concept": "living room",
+      "text": "children are in living room",
+      "sk_similar": {
+        "cosine": 0.033536478877067566,
+        "from_concept": "eye",
+        "rel": "apart of",
+        "to_concept": "face",
+        "text": "eye apart of face"
+      }
+    }
+  ],
+  "4113": [
+    {
+      "from_concept": "singers",
+      "rel": "performing",
+      "to_concept": "rock song",
+      "text": "singers performing rock song",
+      "sk_similar": {
+        "cosine": 0.13997143507003784,
+        "from_concept": "man",
+        "rel": "dancing on",
+        "to_concept": "stage",
+        "text": "man dancing on stage"
+      }
+    }
+  ],
+  "3905": [
+    {
+      "from_concept": "people",
+      "rel": "watching",
+      "to_concept": "horses and carriages",
+      "text": "people watching horses and carriages",
+      "sk_similar": {
+        "cosine": 0.49059104919433594,
+        "from_concept": "horse",
+        "rel": "riding",
+        "to_concept": "horse",
+        "text": "horse riding horse"
+      }
+    }
+  ],
+  "4060": [
+    {
+      "from_concept": "boy",
+      "rel": "looking up at",
+      "to_concept": "sky",
+      "text": "boy looking up at sky",
+      "sk_similar": {
+        "cosine": 0.4049045145511627,
+        "from_concept": "boy",
+        "rel": "holding up",
+        "to_concept": "flag",
+        "text": "boy holding up flag"
+      }
+    }
+  ],
+  "4127": [
+    {
+      "from_concept": "smokestack",
+      "rel": "emitting",
+      "to_concept": "smoke",
+      "text": "smokestack emitting smoke",
+      "sk_similar": {
+        "cosine": 0.5940683484077454,
+        "from_concept": "smoke",
+        "rel": "polluted",
+        "to_concept": "building",
+        "text": "smoke polluted building"
+      }
+    },
+    {
+      "from_concept": "factory",
+      "rel": "producing",
+      "to_concept": "pollution",
+      "text": "factory producing pollution",
+      "sk_similar": {
+        "cosine": 0.10555485635995865,
+        "from_concept": "building",
+        "rel": "seen",
+        "to_concept": "roof",
+        "text": "building seen roof"
+      }
+    }
+  ],
+  "3824": [
+    {
+      "from_concept": "man",
+      "rel": "wearing",
+      "to_concept": "suit",
+      "text": "man wearing suit",
+      "sk_similar": {
+        "cosine": 0.22455716133117676,
+        "from_concept": "watch",
+        "rel": "on",
+        "to_concept": "sleeve",
+        "text": "watch on sleeve"
+      }
+    },
+    {
+      "from_concept": "man",
+      "rel": "wearing",
+      "to_concept": "tie",
+      "text": "man wearing tie",
+      "sk_similar": {
+        "cosine": 0.5235682129859924,
+        "from_concept": "tie",
+        "rel": "has",
+        "to_concept": "knot",
+        "text": "tie has knot"
+      }
+    },
+    {
+      "from_concept": "man",
+      "rel": "wearing",
+      "to_concept": "watch",
+      "text": "man wearing watch",
+      "sk_similar": {
+        "cosine": 0.7168651819229126,
+        "from_concept": "watch",
+        "rel": "worn around",
+        "to_concept": "hand",
+        "text": "watch worn around hand"
+      }
+    },
+    {
+      "from_concept": "man",
+      "rel": "wearing",
+      "to_concept": "bracelets",
+      "text": "man wearing bracelets",
+      "sk_similar": {
+        "cosine": 0.49313145875930786,
+        "from_concept": "watch",
+        "rel": "worn around",
+        "to_concept": "wrist",
+        "text": "watch worn around wrist"
+      }
+    },
+    {
+      "from_concept": "man",
+      "rel": "holding",
+      "to_concept": "glass",
+      "text": "man holding glass",
+      "sk_similar": {
+        "cosine": 0.48184284567832947,
+        "from_concept": "cup",
+        "rel": "held in",
+        "to_concept": "hand",
+        "text": "cup held in hand"
+      }
+    },
+    {
+      "from_concept": "man",
+      "rel": "wearing",
+      "to_concept": "pocket square",
+      "text": "man wearing pocket square",
+      "sk_similar": {
+        "cosine": 0.47900018095970154,
+        "from_concept": "hankerchief",
+        "rel": "in",
+        "to_concept": "pocket",
+        "text": "hankerchief in pocket"
+      }
+    }
+  ],
+  "3998": [
+    {
+      "from_concept": "gas stove",
+      "rel": "in",
+      "to_concept": "kitchen",
+      "text": "gas stove in kitchen",
+      "sk_similar": {
+        "cosine": 0.8414055109024048,
+        "from_concept": "stove",
+        "rel": "inside of",
+        "to_concept": "kitchen",
+        "text": "stove inside of kitchen"
+      }
+    }
+  ],
+  "3981": [
+    {
+      "from_concept": "people",
+      "rel": "gathered under",
+      "to_concept": "tree",
+      "text": "people gathered under tree",
+      "sk_similar": {
+        "cosine": 0.4285997152328491,
+        "from_concept": "camera image",
+        "rel": "pointing at",
+        "to_concept": "tree",
+        "text": "camera image pointing at tree"
+      }
+    }
+  ],
+  "3866": [
+    {
+      "from_concept": "people",
+      "rel": "enjoying their time together",
+      "to_concept": "car",
+      "text": "people enjoying their time together car",
+      "sk_similar": {
+        "cosine": 0.5381853580474854,
+        "from_concept": "men",
+        "rel": "sitting in",
+        "to_concept": "car",
+        "text": "men sitting in car"
+      }
+    }
+  ],
+  "4084": [
+    {
+      "from_concept": "face paint",
+      "rel": "is part of",
+      "to_concept": "cultural event",
+      "text": "face paint is part of cultural event",
+      "sk_similar": {
+        "cosine": 0.4347200095653534,
+        "from_concept": "boy",
+        "rel": "painted in",
+        "to_concept": "blue",
+        "text": "boy painted in blue"
+      }
+    },
+    {
+      "from_concept": "boy",
+      "rel": "sitting in",
+      "to_concept": "tree",
+      "text": "boy sitting in tree",
+      "sk_similar": {
+        "cosine": 0.7230899333953857,
+        "from_concept": "boy",
+        "rel": "posing in",
+        "to_concept": "tree trunk",
+        "text": "boy posing in tree trunk"
+      }
+    }
+  ],
+  "3970": [
+    {
+      "from_concept": "referee",
+      "rel": "speaking to",
+      "to_concept": "players",
+      "text": "referee speaking to players",
+      "sk_similar": {
+        "cosine": 0.5830610990524292,
+        "from_concept": "players in group",
+        "rel": "standing in front",
+        "to_concept": "referee",
+        "text": "players in group standing in front referee"
+      }
+    }
+  ],
+  "4109": [
+    {
+      "from_concept": "man",
+      "rel": "looking at",
+      "to_concept": "laptop",
+      "text": "man looking at laptop",
+      "sk_similar": {
+        "cosine": 0.9999998807907104,
+        "from_concept": "man",
+        "rel": "looking at",
+        "to_concept": "laptop",
+        "text": "man looking at laptop"
+      }
+    }
+  ],
+  "4025": [
+    {
+      "from_concept": "man",
+      "rel": "wearing",
+      "to_concept": "suit",
+      "text": "man wearing suit",
+      "sk_similar": {
+        "cosine": 0.40639474987983704,
+        "from_concept": "man",
+        "rel": "wearing",
+        "to_concept": "hat",
+        "text": "man wearing hat"
+      }
+    },
+    {
+      "from_concept": "man",
+      "rel": "smiling",
+      "to_concept": "microphone",
+      "text": "man smiling microphone",
+      "sk_similar": {
+        "cosine": 0.1720326840877533,
+        "from_concept": "head",
+        "rel": "covered with",
+        "to_concept": "hat",
+        "text": "head covered with hat"
+      }
+    },
+    {
+      "from_concept": "background",
+      "rel": "features",
+      "to_concept": "curtain",
+      "text": "background features curtain",
+      "sk_similar": {
+        "cosine": 0.28777581453323364,
+        "from_concept": "light",
+        "rel": "displayed on",
+        "to_concept": "wall",
+        "text": "light displayed on wall"
+      }
+    },
+    {
+      "from_concept": "curtain",
+      "rel": "has",
+      "to_concept": "v",
+      "text": "curtain has v",
+      "sk_similar": {
+        "cosine": 0.27679598331451416,
+        "from_concept": "floor",
+        "rel": "against",
+        "to_concept": "wall",
+        "text": "floor against wall"
+      }
+    }
+  ],
+  "4145": [
+    {
+      "from_concept": "man",
+      "rel": "celebrating with",
+      "to_concept": "soccer team",
+      "text": "man celebrating with soccer team",
+      "sk_similar": {
+        "cosine": 0.3290945589542389,
+        "from_concept": "man",
+        "rel": "smiling on",
+        "to_concept": "teeth",
+        "text": "man smiling on teeth"
+      }
+    }
+  ],
+  "4108": [
+    {
+      "from_concept": "tree",
+      "rel": "casting shadow",
+      "to_concept": "grass",
+      "text": "tree casting shadow grass",
+      "sk_similar": {
+        "cosine": 0.8720488548278809,
+        "from_concept": "tree",
+        "rel": "casting",
+        "to_concept": "shadow",
+        "text": "tree casting shadow"
+      }
+    }
+  ],
+  "3881": [
+    {
+      "from_concept": "beauty clinic",
+      "rel": "offers",
+      "to_concept": "services",
+      "text": "beauty clinic offers services",
+      "sk_similar": {
+        "cosine": 0.9793403148651123,
+        "from_concept": "beauty clinic",
+        "rel": "offering",
+        "to_concept": "services",
+        "text": "beauty clinic offering services"
+      }
+    }
+  ],
+  "4081": [
+    {
+      "from_concept": "pool",
+      "rel": "made of",
+      "to_concept": "cement or concrete",
+      "text": "pool made of cement or concrete",
+      "sk_similar": {
+        "cosine": 0.6840579509735107,
+        "from_concept": "pool",
+        "rel": "made of",
+        "to_concept": "tile",
+        "text": "pool made of tile"
+      }
+    }
+  ],
+  "3930": [
+    {
+      "from_concept": "pearls",
+      "rel": "part of",
+      "to_concept": "necklace",
+      "text": "pearls part of necklace",
+      "sk_similar": {
+        "cosine": 0.2981235682964325,
+        "from_concept": "decorations",
+        "rel": "on",
+        "to_concept": "decoration",
+        "text": "decorations on decoration"
+      }
+    },
+    {
+      "from_concept": "pearls",
+      "rel": "adds",
+      "to_concept": "elegance",
+      "text": "pearls adds elegance",
+      "sk_similar": {
+        "cosine": 0.28936392068862915,
+        "from_concept": "top",
+        "rel": "of",
+        "to_concept": "decoration",
+        "text": "top of decoration"
+      }
+    },
+    {
+      "from_concept": "pearls",
+      "rel": "adds",
+      "to_concept": "versatility",
+      "text": "pearls adds versatility",
+      "sk_similar": {
+        "cosine": 0.05495169386267662,
+        "from_concept": "circle",
+        "rel": "on",
+        "to_concept": "top",
+        "text": "circle on top"
+      }
+    },
+    {
+      "from_concept": "pearls",
+      "rel": "adds",
+      "to_concept": "charm",
+      "text": "pearls adds charm",
+      "sk_similar": {
+        "cosine": 0.14532974362373352,
+        "from_concept": "circle",
+        "rel": "on",
+        "to_concept": "decoration",
+        "text": "circle on decoration"
+      }
+    },
+    {
+      "from_concept": "wire",
+      "rel": "part of",
+      "to_concept": "necklace",
+      "text": "wire part of necklace",
+      "sk_similar": {
+        "cosine": 0.43123215436935425,
+        "from_concept": "rope",
+        "rel": "has",
+        "to_concept": "chain",
+        "text": "rope has chain"
+      }
+    },
+    {
+      "from_concept": "wire",
+      "rel": "adds",
+      "to_concept": "sophistication",
+      "text": "wire adds sophistication",
+      "sk_similar": {
+        "cosine": 0.17611515522003174,
+        "from_concept": "design",
+        "rel": "on",
+        "to_concept": "decoration",
+        "text": "design on decoration"
+      }
+    },
+    {
+      "from_concept": "wire",
+      "rel": "adds",
+      "to_concept": "uniqueness",
+      "text": "wire adds uniqueness",
+      "sk_similar": {
+        "cosine": 0.2855135202407837,
+        "from_concept": "chain",
+        "rel": "on",
+        "to_concept": "chain",
+        "text": "chain on chain"
+      }
+    },
+    {
+      "from_concept": "wire",
+      "rel": "adds",
+      "to_concept": "charm",
+      "text": "wire adds charm",
+      "sk_similar": {
+        "cosine": 0.3474563658237457,
+        "from_concept": "decoration",
+        "rel": "on",
+        "to_concept": "decoration",
+        "text": "decoration on decoration"
+      }
+    },
+    {
+      "from_concept": "ornate gold chain",
+      "rel": "part of",
+      "to_concept": "necklace",
+      "text": "ornate gold chain part of necklace",
+      "sk_similar": {
+        "cosine": 0.5119285583496094,
+        "from_concept": "circle",
+        "rel": "on",
+        "to_concept": "chain",
+        "text": "circle on chain"
+      }
+    },
+    {
+      "from_concept": "ornate gold chain",
+      "rel": "adds",
+      "to_concept": "luxury",
+      "text": "ornate gold chain adds luxury",
+      "sk_similar": {
+        "cosine": 0.4281683564186096,
+        "from_concept": "chain",
+        "rel": "has",
+        "to_concept": "rope",
+        "text": "chain has rope"
+      }
+    },
+    {
+      "from_concept": "ornate gold chain",
+      "rel": "adds",
+      "to_concept": "versatility",
+      "text": "ornate gold chain adds versatility",
+      "sk_similar": {
+        "cosine": 0.590128481388092,
+        "from_concept": "design",
+        "rel": "on",
+        "to_concept": "chain",
+        "text": "design on chain"
+      }
+    },
+    {
+      "from_concept": "ornate gold chain",
+      "rel": "adds",
+      "to_concept": "charm",
+      "text": "ornate gold chain adds charm",
+      "sk_similar": {
+        "cosine": 0.6563681960105896,
+        "from_concept": "decoration",
+        "rel": "below",
+        "to_concept": "chain",
+        "text": "decoration below chain"
+      }
+    }
+  ],
+  "4130": [
+    {
+      "from_concept": "man",
+      "rel": "wearing",
+      "to_concept": "sunglasses",
+      "text": "man wearing sunglasses",
+      "sk_similar": {
+        "cosine": 0.783110499382019,
+        "from_concept": "man",
+        "rel": "dressed",
+        "to_concept": "glasses",
+        "text": "man dressed glasses"
+      }
+    },
+    {
+      "from_concept": "man",
+      "rel": "smiling",
+      "to_concept": "shirt",
+      "text": "man smiling shirt",
+      "sk_similar": {
+        "cosine": 0.6325832009315491,
+        "from_concept": "man",
+        "rel": "in",
+        "to_concept": "shirts",
+        "text": "man in shirts"
+      }
+    },
+    {
+      "from_concept": "man",
+      "rel": "looking to the side",
+      "to_concept": "event",
+      "text": "man looking to the side event",
+      "sk_similar": {
+        "cosine": 0.36259984970092773,
+        "from_concept": "man",
+        "rel": "wearing striped",
+        "to_concept": "shirt",
+        "text": "man wearing striped shirt"
+      }
+    }
+  ]
+}

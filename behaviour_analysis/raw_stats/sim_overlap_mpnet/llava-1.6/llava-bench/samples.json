@@ -1,0 +1,3351 @@
+{
+  "1": [
+    {
+      "from_concept": "mauna kea volcano",
+      "rel": "is part of",
+      "to_concept": "hawaii",
+      "text": "mauna kea volcano is part of hawaii",
+      "sk_similar": {
+        "cosine": 0.4618489146232605,
+        "from_concept": "mountain",
+        "rel": "far from",
+        "to_concept": "volcano",
+        "text": "mountain far from volcano"
+      }
+    },
+    {
+      "from_concept": "clear blue sky",
+      "rel": "contrasts with",
+      "to_concept": "brown and green slopes",
+      "text": "clear blue sky contrasts with brown and green slopes",
+      "sk_similar": {
+        "cosine": 0.32525572180747986,
+        "from_concept": "grass",
+        "rel": "growing on",
+        "to_concept": "mountain",
+        "text": "grass growing on mountain"
+      }
+    },
+    {
+      "from_concept": "ocean",
+      "rel": "forms base of",
+      "to_concept": "image",
+      "text": "ocean forms base of image",
+      "sk_similar": {
+        "cosine": 0.38769054412841797,
+        "from_concept": "seaport",
+        "rel": "beside",
+        "to_concept": "volcano",
+        "text": "seaport beside volcano"
+      }
+    },
+    {
+      "from_concept": "lush greenery",
+      "rel": "is part of",
+      "to_concept": "landscape",
+      "text": "lush greenery is part of landscape",
+      "sk_similar": {
+        "cosine": 0.4577391445636749,
+        "from_concept": "mountain",
+        "rel": "covered in",
+        "to_concept": "grass",
+        "text": "mountain covered in grass"
+      }
+    },
+    {
+      "from_concept": "a few buildings",
+      "rel": "is part of",
+      "to_concept": "landscape",
+      "text": "a few buildings is part of landscape",
+      "sk_similar": {
+        "cosine": 0.35607773065567017,
+        "from_concept": "hill",
+        "rel": "covered in",
+        "to_concept": "grass",
+        "text": "hill covered in grass"
+      }
+    },
+    {
+      "from_concept": "deep blue ocean waves",
+      "rel": "gently lapping against",
+      "to_concept": "shore",
+      "text": "deep blue ocean waves gently lapping against shore",
+      "sk_similar": {
+        "cosine": 0.4710390269756317,
+        "from_concept": "beach",
+        "rel": "beside",
+        "to_concept": "road",
+        "text": "beach beside road"
+      }
+    },
+    {
+      "from_concept": "perspective",
+      "rel": "taken from",
+      "to_concept": "high vantage point",
+      "text": "perspective taken from high vantage point",
+      "sk_similar": {
+        "cosine": 0.0
+      }
+    },
+    {
+      "from_concept": "volcano",
+      "rel": "has unique shape",
+      "to_concept": "mauna kea",
+      "text": "volcano has unique shape mauna kea",
+      "sk_similar": {
+        "cosine": 0.5230362415313721,
+        "from_concept": "tree",
+        "rel": "growing on side of",
+        "to_concept": "volcano",
+        "text": "tree growing on side of volcano"
+      }
+    },
+    {
+      "from_concept": "terrain",
+      "rel": "is diverse",
+      "to_concept": "mauna kea",
+      "text": "terrain is diverse mauna kea",
+      "sk_similar": {
+        "cosine": 0.3965933918952942,
+        "from_concept": "village",
+        "rel": "beside",
+        "to_concept": "volcano",
+        "text": "village beside volcano"
+      }
+    },
+    {
+      "from_concept": "human presence",
+      "rel": "is part of",
+      "to_concept": "landscape",
+      "text": "human presence is part of landscape",
+      "sk_similar": {
+        "cosine": 0.2072669267654419,
+        "from_concept": "grass",
+        "rel": "growing on",
+        "to_concept": "volcano",
+        "text": "grass growing on volcano"
+      }
+    },
+    {
+      "from_concept": "natural beauty",
+      "rel": "showcased by",
+      "to_concept": "image",
+      "text": "natural beauty showcased by image",
+      "sk_similar": {
+        "cosine": 0.2359457165002823,
+        "from_concept": "road",
+        "rel": "beside",
+        "to_concept": "volcano",
+        "text": "road beside volcano"
+      }
+    }
+  ],
+  "2": [
+    {
+      "from_concept": "rounded hill",
+      "rel": "affected by",
+      "to_concept": "volcanic activity",
+      "text": "rounded hill affected by volcanic activity",
+      "sk_similar": {
+        "cosine": 0.5244683027267456,
+        "from_concept": "tree",
+        "rel": "growing on side of",
+        "to_concept": "volcano",
+        "text": "tree growing on side of volcano"
+      }
+    },
+    {
+      "from_concept": "rounded hill",
+      "rel": "affected by",
+      "to_concept": "weathering and erosion",
+      "text": "rounded hill affected by weathering and erosion",
+      "sk_similar": {
+        "cosine": 0.49907636642456055,
+        "from_concept": "mountain",
+        "rel": "covered in",
+        "to_concept": "grass",
+        "text": "mountain covered in grass"
+      }
+    },
+    {
+      "from_concept": "rounded hill",
+      "rel": "affected by",
+      "to_concept": "tectonic activity",
+      "text": "rounded hill affected by tectonic activity",
+      "sk_similar": {
+        "cosine": 0.39220374822616577,
+        "from_concept": "beach",
+        "rel": "besides",
+        "to_concept": "mountain",
+        "text": "beach besides mountain"
+      }
+    },
+    {
+      "from_concept": "rounded hill",
+      "rel": "formed by",
+      "to_concept": "island formation",
+      "text": "rounded hill formed by island formation",
+      "sk_similar": {
+        "cosine": 0.36542704701423645,
+        "from_concept": "trees",
+        "rel": "growing beside",
+        "to_concept": "mountain",
+        "text": "trees growing beside mountain"
+      }
+    },
+    {
+      "from_concept": "rounded hill",
+      "rel": "affected by",
+      "to_concept": "coastal area",
+      "text": "rounded hill affected by coastal area",
+      "sk_similar": {
+        "cosine": 0.35442107915878296,
+        "from_concept": "tree",
+        "rel": "on opposite side of",
+        "to_concept": "mountain",
+        "text": "tree on opposite side of mountain"
+      }
+    },
+    {
+      "from_concept": "rounded hill",
+      "rel": "affected by",
+      "to_concept": "ocean",
+      "text": "rounded hill affected by ocean",
+      "sk_similar": {
+        "cosine": 0.3426915109157562,
+        "from_concept": "grass",
+        "rel": "growing on",
+        "to_concept": "volcano",
+        "text": "grass growing on volcano"
+      }
+    },
+    {
+      "from_concept": "rounded hill",
+      "rel": "affected by",
+      "to_concept": "surrounding landscape",
+      "text": "rounded hill affected by surrounding landscape",
+      "sk_similar": {
+        "cosine": 0.430199533700943,
+        "from_concept": "grass",
+        "rel": "growing on",
+        "to_concept": "mountain",
+        "text": "grass growing on mountain"
+      }
+    },
+    {
+      "from_concept": "rounded hill",
+      "rel": "affected by",
+      "to_concept": "vegetation",
+      "text": "rounded hill affected by vegetation",
+      "sk_similar": {
+        "cosine": 0.731110155582428,
+        "from_concept": "hill",
+        "rel": "covered in",
+        "to_concept": "grass",
+        "text": "hill covered in grass"
+      }
+    }
+  ],
+  "3": [
+    {
+      "from_concept": "big island of hawaii",
+      "rel": "is known for",
+      "to_concept": "unique geological features",
+      "text": "big island of hawaii is known for unique geological features",
+      "sk_similar": {
+        "cosine": 0.16703960299491882,
+        "from_concept": "trees and bushes",
+        "rel": "growing inside",
+        "to_concept": "mountain hillside",
+        "text": "trees and bushes growing inside mountain hillside"
+      }
+    },
+    {
+      "from_concept": "big island of hawaii",
+      "rel": "has a diverse ecosystem",
+      "to_concept": "mauna kea",
+      "text": "big island of hawaii has a diverse ecosystem mauna kea",
+      "sk_similar": {
+        "cosine": 0.2935478985309601,
+        "from_concept": "city",
+        "rel": "near by",
+        "to_concept": "mountain",
+        "text": "city near by mountain"
+      }
+    },
+    {
+      "from_concept": "big island of hawaii",
+      "rel": "is home to",
+      "to_concept": "mauna kea observatory",
+      "text": "big island of hawaii is home to mauna kea observatory",
+      "sk_similar": {
+        "cosine": 0.3456236720085144,
+        "from_concept": "tree",
+        "rel": "growing on side of",
+        "to_concept": "volcano",
+        "text": "tree growing on side of volcano"
+      }
+    },
+    {
+      "from_concept": "mauna kea observatory",
+      "rel": "is a world-renowned research facility",
+      "to_concept": "mauna kea",
+      "text": "mauna kea observatory is a world-renowned research facility mauna kea",
+      "sk_similar": {
+        "cosine": 0.23831811547279358,
+        "from_concept": "grass",
+        "rel": "growing on",
+        "to_concept": "volcano",
+        "text": "grass growing on volcano"
+      }
+    },
+    {
+      "from_concept": "hawaiians",
+      "rel": "have a deep connection to the land",
+      "to_concept": "big island of hawaii",
+      "text": "hawaiians have a deep connection to the land big island of hawaii",
+      "sk_similar": {
+        "cosine": 0.07004448771476746,
+        "from_concept": "mountain",
+        "rel": "covered in",
+        "to_concept": "grass",
+        "text": "mountain covered in grass"
+      }
+    }
+  ],
+  "4": [
+    {
+      "from_concept": "dragon fruit",
+      "rel": "has thick skin",
+      "to_concept": "spiky skin",
+      "text": "dragon fruit has thick skin spiky skin",
+      "sk_similar": {
+        "cosine": 0.41088637709617615,
+        "from_concept": "green stem",
+        "rel": "on",
+        "to_concept": "mangosteen",
+        "text": "green stem on mangosteen"
+      }
+    },
+    {
+      "from_concept": "dragon fruit",
+      "rel": "is cut open to reveal interior",
+      "to_concept": "flesh",
+      "text": "dragon fruit is cut open to reveal interior flesh",
+      "sk_similar": {
+        "cosine": 0.30475208163261414,
+        "from_concept": "leaf",
+        "rel": "growing from",
+        "to_concept": "mangosteen",
+        "text": "leaf growing from mangosteen"
+      }
+    },
+    {
+      "from_concept": "dragon fruit",
+      "rel": "is cut open to reveal seeds",
+      "to_concept": "seeds",
+      "text": "dragon fruit is cut open to reveal seeds seeds",
+      "sk_similar": {
+        "cosine": 0.0
+      }
+    },
+    {
+      "from_concept": "dragon fruit",
+      "rel": "is cut open",
+      "to_concept": "fruit",
+      "text": "dragon fruit is cut open fruit",
+      "sk_similar": {
+        "cosine": 0.4584280848503113,
+        "from_concept": "cut mangosteen",
+        "rel": "next to",
+        "to_concept": "thick purple rind",
+        "text": "cut mangosteen next to thick purple rind"
+      }
+    },
+    {
+      "from_concept": "dragon fruit",
+      "rel": "is presented for consumption or display",
+      "to_concept": "arrangement",
+      "text": "dragon fruit is presented for consumption or display arrangement",
+      "sk_similar": {
+        "cosine": 0.36016836762428284,
+        "from_concept": "mangosteen",
+        "rel": "next to",
+        "to_concept": "mangosteens",
+        "text": "mangosteen next to mangosteens"
+      }
+    },
+    {
+      "from_concept": "dragon fruit",
+      "rel": "is placed on a wooden surface",
+      "to_concept": "surface",
+      "text": "dragon fruit is placed on a wooden surface surface",
+      "sk_similar": {
+        "cosine": 0.5578954815864563,
+        "from_concept": "mangosteen",
+        "rel": "placed on",
+        "to_concept": "table",
+        "text": "mangosteen placed on table"
+      }
+    },
+    {
+      "from_concept": "dragon fruit",
+      "rel": "is part of a group of four pieces",
+      "to_concept": "pieces",
+      "text": "dragon fruit is part of a group of four pieces pieces",
+      "sk_similar": {
+        "cosine": 0.3452443778514862,
+        "from_concept": "mangosteen",
+        "rel": "resting on",
+        "to_concept": "mangosteen",
+        "text": "mangosteen resting on mangosteen"
+      }
+    },
+    {
+      "from_concept": "dragon fruit",
+      "rel": "is presented in a close-up view",
+      "to_concept": "image",
+      "text": "dragon fruit is presented in a close-up view image",
+      "sk_similar": {
+        "cosine": 0.0
+      }
+    }
+  ],
+  "5": [
+    {
+      "from_concept": "fruits",
+      "rel": "placed on",
+      "to_concept": "wooden surface",
+      "text": "fruits placed on wooden surface",
+      "sk_similar": {
+        "cosine": 0.7516188621520996,
+        "from_concept": "fruit",
+        "rel": "on top",
+        "to_concept": "table",
+        "text": "fruit on top table"
+      }
+    },
+    {
+      "from_concept": "fruits",
+      "rel": "ripe",
+      "to_concept": "purple color",
+      "text": "fruits ripe purple color",
+      "sk_similar": {
+        "cosine": 0.4422001838684082,
+        "from_concept": "green stem",
+        "rel": "on",
+        "to_concept": "mangosteen",
+        "text": "green stem on mangosteen"
+      }
+    },
+    {
+      "from_concept": "fruits",
+      "rel": "round",
+      "to_concept": "shape",
+      "text": "fruits round shape",
+      "sk_similar": {
+        "cosine": 0.3654769957065582,
+        "from_concept": "leaf",
+        "rel": "growing from",
+        "to_concept": "mangosteen",
+        "text": "leaf growing from mangosteen"
+      }
+    },
+    {
+      "from_concept": "fruits",
+      "rel": "multiple",
+      "to_concept": "four",
+      "text": "fruits multiple four",
+      "sk_similar": {
+        "cosine": 0.5732676982879639,
+        "from_concept": "table",
+        "rel": "carrying",
+        "to_concept": "fruit",
+        "text": "table carrying fruit"
+      }
+    },
+    {
+      "from_concept": "fruits",
+      "rel": "to be cut open",
+      "to_concept": "uncut",
+      "text": "fruits to be cut open uncut",
+      "sk_similar": {
+        "cosine": 0.7751814126968384,
+        "from_concept": "fruit",
+        "rel": "cutting",
+        "to_concept": "half",
+        "text": "fruit cutting half"
+      }
+    },
+    {
+      "from_concept": "fruits",
+      "rel": "to be eaten",
+      "to_concept": "ripe",
+      "text": "fruits to be eaten ripe",
+      "sk_similar": {
+        "cosine": 0.3736886978149414,
+        "from_concept": "mangosteen",
+        "rel": "on",
+        "to_concept": "table",
+        "text": "mangosteen on table"
+      }
+    }
+  ],
+  "6": [
+    {
+      "from_concept": "eggplant",
+      "rel": "arranged",
+      "to_concept": "wooden surface",
+      "text": "eggplant arranged wooden surface",
+      "sk_similar": {
+        "cosine": 0.3323359787464142,
+        "from_concept": "mangosteen",
+        "rel": "on",
+        "to_concept": "table",
+        "text": "mangosteen on table"
+      }
+    },
+    {
+      "from_concept": "eggplant",
+      "rel": "has red core",
+      "to_concept": "other eggplants",
+      "text": "eggplant has red core other eggplants",
+      "sk_similar": {
+        "cosine": 0.360176146030426,
+        "from_concept": "green stem",
+        "rel": "on",
+        "to_concept": "mangosteen",
+        "text": "green stem on mangosteen"
+      }
+    },
+    {
+      "from_concept": "eggplant",
+      "rel": "is part of",
+      "to_concept": "arrangement",
+      "text": "eggplant is part of arrangement",
+      "sk_similar": {
+        "cosine": 0.37591469287872314,
+        "from_concept": "leaves",
+        "rel": "on top",
+        "to_concept": "fruit",
+        "text": "leaves on top fruit"
+      }
+    },
+    {
+      "from_concept": "eggplant",
+      "rel": "is part of",
+      "to_concept": "cut-open eggplant",
+      "text": "eggplant is part of cut-open eggplant",
+      "sk_similar": {
+        "cosine": 0.39753782749176025,
+        "from_concept": "fruit",
+        "rel": "sliced into",
+        "to_concept": "halves",
+        "text": "fruit sliced into halves"
+      }
+    }
+  ],
+  "8": [
+    {
+      "from_concept": "dog",
+      "rel": "sitting in pose reminiscent of",
+      "to_concept": "mona lisa",
+      "text": "dog sitting in pose reminiscent of mona lisa",
+      "sk_similar": {
+        "cosine": 0.5531922578811646,
+        "from_concept": "dog",
+        "rel": "posing in front of",
+        "to_concept": "landscape",
+        "text": "dog posing in front of landscape"
+      }
+    },
+    {
+      "from_concept": "dog",
+      "rel": "painted in style of",
+      "to_concept": "renaissance period",
+      "text": "dog painted in style of renaissance period",
+      "sk_similar": {
+        "cosine": 0.479533851146698,
+        "from_concept": "dog",
+        "rel": "resembles",
+        "to_concept": "woman",
+        "text": "dog resembles woman"
+      }
+    },
+    {
+      "from_concept": "dog",
+      "rel": "created by artist",
+      "to_concept": "leonardo da vinci",
+      "text": "dog created by artist leonardo da vinci",
+      "sk_similar": {
+        "cosine": 0.4494001567363739,
+        "from_concept": "head",
+        "rel": "belonging to",
+        "to_concept": "dog",
+        "text": "head belonging to dog"
+      }
+    }
+  ],
+  "10": [
+    {
+      "from_concept": "dog",
+      "rel": "wearing",
+      "to_concept": "renaissance-style dress",
+      "text": "dog wearing renaissance-style dress",
+      "sk_similar": {
+        "cosine": 0.4617688059806824,
+        "from_concept": "paw",
+        "rel": "belonging to",
+        "to_concept": "dog",
+        "text": "paw belonging to dog"
+      }
+    },
+    {
+      "from_concept": "dog",
+      "rel": "wearing",
+      "to_concept": "headscarf",
+      "text": "dog wearing headscarf",
+      "sk_similar": {
+        "cosine": 0.6933342218399048,
+        "from_concept": "head",
+        "rel": "belonging to",
+        "to_concept": "dog",
+        "text": "head belonging to dog"
+      }
+    }
+  ],
+  "14": [
+    {
+      "from_concept": "dog",
+      "rel": "lying down",
+      "to_concept": "floor",
+      "text": "dog lying down floor",
+      "sk_similar": {
+        "cosine": 0.9495861530303955,
+        "from_concept": "dog",
+        "rel": "laying on",
+        "to_concept": "floor",
+        "text": "dog laying on floor"
+      }
+    },
+    {
+      "from_concept": "dog",
+      "rel": "sleeping",
+      "to_concept": "monday",
+      "text": "dog sleeping monday",
+      "sk_similar": {
+        "cosine": 0.45859020948410034,
+        "from_concept": "pet",
+        "rel": "resting on",
+        "to_concept": "wood",
+        "text": "pet resting on wood"
+      }
+    }
+  ],
+  "17": [
+    {
+      "from_concept": "woman",
+      "rel": "wearing",
+      "to_concept": "dress",
+      "text": "woman wearing dress",
+      "sk_similar": {
+        "cosine": 0.13708099722862244,
+        "from_concept": "hair",
+        "rel": "around",
+        "to_concept": "shirt",
+        "text": "hair around shirt"
+      }
+    },
+    {
+      "from_concept": "woman",
+      "rel": "wearing",
+      "to_concept": "high collar",
+      "text": "woman wearing high collar",
+      "sk_similar": {
+        "cosine": 0.1994147151708603,
+        "from_concept": "nose",
+        "rel": "below",
+        "to_concept": "glass",
+        "text": "nose below glass"
+      }
+    },
+    {
+      "from_concept": "landscape",
+      "rel": "featuring",
+      "to_concept": "river and castle",
+      "text": "landscape featuring river and castle",
+      "sk_similar": {
+        "cosine": -0.03559368476271629,
+        "from_concept": "glass",
+        "rel": "over",
+        "to_concept": "nose",
+        "text": "glass over nose"
+      }
+    },
+    {
+      "from_concept": "painting",
+      "rel": "done in",
+      "to_concept": "renaissance style",
+      "text": "painting done in renaissance style",
+      "sk_similar": {
+        "cosine": 0.771588921546936,
+        "from_concept": "renaissance",
+        "rel": "painted",
+        "to_concept": "woman",
+        "text": "renaissance painted woman"
+      }
+    },
+    {
+      "from_concept": "painting",
+      "rel": "a prime example of",
+      "to_concept": "renaissance art genre",
+      "text": "painting a prime example of renaissance art genre",
+      "sk_similar": {
+        "cosine": 0.2928568422794342,
+        "from_concept": "smiling",
+        "rel": "painted",
+        "to_concept": "lady",
+        "text": "smiling painted lady"
+      }
+    },
+    {
+      "from_concept": "painting",
+      "rel": "a testament to",
+      "to_concept": "artist's skill and artistic conventions of the time",
+      "text": "painting a testament to artist's skill and artistic conventions of the time",
+      "sk_similar": {
+        "cosine": 0.2595382332801819,
+        "from_concept": "lady",
+        "rel": "posing on",
+        "to_concept": "portrait",
+        "text": "lady posing on portrait"
+      }
+    },
+    {
+      "from_concept": "renaissance style",
+      "rel": "characterized by",
+      "to_concept": "use of light and shadow and detailed rendering of subject's features",
+      "text": "renaissance style characterized by use of light and shadow and detailed rendering of subject's features",
+      "sk_similar": {
+        "cosine": 0.19771485030651093,
+        "from_concept": "hair",
+        "rel": "over",
+        "to_concept": "eye",
+        "text": "hair over eye"
+      }
+    }
+  ],
+  "18": [
+    {
+      "from_concept": "mona lisa",
+      "rel": "long hair",
+      "to_concept": "sfumato technique",
+      "text": "mona lisa long hair sfumato technique",
+      "sk_similar": {
+        "cosine": 0.3135700225830078,
+        "from_concept": "hair",
+        "rel": "above",
+        "to_concept": "shirt",
+        "text": "hair above shirt"
+      }
+    },
+    {
+      "from_concept": "mona lisa",
+      "rel": "long hair",
+      "to_concept": "chiaroscuro",
+      "text": "mona lisa long hair chiaroscuro",
+      "sk_similar": {
+        "cosine": 0.395210862159729,
+        "from_concept": "hair",
+        "rel": "of",
+        "to_concept": "eye",
+        "text": "hair of eye"
+      }
+    }
+  ],
+  "19": [
+    {
+      "from_concept": "space needle",
+      "rel": "overlooks",
+      "to_concept": "cityscape",
+      "text": "space needle overlooks cityscape",
+      "sk_similar": {
+        "cosine": 0.7636004090309143,
+        "from_concept": "space needle",
+        "rel": "towering over",
+        "to_concept": "buildings",
+        "text": "space needle towering over buildings"
+      }
+    },
+    {
+      "from_concept": "space needle",
+      "rel": "reaches",
+      "to_concept": "sky",
+      "text": "space needle reaches sky",
+      "sk_similar": {
+        "cosine": 0.7784075736999512,
+        "from_concept": "space needle",
+        "rel": "in front of",
+        "to_concept": "bright blue sky",
+        "text": "space needle in front of bright blue sky"
+      }
+    },
+    {
+      "from_concept": "space needle",
+      "rel": "architectural design",
+      "to_concept": "buildings",
+      "text": "space needle architectural design buildings",
+      "sk_similar": {
+        "cosine": 0.5619266629219055,
+        "from_concept": "space needle",
+        "rel": "next to",
+        "to_concept": "small satellites",
+        "text": "space needle next to small satellites"
+      }
+    },
+    {
+      "from_concept": "space needle",
+      "rel": "height",
+      "to_concept": "tall",
+      "text": "space needle height tall",
+      "sk_similar": {
+        "cosine": 0.6531760692596436,
+        "from_concept": "building",
+        "rel": "obstructed by",
+        "to_concept": "space needle",
+        "text": "building obstructed by space needle"
+      }
+    },
+    {
+      "from_concept": "space needle",
+      "rel": "base",
+      "to_concept": "ground",
+      "text": "space needle base ground",
+      "sk_similar": {
+        "cosine": 0.2297281175851822,
+        "from_concept": "building",
+        "rel": "on",
+        "to_concept": "hill",
+        "text": "building on hill"
+      }
+    },
+    {
+      "from_concept": "space needle",
+      "rel": "prominence",
+      "to_concept": "landmark",
+      "text": "space needle prominence landmark",
+      "sk_similar": {
+        "cosine": 0.6004470586776733,
+        "from_concept": "trees",
+        "rel": "planted near",
+        "to_concept": "space needle",
+        "text": "trees planted near space needle"
+      }
+    },
+    {
+      "from_concept": "cityscape",
+      "rel": "contrasts",
+      "to_concept": "sky",
+      "text": "cityscape contrasts sky",
+      "sk_similar": {
+        "cosine": 0.29336076974868774,
+        "from_concept": "roof",
+        "rel": "covering",
+        "to_concept": "building",
+        "text": "roof covering building"
+      }
+    },
+    {
+      "from_concept": "cityscape",
+      "rel": "vibrant",
+      "to_concept": "contrast",
+      "text": "cityscape vibrant contrast",
+      "sk_similar": {
+        "cosine": 0.006345883943140507,
+        "from_concept": "tree",
+        "rel": "growing on side of",
+        "to_concept": "hill",
+        "text": "tree growing on side of hill"
+      }
+    }
+  ],
+  "20": [
+    {
+      "from_concept": "space needle",
+      "rel": "is surrounded by",
+      "to_concept": "cityscape",
+      "text": "space needle is surrounded by cityscape",
+      "sk_similar": {
+        "cosine": 0.7373288869857788,
+        "from_concept": "building",
+        "rel": "obstructed by",
+        "to_concept": "space needle",
+        "text": "building obstructed by space needle"
+      }
+    },
+    {
+      "from_concept": "space needle",
+      "rel": "is a popular tourist destination",
+      "to_concept": "tourists",
+      "text": "space needle is a popular tourist destination tourists",
+      "sk_similar": {
+        "cosine": 0.7871760725975037,
+        "from_concept": "space needle",
+        "rel": "in",
+        "to_concept": "view",
+        "text": "space needle in view"
+      }
+    },
+    {
+      "from_concept": "space needle",
+      "rel": "is open",
+      "to_concept": "hours",
+      "text": "space needle is open hours",
+      "sk_similar": {
+        "cosine": 0.49371233582496643,
+        "from_concept": "trees",
+        "rel": "planted near",
+        "to_concept": "space needle",
+        "text": "trees planted near space needle"
+      }
+    },
+    {
+      "from_concept": "space needle",
+      "rel": "has a clock",
+      "to_concept": "structure",
+      "text": "space needle has a clock structure",
+      "sk_similar": {
+        "cosine": 0.6726733446121216,
+        "from_concept": "view",
+        "rel": "of",
+        "to_concept": "space needle",
+        "text": "view of space needle"
+      }
+    },
+    {
+      "from_concept": "cityscape",
+      "rel": "is visible in the background",
+      "to_concept": "buildings",
+      "text": "cityscape is visible in the background buildings",
+      "sk_similar": {
+        "cosine": 0.46867263317108154,
+        "from_concept": "tall building",
+        "rel": "surrounded by",
+        "to_concept": "buildings",
+        "text": "tall building surrounded by buildings"
+      }
+    },
+    {
+      "from_concept": "cityscape",
+      "rel": "is visible in the background",
+      "to_concept": "trees",
+      "text": "cityscape is visible in the background trees",
+      "sk_similar": {
+        "cosine": 0.0
+      }
+    }
+  ],
+  "21": [
+    {
+      "from_concept": "conan edogawa",
+      "rel": "wearing glasses",
+      "to_concept": "spiky hair",
+      "text": "conan edogawa wearing glasses spiky hair",
+      "sk_similar": {
+        "cosine": 0.5575069785118103,
+        "from_concept": "cartoon character",
+        "rel": "wearing",
+        "to_concept": "glasses and tie",
+        "text": "cartoon character wearing glasses and tie"
+      }
+    },
+    {
+      "from_concept": "conan edogawa",
+      "rel": "wearing suit",
+      "to_concept": "tie",
+      "text": "conan edogawa wearing suit tie",
+      "sk_similar": {
+        "cosine": 0.3016754388809204,
+        "from_concept": "persons body",
+        "rel": "behind",
+        "to_concept": "cartoon character",
+        "text": "persons body behind cartoon character"
+      }
+    },
+    {
+      "from_concept": "conan edogawa",
+      "rel": "wearing glasses",
+      "to_concept": "serious expression",
+      "text": "conan edogawa wearing glasses serious expression",
+      "sk_similar": {
+        "cosine": 0.2917727530002594,
+        "from_concept": "person standing",
+        "rel": "near by",
+        "to_concept": "cartoon character",
+        "text": "person standing near by cartoon character"
+      }
+    }
+  ],
+  "22": [
+    {
+      "from_concept": "conan's eyes",
+      "rel": "convey",
+      "to_concept": "personality traits",
+      "text": "conan's eyes convey personality traits",
+      "sk_similar": {
+        "cosine": 0.23549650609493256,
+        "from_concept": "young boy",
+        "rel": "has",
+        "to_concept": "smiley face",
+        "text": "young boy has smiley face"
+      }
+    },
+    {
+      "from_concept": "conan's hair",
+      "rel": "add",
+      "to_concept": "youthful and energetic appearance",
+      "text": "conan's hair add youthful and energetic appearance",
+      "sk_similar": {
+        "cosine": 0.0
+      }
+    },
+    {
+      "from_concept": "conan's glasses",
+      "rel": "add",
+      "to_concept": "intellectual and observant persona",
+      "text": "conan's glasses add intellectual and observant persona",
+      "sk_similar": {
+        "cosine": 0.3838134706020355,
+        "from_concept": "young boy",
+        "rel": "wearing",
+        "to_concept": "glasses",
+        "text": "young boy wearing glasses"
+      }
+    },
+    {
+      "from_concept": "conan's suit and tie",
+      "rel": "give",
+      "to_concept": "sophisticated and mature look",
+      "text": "conan's suit and tie give sophisticated and mature look",
+      "sk_similar": {
+        "cosine": 0.0
+      }
+    },
+    {
+      "from_concept": "conan's attire",
+      "rel": "contrast",
+      "to_concept": "youthful appearance and mature accessories",
+      "text": "conan's attire contrast youthful appearance and mature accessories",
+      "sk_similar": {
+        "cosine": 0.15848727524280548,
+        "from_concept": "young boy",
+        "rel": "smiling at",
+        "to_concept": "camera",
+        "text": "young boy smiling at camera"
+      }
+    }
+  ],
+  "23": [
+    {
+      "from_concept": "wooden dock",
+      "rel": "providing access",
+      "to_concept": "lake",
+      "text": "wooden dock providing access lake",
+      "sk_similar": {
+        "cosine": 0.7523278594017029,
+        "from_concept": "wooden pier",
+        "rel": "on",
+        "to_concept": "lake",
+        "text": "wooden pier on lake"
+      }
+    },
+    {
+      "from_concept": "wooden dock",
+      "rel": "requiring caution",
+      "to_concept": "visitors",
+      "text": "wooden dock requiring caution visitors",
+      "sk_similar": {
+        "cosine": 0.09828338772058487,
+        "from_concept": "mountain",
+        "rel": "peeking through",
+        "to_concept": "tree",
+        "text": "mountain peeking through tree"
+      }
+    },
+    {
+      "from_concept": "wooden dock",
+      "rel": "being part of",
+      "to_concept": "natural environment",
+      "text": "wooden dock being part of natural environment",
+      "sk_similar": {
+        "cosine": 0.10768972337245941,
+        "from_concept": "tree",
+        "rel": "on opposite side of",
+        "to_concept": "mountain",
+        "text": "tree on opposite side of mountain"
+      }
+    },
+    {
+      "from_concept": "lake",
+      "rel": "surrounded by",
+      "to_concept": "forests and mountains",
+      "text": "lake surrounded by forests and mountains",
+      "sk_similar": {
+        "cosine": 0.624304473400116,
+        "from_concept": "tall trees",
+        "rel": "on",
+        "to_concept": "lake shore",
+        "text": "tall trees on lake shore"
+      }
+    },
+    {
+      "from_concept": "lake",
+      "rel": "offering tranquility",
+      "to_concept": "visitors",
+      "text": "lake offering tranquility visitors",
+      "sk_similar": {
+        "cosine": 0.24501410126686096,
+        "from_concept": "clouds",
+        "rel": "on top of",
+        "to_concept": "moutain",
+        "text": "clouds on top of moutain"
+      }
+    },
+    {
+      "from_concept": "natural environment",
+      "rel": "being undisturbed",
+      "to_concept": "visitors",
+      "text": "natural environment being undisturbed visitors",
+      "sk_similar": {
+        "cosine": 0.0904466062784195,
+        "from_concept": "mountain",
+        "rel": "behind",
+        "to_concept": "mountain",
+        "text": "mountain behind mountain"
+      }
+    }
+  ],
+  "25": [
+    {
+      "from_concept": "man",
+      "rel": "ironing",
+      "to_concept": "shirt",
+      "text": "man ironing shirt",
+      "sk_similar": {
+        "cosine": 0.9012343883514404,
+        "from_concept": "men",
+        "rel": "ironing",
+        "to_concept": "shirt",
+        "text": "men ironing shirt"
+      }
+    },
+    {
+      "from_concept": "taxi",
+      "rel": "driving",
+      "to_concept": "street",
+      "text": "taxi driving street",
+      "sk_similar": {
+        "cosine": 0.3982822000980377,
+        "from_concept": "car",
+        "rel": "has",
+        "to_concept": "tire",
+        "text": "car has tire"
+      }
+    },
+    {
+      "from_concept": "building",
+      "rel": "has",
+      "to_concept": "pink awning",
+      "text": "building has pink awning",
+      "sk_similar": {
+        "cosine": 0.4967542886734009,
+        "from_concept": "window",
+        "rel": "on exterior of",
+        "to_concept": "building",
+        "text": "window on exterior of building"
+      }
+    }
+  ],
+  "27": [
+    {
+      "from_concept": "strawberries",
+      "rel": "on the bottom shelf",
+      "to_concept": "fridge",
+      "text": "strawberries on the bottom shelf fridge",
+      "sk_similar": {
+        "cosine": 0.6563065052032471,
+        "from_concept": "strawberry",
+        "rel": "in",
+        "to_concept": "container",
+        "text": "strawberry in container"
+      }
+    },
+    {
+      "from_concept": "carrots",
+      "rel": "in a bag",
+      "to_concept": "fridge",
+      "text": "carrots in a bag fridge",
+      "sk_similar": {
+        "cosine": 0.679388165473938,
+        "from_concept": "carrot sticks",
+        "rel": "on top",
+        "to_concept": "container",
+        "text": "carrot sticks on top container"
+      }
+    }
+  ],
+  "28": [
+    {
+      "from_concept": "yogurt",
+      "rel": "flavored with",
+      "to_concept": "blueberry",
+      "text": "yogurt flavored with blueberry",
+      "sk_similar": {
+        "cosine": 0.8601411581039429,
+        "from_concept": "yogurt",
+        "rel": "on top",
+        "to_concept": "blueberry",
+        "text": "yogurt on top blueberry"
+      }
+    },
+    {
+      "from_concept": "yogurt",
+      "rel": "is part of",
+      "to_concept": "household's diet",
+      "text": "yogurt is part of household's diet",
+      "sk_similar": {
+        "cosine": 0.0
+      }
+    },
+    {
+      "from_concept": "yogurt",
+      "rel": "is placed on",
+      "to_concept": "green tray",
+      "text": "yogurt is placed on green tray",
+      "sk_similar": {
+        "cosine": 0.39171022176742554,
+        "from_concept": "strawberry",
+        "rel": "in",
+        "to_concept": "container",
+        "text": "strawberry in container"
+      }
+    },
+    {
+      "from_concept": "yogurt",
+      "rel": "is a specific product",
+      "to_concept": "blueberry-flavored yogurt",
+      "text": "yogurt is a specific product blueberry-flavored yogurt",
+      "sk_similar": {
+        "cosine": 0.5620271563529968,
+        "from_concept": "brand name",
+        "rel": "written on",
+        "to_concept": "yogurt container",
+        "text": "brand name written on yogurt container"
+      }
+    },
+    {
+      "from_concept": "yogurt",
+      "rel": "is placed on",
+      "to_concept": "drawer",
+      "text": "yogurt is placed on drawer",
+      "sk_similar": {
+        "cosine": 0.47212693095207214,
+        "from_concept": "container",
+        "rel": "filled with",
+        "to_concept": "fruit",
+        "text": "container filled with fruit"
+      }
+    },
+    {
+      "from_concept": "refrigerator",
+      "rel": "contains",
+      "to_concept": "yogurt",
+      "text": "refrigerator contains yogurt",
+      "sk_similar": {
+        "cosine": 0.6993415355682373,
+        "from_concept": "yogurt",
+        "rel": "in front of",
+        "to_concept": "milk jug",
+        "text": "yogurt in front of milk jug"
+      }
+    },
+    {
+      "from_concept": "refrigerator",
+      "rel": "organized",
+      "to_concept": "food items",
+      "text": "refrigerator organized food items",
+      "sk_similar": {
+        "cosine": 0.0
+      }
+    },
+    {
+      "from_concept": "refrigerator",
+      "rel": "is part of",
+      "to_concept": "household kitchen",
+      "text": "refrigerator is part of household kitchen",
+      "sk_similar": {
+        "cosine": 0.0
+      }
+    },
+    {
+      "from_concept": "refrigerator",
+      "rel": "provides context",
+      "to_concept": "yogurt container",
+      "text": "refrigerator provides context yogurt container",
+      "sk_similar": {
+        "cosine": 0.0
+      }
+    }
+  ],
+  "30": [
+    {
+      "from_concept": "orange juice",
+      "rel": "next to",
+      "to_concept": "milk",
+      "text": "orange juice next to milk",
+      "sk_similar": {
+        "cosine": 0.5372405052185059,
+        "from_concept": "milk",
+        "rel": "in",
+        "to_concept": "fridge",
+        "text": "milk in fridge"
+      }
+    },
+    {
+      "from_concept": "blueberries",
+      "rel": "next to",
+      "to_concept": "carrots",
+      "text": "blueberries next to carrots",
+      "sk_similar": {
+        "cosine": 0.5797414779663086,
+        "from_concept": "blueberry",
+        "rel": "in right side of",
+        "to_concept": "fridge",
+        "text": "blueberry in right side of fridge"
+      }
+    },
+    {
+      "from_concept": "strawberries",
+      "rel": "next to",
+      "to_concept": "yogurt",
+      "text": "strawberries next to yogurt",
+      "sk_similar": {
+        "cosine": 0.7027806043624878,
+        "from_concept": "carrot sticks",
+        "rel": "on top",
+        "to_concept": "strawberry",
+        "text": "carrot sticks on top strawberry"
+      }
+    },
+    {
+      "from_concept": "cutting board",
+      "rel": "next to",
+      "to_concept": "chicken",
+      "text": "cutting board next to chicken",
+      "sk_similar": {
+        "cosine": 0.2889661490917206,
+        "from_concept": "hummus",
+        "rel": "near",
+        "to_concept": "milk jug",
+        "text": "hummus near milk jug"
+      }
+    }
+  ],
+  "31": [
+    {
+      "from_concept": "fruits",
+      "rel": "can be used in",
+      "to_concept": "salad",
+      "text": "fruits can be used in salad",
+      "sk_similar": {
+        "cosine": 0.5480432510375977,
+        "from_concept": "container",
+        "rel": "filled with",
+        "to_concept": "fruit",
+        "text": "container filled with fruit"
+      }
+    },
+    {
+      "from_concept": "vegetables",
+      "rel": "can be used in",
+      "to_concept": "salad",
+      "text": "vegetables can be used in salad",
+      "sk_similar": {
+        "cosine": 0.0
+      }
+    },
+    {
+      "from_concept": "yogurt",
+      "rel": "can be used in",
+      "to_concept": "smoothie",
+      "text": "yogurt can be used in smoothie",
+      "sk_similar": {
+        "cosine": 0.6091940999031067,
+        "from_concept": "yogurt",
+        "rel": "in",
+        "to_concept": "plastic cup",
+        "text": "yogurt in plastic cup"
+      }
+    },
+    {
+      "from_concept": "milk",
+      "rel": "can be used in",
+      "to_concept": "smoothie",
+      "text": "milk can be used in smoothie",
+      "sk_similar": {
+        "cosine": 0.2908182442188263,
+        "from_concept": "sauce",
+        "rel": "inside",
+        "to_concept": "plastic cup",
+        "text": "sauce inside plastic cup"
+      }
+    },
+    {
+      "from_concept": "cutting board",
+      "rel": "used for",
+      "to_concept": "food preparation",
+      "text": "cutting board used for food preparation",
+      "sk_similar": {
+        "cosine": 0.15709815919399261,
+        "from_concept": "leaf",
+        "rel": "in",
+        "to_concept": "container",
+        "text": "leaf in container"
+      }
+    },
+    {
+      "from_concept": "refrigerator",
+      "rel": "contains",
+      "to_concept": "food items",
+      "text": "refrigerator contains food items",
+      "sk_similar": {
+        "cosine": 0.5865818858146667,
+        "from_concept": "milk",
+        "rel": "in",
+        "to_concept": "fridge",
+        "text": "milk in fridge"
+      }
+    },
+    {
+      "from_concept": "carrots",
+      "rel": "can be used in",
+      "to_concept": "salad",
+      "text": "carrots can be used in salad",
+      "sk_similar": {
+        "cosine": 0.0
+      }
+    },
+    {
+      "from_concept": "strawberries",
+      "rel": "can be used in",
+      "to_concept": "salad",
+      "text": "strawberries can be used in salad",
+      "sk_similar": {
+        "cosine": 0.5062872171401978,
+        "from_concept": "strawberry",
+        "rel": "in",
+        "to_concept": "container",
+        "text": "strawberry in container"
+      }
+    },
+    {
+      "from_concept": "berries",
+      "rel": "can be used in",
+      "to_concept": "salad",
+      "text": "berries can be used in salad",
+      "sk_similar": {
+        "cosine": 0.40619176626205444,
+        "from_concept": "blueberry",
+        "rel": "in",
+        "to_concept": "plastic container",
+        "text": "blueberry in plastic container"
+      }
+    },
+    {
+      "from_concept": "nuts",
+      "rel": "can be used in",
+      "to_concept": "salad",
+      "text": "nuts can be used in salad",
+      "sk_similar": {
+        "cosine": 0.238242968916893,
+        "from_concept": "lunch box",
+        "rel": "is",
+        "to_concept": "green",
+        "text": "lunch box is green"
+      }
+    },
+    {
+      "from_concept": "granola",
+      "rel": "can be used in",
+      "to_concept": "salad",
+      "text": "granola can be used in salad",
+      "sk_similar": {
+        "cosine": 0.2554868161678314,
+        "from_concept": "plastic bag",
+        "rel": "has",
+        "to_concept": "food",
+        "text": "plastic bag has food"
+      }
+    }
+  ],
+  "32": [
+    {
+      "from_concept": "mario",
+      "rel": "featured",
+      "to_concept": "coffee mugs",
+      "text": "mario featured coffee mugs",
+      "sk_similar": {
+        "cosine": 0.255912184715271,
+        "from_concept": "letter",
+        "rel": "on",
+        "to_concept": "hat",
+        "text": "letter on hat"
+      }
+    }
+  ],
+  "33": [
+    {
+      "from_concept": "mario character",
+      "rel": "adorned with",
+      "to_concept": "mugs",
+      "text": "mario character adorned with mugs",
+      "sk_similar": {
+        "cosine": 0.4980984926223755,
+        "from_concept": "letter",
+        "rel": "written on",
+        "to_concept": "mug",
+        "text": "letter written on mug"
+      }
+    },
+    {
+      "from_concept": "mario character",
+      "rel": "associated with",
+      "to_concept": "nostalgia",
+      "text": "mario character associated with nostalgia",
+      "sk_similar": {
+        "cosine": 0.0
+      }
+    },
+    {
+      "from_concept": "mario character",
+      "rel": "depicted in",
+      "to_concept": "different poses",
+      "text": "mario character depicted in different poses",
+      "sk_similar": {
+        "cosine": 0.0
+      }
+    },
+    {
+      "from_concept": "mario character",
+      "rel": "associated with",
+      "to_concept": "classic games",
+      "text": "mario character associated with classic games",
+      "sk_similar": {
+        "cosine": 0.0
+      }
+    },
+    {
+      "from_concept": "mugs",
+      "rel": "designed with",
+      "to_concept": "color scheme",
+      "text": "mugs designed with color scheme",
+      "sk_similar": {
+        "cosine": 0.0
+      }
+    },
+    {
+      "from_concept": "mugs",
+      "rel": "crafted with care",
+      "to_concept": "handle",
+      "text": "mugs crafted with care handle",
+      "sk_similar": {
+        "cosine": 0.1503811925649643,
+        "from_concept": "cap",
+        "rel": "covering",
+        "to_concept": "head",
+        "text": "cap covering head"
+      }
+    },
+    {
+      "from_concept": "mugs",
+      "rel": "designed for",
+      "to_concept": "daily use",
+      "text": "mugs designed for daily use",
+      "sk_similar": {
+        "cosine": 0.0
+      }
+    },
+    {
+      "from_concept": "mugs",
+      "rel": "stackable",
+      "to_concept": "space-saving",
+      "text": "mugs stackable space-saving",
+      "sk_similar": {
+        "cosine": 0.0
+      }
+    },
+    {
+      "from_concept": "mugs",
+      "rel": "displayed in a row",
+      "to_concept": "showcasing design",
+      "text": "mugs displayed in a row showcasing design",
+      "sk_similar": {
+        "cosine": 0.4560144543647766,
+        "from_concept": "cup",
+        "rel": "contains",
+        "to_concept": "picture",
+        "text": "cup contains picture"
+      }
+    }
+  ],
+  "34": [
+    {
+      "from_concept": "lobster",
+      "rel": "cooked with",
+      "to_concept": "herbs and lemon wedges",
+      "text": "lobster cooked with herbs and lemon wedges",
+      "sk_similar": {
+        "cosine": 0.5312379598617554,
+        "from_concept": "rosemary",
+        "rel": "near",
+        "to_concept": "lemon",
+        "text": "rosemary near lemon"
+      }
+    },
+    {
+      "from_concept": "lobster",
+      "rel": "grilled",
+      "to_concept": "grill marks",
+      "text": "lobster grilled grill marks",
+      "sk_similar": {
+        "cosine": 0.0
+      }
+    },
+    {
+      "from_concept": "lobster",
+      "rel": "garnished with",
+      "to_concept": "herbs",
+      "text": "lobster garnished with herbs",
+      "sk_similar": {
+        "cosine": 0.0
+      }
+    },
+    {
+      "from_concept": "lobster",
+      "rel": "served with",
+      "to_concept": "lemon wedges",
+      "text": "lobster served with lemon wedges",
+      "sk_similar": {
+        "cosine": 0.8221525549888611,
+        "from_concept": "lobster",
+        "rel": "under",
+        "to_concept": "lemon slice",
+        "text": "lobster under lemon slice"
+      }
+    },
+    {
+      "from_concept": "lobster",
+      "rel": "arranged on",
+      "to_concept": "grill",
+      "text": "lobster arranged on grill",
+      "sk_similar": {
+        "cosine": 0.13286329805850983,
+        "from_concept": "vegetable",
+        "rel": "contains",
+        "to_concept": "leaf",
+        "text": "vegetable contains leaf"
+      }
+    },
+    {
+      "from_concept": "lobster",
+      "rel": "affected by",
+      "to_concept": "squeeze of lemon juice",
+      "text": "lobster affected by squeeze of lemon juice",
+      "sk_similar": {
+        "cosine": 0.4802410900592804,
+        "from_concept": "rosemary",
+        "rel": "above",
+        "to_concept": "lobster",
+        "text": "rosemary above lobster"
+      }
+    },
+    {
+      "from_concept": "lobster",
+      "rel": "part of",
+      "to_concept": "dish",
+      "text": "lobster part of dish",
+      "sk_similar": {
+        "cosine": 0.29649031162261963,
+        "from_concept": "slice",
+        "rel": "of",
+        "to_concept": "slice",
+        "text": "slice of slice"
+      }
+    }
+  ],
+  "37": [
+    {
+      "from_concept": "character",
+      "rel": "standing next to",
+      "to_concept": "neural network diagram",
+      "text": "character standing next to neural network diagram",
+      "sk_similar": {
+        "cosine": 0.2706291973590851,
+        "from_concept": "letter",
+        "rel": "on",
+        "to_concept": "arrow",
+        "text": "letter on arrow"
+      }
+    },
+    {
+      "from_concept": "character",
+      "rel": "speaking",
+      "to_concept": "speech bubble",
+      "text": "character speaking speech bubble",
+      "sk_similar": {
+        "cosine": 0.18271404504776,
+        "from_concept": "man",
+        "rel": "talking to",
+        "to_concept": "none seen",
+        "text": "man talking to none seen"
+      }
+    },
+    {
+      "from_concept": "character",
+      "rel": "becoming more sophisticated",
+      "to_concept": "knowledgeable",
+      "text": "character becoming more sophisticated knowledgeable",
+      "sk_similar": {
+        "cosine": 0.13778755068778992,
+        "from_concept": "eye",
+        "rel": "on",
+        "to_concept": "face",
+        "text": "eye on face"
+      }
+    },
+    {
+      "from_concept": "character",
+      "rel": "standing next to",
+      "to_concept": "diagram",
+      "text": "character standing next to diagram",
+      "sk_similar": {
+        "cosine": 0.591676652431488,
+        "from_concept": "man",
+        "rel": "shows",
+        "to_concept": "diagram",
+        "text": "man shows diagram"
+      }
+    },
+    {
+      "from_concept": "neural network diagram",
+      "rel": "showing",
+      "to_concept": "layers",
+      "text": "neural network diagram showing layers",
+      "sk_similar": {
+        "cosine": 0.2610076367855072,
+        "from_concept": "arrow",
+        "rel": "has",
+        "to_concept": "letter",
+        "text": "arrow has letter"
+      }
+    },
+    {
+      "from_concept": "speech bubble",
+      "rel": "containing text",
+      "to_concept": "vc-dimension",
+      "text": "speech bubble containing text vc-dimension",
+      "sk_similar": {
+        "cosine": 0.05791141837835312,
+        "from_concept": "line",
+        "rel": "has",
+        "to_concept": "line",
+        "text": "line has line"
+      }
+    },
+    {
+      "from_concept": "speech bubble",
+      "rel": "containing text",
+      "to_concept": "kernel",
+      "text": "speech bubble containing text kernel",
+      "sk_similar": {
+        "cosine": 0.14910179376602173,
+        "from_concept": "name",
+        "rel": "says",
+        "to_concept": "name",
+        "text": "name says name"
+      }
+    },
+    {
+      "from_concept": "layers",
+      "rel": "increasing",
+      "to_concept": "performance",
+      "text": "layers increasing performance",
+      "sk_similar": {
+        "cosine": -0.07094887644052505,
+        "from_concept": "eye",
+        "rel": "over",
+        "to_concept": "mouth",
+        "text": "eye over mouth"
+      }
+    },
+    {
+      "from_concept": "diagram",
+      "rel": "more complex",
+      "to_concept": "than stick figure",
+      "text": "diagram more complex than stick figure",
+      "sk_similar": {
+        "cosine": 0.47287148237228394,
+        "from_concept": "man with hat",
+        "rel": "shows",
+        "to_concept": "diagram",
+        "text": "man with hat shows diagram"
+      }
+    },
+    {
+      "from_concept": "stick figure",
+      "rel": "simpler",
+      "to_concept": "than diagram",
+      "text": "stick figure simpler than diagram",
+      "sk_similar": {
+        "cosine": 0.47361260652542114,
+        "from_concept": "diagram",
+        "rel": "on",
+        "to_concept": "sign",
+        "text": "diagram on sign"
+      }
+    },
+    {
+      "from_concept": "stick figure",
+      "rel": "standing next to",
+      "to_concept": "speech bubble",
+      "text": "stick figure standing next to speech bubble",
+      "sk_similar": {
+        "cosine": 0.2757340371608734,
+        "from_concept": "horn",
+        "rel": "on",
+        "to_concept": "face",
+        "text": "horn on face"
+      }
+    }
+  ],
+  "38": [
+    {
+      "from_concept": "teacher",
+      "rel": "explaining",
+      "to_concept": "neural networks",
+      "text": "teacher explaining neural networks",
+      "sk_similar": {
+        "cosine": 0.1983974575996399,
+        "from_concept": "man",
+        "rel": "says",
+        "to_concept": "words",
+        "text": "man says words"
+      }
+    },
+    {
+      "from_concept": "teacher",
+      "rel": "correcting",
+      "to_concept": "\"stack more layers\"",
+      "text": "teacher correcting \"stack more layers\"",
+      "sk_similar": {
+        "cosine": 0.20368872582912445,
+        "from_concept": "hat",
+        "rel": "on",
+        "to_concept": "head",
+        "text": "hat on head"
+      }
+    },
+    {
+      "from_concept": "student",
+      "rel": "understanding",
+      "to_concept": "\"stack more layers\"",
+      "text": "student understanding \"stack more layers\"",
+      "sk_similar": {
+        "cosine": 0.15814517438411713,
+        "from_concept": "rise",
+        "rel": "on",
+        "to_concept": "chart",
+        "text": "rise on chart"
+      }
+    }
+  ],
+  "39": [
+    {
+      "from_concept": "smartphone",
+      "rel": "lying flat",
+      "to_concept": "surface",
+      "text": "smartphone lying flat surface",
+      "sk_similar": {
+        "cosine": 0.2853364050388336,
+        "from_concept": "object",
+        "rel": "reflected on",
+        "to_concept": "screen",
+        "text": "object reflected on screen"
+      }
+    },
+    {
+      "from_concept": "smartphone",
+      "rel": "connected to",
+      "to_concept": "power outlet",
+      "text": "smartphone connected to power outlet",
+      "sk_similar": {
+        "cosine": 0.4034680426120758,
+        "from_concept": "lightning plug",
+        "rel": "on",
+        "to_concept": "connector",
+        "text": "lightning plug on connector"
+      }
+    },
+    {
+      "from_concept": "smartphone",
+      "rel": "encased in",
+      "to_concept": "protective case",
+      "text": "smartphone encased in protective case",
+      "sk_similar": {
+        "cosine": 0.24812623858451843,
+        "from_concept": "human hand",
+        "rel": "holds",
+        "to_concept": "package",
+        "text": "human hand holds package"
+      }
+    },
+    {
+      "from_concept": "charger",
+      "rel": "connected to",
+      "to_concept": "smartphone",
+      "text": "charger connected to smartphone",
+      "sk_similar": {
+        "cosine": 0.4950929284095764,
+        "from_concept": "vga connector",
+        "rel": "connected to",
+        "to_concept": "iphone's charging port",
+        "text": "vga connector connected to iphone's charging port"
+      }
+    },
+    {
+      "from_concept": "charger",
+      "rel": "connected to",
+      "to_concept": "power outlet",
+      "text": "charger connected to power outlet",
+      "sk_similar": {
+        "cosine": 0.2510707676410675,
+        "from_concept": "hand",
+        "rel": "holding",
+        "to_concept": "connector",
+        "text": "hand holding connector"
+      }
+    }
+  ],
+  "40": [
+    {
+      "from_concept": "phone charger",
+      "rel": "oversized",
+      "to_concept": "phone",
+      "text": "phone charger oversized phone",
+      "sk_similar": {
+        "cosine": 0.3505643904209137,
+        "from_concept": "lightning plug",
+        "rel": "on",
+        "to_concept": "connector",
+        "text": "lightning plug on connector"
+      }
+    },
+    {
+      "from_concept": "phone charger",
+      "rel": "exaggerated",
+      "to_concept": "size",
+      "text": "phone charger exaggerated size",
+      "sk_similar": {
+        "cosine": 0.23545688390731812,
+        "from_concept": "connector",
+        "rel": "held by",
+        "to_concept": "finger",
+        "text": "connector held by finger"
+      }
+    },
+    {
+      "from_concept": "phone charger",
+      "rel": "comically large",
+      "to_concept": "charger",
+      "text": "phone charger comically large charger",
+      "sk_similar": {
+        "cosine": 0.2323003113269806,
+        "from_concept": "connector",
+        "rel": "held between",
+        "to_concept": "fingers",
+        "text": "connector held between fingers"
+      }
+    },
+    {
+      "from_concept": "phone charger",
+      "rel": "overkill",
+      "to_concept": "accessory",
+      "text": "phone charger overkill accessory",
+      "sk_similar": {
+        "cosine": 0.27888375520706177,
+        "from_concept": "hand",
+        "rel": "holding",
+        "to_concept": "connector",
+        "text": "hand holding connector"
+      }
+    },
+    {
+      "from_concept": "phone charger",
+      "rel": "frustration",
+      "to_concept": "user",
+      "text": "phone charger frustration user",
+      "sk_similar": {
+        "cosine": 0.6336270570755005,
+        "from_concept": "cable",
+        "rel": "charging",
+        "to_concept": "phone",
+        "text": "cable charging phone"
+      }
+    },
+    {
+      "from_concept": "phone charger",
+      "rel": "humorous",
+      "to_concept": "image",
+      "text": "phone charger humorous image",
+      "sk_similar": {
+        "cosine": 0.26426172256469727,
+        "from_concept": "finger",
+        "rel": "holding",
+        "to_concept": "connector",
+        "text": "finger holding connector"
+      }
+    },
+    {
+      "from_concept": "phone charger",
+      "rel": "visual representation",
+      "to_concept": "concept",
+      "text": "phone charger visual representation concept",
+      "sk_similar": {
+        "cosine": 0.3168182373046875,
+        "from_concept": "connector's cable",
+        "rel": "on",
+        "to_concept": "background cloth",
+        "text": "connector's cable on background cloth"
+      }
+    }
+  ],
+  "42": [
+    {
+      "from_concept": "llava",
+      "rel": "represents",
+      "to_concept": "ai system",
+      "text": "llava represents ai system",
+      "sk_similar": {
+        "cosine": 0.08364108949899673,
+        "from_concept": "dragon",
+        "rel": "has",
+        "to_concept": "legs",
+        "text": "dragon has legs"
+      }
+    },
+    {
+      "from_concept": "llama",
+      "rel": "wearing glasses",
+      "to_concept": "ai system",
+      "text": "llama wearing glasses ai system",
+      "sk_similar": {
+        "cosine": 0.4869436025619507,
+        "from_concept": "creature",
+        "rel": "has",
+        "to_concept": "glasses on face",
+        "text": "creature has glasses on face"
+      }
+    }
+  ],
+  "43": [
+    {
+      "from_concept": "bear",
+      "rel": "eating from",
+      "to_concept": "bowl",
+      "text": "bear eating from bowl",
+      "sk_similar": {
+        "cosine": 0.0
+      }
+    },
+    {
+      "from_concept": "cat",
+      "rel": "eating from",
+      "to_concept": "bowl",
+      "text": "cat eating from bowl",
+      "sk_similar": {
+        "cosine": 0.0
+      }
+    },
+    {
+      "from_concept": "rabbit",
+      "rel": "looking at",
+      "to_concept": "food",
+      "text": "rabbit looking at food",
+      "sk_similar": {
+        "cosine": 0.0
+      }
+    },
+    {
+      "from_concept": "table",
+      "rel": "on which",
+      "to_concept": "food is placed",
+      "text": "table on which food is placed",
+      "sk_similar": {
+        "cosine": 0.04666544869542122,
+        "from_concept": "three animals",
+        "rel": "having",
+        "to_concept": "coffee",
+        "text": "three animals having coffee"
+      }
+    },
+    {
+      "from_concept": "stump",
+      "rel": "serving as",
+      "to_concept": "table",
+      "text": "stump serving as table",
+      "sk_similar": {
+        "cosine": 0.0
+      }
+    },
+    {
+      "from_concept": "grass",
+      "rel": "surrounding",
+      "to_concept": "stump",
+      "text": "grass surrounding stump",
+      "sk_similar": {
+        "cosine": 0.0
+      }
+    },
+    {
+      "from_concept": "flowers",
+      "rel": "growing near",
+      "to_concept": "stump",
+      "text": "flowers growing near stump",
+      "sk_similar": {
+        "cosine": 0.0
+      }
+    },
+    {
+      "from_concept": "natural outdoor environment",
+      "rel": "setting for",
+      "to_concept": "animals",
+      "text": "natural outdoor environment setting for animals",
+      "sk_similar": {
+        "cosine": 0.492726594209671,
+        "from_concept": "picnic",
+        "rel": "with",
+        "to_concept": "three animals",
+        "text": "picnic with three animals"
+      }
+    },
+    {
+      "from_concept": "whimsical",
+      "rel": "depicting",
+      "to_concept": "scene",
+      "text": "whimsical depicting scene",
+      "sk_similar": {
+        "cosine": 0.0
+      }
+    },
+    {
+      "from_concept": "anthropomorphic",
+      "rel": "describing",
+      "to_concept": "animals",
+      "text": "anthropomorphic describing animals",
+      "sk_similar": {
+        "cosine": 0.0
+      }
+    },
+    {
+      "from_concept": "human-like activities",
+      "rel": "being performed by",
+      "to_concept": "animals",
+      "text": "human-like activities being performed by animals",
+      "sk_similar": {
+        "cosine": 0.5477439165115356,
+        "from_concept": "three animals",
+        "rel": "enjoying",
+        "to_concept": "themselves",
+        "text": "three animals enjoying themselves"
+      }
+    },
+    {
+      "from_concept": "spoon",
+      "rel": "being held by",
+      "to_concept": "bear",
+      "text": "spoon being held by bear",
+      "sk_similar": {
+        "cosine": 0.0
+      }
+    }
+  ],
+  "44": [
+    {
+      "from_concept": "bear",
+      "rel": "sitting with",
+      "to_concept": "cat",
+      "text": "bear sitting with cat",
+      "sk_similar": {
+        "cosine": 0.5291011929512024,
+        "from_concept": "bear",
+        "rel": "has",
+        "to_concept": "face",
+        "text": "bear has face"
+      }
+    },
+    {
+      "from_concept": "cat",
+      "rel": "sitting with",
+      "to_concept": "rabbit",
+      "text": "cat sitting with rabbit",
+      "sk_similar": {
+        "cosine": 0.5482581257820129,
+        "from_concept": "rabbit",
+        "rel": "sipping from",
+        "to_concept": "coffee mug",
+        "text": "rabbit sipping from coffee mug"
+      }
+    },
+    {
+      "from_concept": "cookies",
+      "rel": "magical",
+      "to_concept": "plate",
+      "text": "cookies magical plate",
+      "sk_similar": {
+        "cosine": 0.19084715843200684,
+        "from_concept": "cat",
+        "rel": "has",
+        "to_concept": "blue mug",
+        "text": "cat has blue mug"
+      }
+    },
+    {
+      "from_concept": "cookies",
+      "rel": "on table",
+      "to_concept": "animals",
+      "text": "cookies on table animals",
+      "sk_similar": {
+        "cosine": 0.6224223971366882,
+        "from_concept": "bear",
+        "rel": "eating",
+        "to_concept": "cookie",
+        "text": "bear eating cookie"
+      }
+    },
+    {
+      "from_concept": "table",
+      "rel": "on which",
+      "to_concept": "cookies",
+      "text": "table on which cookies",
+      "sk_similar": {
+        "cosine": 0.10660702735185623,
+        "from_concept": "leg",
+        "rel": "of",
+        "to_concept": "cat",
+        "text": "leg of cat"
+      }
+    },
+    {
+      "from_concept": "table",
+      "rel": "on ground",
+      "to_concept": "animals",
+      "text": "table on ground animals",
+      "sk_similar": {
+        "cosine": 0.2609398066997528,
+        "from_concept": "leaf",
+        "rel": "on",
+        "to_concept": "leg",
+        "text": "leaf on leg"
+      }
+    },
+    {
+      "from_concept": "grass",
+      "rel": "under",
+      "to_concept": "animals",
+      "text": "grass under animals",
+      "sk_similar": {
+        "cosine": 0.28080248832702637,
+        "from_concept": "head",
+        "rel": "belonging to",
+        "to_concept": "cat",
+        "text": "head belonging to cat"
+      }
+    },
+    {
+      "from_concept": "animals",
+      "rel": "in front of",
+      "to_concept": "flowers",
+      "text": "animals in front of flowers",
+      "sk_similar": {
+        "cosine": 0.4895656704902649,
+        "from_concept": "flower",
+        "rel": "has",
+        "to_concept": "leaf",
+        "text": "flower has leaf"
+      }
+    }
+  ],
+  "45": [
+    {
+      "from_concept": "joke of the day",
+      "rel": "contains",
+      "to_concept": "sub-sections",
+      "text": "joke of the day contains sub-sections",
+      "sk_similar": {
+        "cosine": 0.3640160858631134,
+        "from_concept": "sentence",
+        "rel": "composed of",
+        "to_concept": "word",
+        "text": "sentence composed of word"
+      }
+    },
+    {
+      "from_concept": "joke of the day",
+      "rel": "contains",
+      "to_concept": "punchline",
+      "text": "joke of the day contains punchline",
+      "sk_similar": {
+        "cosine": 0.24234053492546082,
+        "from_concept": "parenthesis",
+        "rel": "between",
+        "to_concept": "sentence",
+        "text": "parenthesis between sentence"
+      }
+    }
+  ],
+  "46": [
+    {
+      "from_concept": "joke",
+      "rel": "presented on",
+      "to_concept": "website",
+      "text": "joke presented on website",
+      "sk_similar": {
+        "cosine": 0.44877761602401733,
+        "from_concept": "joke",
+        "rel": "included in",
+        "to_concept": "second row",
+        "text": "joke included in second row"
+      }
+    }
+  ],
+  "47": [
+    {
+      "from_concept": "\"my joke website\"",
+      "rel": "\"provides\"",
+      "to_concept": "\"funny joke\"",
+      "text": "\"my joke website\" \"provides\" \"funny joke\"",
+      "sk_similar": {
+        "cosine": 0.5461952090263367,
+        "from_concept": "content",
+        "rel": "with",
+        "to_concept": "joke",
+        "text": "content with joke"
+      }
+    },
+    {
+      "from_concept": "\"push to reveal punchline button\"",
+      "rel": "\"adds\"",
+      "to_concept": "\"interaction and fun\"",
+      "text": "\"push to reveal punchline button\" \"adds\" \"interaction and fun\"",
+      "sk_similar": {
+        "cosine": 0.26749253273010254,
+        "from_concept": "container",
+        "rel": "for",
+        "to_concept": "jokes",
+        "text": "container for jokes"
+      }
+    }
+  ],
+  "49": [
+    {
+      "from_concept": "man",
+      "rel": "holding",
+      "to_concept": "woman from behind",
+      "text": "man holding woman from behind",
+      "sk_similar": {
+        "cosine": 0.7565973997116089,
+        "from_concept": "man",
+        "rel": "grabbing",
+        "to_concept": "woman",
+        "text": "man grabbing woman"
+      }
+    },
+    {
+      "from_concept": "woman",
+      "rel": "looking out",
+      "to_concept": "ocean",
+      "text": "woman looking out ocean",
+      "sk_similar": {
+        "cosine": 0.0
+      }
+    },
+    {
+      "from_concept": "woman",
+      "rel": "being held",
+      "to_concept": "man",
+      "text": "woman being held man",
+      "sk_similar": {
+        "cosine": 0.2702961266040802,
+        "from_concept": "couple",
+        "rel": "having fun in",
+        "to_concept": "front of vehicle",
+        "text": "couple having fun in front of vehicle"
+      }
+    },
+    {
+      "from_concept": "woman",
+      "rel": "looking out",
+      "to_concept": "ship",
+      "text": "woman looking out ship",
+      "sk_similar": {
+        "cosine": 0.0
+      }
+    },
+    {
+      "from_concept": "ship",
+      "rel": "at sunset",
+      "to_concept": "sky",
+      "text": "ship at sunset sky",
+      "sk_similar": {
+        "cosine": 0.0
+      }
+    },
+    {
+      "from_concept": "ship",
+      "rel": "not in motion",
+      "to_concept": "ocean",
+      "text": "ship not in motion ocean",
+      "sk_similar": {
+        "cosine": 0.5253662467002869,
+        "from_concept": "movie",
+        "rel": "on",
+        "to_concept": "ship",
+        "text": "movie on ship"
+      }
+    },
+    {
+      "from_concept": "sails",
+      "rel": "down",
+      "to_concept": "ship",
+      "text": "sails down ship",
+      "sk_similar": {
+        "cosine": 0.0
+      }
+    },
+    {
+      "from_concept": "period clothing",
+      "rel": "worn by",
+      "to_concept": "man and woman",
+      "text": "period clothing worn by man and woman",
+      "sk_similar": {
+        "cosine": 0.0
+      }
+    },
+    {
+      "from_concept": "sunset",
+      "rel": "creating",
+      "to_concept": "warm light",
+      "text": "sunset creating warm light",
+      "sk_similar": {
+        "cosine": 0.0
+      }
+    }
+  ],
+  "50": [
+    {
+      "from_concept": "jack dawson",
+      "rel": "holding",
+      "to_concept": "rose dewitt bukater",
+      "text": "jack dawson holding rose dewitt bukater",
+      "sk_similar": {
+        "cosine": 0.2502806782722473,
+        "from_concept": "man",
+        "rel": "holding",
+        "to_concept": "woman",
+        "text": "man holding woman"
+      }
+    },
+    {
+      "from_concept": "jack dawson",
+      "rel": "looking into",
+      "to_concept": "rose dewitt bukater's eyes",
+      "text": "jack dawson looking into rose dewitt bukater's eyes",
+      "sk_similar": {
+        "cosine": 0.0
+      }
+    },
+    {
+      "from_concept": "jack dawson",
+      "rel": "holding rose's hand",
+      "to_concept": "while ascending stairs",
+      "text": "jack dawson holding rose's hand while ascending stairs",
+      "sk_similar": {
+        "cosine": 0.0
+      }
+    },
+    {
+      "from_concept": "jack dawson",
+      "rel": "looking into rose's eyes",
+      "to_concept": "while holding her hand",
+      "text": "jack dawson looking into rose's eyes while holding her hand",
+      "sk_similar": {
+        "cosine": 0.1058259904384613,
+        "from_concept": "people",
+        "rel": "in front",
+        "to_concept": "boat",
+        "text": "people in front boat"
+      }
+    },
+    {
+      "from_concept": "jack dawson",
+      "rel": "looking into rose's eyes",
+      "to_concept": "while saying \"i'm flying\"",
+      "text": "jack dawson looking into rose's eyes while saying \"i'm flying\"",
+      "sk_similar": {
+        "cosine": 0.0
+      }
+    },
+    {
+      "from_concept": "rose dewitt bukater",
+      "rel": "ascending",
+      "to_concept": "stairs",
+      "text": "rose dewitt bukater ascending stairs",
+      "sk_similar": {
+        "cosine": 0.0
+      }
+    },
+    {
+      "from_concept": "rose dewitt bukater",
+      "rel": "sharing a tender moment",
+      "to_concept": "with jack dawson",
+      "text": "rose dewitt bukater sharing a tender moment with jack dawson",
+      "sk_similar": {
+        "cosine": 0.16204401850700378,
+        "from_concept": "people",
+        "rel": "in",
+        "to_concept": "sunset",
+        "text": "people in sunset"
+      }
+    },
+    {
+      "from_concept": "rose dewitt bukater",
+      "rel": "saying \"i'm flying\"",
+      "to_concept": "in the film",
+      "text": "rose dewitt bukater saying \"i'm flying\" in the film",
+      "sk_similar": {
+        "cosine": 0.0
+      }
+    }
+  ],
+  "51": [
+    {
+      "from_concept": "bowl of ramen",
+      "rel": "contains",
+      "to_concept": "toppings",
+      "text": "bowl of ramen contains toppings",
+      "sk_similar": {
+        "cosine": 0.5014582872390747,
+        "from_concept": "vegetable",
+        "rel": "in",
+        "to_concept": "bowl",
+        "text": "vegetable in bowl"
+      }
+    },
+    {
+      "from_concept": "ramen shop",
+      "rel": "serves",
+      "to_concept": "ramen",
+      "text": "ramen shop serves ramen",
+      "sk_similar": {
+        "cosine": 0.14123205840587616,
+        "from_concept": "writing",
+        "rel": "on",
+        "to_concept": "bowl",
+        "text": "writing on bowl"
+      }
+    },
+    {
+      "from_concept": "dining establishment",
+      "rel": "comprises",
+      "to_concept": "ramen shop",
+      "text": "dining establishment comprises ramen shop",
+      "sk_similar": {
+        "cosine": 0.22352558374404907,
+        "from_concept": "number",
+        "rel": "on",
+        "to_concept": "bowl",
+        "text": "number on bowl"
+      }
+    },
+    {
+      "from_concept": "restaurant",
+      "rel": "serves",
+      "to_concept": "ramen",
+      "text": "restaurant serves ramen",
+      "sk_similar": {
+        "cosine": 0.1506582349538803,
+        "from_concept": "logo",
+        "rel": "on",
+        "to_concept": "bowl",
+        "text": "logo on bowl"
+      }
+    },
+    {
+      "from_concept": "dining experience",
+      "rel": "comprises",
+      "to_concept": "ramen shop",
+      "text": "dining experience comprises ramen shop",
+      "sk_similar": {
+        "cosine": 0.27698832750320435,
+        "from_concept": "bowl",
+        "rel": "placed on",
+        "to_concept": "table",
+        "text": "bowl placed on table"
+      }
+    },
+    {
+      "from_concept": "casual dining",
+      "rel": "comprises",
+      "to_concept": "dining experience",
+      "text": "casual dining comprises dining experience",
+      "sk_similar": {
+        "cosine": 0.28780290484428406,
+        "from_concept": "plate",
+        "rel": "placing",
+        "to_concept": "food",
+        "text": "plate placing food"
+      }
+    },
+    {
+      "from_concept": "japanese restaurant",
+      "rel": "serves",
+      "to_concept": "ramen",
+      "text": "japanese restaurant serves ramen",
+      "sk_similar": {
+        "cosine": 0.12652114033699036,
+        "from_concept": "knife",
+        "rel": "wrapped in",
+        "to_concept": "napkin",
+        "text": "knife wrapped in napkin"
+      }
+    },
+    {
+      "from_concept": "japanese cuisine",
+      "rel": "comprises",
+      "to_concept": "ramen",
+      "text": "japanese cuisine comprises ramen",
+      "sk_similar": {
+        "cosine": 0.11234980076551437,
+        "from_concept": "spring onions",
+        "rel": "laying inside",
+        "to_concept": "bowl",
+        "text": "spring onions laying inside bowl"
+      }
+    },
+    {
+      "from_concept": "noodle dish",
+      "rel": "contains",
+      "to_concept": "toppings",
+      "text": "noodle dish contains toppings",
+      "sk_similar": {
+        "cosine": 0.4297429919242859,
+        "from_concept": "spaghetti",
+        "rel": "in",
+        "to_concept": "plate",
+        "text": "spaghetti in plate"
+      }
+    },
+    {
+      "from_concept": "noodle dish",
+      "rel": "is part of",
+      "to_concept": "japanese cuisine",
+      "text": "noodle dish is part of japanese cuisine",
+      "sk_similar": {
+        "cosine": 0.20423850417137146,
+        "from_concept": "food",
+        "rel": "sticking off",
+        "to_concept": "bowl",
+        "text": "food sticking off bowl"
+      }
+    },
+    {
+      "from_concept": "noodle dish",
+      "rel": "is served at",
+      "to_concept": "restaurant",
+      "text": "noodle dish is served at restaurant",
+      "sk_similar": {
+        "cosine": 0.4469875693321228,
+        "from_concept": "food",
+        "rel": "on",
+        "to_concept": "plate",
+        "text": "food on plate"
+      }
+    }
+  ],
+  "52": [
+    {
+      "from_concept": "udon noodles",
+      "rel": "topped with",
+      "to_concept": "meat",
+      "text": "udon noodles topped with meat",
+      "sk_similar": {
+        "cosine": 0.46200308203697205,
+        "from_concept": "spice",
+        "rel": "on",
+        "to_concept": "noodle",
+        "text": "spice on noodle"
+      }
+    },
+    {
+      "from_concept": "udon noodles",
+      "rel": "topped with",
+      "to_concept": "green onions",
+      "text": "udon noodles topped with green onions",
+      "sk_similar": {
+        "cosine": 0.36292821168899536,
+        "from_concept": "spring onions",
+        "rel": "laying inside",
+        "to_concept": "bowl",
+        "text": "spring onions laying inside bowl"
+      }
+    },
+    {
+      "from_concept": "green soup",
+      "rel": "in",
+      "to_concept": "small bowl",
+      "text": "green soup in small bowl",
+      "sk_similar": {
+        "cosine": 0.6398276686668396,
+        "from_concept": "broth",
+        "rel": "in",
+        "to_concept": "bowl",
+        "text": "broth in bowl"
+      }
+    },
+    {
+      "from_concept": "sliced meat",
+      "rel": "on",
+      "to_concept": "plate",
+      "text": "sliced meat on plate",
+      "sk_similar": {
+        "cosine": 0.7250117063522339,
+        "from_concept": "food",
+        "rel": "on",
+        "to_concept": "plate",
+        "text": "food on plate"
+      }
+    },
+    {
+      "from_concept": "green sauce",
+      "rel": "in",
+      "to_concept": "small bowl",
+      "text": "green sauce in small bowl",
+      "sk_similar": {
+        "cosine": 0.5199875831604004,
+        "from_concept": "noodle",
+        "rel": "in",
+        "to_concept": "bowl",
+        "text": "noodle in bowl"
+      }
+    },
+    {
+      "from_concept": "wooden table",
+      "rel": "under",
+      "to_concept": "bowl of udon noodles",
+      "text": "wooden table under bowl of udon noodles",
+      "sk_similar": {
+        "cosine": 0.662721574306488,
+        "from_concept": "bowl",
+        "rel": "placed on",
+        "to_concept": "table",
+        "text": "bowl placed on table"
+      }
+    },
+    {
+      "from_concept": "wooden table",
+      "rel": "under",
+      "to_concept": "napkin",
+      "text": "wooden table under napkin",
+      "sk_similar": {
+        "cosine": 0.33200204372406006,
+        "from_concept": "tea",
+        "rel": "near",
+        "to_concept": "bowl",
+        "text": "tea near bowl"
+      }
+    },
+    {
+      "from_concept": "napkin",
+      "rel": "on",
+      "to_concept": "table",
+      "text": "napkin on table",
+      "sk_similar": {
+        "cosine": 0.44007599353790283,
+        "from_concept": "chop sticks",
+        "rel": "in",
+        "to_concept": "paper sleeve",
+        "text": "chop sticks in paper sleeve"
+      }
+    }
+  ],
+  "54": [
+    {
+      "from_concept": "subway",
+      "rel": "brand",
+      "to_concept": "sandwiches",
+      "text": "subway brand sandwiches",
+      "sk_similar": {
+        "cosine": 0.3044925332069397,
+        "from_concept": "brand name",
+        "rel": "between",
+        "to_concept": "green arrows",
+        "text": "brand name between green arrows"
+      }
+    },
+    {
+      "from_concept": "subway",
+      "rel": "logo",
+      "to_concept": "displayed",
+      "text": "subway logo displayed",
+      "sk_similar": {
+        "cosine": 0.0
+      }
+    },
+    {
+      "from_concept": "subway",
+      "rel": "brand",
+      "to_concept": "logo",
+      "text": "subway brand logo",
+      "sk_similar": {
+        "cosine": 0.293596088886261,
+        "from_concept": "letter",
+        "rel": "printed on",
+        "to_concept": "sign",
+        "text": "letter printed on sign"
+      }
+    },
+    {
+      "from_concept": "sandwiches",
+      "rel": "cut in half",
+      "to_concept": "to show layers of ingredients",
+      "text": "sandwiches cut in half to show layers of ingredients",
+      "sk_similar": {
+        "cosine": 0.5976706147193909,
+        "from_concept": "sandwich",
+        "rel": "touching",
+        "to_concept": "sandwich",
+        "text": "sandwich touching sandwich"
+      }
+    },
+    {
+      "from_concept": "sandwiches",
+      "rel": "placed on",
+      "to_concept": "black background",
+      "text": "sandwiches placed on black background",
+      "sk_similar": {
+        "cosine": 0.3849829137325287,
+        "from_concept": "ingredients",
+        "rel": "hanging out of",
+        "to_concept": "bun",
+        "text": "ingredients hanging out of bun"
+      }
+    },
+    {
+      "from_concept": "subway logo",
+      "rel": "displayed",
+      "to_concept": "in top left corner",
+      "text": "subway logo displayed in top left corner",
+      "sk_similar": {
+        "cosine": 0.0
+      }
+    },
+    {
+      "from_concept": "subway logo",
+      "rel": "circular",
+      "to_concept": "shape of sandwiches",
+      "text": "subway logo circular shape of sandwiches",
+      "sk_similar": {
+        "cosine": 0.35271748900413513,
+        "from_concept": "green sign",
+        "rel": "on top of",
+        "to_concept": "yellow disc sign",
+        "text": "green sign on top of yellow disc sign"
+      }
+    },
+    {
+      "from_concept": "subway logo",
+      "rel": "above",
+      "to_concept": "sandwiches",
+      "text": "subway logo above sandwiches",
+      "sk_similar": {
+        "cosine": 0.4618872106075287,
+        "from_concept": "ham",
+        "rel": "in",
+        "to_concept": "sandwich",
+        "text": "ham in sandwich"
+      }
+    }
+  ],
+  "55": [
+    {
+      "from_concept": "subway series",
+      "rel": "toppings",
+      "to_concept": "subway logo",
+      "text": "subway series toppings subway logo",
+      "sk_similar": {
+        "cosine": 0.4228123426437378,
+        "from_concept": "brand name",
+        "rel": "on",
+        "to_concept": "green banner",
+        "text": "brand name on green banner"
+      }
+    }
+  ],
+  "56": [
+    {
+      "from_concept": "subway series bread",
+      "rel": "used in",
+      "to_concept": "sandwich",
+      "text": "subway series bread used in sandwich",
+      "sk_similar": {
+        "cosine": 0.2664429247379303,
+        "from_concept": "ingredients",
+        "rel": "hanging out of",
+        "to_concept": "bun",
+        "text": "ingredients hanging out of bun"
+      }
+    },
+    {
+      "from_concept": "deli meats",
+      "rel": "used in",
+      "to_concept": "sandwich",
+      "text": "deli meats used in sandwich",
+      "sk_similar": {
+        "cosine": 0.45533496141433716,
+        "from_concept": "salami",
+        "rel": "part of",
+        "to_concept": "cold cut",
+        "text": "salami part of cold cut"
+      }
+    },
+    {
+      "from_concept": "cheese",
+      "rel": "used in",
+      "to_concept": "sandwich",
+      "text": "cheese used in sandwich",
+      "sk_similar": {
+        "cosine": 0.559965193271637,
+        "from_concept": "cheese slices",
+        "rel": "on top",
+        "to_concept": "cold cut",
+        "text": "cheese slices on top cold cut"
+      }
+    },
+    {
+      "from_concept": "vegetables",
+      "rel": "used in",
+      "to_concept": "sandwich",
+      "text": "vegetables used in sandwich",
+      "sk_similar": {
+        "cosine": 0.44804203510284424,
+        "from_concept": "bread slices",
+        "rel": "contains",
+        "to_concept": "cold cut",
+        "text": "bread slices contains cold cut"
+      }
+    },
+    {
+      "from_concept": "mayonnaise",
+      "rel": "used as condiment",
+      "to_concept": "sandwich",
+      "text": "mayonnaise used as condiment sandwich",
+      "sk_similar": {
+        "cosine": 0.3125126361846924,
+        "from_concept": "lettuce",
+        "rel": "near",
+        "to_concept": "onion",
+        "text": "lettuce near onion"
+      }
+    },
+    {
+      "from_concept": "mustard",
+      "rel": "used as condiment",
+      "to_concept": "sandwich",
+      "text": "mustard used as condiment sandwich",
+      "sk_similar": {
+        "cosine": 0.608491063117981,
+        "from_concept": "ham",
+        "rel": "in",
+        "to_concept": "sandwich",
+        "text": "ham in sandwich"
+      }
+    },
+    {
+      "from_concept": "lettuce",
+      "rel": "part of",
+      "to_concept": "sandwich",
+      "text": "lettuce part of sandwich",
+      "sk_similar": {
+        "cosine": 0.6989288330078125,
+        "from_concept": "tomato slices",
+        "rel": "on top",
+        "to_concept": "lettuce",
+        "text": "tomato slices on top lettuce"
+      }
+    },
+    {
+      "from_concept": "tomato",
+      "rel": "part of",
+      "to_concept": "sandwich",
+      "text": "tomato part of sandwich",
+      "sk_similar": {
+        "cosine": 0.6019970178604126,
+        "from_concept": "cold cut",
+        "rel": "placed on top of",
+        "to_concept": "tomato slices",
+        "text": "cold cut placed on top of tomato slices"
+      }
+    },
+    {
+      "from_concept": "cucumber",
+      "rel": "part of",
+      "to_concept": "sandwich",
+      "text": "cucumber part of sandwich",
+      "sk_similar": {
+        "cosine": 0.11054503172636032,
+        "from_concept": "buns",
+        "rel": "casting",
+        "to_concept": "shadow",
+        "text": "buns casting shadow"
+      }
+    },
+    {
+      "from_concept": "red onion",
+      "rel": "part of",
+      "to_concept": "sandwich",
+      "text": "red onion part of sandwich",
+      "sk_similar": {
+        "cosine": 0.408174067735672,
+        "from_concept": "bun",
+        "rel": "sliced into",
+        "to_concept": "two slices",
+        "text": "bun sliced into two slices"
+      }
+    },
+    {
+      "from_concept": "pickles",
+      "rel": "optional topping",
+      "to_concept": "sandwich",
+      "text": "pickles optional topping sandwich",
+      "sk_similar": {
+        "cosine": 0.18385107815265656,
+        "from_concept": "turkey slices",
+        "rel": "part of",
+        "to_concept": "cold cut",
+        "text": "turkey slices part of cold cut"
+      }
+    },
+    {
+      "from_concept": "olives",
+      "rel": "optional topping",
+      "to_concept": "sandwich",
+      "text": "olives optional topping sandwich",
+      "sk_similar": {
+        "cosine": 0.08704575151205063,
+        "from_concept": "shadow",
+        "rel": "casted on",
+        "to_concept": "background",
+        "text": "shadow casted on background"
+      }
+    }
+  ],
+  "57": [
+    {
+      "from_concept": "highway",
+      "rel": "illuminated by",
+      "to_concept": "lights",
+      "text": "highway illuminated by lights",
+      "sk_similar": {
+        "cosine": 0.5638004541397095,
+        "from_concept": "street lamps",
+        "rel": "scattered on",
+        "to_concept": "street",
+        "text": "street lamps scattered on street"
+      }
+    },
+    {
+      "from_concept": "highway",
+      "rel": "surrounded by",
+      "to_concept": "trees",
+      "text": "highway surrounded by trees",
+      "sk_similar": {
+        "cosine": 0.3926897346973419,
+        "from_concept": "traffic jam",
+        "rel": "within",
+        "to_concept": "street",
+        "text": "traffic jam within street"
+      }
+    },
+    {
+      "from_concept": "highway",
+      "rel": "well-lit",
+      "to_concept": "darkness",
+      "text": "highway well-lit darkness",
+      "sk_similar": {
+        "cosine": 0.1727902740240097,
+        "from_concept": "people",
+        "rel": "standing along",
+        "to_concept": "street",
+        "text": "people standing along street"
+      }
+    },
+    {
+      "from_concept": "vehicles",
+      "rel": "traveling on",
+      "to_concept": "highway",
+      "text": "vehicles traveling on highway",
+      "sk_similar": {
+        "cosine": 0.4917454123497009,
+        "from_concept": "bus",
+        "rel": "driving down",
+        "to_concept": "street",
+        "text": "bus driving down street"
+      }
+    },
+    {
+      "from_concept": "vehicles",
+      "rel": "traveling on",
+      "to_concept": "road",
+      "text": "vehicles traveling on road",
+      "sk_similar": {
+        "cosine": 0.6212412118911743,
+        "from_concept": "car",
+        "rel": "moving down",
+        "to_concept": "street",
+        "text": "car moving down street"
+      }
+    },
+    {
+      "from_concept": "vehicles",
+      "rel": "traveling on",
+      "to_concept": "lanes",
+      "text": "vehicles traveling on lanes",
+      "sk_similar": {
+        "cosine": 0.6487506628036499,
+        "from_concept": "street",
+        "rel": "has",
+        "to_concept": "lane",
+        "text": "street has lane"
+      }
+    },
+    {
+      "from_concept": "vehicles",
+      "rel": "traveling on",
+      "to_concept": "center divider",
+      "text": "vehicles traveling on center divider",
+      "sk_similar": {
+        "cosine": 0.589943528175354,
+        "from_concept": "lane divider",
+        "rel": "separating",
+        "to_concept": "street",
+        "text": "lane divider separating street"
+      }
+    }
+  ],
+  "58": [
+    {
+      "from_concept": "highway",
+      "rel": "congested",
+      "to_concept": "city",
+      "text": "highway congested city",
+      "sk_similar": {
+        "cosine": 0.4508742392063141,
+        "from_concept": "bus",
+        "rel": "driving down",
+        "to_concept": "street",
+        "text": "bus driving down street"
+      }
+    },
+    {
+      "from_concept": "cars",
+      "rel": "driving",
+      "to_concept": "highway",
+      "text": "cars driving highway",
+      "sk_similar": {
+        "cosine": 0.6847361922264099,
+        "from_concept": "car",
+        "rel": "driving down",
+        "to_concept": "road",
+        "text": "car driving down road"
+      }
+    },
+    {
+      "from_concept": "lanes",
+      "rel": "multiple",
+      "to_concept": "highway",
+      "text": "lanes multiple highway",
+      "sk_similar": {
+        "cosine": 0.3546791970729828,
+        "from_concept": "car",
+        "rel": "moving down",
+        "to_concept": "street",
+        "text": "car moving down street"
+      }
+    },
+    {
+      "from_concept": "night",
+      "rel": "time of day",
+      "to_concept": "image",
+      "text": "night time of day image",
+      "sk_similar": {
+        "cosine": 0.0
+      }
+    },
+    {
+      "from_concept": "population",
+      "rel": "high",
+      "to_concept": "city",
+      "text": "population high city",
+      "sk_similar": {
+        "cosine": 0.2560182809829712,
+        "from_concept": "people",
+        "rel": "standing along",
+        "to_concept": "street",
+        "text": "people standing along street"
+      }
+    },
+    {
+      "from_concept": "public transportation",
+      "rel": "lacking",
+      "to_concept": "city",
+      "text": "public transportation lacking city",
+      "sk_similar": {
+        "cosine": 0.2308485060930252,
+        "from_concept": "lights",
+        "rel": "shining on",
+        "to_concept": "bus",
+        "text": "lights shining on bus"
+      }
+    },
+    {
+      "from_concept": "urban planning",
+      "rel": "inadequate",
+      "to_concept": "city",
+      "text": "urban planning inadequate city",
+      "sk_similar": {
+        "cosine": 0.0
+      }
+    },
+    {
+      "from_concept": "environment",
+      "rel": "affected",
+      "to_concept": "city",
+      "text": "environment affected city",
+      "sk_similar": {
+        "cosine": 0.22191090881824493,
+        "from_concept": "tree",
+        "rel": "near",
+        "to_concept": "car",
+        "text": "tree near car"
+      }
+    },
+    {
+      "from_concept": "economy",
+      "rel": "impacted",
+      "to_concept": "city",
+      "text": "economy impacted city",
+      "sk_similar": {
+        "cosine": 0.0
+      }
+    },
+    {
+      "from_concept": "quality of life",
+      "rel": "diminished",
+      "to_concept": "city",
+      "text": "quality of life diminished city",
+      "sk_similar": {
+        "cosine": 0.0
+      }
+    }
+  ],
+  "59": [
+    {
+      "from_concept": "cars",
+      "rel": "driving",
+      "to_concept": "highway",
+      "text": "cars driving highway",
+      "sk_similar": {
+        "cosine": 0.7985648512840271,
+        "from_concept": "cars",
+        "rel": "moving down",
+        "to_concept": "road",
+        "text": "cars moving down road"
+      }
+    },
+    {
+      "from_concept": "lights",
+      "rel": "on",
+      "to_concept": "vehicles",
+      "text": "lights on vehicles",
+      "sk_similar": {
+        "cosine": 0.5001270174980164,
+        "from_concept": "break light",
+        "rel": "flashing in",
+        "to_concept": "one lane",
+        "text": "break light flashing in one lane"
+      }
+    },
+    {
+      "from_concept": "traffic",
+      "rel": "heavy",
+      "to_concept": "highway",
+      "text": "traffic heavy highway",
+      "sk_similar": {
+        "cosine": 0.6761809587478638,
+        "from_concept": "high traffic",
+        "rel": "opposite",
+        "to_concept": "lanes",
+        "text": "high traffic opposite lanes"
+      }
+    },
+    {
+      "from_concept": "night",
+      "rel": "occurring",
+      "to_concept": "traffic",
+      "text": "night occurring traffic",
+      "sk_similar": {
+        "cosine": 0.44675999879837036,
+        "from_concept": "car",
+        "rel": "moving down",
+        "to_concept": "street",
+        "text": "car moving down street"
+      }
+    },
+    {
+      "from_concept": "obstruction",
+      "rel": "no visible",
+      "to_concept": "highway",
+      "text": "obstruction no visible highway",
+      "sk_similar": {
+        "cosine": 0.4773549735546112,
+        "from_concept": "car",
+        "rel": "driving on",
+        "to_concept": "road",
+        "text": "car driving on road"
+      }
+    },
+    {
+      "from_concept": "traffic signals",
+      "rel": "no visible",
+      "to_concept": "highway",
+      "text": "traffic signals no visible highway",
+      "sk_similar": {
+        "cosine": 0.35002198815345764,
+        "from_concept": "bus",
+        "rel": "driving down",
+        "to_concept": "street",
+        "text": "bus driving down street"
+      }
+    }
+  ]
+}

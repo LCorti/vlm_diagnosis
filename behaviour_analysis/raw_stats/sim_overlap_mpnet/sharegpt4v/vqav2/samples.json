@@ -1,0 +1,603 @@
+{
+  "266922002": [
+    {
+      "from_concept": "man",
+      "rel": "wearing",
+      "to_concept": "sunglasses",
+      "text": "man wearing sunglasses",
+      "sk_similar": {
+        "cosine": 0.4425191283226013,
+        "from_concept": "goggles",
+        "rel": "on",
+        "to_concept": "head",
+        "text": "goggles on head"
+      }
+    },
+    {
+      "from_concept": "man",
+      "rel": "wearing",
+      "to_concept": "watch",
+      "text": "man wearing watch",
+      "sk_similar": {
+        "cosine": 0.18230898678302765,
+        "from_concept": "ski pole",
+        "rel": "held in",
+        "to_concept": "glove",
+        "text": "ski pole held in glove"
+      }
+    },
+    {
+      "from_concept": "man",
+      "rel": "wearing",
+      "to_concept": "belt",
+      "text": "man wearing belt",
+      "sk_similar": {
+        "cosine": 0.35269856452941895,
+        "from_concept": "jacket",
+        "rel": "has",
+        "to_concept": "arm",
+        "text": "jacket has arm"
+      }
+    },
+    {
+      "from_concept": "man",
+      "rel": "wearing",
+      "to_concept": "pants",
+      "text": "man wearing pants",
+      "sk_similar": {
+        "cosine": 0.4664289355278015,
+        "from_concept": "pant",
+        "rel": "tucked in",
+        "to_concept": "boot",
+        "text": "pant tucked in boot"
+      }
+    },
+    {
+      "from_concept": "man",
+      "rel": "wearing",
+      "to_concept": "shoes",
+      "text": "man wearing shoes",
+      "sk_similar": {
+        "cosine": 0.46894991397857666,
+        "from_concept": "leg",
+        "rel": "covered with",
+        "to_concept": "boot",
+        "text": "leg covered with boot"
+      }
+    },
+    {
+      "from_concept": "man",
+      "rel": "wearing",
+      "to_concept": "gloves",
+      "text": "man wearing gloves",
+      "sk_similar": {
+        "cosine": 0.6919777989387512,
+        "from_concept": "glove",
+        "rel": "worn on",
+        "to_concept": "hand",
+        "text": "glove worn on hand"
+      }
+    },
+    {
+      "from_concept": "man",
+      "rel": "wearing",
+      "to_concept": "jacket",
+      "text": "man wearing jacket",
+      "sk_similar": {
+        "cosine": 0.6772376298904419,
+        "from_concept": "jacket",
+        "rel": "worn with",
+        "to_concept": "pant",
+        "text": "jacket worn with pant"
+      }
+    },
+    {
+      "from_concept": "man",
+      "rel": "wearing",
+      "to_concept": "coat",
+      "text": "man wearing coat",
+      "sk_similar": {
+        "cosine": 0.4910764694213867,
+        "from_concept": "arm",
+        "rel": "over",
+        "to_concept": "jacket",
+        "text": "arm over jacket"
+      }
+    },
+    {
+      "from_concept": "man",
+      "rel": "wearing",
+      "to_concept": "hat",
+      "text": "man wearing hat",
+      "sk_similar": {
+        "cosine": 0.3102809190750122,
+        "from_concept": "man",
+        "rel": "resting on",
+        "to_concept": "ski pole",
+        "text": "man resting on ski pole"
+      }
+    },
+    {
+      "from_concept": "man",
+      "rel": "wearing",
+      "to_concept": "ponytail holder",
+      "text": "man wearing ponytail holder",
+      "sk_similar": {
+        "cosine": 0.49252578616142273,
+        "from_concept": "hair",
+        "rel": "on",
+        "to_concept": "head",
+        "text": "hair on head"
+      }
+    }
+  ],
+  "332607000": [
+    {
+      "from_concept": "woman",
+      "rel": "sitting on",
+      "to_concept": "countertop",
+      "text": "woman sitting on countertop",
+      "sk_similar": {
+        "cosine": 0.6009250283241272,
+        "from_concept": "girl",
+        "rel": "on",
+        "to_concept": "counter",
+        "text": "girl on counter"
+      }
+    }
+  ],
+  "224757004": [
+    {
+      "from_concept": "boys",
+      "rel": "wearing",
+      "to_concept": "jackets",
+      "text": "boys wearing jackets",
+      "sk_similar": {
+        "cosine": 0.2679125964641571,
+        "from_concept": "kids",
+        "rel": "playing",
+        "to_concept": "football",
+        "text": "kids playing football"
+      }
+    }
+  ],
+  "240275005": [
+    {
+      "from_concept": "surfboard",
+      "rel": "is part of",
+      "to_concept": "wave",
+      "text": "surfboard is part of wave",
+      "sk_similar": {
+        "cosine": 0.5799741744995117,
+        "from_concept": "man",
+        "rel": "doing trick with",
+        "to_concept": "surfboard",
+        "text": "man doing trick with surfboard"
+      }
+    }
+  ],
+  "249046003": [
+    {
+      "from_concept": "person",
+      "rel": "wearing",
+      "to_concept": "jacket",
+      "text": "person wearing jacket",
+      "sk_similar": {
+        "cosine": 0.2236318737268448,
+        "from_concept": "snowboard",
+        "rel": "covered in",
+        "to_concept": "snow",
+        "text": "snowboard covered in snow"
+      }
+    },
+    {
+      "from_concept": "person",
+      "rel": "wearing",
+      "to_concept": "gloves",
+      "text": "person wearing gloves",
+      "sk_similar": {
+        "cosine": 0.2733650803565979,
+        "from_concept": "pant",
+        "rel": "tucked in",
+        "to_concept": "boot",
+        "text": "pant tucked in boot"
+      }
+    },
+    {
+      "from_concept": "person",
+      "rel": "wearing",
+      "to_concept": "hat",
+      "text": "person wearing hat",
+      "sk_similar": {
+        "cosine": 0.2984626293182373,
+        "from_concept": "goggles",
+        "rel": "worn on",
+        "to_concept": "face",
+        "text": "goggles worn on face"
+      }
+    },
+    {
+      "from_concept": "person",
+      "rel": "wearing",
+      "to_concept": "pants",
+      "text": "person wearing pants",
+      "sk_similar": {
+        "cosine": 0.5891053676605225,
+        "from_concept": "leg",
+        "rel": "covered with",
+        "to_concept": "pant",
+        "text": "leg covered with pant"
+      }
+    },
+    {
+      "from_concept": "person",
+      "rel": "wearing",
+      "to_concept": "helmet",
+      "text": "person wearing helmet",
+      "sk_similar": {
+        "cosine": 0.5653902888298035,
+        "from_concept": "goggles",
+        "rel": "worn on",
+        "to_concept": "head",
+        "text": "goggles worn on head"
+      }
+    },
+    {
+      "from_concept": "person",
+      "rel": "jumping",
+      "to_concept": "snowboard",
+      "text": "person jumping snowboard",
+      "sk_similar": {
+        "cosine": 0.676025390625,
+        "from_concept": "man",
+        "rel": "doing trick on",
+        "to_concept": "snowboard",
+        "text": "man doing trick on snowboard"
+      }
+    },
+    {
+      "from_concept": "person",
+      "rel": "jumping",
+      "to_concept": "trick",
+      "text": "person jumping trick",
+      "sk_similar": {
+        "cosine": 0.23667702078819275,
+        "from_concept": "foot",
+        "rel": "strapped to",
+        "to_concept": "snowboard",
+        "text": "foot strapped to snowboard"
+      }
+    }
+  ],
+  "249883001": [
+    {
+      "from_concept": "person",
+      "rel": "skateboarding",
+      "to_concept": "sidewalk",
+      "text": "person skateboarding sidewalk",
+      "sk_similar": {
+        "cosine": 0.757769763469696,
+        "from_concept": "skateboard",
+        "rel": "on",
+        "to_concept": "pavement",
+        "text": "skateboard on pavement"
+      }
+    }
+  ],
+  "69965002": [
+    {
+      "from_concept": "surfboard",
+      "rel": "being held onto",
+      "to_concept": "person",
+      "text": "surfboard being held onto person",
+      "sk_similar": {
+        "cosine": 0.8215869665145874,
+        "from_concept": "man",
+        "rel": "holding onto",
+        "to_concept": "surfboard",
+        "text": "man holding onto surfboard"
+      }
+    }
+  ],
+  "6719001": [
+    {
+      "from_concept": "woman",
+      "rel": "sitting on",
+      "to_concept": "beach",
+      "text": "woman sitting on beach",
+      "sk_similar": {
+        "cosine": 0.3666442334651947,
+        "from_concept": "surfboard",
+        "rel": "laying on",
+        "to_concept": "sand",
+        "text": "surfboard laying on sand"
+      }
+    }
+  ],
+  "391375002": [
+    {
+      "from_concept": "woman",
+      "rel": "sitting on",
+      "to_concept": "bench",
+      "text": "woman sitting on bench",
+      "sk_similar": {
+        "cosine": 0.7613628506660461,
+        "from_concept": "person",
+        "rel": "sitting on",
+        "to_concept": "bench",
+        "text": "person sitting on bench"
+      }
+    },
+    {
+      "from_concept": "woman",
+      "rel": "wearing",
+      "to_concept": "coat",
+      "text": "woman wearing coat",
+      "sk_similar": {
+        "cosine": 0.8276733756065369,
+        "from_concept": "woman",
+        "rel": "wearing",
+        "to_concept": "black coat",
+        "text": "woman wearing black coat"
+      }
+    },
+    {
+      "from_concept": "woman",
+      "rel": "wearing",
+      "to_concept": "shoes",
+      "text": "woman wearing shoes",
+      "sk_similar": {
+        "cosine": 0.3539312481880188,
+        "from_concept": "legs",
+        "rel": "covered in",
+        "to_concept": "stockings",
+        "text": "legs covered in stockings"
+      }
+    },
+    {
+      "from_concept": "woman",
+      "rel": "looking at",
+      "to_concept": "camera",
+      "text": "woman looking at camera",
+      "sk_similar": {
+        "cosine": 0.08279797434806824,
+        "from_concept": "grass",
+        "rel": "growing on",
+        "to_concept": "ground",
+        "text": "grass growing on ground"
+      }
+    },
+    {
+      "from_concept": "woman",
+      "rel": "with",
+      "to_concept": "serious expression",
+      "text": "woman with serious expression",
+      "sk_similar": {
+        "cosine": 0.06356799602508545,
+        "from_concept": "brick",
+        "rel": "framed on",
+        "to_concept": "wall",
+        "text": "brick framed on wall"
+      }
+    },
+    {
+      "from_concept": "woman",
+      "rel": "in front of",
+      "to_concept": "stone wall",
+      "text": "woman in front of stone wall",
+      "sk_similar": {
+        "cosine": 0.5549613237380981,
+        "from_concept": "rock",
+        "rel": "framed on",
+        "to_concept": "wall",
+        "text": "rock framed on wall"
+      }
+    },
+    {
+      "from_concept": "woman",
+      "rel": "in front of",
+      "to_concept": "archway",
+      "text": "woman in front of archway",
+      "sk_similar": {
+        "cosine": 0.20949147641658783,
+        "from_concept": "wall",
+        "rel": "made of",
+        "to_concept": "brick",
+        "text": "wall made of brick"
+      }
+    },
+    {
+      "from_concept": "stone wall",
+      "rel": "behind",
+      "to_concept": "archway",
+      "text": "stone wall behind archway",
+      "sk_similar": {
+        "cosine": 0.6378269195556641,
+        "from_concept": "stone",
+        "rel": "framed on",
+        "to_concept": "wall",
+        "text": "stone framed on wall"
+      }
+    }
+  ],
+  "319095002": [
+    {
+      "from_concept": "person",
+      "rel": "wearing",
+      "to_concept": "snowboard",
+      "text": "person wearing snowboard",
+      "sk_similar": {
+        "cosine": 0.8223863840103149,
+        "from_concept": "person",
+        "rel": "doing tricks in",
+        "to_concept": "snowboard",
+        "text": "person doing tricks in snowboard"
+      }
+    }
+  ],
+  "232692003": [
+    {
+      "from_concept": "person",
+      "rel": "water skiing",
+      "to_concept": "ramp",
+      "text": "person water skiing ramp",
+      "sk_similar": {
+        "cosine": 0.5933781862258911,
+        "from_concept": "waterboard",
+        "rel": "sliding on",
+        "to_concept": "ramp",
+        "text": "waterboard sliding on ramp"
+      }
+    }
+  ],
+  "544857000": [
+    {
+      "from_concept": "person",
+      "rel": "wearing",
+      "to_concept": "snowboard",
+      "text": "person wearing snowboard",
+      "sk_similar": {
+        "cosine": 0.6291875839233398,
+        "from_concept": "snowboard",
+        "rel": "gliding on",
+        "to_concept": "snow",
+        "text": "snowboard gliding on snow"
+      }
+    }
+  ],
+  "319350000": [
+    {
+      "from_concept": "woman",
+      "rel": "drinking from",
+      "to_concept": "wine glass",
+      "text": "woman drinking from wine glass",
+      "sk_similar": {
+        "cosine": 0.6722300052642822,
+        "from_concept": "wine",
+        "rel": "in",
+        "to_concept": "glass",
+        "text": "wine in glass"
+      }
+    }
+  ],
+  "521306011": [
+    {
+      "from_concept": "wii",
+      "rel": "is being played",
+      "to_concept": "boy",
+      "text": "wii is being played boy",
+      "sk_similar": {
+        "cosine": 0.7453417778015137,
+        "from_concept": "person",
+        "rel": "plays on",
+        "to_concept": "wii controller",
+        "text": "person plays on wii controller"
+      }
+    }
+  ],
+  "380711000": [
+    {
+      "from_concept": "man",
+      "rel": "holding",
+      "to_concept": "surfboard",
+      "text": "man holding surfboard",
+      "sk_similar": {
+        "cosine": 1.0000001192092896,
+        "from_concept": "man",
+        "rel": "holding",
+        "to_concept": "surfboard",
+        "text": "man holding surfboard"
+      }
+    }
+  ],
+  "31542000": [
+    {
+      "from_concept": "person",
+      "rel": "wearing",
+      "to_concept": "snowboard",
+      "text": "person wearing snowboard",
+      "sk_similar": {
+        "cosine": 0.6715081334114075,
+        "from_concept": "person",
+        "rel": "attached to",
+        "to_concept": "skiboard",
+        "text": "person attached to skiboard"
+      }
+    }
+  ],
+  "251824001": [
+    {
+      "from_concept": "scissors",
+      "rel": "being held",
+      "to_concept": "glasses",
+      "text": "scissors being held glasses",
+      "sk_similar": {
+        "cosine": 0.45963674783706665,
+        "from_concept": "hands",
+        "rel": "holding",
+        "to_concept": "plastic",
+        "text": "hands holding plastic"
+      }
+    }
+  ],
+  "431256002": [
+    {
+      "from_concept": "person",
+      "rel": "performing trick",
+      "to_concept": "snowboard",
+      "text": "person performing trick snowboard",
+      "sk_similar": {
+        "cosine": 0.7563031911849976,
+        "from_concept": "snow",
+        "rel": "doing",
+        "to_concept": "snowboard",
+        "text": "snow doing snowboard"
+      }
+    }
+  ],
+  "18519001": [
+    {
+      "from_concept": "skateboard",
+      "rel": "being used for",
+      "to_concept": "tricks",
+      "text": "skateboard being used for tricks",
+      "sk_similar": {
+        "cosine": 0.6290670037269592,
+        "from_concept": "shirt",
+        "rel": "riding",
+        "to_concept": "skateboard",
+        "text": "shirt riding skateboard"
+      }
+    }
+  ],
+  "199215001": [
+    {
+      "from_concept": "man",
+      "rel": "sitting on",
+      "to_concept": "truck",
+      "text": "man sitting on truck",
+      "sk_similar": {
+        "cosine": 1.0,
+        "from_concept": "man",
+        "rel": "sitting on",
+        "to_concept": "truck",
+        "text": "man sitting on truck"
+      }
+    }
+  ],
+  "469961000": [
+    {
+      "from_concept": "woman",
+      "rel": "skiing",
+      "to_concept": "man",
+      "text": "woman skiing man",
+      "sk_similar": {
+        "cosine": 0.39278748631477356,
+        "from_concept": "ski",
+        "rel": "worn on",
+        "to_concept": "leg",
+        "text": "ski worn on leg"
+      }
+    }
+  ]
+}

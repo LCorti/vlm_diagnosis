@@ -1,0 +1,3680 @@
+{
+  "337814001": [
+    {
+      "from_concept": "phone",
+      "rel": "being held by",
+      "to_concept": "person",
+      "text": "phone being held by person",
+      "sk_similar": {
+        "cosine": 0.4543783366680145,
+        "from_concept": "lady",
+        "rel": "holding",
+        "to_concept": "mic",
+        "text": "lady holding mic"
+      }
+    }
+  ],
+  "549390000": [
+    {
+      "from_concept": "bicycle",
+      "rel": "being ridden by",
+      "to_concept": "person",
+      "text": "bicycle being ridden by person",
+      "sk_similar": {
+        "cosine": 0.7447389960289001,
+        "from_concept": "biker",
+        "rel": "riding",
+        "to_concept": "bike",
+        "text": "biker riding bike"
+      }
+    }
+  ],
+  "502456011": [
+    {
+      "from_concept": "person",
+      "rel": "holding",
+      "to_concept": "phone",
+      "text": "person holding phone",
+      "sk_similar": {
+        "cosine": 0.2528359889984131,
+        "from_concept": "man",
+        "rel": "wearing",
+        "to_concept": "hat",
+        "text": "man wearing hat"
+      }
+    },
+    {
+      "from_concept": "person",
+      "rel": "wearing",
+      "to_concept": "shirt",
+      "text": "person wearing shirt",
+      "sk_similar": {
+        "cosine": 0.42160341143608093,
+        "from_concept": "person",
+        "rel": "watching",
+        "to_concept": "people",
+        "text": "person watching people"
+      }
+    },
+    {
+      "from_concept": "person",
+      "rel": "standing",
+      "to_concept": "ground",
+      "text": "person standing ground",
+      "sk_similar": {
+        "cosine": 0.4159683287143707,
+        "from_concept": "people",
+        "rel": "watching",
+        "to_concept": "person",
+        "text": "people watching person"
+      }
+    }
+  ],
+  "547487002": [
+    {
+      "from_concept": "person",
+      "rel": "holding",
+      "to_concept": "phone",
+      "text": "person holding phone",
+      "sk_similar": {
+        "cosine": 0.3064393401145935,
+        "from_concept": "fingers",
+        "rel": "sticking out of",
+        "to_concept": "hand",
+        "text": "fingers sticking out of hand"
+      }
+    },
+    {
+      "from_concept": "phone",
+      "rel": "displaying",
+      "to_concept": "screen",
+      "text": "phone displaying screen",
+      "sk_similar": {
+        "cosine": 0.1902318298816681,
+        "from_concept": "shirt",
+        "rel": "has",
+        "to_concept": "sleeve",
+        "text": "shirt has sleeve"
+      }
+    }
+  ],
+  "60596018": [
+    {
+      "from_concept": "person",
+      "rel": "standing on",
+      "to_concept": "skateboard",
+      "text": "person standing on skateboard",
+      "sk_similar": {
+        "cosine": 0.20040374994277954,
+        "from_concept": "person",
+        "rel": "near",
+        "to_concept": "pillow",
+        "text": "person near pillow"
+      }
+    },
+    {
+      "from_concept": "skateboard",
+      "rel": "has",
+      "to_concept": "wheels",
+      "text": "skateboard has wheels",
+      "sk_similar": {
+        "cosine": 0.259175568819046,
+        "from_concept": "frame",
+        "rel": "on",
+        "to_concept": "shelf",
+        "text": "frame on shelf"
+      }
+    }
+  ],
+  "58157004": [
+    {
+      "from_concept": "player",
+      "rel": "facing",
+      "to_concept": "wall",
+      "text": "player facing wall",
+      "sk_similar": {
+        "cosine": 0.27104875445365906,
+        "from_concept": "man",
+        "rel": "stretching out",
+        "to_concept": "arm",
+        "text": "man stretching out arm"
+      }
+    },
+    {
+      "from_concept": "player",
+      "rel": "standing",
+      "to_concept": "ground",
+      "text": "player standing ground",
+      "sk_similar": {
+        "cosine": 0.28029242157936096,
+        "from_concept": "man",
+        "rel": "wearing",
+        "to_concept": "short",
+        "text": "man wearing short"
+      }
+    }
+  ],
+  "356622000": [
+    {
+      "from_concept": "umbrella",
+      "rel": "providing shade for",
+      "to_concept": "person",
+      "text": "umbrella providing shade for person",
+      "sk_similar": {
+        "cosine": 0.71970534324646,
+        "from_concept": "umbrella",
+        "rel": "over",
+        "to_concept": "head",
+        "text": "umbrella over head"
+      }
+    }
+  ],
+  "53580001": [
+    {
+      "from_concept": "person",
+      "rel": "standing on",
+      "to_concept": "bus",
+      "text": "person standing on bus",
+      "sk_similar": {
+        "cosine": 0.5544328093528748,
+        "from_concept": "man",
+        "rel": "left in",
+        "to_concept": "bus",
+        "text": "man left in bus"
+      }
+    }
+  ],
+  "351477000": [
+    {
+      "from_concept": "person",
+      "rel": "wearing",
+      "to_concept": "blue",
+      "text": "person wearing blue",
+      "sk_similar": {
+        "cosine": 0.2031143754720688,
+        "from_concept": "head",
+        "rel": "resting on",
+        "to_concept": "arm",
+        "text": "head resting on arm"
+      }
+    },
+    {
+      "from_concept": "person",
+      "rel": "standing",
+      "to_concept": "ground",
+      "text": "person standing ground",
+      "sk_similar": {
+        "cosine": 0.3054623305797577,
+        "from_concept": "arm",
+        "rel": "touching",
+        "to_concept": "leg",
+        "text": "arm touching leg"
+      }
+    }
+  ],
+  "18699005": [
+    {
+      "from_concept": "object",
+      "rel": "being held by",
+      "to_concept": "person",
+      "text": "object being held by person",
+      "sk_similar": {
+        "cosine": 0.44044777750968933,
+        "from_concept": "head",
+        "rel": "resting on",
+        "to_concept": "hand",
+        "text": "head resting on hand"
+      }
+    },
+    {
+      "from_concept": "clothing",
+      "rel": "worn by",
+      "to_concept": "person",
+      "text": "clothing worn by person",
+      "sk_similar": {
+        "cosine": 0.5267034769058228,
+        "from_concept": "tie",
+        "rel": "over",
+        "to_concept": "pant",
+        "text": "tie over pant"
+      }
+    }
+  ],
+  "573214003": [
+    {
+      "from_concept": "person",
+      "rel": "riding",
+      "to_concept": "bicycle",
+      "text": "person riding bicycle",
+      "sk_similar": {
+        "cosine": 0.5809319615364075,
+        "from_concept": "man",
+        "rel": "driving",
+        "to_concept": "bike",
+        "text": "man driving bike"
+      }
+    },
+    {
+      "from_concept": "bicycle",
+      "rel": "has",
+      "to_concept": "seat",
+      "text": "bicycle has seat",
+      "sk_similar": {
+        "cosine": 0.43470364809036255,
+        "from_concept": "bike",
+        "rel": "moving on",
+        "to_concept": "road",
+        "text": "bike moving on road"
+      }
+    }
+  ],
+  "266922002": [
+    {
+      "from_concept": "phone",
+      "rel": "being held by",
+      "to_concept": "person",
+      "text": "phone being held by person",
+      "sk_similar": {
+        "cosine": 0.3625478744506836,
+        "from_concept": "glove",
+        "rel": "worn on",
+        "to_concept": "hand",
+        "text": "glove worn on hand"
+      }
+    }
+  ],
+  "313948000": [
+    {
+      "from_concept": "motorcycle",
+      "rel": "parked on",
+      "to_concept": "road",
+      "text": "motorcycle parked on road",
+      "sk_similar": {
+        "cosine": 0.16765376925468445,
+        "from_concept": "person",
+        "rel": "striped",
+        "to_concept": "shirt",
+        "text": "person striped shirt"
+      }
+    },
+    {
+      "from_concept": "person",
+      "rel": "standing next to",
+      "to_concept": "motorcycle",
+      "text": "person standing next to motorcycle",
+      "sk_similar": {
+        "cosine": 0.35465601086616516,
+        "from_concept": "person",
+        "rel": "resting",
+        "to_concept": "head",
+        "text": "person resting head"
+      }
+    }
+  ],
+  "372024000": [
+    {
+      "from_concept": "blue shorts",
+      "rel": "worn by",
+      "to_concept": "person",
+      "text": "blue shorts worn by person",
+      "sk_similar": {
+        "cosine": 0.42611682415008545,
+        "from_concept": "shoes",
+        "rel": "worn by",
+        "to_concept": "man",
+        "text": "shoes worn by man"
+      }
+    }
+  ],
+  "284152001": [
+    {
+      "from_concept": "person",
+      "rel": "sitting on",
+      "to_concept": "bench",
+      "text": "person sitting on bench",
+      "sk_similar": {
+        "cosine": 1.0,
+        "from_concept": "person",
+        "rel": "sitting on",
+        "to_concept": "bench",
+        "text": "person sitting on bench"
+      }
+    }
+  ],
+  "120162001": [],
+  "410446000": [
+    {
+      "from_concept": "umbrella",
+      "rel": "open",
+      "to_concept": "person",
+      "text": "umbrella open person",
+      "sk_similar": {
+        "cosine": 0.299116313457489,
+        "from_concept": "pedestrian",
+        "rel": "alone",
+        "to_concept": "street",
+        "text": "pedestrian alone street"
+      }
+    }
+  ],
+  "25804000": [
+    {
+      "from_concept": "elephant",
+      "rel": "carrying",
+      "to_concept": "person",
+      "text": "elephant carrying person",
+      "sk_similar": {
+        "cosine": 0.6385454535484314,
+        "from_concept": "man",
+        "rel": "sitting on",
+        "to_concept": "elephant",
+        "text": "man sitting on elephant"
+      }
+    }
+  ],
+  "378538002": [
+    {
+      "from_concept": "umbrella",
+      "rel": "open",
+      "to_concept": "person",
+      "text": "umbrella open person",
+      "sk_similar": {
+        "cosine": 0.28780025243759155,
+        "from_concept": "woman",
+        "rel": "holding",
+        "to_concept": "plastic bag",
+        "text": "woman holding plastic bag"
+      }
+    }
+  ],
+  "525616002": [
+    {
+      "from_concept": "hat",
+      "rel": "worn by",
+      "to_concept": "person",
+      "text": "hat worn by person",
+      "sk_similar": {
+        "cosine": 0.37919923663139343,
+        "from_concept": "people",
+        "rel": "wearing",
+        "to_concept": "tshirt",
+        "text": "people wearing tshirt"
+      }
+    }
+  ],
+  "460684004": [
+    {
+      "from_concept": "phone",
+      "rel": "being held by",
+      "to_concept": "person",
+      "text": "phone being held by person",
+      "sk_similar": {
+        "cosine": 0.3396482467651367,
+        "from_concept": "glass",
+        "rel": "in",
+        "to_concept": "hand",
+        "text": "glass in hand"
+      }
+    }
+  ],
+  "332607000": [
+    {
+      "from_concept": "wall",
+      "rel": "has",
+      "to_concept": "window",
+      "text": "wall has window",
+      "sk_similar": {
+        "cosine": 0.2708507478237152,
+        "from_concept": "light",
+        "rel": "hanging off of",
+        "to_concept": "roof",
+        "text": "light hanging off of roof"
+      }
+    },
+    {
+      "from_concept": "person",
+      "rel": "standing next to",
+      "to_concept": "wall",
+      "text": "person standing next to wall",
+      "sk_similar": {
+        "cosine": 0.3182516098022461,
+        "from_concept": "girl",
+        "rel": "on",
+        "to_concept": "counter",
+        "text": "girl on counter"
+      }
+    }
+  ],
+  "296657000": [
+    {
+      "from_concept": "object",
+      "rel": "being held by",
+      "to_concept": "person",
+      "text": "object being held by person",
+      "sk_similar": {
+        "cosine": 0.5271276235580444,
+        "from_concept": "hand",
+        "rel": "resting on",
+        "to_concept": "arm",
+        "text": "hand resting on arm"
+      }
+    }
+  ],
+  "162543000": [
+    {
+      "from_concept": "wall",
+      "rel": "has texture",
+      "to_concept": "brick",
+      "text": "wall has texture brick",
+      "sk_similar": {
+        "cosine": 0.24593786895275116,
+        "from_concept": "stone",
+        "rel": "behind",
+        "to_concept": "big elephant",
+        "text": "stone behind big elephant"
+      }
+    },
+    {
+      "from_concept": "person",
+      "rel": "standing next to",
+      "to_concept": "wall",
+      "text": "person standing next to wall",
+      "sk_similar": {
+        "cosine": 0.3025161623954773,
+        "from_concept": "electric sign",
+        "rel": "on",
+        "to_concept": "fence",
+        "text": "electric sign on fence"
+      }
+    }
+  ],
+  "63939005": [
+    {
+      "from_concept": "phone",
+      "rel": "being held by",
+      "to_concept": "person",
+      "text": "phone being held by person",
+      "sk_similar": {
+        "cosine": 0.17018991708755493,
+        "from_concept": "people",
+        "rel": "around",
+        "to_concept": "table",
+        "text": "people around table"
+      }
+    }
+  ],
+  "544533000": [
+    {
+      "from_concept": "bicycle",
+      "rel": "being ridden by",
+      "to_concept": "person",
+      "text": "bicycle being ridden by person",
+      "sk_similar": {
+        "cosine": 0.2761271595954895,
+        "from_concept": "shirt",
+        "rel": "worn by",
+        "to_concept": "man",
+        "text": "shirt worn by man"
+      }
+    }
+  ],
+  "194277000": [
+    {
+      "from_concept": "person",
+      "rel": "flying",
+      "to_concept": "kite",
+      "text": "person flying kite",
+      "sk_similar": {
+        "cosine": 0.7008693218231201,
+        "from_concept": "girl",
+        "rel": "holding",
+        "to_concept": "kite",
+        "text": "girl holding kite"
+      }
+    },
+    {
+      "from_concept": "kite",
+      "rel": "attached to",
+      "to_concept": "string",
+      "text": "kite attached to string",
+      "sk_similar": {
+        "cosine": 0.9001915454864502,
+        "from_concept": "string",
+        "rel": "hanging down",
+        "to_concept": "kite",
+        "text": "string hanging down kite"
+      }
+    }
+  ],
+  "33683009": [
+    {
+      "from_concept": "phone",
+      "rel": "in hand",
+      "to_concept": "person",
+      "text": "phone in hand person",
+      "sk_similar": {
+        "cosine": 0.14472568035125732,
+        "from_concept": "kite",
+        "rel": "pulled by",
+        "to_concept": "people",
+        "text": "kite pulled by people"
+      }
+    }
+  ],
+  "528458004": [
+    {
+      "from_concept": "cat",
+      "rel": "sitting on",
+      "to_concept": "chair",
+      "text": "cat sitting on chair",
+      "sk_similar": {
+        "cosine": 0.27215903997421265,
+        "from_concept": "horse",
+        "rel": "ridden by",
+        "to_concept": "human",
+        "text": "horse ridden by human"
+      }
+    },
+    {
+      "from_concept": "cat",
+      "rel": "looking at",
+      "to_concept": "bird",
+      "text": "cat looking at bird",
+      "sk_similar": {
+        "cosine": 0.20688533782958984,
+        "from_concept": "horse",
+        "rel": "overtaking",
+        "to_concept": "white horse",
+        "text": "horse overtaking white horse"
+      }
+    }
+  ],
+  "388619000": [
+    {
+      "from_concept": "bicycle",
+      "rel": "has",
+      "to_concept": "wheels",
+      "text": "bicycle has wheels",
+      "sk_similar": {
+        "cosine": 0.9071913957595825,
+        "from_concept": "bike",
+        "rel": "has",
+        "to_concept": "wheel",
+        "text": "bike has wheel"
+      }
+    },
+    {
+      "from_concept": "bicycle",
+      "rel": "has",
+      "to_concept": "seat",
+      "text": "bicycle has seat",
+      "sk_similar": {
+        "cosine": 0.9016352891921997,
+        "from_concept": "seat",
+        "rel": "of",
+        "to_concept": "bicycle",
+        "text": "seat of bicycle"
+      }
+    },
+    {
+      "from_concept": "bicycle",
+      "rel": "has",
+      "to_concept": "pedals",
+      "text": "bicycle has pedals",
+      "sk_similar": {
+        "cosine": 0.5371272563934326,
+        "from_concept": "bicycle",
+        "rel": "next to",
+        "to_concept": "water",
+        "text": "bicycle next to water"
+      }
+    },
+    {
+      "from_concept": "bicycle",
+      "rel": "has",
+      "to_concept": "handlebars",
+      "text": "bicycle has handlebars",
+      "sk_similar": {
+        "cosine": 0.47439610958099365,
+        "from_concept": "wheel",
+        "rel": "mounted on",
+        "to_concept": "bike",
+        "text": "wheel mounted on bike"
+      }
+    }
+  ],
+  "21979005": [
+    {
+      "from_concept": "person",
+      "rel": "holding",
+      "to_concept": "object",
+      "text": "person holding object",
+      "sk_similar": {
+        "cosine": 0.10315870493650436,
+        "from_concept": "people",
+        "rel": "standing on",
+        "to_concept": "skateboard",
+        "text": "people standing on skateboard"
+      }
+    },
+    {
+      "from_concept": "person",
+      "rel": "wearing",
+      "to_concept": "shirt",
+      "text": "person wearing shirt",
+      "sk_similar": {
+        "cosine": 0.141190767288208,
+        "from_concept": "men",
+        "rel": "wearing",
+        "to_concept": "helmet",
+        "text": "men wearing helmet"
+      }
+    }
+  ],
+  "218189016": [
+    {
+      "from_concept": "sidewalk",
+      "rel": "bordered by",
+      "to_concept": "building",
+      "text": "sidewalk bordered by building",
+      "sk_similar": {
+        "cosine": 0.20671261847019196,
+        "from_concept": "kid",
+        "rel": "looking away from",
+        "to_concept": "hillside",
+        "text": "kid looking away from hillside"
+      }
+    },
+    {
+      "from_concept": "person",
+      "rel": "walking",
+      "to_concept": "street",
+      "text": "person walking street",
+      "sk_similar": {
+        "cosine": 0.49433189630508423,
+        "from_concept": "woman",
+        "rel": "walking past",
+        "to_concept": "people",
+        "text": "woman walking past people"
+      }
+    },
+    {
+      "from_concept": "street",
+      "rel": "has",
+      "to_concept": "sidewalk",
+      "text": "street has sidewalk",
+      "sk_similar": {
+        "cosine": 0.33991315960884094,
+        "from_concept": "people",
+        "rel": "standing on",
+        "to_concept": "hillside",
+        "text": "people standing on hillside"
+      }
+    }
+  ],
+  "56983014": [
+    {
+      "from_concept": "wall",
+      "rel": "has",
+      "to_concept": "window",
+      "text": "wall has window",
+      "sk_similar": {
+        "cosine": 0.23783372342586517,
+        "from_concept": "one person",
+        "rel": "wearing",
+        "to_concept": "glasses",
+        "text": "one person wearing glasses"
+      }
+    },
+    {
+      "from_concept": "person",
+      "rel": "standing next to",
+      "to_concept": "wall",
+      "text": "person standing next to wall",
+      "sk_similar": {
+        "cosine": 0.3658212721347809,
+        "from_concept": "person",
+        "rel": "looking towards",
+        "to_concept": "pole",
+        "text": "person looking towards pole"
+      }
+    }
+  ],
+  "464831006": [
+    {
+      "from_concept": "object",
+      "rel": "being held by",
+      "to_concept": "person",
+      "text": "object being held by person",
+      "sk_similar": {
+        "cosine": 0.327602744102478,
+        "from_concept": "man",
+        "rel": "looking",
+        "to_concept": "laptop",
+        "text": "man looking laptop"
+      }
+    }
+  ],
+  "190018000": [
+    {
+      "from_concept": "phone",
+      "rel": "being held by",
+      "to_concept": "person",
+      "text": "phone being held by person",
+      "sk_similar": {
+        "cosine": 0.26540297269821167,
+        "from_concept": "man",
+        "rel": "wearing",
+        "to_concept": "shirt",
+        "text": "man wearing shirt"
+      }
+    }
+  ],
+  "540414001": [
+    {
+      "from_concept": "object",
+      "rel": "being held by",
+      "to_concept": "person",
+      "text": "object being held by person",
+      "sk_similar": {
+        "cosine": 0.5074063539505005,
+        "from_concept": "man",
+        "rel": "has",
+        "to_concept": "head",
+        "text": "man has head"
+      }
+    }
+  ],
+  "67551000": [
+    {
+      "from_concept": "elephant",
+      "rel": "carrying",
+      "to_concept": "person",
+      "text": "elephant carrying person",
+      "sk_similar": {
+        "cosine": 0.6385454535484314,
+        "from_concept": "man",
+        "rel": "sitting on",
+        "to_concept": "elephant",
+        "text": "man sitting on elephant"
+      }
+    }
+  ],
+  "4840001": [
+    {
+      "from_concept": "vest",
+      "rel": "worn by",
+      "to_concept": "person",
+      "text": "vest worn by person",
+      "sk_similar": {
+        "cosine": 0.43225163221359253,
+        "from_concept": "hat",
+        "rel": "wearing",
+        "to_concept": "head",
+        "text": "hat wearing head"
+      }
+    }
+  ],
+  "301641001": [
+    {
+      "from_concept": "boat",
+      "rel": "floating on",
+      "to_concept": "water",
+      "text": "boat floating on water",
+      "sk_similar": {
+        "cosine": 0.6104838848114014,
+        "from_concept": "boat",
+        "rel": "posted in",
+        "to_concept": "cockpit",
+        "text": "boat posted in cockpit"
+      }
+    },
+    {
+      "from_concept": "person",
+      "rel": "standing on",
+      "to_concept": "boat",
+      "text": "person standing on boat",
+      "sk_similar": {
+        "cosine": 0.27666476368904114,
+        "from_concept": "pilot",
+        "rel": "in",
+        "to_concept": "cockpit",
+        "text": "pilot in cockpit"
+      }
+    }
+  ],
+  "175615001": [
+    {
+      "from_concept": "person",
+      "rel": "standing",
+      "to_concept": "ground",
+      "text": "person standing ground",
+      "sk_similar": {
+        "cosine": 0.34751713275909424,
+        "from_concept": "person",
+        "rel": "wearing",
+        "to_concept": "wetsuit",
+        "text": "person wearing wetsuit"
+      }
+    },
+    {
+      "from_concept": "person",
+      "rel": "wearing",
+      "to_concept": "hat",
+      "text": "person wearing hat",
+      "sk_similar": {
+        "cosine": 0.8217867016792297,
+        "from_concept": "hat",
+        "rel": "worn on",
+        "to_concept": "head",
+        "text": "hat worn on head"
+      }
+    }
+  ],
+  "377949002": [
+    {
+      "from_concept": "backpack",
+      "rel": "worn by",
+      "to_concept": "person",
+      "text": "backpack worn by person",
+      "sk_similar": {
+        "cosine": 0.3276035189628601,
+        "from_concept": "woman",
+        "rel": "wearing",
+        "to_concept": "beanie",
+        "text": "woman wearing beanie"
+      }
+    }
+  ],
+  "318284007": [
+    {
+      "from_concept": "shirt",
+      "rel": "has",
+      "to_concept": "pocket",
+      "text": "shirt has pocket",
+      "sk_similar": {
+        "cosine": 0.2925432026386261,
+        "from_concept": "racket",
+        "rel": "held with",
+        "to_concept": "hand",
+        "text": "racket held with hand"
+      }
+    },
+    {
+      "from_concept": "person",
+      "rel": "wearing",
+      "to_concept": "shirt",
+      "text": "person wearing shirt",
+      "sk_similar": {
+        "cosine": 0.3926851153373718,
+        "from_concept": "racket",
+        "rel": "held by",
+        "to_concept": "man",
+        "text": "racket held by man"
+      }
+    }
+  ],
+  "154520018": [
+    {
+      "from_concept": "umbrella",
+      "rel": "being held by",
+      "to_concept": "person",
+      "text": "umbrella being held by person",
+      "sk_similar": {
+        "cosine": 0.3848373591899872,
+        "from_concept": "person",
+        "rel": "looking up at",
+        "to_concept": "kite",
+        "text": "person looking up at kite"
+      }
+    }
+  ],
+  "207108000": [
+    {
+      "from_concept": "person",
+      "rel": "wearing",
+      "to_concept": "white shirt",
+      "text": "person wearing white shirt",
+      "sk_similar": {
+        "cosine": 0.9999997615814209,
+        "from_concept": "person",
+        "rel": "wearing",
+        "to_concept": "white shirt",
+        "text": "person wearing white shirt"
+      }
+    },
+    {
+      "from_concept": "person",
+      "rel": "standing",
+      "to_concept": "ground",
+      "text": "person standing ground",
+      "sk_similar": {
+        "cosine": 0.27147412300109863,
+        "from_concept": "man",
+        "rel": "wearing",
+        "to_concept": "white shirt",
+        "text": "man wearing white shirt"
+      }
+    }
+  ],
+  "353180002": [
+    {
+      "from_concept": "cart",
+      "rel": "being pushed by",
+      "to_concept": "person",
+      "text": "cart being pushed by person",
+      "sk_similar": {
+        "cosine": 0.5109434723854065,
+        "from_concept": "man",
+        "rel": "pushing",
+        "to_concept": "bus",
+        "text": "man pushing bus"
+      }
+    }
+  ],
+  "159223001": [
+    {
+      "from_concept": "person",
+      "rel": "wearing",
+      "to_concept": "pants",
+      "text": "person wearing pants",
+      "sk_similar": {
+        "cosine": 0.16059288382530212,
+        "from_concept": "truck",
+        "rel": "near by",
+        "to_concept": "people",
+        "text": "truck near by people"
+      }
+    },
+    {
+      "from_concept": "person",
+      "rel": "wearing",
+      "to_concept": "shirt",
+      "text": "person wearing shirt",
+      "sk_similar": {
+        "cosine": 0.2686637341976166,
+        "from_concept": "head",
+        "rel": "resting on",
+        "to_concept": "arm",
+        "text": "head resting on arm"
+      }
+    }
+  ],
+  "420916000": [
+    {
+      "from_concept": "bench",
+      "rel": "has",
+      "to_concept": "backrest",
+      "text": "bench has backrest",
+      "sk_similar": {
+        "cosine": 0.4736025929450989,
+        "from_concept": "arm",
+        "rel": "resting on",
+        "to_concept": "chair back",
+        "text": "arm resting on chair back"
+      }
+    },
+    {
+      "from_concept": "bench",
+      "rel": "has",
+      "to_concept": "seat",
+      "text": "bench has seat",
+      "sk_similar": {
+        "cosine": 0.3272392749786377,
+        "from_concept": "man",
+        "rel": "relaxing in",
+        "to_concept": "chair",
+        "text": "man relaxing in chair"
+      }
+    },
+    {
+      "from_concept": "person",
+      "rel": "standing next to",
+      "to_concept": "bench",
+      "text": "person standing next to bench",
+      "sk_similar": {
+        "cosine": 0.22251978516578674,
+        "from_concept": "man",
+        "rel": "wearing",
+        "to_concept": "hat",
+        "text": "man wearing hat"
+      }
+    }
+  ],
+  "433204004": [
+    {
+      "from_concept": "fabric",
+      "rel": "woven from",
+      "to_concept": "yarn",
+      "text": "fabric woven from yarn",
+      "sk_similar": {
+        "cosine": -0.016620293259620667,
+        "from_concept": "person",
+        "rel": "riding on",
+        "to_concept": "motorbike",
+        "text": "person riding on motorbike"
+      }
+    },
+    {
+      "from_concept": "yarn",
+      "rel": "spun from",
+      "to_concept": "wool",
+      "text": "yarn spun from wool",
+      "sk_similar": {
+        "cosine": 0.07307492941617966,
+        "from_concept": "roof",
+        "rel": "covering",
+        "to_concept": "house",
+        "text": "roof covering house"
+      }
+    },
+    {
+      "from_concept": "shirt",
+      "rel": "made of",
+      "to_concept": "fabric",
+      "text": "shirt made of fabric",
+      "sk_similar": {
+        "cosine": 0.15794968605041504,
+        "from_concept": "house",
+        "rel": "has",
+        "to_concept": "roof",
+        "text": "house has roof"
+      }
+    },
+    {
+      "from_concept": "person",
+      "rel": "wearing",
+      "to_concept": "shirt",
+      "text": "person wearing shirt",
+      "sk_similar": {
+        "cosine": 0.34243038296699524,
+        "from_concept": "person",
+        "rel": "walking on",
+        "to_concept": "road",
+        "text": "person walking on road"
+      }
+    },
+    {
+      "from_concept": "wool",
+      "rel": "grown on",
+      "to_concept": "sheep",
+      "text": "wool grown on sheep",
+      "sk_similar": {
+        "cosine": 0.17038461565971375,
+        "from_concept": "leaf",
+        "rel": "growing on",
+        "to_concept": "tree",
+        "text": "leaf growing on tree"
+      }
+    }
+  ],
+  "563775002": [
+    {
+      "from_concept": "phone",
+      "rel": "being held by",
+      "to_concept": "person",
+      "text": "phone being held by person",
+      "sk_similar": {
+        "cosine": 0.31095218658447266,
+        "from_concept": "picture",
+        "rel": "of",
+        "to_concept": "people",
+        "text": "picture of people"
+      }
+    }
+  ],
+  "399744001": [
+    {
+      "from_concept": "object",
+      "rel": "being held by",
+      "to_concept": "person",
+      "text": "object being held by person",
+      "sk_similar": {
+        "cosine": 0.4100908637046814,
+        "from_concept": "glass",
+        "rel": "worn by",
+        "to_concept": "man",
+        "text": "glass worn by man"
+      }
+    }
+  ],
+  "216520003": [
+    {
+      "from_concept": "elephant",
+      "rel": "carrying",
+      "to_concept": "person",
+      "text": "elephant carrying person",
+      "sk_similar": {
+        "cosine": 0.5068550109863281,
+        "from_concept": "hair",
+        "rel": "growing on",
+        "to_concept": "elephant's body",
+        "text": "hair growing on elephant's body"
+      }
+    }
+  ],
+  "50100017": [
+    {
+      "from_concept": "grass",
+      "rel": "covered by",
+      "to_concept": "person",
+      "text": "grass covered by person",
+      "sk_similar": {
+        "cosine": 0.663012683391571,
+        "from_concept": "people",
+        "rel": "above",
+        "to_concept": "grass",
+        "text": "people above grass"
+      }
+    }
+  ],
+  "17869002": [
+    {
+      "from_concept": "person",
+      "rel": "holding",
+      "to_concept": "phone",
+      "text": "person holding phone",
+      "sk_similar": {
+        "cosine": 0.19513359665870667,
+        "from_concept": "people",
+        "rel": "doing",
+        "to_concept": "activity",
+        "text": "people doing activity"
+      }
+    },
+    {
+      "from_concept": "phone",
+      "rel": "displaying",
+      "to_concept": "screen",
+      "text": "phone displaying screen",
+      "sk_similar": {
+        "cosine": 0.06724779307842255,
+        "from_concept": "people",
+        "rel": "in",
+        "to_concept": "beach",
+        "text": "people in beach"
+      }
+    }
+  ],
+  "50926004": [
+    {
+      "from_concept": "phone",
+      "rel": "being held by",
+      "to_concept": "person",
+      "text": "phone being held by person",
+      "sk_similar": {
+        "cosine": 0.21916581690311432,
+        "from_concept": "woman",
+        "rel": "in front of",
+        "to_concept": "man",
+        "text": "woman in front of man"
+      }
+    }
+  ],
+  "474608001": [
+    {
+      "from_concept": "person",
+      "rel": "singing",
+      "to_concept": "microphone",
+      "text": "person singing microphone",
+      "sk_similar": {
+        "cosine": 0.23335841298103333,
+        "from_concept": "man",
+        "rel": "has",
+        "to_concept": "open mouth",
+        "text": "man has open mouth"
+      }
+    },
+    {
+      "from_concept": "microphone",
+      "rel": "attached to",
+      "to_concept": "stand",
+      "text": "microphone attached to stand",
+      "sk_similar": {
+        "cosine": 0.6469852328300476,
+        "from_concept": "man",
+        "rel": "holding",
+        "to_concept": "microphone",
+        "text": "man holding microphone"
+      }
+    }
+  ],
+  "526394000": [
+    {
+      "from_concept": "screen",
+      "rel": "showing",
+      "to_concept": "image",
+      "text": "screen showing image",
+      "sk_similar": {
+        "cosine": 0.13005580008029938,
+        "from_concept": "fork",
+        "rel": "digging into",
+        "to_concept": "plate",
+        "text": "fork digging into plate"
+      }
+    },
+    {
+      "from_concept": "person",
+      "rel": "holding",
+      "to_concept": "phone",
+      "text": "person holding phone",
+      "sk_similar": {
+        "cosine": 0.17697502672672272,
+        "from_concept": "knife",
+        "rel": "above",
+        "to_concept": "napkin",
+        "text": "knife above napkin"
+      }
+    },
+    {
+      "from_concept": "phone",
+      "rel": "displaying",
+      "to_concept": "screen",
+      "text": "phone displaying screen",
+      "sk_similar": {
+        "cosine": 0.06221054866909981,
+        "from_concept": "cake",
+        "rel": "on",
+        "to_concept": "plate",
+        "text": "cake on plate"
+      }
+    }
+  ],
+  "224757004": [
+    {
+      "from_concept": "object",
+      "rel": "being held by",
+      "to_concept": "person",
+      "text": "object being held by person",
+      "sk_similar": {
+        "cosine": 0.2720365822315216,
+        "from_concept": "people",
+        "rel": "playing with",
+        "to_concept": "soccer ball",
+        "text": "people playing with soccer ball"
+      }
+    }
+  ],
+  "2613006": [
+    {
+      "from_concept": "phone",
+      "rel": "in hand",
+      "to_concept": "person",
+      "text": "phone in hand person",
+      "sk_similar": {
+        "cosine": 0.20704862475395203,
+        "from_concept": "foot",
+        "rel": "belonging to",
+        "to_concept": "man",
+        "text": "foot belonging to man"
+      }
+    }
+  ],
+  "161231000": [
+    {
+      "from_concept": "person",
+      "rel": "holding",
+      "to_concept": "phone",
+      "text": "person holding phone",
+      "sk_similar": {
+        "cosine": 0.24807879328727722,
+        "from_concept": "person",
+        "rel": "walking on top of",
+        "to_concept": "sidewalk",
+        "text": "person walking on top of sidewalk"
+      }
+    },
+    {
+      "from_concept": "person",
+      "rel": "standing next to",
+      "to_concept": "wall",
+      "text": "person standing next to wall",
+      "sk_similar": {
+        "cosine": 0.2905869483947754,
+        "from_concept": "person",
+        "rel": "walking on",
+        "to_concept": "platform",
+        "text": "person walking on platform"
+      }
+    },
+    {
+      "from_concept": "person",
+      "rel": "wearing",
+      "to_concept": "jacket",
+      "text": "person wearing jacket",
+      "sk_similar": {
+        "cosine": 0.4659070670604706,
+        "from_concept": "person",
+        "rel": "carrying",
+        "to_concept": "bag",
+        "text": "person carrying bag"
+      }
+    }
+  ],
+  "147179001": [
+    {
+      "from_concept": "person",
+      "rel": "wearing",
+      "to_concept": "bracelet",
+      "text": "person wearing bracelet",
+      "sk_similar": {
+        "cosine": 0.8613253831863403,
+        "from_concept": "woman",
+        "rel": "wearing",
+        "to_concept": "bracelet",
+        "text": "woman wearing bracelet"
+      }
+    },
+    {
+      "from_concept": "person",
+      "rel": "holding",
+      "to_concept": "phone",
+      "text": "person holding phone",
+      "sk_similar": {
+        "cosine": 0.31940335035324097,
+        "from_concept": "hand",
+        "rel": "connected to",
+        "to_concept": "arm",
+        "text": "hand connected to arm"
+      }
+    }
+  ],
+  "157063001": [
+    {
+      "from_concept": "hat",
+      "rel": "worn by",
+      "to_concept": "person",
+      "text": "hat worn by person",
+      "sk_similar": {
+        "cosine": 0.9207546710968018,
+        "from_concept": "hat",
+        "rel": "worn on",
+        "to_concept": "head",
+        "text": "hat worn on head"
+      }
+    }
+  ],
+  "404263008": [
+    {
+      "from_concept": "person",
+      "rel": "holding",
+      "to_concept": "object",
+      "text": "person holding object",
+      "sk_similar": {
+        "cosine": 0.2854894697666168,
+        "from_concept": "man",
+        "rel": "wearing",
+        "to_concept": "helmet",
+        "text": "man wearing helmet"
+      }
+    },
+    {
+      "from_concept": "person",
+      "rel": "wearing",
+      "to_concept": "shirt",
+      "text": "person wearing shirt",
+      "sk_similar": {
+        "cosine": 0.5303294062614441,
+        "from_concept": "shirt",
+        "rel": "squatting on",
+        "to_concept": "sand",
+        "text": "shirt squatting on sand"
+      }
+    }
+  ],
+  "30413000": [
+    {
+      "from_concept": "person",
+      "rel": "standing on",
+      "to_concept": "platform",
+      "text": "person standing on platform",
+      "sk_similar": {
+        "cosine": 0.6659972071647644,
+        "from_concept": "man",
+        "rel": "walking on",
+        "to_concept": "platform",
+        "text": "man walking on platform"
+      }
+    },
+    {
+      "from_concept": "platform",
+      "rel": "has",
+      "to_concept": "several people",
+      "text": "platform has several people",
+      "sk_similar": {
+        "cosine": 0.29598236083984375,
+        "from_concept": "train",
+        "rel": "going around",
+        "to_concept": "man",
+        "text": "train going around man"
+      }
+    }
+  ],
+  "430788008": [
+    {
+      "from_concept": "person",
+      "rel": "standing on",
+      "to_concept": "platform",
+      "text": "person standing on platform",
+      "sk_similar": {
+        "cosine": 0.2730935513973236,
+        "from_concept": "light",
+        "rel": "attached on",
+        "to_concept": "pole",
+        "text": "light attached on pole"
+      }
+    },
+    {
+      "from_concept": "platform",
+      "rel": "supported by",
+      "to_concept": "poles",
+      "text": "platform supported by poles",
+      "sk_similar": {
+        "cosine": 0.5993832349777222,
+        "from_concept": "pole",
+        "rel": "supporting",
+        "to_concept": "awning",
+        "text": "pole supporting awning"
+      }
+    }
+  ],
+  "471893002": [
+    {
+      "from_concept": "person",
+      "rel": "wearing",
+      "to_concept": "pants",
+      "text": "person wearing pants",
+      "sk_similar": {
+        "cosine": 0.2225288450717926,
+        "from_concept": "man",
+        "rel": "holding",
+        "to_concept": "controller",
+        "text": "man holding controller"
+      }
+    },
+    {
+      "from_concept": "person",
+      "rel": "wearing",
+      "to_concept": "shirt",
+      "text": "person wearing shirt",
+      "sk_similar": {
+        "cosine": 0.27085840702056885,
+        "from_concept": "kid",
+        "rel": "standing next to",
+        "to_concept": "table",
+        "text": "kid standing next to table"
+      }
+    },
+    {
+      "from_concept": "person",
+      "rel": "standing",
+      "to_concept": "ground",
+      "text": "person standing ground",
+      "sk_similar": {
+        "cosine": 0.48681679368019104,
+        "from_concept": "man",
+        "rel": "standing next to",
+        "to_concept": "table",
+        "text": "man standing next to table"
+      }
+    }
+  ],
+  "522727001": [
+    {
+      "from_concept": "phone",
+      "rel": "being held by",
+      "to_concept": "person",
+      "text": "phone being held by person",
+      "sk_similar": {
+        "cosine": 0.2995257079601288,
+        "from_concept": "tie",
+        "rel": "hanging around",
+        "to_concept": "neck",
+        "text": "tie hanging around neck"
+      }
+    }
+  ],
+  "473299002": [
+    {
+      "from_concept": "phone",
+      "rel": "in hand",
+      "to_concept": "person",
+      "text": "phone in hand person",
+      "sk_similar": {
+        "cosine": 0.2776617407798767,
+        "from_concept": "arm",
+        "rel": "touching",
+        "to_concept": "pant",
+        "text": "arm touching pant"
+      }
+    }
+  ],
+  "88682001": [
+    {
+      "from_concept": "person",
+      "rel": "holding",
+      "to_concept": "umbrella",
+      "text": "person holding umbrella",
+      "sk_similar": {
+        "cosine": 0.8180902004241943,
+        "from_concept": "umbrella",
+        "rel": "over",
+        "to_concept": "person",
+        "text": "umbrella over person"
+      }
+    }
+  ],
+  "549448003": [
+    {
+      "from_concept": "road",
+      "rel": "is bordered by",
+      "to_concept": "sidewalk",
+      "text": "road is bordered by sidewalk",
+      "sk_similar": {
+        "cosine": 0.35618487000465393,
+        "from_concept": "person",
+        "rel": "near by",
+        "to_concept": "fence",
+        "text": "person near by fence"
+      }
+    },
+    {
+      "from_concept": "sidewalk",
+      "rel": "has",
+      "to_concept": "trees",
+      "text": "sidewalk has trees",
+      "sk_similar": {
+        "cosine": 0.31549298763275146,
+        "from_concept": "leg",
+        "rel": "near",
+        "to_concept": "fence",
+        "text": "leg near fence"
+      }
+    },
+    {
+      "from_concept": "person",
+      "rel": "standing next to",
+      "to_concept": "bus",
+      "text": "person standing next to bus",
+      "sk_similar": {
+        "cosine": 0.7465365529060364,
+        "from_concept": "people standing",
+        "rel": "near",
+        "to_concept": "bus",
+        "text": "people standing near bus"
+      }
+    },
+    {
+      "from_concept": "bus",
+      "rel": "is parked on",
+      "to_concept": "road",
+      "text": "bus is parked on road",
+      "sk_similar": {
+        "cosine": 0.6930410265922546,
+        "from_concept": "bus",
+        "rel": "near",
+        "to_concept": "people",
+        "text": "bus near people"
+      }
+    },
+    {
+      "from_concept": "bus",
+      "rel": "has",
+      "to_concept": "windows",
+      "text": "bus has windows",
+      "sk_similar": {
+        "cosine": 0.5973300337791443,
+        "from_concept": "bus",
+        "rel": "near",
+        "to_concept": "leg",
+        "text": "bus near leg"
+      }
+    }
+  ],
+  "333538005": [],
+  "415798004": [
+    {
+      "from_concept": "boat",
+      "rel": "being rowed by",
+      "to_concept": "person",
+      "text": "boat being rowed by person",
+      "sk_similar": {
+        "cosine": 0.5400118827819824,
+        "from_concept": "man",
+        "rel": "holding",
+        "to_concept": "paddle",
+        "text": "man holding paddle"
+      }
+    }
+  ],
+  "579060002": [
+    {
+      "from_concept": "hat",
+      "rel": "worn by",
+      "to_concept": "person",
+      "text": "hat worn by person",
+      "sk_similar": {
+        "cosine": 0.8304585218429565,
+        "from_concept": "one person",
+        "rel": "wearing",
+        "to_concept": "hat",
+        "text": "one person wearing hat"
+      }
+    }
+  ],
+  "372413001": [
+    {
+      "from_concept": "person",
+      "rel": "holding",
+      "to_concept": "phone",
+      "text": "person holding phone",
+      "sk_similar": {
+        "cosine": 0.09510321915149689,
+        "from_concept": "motorcycle",
+        "rel": "parked on side of",
+        "to_concept": "road",
+        "text": "motorcycle parked on side of road"
+      }
+    },
+    {
+      "from_concept": "person",
+      "rel": "wearing",
+      "to_concept": "shirt",
+      "text": "person wearing shirt",
+      "sk_similar": {
+        "cosine": 0.27743592858314514,
+        "from_concept": "person",
+        "rel": "watching",
+        "to_concept": "motorcycle",
+        "text": "person watching motorcycle"
+      }
+    },
+    {
+      "from_concept": "person",
+      "rel": "sitting on",
+      "to_concept": "chair",
+      "text": "person sitting on chair",
+      "sk_similar": {
+        "cosine": 0.3001568913459778,
+        "from_concept": "head",
+        "rel": "resting on",
+        "to_concept": "arm",
+        "text": "head resting on arm"
+      }
+    }
+  ],
+  "570381003": [
+    {
+      "from_concept": "person",
+      "rel": "wearing",
+      "to_concept": "sunglasses",
+      "text": "person wearing sunglasses",
+      "sk_similar": {
+        "cosine": 0.8022372126579285,
+        "from_concept": "sunglasses",
+        "rel": "on",
+        "to_concept": "head",
+        "text": "sunglasses on head"
+      }
+    },
+    {
+      "from_concept": "person",
+      "rel": "holding",
+      "to_concept": "phone",
+      "text": "person holding phone",
+      "sk_similar": {
+        "cosine": 0.3883129358291626,
+        "from_concept": "glass",
+        "rel": "held in",
+        "to_concept": "hand",
+        "text": "glass held in hand"
+      }
+    }
+  ],
+  "305876000": [
+    {
+      "from_concept": "pole",
+      "rel": "being held by",
+      "to_concept": "person",
+      "text": "pole being held by person",
+      "sk_similar": {
+        "cosine": 0.6591796278953552,
+        "from_concept": "pole",
+        "rel": "attached to",
+        "to_concept": "chair",
+        "text": "pole attached to chair"
+      }
+    }
+  ],
+  "418275002": [
+    {
+      "from_concept": "person",
+      "rel": "styling",
+      "to_concept": "hair",
+      "text": "person styling hair",
+      "sk_similar": {
+        "cosine": 0.3018047511577606,
+        "from_concept": "hair",
+        "rel": "sleeping next to",
+        "to_concept": "cat",
+        "text": "hair sleeping next to cat"
+      }
+    }
+  ],
+  "279490024": [
+    {
+      "from_concept": "food",
+      "rel": "being eaten by",
+      "to_concept": "person",
+      "text": "food being eaten by person",
+      "sk_similar": {
+        "cosine": 0.5748361945152283,
+        "from_concept": "person",
+        "rel": "eating",
+        "to_concept": "cake",
+        "text": "person eating cake"
+      }
+    }
+  ],
+  "240275005": [
+    {
+      "from_concept": "surfboard",
+      "rel": "being ridden by",
+      "to_concept": "surfer",
+      "text": "surfboard being ridden by surfer",
+      "sk_similar": {
+        "cosine": 0.72939133644104,
+        "from_concept": "man",
+        "rel": "doing trick with",
+        "to_concept": "surfboard",
+        "text": "man doing trick with surfboard"
+      }
+    }
+  ],
+  "18336006": [
+    {
+      "from_concept": "apple",
+      "rel": "being eaten by",
+      "to_concept": "person",
+      "text": "apple being eaten by person",
+      "sk_similar": {
+        "cosine": 0.8524937629699707,
+        "from_concept": "persons head",
+        "rel": "eating",
+        "to_concept": "apple",
+        "text": "persons head eating apple"
+      }
+    }
+  ],
+  "538414002": [
+    {
+      "from_concept": "person",
+      "rel": "wearing",
+      "to_concept": "shirt",
+      "text": "person wearing shirt",
+      "sk_similar": {
+        "cosine": 0.2841171622276306,
+        "from_concept": "catcher",
+        "rel": "in back of",
+        "to_concept": "player",
+        "text": "catcher in back of player"
+      }
+    },
+    {
+      "from_concept": "bat",
+      "rel": "held by",
+      "to_concept": "person",
+      "text": "bat held by person",
+      "sk_similar": {
+        "cosine": 0.8925753831863403,
+        "from_concept": "man",
+        "rel": "holding",
+        "to_concept": "bat",
+        "text": "man holding bat"
+      }
+    }
+  ],
+  "431799001": [
+    {
+      "from_concept": "string",
+      "rel": "attached to",
+      "to_concept": "kite",
+      "text": "string attached to kite",
+      "sk_similar": {
+        "cosine": 0.7109066843986511,
+        "from_concept": "kite",
+        "rel": "has",
+        "to_concept": "arm",
+        "text": "kite has arm"
+      }
+    },
+    {
+      "from_concept": "kite",
+      "rel": "being flown by",
+      "to_concept": "person",
+      "text": "kite being flown by person",
+      "sk_similar": {
+        "cosine": 0.8298369646072388,
+        "from_concept": "kite",
+        "rel": "held with",
+        "to_concept": "hand",
+        "text": "kite held with hand"
+      }
+    }
+  ],
+  "473299000": [
+    {
+      "from_concept": "snowboarder",
+      "rel": "wearing",
+      "to_concept": "helmet",
+      "text": "snowboarder wearing helmet",
+      "sk_similar": {
+        "cosine": 0.5417319536209106,
+        "from_concept": "man",
+        "rel": "riding on",
+        "to_concept": "snowboard",
+        "text": "man riding on snowboard"
+      }
+    },
+    {
+      "from_concept": "snowboarder",
+      "rel": "performing trick",
+      "to_concept": "snowboard",
+      "text": "snowboarder performing trick snowboard",
+      "sk_similar": {
+        "cosine": 0.6315053701400757,
+        "from_concept": "snowboard",
+        "rel": "gliding on",
+        "to_concept": "snow",
+        "text": "snowboard gliding on snow"
+      }
+    },
+    {
+      "from_concept": "snowboarder",
+      "rel": "holding",
+      "to_concept": "poles",
+      "text": "snowboarder holding poles",
+      "sk_similar": {
+        "cosine": 0.3991992175579071,
+        "from_concept": "man",
+        "rel": "snowboarding on",
+        "to_concept": "track",
+        "text": "man snowboarding on track"
+      }
+    }
+  ],
+  "64059005": [
+    {
+      "from_concept": "grass",
+      "rel": "covered by",
+      "to_concept": "person",
+      "text": "grass covered by person",
+      "sk_similar": {
+        "cosine": 0.27085447311401367,
+        "from_concept": "hat",
+        "rel": "worn on",
+        "to_concept": "head",
+        "text": "hat worn on head"
+      }
+    }
+  ],
+  "557812013": [
+    {
+      "from_concept": "skier",
+      "rel": "skiing on",
+      "to_concept": "slope",
+      "text": "skier skiing on slope",
+      "sk_similar": {
+        "cosine": 0.3933482766151428,
+        "from_concept": "snow",
+        "rel": "falling on",
+        "to_concept": "ground",
+        "text": "snow falling on ground"
+      }
+    },
+    {
+      "from_concept": "snow",
+      "rel": "covered by",
+      "to_concept": "slope",
+      "text": "snow covered by slope",
+      "sk_similar": {
+        "cosine": 0.7106723785400391,
+        "from_concept": "ground",
+        "rel": "covered in",
+        "to_concept": "snow",
+        "text": "ground covered in snow"
+      }
+    }
+  ],
+  "202981008": [
+    {
+      "from_concept": "goggles",
+      "rel": "protects",
+      "to_concept": "eyes",
+      "text": "goggles protects eyes",
+      "sk_similar": {
+        "cosine": 0.11868060380220413,
+        "from_concept": "pant",
+        "rel": "tucked in",
+        "to_concept": "boot",
+        "text": "pant tucked in boot"
+      }
+    },
+    {
+      "from_concept": "person",
+      "rel": "wearing",
+      "to_concept": "goggles",
+      "text": "person wearing goggles",
+      "sk_similar": {
+        "cosine": 0.19741153717041016,
+        "from_concept": "jacket",
+        "rel": "matches",
+        "to_concept": "pant",
+        "text": "jacket matches pant"
+      }
+    }
+  ],
+  "186130000": [
+    {
+      "from_concept": "cake",
+      "rel": "being cut by",
+      "to_concept": "knife",
+      "text": "cake being cut by knife",
+      "sk_similar": {
+        "cosine": 0.8437919020652771,
+        "from_concept": "hand",
+        "rel": "cutting",
+        "to_concept": "cake",
+        "text": "hand cutting cake"
+      }
+    },
+    {
+      "from_concept": "knife",
+      "rel": "held by",
+      "to_concept": "hand",
+      "text": "knife held by hand",
+      "sk_similar": {
+        "cosine": 0.4369722008705139,
+        "from_concept": "arm",
+        "rel": "belonging to",
+        "to_concept": "man",
+        "text": "arm belonging to man"
+      }
+    }
+  ],
+  "439897004": [
+    {
+      "from_concept": "fork",
+      "rel": "held by",
+      "to_concept": "hand",
+      "text": "fork held by hand",
+      "sk_similar": {
+        "cosine": 0.934855580329895,
+        "from_concept": "fork",
+        "rel": "held in",
+        "to_concept": "hand",
+        "text": "fork held in hand"
+      }
+    },
+    {
+      "from_concept": "hand",
+      "rel": "resting on",
+      "to_concept": "table",
+      "text": "hand resting on table",
+      "sk_similar": {
+        "cosine": 0.533806562423706,
+        "from_concept": "napkin",
+        "rel": "near edge of",
+        "to_concept": "table",
+        "text": "napkin near edge of table"
+      }
+    }
+  ],
+  "300206000": [
+    {
+      "from_concept": "person",
+      "rel": "standing",
+      "to_concept": "ground",
+      "text": "person standing ground",
+      "sk_similar": {
+        "cosine": 0.2803862988948822,
+        "from_concept": "man's hand",
+        "rel": "holding up",
+        "to_concept": "surfboard",
+        "text": "man's hand holding up surfboard"
+      }
+    },
+    {
+      "from_concept": "person",
+      "rel": "wearing",
+      "to_concept": "shoes",
+      "text": "person wearing shoes",
+      "sk_similar": {
+        "cosine": 0.15944121778011322,
+        "from_concept": "platform",
+        "rel": "looking",
+        "to_concept": "water waves",
+        "text": "platform looking water waves"
+      }
+    }
+  ],
+  "291286004": [
+    {
+      "from_concept": "skateboard",
+      "rel": "being ridden by",
+      "to_concept": "person",
+      "text": "skateboard being ridden by person",
+      "sk_similar": {
+        "cosine": 0.7637630105018616,
+        "from_concept": "man",
+        "rel": "riding",
+        "to_concept": "skateboard",
+        "text": "man riding skateboard"
+      }
+    }
+  ],
+  "154520073": [
+    {
+      "from_concept": "string",
+      "rel": "attached to",
+      "to_concept": "kite",
+      "text": "string attached to kite",
+      "sk_similar": {
+        "cosine": 0.9295684695243835,
+        "from_concept": "string",
+        "rel": "hanging down",
+        "to_concept": "kite",
+        "text": "string hanging down kite"
+      }
+    },
+    {
+      "from_concept": "kite",
+      "rel": "being flown by",
+      "to_concept": "person",
+      "text": "kite being flown by person",
+      "sk_similar": {
+        "cosine": 0.6693270802497864,
+        "from_concept": "rainbow",
+        "rel": "coloured",
+        "to_concept": "kite",
+        "text": "rainbow coloured kite"
+      }
+    }
+  ],
+  "249046003": [
+    {
+      "from_concept": "snowboarder",
+      "rel": "wearing",
+      "to_concept": "helmet",
+      "text": "snowboarder wearing helmet",
+      "sk_similar": {
+        "cosine": 0.570188045501709,
+        "from_concept": "snowboard",
+        "rel": "covered in",
+        "to_concept": "snow",
+        "text": "snowboard covered in snow"
+      }
+    },
+    {
+      "from_concept": "snowboarder",
+      "rel": "performing trick",
+      "to_concept": "snowboard",
+      "text": "snowboarder performing trick snowboard",
+      "sk_similar": {
+        "cosine": 0.7907401323318481,
+        "from_concept": "man",
+        "rel": "doing trick on",
+        "to_concept": "snowboard",
+        "text": "man doing trick on snowboard"
+      }
+    },
+    {
+      "from_concept": "snowboarder",
+      "rel": "holding",
+      "to_concept": "poles",
+      "text": "snowboarder holding poles",
+      "sk_similar": {
+        "cosine": 0.5205308198928833,
+        "from_concept": "foot",
+        "rel": "strapped to",
+        "to_concept": "snowboard",
+        "text": "foot strapped to snowboard"
+      }
+    }
+  ],
+  "77063003": [
+    {
+      "from_concept": "horse",
+      "rel": "standing on",
+      "to_concept": "ground",
+      "text": "horse standing on ground",
+      "sk_similar": {
+        "cosine": 0.4317095875740051,
+        "from_concept": "tail",
+        "rel": "part of",
+        "to_concept": "horse",
+        "text": "tail part of horse"
+      }
+    },
+    {
+      "from_concept": "horse",
+      "rel": "has",
+      "to_concept": "rider",
+      "text": "horse has rider",
+      "sk_similar": {
+        "cosine": 0.9285176396369934,
+        "from_concept": "horse",
+        "rel": "ridden by",
+        "to_concept": "rider",
+        "text": "horse ridden by rider"
+      }
+    }
+  ],
+  "249883001": [
+    {
+      "from_concept": "skateboarder",
+      "rel": "performing trick on",
+      "to_concept": "skateboard",
+      "text": "skateboarder performing trick on skateboard",
+      "sk_similar": {
+        "cosine": 0.7375333309173584,
+        "from_concept": "person",
+        "rel": "on top",
+        "to_concept": "skateboard",
+        "text": "person on top skateboard"
+      }
+    },
+    {
+      "from_concept": "skateboard",
+      "rel": "being used for",
+      "to_concept": "skateboarding",
+      "text": "skateboard being used for skateboarding",
+      "sk_similar": {
+        "cosine": 0.6731116771697998,
+        "from_concept": "skateboard",
+        "rel": "on",
+        "to_concept": "pavement",
+        "text": "skateboard on pavement"
+      }
+    }
+  ],
+  "69965002": [
+    {
+      "from_concept": "surfboard",
+      "rel": "being held by",
+      "to_concept": "person",
+      "text": "surfboard being held by person",
+      "sk_similar": {
+        "cosine": 0.8348499536514282,
+        "from_concept": "man",
+        "rel": "holding onto",
+        "to_concept": "surfboard",
+        "text": "man holding onto surfboard"
+      }
+    },
+    {
+      "from_concept": "person",
+      "rel": "standing on",
+      "to_concept": "beach",
+      "text": "person standing on beach",
+      "sk_similar": {
+        "cosine": 0.4207385182380676,
+        "from_concept": "surfer",
+        "rel": "has",
+        "to_concept": "leg",
+        "text": "surfer has leg"
+      }
+    }
+  ],
+  "517612002": [
+    {
+      "from_concept": "skateboard",
+      "rel": "being ridden by",
+      "to_concept": "person",
+      "text": "skateboard being ridden by person",
+      "sk_similar": {
+        "cosine": 0.7524121999740601,
+        "from_concept": "person",
+        "rel": "standing on",
+        "to_concept": "skateboard",
+        "text": "person standing on skateboard"
+      }
+    }
+  ],
+  "6719001": [
+    {
+      "from_concept": "surfboard",
+      "rel": "being prepared",
+      "to_concept": "person",
+      "text": "surfboard being prepared person",
+      "sk_similar": {
+        "cosine": 0.8169883489608765,
+        "from_concept": "person",
+        "rel": "connected to",
+        "to_concept": "surfboard",
+        "text": "person connected to surfboard"
+      }
+    }
+  ],
+  "163600007": [
+    {
+      "from_concept": "card",
+      "rel": "showing",
+      "to_concept": "hand",
+      "text": "card showing hand",
+      "sk_similar": {
+        "cosine": 0.5181566476821899,
+        "from_concept": "hand",
+        "rel": "holding up",
+        "to_concept": "message",
+        "text": "hand holding up message"
+      }
+    }
+  ],
+  "229889007": [
+    {
+      "from_concept": "snow",
+      "rel": "covered by",
+      "to_concept": "ground",
+      "text": "snow covered by ground",
+      "sk_similar": {
+        "cosine": 0.35686197876930237,
+        "from_concept": "ski pole",
+        "rel": "casting",
+        "to_concept": "shadow",
+        "text": "ski pole casting shadow"
+      }
+    },
+    {
+      "from_concept": "skier",
+      "rel": "holding",
+      "to_concept": "ski poles",
+      "text": "skier holding ski poles",
+      "sk_similar": {
+        "cosine": 0.909284234046936,
+        "from_concept": "skier",
+        "rel": "holding",
+        "to_concept": "ski pole",
+        "text": "skier holding ski pole"
+      }
+    }
+  ],
+  "391375002": [
+    {
+      "from_concept": "chair",
+      "rel": "has",
+      "to_concept": "backrest",
+      "text": "chair has backrest",
+      "sk_similar": {
+        "cosine": 0.3493747413158417,
+        "from_concept": "bench",
+        "rel": "against",
+        "to_concept": "wall",
+        "text": "bench against wall"
+      }
+    },
+    {
+      "from_concept": "person",
+      "rel": "sitting on",
+      "to_concept": "chair",
+      "text": "person sitting on chair",
+      "sk_similar": {
+        "cosine": 0.6113200783729553,
+        "from_concept": "person",
+        "rel": "sitting on",
+        "to_concept": "bench",
+        "text": "person sitting on bench"
+      }
+    }
+  ],
+  "409964010": [
+    {
+      "from_concept": "tennis outfit",
+      "rel": "worn by",
+      "to_concept": "person",
+      "text": "tennis outfit worn by person",
+      "sk_similar": {
+        "cosine": 0.5353105664253235,
+        "from_concept": "racket",
+        "rel": "held by",
+        "to_concept": "hand",
+        "text": "racket held by hand"
+      }
+    },
+    {
+      "from_concept": "person",
+      "rel": "engaged in",
+      "to_concept": "tennis activity",
+      "text": "person engaged in tennis activity",
+      "sk_similar": {
+        "cosine": 0.6266313791275024,
+        "from_concept": "hand",
+        "rel": "gripping",
+        "to_concept": "racket",
+        "text": "hand gripping racket"
+      }
+    }
+  ],
+  "526371000": [
+    {
+      "from_concept": "hat",
+      "rel": "worn by",
+      "to_concept": "person",
+      "text": "hat worn by person",
+      "sk_similar": {
+        "cosine": 0.9207546710968018,
+        "from_concept": "hat",
+        "rel": "worn on",
+        "to_concept": "head",
+        "text": "hat worn on head"
+      }
+    }
+  ],
+  "322194006": [
+    {
+      "from_concept": "sky",
+      "rel": "containing",
+      "to_concept": "clouds",
+      "text": "sky containing clouds",
+      "sk_similar": {
+        "cosine": 0.31268510222435,
+        "from_concept": "umbrella",
+        "rel": "over",
+        "to_concept": "person",
+        "text": "umbrella over person"
+      }
+    },
+    {
+      "from_concept": "water",
+      "rel": "flowing through",
+      "to_concept": "river",
+      "text": "water flowing through river",
+      "sk_similar": {
+        "cosine": 0.4371359646320343,
+        "from_concept": "boat",
+        "rel": "floating on",
+        "to_concept": "water",
+        "text": "boat floating on water"
+      }
+    },
+    {
+      "from_concept": "river",
+      "rel": "reflecting",
+      "to_concept": "sky",
+      "text": "river reflecting sky",
+      "sk_similar": {
+        "cosine": 0.40953323245048523,
+        "from_concept": "trees line",
+        "rel": "near",
+        "to_concept": "water",
+        "text": "trees line near water"
+      }
+    }
+  ],
+  "33005004": [
+    {
+      "from_concept": "person",
+      "rel": "standing on",
+      "to_concept": "ground",
+      "text": "person standing on ground",
+      "sk_similar": {
+        "cosine": 0.32152947783470154,
+        "from_concept": "man",
+        "rel": "wearing",
+        "to_concept": "short",
+        "text": "man wearing short"
+      }
+    },
+    {
+      "from_concept": "racket",
+      "rel": "held by",
+      "to_concept": "person",
+      "text": "racket held by person",
+      "sk_similar": {
+        "cosine": 0.9447453618049622,
+        "from_concept": "racket",
+        "rel": "held by",
+        "to_concept": "man",
+        "text": "racket held by man"
+      }
+    }
+  ],
+  "353136002": [
+    {
+      "from_concept": "cat",
+      "rel": "being brushed by",
+      "to_concept": "person",
+      "text": "cat being brushed by person",
+      "sk_similar": {
+        "cosine": 0.5430006384849548,
+        "from_concept": "lady",
+        "rel": "looking at",
+        "to_concept": "cat",
+        "text": "lady looking at cat"
+      }
+    },
+    {
+      "from_concept": "brush",
+      "rel": "used for",
+      "to_concept": "cat",
+      "text": "brush used for cat",
+      "sk_similar": {
+        "cosine": 0.5667069554328918,
+        "from_concept": "clipper",
+        "rel": "on",
+        "to_concept": "cat",
+        "text": "clipper on cat"
+      }
+    }
+  ],
+  "544519002": [
+    {
+      "from_concept": "toothbrush",
+      "rel": "held by",
+      "to_concept": "hand",
+      "text": "toothbrush held by hand",
+      "sk_similar": {
+        "cosine": 0.9542859196662903,
+        "from_concept": "toothbrush",
+        "rel": "held in",
+        "to_concept": "hand",
+        "text": "toothbrush held in hand"
+      }
+    },
+    {
+      "from_concept": "toothpaste",
+      "rel": "applied to",
+      "to_concept": "toothbrush",
+      "text": "toothpaste applied to toothbrush",
+      "sk_similar": {
+        "cosine": 0.6984899640083313,
+        "from_concept": "tooth brush",
+        "rel": "in",
+        "to_concept": "mouth",
+        "text": "tooth brush in mouth"
+      }
+    }
+  ],
+  "177919000": [
+    {
+      "from_concept": "skateboarder",
+      "rel": "performing trick on",
+      "to_concept": "skateboard",
+      "text": "skateboarder performing trick on skateboard",
+      "sk_similar": {
+        "cosine": 0.6720314025878906,
+        "from_concept": "man",
+        "rel": "over",
+        "to_concept": "skateboard",
+        "text": "man over skateboard"
+      }
+    },
+    {
+      "from_concept": "skateboard",
+      "rel": "being used for",
+      "to_concept": "skateboarding",
+      "text": "skateboard being used for skateboarding",
+      "sk_similar": {
+        "cosine": 0.6756064891815186,
+        "from_concept": "skateboard",
+        "rel": "has",
+        "to_concept": "wheel",
+        "text": "skateboard has wheel"
+      }
+    }
+  ],
+  "319095002": [
+    {
+      "from_concept": "snowboarder",
+      "rel": "wearing",
+      "to_concept": "helmet",
+      "text": "snowboarder wearing helmet",
+      "sk_similar": {
+        "cosine": 0.6592797636985779,
+        "from_concept": "man",
+        "rel": "worn in",
+        "to_concept": "helmet",
+        "text": "man worn in helmet"
+      }
+    },
+    {
+      "from_concept": "snowboarder",
+      "rel": "performing trick",
+      "to_concept": "snowboard",
+      "text": "snowboarder performing trick snowboard",
+      "sk_similar": {
+        "cosine": 0.8713864684104919,
+        "from_concept": "person",
+        "rel": "doing tricks in",
+        "to_concept": "snowboard",
+        "text": "person doing tricks in snowboard"
+      }
+    },
+    {
+      "from_concept": "snowboarder",
+      "rel": "holding",
+      "to_concept": "poles",
+      "text": "snowboarder holding poles",
+      "sk_similar": {
+        "cosine": 0.5577808022499084,
+        "from_concept": "man",
+        "rel": "strapped on",
+        "to_concept": "snowboard",
+        "text": "man strapped on snowboard"
+      }
+    }
+  ],
+  "73832000": [
+    {
+      "from_concept": "fire hydrant",
+      "rel": "held by",
+      "to_concept": "person",
+      "text": "fire hydrant held by person",
+      "sk_similar": {
+        "cosine": 0.8012391328811646,
+        "from_concept": "hand",
+        "rel": "on top of",
+        "to_concept": "fire hydrant",
+        "text": "hand on top of fire hydrant"
+      }
+    }
+  ],
+  "380706001": [
+    {
+      "from_concept": "rider",
+      "rel": "is on",
+      "to_concept": "motorcycle",
+      "text": "rider is on motorcycle",
+      "sk_similar": {
+        "cosine": 0.5973161458969116,
+        "from_concept": "man",
+        "rel": "holding on to",
+        "to_concept": "motorcycle",
+        "text": "man holding on to motorcycle"
+      }
+    }
+  ],
+  "85584001": [
+    {
+      "from_concept": "kite",
+      "rel": "controlled by",
+      "to_concept": "kiteboarder",
+      "text": "kite controlled by kiteboarder",
+      "sk_similar": {
+        "cosine": 0.20811975002288818,
+        "from_concept": "man",
+        "rel": "holding",
+        "to_concept": "handle bar",
+        "text": "man holding handle bar"
+      }
+    },
+    {
+      "from_concept": "kiteboarder",
+      "rel": "performing",
+      "to_concept": "trick",
+      "text": "kiteboarder performing trick",
+      "sk_similar": {
+        "cosine": 0.2556265592575073,
+        "from_concept": "wetsuit",
+        "rel": "over",
+        "to_concept": "wave",
+        "text": "wetsuit over wave"
+      }
+    },
+    {
+      "from_concept": "kiteboarder",
+      "rel": "riding",
+      "to_concept": "board",
+      "text": "kiteboarder riding board",
+      "sk_similar": {
+        "cosine": 0.3630134165287018,
+        "from_concept": "man",
+        "rel": "riding",
+        "to_concept": "wave",
+        "text": "man riding wave"
+      }
+    }
+  ],
+  "539386000": [
+    {
+      "from_concept": "rope",
+      "rel": "wrapped around",
+      "to_concept": "object",
+      "text": "rope wrapped around object",
+      "sk_similar": {
+        "cosine": 0.7552247643470764,
+        "from_concept": "rope",
+        "rel": "hanging from",
+        "to_concept": "above",
+        "text": "rope hanging from above"
+      }
+    },
+    {
+      "from_concept": "object",
+      "rel": "held by",
+      "to_concept": "hand",
+      "text": "object held by hand",
+      "sk_similar": {
+        "cosine": 0.4974863529205322,
+        "from_concept": "man",
+        "rel": "holding",
+        "to_concept": "rod",
+        "text": "man holding rod"
+      }
+    }
+  ],
+  "77050001": [
+    {
+      "from_concept": "peeler",
+      "rel": "used for",
+      "to_concept": "hand",
+      "text": "peeler used for hand",
+      "sk_similar": {
+        "cosine": 0.3078516721725464,
+        "from_concept": "carrot",
+        "rel": "on",
+        "to_concept": "counter",
+        "text": "carrot on counter"
+      }
+    },
+    {
+      "from_concept": "carrot",
+      "rel": "being peeled by",
+      "to_concept": "hand",
+      "text": "carrot being peeled by hand",
+      "sk_similar": {
+        "cosine": 0.7377091646194458,
+        "from_concept": "man",
+        "rel": "chopping",
+        "to_concept": "carrot",
+        "text": "man chopping carrot"
+      }
+    }
+  ],
+  "169076001": [
+    {
+      "from_concept": "person",
+      "rel": "standing in front of",
+      "to_concept": "wall",
+      "text": "person standing in front of wall",
+      "sk_similar": {
+        "cosine": 0.2883480489253998,
+        "from_concept": "man",
+        "rel": "wearing",
+        "to_concept": "shirt",
+        "text": "man wearing shirt"
+      }
+    },
+    {
+      "from_concept": "suit",
+      "rel": "worn by",
+      "to_concept": "person",
+      "text": "suit worn by person",
+      "sk_similar": {
+        "cosine": 0.6360712051391602,
+        "from_concept": "child",
+        "rel": "wearing",
+        "to_concept": "suit",
+        "text": "child wearing suit"
+      }
+    }
+  ],
+  "437494002": [
+    {
+      "from_concept": "paddle",
+      "rel": "carried by",
+      "to_concept": "person",
+      "text": "paddle carried by person",
+      "sk_similar": {
+        "cosine": 0.49838411808013916,
+        "from_concept": "boat",
+        "rel": "sailing on",
+        "to_concept": "water",
+        "text": "boat sailing on water"
+      }
+    }
+  ],
+  "572900009": [
+    {
+      "from_concept": "frisbee",
+      "rel": "flying through",
+      "to_concept": "air",
+      "text": "frisbee flying through air",
+      "sk_similar": {
+        "cosine": 0.1930769979953766,
+        "from_concept": "arm",
+        "rel": "falling on",
+        "to_concept": "floor",
+        "text": "arm falling on floor"
+      }
+    },
+    {
+      "from_concept": "person",
+      "rel": "holding",
+      "to_concept": "frisbee",
+      "text": "person holding frisbee",
+      "sk_similar": {
+        "cosine": 0.7123226523399353,
+        "from_concept": "man",
+        "rel": "throwing",
+        "to_concept": "frisbee",
+        "text": "man throwing frisbee"
+      }
+    }
+  ],
+  "65008001": [
+    {
+      "from_concept": "person",
+      "rel": "holding",
+      "to_concept": "string",
+      "text": "person holding string",
+      "sk_similar": {
+        "cosine": 0.3694811761379242,
+        "from_concept": "tail",
+        "rel": "stretching out from",
+        "to_concept": "kite",
+        "text": "tail stretching out from kite"
+      }
+    },
+    {
+      "from_concept": "kite",
+      "rel": "being flown by",
+      "to_concept": "person",
+      "text": "kite being flown by person",
+      "sk_similar": {
+        "cosine": 0.6833778023719788,
+        "from_concept": "kite",
+        "rel": "flying over",
+        "to_concept": "green grass",
+        "text": "kite flying over green grass"
+      }
+    }
+  ],
+  "302107002": [
+    {
+      "from_concept": "person",
+      "rel": "standing on",
+      "to_concept": "ground",
+      "text": "person standing on ground",
+      "sk_similar": {
+        "cosine": 0.265362948179245,
+        "from_concept": "catcher",
+        "rel": "holding out",
+        "to_concept": "hand",
+        "text": "catcher holding out hand"
+      }
+    },
+    {
+      "from_concept": "bat",
+      "rel": "held by",
+      "to_concept": "person",
+      "text": "bat held by person",
+      "sk_similar": {
+        "cosine": 0.8271164298057556,
+        "from_concept": "baseball player",
+        "rel": "holding",
+        "to_concept": "baseball bat",
+        "text": "baseball player holding baseball bat"
+      }
+    }
+  ],
+  "232692003": [
+    {
+      "from_concept": "skier",
+      "rel": "water skiing on",
+      "to_concept": "water",
+      "text": "skier water skiing on water",
+      "sk_similar": {
+        "cosine": 0.5484919548034668,
+        "from_concept": "person",
+        "rel": "jumping on",
+        "to_concept": "water",
+        "text": "person jumping on water"
+      }
+    },
+    {
+      "from_concept": "water",
+      "rel": "surface of",
+      "to_concept": "lake",
+      "text": "water surface of lake",
+      "sk_similar": {
+        "cosine": 0.40021687746047974,
+        "from_concept": "drops of water",
+        "rel": "splashing from",
+        "to_concept": "water",
+        "text": "drops of water splashing from water"
+      }
+    }
+  ],
+  "92644001": [
+    {
+      "from_concept": "jet ski",
+      "rel": "being used by",
+      "to_concept": "person",
+      "text": "jet ski being used by person",
+      "sk_similar": {
+        "cosine": 0.7618574500083923,
+        "from_concept": "man",
+        "rel": "practicing",
+        "to_concept": "jet ski",
+        "text": "man practicing jet ski"
+      }
+    }
+  ],
+  "326664002": [
+    {
+      "from_concept": "skateboard",
+      "rel": "being ridden by",
+      "to_concept": "person",
+      "text": "skateboard being ridden by person",
+      "sk_similar": {
+        "cosine": 0.7657793760299683,
+        "from_concept": "person",
+        "rel": "balancing on",
+        "to_concept": "skateboard",
+        "text": "person balancing on skateboard"
+      }
+    }
+  ],
+  "544857000": [
+    {
+      "from_concept": "snowboarder",
+      "rel": "wearing",
+      "to_concept": "helmet",
+      "text": "snowboarder wearing helmet",
+      "sk_similar": {
+        "cosine": 0.38909921050071716,
+        "from_concept": "person",
+        "rel": "walking through",
+        "to_concept": "snow",
+        "text": "person walking through snow"
+      }
+    },
+    {
+      "from_concept": "snowboarder",
+      "rel": "performing trick",
+      "to_concept": "snowboard",
+      "text": "snowboarder performing trick snowboard",
+      "sk_similar": {
+        "cosine": 0.6315053701400757,
+        "from_concept": "snowboard",
+        "rel": "gliding on",
+        "to_concept": "snow",
+        "text": "snowboard gliding on snow"
+      }
+    },
+    {
+      "from_concept": "snowboarder",
+      "rel": "holding",
+      "to_concept": "poles",
+      "text": "snowboarder holding poles",
+      "sk_similar": {
+        "cosine": 0.4119810461997986,
+        "from_concept": "snowboarding",
+        "rel": "snowboarding down",
+        "to_concept": "sliding",
+        "text": "snowboarding snowboarding down sliding"
+      }
+    }
+  ],
+  "323851001": [
+    {
+      "from_concept": "frisbee",
+      "rel": "in air",
+      "to_concept": "person",
+      "text": "frisbee in air person",
+      "sk_similar": {
+        "cosine": 0.8133683800697327,
+        "from_concept": "frisbee",
+        "rel": "held by",
+        "to_concept": "man",
+        "text": "frisbee held by man"
+      }
+    }
+  ],
+  "44856002": [
+    {
+      "from_concept": "snow",
+      "rel": "covered by",
+      "to_concept": "ground",
+      "text": "snow covered by ground",
+      "sk_similar": {
+        "cosine": 0.9470545649528503,
+        "from_concept": "ground",
+        "rel": "covered in",
+        "to_concept": "snow",
+        "text": "ground covered in snow"
+      }
+    },
+    {
+      "from_concept": "skier",
+      "rel": "holding",
+      "to_concept": "ski poles",
+      "text": "skier holding ski poles",
+      "sk_similar": {
+        "cosine": 0.3205794394016266,
+        "from_concept": "tracks",
+        "rel": "in",
+        "to_concept": "snow",
+        "text": "tracks in snow"
+      }
+    }
+  ],
+  "319350000": [
+    {
+      "from_concept": "person",
+      "rel": "holding",
+      "to_concept": "wine glass",
+      "text": "person holding wine glass",
+      "sk_similar": {
+        "cosine": 0.8997828364372253,
+        "from_concept": "hand",
+        "rel": "holding",
+        "to_concept": "wine glass",
+        "text": "hand holding wine glass"
+      }
+    },
+    {
+      "from_concept": "wine glass",
+      "rel": "contains",
+      "to_concept": "wine",
+      "text": "wine glass contains wine",
+      "sk_similar": {
+        "cosine": 0.8899692296981812,
+        "from_concept": "wine",
+        "rel": "in",
+        "to_concept": "glass",
+        "text": "wine in glass"
+      }
+    }
+  ],
+  "521306011": [
+    {
+      "from_concept": "wii remote",
+      "rel": "held by",
+      "to_concept": "person",
+      "text": "wii remote held by person",
+      "sk_similar": {
+        "cosine": 0.7838162183761597,
+        "from_concept": "persons hand",
+        "rel": "engages",
+        "to_concept": "wii controllers",
+        "text": "persons hand engages wii controllers"
+      }
+    },
+    {
+      "from_concept": "person",
+      "rel": "standing on",
+      "to_concept": "floor",
+      "text": "person standing on floor",
+      "sk_similar": {
+        "cosine": 0.281381219625473,
+        "from_concept": "person",
+        "rel": "plays on",
+        "to_concept": "wii controller",
+        "text": "person plays on wii controller"
+      }
+    }
+  ],
+  "380711000": [
+    {
+      "from_concept": "surfboard",
+      "rel": "being held by",
+      "to_concept": "person",
+      "text": "surfboard being held by person",
+      "sk_similar": {
+        "cosine": 0.8465916514396667,
+        "from_concept": "man",
+        "rel": "holding",
+        "to_concept": "surfboard",
+        "text": "man holding surfboard"
+      }
+    },
+    {
+      "from_concept": "person",
+      "rel": "standing on",
+      "to_concept": "beach",
+      "text": "person standing on beach",
+      "sk_similar": {
+        "cosine": 0.538194477558136,
+        "from_concept": "man",
+        "rel": "walking on",
+        "to_concept": "beach",
+        "text": "man walking on beach"
+      }
+    }
+  ],
+  "31542000": [
+    {
+      "from_concept": "snowboarder",
+      "rel": "wearing",
+      "to_concept": "helmet",
+      "text": "snowboarder wearing helmet",
+      "sk_similar": {
+        "cosine": 0.35439130663871765,
+        "from_concept": "human",
+        "rel": "skiing in",
+        "to_concept": "air",
+        "text": "human skiing in air"
+      }
+    },
+    {
+      "from_concept": "snowboarder",
+      "rel": "performing trick",
+      "to_concept": "snowboard",
+      "text": "snowboarder performing trick snowboard",
+      "sk_similar": {
+        "cosine": 0.5874054431915283,
+        "from_concept": "person",
+        "rel": "doing trick on",
+        "to_concept": "ski",
+        "text": "person doing trick on ski"
+      }
+    },
+    {
+      "from_concept": "snowboarder",
+      "rel": "holding",
+      "to_concept": "poles",
+      "text": "snowboarder holding poles",
+      "sk_similar": {
+        "cosine": 0.5347428321838379,
+        "from_concept": "person",
+        "rel": "attached to",
+        "to_concept": "skiboard",
+        "text": "person attached to skiboard"
+      }
+    }
+  ],
+  "98434000": [
+    {
+      "from_concept": "banana",
+      "rel": "being eaten by",
+      "to_concept": "person",
+      "text": "banana being eaten by person",
+      "sk_similar": {
+        "cosine": 0.7839339971542358,
+        "from_concept": "banana",
+        "rel": "in",
+        "to_concept": "mouth",
+        "text": "banana in mouth"
+      }
+    }
+  ],
+  "367953005": [
+    {
+      "from_concept": "person",
+      "rel": "wearing",
+      "to_concept": "shirt",
+      "text": "person wearing shirt",
+      "sk_similar": {
+        "cosine": 0.3274630010128021,
+        "from_concept": "hat",
+        "rel": "worn on",
+        "to_concept": "head",
+        "text": "hat worn on head"
+      }
+    },
+    {
+      "from_concept": "umbrella",
+      "rel": "held by",
+      "to_concept": "person",
+      "text": "umbrella held by person",
+      "sk_similar": {
+        "cosine": 0.8532385230064392,
+        "from_concept": "woman",
+        "rel": "holding",
+        "to_concept": "umbrella",
+        "text": "woman holding umbrella"
+      }
+    }
+  ],
+  "251824001": [
+    {
+      "from_concept": "hand",
+      "rel": "grasping",
+      "to_concept": "scissors",
+      "text": "hand grasping scissors",
+      "sk_similar": {
+        "cosine": 0.4802805185317993,
+        "from_concept": "hands",
+        "rel": "holding",
+        "to_concept": "plastic",
+        "text": "hands holding plastic"
+      }
+    }
+  ],
+  "405740008": [
+    {
+      "from_concept": "person",
+      "rel": "wearing",
+      "to_concept": "shirt",
+      "text": "person wearing shirt",
+      "sk_similar": {
+        "cosine": 0.40268847346305847,
+        "from_concept": "man",
+        "rel": "having",
+        "to_concept": "arm",
+        "text": "man having arm"
+      }
+    },
+    {
+      "from_concept": "wine glass",
+      "rel": "held by",
+      "to_concept": "person",
+      "text": "wine glass held by person",
+      "sk_similar": {
+        "cosine": 0.7958491444587708,
+        "from_concept": "man",
+        "rel": "holding",
+        "to_concept": "glass",
+        "text": "man holding glass"
+      }
+    }
+  ],
+  "136458001": [
+    {
+      "from_concept": "person",
+      "rel": "sitting at",
+      "to_concept": "desk",
+      "text": "person sitting at desk",
+      "sk_similar": {
+        "cosine": 0.29316237568855286,
+        "from_concept": "pen",
+        "rel": "laying on",
+        "to_concept": "floor",
+        "text": "pen laying on floor"
+      }
+    },
+    {
+      "from_concept": "laptop",
+      "rel": "being used by",
+      "to_concept": "person",
+      "text": "laptop being used by person",
+      "sk_similar": {
+        "cosine": 0.5261407494544983,
+        "from_concept": "laptop",
+        "rel": "kept on",
+        "to_concept": "floor",
+        "text": "laptop kept on floor"
+      }
+    }
+  ],
+  "498453001": [
+    {
+      "from_concept": "wave",
+      "rel": "breaking",
+      "to_concept": "shore",
+      "text": "wave breaking shore",
+      "sk_similar": {
+        "cosine": 0.6424041986465454,
+        "from_concept": "wave",
+        "rel": "cresting in",
+        "to_concept": "water",
+        "text": "wave cresting in water"
+      }
+    },
+    {
+      "from_concept": "surfer",
+      "rel": "riding",
+      "to_concept": "wave",
+      "text": "surfer riding wave",
+      "sk_similar": {
+        "cosine": 0.6770034432411194,
+        "from_concept": "man",
+        "rel": "surfing on",
+        "to_concept": "water",
+        "text": "man surfing on water"
+      }
+    }
+  ],
+  "404780000": [
+    {
+      "from_concept": "string",
+      "rel": "attached to",
+      "to_concept": "kite",
+      "text": "string attached to kite",
+      "sk_similar": {
+        "cosine": 0.7497146725654602,
+        "from_concept": "kite",
+        "rel": "flying with",
+        "to_concept": "tail",
+        "text": "kite flying with tail"
+      }
+    },
+    {
+      "from_concept": "kite",
+      "rel": "being flown by",
+      "to_concept": "person",
+      "text": "kite being flown by person",
+      "sk_similar": {
+        "cosine": 0.9122763872146606,
+        "from_concept": "person",
+        "rel": "playing with",
+        "to_concept": "kite",
+        "text": "person playing with kite"
+      }
+    }
+  ],
+  "431256002": [
+    {
+      "from_concept": "snowboarder",
+      "rel": "wearing",
+      "to_concept": "helmet",
+      "text": "snowboarder wearing helmet",
+      "sk_similar": {
+        "cosine": 0.49558010697364807,
+        "from_concept": "people",
+        "rel": "watching",
+        "to_concept": "snowboard",
+        "text": "people watching snowboard"
+      }
+    },
+    {
+      "from_concept": "snowboarder",
+      "rel": "performing trick",
+      "to_concept": "snowboard",
+      "text": "snowboarder performing trick snowboard",
+      "sk_similar": {
+        "cosine": 0.7687342762947083,
+        "from_concept": "snow",
+        "rel": "doing",
+        "to_concept": "snowboard",
+        "text": "snow doing snowboard"
+      }
+    },
+    {
+      "from_concept": "snowboarder",
+      "rel": "holding",
+      "to_concept": "poles",
+      "text": "snowboarder holding poles",
+      "sk_similar": {
+        "cosine": 0.5156755447387695,
+        "from_concept": "foot",
+        "rel": "planted on",
+        "to_concept": "snowboard",
+        "text": "foot planted on snowboard"
+      }
+    }
+  ],
+  "1176000": [
+    {
+      "from_concept": "skateboard",
+      "rel": "being ridden by",
+      "to_concept": "person",
+      "text": "skateboard being ridden by person",
+      "sk_similar": {
+        "cosine": 0.7634238004684448,
+        "from_concept": "man",
+        "rel": "riding on",
+        "to_concept": "skateboard",
+        "text": "man riding on skateboard"
+      }
+    }
+  ],
+  "18519001": [
+    {
+      "from_concept": "skateboard",
+      "rel": "being ridden by",
+      "to_concept": "person",
+      "text": "skateboard being ridden by person",
+      "sk_similar": {
+        "cosine": 0.6996191740036011,
+        "from_concept": "shirt",
+        "rel": "riding",
+        "to_concept": "skateboard",
+        "text": "shirt riding skateboard"
+      }
+    }
+  ],
+  "405279002": [
+    {
+      "from_concept": "string",
+      "rel": "attached to",
+      "to_concept": "kite",
+      "text": "string attached to kite",
+      "sk_similar": {
+        "cosine": 0.7842629551887512,
+        "from_concept": "kite",
+        "rel": "hanging from",
+        "to_concept": "tree",
+        "text": "kite hanging from tree"
+      }
+    },
+    {
+      "from_concept": "kite",
+      "rel": "being flown by",
+      "to_concept": "person",
+      "text": "kite being flown by person",
+      "sk_similar": {
+        "cosine": 0.7306317090988159,
+        "from_concept": "kites air",
+        "rel": "flying",
+        "to_concept": "sky",
+        "text": "kites air flying sky"
+      }
+    }
+  ],
+  "37677001": [
+    {
+      "from_concept": "person",
+      "rel": "wearing",
+      "to_concept": "shirt",
+      "text": "person wearing shirt",
+      "sk_similar": {
+        "cosine": 0.4090629816055298,
+        "from_concept": "man",
+        "rel": "wearing",
+        "to_concept": "shoes",
+        "text": "man wearing shoes"
+      }
+    },
+    {
+      "from_concept": "umbrella",
+      "rel": "held by",
+      "to_concept": "person",
+      "text": "umbrella held by person",
+      "sk_similar": {
+        "cosine": 0.9714285731315613,
+        "from_concept": "person",
+        "rel": "holding",
+        "to_concept": "umbrella",
+        "text": "person holding umbrella"
+      }
+    }
+  ],
+  "402109004": [
+    {
+      "from_concept": "document",
+      "rel": "being edited",
+      "to_concept": "person",
+      "text": "document being edited person",
+      "sk_similar": {
+        "cosine": 0.26899921894073486,
+        "from_concept": "person",
+        "rel": "using",
+        "to_concept": "computer mouse",
+        "text": "person using computer mouse"
+      }
+    },
+    {
+      "from_concept": "person",
+      "rel": "working",
+      "to_concept": "computer",
+      "text": "person working computer",
+      "sk_similar": {
+        "cosine": 0.7814697623252869,
+        "from_concept": "person",
+        "rel": "interacting with",
+        "to_concept": "laptop",
+        "text": "person interacting with laptop"
+      }
+    }
+  ],
+  "310543001": [
+    {
+      "from_concept": "person",
+      "rel": "standing in",
+      "to_concept": "bathroom",
+      "text": "person standing in bathroom",
+      "sk_similar": {
+        "cosine": 0.5582614541053772,
+        "from_concept": "person",
+        "rel": "standing on",
+        "to_concept": "floor",
+        "text": "person standing on floor"
+      }
+    },
+    {
+      "from_concept": "bathroom",
+      "rel": "has",
+      "to_concept": "sink",
+      "text": "bathroom has sink",
+      "sk_similar": {
+        "cosine": 0.48345696926116943,
+        "from_concept": "mirror reflection",
+        "rel": "showing",
+        "to_concept": "toilet",
+        "text": "mirror reflection showing toilet"
+      }
+    }
+  ],
+  "288201001": [
+    {
+      "from_concept": "sandwich",
+      "rel": "held by",
+      "to_concept": "person",
+      "text": "sandwich held by person",
+      "sk_similar": {
+        "cosine": 0.7803758382797241,
+        "from_concept": "hand",
+        "rel": "on",
+        "to_concept": "sandwich",
+        "text": "hand on sandwich"
+      }
+    },
+    {
+      "from_concept": "person",
+      "rel": "wearing",
+      "to_concept": "shirt",
+      "text": "person wearing shirt",
+      "sk_similar": {
+        "cosine": 0.6479865312576294,
+        "from_concept": "man",
+        "rel": "on",
+        "to_concept": "black shirt",
+        "text": "man on black shirt"
+      }
+    }
+  ],
+  "133933036": [
+    {
+      "from_concept": "person",
+      "rel": "standing in front of",
+      "to_concept": "wall",
+      "text": "person standing in front of wall",
+      "sk_similar": {
+        "cosine": 0.43197646737098694,
+        "from_concept": "curtain",
+        "rel": "hanging in front of",
+        "to_concept": "window",
+        "text": "curtain hanging in front of window"
+      }
+    },
+    {
+      "from_concept": "wii remote",
+      "rel": "held by",
+      "to_concept": "person",
+      "text": "wii remote held by person",
+      "sk_similar": {
+        "cosine": 0.3126969635486603,
+        "from_concept": "phone",
+        "rel": "held in",
+        "to_concept": "hand",
+        "text": "phone held in hand"
+      }
+    }
+  ],
+  "470070003": [
+    {
+      "from_concept": "umpire",
+      "rel": "standing",
+      "to_concept": "field",
+      "text": "umpire standing field",
+      "sk_similar": {
+        "cosine": 0.6593216061592102,
+        "from_concept": "umpire",
+        "rel": "has",
+        "to_concept": "arm",
+        "text": "umpire has arm"
+      }
+    },
+    {
+      "from_concept": "umpire",
+      "rel": "holding",
+      "to_concept": "bat",
+      "text": "umpire holding bat",
+      "sk_similar": {
+        "cosine": 0.7736980319023132,
+        "from_concept": "umpire",
+        "rel": "has",
+        "to_concept": "hand",
+        "text": "umpire has hand"
+      }
+    },
+    {
+      "from_concept": "umpire",
+      "rel": "wearing",
+      "to_concept": "black shirt",
+      "text": "umpire wearing black shirt",
+      "sk_similar": {
+        "cosine": 0.87034010887146,
+        "from_concept": "umpire",
+        "rel": "wearing",
+        "to_concept": "shirt",
+        "text": "umpire wearing shirt"
+      }
+    }
+  ],
+  "199215001": [
+    {
+      "from_concept": "truck",
+      "rel": "carrying",
+      "to_concept": "person",
+      "text": "truck carrying person",
+      "sk_similar": {
+        "cosine": 0.5925624966621399,
+        "from_concept": "man",
+        "rel": "sitting on",
+        "to_concept": "truck",
+        "text": "man sitting on truck"
+      }
+    }
+  ],
+  "224000000": [
+    {
+      "from_concept": "person",
+      "rel": "riding",
+      "to_concept": "atv",
+      "text": "person riding atv",
+      "sk_similar": {
+        "cosine": 0.5142818689346313,
+        "from_concept": "man",
+        "rel": "riding",
+        "to_concept": "quadbike",
+        "text": "man riding quadbike"
+      }
+    },
+    {
+      "from_concept": "atv",
+      "rel": "has",
+      "to_concept": "seat",
+      "text": "atv has seat",
+      "sk_similar": {
+        "cosine": 0.5442420840263367,
+        "from_concept": "mans head",
+        "rel": "sitting",
+        "to_concept": "quadbike",
+        "text": "mans head sitting quadbike"
+      }
+    }
+  ],
+  "79721005": [
+    {
+      "from_concept": "person",
+      "rel": "wearing",
+      "to_concept": "shirt",
+      "text": "person wearing shirt",
+      "sk_similar": {
+        "cosine": 0.2179861217737198,
+        "from_concept": "hand",
+        "rel": "holding",
+        "to_concept": "scale",
+        "text": "hand holding scale"
+      }
+    },
+    {
+      "from_concept": "device",
+      "rel": "held by",
+      "to_concept": "person",
+      "text": "device held by person",
+      "sk_similar": {
+        "cosine": 0.5153724551200867,
+        "from_concept": "arm",
+        "rel": "holding",
+        "to_concept": "scale",
+        "text": "arm holding scale"
+      }
+    }
+  ],
+  "469961000": [
+    {
+      "from_concept": "skier",
+      "rel": "skiing on",
+      "to_concept": "slope",
+      "text": "skier skiing on slope",
+      "sk_similar": {
+        "cosine": 0.49766063690185547,
+        "from_concept": "ski",
+        "rel": "leaning against",
+        "to_concept": "ski pole",
+        "text": "ski leaning against ski pole"
+      }
+    },
+    {
+      "from_concept": "snow",
+      "rel": "covered by",
+      "to_concept": "slope",
+      "text": "snow covered by slope",
+      "sk_similar": {
+        "cosine": 0.6815798282623291,
+        "from_concept": "snow",
+        "rel": "covered in",
+        "to_concept": "snow",
+        "text": "snow covered in snow"
+      }
+    }
+  ],
+  "451406003": [
+    {
+      "from_concept": "person",
+      "rel": "sitting on",
+      "to_concept": "bench",
+      "text": "person sitting on bench",
+      "sk_similar": {
+        "cosine": 0.42925944924354553,
+        "from_concept": "sitting man",
+        "rel": "at top of",
+        "to_concept": "chair",
+        "text": "sitting man at top of chair"
+      }
+    },
+    {
+      "from_concept": "bench",
+      "rel": "has",
+      "to_concept": "backrest",
+      "text": "bench has backrest",
+      "sk_similar": {
+        "cosine": 0.4301258325576782,
+        "from_concept": "chair",
+        "rel": "on front",
+        "to_concept": "stand",
+        "text": "chair on front stand"
+      }
+    }
+  ],
+  "551966004": [
+    {
+      "from_concept": "bench",
+      "rel": "supports",
+      "to_concept": "person",
+      "text": "bench supports person",
+      "sk_similar": {
+        "cosine": 0.7913102507591248,
+        "from_concept": "leg",
+        "rel": "supporting",
+        "to_concept": "bench",
+        "text": "leg supporting bench"
+      }
+    }
+  ]
+}
