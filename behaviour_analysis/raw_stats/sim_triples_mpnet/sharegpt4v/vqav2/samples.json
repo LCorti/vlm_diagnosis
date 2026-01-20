@@ -1,0 +1,666 @@
+{
+  "266922002": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "man",
+          "relationship": "wearing",
+          "to_concept": "sunglasses"
+        },
+        "sk_triple": {
+          "from_concept": "goggles",
+          "relationship": "on",
+          "to_concept": "head"
+        },
+        "cosine": 0.4425194263458252
+      },
+      {
+        "rk_triple": {
+          "from_concept": "man",
+          "relationship": "wearing",
+          "to_concept": "watch"
+        },
+        "sk_triple": {
+          "from_concept": "glove",
+          "relationship": "worn on",
+          "to_concept": "hand"
+        },
+        "cosine": 0.3378055989742279
+      },
+      {
+        "rk_triple": {
+          "from_concept": "man",
+          "relationship": "wearing",
+          "to_concept": "belt"
+        },
+        "sk_triple": {
+          "from_concept": "jacket",
+          "relationship": "has",
+          "to_concept": "arm"
+        },
+        "cosine": 0.3526987135410309
+      },
+      {
+        "rk_triple": {
+          "from_concept": "man",
+          "relationship": "wearing",
+          "to_concept": "pants"
+        },
+        "sk_triple": {
+          "from_concept": "jacket",
+          "relationship": "worn with",
+          "to_concept": "pant"
+        },
+        "cosine": 0.4988381266593933
+      },
+      {
+        "rk_triple": {
+          "from_concept": "man",
+          "relationship": "wearing",
+          "to_concept": "shoes"
+        },
+        "sk_triple": {
+          "from_concept": "leg",
+          "relationship": "covered with",
+          "to_concept": "boot"
+        },
+        "cosine": 0.46894997358322144
+      },
+      {
+        "rk_triple": {
+          "from_concept": "man",
+          "relationship": "wearing",
+          "to_concept": "gloves"
+        },
+        "sk_triple": {
+          "from_concept": "glove",
+          "relationship": "worn on",
+          "to_concept": "hand"
+        },
+        "cosine": 0.6919775605201721
+      },
+      {
+        "rk_triple": {
+          "from_concept": "man",
+          "relationship": "wearing",
+          "to_concept": "jacket"
+        },
+        "sk_triple": {
+          "from_concept": "jacket",
+          "relationship": "worn with",
+          "to_concept": "pant"
+        },
+        "cosine": 0.6772378087043762
+      },
+      {
+        "rk_triple": {
+          "from_concept": "man",
+          "relationship": "wearing",
+          "to_concept": "coat"
+        },
+        "sk_triple": {
+          "from_concept": "arm",
+          "relationship": "over",
+          "to_concept": "jacket"
+        },
+        "cosine": 0.4910765290260315
+      },
+      {
+        "rk_triple": {
+          "from_concept": "man",
+          "relationship": "wearing",
+          "to_concept": "hat"
+        },
+        "sk_triple": {
+          "from_concept": "hair",
+          "relationship": "on",
+          "to_concept": "head"
+        },
+        "cosine": 0.3837558627128601
+      },
+      {
+        "rk_triple": {
+          "from_concept": "man",
+          "relationship": "wearing",
+          "to_concept": "ponytail holder"
+        },
+        "sk_triple": {
+          "from_concept": "hair",
+          "relationship": "on",
+          "to_concept": "head"
+        },
+        "cosine": 0.4925258159637451
+      }
+    ],
+    "avg": 0.4837385416030884
+  },
+  "332607000": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "woman",
+          "relationship": "sitting on",
+          "to_concept": "countertop"
+        },
+        "sk_triple": {
+          "from_concept": "girl",
+          "relationship": "on",
+          "to_concept": "counter"
+        },
+        "cosine": 0.6009250283241272
+      }
+    ],
+    "avg": 0.6009250283241272
+  },
+  "224757004": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "boys",
+          "relationship": "wearing",
+          "to_concept": "jackets"
+        },
+        "sk_triple": {
+          "from_concept": "kids",
+          "relationship": "playing",
+          "to_concept": "football"
+        },
+        "cosine": 0.2679125964641571
+      }
+    ],
+    "avg": 0.2679125964641571
+  },
+  "240275005": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "surfboard",
+          "relationship": "is part of",
+          "to_concept": "wave"
+        },
+        "sk_triple": {
+          "from_concept": "man",
+          "relationship": "doing trick with",
+          "to_concept": "surfboard"
+        },
+        "cosine": 0.5799741744995117
+      }
+    ],
+    "avg": 0.5799741744995117
+  },
+  "249046003": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "person",
+          "relationship": "wearing",
+          "to_concept": "jacket"
+        },
+        "sk_triple": {
+          "from_concept": "pant",
+          "relationship": "tucked in",
+          "to_concept": "boot"
+        },
+        "cosine": 0.3249998092651367
+      },
+      {
+        "rk_triple": {
+          "from_concept": "person",
+          "relationship": "wearing",
+          "to_concept": "gloves"
+        },
+        "sk_triple": {
+          "from_concept": "goggles",
+          "relationship": "worn on",
+          "to_concept": "face"
+        },
+        "cosine": 0.3265143632888794
+      },
+      {
+        "rk_triple": {
+          "from_concept": "person",
+          "relationship": "wearing",
+          "to_concept": "hat"
+        },
+        "sk_triple": {
+          "from_concept": "goggles",
+          "relationship": "worn on",
+          "to_concept": "head"
+        },
+        "cosine": 0.3659207224845886
+      },
+      {
+        "rk_triple": {
+          "from_concept": "person",
+          "relationship": "wearing",
+          "to_concept": "pants"
+        },
+        "sk_triple": {
+          "from_concept": "leg",
+          "relationship": "covered with",
+          "to_concept": "pant"
+        },
+        "cosine": 0.5891051292419434
+      },
+      {
+        "rk_triple": {
+          "from_concept": "person",
+          "relationship": "wearing",
+          "to_concept": "helmet"
+        },
+        "sk_triple": {
+          "from_concept": "goggles",
+          "relationship": "worn on",
+          "to_concept": "head"
+        },
+        "cosine": 0.5653901100158691
+      },
+      {
+        "rk_triple": {
+          "from_concept": "person",
+          "relationship": "jumping",
+          "to_concept": "snowboard"
+        },
+        "sk_triple": {
+          "from_concept": "man",
+          "relationship": "doing trick on",
+          "to_concept": "snowboard"
+        },
+        "cosine": 0.6760259866714478
+      },
+      {
+        "rk_triple": {
+          "from_concept": "person",
+          "relationship": "jumping",
+          "to_concept": "trick"
+        },
+        "sk_triple": {
+          "from_concept": "man",
+          "relationship": "doing trick on",
+          "to_concept": "snowboard"
+        },
+        "cosine": 0.48180294036865234
+      }
+    ],
+    "avg": 0.47567986590521677
+  },
+  "249883001": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "person",
+          "relationship": "skateboarding",
+          "to_concept": "sidewalk"
+        },
+        "sk_triple": {
+          "from_concept": "skateboard",
+          "relationship": "on",
+          "to_concept": "pavement"
+        },
+        "cosine": 0.757769763469696
+      }
+    ],
+    "avg": 0.757769763469696
+  },
+  "69965002": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "surfboard",
+          "relationship": "being held onto",
+          "to_concept": "person"
+        },
+        "sk_triple": {
+          "from_concept": "man",
+          "relationship": "holding onto",
+          "to_concept": "surfboard"
+        },
+        "cosine": 0.8215869665145874
+      }
+    ],
+    "avg": 0.8215869665145874
+  },
+  "6719001": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "woman",
+          "relationship": "sitting on",
+          "to_concept": "beach"
+        },
+        "sk_triple": {
+          "from_concept": "surfboard",
+          "relationship": "laying on",
+          "to_concept": "sand"
+        },
+        "cosine": 0.3666442334651947
+      }
+    ],
+    "avg": 0.3666442334651947
+  },
+  "391375002": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "woman",
+          "relationship": "sitting on",
+          "to_concept": "bench"
+        },
+        "sk_triple": {
+          "from_concept": "person",
+          "relationship": "sitting on",
+          "to_concept": "bench"
+        },
+        "cosine": 0.7613632082939148
+      },
+      {
+        "rk_triple": {
+          "from_concept": "woman",
+          "relationship": "wearing",
+          "to_concept": "coat"
+        },
+        "sk_triple": {
+          "from_concept": "woman",
+          "relationship": "wearing",
+          "to_concept": "black coat"
+        },
+        "cosine": 0.8276729583740234
+      },
+      {
+        "rk_triple": {
+          "from_concept": "woman",
+          "relationship": "wearing",
+          "to_concept": "shoes"
+        },
+        "sk_triple": {
+          "from_concept": "woman",
+          "relationship": "wearing",
+          "to_concept": "black coat"
+        },
+        "cosine": 0.4562039375305176
+      },
+      {
+        "rk_triple": {
+          "from_concept": "woman",
+          "relationship": "looking at",
+          "to_concept": "camera"
+        },
+        "sk_triple": {
+          "from_concept": "woman",
+          "relationship": "wearing",
+          "to_concept": "black coat"
+        },
+        "cosine": 0.3332178592681885
+      },
+      {
+        "rk_triple": {
+          "from_concept": "woman",
+          "relationship": "with",
+          "to_concept": "serious expression"
+        },
+        "sk_triple": {
+          "from_concept": "woman",
+          "relationship": "wearing",
+          "to_concept": "black coat"
+        },
+        "cosine": 0.3962134122848511
+      },
+      {
+        "rk_triple": {
+          "from_concept": "woman",
+          "relationship": "in front of",
+          "to_concept": "stone wall"
+        },
+        "sk_triple": {
+          "from_concept": "stone",
+          "relationship": "framed on",
+          "to_concept": "wall"
+        },
+        "cosine": 0.635134220123291
+      },
+      {
+        "rk_triple": {
+          "from_concept": "woman",
+          "relationship": "in front of",
+          "to_concept": "archway"
+        },
+        "sk_triple": {
+          "from_concept": "woman",
+          "relationship": "wearing",
+          "to_concept": "black coat"
+        },
+        "cosine": 0.3087407350540161
+      },
+      {
+        "rk_triple": {
+          "from_concept": "stone wall",
+          "relationship": "behind",
+          "to_concept": "archway"
+        },
+        "sk_triple": {
+          "from_concept": "stone",
+          "relationship": "framed on",
+          "to_concept": "wall"
+        },
+        "cosine": 0.637826681137085
+      }
+    ],
+    "avg": 0.5445466265082359
+  },
+  "319095002": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "person",
+          "relationship": "wearing",
+          "to_concept": "snowboard"
+        },
+        "sk_triple": {
+          "from_concept": "person",
+          "relationship": "doing tricks in",
+          "to_concept": "snowboard"
+        },
+        "cosine": 0.8223863840103149
+      }
+    ],
+    "avg": 0.8223863840103149
+  },
+  "232692003": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "person",
+          "relationship": "water skiing",
+          "to_concept": "ramp"
+        },
+        "sk_triple": {
+          "from_concept": "waterboard",
+          "relationship": "sliding on",
+          "to_concept": "ramp"
+        },
+        "cosine": 0.5933781862258911
+      }
+    ],
+    "avg": 0.5933781862258911
+  },
+  "544857000": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "person",
+          "relationship": "wearing",
+          "to_concept": "snowboard"
+        },
+        "sk_triple": {
+          "from_concept": "snowboard",
+          "relationship": "gliding on",
+          "to_concept": "snow"
+        },
+        "cosine": 0.6291875839233398
+      }
+    ],
+    "avg": 0.6291875839233398
+  },
+  "319350000": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "woman",
+          "relationship": "drinking from",
+          "to_concept": "wine glass"
+        },
+        "sk_triple": {
+          "from_concept": "wine",
+          "relationship": "in",
+          "to_concept": "glass"
+        },
+        "cosine": 0.6722300052642822
+      }
+    ],
+    "avg": 0.6722300052642822
+  },
+  "521306011": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "wii",
+          "relationship": "is being played",
+          "to_concept": "boy"
+        },
+        "sk_triple": {
+          "from_concept": "person",
+          "relationship": "plays on",
+          "to_concept": "wii controller"
+        },
+        "cosine": 0.7453417778015137
+      }
+    ],
+    "avg": 0.7453417778015137
+  },
+  "380711000": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "man",
+          "relationship": "holding",
+          "to_concept": "surfboard"
+        },
+        "sk_triple": {
+          "from_concept": "man",
+          "relationship": "holding",
+          "to_concept": "surfboard"
+        },
+        "cosine": 1.0000001192092896
+      }
+    ],
+    "avg": 1.0000001192092896
+  },
+  "31542000": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "person",
+          "relationship": "wearing",
+          "to_concept": "snowboard"
+        },
+        "sk_triple": {
+          "from_concept": "person",
+          "relationship": "attached to",
+          "to_concept": "skiboard"
+        },
+        "cosine": 0.6715081334114075
+      }
+    ],
+    "avg": 0.6715081334114075
+  },
+  "251824001": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "scissors",
+          "relationship": "being held",
+          "to_concept": "glasses"
+        },
+        "sk_triple": {
+          "from_concept": "hands",
+          "relationship": "holding",
+          "to_concept": "plastic"
+        },
+        "cosine": 0.45963674783706665
+      }
+    ],
+    "avg": 0.45963674783706665
+  },
+  "431256002": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "person",
+          "relationship": "performing trick",
+          "to_concept": "snowboard"
+        },
+        "sk_triple": {
+          "from_concept": "snow",
+          "relationship": "doing",
+          "to_concept": "snowboard"
+        },
+        "cosine": 0.7563031911849976
+      }
+    ],
+    "avg": 0.7563031911849976
+  },
+  "18519001": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "skateboard",
+          "relationship": "being used for",
+          "to_concept": "tricks"
+        },
+        "sk_triple": {
+          "from_concept": "shirt",
+          "relationship": "riding",
+          "to_concept": "skateboard"
+        },
+        "cosine": 0.6290670037269592
+      }
+    ],
+    "avg": 0.6290670037269592
+  },
+  "199215001": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "man",
+          "relationship": "sitting on",
+          "to_concept": "truck"
+        },
+        "sk_triple": {
+          "from_concept": "man",
+          "relationship": "sitting on",
+          "to_concept": "truck"
+        },
+        "cosine": 1.0
+      }
+    ],
+    "avg": 1.0
+  },
+  "469961000": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "woman",
+          "relationship": "skiing",
+          "to_concept": "man"
+        },
+        "sk_triple": {
+          "from_concept": "ski",
+          "relationship": "worn on",
+          "to_concept": "leg"
+        },
+        "cosine": 0.39278748631477356
+      }
+    ],
+    "avg": 0.39278748631477356
+  }
+}

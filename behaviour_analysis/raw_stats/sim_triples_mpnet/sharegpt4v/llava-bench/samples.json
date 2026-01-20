@@ -1,0 +1,3614 @@
+{
+  "0": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "diamond head crater",
+          "relationship": "is part of",
+          "to_concept": "honolulu"
+        },
+        "sk_triple": {
+          "from_concept": "shoreline",
+          "relationship": "below",
+          "to_concept": "diamond head"
+        },
+        "cosine": 0.5989505052566528
+      },
+      {
+        "rk_triple": {
+          "from_concept": "diamond head crater",
+          "relationship": "is near",
+          "to_concept": "beach and body of water"
+        },
+        "sk_triple": {
+          "from_concept": "shoreline",
+          "relationship": "below",
+          "to_concept": "diamond head"
+        },
+        "cosine": 0.7857714891433716
+      }
+    ],
+    "avg": 0.6923609972000122
+  },
+  "1": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "diamond head crater",
+          "relationship": "encircles",
+          "to_concept": "city"
+        },
+        "sk_triple": {
+          "from_concept": "seaport",
+          "relationship": "beside",
+          "to_concept": "volcano"
+        },
+        "cosine": 0.3374459147453308
+      },
+      {
+        "rk_triple": {
+          "from_concept": "ocean",
+          "relationship": "is near",
+          "to_concept": "city"
+        },
+        "sk_triple": {
+          "from_concept": "beach",
+          "relationship": "beside",
+          "to_concept": "road"
+        },
+        "cosine": 0.5493626594543457
+      },
+      {
+        "rk_triple": {
+          "from_concept": "sky",
+          "relationship": "is near",
+          "to_concept": "city"
+        },
+        "sk_triple": {
+          "from_concept": "mountain",
+          "relationship": "covered in",
+          "to_concept": "grass"
+        },
+        "cosine": 0.33520370721817017
+      },
+      {
+        "rk_triple": {
+          "from_concept": "greenery",
+          "relationship": "surrounds",
+          "to_concept": "diamond head crater"
+        },
+        "sk_triple": {
+          "from_concept": "mountain",
+          "relationship": "covered in",
+          "to_concept": "grass"
+        },
+        "cosine": 0.3912973999977112
+      },
+      {
+        "rk_triple": {
+          "from_concept": "urban life",
+          "relationship": "is part of",
+          "to_concept": "city"
+        },
+        "sk_triple": {
+          "from_concept": "beach",
+          "relationship": "beside",
+          "to_concept": "road"
+        },
+        "cosine": 0.17183509469032288
+      },
+      {
+        "rk_triple": {
+          "from_concept": "nature",
+          "relationship": "is part of",
+          "to_concept": "city"
+        },
+        "sk_triple": {
+          "from_concept": "village",
+          "relationship": "beside",
+          "to_concept": "volcano"
+        },
+        "cosine": 0.32958561182022095
+      }
+    ],
+    "avg": 0.3524550646543503
+  },
+  "2": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "mountain",
+          "relationship": "formed",
+          "to_concept": "tectonic forces"
+        },
+        "sk_triple": {
+          "from_concept": "trees",
+          "relationship": "growing beside",
+          "to_concept": "mountain"
+        },
+        "cosine": 0.47509121894836426
+      },
+      {
+        "rk_triple": {
+          "from_concept": "valley",
+          "relationship": "formed",
+          "to_concept": "erosion"
+        },
+        "sk_triple": {
+          "from_concept": "mountain",
+          "relationship": "covered in",
+          "to_concept": "grass"
+        },
+        "cosine": 0.4975627660751343
+      },
+      {
+        "rk_triple": {
+          "from_concept": "beach",
+          "relationship": "located",
+          "to_concept": "coastal processes"
+        },
+        "sk_triple": {
+          "from_concept": "beach",
+          "relationship": "besides",
+          "to_concept": "mountain"
+        },
+        "cosine": 0.693281888961792
+      },
+      {
+        "rk_triple": {
+          "from_concept": "city",
+          "relationship": "developed",
+          "to_concept": "natural resources"
+        },
+        "sk_triple": {
+          "from_concept": "trees",
+          "relationship": "growing beside",
+          "to_concept": "mountain"
+        },
+        "cosine": 0.2096763253211975
+      }
+    ],
+    "avg": 0.468903049826622
+  },
+  "4": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "dragon fruit",
+          "relationship": "cut open",
+          "to_concept": "other dragon fruits"
+        },
+        "sk_triple": {
+          "from_concept": "cut mangosteen",
+          "relationship": "next to",
+          "to_concept": "thick purple rind"
+        },
+        "cosine": 0.4300364553928375
+      }
+    ],
+    "avg": 0.4300364553928375
+  },
+  "6": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "lychee fruits",
+          "relationship": "arranged in formation",
+          "to_concept": "wooden surface"
+        },
+        "sk_triple": {
+          "from_concept": "leaves",
+          "relationship": "on top",
+          "to_concept": "fruit"
+        },
+        "cosine": 0.4711872935295105
+      },
+      {
+        "rk_triple": {
+          "from_concept": "lychee fruits",
+          "relationship": "displayed on surface",
+          "to_concept": "background"
+        },
+        "sk_triple": {
+          "from_concept": "leaves",
+          "relationship": "on top",
+          "to_concept": "fruit"
+        },
+        "cosine": 0.4921738803386688
+      },
+      {
+        "rk_triple": {
+          "from_concept": "wooden surface",
+          "relationship": "hosts fruits",
+          "to_concept": "background"
+        },
+        "sk_triple": {
+          "from_concept": "leaves",
+          "relationship": "on top",
+          "to_concept": "fruit"
+        },
+        "cosine": 0.5664904117584229
+      },
+      {
+        "rk_triple": {
+          "from_concept": "wooden surface",
+          "relationship": "hosts fruits",
+          "to_concept": "other fruits"
+        },
+        "sk_triple": {
+          "from_concept": "leaves",
+          "relationship": "on top",
+          "to_concept": "fruit"
+        },
+        "cosine": 0.5722328424453735
+      },
+      {
+        "rk_triple": {
+          "from_concept": "open lychee",
+          "relationship": "reveals interior",
+          "to_concept": "whole lychee"
+        },
+        "sk_triple": {
+          "from_concept": "white filling",
+          "relationship": "inside",
+          "to_concept": "fruit"
+        },
+        "cosine": 0.39117032289505005
+      },
+      {
+        "rk_triple": {
+          "from_concept": "open lychee",
+          "relationship": "in foreground",
+          "to_concept": "other fruits"
+        },
+        "sk_triple": {
+          "from_concept": "leaves",
+          "relationship": "on top",
+          "to_concept": "fruit"
+        },
+        "cosine": 0.4489235281944275
+      },
+      {
+        "rk_triple": {
+          "from_concept": "whole lychee",
+          "relationship": "in background",
+          "to_concept": "other fruits"
+        },
+        "sk_triple": {
+          "from_concept": "leaves",
+          "relationship": "on top",
+          "to_concept": "fruit"
+        },
+        "cosine": 0.5145407319068909
+      },
+      {
+        "rk_triple": {
+          "from_concept": "woven basket",
+          "relationship": "in background",
+          "to_concept": "plant"
+        },
+        "sk_triple": {
+          "from_concept": "fruit",
+          "relationship": "in",
+          "to_concept": "basket"
+        },
+        "cosine": 0.5588453412055969
+      },
+      {
+        "rk_triple": {
+          "from_concept": "woven basket",
+          "relationship": "in background",
+          "to_concept": "other fruits"
+        },
+        "sk_triple": {
+          "from_concept": "fruit",
+          "relationship": "in",
+          "to_concept": "basket"
+        },
+        "cosine": 0.8010915517807007
+      },
+      {
+        "rk_triple": {
+          "from_concept": "plant",
+          "relationship": "in background",
+          "to_concept": "other fruits"
+        },
+        "sk_triple": {
+          "from_concept": "leaves",
+          "relationship": "on top",
+          "to_concept": "fruit"
+        },
+        "cosine": 0.6567070484161377
+      },
+      {
+        "rk_triple": {
+          "from_concept": "background",
+          "relationship": "hosts fruits",
+          "to_concept": "other fruits"
+        },
+        "sk_triple": {
+          "from_concept": "fruit",
+          "relationship": "in",
+          "to_concept": "basket"
+        },
+        "cosine": 0.5229189395904541
+      }
+    ],
+    "avg": 0.5451165356419303
+  },
+  "7": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "fruit",
+          "relationship": "has",
+          "to_concept": "seed"
+        },
+        "sk_triple": {
+          "from_concept": "white fruit",
+          "relationship": "covered with",
+          "to_concept": "purple skin"
+        },
+        "cosine": 0.5732771158218384
+      },
+      {
+        "rk_triple": {
+          "from_concept": "fruit",
+          "relationship": "is part of",
+          "to_concept": "ripening process"
+        },
+        "sk_triple": {
+          "from_concept": "white fruit",
+          "relationship": "covered with",
+          "to_concept": "purple skin"
+        },
+        "cosine": 0.6646316051483154
+      },
+      {
+        "rk_triple": {
+          "from_concept": "fruit",
+          "relationship": "is near",
+          "to_concept": "leaves"
+        },
+        "sk_triple": {
+          "from_concept": "white fruit",
+          "relationship": "covered with",
+          "to_concept": "purple skin"
+        },
+        "cosine": 0.6363840699195862
+      },
+      {
+        "rk_triple": {
+          "from_concept": "fruit",
+          "relationship": "is part of",
+          "to_concept": "fruit family"
+        },
+        "sk_triple": {
+          "from_concept": "white fruit",
+          "relationship": "covered with",
+          "to_concept": "purple skin"
+        },
+        "cosine": 0.5396151542663574
+      },
+      {
+        "rk_triple": {
+          "from_concept": "fruit",
+          "relationship": "is part of",
+          "to_concept": "fruit group"
+        },
+        "sk_triple": {
+          "from_concept": "white fruit",
+          "relationship": "covered with",
+          "to_concept": "purple skin"
+        },
+        "cosine": 0.5177320837974548
+      },
+      {
+        "rk_triple": {
+          "from_concept": "fruit",
+          "relationship": "is part of",
+          "to_concept": "fruit category"
+        },
+        "sk_triple": {
+          "from_concept": "white fruit",
+          "relationship": "covered with",
+          "to_concept": "purple skin"
+        },
+        "cosine": 0.5286219120025635
+      },
+      {
+        "rk_triple": {
+          "from_concept": "fruit",
+          "relationship": "is part of",
+          "to_concept": "fruit subcategory"
+        },
+        "sk_triple": {
+          "from_concept": "white fruit",
+          "relationship": "covered with",
+          "to_concept": "purple skin"
+        },
+        "cosine": 0.4923010468482971
+      },
+      {
+        "rk_triple": {
+          "from_concept": "fruit",
+          "relationship": "is part of",
+          "to_concept": "fruit classification"
+        },
+        "sk_triple": {
+          "from_concept": "white fruit",
+          "relationship": "covered with",
+          "to_concept": "purple skin"
+        },
+        "cosine": 0.6013691425323486
+      },
+      {
+        "rk_triple": {
+          "from_concept": "fruit",
+          "relationship": "is part of",
+          "to_concept": "fruit classification system"
+        },
+        "sk_triple": {
+          "from_concept": "white fruit",
+          "relationship": "covered with",
+          "to_concept": "purple skin"
+        },
+        "cosine": 0.6244445443153381
+      },
+      {
+        "rk_triple": {
+          "from_concept": "fruit",
+          "relationship": "is part of",
+          "to_concept": "fruit classification hierarchy"
+        },
+        "sk_triple": {
+          "from_concept": "white fruit",
+          "relationship": "covered with",
+          "to_concept": "purple skin"
+        },
+        "cosine": 0.5457421541213989
+      },
+      {
+        "rk_triple": {
+          "from_concept": "fruit",
+          "relationship": "is part of",
+          "to_concept": "fruit classification tree"
+        },
+        "sk_triple": {
+          "from_concept": "white fruit",
+          "relationship": "covered with",
+          "to_concept": "purple skin"
+        },
+        "cosine": 0.6058992743492126
+      }
+    ],
+    "avg": 0.5754561911929738
+  },
+  "8": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "dog",
+          "relationship": "wearing",
+          "to_concept": "dress"
+        },
+        "sk_triple": {
+          "from_concept": "dog",
+          "relationship": "wearing",
+          "to_concept": "veil"
+        },
+        "cosine": 0.6165926456451416
+      },
+      {
+        "rk_triple": {
+          "from_concept": "dog",
+          "relationship": "looking at",
+          "to_concept": "viewer"
+        },
+        "sk_triple": {
+          "from_concept": "dog",
+          "relationship": "has",
+          "to_concept": "nose"
+        },
+        "cosine": 0.4702727198600769
+      },
+      {
+        "rk_triple": {
+          "from_concept": "background",
+          "relationship": "contrasting",
+          "to_concept": "dog"
+        },
+        "sk_triple": {
+          "from_concept": "dog",
+          "relationship": "resembles",
+          "to_concept": "woman"
+        },
+        "cosine": 0.5524989366531372
+      },
+      {
+        "rk_triple": {
+          "from_concept": "painting",
+          "relationship": "style",
+          "to_concept": "realistic"
+        },
+        "sk_triple": {
+          "from_concept": "dog",
+          "relationship": "resembles",
+          "to_concept": "woman"
+        },
+        "cosine": 0.16867375373840332
+      },
+      {
+        "rk_triple": {
+          "from_concept": "painting",
+          "relationship": "elements",
+          "to_concept": "surrealistic"
+        },
+        "sk_triple": {
+          "from_concept": "head",
+          "relationship": "belonging to",
+          "to_concept": "dog"
+        },
+        "cosine": 0.11423757672309875
+      }
+    ],
+    "avg": 0.38445512652397157
+  },
+  "9": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "dog",
+          "relationship": "wearing",
+          "to_concept": "turban"
+        },
+        "sk_triple": {
+          "from_concept": "dog",
+          "relationship": "full of",
+          "to_concept": "hair"
+        },
+        "cosine": 0.5156565308570862
+      },
+      {
+        "rk_triple": {
+          "from_concept": "dog",
+          "relationship": "wearing",
+          "to_concept": "smile"
+        },
+        "sk_triple": {
+          "from_concept": "dog",
+          "relationship": "full of",
+          "to_concept": "hair"
+        },
+        "cosine": 0.4698079228401184
+      },
+      {
+        "rk_triple": {
+          "from_concept": "mona lisa-style outfit",
+          "relationship": "comprises",
+          "to_concept": "mona lisa painting"
+        },
+        "sk_triple": {
+          "from_concept": "dog",
+          "relationship": "full of",
+          "to_concept": "hair"
+        },
+        "cosine": 0.10225217044353485
+      },
+      {
+        "rk_triple": {
+          "from_concept": "mona lisa-style outfit",
+          "relationship": "is part of",
+          "to_concept": "dog"
+        },
+        "sk_triple": {
+          "from_concept": "dog",
+          "relationship": "full of",
+          "to_concept": "hair"
+        },
+        "cosine": 0.44108664989471436
+      },
+      {
+        "rk_triple": {
+          "from_concept": "mona lisa painting",
+          "relationship": "is part of",
+          "to_concept": "art history"
+        },
+        "sk_triple": {
+          "from_concept": "dog",
+          "relationship": "full of",
+          "to_concept": "hair"
+        },
+        "cosine": 0.08121909201145172
+      }
+    ],
+    "avg": 0.3220044732093811
+  },
+  "10": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "dog",
+          "relationship": "dressed as",
+          "to_concept": "woman"
+        },
+        "sk_triple": {
+          "from_concept": "head",
+          "relationship": "belonging to",
+          "to_concept": "dog"
+        },
+        "cosine": 0.46160802245140076
+      },
+      {
+        "rk_triple": {
+          "from_concept": "dog",
+          "relationship": "wearing",
+          "to_concept": "dress"
+        },
+        "sk_triple": {
+          "from_concept": "dog",
+          "relationship": "has",
+          "to_concept": "nose"
+        },
+        "cosine": 0.5004615187644958
+      },
+      {
+        "rk_triple": {
+          "from_concept": "dog",
+          "relationship": "wearing",
+          "to_concept": "headscarf"
+        },
+        "sk_triple": {
+          "from_concept": "head",
+          "relationship": "belonging to",
+          "to_concept": "dog"
+        },
+        "cosine": 0.6933339238166809
+      },
+      {
+        "rk_triple": {
+          "from_concept": "dog",
+          "relationship": "posing",
+          "to_concept": "for picture"
+        },
+        "sk_triple": {
+          "from_concept": "dog",
+          "relationship": "has",
+          "to_concept": "eye"
+        },
+        "cosine": 0.4880414605140686
+      },
+      {
+        "rk_triple": {
+          "from_concept": "dog",
+          "relationship": "with",
+          "to_concept": "mountains"
+        },
+        "sk_triple": {
+          "from_concept": "dog",
+          "relationship": "has",
+          "to_concept": "nose"
+        },
+        "cosine": 0.5160367488861084
+      },
+      {
+        "rk_triple": {
+          "from_concept": "dog",
+          "relationship": "with",
+          "to_concept": "river"
+        },
+        "sk_triple": {
+          "from_concept": "dog",
+          "relationship": "has",
+          "to_concept": "nose"
+        },
+        "cosine": 0.5200638771057129
+      },
+      {
+        "rk_triple": {
+          "from_concept": "dog",
+          "relationship": "with",
+          "to_concept": "landscape"
+        },
+        "sk_triple": {
+          "from_concept": "dog",
+          "relationship": "has",
+          "to_concept": "eye"
+        },
+        "cosine": 0.4874918460845947
+      },
+      {
+        "rk_triple": {
+          "from_concept": "dog",
+          "relationship": "with",
+          "to_concept": "background"
+        },
+        "sk_triple": {
+          "from_concept": "dog",
+          "relationship": "has",
+          "to_concept": "eye"
+        },
+        "cosine": 0.562910258769989
+      },
+      {
+        "rk_triple": {
+          "from_concept": "dog",
+          "relationship": "with",
+          "to_concept": "artwork"
+        },
+        "sk_triple": {
+          "from_concept": "dog",
+          "relationship": "has",
+          "to_concept": "eye"
+        },
+        "cosine": 0.5474898815155029
+      },
+      {
+        "rk_triple": {
+          "from_concept": "dog",
+          "relationship": "with",
+          "to_concept": "viewer"
+        },
+        "sk_triple": {
+          "from_concept": "dog",
+          "relationship": "has",
+          "to_concept": "eye"
+        },
+        "cosine": 0.7096017003059387
+      },
+      {
+        "rk_triple": {
+          "from_concept": "dog",
+          "relationship": "with",
+          "to_concept": "interpretation"
+        },
+        "sk_triple": {
+          "from_concept": "dog",
+          "relationship": "has",
+          "to_concept": "eye"
+        },
+        "cosine": 0.5731256008148193
+      },
+      {
+        "rk_triple": {
+          "from_concept": "dog",
+          "relationship": "with",
+          "to_concept": "humor"
+        },
+        "sk_triple": {
+          "from_concept": "dog",
+          "relationship": "has",
+          "to_concept": "nose"
+        },
+        "cosine": 0.47572147846221924
+      },
+      {
+        "rk_triple": {
+          "from_concept": "dog",
+          "relationship": "with",
+          "to_concept": "playfulness"
+        },
+        "sk_triple": {
+          "from_concept": "dog",
+          "relationship": "has",
+          "to_concept": "eye"
+        },
+        "cosine": 0.5517886281013489
+      },
+      {
+        "rk_triple": {
+          "from_concept": "dog",
+          "relationship": "with",
+          "to_concept": "creativity"
+        },
+        "sk_triple": {
+          "from_concept": "dog",
+          "relationship": "has",
+          "to_concept": "eye"
+        },
+        "cosine": 0.503527820110321
+      }
+    ],
+    "avg": 0.5422287689788001
+  },
+  "11": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "elon musk",
+          "relationship": "holding",
+          "to_concept": "shiba inu"
+        },
+        "sk_triple": {
+          "from_concept": "elon musk",
+          "relationship": "holding",
+          "to_concept": "dog"
+        },
+        "cosine": 0.6800521612167358
+      }
+    ],
+    "avg": 0.6800521612167358
+  },
+  "12": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "man",
+          "relationship": "holding up",
+          "to_concept": "dog"
+        },
+        "sk_triple": {
+          "from_concept": "arm",
+          "relationship": "holding up",
+          "to_concept": "dog"
+        },
+        "cosine": 0.7479718923568726
+      },
+      {
+        "rk_triple": {
+          "from_concept": "meme",
+          "relationship": "parodying",
+          "to_concept": "original scene"
+        },
+        "sk_triple": {
+          "from_concept": "doge",
+          "relationship": "as",
+          "to_concept": "simba"
+        },
+        "cosine": 0.23952971398830414
+      }
+    ],
+    "avg": 0.49375080317258835
+  },
+  "13": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "shiba inu",
+          "relationship": "being held",
+          "to_concept": "elon musk"
+        },
+        "sk_triple": {
+          "from_concept": "elon musks head",
+          "relationship": "resting on",
+          "to_concept": "baboons body"
+        },
+        "cosine": 0.5873942375183105
+      }
+    ],
+    "avg": 0.5873942375183105
+  },
+  "14": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "dog",
+          "relationship": "lying on",
+          "to_concept": "floor"
+        },
+        "sk_triple": {
+          "from_concept": "dog",
+          "relationship": "laying on",
+          "to_concept": "floor"
+        },
+        "cosine": 0.9807329177856445
+      },
+      {
+        "rk_triple": {
+          "from_concept": "dog",
+          "relationship": "resting",
+          "to_concept": "paws"
+        },
+        "sk_triple": {
+          "from_concept": "pet",
+          "relationship": "resting on",
+          "to_concept": "wood"
+        },
+        "cosine": 0.6529964208602905
+      },
+      {
+        "rk_triple": {
+          "from_concept": "text",
+          "relationship": "overlay",
+          "to_concept": "image"
+        },
+        "sk_triple": {
+          "from_concept": "pet",
+          "relationship": "resting on",
+          "to_concept": "wood"
+        },
+        "cosine": 0.061599329113960266
+      },
+      {
+        "rk_triple": {
+          "from_concept": "text",
+          "relationship": "emphasizing",
+          "to_concept": "day"
+        },
+        "sk_triple": {
+          "from_concept": "doggy",
+          "relationship": "on",
+          "to_concept": "floor"
+        },
+        "cosine": 0.02716522291302681
+      },
+      {
+        "rk_triple": {
+          "from_concept": "text",
+          "relationship": "reinforcing",
+          "to_concept": "theme"
+        },
+        "sk_triple": {
+          "from_concept": "pet",
+          "relationship": "resting on",
+          "to_concept": "wood"
+        },
+        "cosine": 0.01297201681882143
+      },
+      {
+        "rk_triple": {
+          "from_concept": "text",
+          "relationship": "repetition",
+          "to_concept": "word"
+        },
+        "sk_triple": {
+          "from_concept": "doggy",
+          "relationship": "on",
+          "to_concept": "floor"
+        },
+        "cosine": 0.10829318314790726
+      }
+    ],
+    "avg": 0.30729318177327514
+  },
+  "16": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "woman",
+          "relationship": "wearing",
+          "to_concept": "dress"
+        },
+        "sk_triple": {
+          "from_concept": "hair",
+          "relationship": "wearing",
+          "to_concept": "shirt"
+        },
+        "cosine": 0.1883208155632019
+      },
+      {
+        "rk_triple": {
+          "from_concept": "portrait",
+          "relationship": "focusing on",
+          "to_concept": "woman"
+        },
+        "sk_triple": {
+          "from_concept": "hair",
+          "relationship": "wearing",
+          "to_concept": "shirt"
+        },
+        "cosine": 0.2095710188150406
+      },
+      {
+        "rk_triple": {
+          "from_concept": "portrait",
+          "relationship": "focusing on",
+          "to_concept": "face and upper body"
+        },
+        "sk_triple": {
+          "from_concept": "nose",
+          "relationship": "apart of",
+          "to_concept": "face"
+        },
+        "cosine": 0.3752674460411072
+      },
+      {
+        "rk_triple": {
+          "from_concept": "background",
+          "relationship": "featuring",
+          "to_concept": "trees"
+        },
+        "sk_triple": {
+          "from_concept": "wall",
+          "relationship": "between",
+          "to_concept": "tree"
+        },
+        "cosine": 0.571965217590332
+      },
+      {
+        "rk_triple": {
+          "from_concept": "background",
+          "relationship": "featuring",
+          "to_concept": "river"
+        },
+        "sk_triple": {
+          "from_concept": "eye",
+          "relationship": "next to",
+          "to_concept": "tree"
+        },
+        "cosine": 0.2581217288970947
+      },
+      {
+        "rk_triple": {
+          "from_concept": "painting",
+          "relationship": "executed",
+          "to_concept": "in"
+        },
+        "sk_triple": {
+          "from_concept": "hair",
+          "relationship": "wearing",
+          "to_concept": "shirt"
+        },
+        "cosine": 0.08886610716581345
+      },
+      {
+        "rk_triple": {
+          "from_concept": "painting",
+          "relationship": "in",
+          "to_concept": "realistic style"
+        },
+        "sk_triple": {
+          "from_concept": "hair",
+          "relationship": "wearing",
+          "to_concept": "shirt"
+        },
+        "cosine": 0.13762035965919495
+      },
+      {
+        "rk_triple": {
+          "from_concept": "painting",
+          "relationship": "in",
+          "to_concept": "earth tones"
+        },
+        "sk_triple": {
+          "from_concept": "eye",
+          "relationship": "next to",
+          "to_concept": "tree"
+        },
+        "cosine": 0.15183815360069275
+      },
+      {
+        "rk_triple": {
+          "from_concept": "painting",
+          "relationship": "in",
+          "to_concept": "blue and green accents"
+        },
+        "sk_triple": {
+          "from_concept": "hair",
+          "relationship": "has",
+          "to_concept": "nose"
+        },
+        "cosine": 0.14299225807189941
+      },
+      {
+        "rk_triple": {
+          "from_concept": "mona lisa",
+          "relationship": "known for",
+          "to_concept": "enigmatic smile"
+        },
+        "sk_triple": {
+          "from_concept": "eye",
+          "relationship": "over",
+          "to_concept": "nose"
+        },
+        "cosine": 0.1892756074666977
+      },
+      {
+        "rk_triple": {
+          "from_concept": "mona lisa",
+          "relationship": "known for",
+          "to_concept": "intricate details"
+        },
+        "sk_triple": {
+          "from_concept": "eye",
+          "relationship": "next to",
+          "to_concept": "tree"
+        },
+        "cosine": 0.1609255075454712
+      }
+    ],
+    "avg": 0.22497856549241327
+  },
+  "19": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "space needle",
+          "relationship": "is the main subject",
+          "to_concept": "cityscape"
+        },
+        "sk_triple": {
+          "from_concept": "space needle",
+          "relationship": "towering over",
+          "to_concept": "buildings"
+        },
+        "cosine": 0.6206479668617249
+      },
+      {
+        "rk_triple": {
+          "from_concept": "space needle",
+          "relationship": "stands out",
+          "to_concept": "sky"
+        },
+        "sk_triple": {
+          "from_concept": "space needle",
+          "relationship": "in front of",
+          "to_concept": "bright blue sky"
+        },
+        "cosine": 0.8102183938026428
+      },
+      {
+        "rk_triple": {
+          "from_concept": "cityscape",
+          "relationship": "unfolds",
+          "to_concept": "buildings and trees"
+        },
+        "sk_triple": {
+          "from_concept": "space needle",
+          "relationship": "towering over",
+          "to_concept": "buildings"
+        },
+        "cosine": 0.356641948223114
+      }
+    ],
+    "avg": 0.5958361029624939
+  },
+  "20": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "sky",
+          "relationship": "clear",
+          "to_concept": "weather"
+        },
+        "sk_triple": {
+          "from_concept": "view",
+          "relationship": "of",
+          "to_concept": "space needle"
+        },
+        "cosine": 0.19870933890342712
+      },
+      {
+        "rk_triple": {
+          "from_concept": "sun",
+          "relationship": "shining",
+          "to_concept": "day"
+        },
+        "sk_triple": {
+          "from_concept": "tall building",
+          "relationship": "surrounded by",
+          "to_concept": "buildings"
+        },
+        "cosine": 0.1667155623435974
+      },
+      {
+        "rk_triple": {
+          "from_concept": "cityscape",
+          "relationship": "visible",
+          "to_concept": "tower"
+        },
+        "sk_triple": {
+          "from_concept": "tall building",
+          "relationship": "surrounded by",
+          "to_concept": "buildings"
+        },
+        "cosine": 0.5547101497650146
+      },
+      {
+        "rk_triple": {
+          "from_concept": "buildings",
+          "relationship": "visible",
+          "to_concept": "cityscape"
+        },
+        "sk_triple": {
+          "from_concept": "tall building",
+          "relationship": "surrounded by",
+          "to_concept": "buildings"
+        },
+        "cosine": 0.6060061454772949
+      },
+      {
+        "rk_triple": {
+          "from_concept": "trees",
+          "relationship": "visible",
+          "to_concept": "cityscape"
+        },
+        "sk_triple": {
+          "from_concept": "trees",
+          "relationship": "planted near",
+          "to_concept": "space needle"
+        },
+        "cosine": 0.4640241265296936
+      },
+      {
+        "rk_triple": {
+          "from_concept": "city",
+          "relationship": "visible",
+          "to_concept": "cityscape"
+        },
+        "sk_triple": {
+          "from_concept": "tall building",
+          "relationship": "surrounded by",
+          "to_concept": "buildings"
+        },
+        "cosine": 0.4511381685733795
+      }
+    ],
+    "avg": 0.4068839152654012
+  },
+  "21": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "conan edogawa",
+          "relationship": "looking at",
+          "to_concept": "camera"
+        },
+        "sk_triple": {
+          "from_concept": "person standing",
+          "relationship": "near by",
+          "to_concept": "cartoon character"
+        },
+        "cosine": 0.330777645111084
+      },
+      {
+        "rk_triple": {
+          "from_concept": "conan edogawa",
+          "relationship": "wearing",
+          "to_concept": "bow tie"
+        },
+        "sk_triple": {
+          "from_concept": "cartoon character",
+          "relationship": "wearing",
+          "to_concept": "glasses and tie"
+        },
+        "cosine": 0.5154255032539368
+      }
+    ],
+    "avg": 0.4231015741825104
+  },
+  "22": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "red bow tie",
+          "relationship": "adds a pop of color",
+          "to_concept": "character's appearance"
+        },
+        "sk_triple": {
+          "from_concept": "young boy",
+          "relationship": "has",
+          "to_concept": "smiley face"
+        },
+        "cosine": 0.17731569707393646
+      },
+      {
+        "rk_triple": {
+          "from_concept": "character's appearance",
+          "relationship": "creates a unique and interesting appearance",
+          "to_concept": "character"
+        },
+        "sk_triple": {
+          "from_concept": "young boy",
+          "relationship": "has",
+          "to_concept": "smiley face"
+        },
+        "cosine": 0.27106165885925293
+      },
+      {
+        "rk_triple": {
+          "from_concept": "blue eyes",
+          "relationship": "creates a striking contrast",
+          "to_concept": "character's appearance"
+        },
+        "sk_triple": {
+          "from_concept": "young boy",
+          "relationship": "wearing",
+          "to_concept": "glasses"
+        },
+        "cosine": 0.22799137234687805
+      },
+      {
+        "rk_triple": {
+          "from_concept": "glasses",
+          "relationship": "adds an element of sophistication",
+          "to_concept": "character's appearance"
+        },
+        "sk_triple": {
+          "from_concept": "young boy",
+          "relationship": "wearing",
+          "to_concept": "glasses"
+        },
+        "cosine": 0.5349231958389282
+      },
+      {
+        "rk_triple": {
+          "from_concept": "suit",
+          "relationship": "adds a sense of formality",
+          "to_concept": "character's appearance"
+        },
+        "sk_triple": {
+          "from_concept": "young boy",
+          "relationship": "wearing",
+          "to_concept": "glasses"
+        },
+        "cosine": 0.1573079526424408
+      },
+      {
+        "rk_triple": {
+          "from_concept": "bow tie",
+          "relationship": "adds a sense of playfulness",
+          "to_concept": "character's appearance"
+        },
+        "sk_triple": {
+          "from_concept": "young boy",
+          "relationship": "has",
+          "to_concept": "smiley face"
+        },
+        "cosine": 0.23970991373062134
+      },
+      {
+        "rk_triple": {
+          "from_concept": "eyes",
+          "relationship": "creates a striking contrast",
+          "to_concept": "character's appearance"
+        },
+        "sk_triple": {
+          "from_concept": "young boy",
+          "relationship": "wearing",
+          "to_concept": "glasses"
+        },
+        "cosine": 0.332049697637558
+      }
+    ],
+    "avg": 0.2771942125899451
+  },
+  "23": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "wooden dock",
+          "relationship": "extending into",
+          "to_concept": "lake"
+        },
+        "sk_triple": {
+          "from_concept": "wooden pier",
+          "relationship": "on",
+          "to_concept": "lake"
+        },
+        "cosine": 0.7563542127609253
+      },
+      {
+        "rk_triple": {
+          "from_concept": "calm water",
+          "relationship": "providing",
+          "to_concept": "serene atmosphere"
+        },
+        "sk_triple": {
+          "from_concept": "tall trees",
+          "relationship": "on",
+          "to_concept": "lake shore"
+        },
+        "cosine": 0.2681582272052765
+      },
+      {
+        "rk_triple": {
+          "from_concept": "cloudy sky",
+          "relationship": "suggesting",
+          "to_concept": "sudden weather changes"
+        },
+        "sk_triple": {
+          "from_concept": "clouds",
+          "relationship": "on top of",
+          "to_concept": "moutain"
+        },
+        "cosine": 0.46047085523605347
+      },
+      {
+        "rk_triple": {
+          "from_concept": "trees",
+          "relationship": "in the background",
+          "to_concept": "natural setting"
+        },
+        "sk_triple": {
+          "from_concept": "tall trees",
+          "relationship": "on",
+          "to_concept": "lake shore"
+        },
+        "cosine": 0.5674173831939697
+      },
+      {
+        "rk_triple": {
+          "from_concept": "mountains",
+          "relationship": "in the distance",
+          "to_concept": "scenic backdrop"
+        },
+        "sk_triple": {
+          "from_concept": "mountain",
+          "relationship": "behind",
+          "to_concept": "mountain"
+        },
+        "cosine": 0.6066729426383972
+      }
+    ],
+    "avg": 0.5318147242069244
+  },
+  "24": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "wooden dock",
+          "relationship": "is part of",
+          "to_concept": "lake"
+        },
+        "sk_triple": {
+          "from_concept": "wooden pier",
+          "relationship": "on",
+          "to_concept": "lake"
+        },
+        "cosine": 0.764379620552063
+      },
+      {
+        "rk_triple": {
+          "from_concept": "wooden dock",
+          "relationship": "is near",
+          "to_concept": "mountains"
+        },
+        "sk_triple": {
+          "from_concept": "wooden pier",
+          "relationship": "on",
+          "to_concept": "lake"
+        },
+        "cosine": 0.6135207414627075
+      },
+      {
+        "rk_triple": {
+          "from_concept": "wooden dock",
+          "relationship": "is part of",
+          "to_concept": "calm water"
+        },
+        "sk_triple": {
+          "from_concept": "wooden pier",
+          "relationship": "on",
+          "to_concept": "lake"
+        },
+        "cosine": 0.5915029644966125
+      },
+      {
+        "rk_triple": {
+          "from_concept": "wooden dock",
+          "relationship": "is part of",
+          "to_concept": "serene and peaceful mood"
+        },
+        "sk_triple": {
+          "from_concept": "wooden pier",
+          "relationship": "on",
+          "to_concept": "lake"
+        },
+        "cosine": 0.4664965569972992
+      },
+      {
+        "rk_triple": {
+          "from_concept": "wooden dock",
+          "relationship": "is part of",
+          "to_concept": "tranquil and peaceful mood"
+        },
+        "sk_triple": {
+          "from_concept": "wooden pier",
+          "relationship": "on",
+          "to_concept": "lake"
+        },
+        "cosine": 0.44957706332206726
+      },
+      {
+        "rk_triple": {
+          "from_concept": "wooden dock",
+          "relationship": "is part of",
+          "to_concept": "natural beauty"
+        },
+        "sk_triple": {
+          "from_concept": "wooden pier",
+          "relationship": "on",
+          "to_concept": "lake"
+        },
+        "cosine": 0.6209533214569092
+      },
+      {
+        "rk_triple": {
+          "from_concept": "wooden dock",
+          "relationship": "is part of",
+          "to_concept": "landscape"
+        },
+        "sk_triple": {
+          "from_concept": "wooden pier",
+          "relationship": "on",
+          "to_concept": "lake"
+        },
+        "cosine": 0.6047666072845459
+      },
+      {
+        "rk_triple": {
+          "from_concept": "calm water",
+          "relationship": "reflects",
+          "to_concept": "dock and landscape"
+        },
+        "sk_triple": {
+          "from_concept": "wooden pier",
+          "relationship": "on",
+          "to_concept": "lake"
+        },
+        "cosine": 0.3869246244430542
+      },
+      {
+        "rk_triple": {
+          "from_concept": "cloudy sky",
+          "relationship": "creates",
+          "to_concept": "moody atmosphere"
+        },
+        "sk_triple": {
+          "from_concept": "clouds",
+          "relationship": "on",
+          "to_concept": "sky"
+        },
+        "cosine": 0.6646162271499634
+      }
+    ],
+    "avg": 0.5736375252405802
+  },
+  "25": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "man",
+          "relationship": "standing on",
+          "to_concept": "taxi cab"
+        },
+        "sk_triple": {
+          "from_concept": "car",
+          "relationship": "behind",
+          "to_concept": "head"
+        },
+        "cosine": 0.29914823174476624
+      },
+      {
+        "rk_triple": {
+          "from_concept": "man",
+          "relationship": "wearing",
+          "to_concept": "yellow shirt and blue shorts"
+        },
+        "sk_triple": {
+          "from_concept": "mans shirt",
+          "relationship": "lifting up",
+          "to_concept": "shirt"
+        },
+        "cosine": 0.40136685967445374
+      },
+      {
+        "rk_triple": {
+          "from_concept": "man",
+          "relationship": "ironing",
+          "to_concept": "blue shirt"
+        },
+        "sk_triple": {
+          "from_concept": "men",
+          "relationship": "ironing",
+          "to_concept": "shirt"
+        },
+        "cosine": 0.8118143677711487
+      },
+      {
+        "rk_triple": {
+          "from_concept": "man",
+          "relationship": "central focus",
+          "to_concept": "image"
+        },
+        "sk_triple": {
+          "from_concept": "man looking down",
+          "relationship": "possesses",
+          "to_concept": "face"
+        },
+        "cosine": 0.3312504291534424
+      },
+      {
+        "rk_triple": {
+          "from_concept": "taxi cab",
+          "relationship": "moving",
+          "to_concept": "city street"
+        },
+        "sk_triple": {
+          "from_concept": "car",
+          "relationship": "has",
+          "to_concept": "tire"
+        },
+        "cosine": 0.329173743724823
+      },
+      {
+        "rk_triple": {
+          "from_concept": "taxi cab",
+          "relationship": "adorned with",
+          "to_concept": "stickers"
+        },
+        "sk_triple": {
+          "from_concept": "car",
+          "relationship": "behind",
+          "to_concept": "head"
+        },
+        "cosine": 0.3431970775127411
+      },
+      {
+        "rk_triple": {
+          "from_concept": "taxi cab",
+          "relationship": "in background",
+          "to_concept": "another taxi cab"
+        },
+        "sk_triple": {
+          "from_concept": "car",
+          "relationship": "behind",
+          "to_concept": "head"
+        },
+        "cosine": 0.4256361126899719
+      }
+    ],
+    "avg": 0.4202266888959067
+  },
+  "26": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "man",
+          "relationship": "doing laundry",
+          "to_concept": "taxi"
+        },
+        "sk_triple": {
+          "from_concept": "mans shirt",
+          "relationship": "lifting up",
+          "to_concept": "shirt"
+        },
+        "cosine": 0.3516666889190674
+      },
+      {
+        "rk_triple": {
+          "from_concept": "man",
+          "relationship": "holding",
+          "to_concept": "shirt and towel"
+        },
+        "sk_triple": {
+          "from_concept": "mans shirt",
+          "relationship": "lifting up",
+          "to_concept": "shirt"
+        },
+        "cosine": 0.5379329919815063
+      },
+      {
+        "rk_triple": {
+          "from_concept": "man",
+          "relationship": "unusual",
+          "to_concept": "activity"
+        },
+        "sk_triple": {
+          "from_concept": "man",
+          "relationship": "spreading",
+          "to_concept": "leg"
+        },
+        "cosine": 0.5014858245849609
+      },
+      {
+        "rk_triple": {
+          "from_concept": "taxi",
+          "relationship": "blurred",
+          "to_concept": "background"
+        },
+        "sk_triple": {
+          "from_concept": "car",
+          "relationship": "has",
+          "to_concept": "tire"
+        },
+        "cosine": 0.2853962182998657
+      },
+      {
+        "rk_triple": {
+          "from_concept": "taxi",
+          "relationship": "destination",
+          "to_concept": "unknown"
+        },
+        "sk_triple": {
+          "from_concept": "car",
+          "relationship": "has",
+          "to_concept": "tire"
+        },
+        "cosine": 0.26917165517807007
+      }
+    ],
+    "avg": 0.3891306757926941
+  },
+  "27": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "strawberries",
+          "relationship": "are in",
+          "to_concept": "container"
+        },
+        "sk_triple": {
+          "from_concept": "strawberry",
+          "relationship": "in",
+          "to_concept": "container"
+        },
+        "cosine": 0.8433204889297485
+      },
+      {
+        "rk_triple": {
+          "from_concept": "blueberries",
+          "relationship": "are in",
+          "to_concept": "container"
+        },
+        "sk_triple": {
+          "from_concept": "strawberry",
+          "relationship": "in",
+          "to_concept": "container"
+        },
+        "cosine": 0.6719602346420288
+      },
+      {
+        "rk_triple": {
+          "from_concept": "sticker",
+          "relationship": "is on",
+          "to_concept": "container"
+        },
+        "sk_triple": {
+          "from_concept": "carrot sticks",
+          "relationship": "on top",
+          "to_concept": "container"
+        },
+        "cosine": 0.44424447417259216
+      },
+      {
+        "rk_triple": {
+          "from_concept": "sticker",
+          "relationship": "reads",
+          "to_concept": "\"strawberries & blueberries\""
+        },
+        "sk_triple": {
+          "from_concept": "strawberry",
+          "relationship": "in",
+          "to_concept": "container"
+        },
+        "cosine": 0.48251578211784363
+      }
+    ],
+    "avg": 0.6105102449655533
+  },
+  "28": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "yogurt",
+          "relationship": "flavored with",
+          "to_concept": "blueberries"
+        },
+        "sk_triple": {
+          "from_concept": "yogurt",
+          "relationship": "on top",
+          "to_concept": "blueberry"
+        },
+        "cosine": 0.8423405885696411
+      },
+      {
+        "rk_triple": {
+          "from_concept": "yogurt",
+          "relationship": "in container",
+          "to_concept": "plastic"
+        },
+        "sk_triple": {
+          "from_concept": "yogurt",
+          "relationship": "in front of",
+          "to_concept": "milk jug"
+        },
+        "cosine": 0.6708042621612549
+      },
+      {
+        "rk_triple": {
+          "from_concept": "yogurt",
+          "relationship": "on top shelf",
+          "to_concept": "refrigerator"
+        },
+        "sk_triple": {
+          "from_concept": "yogurt",
+          "relationship": "in front of",
+          "to_concept": "milk jug"
+        },
+        "cosine": 0.711438000202179
+      },
+      {
+        "rk_triple": {
+          "from_concept": "yogurt",
+          "relationship": "surrounded by",
+          "to_concept": "milk, carrots, strawberries"
+        },
+        "sk_triple": {
+          "from_concept": "yogurt",
+          "relationship": "on top",
+          "to_concept": "blueberry"
+        },
+        "cosine": 0.7214272022247314
+      }
+    ],
+    "avg": 0.7365025132894516
+  },
+  "29": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "strawberry-flavored yogurt",
+          "relationship": "stored in",
+          "to_concept": "fridge"
+        },
+        "sk_triple": {
+          "from_concept": "yoghurt",
+          "relationship": "in",
+          "to_concept": "sealed container"
+        },
+        "cosine": 0.6426136493682861
+      }
+    ],
+    "avg": 0.6426136493682861
+  },
+  "30": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "orange juice",
+          "relationship": "on shelf with",
+          "to_concept": "milk"
+        },
+        "sk_triple": {
+          "from_concept": "milk",
+          "relationship": "in",
+          "to_concept": "fridge"
+        },
+        "cosine": 0.6437671184539795
+      },
+      {
+        "rk_triple": {
+          "from_concept": "strawberries",
+          "relationship": "on shelf with",
+          "to_concept": "milk"
+        },
+        "sk_triple": {
+          "from_concept": "strawberry",
+          "relationship": "in left side of",
+          "to_concept": "fridge"
+        },
+        "cosine": 0.7111411094665527
+      },
+      {
+        "rk_triple": {
+          "from_concept": "strawberries",
+          "relationship": "on shelf with",
+          "to_concept": "grapes"
+        },
+        "sk_triple": {
+          "from_concept": "strawberry",
+          "relationship": "in left side of",
+          "to_concept": "fridge"
+        },
+        "cosine": 0.6242709159851074
+      },
+      {
+        "rk_triple": {
+          "from_concept": "carrots",
+          "relationship": "on shelf with",
+          "to_concept": "blueberries"
+        },
+        "sk_triple": {
+          "from_concept": "carrot sticks",
+          "relationship": "on top",
+          "to_concept": "strawberry"
+        },
+        "cosine": 0.662867546081543
+      },
+      {
+        "rk_triple": {
+          "from_concept": "blueberries",
+          "relationship": "on shelf with",
+          "to_concept": "grapes"
+        },
+        "sk_triple": {
+          "from_concept": "blueberry",
+          "relationship": "in right side of",
+          "to_concept": "fridge"
+        },
+        "cosine": 0.6774557828903198
+      },
+      {
+        "rk_triple": {
+          "from_concept": "blueberries",
+          "relationship": "on shelf with",
+          "to_concept": "strawberries"
+        },
+        "sk_triple": {
+          "from_concept": "blueberry",
+          "relationship": "in right side of",
+          "to_concept": "fridge"
+        },
+        "cosine": 0.6454693078994751
+      }
+    ],
+    "avg": 0.6608286301294962
+  },
+  "31": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "strawberries",
+          "relationship": "can be used for",
+          "to_concept": "fruit salad"
+        },
+        "sk_triple": {
+          "from_concept": "strawberry",
+          "relationship": "in",
+          "to_concept": "container"
+        },
+        "cosine": 0.5232846736907959
+      },
+      {
+        "rk_triple": {
+          "from_concept": "strawberries",
+          "relationship": "can be used for",
+          "to_concept": "fruit and yogurt parfaits"
+        },
+        "sk_triple": {
+          "from_concept": "strawberry",
+          "relationship": "in",
+          "to_concept": "container"
+        },
+        "cosine": 0.5460935235023499
+      },
+      {
+        "rk_triple": {
+          "from_concept": "blueberries",
+          "relationship": "can be used for",
+          "to_concept": "fruit salad"
+        },
+        "sk_triple": {
+          "from_concept": "blueberry",
+          "relationship": "in",
+          "to_concept": "plastic container"
+        },
+        "cosine": 0.5411610007286072
+      },
+      {
+        "rk_triple": {
+          "from_concept": "blueberries",
+          "relationship": "can be used for",
+          "to_concept": "fruit and yogurt parfaits"
+        },
+        "sk_triple": {
+          "from_concept": "blueberry",
+          "relationship": "in",
+          "to_concept": "plastic container"
+        },
+        "cosine": 0.5450703501701355
+      },
+      {
+        "rk_triple": {
+          "from_concept": "yogurt",
+          "relationship": "can be used for",
+          "to_concept": "oatmeal"
+        },
+        "sk_triple": {
+          "from_concept": "yogurt",
+          "relationship": "in",
+          "to_concept": "plastic cup"
+        },
+        "cosine": 0.5277303457260132
+      },
+      {
+        "rk_triple": {
+          "from_concept": "yogurt",
+          "relationship": "can be used for",
+          "to_concept": "fruit and yogurt parfaits"
+        },
+        "sk_triple": {
+          "from_concept": "yogurt",
+          "relationship": "in",
+          "to_concept": "plastic cup"
+        },
+        "cosine": 0.611937403678894
+      },
+      {
+        "rk_triple": {
+          "from_concept": "milk",
+          "relationship": "can be used for",
+          "to_concept": "oatmeal"
+        },
+        "sk_triple": {
+          "from_concept": "milk",
+          "relationship": "in",
+          "to_concept": "fridge"
+        },
+        "cosine": 0.41159796714782715
+      },
+      {
+        "rk_triple": {
+          "from_concept": "milk",
+          "relationship": "can be used for",
+          "to_concept": "fruit and yogurt parfaits"
+        },
+        "sk_triple": {
+          "from_concept": "yogurt",
+          "relationship": "in",
+          "to_concept": "plastic cup"
+        },
+        "cosine": 0.559930682182312
+      },
+      {
+        "rk_triple": {
+          "from_concept": "granola",
+          "relationship": "can be used for",
+          "to_concept": "fruit and yogurt parfaits"
+        },
+        "sk_triple": {
+          "from_concept": "yogurt",
+          "relationship": "in",
+          "to_concept": "plastic cup"
+        },
+        "cosine": 0.4765625298023224
+      }
+    ],
+    "avg": 0.5270409418476952
+  },
+  "32": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "mario",
+          "relationship": "in focus",
+          "to_concept": "coffee mugs"
+        },
+        "sk_triple": {
+          "from_concept": "letter",
+          "relationship": "on",
+          "to_concept": "hat"
+        },
+        "cosine": 0.2515925467014313
+      }
+    ],
+    "avg": 0.2515925467014313
+  },
+  "33": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "mug",
+          "relationship": "detailed illustration",
+          "to_concept": "mario"
+        },
+        "sk_triple": {
+          "from_concept": "cup",
+          "relationship": "contains",
+          "to_concept": "picture"
+        },
+        "cosine": 0.48155489563941956
+      },
+      {
+        "rk_triple": {
+          "from_concept": "mug",
+          "relationship": "arranged",
+          "to_concept": "other mugs"
+        },
+        "sk_triple": {
+          "from_concept": "letter",
+          "relationship": "written on",
+          "to_concept": "mug"
+        },
+        "cosine": 0.5447896718978882
+      },
+      {
+        "rk_triple": {
+          "from_concept": "mug",
+          "relationship": "slightly tilted",
+          "to_concept": "left"
+        },
+        "sk_triple": {
+          "from_concept": "letter",
+          "relationship": "written on",
+          "to_concept": "mug"
+        },
+        "cosine": 0.5214873552322388
+      },
+      {
+        "rk_triple": {
+          "from_concept": "mug",
+          "relationship": "white",
+          "to_concept": "ceramic"
+        },
+        "sk_triple": {
+          "from_concept": "letter",
+          "relationship": "written on",
+          "to_concept": "mug"
+        },
+        "cosine": 0.5596931576728821
+      },
+      {
+        "rk_triple": {
+          "from_concept": "mug",
+          "relationship": "color",
+          "to_concept": "vibrant"
+        },
+        "sk_triple": {
+          "from_concept": "letter",
+          "relationship": "written on",
+          "to_concept": "mug"
+        },
+        "cosine": 0.44353336095809937
+      },
+      {
+        "rk_triple": {
+          "from_concept": "mug",
+          "relationship": "background",
+          "to_concept": "dark blue"
+        },
+        "sk_triple": {
+          "from_concept": "cup",
+          "relationship": "contains",
+          "to_concept": "picture"
+        },
+        "cosine": 0.4900205731391907
+      },
+      {
+        "rk_triple": {
+          "from_concept": "mug",
+          "relationship": "color",
+          "to_concept": "contrast"
+        },
+        "sk_triple": {
+          "from_concept": "letter",
+          "relationship": "written on",
+          "to_concept": "mug"
+        },
+        "cosine": 0.41529443860054016
+      },
+      {
+        "rk_triple": {
+          "from_concept": "mug",
+          "relationship": "arrangement",
+          "to_concept": "composition"
+        },
+        "sk_triple": {
+          "from_concept": "cup",
+          "relationship": "contains",
+          "to_concept": "picture"
+        },
+        "cosine": 0.4835456311702728
+      },
+      {
+        "rk_triple": {
+          "from_concept": "mug",
+          "relationship": "image",
+          "to_concept": "background"
+        },
+        "sk_triple": {
+          "from_concept": "cup",
+          "relationship": "contains",
+          "to_concept": "picture"
+        },
+        "cosine": 0.5131421089172363
+      },
+      {
+        "rk_triple": {
+          "from_concept": "mug",
+          "relationship": "focus",
+          "to_concept": "illustration"
+        },
+        "sk_triple": {
+          "from_concept": "cup",
+          "relationship": "contains",
+          "to_concept": "picture"
+        },
+        "cosine": 0.48496711254119873
+      }
+    ],
+    "avg": 0.49380283057689667
+  },
+  "34": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "lobster tails",
+          "relationship": "seasoned with herbs and spices",
+          "to_concept": "lemon wedges"
+        },
+        "sk_triple": {
+          "from_concept": "lobster",
+          "relationship": "under",
+          "to_concept": "lemon slice"
+        },
+        "cosine": 0.6659693717956543
+      }
+    ],
+    "avg": 0.6659693717956543
+  },
+  "35": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "fried chicken",
+          "relationship": "forms",
+          "to_concept": "continents and oceans"
+        },
+        "sk_triple": {
+          "from_concept": "fried chicken",
+          "relationship": "resembles",
+          "to_concept": "continent"
+        },
+        "cosine": 0.7954421043395996
+      },
+      {
+        "rk_triple": {
+          "from_concept": "fried chicken",
+          "relationship": "is part of",
+          "to_concept": "map"
+        },
+        "sk_triple": {
+          "from_concept": "fried chicken",
+          "relationship": "resembles",
+          "to_concept": "continent"
+        },
+        "cosine": 0.720302939414978
+      },
+      {
+        "rk_triple": {
+          "from_concept": "map",
+          "relationship": "is set against",
+          "to_concept": "background"
+        },
+        "sk_triple": {
+          "from_concept": "words",
+          "relationship": "written on",
+          "to_concept": "header"
+        },
+        "cosine": 0.19526466727256775
+      },
+      {
+        "rk_triple": {
+          "from_concept": "map",
+          "relationship": "is a unique representation",
+          "to_concept": "world"
+        },
+        "sk_triple": {
+          "from_concept": "fried chicken",
+          "relationship": "resembles",
+          "to_concept": "continent"
+        },
+        "cosine": 0.1971108317375183
+      },
+      {
+        "rk_triple": {
+          "from_concept": "text",
+          "relationship": "suggests",
+          "to_concept": "humorous perspective"
+        },
+        "sk_triple": {
+          "from_concept": "joke",
+          "relationship": "written on",
+          "to_concept": "header"
+        },
+        "cosine": 0.49269217252731323
+      }
+    ],
+    "avg": 0.4801625430583954
+  },
+  "36": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "person",
+          "relationship": "suggesting",
+          "to_concept": "stacked layers"
+        },
+        "sk_triple": {
+          "from_concept": "line",
+          "relationship": "has",
+          "to_concept": "line"
+        },
+        "cosine": 0.12624779343605042
+      },
+      {
+        "rk_triple": {
+          "from_concept": "person",
+          "relationship": "standing next to",
+          "to_concept": "graph"
+        },
+        "sk_triple": {
+          "from_concept": "person",
+          "relationship": "holding",
+          "to_concept": "stick"
+        },
+        "cosine": 0.40445882081985474
+      },
+      {
+        "rk_triple": {
+          "from_concept": "person",
+          "relationship": "conveying",
+          "to_concept": "excitement"
+        },
+        "sk_triple": {
+          "from_concept": "person",
+          "relationship": "holding",
+          "to_concept": "stick"
+        },
+        "cosine": 0.3488244414329529
+      },
+      {
+        "rk_triple": {
+          "from_concept": "graph",
+          "relationship": "showing",
+          "to_concept": "neural network"
+        },
+        "sk_triple": {
+          "from_concept": "diagram",
+          "relationship": "on",
+          "to_concept": "sign"
+        },
+        "cosine": 0.4463565945625305
+      },
+      {
+        "rk_triple": {
+          "from_concept": "graph",
+          "relationship": "with",
+          "to_concept": "red line"
+        },
+        "sk_triple": {
+          "from_concept": "diagram",
+          "relationship": "on",
+          "to_concept": "sign"
+        },
+        "cosine": 0.43167537450790405
+      },
+      {
+        "rk_triple": {
+          "from_concept": "text",
+          "relationship": "in",
+          "to_concept": "speech bubble"
+        },
+        "sk_triple": {
+          "from_concept": "letter",
+          "relationship": "on",
+          "to_concept": "cord"
+        },
+        "cosine": 0.23963004350662231
+      },
+      {
+        "rk_triple": {
+          "from_concept": "text",
+          "relationship": "saying",
+          "to_concept": "\"stack more layers\""
+        },
+        "sk_triple": {
+          "from_concept": "diagram",
+          "relationship": "on",
+          "to_concept": "sign"
+        },
+        "cosine": 0.18385426700115204
+      }
+    ],
+    "avg": 0.31157819075243814
+  },
+  "37": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "person",
+          "relationship": "discussing",
+          "to_concept": "concept"
+        },
+        "sk_triple": {
+          "from_concept": "man",
+          "relationship": "shows",
+          "to_concept": "diagram"
+        },
+        "cosine": 0.4533866047859192
+      },
+      {
+        "rk_triple": {
+          "from_concept": "person",
+          "relationship": "reinforcing",
+          "to_concept": "idea"
+        },
+        "sk_triple": {
+          "from_concept": "man",
+          "relationship": "shows",
+          "to_concept": "diagram"
+        },
+        "cosine": 0.23446600139141083
+      },
+      {
+        "rk_triple": {
+          "from_concept": "person",
+          "relationship": "sharing",
+          "to_concept": "thoughts"
+        },
+        "sk_triple": {
+          "from_concept": "man",
+          "relationship": "talking to",
+          "to_concept": "none seen"
+        },
+        "cosine": 0.3221081495285034
+      },
+      {
+        "rk_triple": {
+          "from_concept": "comic strip",
+          "relationship": "making",
+          "to_concept": "message"
+        },
+        "sk_triple": {
+          "from_concept": "diagram",
+          "relationship": "on",
+          "to_concept": "sign"
+        },
+        "cosine": 0.33781224489212036
+      },
+      {
+        "rk_triple": {
+          "from_concept": "comic strip",
+          "relationship": "effectively",
+          "to_concept": "communicating"
+        },
+        "sk_triple": {
+          "from_concept": "man",
+          "relationship": "shows",
+          "to_concept": "diagram"
+        },
+        "cosine": 0.3125355839729309
+      },
+      {
+        "rk_triple": {
+          "from_concept": "comic strip",
+          "relationship": "using",
+          "to_concept": "illustrations"
+        },
+        "sk_triple": {
+          "from_concept": "man",
+          "relationship": "shows",
+          "to_concept": "diagram"
+        },
+        "cosine": 0.27144742012023926
+      },
+      {
+        "rk_triple": {
+          "from_concept": "comic strip",
+          "relationship": "accessible",
+          "to_concept": "understanding"
+        },
+        "sk_triple": {
+          "from_concept": "man",
+          "relationship": "shows",
+          "to_concept": "diagram"
+        },
+        "cosine": 0.29207250475883484
+      },
+      {
+        "rk_triple": {
+          "from_concept": "comic strip",
+          "relationship": "using",
+          "to_concept": "text"
+        },
+        "sk_triple": {
+          "from_concept": "diagram",
+          "relationship": "on",
+          "to_concept": "sign"
+        },
+        "cosine": 0.2291184514760971
+      },
+      {
+        "rk_triple": {
+          "from_concept": "comic strip",
+          "relationship": "conveying",
+          "to_concept": "concept"
+        },
+        "sk_triple": {
+          "from_concept": "diagram",
+          "relationship": "on",
+          "to_concept": "sign"
+        },
+        "cosine": 0.2674916088581085
+      },
+      {
+        "rk_triple": {
+          "from_concept": "speech bubble",
+          "relationship": "containing",
+          "to_concept": "advice"
+        },
+        "sk_triple": {
+          "from_concept": "letter",
+          "relationship": "on",
+          "to_concept": "arrow"
+        },
+        "cosine": 0.13048586249351501
+      }
+    ],
+    "avg": 0.28509244322776794
+  },
+  "38": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "person",
+          "relationship": "asking",
+          "to_concept": "computer"
+        },
+        "sk_triple": {
+          "from_concept": "man",
+          "relationship": "says",
+          "to_concept": "words"
+        },
+        "cosine": 0.2792203426361084
+      },
+      {
+        "rk_triple": {
+          "from_concept": "computer",
+          "relationship": "explaining",
+          "to_concept": "\"i'm a neural network, i don't stack layers\""
+        },
+        "sk_triple": {
+          "from_concept": "hat",
+          "relationship": "on",
+          "to_concept": "head"
+        },
+        "cosine": 0.16857127845287323
+      }
+    ],
+    "avg": 0.22389581054449081
+  },
+  "39": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "usb cable",
+          "relationship": "is new",
+          "to_concept": "usb adapter"
+        },
+        "sk_triple": {
+          "from_concept": "white cable",
+          "relationship": "connected to",
+          "to_concept": "blue vga connector"
+        },
+        "cosine": 0.38067013025283813
+      },
+      {
+        "rk_triple": {
+          "from_concept": "usb adapter",
+          "relationship": "is plugged into",
+          "to_concept": "smartphone"
+        },
+        "sk_triple": {
+          "from_concept": "vga connector",
+          "relationship": "connected to",
+          "to_concept": "iphone's charging port"
+        },
+        "cosine": 0.42121651768684387
+      }
+    ],
+    "avg": 0.400943323969841
+  },
+  "40": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "smartphone",
+          "relationship": "connected to",
+          "to_concept": "usb cable"
+        },
+        "sk_triple": {
+          "from_concept": "cable",
+          "relationship": "charging",
+          "to_concept": "phone"
+        },
+        "cosine": 0.6500149965286255
+      },
+      {
+        "rk_triple": {
+          "from_concept": "smartphone",
+          "relationship": "connected to",
+          "to_concept": "usb adapter"
+        },
+        "sk_triple": {
+          "from_concept": "cable",
+          "relationship": "charging",
+          "to_concept": "phone"
+        },
+        "cosine": 0.4512547254562378
+      },
+      {
+        "rk_triple": {
+          "from_concept": "usb cable",
+          "relationship": "connected to",
+          "to_concept": "wall outlet"
+        },
+        "sk_triple": {
+          "from_concept": "cable",
+          "relationship": "charging",
+          "to_concept": "phone"
+        },
+        "cosine": 0.5195502042770386
+      },
+      {
+        "rk_triple": {
+          "from_concept": "usb adapter",
+          "relationship": "connected to",
+          "to_concept": "usb cable"
+        },
+        "sk_triple": {
+          "from_concept": "cable",
+          "relationship": "charging",
+          "to_concept": "phone"
+        },
+        "cosine": 0.4453370273113251
+      }
+    ],
+    "avg": 0.5165392383933067
+  },
+  "42": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "flaming horse",
+          "relationship": "wearing",
+          "to_concept": "glasses"
+        },
+        "sk_triple": {
+          "from_concept": "creature",
+          "relationship": "has",
+          "to_concept": "glasses on face"
+        },
+        "cosine": 0.617497444152832
+      },
+      {
+        "rk_triple": {
+          "from_concept": "flaming horse",
+          "relationship": "standing on",
+          "to_concept": "base"
+        },
+        "sk_triple": {
+          "from_concept": "creature",
+          "relationship": "has",
+          "to_concept": "fire flames"
+        },
+        "cosine": 0.5337044596672058
+      },
+      {
+        "rk_triple": {
+          "from_concept": "glasses",
+          "relationship": "worn by",
+          "to_concept": "horse"
+        },
+        "sk_triple": {
+          "from_concept": "creature",
+          "relationship": "has",
+          "to_concept": "glasses on face"
+        },
+        "cosine": 0.6007301807403564
+      },
+      {
+        "rk_triple": {
+          "from_concept": "base",
+          "relationship": "supporting",
+          "to_concept": "horse"
+        },
+        "sk_triple": {
+          "from_concept": "leg",
+          "relationship": "made of",
+          "to_concept": "black rocks"
+        },
+        "cosine": 0.3279581069946289
+      }
+    ],
+    "avg": 0.5199725478887558
+  },
+  "43": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "bear",
+          "relationship": "eating",
+          "to_concept": "food"
+        },
+        "sk_triple": {
+          "from_concept": "picnic",
+          "relationship": "with",
+          "to_concept": "three animals"
+        },
+        "cosine": 0.3342137336730957
+      },
+      {
+        "rk_triple": {
+          "from_concept": "cat",
+          "relationship": "eating",
+          "to_concept": "food"
+        },
+        "sk_triple": {
+          "from_concept": "picnic",
+          "relationship": "with",
+          "to_concept": "three animals"
+        },
+        "cosine": 0.19709725677967072
+      },
+      {
+        "rk_triple": {
+          "from_concept": "rabbit",
+          "relationship": "eating",
+          "to_concept": "food"
+        },
+        "sk_triple": {
+          "from_concept": "picnic",
+          "relationship": "with",
+          "to_concept": "three animals"
+        },
+        "cosine": 0.30008023977279663
+      },
+      {
+        "rk_triple": {
+          "from_concept": "table",
+          "relationship": "covered with",
+          "to_concept": "tablecloth"
+        },
+        "sk_triple": {
+          "from_concept": "picnic",
+          "relationship": "with",
+          "to_concept": "three animals"
+        },
+        "cosine": 0.17467400431632996
+      },
+      {
+        "rk_triple": {
+          "from_concept": "field",
+          "relationship": "in the background",
+          "to_concept": "painting"
+        },
+        "sk_triple": {
+          "from_concept": "three animals",
+          "relationship": "enjoying",
+          "to_concept": "themselves"
+        },
+        "cosine": 0.02205739915370941
+      },
+      {
+        "rk_triple": {
+          "from_concept": "trees",
+          "relationship": "in the background",
+          "to_concept": "painting"
+        },
+        "sk_triple": {
+          "from_concept": "picnic",
+          "relationship": "with",
+          "to_concept": "three animals"
+        },
+        "cosine": 0.1206202507019043
+      }
+    ],
+    "avg": 0.19145714739958444
+  },
+  "44": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "bear",
+          "relationship": "holding",
+          "to_concept": "plate"
+        },
+        "sk_triple": {
+          "from_concept": "bear",
+          "relationship": "has",
+          "to_concept": "face"
+        },
+        "cosine": 0.5805311799049377
+      },
+      {
+        "rk_triple": {
+          "from_concept": "cat",
+          "relationship": "holding",
+          "to_concept": "plate"
+        },
+        "sk_triple": {
+          "from_concept": "cat",
+          "relationship": "has",
+          "to_concept": "blue mug"
+        },
+        "cosine": 0.5593845844268799
+      },
+      {
+        "rk_triple": {
+          "from_concept": "rabbit",
+          "relationship": "holding",
+          "to_concept": "plate"
+        },
+        "sk_triple": {
+          "from_concept": "rabbit",
+          "relationship": "sipping from",
+          "to_concept": "coffee mug"
+        },
+        "cosine": 0.602806806564331
+      },
+      {
+        "rk_triple": {
+          "from_concept": "tree stump",
+          "relationship": "serving as",
+          "to_concept": "table"
+        },
+        "sk_triple": {
+          "from_concept": "leaf",
+          "relationship": "on",
+          "to_concept": "leg"
+        },
+        "cosine": 0.37336868047714233
+      },
+      {
+        "rk_triple": {
+          "from_concept": "forest",
+          "relationship": "filled with",
+          "to_concept": "trees and bushes"
+        },
+        "sk_triple": {
+          "from_concept": "leaf",
+          "relationship": "on",
+          "to_concept": "leg"
+        },
+        "cosine": 0.26976218819618225
+      },
+      {
+        "rk_triple": {
+          "from_concept": "animals",
+          "relationship": "enjoying",
+          "to_concept": "meal"
+        },
+        "sk_triple": {
+          "from_concept": "bear",
+          "relationship": "eating",
+          "to_concept": "cookie"
+        },
+        "cosine": 0.3501509726047516
+      }
+    ],
+    "avg": 0.4560007353623708
+  },
+  "45": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "note",
+          "relationship": "written on",
+          "to_concept": "paper"
+        },
+        "sk_triple": {
+          "from_concept": "writing",
+          "relationship": "on",
+          "to_concept": "paper"
+        },
+        "cosine": 0.7298280000686646
+      },
+      {
+        "rk_triple": {
+          "from_concept": "text",
+          "relationship": "written on",
+          "to_concept": "note"
+        },
+        "sk_triple": {
+          "from_concept": "words on it",
+          "relationship": "on",
+          "to_concept": "writing"
+        },
+        "cosine": 0.7404270172119141
+      },
+      {
+        "rk_triple": {
+          "from_concept": "text",
+          "relationship": "written on",
+          "to_concept": "paper"
+        },
+        "sk_triple": {
+          "from_concept": "writing",
+          "relationship": "on",
+          "to_concept": "paper"
+        },
+        "cosine": 0.8345047235488892
+      }
+    ],
+    "avg": 0.7682532469431559
+  },
+  "47": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "question",
+          "relationship": "is part of",
+          "to_concept": "diagram"
+        },
+        "sk_triple": {
+          "from_concept": "content",
+          "relationship": "with",
+          "to_concept": "joke"
+        },
+        "cosine": 0.16734397411346436
+      },
+      {
+        "rk_triple": {
+          "from_concept": "answer",
+          "relationship": "is part of",
+          "to_concept": "diagram"
+        },
+        "sk_triple": {
+          "from_concept": "content",
+          "relationship": "with",
+          "to_concept": "joke"
+        },
+        "cosine": 0.2153266966342926
+      },
+      {
+        "rk_triple": {
+          "from_concept": "joke",
+          "relationship": "has a punchline",
+          "to_concept": "diagram"
+        },
+        "sk_triple": {
+          "from_concept": "content",
+          "relationship": "with",
+          "to_concept": "joke"
+        },
+        "cosine": 0.5325543880462646
+      },
+      {
+        "rk_triple": {
+          "from_concept": "joke",
+          "relationship": "focuses on structure",
+          "to_concept": "content"
+        },
+        "sk_triple": {
+          "from_concept": "content",
+          "relationship": "with",
+          "to_concept": "joke"
+        },
+        "cosine": 0.592933714389801
+      },
+      {
+        "rk_triple": {
+          "from_concept": "punchline",
+          "relationship": "is hidden",
+          "to_concept": "joke"
+        },
+        "sk_triple": {
+          "from_concept": "content",
+          "relationship": "with",
+          "to_concept": "joke"
+        },
+        "cosine": 0.5600676536560059
+      },
+      {
+        "rk_triple": {
+          "from_concept": "button or action",
+          "relationship": "reveals punchline",
+          "to_concept": "joke"
+        },
+        "sk_triple": {
+          "from_concept": "content",
+          "relationship": "with",
+          "to_concept": "joke"
+        },
+        "cosine": 0.4858147203922272
+      }
+    ],
+    "avg": 0.42567352453867596
+  },
+  "49": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "will turner",
+          "relationship": "embracing",
+          "to_concept": "elizabeth swann"
+        },
+        "sk_triple": {
+          "from_concept": "man",
+          "relationship": "grabbing",
+          "to_concept": "woman"
+        },
+        "cosine": 0.28706276416778564
+      },
+      {
+        "rk_triple": {
+          "from_concept": "ocean",
+          "relationship": "horizon",
+          "to_concept": "ship"
+        },
+        "sk_triple": {
+          "from_concept": "movie",
+          "relationship": "on",
+          "to_concept": "ship"
+        },
+        "cosine": 0.5142852067947388
+      },
+      {
+        "rk_triple": {
+          "from_concept": "sky",
+          "relationship": "glowing",
+          "to_concept": "horizon"
+        },
+        "sk_triple": {
+          "from_concept": "couple",
+          "relationship": "having fun in",
+          "to_concept": "front of vehicle"
+        },
+        "cosine": 0.08034272491931915
+      },
+      {
+        "rk_triple": {
+          "from_concept": "characters",
+          "relationship": "on",
+          "to_concept": "ship"
+        },
+        "sk_triple": {
+          "from_concept": "movie",
+          "relationship": "on",
+          "to_concept": "ship"
+        },
+        "cosine": 0.645798921585083
+      },
+      {
+        "rk_triple": {
+          "from_concept": "characters",
+          "relationship": "separated",
+          "to_concept": "curse"
+        },
+        "sk_triple": {
+          "from_concept": "man",
+          "relationship": "grabbing",
+          "to_concept": "woman"
+        },
+        "cosine": 0.16802477836608887
+      },
+      {
+        "rk_triple": {
+          "from_concept": "characters",
+          "relationship": "looking back",
+          "to_concept": "other"
+        },
+        "sk_triple": {
+          "from_concept": "couple",
+          "relationship": "having fun in",
+          "to_concept": "front of vehicle"
+        },
+        "cosine": 0.23319466412067413
+      },
+      {
+        "rk_triple": {
+          "from_concept": "characters",
+          "relationship": "wearing",
+          "to_concept": "clothing"
+        },
+        "sk_triple": {
+          "from_concept": "couple",
+          "relationship": "having fun in",
+          "to_concept": "front of vehicle"
+        },
+        "cosine": 0.27648401260375977
+      }
+    ],
+    "avg": 0.3150275817939213
+  },
+  "50": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "jack",
+          "relationship": "looking out at",
+          "to_concept": "ocean"
+        },
+        "sk_triple": {
+          "from_concept": "people",
+          "relationship": "in front",
+          "to_concept": "boat"
+        },
+        "cosine": 0.24331030249595642
+      },
+      {
+        "rk_triple": {
+          "from_concept": "jack",
+          "relationship": "embarking on",
+          "to_concept": "journey"
+        },
+        "sk_triple": {
+          "from_concept": "people",
+          "relationship": "in front",
+          "to_concept": "boat"
+        },
+        "cosine": 0.177269846200943
+      },
+      {
+        "rk_triple": {
+          "from_concept": "jack",
+          "relationship": "adventurous",
+          "to_concept": "movie"
+        },
+        "sk_triple": {
+          "from_concept": "people",
+          "relationship": "in front",
+          "to_concept": "boat"
+        },
+        "cosine": 0.11470472812652588
+      },
+      {
+        "rk_triple": {
+          "from_concept": "rose",
+          "relationship": "looking out at",
+          "to_concept": "ocean"
+        },
+        "sk_triple": {
+          "from_concept": "people",
+          "relationship": "in",
+          "to_concept": "sunset"
+        },
+        "cosine": 0.31864798069000244
+      },
+      {
+        "rk_triple": {
+          "from_concept": "rose",
+          "relationship": "embarking on",
+          "to_concept": "journey"
+        },
+        "sk_triple": {
+          "from_concept": "people",
+          "relationship": "in",
+          "to_concept": "sunset"
+        },
+        "cosine": 0.16763603687286377
+      },
+      {
+        "rk_triple": {
+          "from_concept": "rose",
+          "relationship": "loved",
+          "to_concept": "jack"
+        },
+        "sk_triple": {
+          "from_concept": "people",
+          "relationship": "in",
+          "to_concept": "sunset"
+        },
+        "cosine": 0.09655910730361938
+      },
+      {
+        "rk_triple": {
+          "from_concept": "rose",
+          "relationship": "adventurous",
+          "to_concept": "movie"
+        },
+        "sk_triple": {
+          "from_concept": "people",
+          "relationship": "in",
+          "to_concept": "sunset"
+        },
+        "cosine": 0.11135266721248627
+      }
+    ],
+    "avg": 0.1756400955574853
+  },
+  "52": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "bowl",
+          "relationship": "contains",
+          "to_concept": "soup"
+        },
+        "sk_triple": {
+          "from_concept": "broth",
+          "relationship": "in",
+          "to_concept": "bowl"
+        },
+        "cosine": 0.6966948509216309
+      },
+      {
+        "rk_triple": {
+          "from_concept": "bowl",
+          "relationship": "contains",
+          "to_concept": "sauce"
+        },
+        "sk_triple": {
+          "from_concept": "noodle",
+          "relationship": "in",
+          "to_concept": "bowl"
+        },
+        "cosine": 0.6314886808395386
+      },
+      {
+        "rk_triple": {
+          "from_concept": "plate",
+          "relationship": "contains",
+          "to_concept": "vegetables"
+        },
+        "sk_triple": {
+          "from_concept": "food",
+          "relationship": "on",
+          "to_concept": "plate"
+        },
+        "cosine": 0.7321374416351318
+      },
+      {
+        "rk_triple": {
+          "from_concept": "table",
+          "relationship": "holds",
+          "to_concept": "napkin"
+        },
+        "sk_triple": {
+          "from_concept": "bowl",
+          "relationship": "placed on",
+          "to_concept": "table"
+        },
+        "cosine": 0.5256417393684387
+      },
+      {
+        "rk_triple": {
+          "from_concept": "table",
+          "relationship": "holds",
+          "to_concept": "chopsticks"
+        },
+        "sk_triple": {
+          "from_concept": "chop sticks",
+          "relationship": "in",
+          "to_concept": "paper sleeve"
+        },
+        "cosine": 0.5741649866104126
+      }
+    ],
+    "avg": 0.6320255398750305
+  },
+  "53": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "soup",
+          "relationship": "is served in",
+          "to_concept": "bowl"
+        },
+        "sk_triple": {
+          "from_concept": "food",
+          "relationship": "on",
+          "to_concept": "plate"
+        },
+        "cosine": 0.4462537467479706
+      },
+      {
+        "rk_triple": {
+          "from_concept": "chicken",
+          "relationship": "is part of",
+          "to_concept": "soup"
+        },
+        "sk_triple": {
+          "from_concept": "noodle",
+          "relationship": "apart of",
+          "to_concept": "vegetable"
+        },
+        "cosine": 0.48222610354423523
+      },
+      {
+        "rk_triple": {
+          "from_concept": "green onions",
+          "relationship": "is part of",
+          "to_concept": "soup"
+        },
+        "sk_triple": {
+          "from_concept": "noodle",
+          "relationship": "apart of",
+          "to_concept": "vegetable"
+        },
+        "cosine": 0.49244973063468933
+      },
+      {
+        "rk_triple": {
+          "from_concept": "bowl",
+          "relationship": "has a design",
+          "to_concept": "red and gold"
+        },
+        "sk_triple": {
+          "from_concept": "spring onions",
+          "relationship": "laying inside",
+          "to_concept": "bowl"
+        },
+        "cosine": 0.3509857654571533
+      }
+    ],
+    "avg": 0.4429788365960121
+  },
+  "55": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "sandwiches",
+          "relationship": "are part of",
+          "to_concept": "subway series"
+        },
+        "sk_triple": {
+          "from_concept": "ham",
+          "relationship": "in",
+          "to_concept": "sandwich"
+        },
+        "cosine": 0.5311698913574219
+      },
+      {
+        "rk_triple": {
+          "from_concept": "subway logo",
+          "relationship": "is part of",
+          "to_concept": "brand"
+        },
+        "sk_triple": {
+          "from_concept": "brand name",
+          "relationship": "on",
+          "to_concept": "green banner"
+        },
+        "cosine": 0.5121250748634338
+      },
+      {
+        "rk_triple": {
+          "from_concept": "text",
+          "relationship": "indicates",
+          "to_concept": "new delivery service"
+        },
+        "sk_triple": {
+          "from_concept": "letter",
+          "relationship": "printed on",
+          "to_concept": "sign"
+        },
+        "cosine": 0.43836215138435364
+      }
+    ],
+    "avg": 0.49388570586840314
+  },
+  "57": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "car",
+          "relationship": "driving on",
+          "to_concept": "road"
+        },
+        "sk_triple": {
+          "from_concept": "car",
+          "relationship": "moving down",
+          "to_concept": "street"
+        },
+        "cosine": 0.7945417165756226
+      },
+      {
+        "rk_triple": {
+          "from_concept": "car",
+          "relationship": "driving on",
+          "to_concept": "highway"
+        },
+        "sk_triple": {
+          "from_concept": "car",
+          "relationship": "moving down",
+          "to_concept": "street"
+        },
+        "cosine": 0.6658860445022583
+      },
+      {
+        "rk_triple": {
+          "from_concept": "car",
+          "relationship": "driving on",
+          "to_concept": "street"
+        },
+        "sk_triple": {
+          "from_concept": "car",
+          "relationship": "moving down",
+          "to_concept": "street"
+        },
+        "cosine": 0.8910547494888306
+      }
+    ],
+    "avg": 0.7838275035222372
+  },
+  "58": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "cars",
+          "relationship": "driving on",
+          "to_concept": "highway"
+        },
+        "sk_triple": {
+          "from_concept": "car",
+          "relationship": "driving down",
+          "to_concept": "road"
+        },
+        "cosine": 0.6533225774765015
+      },
+      {
+        "rk_triple": {
+          "from_concept": "buses",
+          "relationship": "driving on",
+          "to_concept": "highway"
+        },
+        "sk_triple": {
+          "from_concept": "bus",
+          "relationship": "driving down",
+          "to_concept": "street"
+        },
+        "cosine": 0.7585050463676453
+      },
+      {
+        "rk_triple": {
+          "from_concept": "trucks",
+          "relationship": "driving on",
+          "to_concept": "highway"
+        },
+        "sk_triple": {
+          "from_concept": "car",
+          "relationship": "driving down",
+          "to_concept": "road"
+        },
+        "cosine": 0.5051414370536804
+      },
+      {
+        "rk_triple": {
+          "from_concept": "road",
+          "relationship": "filled with",
+          "to_concept": "vehicles"
+        },
+        "sk_triple": {
+          "from_concept": "car",
+          "relationship": "driving down",
+          "to_concept": "road"
+        },
+        "cosine": 0.6396911144256592
+      },
+      {
+        "rk_triple": {
+          "from_concept": "traffic",
+          "relationship": "congested",
+          "to_concept": "highway"
+        },
+        "sk_triple": {
+          "from_concept": "car",
+          "relationship": "driving down",
+          "to_concept": "road"
+        },
+        "cosine": 0.44758307933807373
+      },
+      {
+        "rk_triple": {
+          "from_concept": "city",
+          "relationship": "facing",
+          "to_concept": "traffic problem"
+        },
+        "sk_triple": {
+          "from_concept": "car",
+          "relationship": "moving down",
+          "to_concept": "street"
+        },
+        "cosine": 0.46509021520614624
+      },
+      {
+        "rk_triple": {
+          "from_concept": "solutions",
+          "relationship": "to",
+          "to_concept": "traffic problem"
+        },
+        "sk_triple": {
+          "from_concept": "bus",
+          "relationship": "driving down",
+          "to_concept": "street"
+        },
+        "cosine": 0.31555482745170593
+      },
+      {
+        "rk_triple": {
+          "from_concept": "public transportation",
+          "relationship": "encouraging",
+          "to_concept": "use"
+        },
+        "sk_triple": {
+          "from_concept": "bus",
+          "relationship": "driving down",
+          "to_concept": "street"
+        },
+        "cosine": 0.29542917013168335
+      },
+      {
+        "rk_triple": {
+          "from_concept": "carpooling",
+          "relationship": "encouraging",
+          "to_concept": "use"
+        },
+        "sk_triple": {
+          "from_concept": "bus",
+          "relationship": "driving down",
+          "to_concept": "street"
+        },
+        "cosine": 0.2224930375814438
+      },
+      {
+        "rk_triple": {
+          "from_concept": "ridesharing",
+          "relationship": "encouraging",
+          "to_concept": "use"
+        },
+        "sk_triple": {
+          "from_concept": "bus",
+          "relationship": "driving down",
+          "to_concept": "street"
+        },
+        "cosine": 0.13244763016700745
+      },
+      {
+        "rk_triple": {
+          "from_concept": "road infrastructure",
+          "relationship": "expanding and improving",
+          "to_concept": "highway"
+        },
+        "sk_triple": {
+          "from_concept": "car",
+          "relationship": "driving down",
+          "to_concept": "road"
+        },
+        "cosine": 0.3517538607120514
+      },
+      {
+        "rk_triple": {
+          "from_concept": "congestion pricing",
+          "relationship": "implementing",
+          "to_concept": "traffic problem"
+        },
+        "sk_triple": {
+          "from_concept": "car",
+          "relationship": "driving down",
+          "to_concept": "road"
+        },
+        "cosine": 0.2987736463546753
+      },
+      {
+        "rk_triple": {
+          "from_concept": "air pollution",
+          "relationship": "reduced",
+          "to_concept": "traffic problem"
+        },
+        "sk_triple": {
+          "from_concept": "car",
+          "relationship": "driving down",
+          "to_concept": "road"
+        },
+        "cosine": 0.3094968795776367
+      }
+    ],
+    "avg": 0.41502173244953156
+  },
+  "59": {
+    "measures": [
+      {
+        "rk_triple": {
+          "from_concept": "car",
+          "relationship": "moving",
+          "to_concept": "bus"
+        },
+        "sk_triple": {
+          "from_concept": "bus",
+          "relationship": "driving down",
+          "to_concept": "street"
+        },
+        "cosine": 0.749653697013855
+      },
+      {
+        "rk_triple": {
+          "from_concept": "streetlight",
+          "relationship": "illuminating",
+          "to_concept": "street"
+        },
+        "sk_triple": {
+          "from_concept": "break light",
+          "relationship": "flashing in",
+          "to_concept": "one lane"
+        },
+        "cosine": 0.5408092737197876
+      }
+    ],
+    "avg": 0.6452314853668213
+  }
+}
