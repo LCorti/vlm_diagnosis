@@ -421,7 +421,7 @@ if __name__ == "__main__":
     # Make dictionary of dataframes w.r.t. question id
     out_f = Path("data_oe")
     out_f.mkdir(parents=True, exist_ok=True)
-    file_name = Path(f"df_dict_{MODEL}_{DATASET}.pkl")  # Creating this for later
+    file_name = out_f.joinpath(f"df_dict_{MODEL}_{DATASET}.pkl")
     df_dict = {
         str(q_idx): df[df["question_id"] == str(q_idx)] for q_idx in dict_counter_resp
     }
