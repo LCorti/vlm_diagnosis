@@ -422,59 +422,71 @@ if __name__ == "__main__":
     out_f = Path("data_oe")
     out_f.mkdir(parents=True, exist_ok=True)
     file_name = out_f.joinpath(f"df_dict_{MODEL}_{DATASET}.pkl")
-    df_dict = {
-        str(q_idx): df[df["question_id"] == str(q_idx)] for q_idx in dict_counter_resp
-    }
+    if file_name.exists():
+        print("Found pre-computed 'df_dict'. Loading...")
+        df_dict = pd.read_pickle(file_name)
+        print("Creating unique names...")
+        unique_og = {}
+        for q_idx, q_df in df_dict.items():
+            # Get all columns that start with "y_" -> these are the nouns to check
+            unique_og[q_idx] = [
+                col.replace("y_", "", 1) for col in q_df.columns if col.startswith("y_")
+            ]
+    else:
+        df_dict = {
+            str(q_idx): df[df["question_id"] == str(q_idx)]
+            for q_idx in dict_counter_resp
+        }
 
-    # Taking the list of occluded concepts and splitting it
-    for q_idx in df_dict:
-        for concept in dict_concepts[q_idx]:
-            df_dict[q_idx][concept] = 1
-    for q_idx in df_dict:
-        for id, row in df_dict[q_idx].iterrows():
-            curr_concepts = row["occluded"]
-            for c in curr_concepts:
-                df_dict[q_idx].loc[id, c] = 0
-        df_dict[q_idx].drop(["occluded"], axis=1, inplace=True)
+        # Taking the list of occluded concepts and splitting it
+        for q_idx in df_dict:
+            for concept in dict_concepts[q_idx]:
+                df_dict[q_idx][concept] = 1
+        for q_idx in df_dict:
+            for id, row in df_dict[q_idx].iterrows():
+                curr_concepts = row["occluded"]
+                for c in curr_concepts:
+                    df_dict[q_idx].loc[id, c] = 0
+            df_dict[q_idx].drop(["occluded"], axis=1, inplace=True)
 
-    print("Finish setting up df_dict.")
-    spacy_model_name = "en_core_web_trf"
-    print(f"Loading spaCy model: {spacy_model_name}...")
-    to_exclude = ["ner", "parser"]  # do not load NER and dependency parsing modules
-    nlp = load_spacy(spacy_model_name, exclude=to_exclude)
+        print("Finish setting up df_dict.")
+        spacy_model_name = "en_core_web_trf"
+        print(f"Loading spaCy model: {spacy_model_name}...")
+        to_exclude = ["ner", "parser"]  # do not load NER and dependency parsing modules
+        nlp = load_spacy(spacy_model_name, exclude=to_exclude)
 
-    """Only use the nouns that are present in the original response to do estimation."""
+        """Only use the nouns that are present in the original response to do estimation."""
 
-    # Prepare columns with nouns extracted from the responses
-    unique_counter = {}
-    unique_og = {}
-    for q_idx, q_df in df_dict.items():
-        # Parse original response (i.e., the non-counterfactual one) separately
-        unique_counter[q_idx] = {}
-        for idx in q_df.index.tolist():
-            size = q_df.loc[idx]["size"]
-            # These are lemmas already
-            nouns = get_nouns(nlp(q_df.loc[idx]["response"]), return_dict=False)
-            unique_counter[q_idx][idx] = list(set(nouns))
-            if size == 0:
-                unique_og[q_idx] = list(set(nouns))
+        # Prepare columns with nouns extracted from the responses
+        unique_counter = {}
+        unique_og = {}
+        for q_idx, q_df in df_dict.items():
+            # Parse original response (i.e., the non-counterfactual one) separately
+            unique_counter[q_idx] = {}
+            for idx in q_df.index.tolist():
+                size = q_df.loc[idx]["size"]
+                # These are lemmas already
+                nouns = get_nouns(nlp(q_df.loc[idx]["response"]), return_dict=False)
+                unique_counter[q_idx][idx] = list(set(nouns))
+                if size == 0:
+                    unique_og[q_idx] = list(set(nouns))
 
-        # Add binary columns for each noun found in the OG response. Initialise with 1s.
-        for noun in unique_og[q_idx]:
-            q_df[f"y_{noun}"] = 1
-
-        # Iterate over the rows and if a column is not included in the list
-        for row_id in q_df.index:
+            # Add binary columns for each noun found in the OG response. Initialise with 1s.
             for noun in unique_og[q_idx]:
-                if noun not in unique_counter[q_idx][row_id]:
-                    q_df.loc[row_id, f"y_{noun}"] = 0
+                q_df[f"y_{noun}"] = 1
 
-        print(
-            f"Handled question: {q_idx} -> {q_df.shape[0]} rows x {q_df.shape[1]} cols."
-        )
+            # Iterate over the rows and if a column is not included in the list
+            for row_id in q_df.index:
+                for noun in unique_og[q_idx]:
+                    if noun not in unique_counter[q_idx][row_id]:
+                        q_df.loc[row_id, f"y_{noun}"] = 0
 
-    print("Completed creation of df_dict. Saving copy to disk...")
-    pd.to_pickle(df_dict, file_name)
+            print(
+                f"Handled question: {q_idx} -> {q_df.shape[0]} rows x {q_df.shape[1]} cols."
+            )
+
+        print("Completed creation of df_dict. Saving copy to disk...")
+        pd.to_pickle(df_dict, file_name)
 
     # Prepare data for causal inference
     # First, we create the NX graphs based on the data contained from 'resps'.
