@@ -513,7 +513,7 @@ def plot_sample_behaviours(data, out_path, split=False, to_skip=None) -> None:
         models = MODEL_MAP.copy()
 
     for idx, ax in enumerate(axes):
-        ax.set_title(type_map[idx + 1])
+        ax.set_title(type_map[idx + 1], fontsize=14)
         ax.tick_params(bottom=False)
         ax.set_ylim(top=max_y)
         x = np.arange(len(models))
@@ -547,16 +547,16 @@ def plot_sample_behaviours(data, out_path, split=False, to_skip=None) -> None:
                     )
                     bottom += values
 
-            ax.bar_label(bars, fontsize=8, padding=3)
+            ax.bar_label(bars, fontsize=11, padding=3)
 
             multiplier += 1
 
-        ax.set_xticks(x + width * 1.5, list(models.values()))
+        ax.set_xticks(x + width * 1.5, list(models.values()), fontsize=12)
 
     handles = [Patch(color=COLOR_MAP[key], label=DS_MAP[key]) for key in DS_MAP]
 
-    ax.legend(handles=handles, loc="upper right", ncol=1)
-    axes[0].set_ylabel("N. Samples")
+    ax.legend(handles=handles, loc="upper right", ncol=1, fontsize=12)
+    axes[0].set_ylabel("N. Samples", fontsize=12)
 
     plt.tight_layout()
     plt.savefig(out_path)
