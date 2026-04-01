@@ -1,2 +1,2 @@
-# Dia: Diagnosing the Behaviours of Vision-Language Models
+# DiaVLo: Diagnosing the Behaviours of Vision-Language Models
 todo
