@@ -203,60 +203,60 @@ if __name__ == "__main__":
     print("Added mock columns.")
     print("Starting sensitivity sweep...")
 
-    n_points = 100
+    n_points = 10
     t_min = 0.0
     t_max = 1.0
     thresholds = np.linspace(0, 1, n_points + 2)[1:-1]
-    results = []
+    results = {}
     min_gap = 0.000001
 
-    for i, t1 in enumerate(thresholds):
-        for j, t2 in enumerate(thresholds):
-            # force order
-            if t1 >= t2:
-                continue
+    for m, ds in zip(all_models, all_ds):
+        curr_df = df[(df["dataset"] == ds) & (df["model"] == m)].copy()
+        sample_ids = list(curr_df["question_id"].unique())
+        if m not in results:
+            results[m] = {}
+        if ds not in results[m]:
+            results[m][ds] = {1: [], 2: [], 3: []}
 
-            curr_split = {
-                1: {"start": round(t2.item(), prec), "end": t_max},
-                2: {
-                    "start": round(t1.item() + min_gap, prec),
-                    "end": round(t2.item() - min_gap, prec),
-                },
-                3: {"start": t_min, "end": round(t1.item(), prec)},
-            }
+        print(f"{m} x {ds} --> {len(curr_df)} rows.")
 
-            # Update with current split info
-            df["triple_type"] = df.apply(
-                lambda x: get_behaviour_type(x["triple_cosine"], curr_split), axis=1
-            )
+        for _, t1 in enumerate(thresholds):
+            for _, t2 in enumerate(thresholds):
+                # force order
+                if t1 >= t2:
+                    continue
+                curr_split = {
+                    1: {"start": round(t2.item(), prec), "end": t_max},
+                    2: {
+                        "start": round(t1.item() + min_gap, prec),
+                        "end": round(t2.item() - min_gap, prec),
+                    },
+                    3: {"start": t_min, "end": round(t1.item(), prec)},
+                }
+                print(curr_split)
 
-            # Update sample type
-            for m, ds in zip(all_models, all_ds):
-                curr_df = df[(df["dataset"] == ds) & (df["model"] == m)]
-                sample_ids = list(curr_df["question_id"].unique())
                 for idx in sample_ids:
                     curr_sample = curr_df[curr_df["question_id"] == idx]
                     df_row_ids = curr_sample.index  # These will be the ones to update
+                    # print(len(curr_df), df_row_ids)
                     sample_info = get_sample_type(curr_sample, curr_split)
-                    df["sample_type"].iloc[df_row_ids] = sample_info[0]
+                    curr_df.loc[df_row_ids, "sample_type"] = sample_info[0]
 
-            # Compute stats for sample-level behaviours assigned
-            counts = {idx: {ds: [] for ds in ds_list} for idx in curr_split}
-            for idx in curr_split.keys():
-                for m, ds in zip(all_models, all_ds):
-                    curr_subset = df[(df["dataset"] == ds) & (df["model"] == m)]
+                # Compute stats for sample-level behaviours assigned
+
+                for idx in curr_split.keys():
                     count = len(
-                        curr_subset[
-                            (~curr_subset["slack"])
-                            & (curr_subset["sample_type"] == idx)
-                        ]["question_id"].unique()
+                        curr_df[(~curr_df["slack"]) & (curr_df["sample_type"] == idx)][
+                            "question_id"
+                        ].unique()
                     )
-                    counts[idx][ds].append(count)
-
-            results.append({"split": curr_split, "counts": counts})
+                    results[m][ds][idx].append(((t2, t1), count))
 
     print("Done. Saving.")
     # Save results
-    with open(f"sensitivity_{n_points}.json", "w") as fp:
-        json.dump(results, fp, indent=4)
+    out_dir = Path("sensitivity_res")
+    out_dir.mkdir(exist_ok=True)
+    filename = Path(out_dir, f"sensitivity_agg_{n_points}.json")
+    with open(filename, "w") as fp:
+        json.dump(results, fp)
     print("Saved.")
