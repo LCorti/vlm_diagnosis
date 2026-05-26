@@ -25,19 +25,42 @@ if __name__ == "__main__":
 
         for ds_class in sk_hdl.get_classes():
             print(f"- Looking at {ds_class}")
-            # Load merged scene graphs
             sk_hdl.set_curr_class(ds_class)
-            crowd_sg = load_jsonl(Path("..", sk_hdl.get_sg_crowd_path()))
-            graph_dict = {}
 
-            # Go through current batch of SKs and make NX graphs for thema
-            for sk in crowd_sg:
-                sk_graph = sk_to_nx(sk["rel_clusters_unique"])
-                graph_dict[sk["img_id"]] = sk_graph
+            # Load merged scene graphs
+            crowd_sg_path = Path("..", sk_hdl.get_sg_crowd_path())
+            crowd_sg = None
+            print(f"Attempting loading merged scene graphs from: {str(crowd_sg_path)}")
+            if crowd_sg_path.exists():
+                crowd_sg = load_jsonl(crowd_sg_path)
+                crowd_sg_dict = {}
+                # Go through current batch of SKs and make NX graphs for them
+                for sk in crowd_sg:
+                    sk_graph = sk_to_nx(sk["rel_clusters_unique"])
+                    crowd_sg_dict[sk["img_id"]] = sk_graph
 
-            # Make directory if needed and save graph to it
-            out_file = sk_hdl.get_crowd_pkl_path()
-            out_folder = Path("..", out_file.parent)
-            make_dir(out_folder)
-            save_pickle(graph_dict, out_file)
-            print("Graphs saved.")
+                # Make directory if needed and save graph to it
+                out_file = sk_hdl.get_crowd_pkl_path()
+                make_dir(out_file.parent)
+                save_pickle(crowd_sg_dict, out_file)
+                print(f"Crowd SKs saved to {str(out_file)}")
+            else:
+                print(f"... Unable to find {str(crowd_sg_path)}")
+
+            # Load final SKs
+            exp_sk_path = Path("..", sk_hdl.get_sk_exp_path())
+            exp_sk = None
+            if exp_sk_path.exists():
+                exp_sk = load_jsonl(exp_sk_path)
+                exp_sk_dict = {}
+                for sk in exp_sk:
+                    sk_graph = sk_to_nx(sk["relations"])
+                    exp_sk_dict[sk["question_id"]] = sk_graph
+
+                # Save
+                out_file = Path("..", sk_hdl.get_exp_pkl_path())
+                make_dir(out_file.parent)
+                save_pickle(exp_sk_dict, out_file)
+                print(f"Expert SKs saved to {str(out_file)}")
+            else:
+                print(f"... Unable to find {str(exp_sk_path)}")
