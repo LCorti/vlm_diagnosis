@@ -1,8 +1,9 @@
 import re
 import sys
-import torch
-
 from pathlib import Path
+from typing import Any
+
+import torch
 from transformers import (
     AutoModel,
     AutoModelForCausalLM,
@@ -11,7 +12,6 @@ from transformers import (
     GenerationConfig,
     Qwen2_5_VLForConditionalGeneration,
 )
-from typing import Any
 
 module_path = str(Path("..").resolve())
 if module_path not in sys.path:
@@ -67,6 +67,8 @@ class GenUtils:
         )
 
         if self.MODEL_NAME == "internvl2":
+            # use_cache = True hardcoded at line 346 here
+            # https://huggingface.co/OpenGVLab/InternVL2-8B/blob/main/modeling_internvl_chat.py
             self.GEN_CONFIG = config_dict
         elif self.MODEL_NAME == "llava-1.6":
             config_dict["num_beams"] = num_beams
@@ -83,6 +85,7 @@ class GenUtils:
             config_dict["pad_token_id"] = 151643
             config_dict["eos_token_id"] = [151645, 151643]
             config_dict["repetition_penalty"] = 1.05
+            config_dict["use_cache"] = use_cache
             self.GEN_CONFIG = GenerationConfig.from_dict(config_dict)
         return self.GEN_CONFIG
 
