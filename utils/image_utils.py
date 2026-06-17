@@ -1,11 +1,11 @@
+from pathlib import Path
+from typing import Any
+
 import numpy as np
 import torch
 import torchvision.transforms as T
-
-from pathlib import Path
 from PIL import Image, ImageDraw
 from torchvision.transforms.functional import InterpolationMode
-from typing import Any
 
 IMAGENET_MEAN = (0.485, 0.456, 0.406)
 IMAGENET_STD = (0.229, 0.224, 0.225)
@@ -15,20 +15,20 @@ IMAGENET_STD = (0.229, 0.224, 0.225)
 # # # # # # # # # # # # # # # #
 
 
-def load_img(img_path: str | Path) -> Image:
+def load_img(img_path: str | Path) -> Image.Image:
     return Image.open(img_path).convert("RGB")
 
 
-def save_img(pil_img: Image, file_path: str | Path) -> None:
+def save_img(pil_img: Image.Image, file_path: str | Path) -> None:
     rgb_img = pil_img.convert("RGB")
     rgb_img.save(file_path)
 
 
-def from_array(array: np.array) -> Image:
+def from_array(array: np.array) -> Image.Image:
     return Image.fromarray(array)
 
 
-def resize_img(pil_img: Image) -> Image:
+def resize_img(pil_img: Image.Image) -> Image.Image:
     size = get_size(pil_img.size)
     pil_img = pil_img.resize(size)
     return pil_img
@@ -62,7 +62,7 @@ def get_size(image_size: tuple) -> tuple:
 
 
 def draw_single_box(
-    pic: Image, box: dict, color: str = "red", draw_info: Any = None
+    pic: Image.Image, box: dict, color: str = "red", draw_info: Any = None
 ) -> None:
     draw = ImageDraw.Draw(pic)
     draw.rectangle(
@@ -84,7 +84,7 @@ def draw_single_box(
         draw.text((box["top_left_x"], box["top_left_y"]), info)
 
 
-def draw_bboxes(pil_img: Image, bboxes: list[dict]) -> Image:
+def draw_bboxes(pil_img: Image.Image, bboxes: list[dict]) -> Image.Image:
     size = get_size(pil_img.size)
     pil_img = pil_img.resize(size)
 
@@ -114,7 +114,7 @@ def list_relations(relations: list[dict]) -> list[str]:
 
 
 def get_image_tensor(
-    image: Image, input_size: int = 448, max_num: int = 12
+    image: Image.Image, input_size: int = 448, max_num: int = 12
 ) -> torch.Tensor:
     transform = build_transform(input_size=input_size)
     images = dynamic_preprocess(
@@ -154,7 +154,7 @@ def find_closest_aspect_ratio(aspect_ratio, target_ratios, width, height, image_
 
 
 def dynamic_preprocess(
-    image: Image,
+    image: Image.Image,
     min_num: int = 1,
     max_num: int = 12,
     image_size: int = 448,
