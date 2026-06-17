@@ -3,6 +3,7 @@
 
 # VS Code
 .vscode
+.zed
 
 # Python
 __pycache__
