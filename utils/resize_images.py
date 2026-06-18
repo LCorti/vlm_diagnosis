@@ -1,5 +1,4 @@
 import sys
-
 from pathlib import Path
 
 module_path = str(Path("..").resolve())
@@ -8,7 +7,7 @@ if module_path not in sys.path:
 
 from config_handlers.dataset_handler import DatasetHandler
 from utils.data_io import make_dir
-from utils.image_utils import load_img, save_img, resize_img
+from utils.image_utils import load_img, resize_img, save_img
 
 """
 Quick script to pre-process images for crowd-sourcing step.
@@ -27,7 +26,7 @@ if __name__ == "__main__":
         ds_hdl.set_curr_ds(ds)
 
         for c in ds_hdl.get_classes():
-            ds_hdl.set_curr_class()
+            ds_hdl.set_curr_class(c)
             curr_imgs_path = ds_hdl.get_imgs_path()
             curr_out_dir = out_dir.joinpath(ds_hdl.get_imgs_resized_path())
             make_dir(curr_out_dir)

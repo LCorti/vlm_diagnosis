@@ -36,7 +36,7 @@ def load_jsonl(file_path: str | Path) -> list[dict]:
     return data
 
 
-def save_jsonl(data: list[dict], file_path: str) -> None:
+def save_jsonl(data: list[dict], file_path: str | Path) -> None:
     with open(file_path, "w") as fp:
         fp.write("\n".join(map(json.dumps, data)))
 
@@ -47,7 +47,7 @@ def append_to_jsonl(data: dict, file_path: str) -> None:
         fp.write("\n")
 
 
-def np_encoder(obj: Any) -> dict:
+def np_encoder(obj: Any) -> Any:
     if isinstance(obj, np.integer):
         return int(obj)
     if isinstance(obj, np.floating):

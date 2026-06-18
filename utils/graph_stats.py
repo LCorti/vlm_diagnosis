@@ -1,8 +1,8 @@
-import numpy as np
+from typing import Tuple
 
+import numpy as np
 from networkx import DiGraph
 from sklearn.preprocessing import MinMaxScaler
-from typing import Tuple
 
 from utils.data_io import np_encoder
 
@@ -18,7 +18,7 @@ def compute_ic(elem: str, count_dict: dict, freq_dict: dict) -> float:
     return ic
 
 
-def compute_ic_preds(graph: DiGraph, count_dict: dict, freq_dict: dict) -> float:
+def compute_ic_preds(graph: DiGraph, count_dict: dict, freq_dict: dict) -> np.ndarray:
     preds = [graph[e[0]][e[1]]["label"] for e in graph.edges]
     preds_ic = np.array([compute_ic(p, count_dict, freq_dict) for p in preds]).reshape(
         -1, 1
@@ -26,7 +26,9 @@ def compute_ic_preds(graph: DiGraph, count_dict: dict, freq_dict: dict) -> float
     return preds_ic
 
 
-def compute_ic_concepts(graph: DiGraph, count_dict: dict, freq_dict: dict) -> float:
+def compute_ic_concepts(
+    graph: DiGraph, count_dict: dict, freq_dict: dict
+) -> np.ndarray:
     concepts = list(graph.nodes)
     concepts_ic = np.array(
         [compute_ic(c, count_dict, freq_dict) for c in concepts]
@@ -34,7 +36,9 @@ def compute_ic_concepts(graph: DiGraph, count_dict: dict, freq_dict: dict) -> fl
     return concepts_ic
 
 
-def compute_ic_graph(graph: DiGraph, source_dict: dict) -> Tuple[float, float, float]:
+def compute_ic_graph(
+    graph: DiGraph, source_dict: dict
+) -> Tuple[np.ndarray, np.ndarray]:
     ic_concepts = compute_ic_concepts(
         graph, source_dict["concept_counts"], source_dict["concept_freqs"]
     )
@@ -44,7 +48,7 @@ def compute_ic_graph(graph: DiGraph, source_dict: dict) -> Tuple[float, float, f
     return ic_concepts, ic_preds
 
 
-def compute_ic_ds(graphs: DiGraph, source_dict: dict) -> float:
+def compute_ic_ds(graphs: dict[str, DiGraph], source_dict: dict) -> dict:
     ds_ic = {}
     for g_idx, graph in graphs.items():
         ds_ic[g_idx] = {

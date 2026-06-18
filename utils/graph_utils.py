@@ -1,12 +1,12 @@
 import itertools
-import networkx as nx
-import numpy as np
 import re
-
 from pathlib import Path
 
-from utils.graph_stats import compute_ic
+import networkx as nx
+import numpy as np
+
 from utils.data_io import load_json
+from utils.graph_stats import compute_ic
 
 
 # Loading the dictionary used in IETrans

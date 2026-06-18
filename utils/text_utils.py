@@ -1,4 +1,5 @@
 import string
+
 from word2num import Word2Num
 
 MC_DATASETS = ["seed", "vqav2"]
@@ -31,8 +32,8 @@ def remove_puncuation(resp: str) -> str:
 
 
 def clean_response(
-    resp: str, ds_name: str, open_ended: bool = False, mc_options: dict = None
-) -> str:
+    resp: str, ds_name: str, open_ended: bool = False, mc_options: dict = {}
+) -> str | None:
     clean_resp = remove_surrounding_whitespaces(resp)
     if len(clean_resp) == 0:
         return clean_resp

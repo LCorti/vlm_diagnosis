@@ -1,12 +1,12 @@
 import itertools
+from pathlib import Path
+
 import matplotlib.pyplot as plt
 import networkx as nx
 import numpy as np
 import pandas as pd
-
 from matplotlib.patches import Patch
 from matplotlib.transforms import ScaledTranslation
-from pathlib import Path
 
 from .graph_utils import expand_cycles
 
@@ -441,16 +441,14 @@ def plot_triple_behaviours(data, out_path, to_skip=None) -> None:
     )
     max_y = max(vals_list) + 60
 
+    models = MODEL_MAP.copy()
     if to_skip:
         for ts in to_skip:
             if ts in MODEL_MAP:
-                models = MODEL_MAP.copy()
                 models.pop(ts)
                 print(f"Skipping data for {ts}")
             else:
                 print(f"Did not find {ts} in MODEL_MAP: {MODEL_MAP}")
-    else:
-        models = MODEL_MAP.copy()
 
     for idx, ax in enumerate(axes):
         ax.set_title(type_map[idx + 1])
@@ -501,16 +499,14 @@ def plot_sample_behaviours(data, out_path, split=False, to_skip=None) -> None:
     )
     max_y = max(vals_list) + 40
 
+    models = MODEL_MAP.copy()
     if to_skip:
         for ts in to_skip:
             if ts in MODEL_MAP:
-                models = MODEL_MAP.copy()
                 models.pop(ts)
                 print(f"Skipping data for {ts}")
             else:
                 print(f"Did not find {ts} in MODEL_MAP: {MODEL_MAP}")
-    else:
-        models = MODEL_MAP.copy()
 
     for idx, ax in enumerate(axes):
         ax.set_title(type_map[idx + 1], fontsize=14)

@@ -24,7 +24,7 @@ def save_img(pil_img: Image.Image, file_path: str | Path) -> None:
     rgb_img.save(file_path)
 
 
-def from_array(array: np.array) -> Image.Image:
+def from_array(array: np.ndarray) -> Image.Image:
     return Image.fromarray(array)
 
 
