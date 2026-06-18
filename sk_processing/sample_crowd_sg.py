@@ -1,14 +1,15 @@
-import numpy as np
 import sys
-
 from pathlib import Path
+
+import numpy as np
+from matplotlib import pyplot as plt
 
 module_path = str(Path("..").resolve())
 if module_path not in sys.path:
     sys.path.append(module_path)
 
 from config_handlers.sk_handler import SKHandler
-from utils.data_io import make_dir, load_jsonl, save_jsonl
+from utils.data_io import load_jsonl, make_dir, save_jsonl
 
 MAX_RELS = 15
 MIN_RELS = 10
@@ -105,3 +106,31 @@ if __name__ == "__main__":
             out_folder = out_file.parent
             make_dir(out_folder)
             save_jsonl(sk_to_keep[dataset][ds_class], Path("..", out_file))
+
+    # Check the number of relations, etc.
+    f, axes = plt.subplots(nrows=len(all_n_rels), ncols=2, figsize=(14, 20))
+    curr_row = 0
+    for ds in all_n_rels.keys():
+        curr_col = 0
+        for c in all_n_rels[ds]:
+            n_rels = [r[1] for r in all_n_rels[ds][c]]
+            max_n_rel = max(n_rels)
+            min_n_rel = min(n_rels)
+            avg_n_rel = np.mean(n_rels)
+
+            print(f"{ds} -- {c} has:")
+            print(
+                f"-- Max N rel: {max_n_rel} ({(100 * n_rels.count(max_n_rel) / len(n_rels)):.2f}%)"
+            )
+            print(
+                f"-- Min N rel: {min_n_rel} ({(100 * n_rels.count(min_n_rel) / len(n_rels)):.2f}%)"
+            )
+            print(f"-- Avg N rel: {avg_n_rel:.2f}")
+
+            axes[curr_row, curr_col].boxplot(x=n_rels)
+            axes[curr_row, curr_col].set_title(f"{ds} - {c}")
+            axes[curr_row, curr_col].set_xlabel("")
+            axes[curr_row, curr_col].set_ylabel("Unique SG Relationships")
+            curr_col += 1
+        curr_row += 1
+    f.savefig("rel_distrib.pdf")

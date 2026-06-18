@@ -1,5 +1,6 @@
 import json
 
+
 def get_content_struct():
     content = []
 
@@ -56,77 +57,128 @@ def get_content_struct():
 
     return content
 
-def main():
 
+if __name__ == "__main__":
     datasets = {
-        'llava-bench': ['main'],
-        'mmbench': ['image_scene', 'image_topic'],
-        'seed': ['scene_understanding', 'visual_reasoning'],
-        'vqav2': ['how_many_people_are', 'what_is_the_person']
+        "llava-bench": ["main"],
+        "mmbench": ["image_scene", "image_topic"],
+        "seed": ["scene_understanding", "visual_reasoning"],
+        "vqav2": ["how_many_people_are", "what_is_the_person"],
     }
 
     for ds in datasets.keys():
-        #Get basic structure
+        # Get basic structure
         content = get_content_struct()
 
-        folder_name = 'datasets/{}/'.format(ds)
-        print("Working on {}...".format(ds))
+        folder_name = f"datasets/{ds}/"
+        print(f"Working on {ds}...")
         questions = []
 
         # Prepare Images + Questions
-        ds_questions_path = '{}/sampled_questions.json'.format(folder_name)
-        with open(ds_questions_path, 'r') as f:
+        ds_questions_path = f"{folder_name}/sampled_questions.json"
+        with open(ds_questions_path, "r") as f:
             ds_questions = json.load(f)
 
         for ds_q in ds_questions:
-            questions.append([str(int(ds_q["question_id"]) + 1), str(ds_q["img"].split('.')[0])])
-            content.append('INSERT INTO image VALUES (' + str(int(ds_q["question_id"]) + 1) + ', "' + ds_q["img"] + '", "' + ds_q["question"] + '", "' + ds + '", "' + ds_q["class"] + '", NULL);\n')
-        content.append('\n')
+            questions.append(
+                [str(int(ds_q["question_id"]) + 1), str(ds_q["img"].split(".")[0])]
+            )
+            content.append(
+                "INSERT INTO image VALUES ("
+                + str(int(ds_q["question_id"]) + 1)
+                + ', "'
+                + ds_q["img"]
+                + '", "'
+                + ds_q["question"]
+                + '", "'
+                + ds
+                + '", "'
+                + ds_q["class"]
+                + '", NULL);\n'
+            )
+        content.append("\n")
 
         # Prepare Triples
-        triples_path = '{}/sg_{}_crowd.json'.format(folder_name, ds)
-        with open(triples_path, 'r') as f:
+        triples_path = f"{folder_name}/sg_{ds}_crowd.json"
+        with open(triples_path, "r") as f:
             triples = json.load(f)
 
         for c in triples.keys():
             for img in triples[c]:
-                img_idx = img['img_id']
+                img_idx = img["img_id"]
 
                 # List of coordinates
                 coords = []
-                for r in img['rel_clusters_unique']:
-                    rel_id = r['rel_id']
+                for r in img["rel_clusters_unique"]:
+                    rel_id = r["rel_id"]
                     # from_concept
-                    coord_from = [r['from_concept']['top_left_x'],
-                               r['from_concept']['top_left_y'],
-                               r['from_concept']['width'],
-                               r['from_concept']['height']]
+                    coord_from = [
+                        r["from_concept"]["top_left_x"],
+                        r["from_concept"]["top_left_y"],
+                        r["from_concept"]["width"],
+                        r["from_concept"]["height"],
+                    ]
 
                     # to_concept
-                    coord_to = [r['to_concept']['top_left_x'],
-                               r['to_concept']['top_left_y'],
-                               r['to_concept']['width'],
-                               r['to_concept']['height']]
+                    coord_to = [
+                        r["to_concept"]["top_left_x"],
+                        r["to_concept"]["top_left_y"],
+                        r["to_concept"]["width"],
+                        r["to_concept"]["height"],
+                    ]
 
-                    coord_from_str = "[" + str(coord_from[0]) + ", " + str(coord_from[1]) + ", " + str(coord_from[2]) + ", " + str(coord_from[3]) + "]"
-                    coord_to_str = "[" + str(coord_to[0]) + ", " + str(coord_to[1]) + ", " + str(coord_to[2]) + ", " + str(coord_to[3]) + "]"
+                    coord_from_str = (
+                        "["
+                        + str(coord_from[0])
+                        + ", "
+                        + str(coord_from[1])
+                        + ", "
+                        + str(coord_from[2])
+                        + ", "
+                        + str(coord_from[3])
+                        + "]"
+                    )
+                    coord_to_str = (
+                        "["
+                        + str(coord_to[0])
+                        + ", "
+                        + str(coord_to[1])
+                        + ", "
+                        + str(coord_to[2])
+                        + ", "
+                        + str(coord_to[3])
+                        + "]"
+                    )
 
                     # List of relations
                     relations = []
-                    entity_from = str(r['from_concept']['bb_label']['bb_label_text'])
+                    entity_from = str(r["from_concept"]["bb_label"]["bb_label_text"])
                     rel = str(r["rel_label"]["rel_label_text"])
-                    entity_to = str(r['to_concept']['bb_label']['bb_label_text'])
+                    entity_to = str(r["to_concept"]["bb_label"]["bb_label_text"])
 
                     images = [q[0] for q in questions if q[1] == str(img_idx)]
 
                     for i in images:
-                        content.append('INSERT INTO triple VALUES (DEFAULT, "' + rel_id + '", "' + entity_from + '", "' + coord_from_str + '", "' + rel + '", "' + entity_to + '", "' + coord_to_str + '", DEFAULT, NULL, ' + i + ');\n')
+                        content.append(
+                            'INSERT INTO triple VALUES (DEFAULT, "'
+                            + rel_id
+                            + '", "'
+                            + entity_from
+                            + '", "'
+                            + coord_from_str
+                            + '", "'
+                            + rel
+                            + '", "'
+                            + entity_to
+                            + '", "'
+                            + coord_to_str
+                            + '", DEFAULT, NULL, '
+                            + i
+                            + ");\n"
+                        )
 
         # Write SQL file
-        outfile = '../mysql/initdb_{}.sql'.format(ds)
-        with open(outfile, 'w') as f:
+        outfile = f"../mysql/initdb_{ds}.sql"
+        with open(outfile, "w") as f:
             for c in content:
                 f.write(c)
-
-if __name__ == "__main__":
-    main()

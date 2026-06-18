@@ -1,7 +1,7 @@
-import mysql.connector
 import sys
-
 from pathlib import Path
+
+import mysql.connector
 
 module_path = str(Path("..").resolve())
 if module_path not in sys.path:
@@ -56,10 +56,10 @@ if __name__ == "__main__":
 
     for ds in ds_list:
         print("=" * 25)
-        print("Connecting to {}...".format(ds))
+        print(f"Connecting to {ds}...")
         sk_hdl.set_curr_ds(ds)
 
-        database = "{}{}".format(DATABASE_PREFIX, ds)
+        database = f"{DATABASE_PREFIX}{ds}")
         try:
             mydb = mysql.connector.connect(
                 host=HOST, user=USER, password=PASSWORD, database=database
@@ -74,8 +74,8 @@ if __name__ == "__main__":
                 cursor.execute(query_anns)
                 rows_val = cursor.fetchall()
             except Exception:
-                print("Failed to execute query for {}".format(ds))
-            print("Found {} rows.".format(len(rows_val)))
+                print(f"Failed to execute query for {ds}")
+            print(f"Found {len(rows_val)} rows.")
 
             # Extract all new triples (these are created and do not have
             # annotations associated to them, they are not found in 1st)
@@ -85,8 +85,8 @@ if __name__ == "__main__":
                 cursor.execute(query_triples)
                 rows_ann = cursor.fetchall()
             except Exception:
-                print("Failed to execute query for {}".format(ds))
-            print("Found {} rows.".format(len(rows_ann)))
+                print(f"Failed to execute query for {ds}")
+            print(f"Found {len(rows_ann)} rows.")
 
             # Save crowdsourced data in different files
             for ds_class in sk_hdl.get_classes():
