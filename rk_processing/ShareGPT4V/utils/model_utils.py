@@ -1,9 +1,9 @@
 from share4v.constants import (
-    DEFAULT_IMAGE_TOKEN,
-    DEFAULT_IM_START_TOKEN,
     DEFAULT_IM_END_TOKEN,
+    DEFAULT_IM_START_TOKEN,
+    DEFAULT_IMAGE_TOKEN,
 )
-from share4v.conversation import conv_templates, SeparatorStyle
+from share4v.conversation import SeparatorStyle, conv_templates
 from share4v.mm_utils import KeywordsStoppingCriteria
 
 
@@ -57,7 +57,7 @@ def make_message(model, template, question):
     # If multiple-choice question, include the options
     if question["options"]:
         for o in question["options"]:
-            message += "\n- {}: {}".format(o, question["options"][o])
+            message += f"\n- {o}: {question['options'][o]}"
 
     # Formatting
     if model.config.mm_use_im_start_end:

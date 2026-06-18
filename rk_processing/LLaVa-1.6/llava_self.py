@@ -1,18 +1,18 @@
 import argparse
 import sys
-import torch
-
 from pathlib import Path
 
+import torch
+
 from llava.constants import IMAGE_TOKEN_INDEX
-from llava.mm_utils import tokenizer_image_token, get_model_name_from_path
+from llava.mm_utils import get_model_name_from_path, tokenizer_image_token
 from llava.model.builder import load_pretrained_model
 from llava.utils import disable_torch_init
 from utils.model_utils import (
-    set_conv_mode,
-    make_message,
-    get_conv_template,
     add_conv_step,
+    get_conv_template,
+    make_message,
+    set_conv_mode,
 )
 
 module_path = str(Path("..", "..").resolve())
@@ -21,7 +21,6 @@ if module_path not in sys.path:
 
 import utils.data_io as data_io
 import utils.image_utils as image_utils
-
 from config_handlers.rk_handler import RKHandler
 from rk_processing.utils.gen_utils import GenUtils
 
@@ -117,7 +116,7 @@ if __name__ == "__main__":
 
     # Load data
     print("Loading data...")
-    print("Loading questions from {}".format(questions_file))
+    print(f"Loading questions from {questions_file}")
     questions = data_io.load_json(questions_file)
 
     # == == == == Get responses and self-explanations == == == ==
@@ -126,15 +125,15 @@ if __name__ == "__main__":
     all_parsed_rk = []
 
     for curr_q in questions:
-        print("Current question ID: {}".format(curr_q["question_id"]))
-        print("-- Text: {}".format(curr_q["question"]))
+        print(f"Current question ID: {curr_q['question_id']}")
+        print(f"-- Text: {curr_q['question']}")
 
         # Prepare object to store info
         curr_rk = {"question_id": curr_q["question_id"]}
 
         # Loading image
         img_path = base_dir.joinpath(curr_q["img_path"])
-        print("-- Loading image {}".format(img_path))
+        print(f"-- Loading image {img_path}")
         image = image_utils.load_img(img_path)
         image_tensor = (
             image_processor.preprocess(image, return_tensors="pt")["pixel_values"]
@@ -160,7 +159,7 @@ if __name__ == "__main__":
         curr_rk["response"] = gen_utils.generate_llava_next(
             model, tokenizer, image_tensor, input_ids
         )
-        print("Response: {}".format(curr_rk["response"]))
+        print(f"Response: {curr_rk['response']}")
         print("=" * 25)
 
         # Second generation step: get unstructured rationales for model output

@@ -1,10 +1,10 @@
-import json
-import torch
 import argparse
-
+import json
 from pathlib import Path
+
+import torch
 from PIL import Image
-from transformers import LlavaNextProcessor, LlavaNextForConditionalGeneration
+from transformers import LlavaNextForConditionalGeneration, LlavaNextProcessor
 
 # LLaVa output includes the user query.
 # This is used to find the response and extract it.
@@ -54,7 +54,7 @@ def format_question(q):
 def main():
     print("Initializing model...")
     args = parse_args()
-    gpu_device = "cuda:{}".format(args.gpu_id)
+    gpu_device = f"cuda:{args.gpu_id}"
     processor = LlavaNextProcessor.from_pretrained("llava-hf/llava-v1.6-vicuna-7b-hf")
     model = LlavaNextForConditionalGeneration.from_pretrained(
         "llava-hf/llava-v1.6-vicuna-7b-hf",
@@ -65,7 +65,7 @@ def main():
     print("Initialisation finished.")
 
     print("Loading data...")
-    print("Loading questions from {}".format(args.questions_file))
+    print(f"Loading questions from {args.questions_file}")
     questions = []
     with open(args.questions_file, "r") as f:
         questions = json.load(f)
@@ -75,10 +75,10 @@ def main():
 
     for q in questions:
         print("Current question ID: {}".format(q["question_id"]))
-        print("-- Text: {}".format(q["question"]))
+        print(f"-- Text: {q['question']}")
 
         img_path = Path(args.ds_folder, q["img_path"])
-        print("-- Loading image {}".format(img_path))
+        print(f"-- Loading image {img_path}")
         image = Image.open(img_path)
 
         # format question

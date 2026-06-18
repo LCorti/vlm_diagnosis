@@ -11,7 +11,7 @@ def make_message(template, question):
     # If multiple-choice question, include the options
     if question["options"]:
         for o in question["options"]:
-            message += "\n- {}: {}".format(o, question["options"][o])
+            message += f"\n- {o}: {question['options'][o]}"
 
     return message
 

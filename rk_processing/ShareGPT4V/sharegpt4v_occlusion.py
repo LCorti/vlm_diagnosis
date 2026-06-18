@@ -1,8 +1,8 @@
 import argparse
 import sys
-import torch
-
 from pathlib import Path
+
+import torch
 
 from share4v.constants import IMAGE_TOKEN_INDEX
 from share4v.mm_utils import get_model_name_from_path, tokenizer_image_token
@@ -23,12 +23,10 @@ if module_path not in sys.path:
 
 import utils.data_io as data_io
 import utils.image_utils as image_utils
-
 from config_handlers.causal_handler import CausalHandler
 from config_handlers.dataset_handler import DatasetHandler
 from rk_processing.utils.gen_utils import GenUtils
 from rk_processing.utils.path_utils import merge_path
-
 
 PROMPT_VERSION = 4
 MODEL_NAME = "sharegpt4v"
@@ -112,7 +110,7 @@ if __name__ == "__main__":
 
     # Load data
     print("Loading data...")
-    print("Loading questions from {}".format(questions_file))
+    print(f"Loading questions from {questions_file}")
     questions = data_io.load_json(questions_file)
 
     # == == == == Get counterfactual responses on occluded images == == == ==

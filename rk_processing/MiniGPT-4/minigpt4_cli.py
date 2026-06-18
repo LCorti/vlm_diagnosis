@@ -1,9 +1,8 @@
-import json
-import torch
 import argparse
-
+import json
 from pathlib import Path
 
+import torch
 from minigpt4.common.config import Config
 
 # from minigpt4.common.dist_utils import get_rank
@@ -100,19 +99,19 @@ def main():
     model_config = cfg.model_cfg
     model_config.device_8bit = args.gpu_id
     model_cls = registry.get_model_class(model_config.arch)
-    model = model_cls.from_config(model_config).to("cuda:{}".format(args.gpu_id))
+    model = model_cls.from_config(model_config).to(f"cuda:{args.gpu_id}")
 
     vis_processor_cfg = cfg.datasets_cfg.cc_sbu_align.vis_processor.train
     vis_processor = registry.get_processor_class(vis_processor_cfg.name).from_config(
         vis_processor_cfg
     )
 
-    chat = Chat(model, vis_processor, device="cuda:{}".format(args.gpu_id))
+    chat = Chat(model, vis_processor, device=f"cuda:{args.gpu_id}")
     print("Initialization finished")
 
     print("Loading data...")
 
-    print("Loading questions from {}".format(args.questions_file))
+    print(f"Loading questions from {args.questions_file}")
     questions = []
     with open(args.questions_file, "r") as f:
         questions = json.load(f)
@@ -122,11 +121,11 @@ def main():
     all_responses = []
 
     for q in questions:
-        print("Current question ID: {}".format(q["question_id"]))
-        print("-- Text: {}".format(q["question"]))
+        print(f"Current question ID: {q['question_id']}")
+        print(f"-- Text: {q['question']}")
         user_message = q["question"]
         img_path = Path(args.ds_folder, q["img_path"])
-        print("-- Loading image {}".format(img_path))
+        print(f"-- Loading image {img_path}")
 
         chat_state = get_chat_state()
         chat_state, img_list = load_img(chat, img_path, chat_state)

@@ -224,7 +224,7 @@ if __name__ == "__main__":
     tokenizer = AutoTokenizer.from_pretrained(HF_MODEL_NAME, trust_remote_code=True)
     # If more GPUs are available split, use authors' function to split the model
     if torch.cuda.device_count() > 1:
-        print("Found {} GPUs; splitting model...".format(torch.cuda.device_count()))
+        print(f"Found {torch.cuda.device_count()} GPUs; splitting model...")
         device_map = split_model(Path(HF_MODEL_NAME).stem)
         model = AutoModel.from_pretrained(
             HF_MODEL_NAME,
@@ -257,7 +257,7 @@ if __name__ == "__main__":
 
     # Load data
     print("Loading data...")
-    print("Loading questions from {}".format(questions_file))
+    print(f"Loading questions from {questions_file}")
     questions = data_io.load_json(questions_file)
 
     # == == == == Get responses and self-explanations == == == ==
@@ -278,7 +278,7 @@ if __name__ == "__main__":
 
         # Loading image
         img_path = base_dir.joinpath(curr_q["img_path"])
-        print("-- Loading image {}".format(img_path))
+        print(f"-- Loading image {img_path}")
         image = image_utils.load_img(img_path)
 
         message = make_message(question_template, curr_q)

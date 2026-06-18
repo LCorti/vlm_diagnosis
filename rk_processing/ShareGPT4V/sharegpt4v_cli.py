@@ -1,10 +1,10 @@
 import argparse
 import json
-import requests
-import torch
-
 from io import BytesIO
 from pathlib import Path
+
+import requests
+import torch
 from PIL import Image
 
 from share4v.constants import (
@@ -148,7 +148,7 @@ def main():
     print("Initialisation finished.")
 
     print("Loading data...")
-    print("Loading questions from {}".format(args.questions_file))
+    print(f"Loading questions from {args.questions_file}")
     questions = []
     with open(args.questions_file, "r") as f:
         questions = json.load(f)
@@ -157,11 +157,11 @@ def main():
     all_responses = []
 
     for q in questions:
-        print("Current question ID: {}".format(q["question_id"]))
-        print("-- Text: {}".format(q["question"]))
+        print(f"Current question ID: {q['question_id']}")
+        print(f"-- Text: {q['question']}")
 
         img_path = Path(args.ds_folder, q["img_path"])
-        print("-- Loading image {}".format(img_path))
+        print(f"-- Loading image {img_path}")
         image = load_image(img_path)
         image_tensor = (
             image_processor.preprocess(image, return_tensors="pt")["pixel_values"]
@@ -214,7 +214,7 @@ def main():
     res_folder = args.out_dir
     Path(res_folder).mkdir(parents=True)
 
-    with open("{}/exp_{}_responses.jsonl".format(res_folder, args.ds_name), "w") as f:
+    with open(f"{res_folder}/exp_{args.ds_name}_responses.jsonl", "w") as f:
         for r in all_responses:
             json.dump(r, f)
             f.write("\n")

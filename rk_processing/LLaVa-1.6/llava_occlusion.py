@@ -1,18 +1,18 @@
 import argparse
 import sys
-import torch
-
 from pathlib import Path
 
+import torch
+
 from llava.constants import IMAGE_TOKEN_INDEX
-from llava.mm_utils import tokenizer_image_token, get_model_name_from_path
+from llava.mm_utils import get_model_name_from_path, tokenizer_image_token
 from llava.model.builder import load_pretrained_model
 from llava.utils import disable_torch_init
 from utils.model_utils import (
-    set_conv_mode,
-    make_message,
-    get_conv_template,
     add_conv_step,
+    get_conv_template,
+    make_message,
+    set_conv_mode,
 )
 
 module_path = str(Path("..", "..").resolve())
@@ -21,12 +21,10 @@ if module_path not in sys.path:
 
 import utils.data_io as data_io
 import utils.image_utils as image_utils
-
 from config_handlers.causal_handler import CausalHandler
 from config_handlers.dataset_handler import DatasetHandler
 from rk_processing.utils.gen_utils import GenUtils
 from rk_processing.utils.path_utils import merge_path
-
 
 PROMPT_VERSION = 4
 MODEL_NAME = "llava-1.6"
@@ -111,7 +109,7 @@ if __name__ == "__main__":
 
     # Load data
     print("Loading data...")
-    print("Loading questions from {}".format(questions_file))
+    print(f"Loading questions from {questions_file}")
     questions = data_io.load_json(questions_file)
 
     # == == == == Get counterfactual responses on occluded images == == == ==

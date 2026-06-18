@@ -1,8 +1,8 @@
 import argparse
 import sys
-import torch
-
 from pathlib import Path
+
+import torch
 
 from share4v.constants import IMAGE_TOKEN_INDEX
 from share4v.mm_utils import get_model_name_from_path, tokenizer_image_token
@@ -23,10 +23,8 @@ if module_path not in sys.path:
 
 import utils.data_io as data_io
 import utils.image_utils as image_utils
-
 from config_handlers.rk_handler import RKHandler
 from rk_processing.utils.gen_utils import GenUtils
-
 
 PROMPT_VERSION = 4
 MODEL_NAME = "sharegpt4v"
@@ -120,7 +118,7 @@ if __name__ == "__main__":
 
     # Load data
     print("Loading data...")
-    print("Loading questions from {}".format(questions_file))
+    print(f"Loading questions from {questions_file}")
     questions = data_io.load_json(questions_file)
 
     # == == == == Get responses and self-explanations == == == ==
@@ -129,15 +127,15 @@ if __name__ == "__main__":
     all_parsed_rk = []
 
     for curr_q in questions:
-        print("Current question ID: {}".format(curr_q["question_id"]))
-        print("-- Text: {}".format(curr_q["question"]))
+        print(f"Current question ID: {curr_q['question_id']}")
+        print(f"-- Text: {curr_q['question']}")
 
         # Prepare object to store info
         curr_rk = {"question_id": curr_q["question_id"]}
 
         # Loading image
         img_path = base_dir.joinpath(curr_q["img_path"])
-        print("-- Loading image {}".format(img_path))
+        print(f"-- Loading image {img_path}")
         image = image_utils.load_img(img_path)
         image_tensor = (
             image_processor.preprocess(image, return_tensors="pt")["pixel_values"]
@@ -165,7 +163,7 @@ if __name__ == "__main__":
         curr_rk["response"] = gen_utils.generate_sharegpt4v(
             model, tokenizer, image_tensor, input_ids, stopping_criteria, stop_str
         )
-        print("Response: {}".format(curr_rk["response"]))
+        print(f"Response: {curr_rk['response']}")
         print("=" * 25)
 
         # Second generation step: get unstructured rationales for model output

@@ -1,12 +1,11 @@
 import argparse
 import sys
-import torch
-
 from pathlib import Path
-from qwen_vl_utils import process_vision_info
-from transformers import Qwen2_5_VLForConditionalGeneration, AutoProcessor
 
-from utils.model_utils import make_message, add_conv_step
+import torch
+from qwen_vl_utils import process_vision_info
+from transformers import AutoProcessor, Qwen2_5_VLForConditionalGeneration
+from utils.model_utils import add_conv_step, make_message
 
 module_path = str(Path("..", "..").resolve())
 if module_path not in sys.path:
@@ -14,7 +13,6 @@ if module_path not in sys.path:
 
 import utils.data_io as data_io
 import utils.image_utils as image_utils
-
 from config_handlers.rk_handler import RKHandler
 from rk_processing.utils.gen_utils import GenUtils
 
@@ -104,7 +102,7 @@ if __name__ == "__main__":
 
     # Load data
     print("Loading data...")
-    print("Loading questions from {}".format(questions_file))
+    print(f"Loading questions from {questions_file}")
     questions = data_io.load_json(questions_file)
 
     # == == == == Get responses and self-explanations == == == ==
@@ -121,7 +119,7 @@ if __name__ == "__main__":
 
         # Loading image
         img_path = base_dir.joinpath(curr_q["img_path"])
-        print("-- Loading image {}".format(img_path))
+        print(f"-- Loading image {img_path}")
         image = image_utils.load_img(img_path)
 
         # Process inputs
