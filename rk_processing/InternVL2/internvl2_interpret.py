@@ -4,7 +4,7 @@ from pathlib import Path
 from unittest.mock import patch
 
 import torch
-from captum.attr import FeatureAblation
+from captum.attr import FeatureAblation, KernelShap, ShapleyValueSampling
 from captum.attr._core.llm_attr import LLMAttribution as captum_llm_attr
 from captum.attr._utils.interpretable_input import ImageMaskInput
 from transformers import AutoModel, AutoTokenizer
@@ -216,8 +216,6 @@ if __name__ == "__main__":
 
     # Get prompt templates for generation
     question_template = gen_utils.get_question_template(ds_name)
-    rationale_template = gen_utils.get_rationale_template()
-    out_format_template = gen_utils.get_out_format_template()
 
     # Load model
     print("Loading model...")
@@ -251,8 +249,10 @@ if __name__ == "__main__":
 
     # Wrap model for Captum
     wrapped_model = InternVL2CaptumWrapper(model)
-    fa = FeatureAblation(wrapped_model)
-    llm_attr = captum_llm_attr(fa, tokenizer)
+    # attrib_method = FeatureAblation(wrapped_model)
+    # attrib_method = KernelShap(wrapped_model)
+    attrib_method = ShapleyValueSampling(wrapped_model)
+    llm_attr = captum_llm_attr(attrib_method, tokenizer)
     print("Model wrapped.")
 
     # Load data
@@ -344,19 +344,24 @@ if __name__ == "__main__":
         print("> Running attribution")
         patch_target = "captum.attr._core.llm_attr._convert_ids_to_pretty_tokens"
         with patch(patch_target, new=_fallback_pretty_tokens):
+            # For KernelShap ect: n_samples = 500 for convergence, maybe?
             grid_attr_result = llm_attr.attribute(
                 grid_input,
                 forward_in_tokens=False,
                 target=baseline_response,
-                **gen_config,
+                n_samples=10,
+                show_progress=True,
             )
 
         # Visualise attribution results
         fig, _ = grid_attr_result.plot_image_heatmap(show_legends=True, show=False)
-        fig.savefig(f"vis_attr_{curr_q['question_id']}.png")
+        fig.savefig(f"vis_attr_pert_{curr_q['question_id']}.png")
 
-        fig, _ = grid_attr_result.plot_token_attr(show=False)
-        fig.savefig(f"token_attr_{curr_q['question_id']}.png")
+        try:
+            fig, _ = grid_attr_result.plot_token_attr(show=False)
+        except Exception as _:
+            fig, _ = grid_attr_result.plot_seq_attr(show=False)
+        fig.savefig(f"token_attr_pert_{curr_q['question_id']}.png")
 
         # TODO: fix this one
         # all_rk.append(curr_rk)
