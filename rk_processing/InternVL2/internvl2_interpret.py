@@ -249,7 +249,7 @@ if __name__ == "__main__":
         )
     print("Model loaded.")
 
-    # Wrap model
+    # Wrap model for Captum
     wrapped_model = InternVL2CaptumWrapper(model)
     fa = FeatureAblation(wrapped_model)
     llm_attr = captum_llm_attr(fa, tokenizer)
@@ -339,24 +339,24 @@ if __name__ == "__main__":
                 "pixel_values": image_tensor,
             }
 
-        # Use black baseline (default is white? What's the difference?)
-        grid_input = ImageMaskInput(
-            image,
-            mask=grid_mask,
-            processor_fn=processor_fn,
-            # baseline=Image.fromarray(np.zeros_like(np.array(image)), "RGB"),
-        )
+        # Use default white baseline
+        grid_input = ImageMaskInput(image, mask=grid_mask, processor_fn=processor_fn)
         print("> Running attribution")
         patch_target = "captum.attr._core.llm_attr._convert_ids_to_pretty_tokens"
         with patch(patch_target, new=_fallback_pretty_tokens):
             grid_attr_result = llm_attr.attribute(
-                grid_input, forward_in_tokens=False, **gen_config
+                grid_input,
+                forward_in_tokens=False,
+                target=baseline_response,
+                **gen_config,
             )
-        fig, _ = grid_attr_result.plot_image_heatmap(show_legends=False)
-        fig.savefig(f"grid_attr_{curr_q['question_id']}.png")
 
-        # TODO: look into returned empty tensor
-        # print(grid_attr_result)
+        # Visualise attribution results
+        fig, _ = grid_attr_result.plot_image_heatmap(show_legends=True, show=False)
+        fig.savefig(f"vis_attr_{curr_q['question_id']}.png")
+
+        fig, _ = grid_attr_result.plot_token_attr(show=False)
+        fig.savefig(f"token_attr_{curr_q['question_id']}.png")
 
         # TODO: fix this one
         # all_rk.append(curr_rk)
