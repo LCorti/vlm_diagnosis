@@ -21,8 +21,6 @@ from rk_processing.utils.gen_utils import GenUtils
 PROMPT_VERSION = 4
 MODEL_NAME = "internvl2"
 HF_MODEL_NAME = "OpenGVLab/InternVL2-8B"
-GRID_ROWS = 8
-GRID_COLS = 10
 
 
 # Kwargs parser
@@ -42,7 +40,6 @@ def parse_args():
         "--max_new_tokens", help="Maximum tokens to generate.", default=256
     )
     parser.add_argument("--use_cache", default=True)
-    parser.add_argument("--gpu-id", type=int, default=0, help="GPU to load model.")
     parser.add_argument(
         "--options",
         nargs="+",

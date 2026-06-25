@@ -32,7 +32,6 @@ def parse_args():
         "--max_new_tokens", help="Maximum tokens to generate.", default=256
     )
     parser.add_argument("--use_cache", default=True)
-    parser.add_argument("--gpu-id", type=int, default=0, help="GPU to load model.")
     parser.add_argument(
         "--options",
         nargs="+",
