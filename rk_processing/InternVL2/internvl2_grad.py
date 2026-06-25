@@ -15,6 +15,7 @@ if module_path not in sys.path:
 
 import utils.data_io as data_io
 import utils.image_utils as image_utils
+import utils.interpret_vis as interpret_vis
 from config_handlers.rk_handler import RKHandler
 from rk_processing.utils.gen_utils import GenUtils
 
@@ -321,11 +322,43 @@ if __name__ == "__main__":
             decoded_token = tokenizer.decode([target_token_id])
             print(f"Computed IG for token [{t}]: '{decoded_token}'")
 
-            # Free up memory
-            # del image_tensor
-            del attributions
+            # Visualise
+            heatmap = interpret_vis.stitch_patch_attributions(
+                compressed_attr, image=image, max_num=6, use_thumbnail=True
+            )
+            out_path = f"heatmap_grad_{t}.png"
+            interpret_vis.save_attribution_overlay(
+                image=image,
+                heatmap=heatmap,
+                out_path=out_path,
+                title=f"Token {decoded_token}",
+            )
+
+            # Free up memory while iterating on response tokens
+            del (
+                heatmap,
+                compressed_attr,
+                attributions,
+                current_input_ids,
+                current_attention_mask,
+            )
             gc.collect()
             torch.cuda.empty_cache()
+
+        # Save token attributions
+        torch.save(token_attributions, "token_attributions.pt")
+
+        # Free up memory when switching to a new image-question pair
+        del (
+            token_attributions,
+            prompt_ids,
+            response_ids,
+            image_tensor,
+            batched_image,
+            batched_baseline,
+        )
+        gc.collect()
+        torch.cuda.empty_cache()
 
         # TODO: fix this one
         # all_rk.append(curr_rk)

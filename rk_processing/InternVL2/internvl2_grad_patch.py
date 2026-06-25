@@ -3,12 +3,8 @@ import gc
 import sys
 from pathlib import Path
 
-import cv2
-import matplotlib.pyplot as plt
-import numpy as np
 import torch
 from captum.attr import IntegratedGradients
-from PIL import Image
 from torch.amp import autocast
 from transformers import AutoModel, AutoTokenizer
 from utils.model_utils import make_message, split_model
@@ -19,6 +15,7 @@ if module_path not in sys.path:
 
 import utils.data_io as data_io
 import utils.image_utils as image_utils
+import utils.interpret_vis as interpret_vis
 from config_handlers.rk_handler import RKHandler
 from rk_processing.utils.gen_utils import GenUtils
 
@@ -55,67 +52,6 @@ def parse_args():
     return args
 
 
-def plot_heatmap(img_path, patch_attributions, grid_shape, token_label=""):
-    # TODO: pass the image directly, do not load a second time
-    # 1. Load original image
-    original_image = Image.open(img_path).convert("RGB")
-    img_w, img_h = original_image.size
-    img_array = np.array(original_image)
-
-    # 2. Isolate local patches from the global context patch
-    # InternVL2 typically appends the global patch at the very end
-    num_local_patches = grid_shape[0] * grid_shape[1]
-
-    if hasattr(patch_attributions, "cpu"):
-        scores = patch_attributions.detach().cpu().numpy()
-    else:
-        scores = np.array(patch_attributions)
-
-    if len(scores) > num_local_patches:
-        local_scores = scores[:num_local_patches]
-        # The remaining score is the global context thumbnail importance
-    else:
-        local_scores = scores
-
-    # 3. Normalize scores to [0, 1] for the colormap
-    # Optional: Zero-out negative attributions if you only care about positive evidence
-    local_scores = np.maximum(local_scores, 0)
-    if local_scores.max() > 0:
-        local_scores = local_scores / local_scores.max()
-
-    # 4. Reshape to spatial grid
-    heatmap_2d = local_scores.reshape(grid_shape)
-
-    # 5. Upsample to original image dimensions
-    heatmap_resized = cv2.resize(
-        heatmap_2d, (img_w, img_h), interpolation=cv2.INTER_CUBIC
-    )
-
-    # 6. Apply Jet colormap
-    heatmap_colored = cv2.applyColorMap(
-        np.uint8(255 * heatmap_resized), cv2.COLORMAP_JET
-    )
-    heatmap_colored = cv2.cvtColor(heatmap_colored, cv2.COLOR_BGR2RGB)
-
-    # 7. Blend the heatmap and original image
-    alpha = 0.55
-    overlay = cv2.addWeighted(img_array, 1 - alpha, heatmap_colored, alpha, 0)
-
-    # 8. Plot results
-    fig, axes = plt.subplots(1, 2, figsize=(12, 6))
-    axes[0].imshow(img_array)
-    axes[0].set_title("Original Image")
-    axes[0].axis("off")
-
-    axes[1].imshow(overlay)
-    axes[1].set_title(f"IG Heatmap: '{token_label}'")
-    axes[1].axis("off")
-
-    plt.tight_layout()
-    plt.savefig("heatmap_patches.png")
-    plt.close()
-
-
 class InternVL2GradientWrapper(torch.nn.Module):
     def __init__(self, model):
         super().__init__()
@@ -133,13 +69,13 @@ class InternVL2GradientWrapper(torch.nn.Module):
         Computes the forward pass and isolates the logit of the target token.
 
         Args:
-            pixel_values (Tensor): Image tensor [num_patches, C, H, W]
+            vision_embeds (Tensor): Precomputed embeddings
             input_ids (Tensor): Token prefix up to t-1 [1, seq_len]
             attention_mask (Tensor): Mask for the prefix [1, seq_len]
             target_token_pos (int): The sequence index of the token being predicted
             target_token_id (int): The vocabulary ID of the target token
         """
-        B = input_ids.shape[0]
+        B = vision_embeds.shape[0]
         squeezed_embeds = vision_embeds.squeeze(0)
         original_extract_feature = self.model.extract_feature
         # Remove extra dimension added by Captum
@@ -268,6 +204,7 @@ if __name__ == "__main__":
     for param in model.parameters():
         param.requires_grad = False
 
+    # Define tokens to skip. Do not run attribution on these.
     skip_strings = {"<s>", "</s>", "<pad>", "\n", " ", ""}
     skip_token_ids = set()
     for s in skip_strings:
@@ -311,7 +248,6 @@ if __name__ == "__main__":
         print(f"-- Loading image {img_path}")
         image = image_utils.load_img(img_path)
         image_tensor = image_utils.get_image_tensor(image).to(torch.bfloat16).cuda()
-        baseline_pixel_values = torch.zeros_like(image_tensor)
 
         message = make_message(question_template, curr_q)
         conversation = [{"role": "user", "content": message}]
@@ -334,9 +270,10 @@ if __name__ == "__main__":
         prompt = prompt.replace("<image>", image_token_sequence)
 
         # Get baseline response
-        baseline_response, _ = gen_utils.generate_internvl2(
-            model, tokenizer, image_tensor, message
-        )
+        with torch.inference_mode():
+            baseline_response, _ = gen_utils.generate_internvl2(
+                model, tokenizer, image_tensor, message
+            )
         print("=" * 25)
         print("Baseline response:")
         print(baseline_response)
@@ -346,7 +283,7 @@ if __name__ == "__main__":
             tokenizer(prompt, return_tensors="pt").input_ids[0].to(model.device)
         )
         response_ids = (
-            tokenizer(baseline_response, return_tensors="pt")
+            tokenizer(baseline_response, return_tensors="pt", add_special_tokens=False)
             .input_ids[0]
             .to(model.device)
         )
@@ -408,36 +345,61 @@ if __name__ == "__main__":
             # print(patch_attributions)
 
             # Visualise attribs
-            num_total_patches = patch_attributions.shape[0]
-            num_local_patches = num_total_patches - 1 if num_total_patches > 1 else 1
-            img_w, img_h = image.size
-            aspect_ratio = img_w / img_h
-            best_rows, best_cols = 1, num_local_patches
-            for r in range(1, num_local_patches + 1):
-                if num_local_patches % r == 0:
-                    c = num_local_patches // r
-                    if abs((c / r) - aspect_ratio) < abs(
-                        (best_cols / best_rows) - aspect_ratio
-                    ):
-                        best_rows, best_cols = r, c
-            grid_shape = (best_rows, best_cols)
+            # -----------------
+            # Block-y
+            # -----------------
+            # block_heatmap = interpret_vis.stitch_patch_attributions(
+            #     patch_attributions, image=image, use_thumbnail=True
+            # )
+            # interpret_vis.save_attribution_overlay(
+            #     image=image,
+            #     heatmap=block_heatmap,
+            #     out_path=f"heatmap_grad_patch_block_{t}.png",
+            #     title=f"Token {decoded_token} — block",
+            # )
+            # del block_heatmap
 
-            if decoded_token.strip() not in ["", ",", ".", "\n"]:
-                plot_heatmap(
-                    img_path=img_path,
-                    patch_attributions=patch_attributions,
-                    grid_shape=grid_shape,
-                    token_label=decoded_token,
-                )
+            # -----------------
+            # Smooth
+            # -----------------
+            smooth_heatmap = interpret_vis.patch_scores_to_heatmap(
+                patch_attributions, image=image, use_thumbnail=True
+            )
+            interpret_vis.save_attribution_overlay(
+                image=image,
+                heatmap=smooth_heatmap,
+                out_path=f"heatmap_grad_patch_smooth_{t}.png",
+                title=f"Token {decoded_token} — smooth",
+            )
+            del smooth_heatmap
 
             # Free up memory
             # del image_tensor
-            del attributions
+            del (
+                attributions,
+                attr_token,
+                patch_attributions,
+                current_input_ids,
+                current_attention_mask,
+            )
             gc.collect()
             torch.cuda.empty_cache()
 
         print(f"Finished attributions for sample ID: {curr_q['question_id']}")
-        print(token_attributions)
+        # Save attributions
+        torch.save(token_attributions, "token_attributions_patch.pt")
+
+        del (
+            token_attributions,
+            prompt_ids,
+            response_ids,
+            image_tensor,
+            precomputed_vision_embeds,
+            batched_vision_embeds,
+            batched_baseline,
+        )
+        gc.collect()
+        torch.cuda.empty_cache()
 
         # TODO: fix this one
         # all_rk.append(curr_rk)
