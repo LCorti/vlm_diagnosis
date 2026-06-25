@@ -176,6 +176,19 @@ if __name__ == "__main__":
             model.vision_model.encoder.gradient_checkpointing = True
     for param in model.parameters():
         param.requires_grad = False
+
+    # Define tokens to skip. Do not run attribution on these.
+    skip_strings = {"<s>", "</s>", "<pad>", "\n", " ", ""}
+    skip_token_ids = set()
+    for s in skip_strings:
+        tok_id = tokenizer.convert_tokens_to_ids(s)
+        if tok_id != tokenizer.unk_token_id:
+            skip_token_ids.add(tok_id)
+    if tokenizer.bos_token_id is not None:
+        skip_token_ids.add(tokenizer.bos_token_id)
+    if tokenizer.eos_token_id is not None:
+        skip_token_ids.add(tokenizer.eos_token_id)
+
     print("Model loaded.")
 
     # Wrap model for Captum
@@ -246,7 +259,7 @@ if __name__ == "__main__":
             tokenizer(prompt, return_tensors="pt").input_ids[0].to(model.device)
         )
         response_ids = (
-            tokenizer(baseline_response, return_tensors="pt")
+            tokenizer(baseline_response, return_tensors="pt", add_special_tokens=False)
             .input_ids[0]
             .to(model.device)
         )
@@ -259,6 +272,23 @@ if __name__ == "__main__":
         print("> Running attribution")
         for t in range(len(response_ids)):
             target_token_id = response_ids[t].item()
+            decoded_token = tokenizer.decode([target_token_id])
+            if target_token_id in skip_token_ids or not decoded_token.strip():
+                print(f"Skipping token [{t}]: '{decoded_token}'")
+                # Add empty attribution
+                token_attributions.append(
+                    torch.zeros(
+                        image_tensor.shape[0],
+                        image_tensor.shape[2],
+                        image_tensor.shape[3],
+                        dtype=torch.float32,
+                        device="cpu",
+                    )
+                )
+                continue
+
+            print(f"Computing token [{t}]: '{decoded_token}'...")
+
             # Construct prefix: Prompt + generated tokens up to t-1
             current_input_ids = torch.cat([prompt_ids, response_ids[:t]]).unsqueeze(0)
             current_attention_mask = torch.ones_like(current_input_ids)
