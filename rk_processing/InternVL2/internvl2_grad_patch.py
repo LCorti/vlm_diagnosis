@@ -9,7 +9,7 @@ import numpy as np
 import torch
 from captum.attr import IntegratedGradients
 from PIL import Image
-from torch.cuda.amp import autocast
+from torch.amp import autocast
 from transformers import AutoModel, AutoTokenizer
 from utils.model_utils import make_message, split_model
 
@@ -112,7 +112,7 @@ def plot_heatmap(img_path, patch_attributions, grid_shape, token_label=""):
     axes[1].axis("off")
 
     plt.tight_layout()
-    plt.savefig("heatmap_test.png")
+    plt.savefig("heatmap_patches.png")
     plt.close()
 
 
@@ -181,10 +181,10 @@ class InternVL2GradientWrapper(torch.nn.Module):
 
         # Isolate the logit for the specific token ID at the specific position
         # outputs.logits shape: [batch=1, seq_len, vocab_size]
-        target_logit = outputs.logits[0, target_token_pos, target_token_id]
+        target_logit = outputs.logits[:, target_token_pos, target_token_id]
 
         # Captum expects a 1D tensor matching the batch dimension
-        return target_logit.unsqueeze(0)
+        return target_logit
 
     def __getattr__(self, name):
         """Delegate necessary internal attributes to the underlying model."""
@@ -380,7 +380,7 @@ if __name__ == "__main__":
             target_pos = current_input_ids.shape[1] - 1
 
             # Do attribution for token at target_pos
-            with autocast(dtype=torch.bfloat16):
+            with autocast("cuda", dtype=torch.bfloat16):
                 attributions = attrib_method.attribute(
                     inputs=batched_vision_embeds,
                     baselines=batched_baseline,

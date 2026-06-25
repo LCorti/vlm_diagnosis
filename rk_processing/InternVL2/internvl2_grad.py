@@ -5,7 +5,7 @@ from pathlib import Path
 
 import torch
 from captum.attr import IntegratedGradients
-from torch.cuda.amp import autocast
+from torch.amp import autocast
 from transformers import AutoModel, AutoTokenizer
 from utils.model_utils import make_message, split_model
 
@@ -89,12 +89,11 @@ class InternVL2GradientWrapper(torch.nn.Module):
             output_hidden_states=False,
         )
 
-        # Isolate the logit for the specific token ID at the specific position
-        # outputs.logits shape: [batch=1, seq_len, vocab_size]
-        target_logit = outputs.logits[0, target_token_pos, target_token_id]
+        # Isolate the logits for the specific token ID at the specific position
+        # outputs.logits shape: [B, seq_len, vocab_size]
+        target_logits = outputs.logits[:, target_token_pos, target_token_id]
 
-        # Captum expects a 1D tensor matching the batch dimension
-        return target_logit.unsqueeze(0)
+        return target_logits
 
     def __getattr__(self, name):
         """Delegate necessary internal attributes to the underlying model."""
@@ -212,7 +211,6 @@ if __name__ == "__main__":
         image_tensor = (
             image_utils.get_image_tensor(image, max_num=6).to(torch.bfloat16).cuda()
         )
-        baseline_pixel_values = torch.zeros_like(image_tensor)
 
         message = make_message(question_template, curr_q)
         conversation = [{"role": "user", "content": message}]
@@ -253,8 +251,10 @@ if __name__ == "__main__":
         )
 
         token_attributions = []
+        # Add fake dimension [1, P, C, H, W]
+        batched_image = image_tensor.unsqueeze(0)
+        batched_baseline = torch.zeros_like(batched_image)
 
-        # TODO: see where to simplify
         print("> Running attribution")
         for t in range(len(response_ids)):
             target_token_id = response_ids[t].item()
@@ -265,12 +265,8 @@ if __name__ == "__main__":
             # Predicting the last token in the current sequence
             target_pos = current_input_ids.shape[1] - 1
 
-            # Add fake dimension [1, P, C, H, W]
-            batched_image = image_tensor.unsqueeze(0)
-            batched_baseline = baseline_pixel_values.unsqueeze(0)
-
             # Do attribution for token at target_pos
-            with autocast(dtype=torch.bfloat16):
+            with autocast("cuda", dtype=torch.bfloat16):
                 attributions = attrib_method.attribute(
                     inputs=batched_image,
                     baselines=batched_baseline,
@@ -290,7 +286,6 @@ if __name__ == "__main__":
             token_attributions.append(compressed_attr)
             decoded_token = tokenizer.decode([target_token_id])
             print(f"Computed IG for token [{t}]: '{decoded_token}'")
-            print(token_attributions)
 
             # Free up memory
             # del image_tensor
