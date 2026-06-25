@@ -233,9 +233,10 @@ if __name__ == "__main__":
         prompt = prompt.replace("<image>", image_token_sequence)
 
         # Get baseline response
-        baseline_response, _ = gen_utils.generate_internvl2(
-            model, tokenizer, image_tensor, message
-        )
+        with torch.inference_mode():
+            baseline_response, _ = gen_utils.generate_internvl2(
+                model, tokenizer, image_tensor, message
+            )
         print("=" * 25)
         print("Baseline response:")
         print(baseline_response)
