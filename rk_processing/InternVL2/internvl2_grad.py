@@ -313,7 +313,10 @@ if __name__ == "__main__":
                 )
 
             # Remove from GPU and append
-            compressed_attr = attributions.detach().cpu().abs().sum(dim=1)
+            # Also, get rid of Captum batch dimension
+            compressed_attr = (
+                attributions.detach().float().cpu().squeeze(0).abs().sum(dim=1)
+            )
             token_attributions.append(compressed_attr)
             decoded_token = tokenizer.decode([target_token_id])
             print(f"Computed IG for token [{t}]: '{decoded_token}'")
