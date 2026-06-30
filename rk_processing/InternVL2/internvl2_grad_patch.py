@@ -15,7 +15,6 @@ if module_path not in sys.path:
 
 import utils.data_io as data_io
 import utils.image_utils as image_utils
-import utils.interpret_vis as interpret_vis
 from config_handlers.rk_handler import RKHandler
 from rk_processing.utils.gen_utils import GenUtils
 
@@ -136,22 +135,10 @@ if __name__ == "__main__":
     ds_name = args.ds_name
     questions_file = args.questions_file
 
-    # Load RK config
-    rk_hdl = RKHandler()
-    rk_hdl.set_curr_model(MODEL_NAME)
-    rk_hdl.set_curr_ds(ds_name)
-    # Get RK output paths and
-    # (1) complete file name with prompt version
-    raw_out_f = str(rk_hdl.get_rk_raw_path()).format(PROMPT_VERSION)
-    parsed_out_f = str(rk_hdl.get_rk_parsed_path()).format(PROMPT_VERSION)
-    # (2) make directory if missing
+    # Prepare output directory
     base_dir = Path(__file__).parent.parent.parent
-    full_raw_out_f = base_dir.joinpath(raw_out_f)
-    full_raw_out_dir = base_dir.joinpath(Path(raw_out_f).parent)
-    data_io.make_dir(full_raw_out_dir)
-    full_parsed_out_f = base_dir.joinpath(parsed_out_f)
-    full_parsed_out_dir = base_dir.joinpath(Path(parsed_out_f).parent)
-    data_io.make_dir(full_parsed_out_dir)
+    out_dir = Path(base_dir, "data", "really_know", "attribs", "internvl2", ds_name)
+    data_io.make_dir(out_dir)
 
     # Load generation config
     gen_utils = GenUtils(MODEL_NAME, prompt_version=PROMPT_VERSION)
@@ -194,7 +181,7 @@ if __name__ == "__main__":
             .eval()
             .cuda()
         )
-    # Trickeroonies for speed and avoiding CUDA OOM errors
+    # Trickeroonies for speed and (hopefully) avoid CUDA OOM errors
     model.gradient_checkpointing_enable()
     if hasattr(model, "vision_model"):
         if hasattr(model.vision_model, "gradient_checkpointing"):
@@ -227,21 +214,17 @@ if __name__ == "__main__":
     print(f"Loading questions from {questions_file}")
     questions = data_io.load_json(questions_file)
 
-    # == == == == Get responses and self-explanations == == == ==
-    print("Running inference and computing explanations...")
-    # all_rk = []
-    # all_parsed_rk = []
+    # == == == == Get baseline responses and attributions == == == ==
+    print("Start processing...")
 
     for curr_q in questions:
         print(f"Current question ID: {curr_q['question_id']}")
         print(f"-- Text: {curr_q['question']}")
 
-        # Prepare object to store info
-        # curr_rk = {"question_id": curr_q["question_id"]}
-
-        # Wrapping image processor for baseline response and attribution.
-        # def processor_fn(image):
-        #     return image_utils.get_image_tensor(image).to(torch.bfloat16).cuda()
+        # Prepare object to store info and make directory for current question
+        curr_attrib = {"question_id": curr_q["question_id"]}
+        curr_out_dir = Path(out_dir, str(curr_q["question_id"]))
+        data_io.make_dir(curr_out_dir)
 
         # Preparing image and prompt
         img_path = base_dir.joinpath(curr_q["img_path"])
@@ -274,6 +257,8 @@ if __name__ == "__main__":
             baseline_response, _ = gen_utils.generate_internvl2(
                 model, tokenizer, image_tensor, message
             )
+        curr_attrib["baseline_response"] = baseline_response
+
         print("=" * 25)
         print("Baseline response:")
         print(baseline_response)
@@ -288,7 +273,7 @@ if __name__ == "__main__":
             .to(model.device)
         )
 
-        token_attributions = []
+        curr_attrib["token_attrib"] = {}
 
         with torch.no_grad():
             precomputed_vision_embeds = model.extract_feature(image_tensor).detach()
@@ -296,7 +281,6 @@ if __name__ == "__main__":
         batched_vision_embeds.requires_grad_()
         batched_baseline = torch.zeros_like(batched_vision_embeds)
 
-        # TODO: see where to simplify
         print("> Running attribution")
         for t in range(len(response_ids)):
             target_token_id = response_ids[t].item()
@@ -305,7 +289,10 @@ if __name__ == "__main__":
                 print(f"Skipping token [{t}]: '{decoded_token}'")
                 # Add empty attribution
                 num_patches = batched_vision_embeds.shape[1] // 256
-                token_attributions.append(torch.zeros(num_patches))
+                curr_attrib["token_attrib"][t] = [
+                    decoded_token,
+                    torch.zeros(num_patches),
+                ]
                 continue
 
             print(f"Computing token [{t}]: '{decoded_token}'...")
@@ -339,58 +326,20 @@ if __name__ == "__main__":
             else:
                 patch_attributions = attr_token.view(-1, 256).sum(dim=1)
 
-            token_attributions.append(patch_attributions)
-            decoded_token = tokenizer.decode([target_token_id])
+            curr_attrib["token_attrib"][t] = [decoded_token, patch_attributions]
             print(f"> Computed IG for token [{t}]: '{decoded_token}'")
-            # print(patch_attributions)
-
-            # Visualise attribs
-            # -----------------
-            # Block-y
-            # -----------------
-            # block_heatmap = interpret_vis.stitch_patch_attributions(
-            #     patch_attributions, image=image, use_thumbnail=True
-            # )
-            # interpret_vis.save_attribution_overlay(
-            #     image=image,
-            #     heatmap=block_heatmap,
-            #     out_path=f"heatmap_grad_patch_block_{t}.png",
-            #     title=f"Token {decoded_token} — block",
-            # )
-            # del block_heatmap
-
-            # -----------------
-            # Smooth
-            # -----------------
-            smooth_heatmap = interpret_vis.patch_scores_to_heatmap(
-                patch_attributions, image=image, use_thumbnail=True
-            )
-            interpret_vis.save_attribution_overlay(
-                image=image,
-                heatmap=smooth_heatmap,
-                out_path=f"heatmap_grad_patch_smooth_{t}.png",
-                title=f"Token {decoded_token} — smooth",
-            )
-            del smooth_heatmap
 
             # Free up memory
-            # del image_tensor
-            del (
-                attributions,
-                attr_token,
-                patch_attributions,
-                current_input_ids,
-                current_attention_mask,
-            )
-            gc.collect()
-            torch.cuda.empty_cache()
+            del attributions
+            # gc.collect()
+            # torch.cuda.empty_cache()
 
-        print(f"Finished attributions for sample ID: {curr_q['question_id']}")
         # Save attributions
-        torch.save(token_attributions, "token_attributions_patch.pt")
+        torch.save(curr_attrib, Path(curr_out_dir, "attribs.pt"))
+        print(f"Saved attributions for sample ID: {curr_q['question_id']}")
 
         del (
-            token_attributions,
+            curr_attrib,
             prompt_ids,
             response_ids,
             image_tensor,
@@ -401,17 +350,6 @@ if __name__ == "__main__":
         gc.collect()
         torch.cuda.empty_cache()
 
-        # TODO: fix this one
-        # all_rk.append(curr_rk)
-        # all_parsed_rk.append(gen_utils.parse_raw_rk(curr_rk))
+        # break
 
-        # TODO: remove this later
-        break
-        # == == == == == == == == == == == == == == == == == == ==
-
-    # Saving results to file
-    # print("... Saving raw Really Knows ...")
-    # data_io.save_jsonl(all_rk, full_raw_out_f)
-    # print("... Saving parsed Really Knows ...")
-    # data_io.save_jsonl(all_parsed_rk, full_parsed_out_f)
-    # print("All data saved.")
+    print("Finished!")
