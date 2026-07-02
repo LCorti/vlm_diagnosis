@@ -24,7 +24,7 @@ HF_MODEL_NAME = "Qwen/Qwen2.5-VL-7B-Instruct"
 
 
 def parse_args():
-    parser = argparse.ArgumentParser(description="RK Generation for InternVL2.")
+    parser = argparse.ArgumentParser(description="RK Generation for Qwen2.5-VL.")
     parser.add_argument("--ds_name", required=True, help="Name of the dataset.")
     parser.add_argument(
         "--questions_file", required=True, help="Path to the file with questions."
