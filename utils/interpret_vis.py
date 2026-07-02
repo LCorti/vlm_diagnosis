@@ -358,6 +358,157 @@ def sharegpt4v_patch_scores_to_heatmap(
 
 
 """
+Minimal utils for plotting attribution maps for Qwen2.5-VL.
+"""
+
+
+def _normalise_qwen2_5_vl_grid_thw(image_grid_thw):
+    if isinstance(image_grid_thw, torch.Tensor):
+        image_grid_thw = image_grid_thw.detach().cpu().numpy()
+    image_grid_thw = np.asarray(image_grid_thw, dtype=np.int64)
+
+    if image_grid_thw.ndim == 1:
+        image_grid_thw = image_grid_thw.reshape(1, 3)
+
+    if image_grid_thw.ndim != 2 or image_grid_thw.shape[1] != 3:
+        raise ValueError(
+            "image_grid_thw must be shaped [3] or [num_images, 3], "
+            f"got {image_grid_thw.shape}."
+        )
+
+    if image_grid_thw.shape[0] != 1:
+        raise ValueError(
+            "qwen2_5_vl_patch_scores_to_heatmap expects attribution scores "
+            "for one image at a time."
+        )
+
+    return tuple(int(v) for v in image_grid_thw[0])
+
+
+def get_qwen2_5_vl_patch_grid(image_grid_thw, spatial_merge_size=2):
+    grid_t, grid_h, grid_w = _normalise_qwen2_5_vl_grid_thw(image_grid_thw)
+
+    if grid_h % spatial_merge_size != 0 or grid_w % spatial_merge_size != 0:
+        raise ValueError(
+            f"Qwen grid h/w ({grid_h}, {grid_w}) must be divisible by "
+            f"spatial_merge_size={spatial_merge_size}."
+        )
+
+    llm_grid_h = grid_h // spatial_merge_size
+    llm_grid_w = grid_w // spatial_merge_size
+    num_tokens = grid_t * llm_grid_h * llm_grid_w
+    return llm_grid_w, llm_grid_h, grid_t, num_tokens
+
+
+def get_qwen2_5_vl_preprocessed_size(image_grid_thw, patch_size=14):
+    _, grid_h, grid_w = _normalise_qwen2_5_vl_grid_thw(image_grid_thw)
+    return grid_w * patch_size, grid_h * patch_size
+
+
+def get_qwen2_5_vl_preprocess_mask(image):
+    """
+    Qwen2.5-VL resizes the whole image to a patch-aligned size instead of
+    center-cropping it, so the full original image is visible.
+    """
+    orig_w, orig_h = image.size
+    return np.ones((orig_h, orig_w), dtype=bool)
+
+
+def qwen2_5_vl_patch_scores_to_heatmap(
+    patch_scores,
+    image,
+    image_grid_thw,
+    spatial_merge_size=2,
+    patch_size=14,
+    normalise=True,
+    interpolation=Image.BICUBIC,
+    reduce_temporal="sum",
+    resize_via_preprocessed=False,
+    token_interpolation=Image.NEAREST,
+):
+    """
+    Convert Qwen2.5-VL image-token attribution scores to an image-sized heatmap.
+
+    Qwen's processor stores the raw visual grid as `image_grid_thw` while the
+    language model receives a spatially merged grid with dimensions
+    `(h // spatial_merge_size, w // spatial_merge_size)`. The attribution scores
+    produced by `qwen2_5_vl_grad_patch.py` correspond to these merged language
+    image tokens.
+
+    Args:
+        patch_scores: 1D tensor/array of per-Qwen-image-token scores.
+        image: Original PIL image.
+        image_grid_thw: Processor-provided grid metadata for this image.
+        spatial_merge_size: `model.config.vision_config.spatial_merge_size`.
+        patch_size: Qwen visual patch size. The default Qwen2.5-VL value is 14.
+        normalise: Whether to min-max normalise scores before resizing.
+        interpolation: PIL resampling mode for the final resize to the original
+            image size.
+        reduce_temporal: How to reduce temporal grids when `grid_t > 1`.
+            Supported values are `"sum"`, `"mean"`, and `"max"`. Static images
+            use `grid_t == 1`.
+        resize_via_preprocessed: If True, first expand the merged-token grid to
+            Qwen's preprocessed image size with `token_interpolation`, then resize
+            to the original image. This is useful for debugging token-cell
+            alignment. If False, resize the merged-token grid directly to the
+            original image, matching the simpler LLaVA/ShareGPT4V helpers.
+        token_interpolation: PIL resampling mode for the optional token-grid to
+            preprocessed-image-size resize. `Image.NEAREST` preserves visible
+            token cells.
+    """
+    if isinstance(patch_scores, torch.Tensor):
+        patch_scores = patch_scores.detach().float().cpu().numpy()
+    else:
+        patch_scores = np.asarray(patch_scores, dtype=np.float32)
+
+    patch_scores = patch_scores.reshape(-1)
+    grid_w, grid_h, grid_t, num_tokens = get_qwen2_5_vl_patch_grid(
+        image_grid_thw, spatial_merge_size=spatial_merge_size
+    )
+
+    if patch_scores.shape[0] != num_tokens:
+        raise ValueError(
+            f"Expected {num_tokens} Qwen2.5-VL image-token scores, "
+            f"got {patch_scores.shape[0]}."
+        )
+
+    score_grid = patch_scores.reshape(grid_t, grid_h, grid_w)
+    if grid_t > 1:
+        if reduce_temporal == "sum":
+            score_grid = score_grid.sum(axis=0)
+        elif reduce_temporal == "mean":
+            score_grid = score_grid.mean(axis=0)
+        elif reduce_temporal == "max":
+            score_grid = score_grid.max(axis=0)
+        else:
+            raise ValueError(
+                "reduce_temporal must be one of {'sum', 'mean', 'max'}, "
+                f"got {reduce_temporal!r}."
+            )
+    else:
+        score_grid = score_grid[0]
+
+    if normalise:
+        score_grid = normalise_attribution_map(score_grid)
+
+    orig_w, orig_h = image.size
+    heatmap_img = Image.fromarray((score_grid * 255).astype(np.uint8))
+
+    if resize_via_preprocessed:
+        preprocessed_size = get_qwen2_5_vl_preprocessed_size(
+            image_grid_thw, patch_size=patch_size
+        )
+        heatmap_img = heatmap_img.resize(
+            preprocessed_size, resample=token_interpolation
+        )
+
+    heatmap_img = heatmap_img.resize((orig_w, orig_h), resample=interpolation)
+
+    heatmap = np.asarray(heatmap_img).astype(np.float32) / 255.0
+    return heatmap
+
+
+"""
 General utils
 """
 
