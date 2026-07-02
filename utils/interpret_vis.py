@@ -131,13 +131,19 @@ def normalise_attribution_map(attr_map):
 
 
 def save_attribution_overlay(
-    image, heatmap, out_path, alpha=0.45, cmap="jet", title=None
+    image, heatmap, out_path, alpha=0.45, cmap="jet", title=None, mask=None
 ):
     image_np = np.asarray(image.convert("RGB"))
 
+    if mask is not None:
+        heatmap = np.ma.array(heatmap, mask=~np.asarray(mask, dtype=bool))
+
+    cmap_obj = plt.get_cmap(cmap).copy() if isinstance(cmap, str) else cmap.copy()
+    cmap_obj.set_bad((0, 0, 0, 0))
+
     plt.figure(figsize=(8, 8))
     plt.imshow(image_np)
-    plt.imshow(heatmap, cmap=cmap, alpha=alpha)
+    plt.imshow(heatmap, cmap=cmap_obj, alpha=alpha)
     plt.axis("off")
 
     if title is not None:
