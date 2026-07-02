@@ -320,6 +320,48 @@ def normalise_attribution_map(attr_map):
     return attr_map
 
 
+"""
+Minimal (hopefully) utils for plotting attribution maps for ShareGPT4V, which shares LLaVa's architecture/layout.
+"""
+
+
+def get_sharegpt4v_preprocess_mask(image, image_processor=None, input_size=336):
+    return get_llava_preprocess_mask(
+        image, image_processor=image_processor, input_size=input_size
+    )
+
+
+def sharegpt4v_patch_scores_to_heatmap(
+    patch_scores,
+    image,
+    grid_size=None,
+    image_processor=None,
+    input_size=336,
+    normalise=True,
+    interpolation=Image.BICUBIC,
+    align_to_preprocess=True,
+    drop_cls_token=False,
+    mask_unseen=True,
+):
+    return llava_patch_scores_to_heatmap(
+        patch_scores,
+        image,
+        grid_size=grid_size,
+        image_processor=image_processor,
+        input_size=input_size,
+        normalise=normalise,
+        interpolation=interpolation,
+        align_to_preprocess=align_to_preprocess,
+        drop_cls_token=drop_cls_token,
+        mask_unseen=mask_unseen,
+    )
+
+
+"""
+General utils
+"""
+
+
 def save_attribution_overlay(
     image, heatmap, out_path, alpha=0.45, cmap="jet", title=None, mask=None
 ):
