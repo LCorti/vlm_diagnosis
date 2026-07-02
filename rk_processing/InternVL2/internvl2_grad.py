@@ -323,7 +323,7 @@ if __name__ == "__main__":
             print(f"Computed IG for token [{t}]: '{decoded_token}'")
 
             # Visualise
-            heatmap = interpret_vis.stitch_patch_attributions(
+            heatmap = interpret_vis.internvl2_stitch_patch_attributions(
                 compressed_attr, image=image, max_num=6, use_thumbnail=True
             )
             out_path = f"heatmap_grad_{t}.png"

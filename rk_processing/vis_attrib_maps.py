@@ -65,7 +65,7 @@ if __name__ == "__main__":
             # -----------------
             # Block-y heatmaps
             # -----------------
-            block_heatmap = interpret_vis.stitch_patch_attributions(
+            block_heatmap = interpret_vis.internvl2_stitch_patch_attributions(
                 token_info[1], image=image, use_thumbnail=True
             )
             interpret_vis.save_attribution_overlay(
@@ -78,7 +78,7 @@ if __name__ == "__main__":
             # -----------------
             # Smooth heatmaps
             # -----------------
-            smooth_heatmap = interpret_vis.patch_scores_to_heatmap(
+            smooth_heatmap = interpret_vis.internvl2_patch_scores_to_heatmap(
                 token_info[1], image=image, use_thumbnail=True
             )
             interpret_vis.save_attribution_overlay(

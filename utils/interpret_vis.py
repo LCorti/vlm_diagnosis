@@ -6,7 +6,7 @@ from PIL import Image
 from .image_utils import find_closest_aspect_ratio
 
 """
-Minimal (hopefully) utils for plotting attribution maps for InterVL2.
+Minimal (hopefully) utils for plotting attribution maps for InternVL2.
 """
 
 
@@ -28,7 +28,7 @@ def get_internvl2_tile_grid(image, input_size=448, max_num=12):
     return grid_w, grid_h, grid_w * grid_h
 
 
-def stitch_patch_attributions(
+def internvl2_stitch_patch_attributions(
     patch_attr,
     image,
     input_size=448,
@@ -77,7 +77,7 @@ def stitch_patch_attributions(
     return heatmap
 
 
-def patch_scores_to_heatmap(
+def internvl2_patch_scores_to_heatmap(
     patch_scores,
     image,
     input_size=448,
