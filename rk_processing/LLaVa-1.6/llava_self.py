@@ -48,9 +48,6 @@ def parse_args():
     )
     parser.add_argument("--use_cache", default=True)
     parser.add_argument(
-        "--gpu-id", type=int, default=0, help="Specify the gpu to load the model."
-    )
-    parser.add_argument(
         "--options",
         nargs="+",
         help="override some settings in the used config, the key-value pair "
