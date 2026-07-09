@@ -1,12 +1,12 @@
 import copy
-import numpy as np
 import sys
-import torch
-
 from pathlib import Path
+
+import numpy as np
+import torch
 from PIL import Image
 from sentence_transformers import SentenceTransformer
-from transformers import Owlv2Processor, Owlv2ForObjectDetection
+from transformers import Owlv2ForObjectDetection, Owlv2Processor
 
 module_path = str(Path("..").resolve())
 if module_path not in sys.path:
@@ -14,7 +14,7 @@ if module_path not in sys.path:
 
 from config_handlers.rk_handler import RKHandler
 from config_handlers.sk_handler import SKHandler
-from utils.data_io import make_dir, load_json, load_jsonl, save_jsonl
+from utils.data_io import load_json, load_jsonl, make_dir, save_jsonl
 
 
 # Data utils
@@ -147,7 +147,11 @@ if __name__ == "__main__":
 
     # Load sentence-transformers for computing embeddings
     # emb_model = SentenceTransformer("sentence-transformers/all-mpnet-base-v2")
-    emb_model = SentenceTransformer("ibm-granite/granite-embedding-english-r2")
+    # Use granite with eager attention.
+    emb_model = SentenceTransformer(
+        "ibm-granite/granite-embedding-english-r2",
+        model_kwargs={"attn_implementation": "eager"},
+    )
     ovd_model_name = "google/owlv2-large-patch14-ensemble"
     ovd_processor = Owlv2Processor.from_pretrained(ovd_model_name, device_map="auto")
     ovd_model = Owlv2ForObjectDetection.from_pretrained(
