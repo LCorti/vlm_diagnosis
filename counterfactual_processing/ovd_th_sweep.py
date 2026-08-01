@@ -1,3 +1,5 @@
+import hashlib
+import json
 import sys
 from pathlib import Path
 
@@ -61,6 +63,59 @@ def filter_ovd_res(
     return filtered_res
 
 
+def make_ovd_cache_key(model_name: str, img_path: Path, texts: list[str]) -> str:
+    img_stat = img_path.stat()
+    cache_identity = {
+        "model": model_name,
+        "image": str(img_path.resolve()),
+        "image_size": img_stat.st_size,
+        "image_mtime_ns": img_stat.st_mtime_ns,
+        "texts": texts,
+    }
+    serialized = json.dumps(cache_identity, sort_keys=True, separators=(",", ":"))
+    return hashlib.sha256(serialized.encode("utf-8")).hexdigest()
+
+
+def load_ovd_cache(cache_path: Path) -> dict[str, dict]:
+    if not cache_path.exists():
+        return {}
+    return {
+        cache_entry["key"]: cache_entry["predictions"]
+        for cache_entry in load_jsonl(cache_path)
+    }
+
+
+def get_ovd_predictions(
+    model_name: str,
+    model: Owlv2ForObjectDetection,
+    processor: Owlv2Processor,
+    device: torch.device,
+    img_path: Path,
+    texts: list[str],
+    cache: dict[str, dict],
+    cache_path: Path,
+) -> dict:
+    cache_key = make_ovd_cache_key(model_name, img_path, texts)
+    if cache_key in cache:
+        return cache[cache_key]
+
+    with Image.open(img_path) as img:
+        inputs = processor(text=[texts], images=img, return_tensors="pt").to(device)
+        with torch.inference_mode():
+            outputs = model(**inputs)
+        target_sizes = torch.tensor([img.size[::-1]], device=outputs.pred_boxes.device)
+        # Thresholding is deliberately deferred until the sweep. Keeping the maximum
+        # score per query makes this compact while preserving the original decision.
+        res = processor.post_process_grounded_object_detection(
+            outputs=outputs, target_sizes=target_sizes, threshold=0.0
+        )[0]
+
+    predictions = filter_ovd_res(texts, res["boxes"], res["scores"], res["labels"])
+    cache[cache_key] = predictions
+    append_to_jsonl({"key": cache_key, "predictions": predictions}, str(cache_path))
+    return predictions
+
+
 # Cosine similarity utils
 def compute_similarity(model: SentenceTransformer, text_a: str, text_b: str) -> float:
     text_a_emb = torch.FloatTensor(
@@ -112,7 +167,6 @@ if __name__ == "__main__":
     all_ds = ds_list * len(model_list)
     all_models = model_list * len(ds_list)
     all_models.sort()
-    counts = {}
 
     # Load sentence-transformers for computing embeddings
     # emb_model = SentenceTransformer("sentence-transformers/all-mpnet-base-v2")
@@ -130,105 +184,107 @@ if __name__ == "__main__":
     ovd_device = next(ovd_model.parameters()).device
     all_ovd_ths = [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
     out_file = "ovd_th_sweep.jsonl"
+    ovd_cache_path = Path("ovd_predictions_cache.jsonl")
+    ovd_cache = load_ovd_cache(ovd_cache_path)
+    evaluations = []
 
     print(f"OWLv2 device: {ovd_device}")
     print(f"Embedding model device: {emb_model.device}")
+    print(f"Loaded {len(ovd_cache)} cached OWLv2 predictions")
+
+    # Build threshold-independent evaluation records. OWLv2 and semantic matching are each evaluated only once instead of once per threshold.
+    for model, ds in tqdm(zip(all_models, all_ds), total=len(all_ds)):
+        tqdm.write(f"{model} -- {ds}")
+
+        sk_hdl.set_curr_ds(ds)
+        sk_final = load_merge_sk_data(sk_hdl)
+        sk_by_question = {sk["question_id"]: sk for sk in sk_final}
+
+        rk_hdl.set_curr_model(model)
+        rk_hdl.set_curr_ds(ds)
+        rk_parsed_path = Path(
+            "..", str(rk_hdl.get_rk_parsed_path()).format(PROMPT_VERSION)
+        )
+        rk_parsed = load_jsonl(rk_parsed_path)
+
+        for rk in tqdm(rk_parsed, desc=f"{model} -- {ds}", leave=False):
+            if len(rk["triple_objs"]) == 0:
+                tqdm.write(f"No RKs found for question {rk['question_id']}")
+                continue
+
+            curr_sk = sk_by_question.get(rk["question_id"])
+            if not curr_sk:
+                tqdm.write(f"Big error: SK missing for question {rk['question_id']}")
+                break
+
+            img_path = Path(
+                "..", curr_sk["img_path"].replace("/imgs/", "/imgs_resized/")
+            )
+
+            for rk_rel in rk["triple_objs"]:
+                evaluation = {"model": model, "ds": ds, "exact_match": False}
+                if exact_match_sk(rk_rel, curr_sk["relations"]):
+                    evaluation["exact_match"] = True
+                    evaluations.append(evaluation)
+                    continue
+
+                texts = [rk_rel["from_concept"], rk_rel["to_concept"]]
+                predictions = get_ovd_predictions(
+                    ovd_model_name,
+                    ovd_model,
+                    ovd_processor,
+                    ovd_device,
+                    img_path,
+                    texts,
+                    ovd_cache,
+                    ovd_cache_path,
+                )
+                evaluation["ovd_scores"] = [
+                    predictions.get(text, {}).get("score") for text in texts
+                ]
+                evaluation["semantic_match"] = has_semantic_match(
+                    emb_model, rk_rel, curr_sk["relations"]
+                )
+                evaluations.append(evaluation)
 
     for ovd_th in all_ovd_ths:
         print(f">> Evaluating OWLv2 th: {ovd_th}")
-
-        for model, ds in tqdm(zip(all_models, all_ds), total=len(all_ds)):
-            tqdm.write(f"{model} -- {ds}")
-            # Initialise counters
-            if model not in counts:
-                counts[model] = {}
-            if ds not in counts[model]:
-                counts[model][ds] = {
+        counts = {
+            model: {
+                ds: {
                     "initial": 0,
                     "with_exact_match": 0,
                     "with_ovd_match": 0,
                     "with_sim_match": 0,
                 }
-
-            # Load SK final
-            sk_hdl.set_curr_ds(ds)
-            # Merge batches from classes
-            sk_final = load_merge_sk_data(sk_hdl)
-
-            # Load parsed RK
-            rk_hdl.set_curr_model(model)
-            rk_hdl.set_curr_ds(ds)
-            rk_parsed_path = Path(
-                "..", str(rk_hdl.get_rk_parsed_path()).format(PROMPT_VERSION)
+                for ds in ds_list
+            }
+            for model in model_list
+        }
+        for evaluation in evaluations:
+            model = evaluation["model"]
+            ds = evaluation["ds"]
+            counters = counts.setdefault(model, {}).setdefault(
+                ds,
+                {
+                    "initial": 0,
+                    "with_exact_match": 0,
+                    "with_ovd_match": 0,
+                    "with_sim_match": 0,
+                },
             )
-            rk_parsed = load_jsonl(rk_parsed_path)
+            counters["initial"] += 1
 
-            for rk in tqdm(rk_parsed, desc=f"{model} -- {ds}", leave=False):
-                # print(f">> Checking question {rk['question_id']}")
-                if len(rk["triple_objs"]) == 0:
-                    tqdm.write(f"No RKs found for question {rk['question_id']}")
-                    continue
-
-                # Get SK data for current question
-                curr_sk = next(
-                    (sk for sk in sk_final if sk["question_id"] == rk["question_id"]),
-                    None,
-                )
-                if not curr_sk:
-                    tqdm.write(
-                        f"Big error: SK missing for question {rk['question_id']}"
-                    )
-                    break
-
-                # Load (resized) image for the OVD matching step
-                img_path = curr_sk["img_path"].replace("/imgs/", "/imgs_resized/")
-                img_path = Path("..", img_path)
-                img = Image.open(img_path)
-
-                # RK format: {'from_concept': ..., 'relationship': ..., 'to_concept': ...}
-                # Count each relation once, using the first successful matching stage.
-                for rk_rel in rk["triple_objs"]:
-                    # print(f">> >> Checking relation: {rk_rel}")
-                    # Update count
-                    counts[model][ds]["initial"] += 1
-
-                    # First try: exact match -- look for the RK in the list of SK
-                    # The matching is done at the triple-level to void the "wrong" concepts
-                    # to be matched by mistake
-                    match_sk_rel = exact_match_sk(rk_rel, curr_sk["relations"])
-                    if match_sk_rel:
-                        counts[model][ds]["with_exact_match"] += 1
-                        continue
-
-                    # Second try: zero-shot OVD with OWLv2
-                    texts = [rk_rel["from_concept"], rk_rel["to_concept"]]
-                    inputs = ovd_processor(
-                        text=[texts], images=img, return_tensors="pt"
-                    ).to(ovd_device)
-                    with torch.no_grad():
-                        outputs = ovd_model(**inputs)
-                    target_sizes = torch.tensor(
-                        [img.size[::-1]], device=outputs.pred_boxes.device
-                    )
-                    res = ovd_processor.post_process_grounded_object_detection(
-                        outputs=outputs, target_sizes=target_sizes, threshold=ovd_th
-                    )
-                    boxes, scores, labels = (
-                        res[0]["boxes"],
-                        res[0]["scores"],
-                        res[0]["labels"],
-                    )
-                    filtered_res = filter_ovd_res(texts, boxes, scores, labels)
-                    if all(text in filtered_res for text in texts):
-                        counts[model][ds]["with_ovd_match"] += 1
-                        continue
-
-                    # Third try: semantic similarity against SK concepts
-                    if has_semantic_match(emb_model, rk_rel, curr_sk["relations"]):
-                        counts[model][ds]["with_sim_match"] += 1
+            if evaluation["exact_match"]:
+                counters["with_exact_match"] += 1
+            elif all(
+                score is not None and score > ovd_th
+                for score in evaluation["ovd_scores"]
+            ):
+                counters["with_ovd_match"] += 1
+            elif evaluation["semantic_match"]:
+                counters["with_sim_match"] += 1
 
         print(counts)
-
-        # Save to file
         out_data = {"th": int(ovd_th * 10), "data": counts}
         append_to_jsonl(out_data, out_file)
