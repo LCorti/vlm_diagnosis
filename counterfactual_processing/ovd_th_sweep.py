@@ -130,7 +130,7 @@ def compute_similarity(model: SentenceTransformer, text_a: str, text_b: str) -> 
 def has_similar_concept(
     emb_model: SentenceTransformer, concept: str, list_search: list[dict]
 ) -> bool:
-    sim_th = 0.8
+    sim_th = 0.7
     for elem in list_search:
         sim_from_concept = compute_similarity(
             emb_model,
