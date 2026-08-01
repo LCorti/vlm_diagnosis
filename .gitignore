@@ -38,3 +38,6 @@ db_backups
 
 # Folder with extra data
 backups
+
+# Temporary
+0_stats

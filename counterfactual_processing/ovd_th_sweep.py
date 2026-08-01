@@ -112,7 +112,7 @@ def get_ovd_predictions(
 
     predictions = filter_ovd_res(texts, res["boxes"], res["scores"], res["labels"])
     cache[cache_key] = predictions
-    append_to_jsonl({"key": cache_key, "predictions": predictions}, str(cache_path))
+    append_to_jsonl([{"key": cache_key, "predictions": predictions}], str(cache_path))
     return predictions
 
 
@@ -287,4 +287,4 @@ if __name__ == "__main__":
 
         print(counts)
         out_data = {"th": int(ovd_th * 10), "data": counts}
-        append_to_jsonl(out_data, out_file)
+        append_to_jsonl([out_data], out_file)

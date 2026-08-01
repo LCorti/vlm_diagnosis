@@ -41,9 +41,10 @@ def save_jsonl(data: list[dict], file_path: str | Path) -> None:
         fp.write("\n".join(map(json.dumps, data)))
 
 
-def append_to_jsonl(data: dict, file_path: str) -> None:
+def append_to_jsonl(data: dict | list[dict], file_path: str | Path) -> None:
+    records = [data] if isinstance(data, dict) else data
     with open(file_path, "a") as fp:
-        fp.write("\n".join(map(json.dumps, data)))
+        fp.write("\n".join(map(json.dumps, records)))
         fp.write("\n")
 
 
