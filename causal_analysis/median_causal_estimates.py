@@ -1,19 +1,17 @@
 import argparse
 import copy
-import io
-import numpy as np
-import pandas as pd
 import sys
 import time
 import warnings
+from pathlib import Path
 
-from contextlib import redirect_stdout
+import numpy as np
+import pandas as pd
 from dowhy import CausalModel
 from econml.inference import BootstrapInference
-from pathlib import Path
-from sklearn.preprocessing import PolynomialFeatures
-from sklearn.linear_model import LassoCV
 from sklearn.ensemble import GradientBoostingRegressor
+from sklearn.linear_model import LassoCV
+from sklearn.preprocessing import PolynomialFeatures
 from word2num import Word2Num
 
 module_path = str(Path("..").resolve())
@@ -22,7 +20,6 @@ if module_path not in sys.path:
 
 import utils.data_io as data_io
 import utils.graph_utils as graph_utils
-
 from config_handlers.causal_handler import CausalHandler
 from config_handlers.rk_handler import RKHandler
 
@@ -346,7 +343,7 @@ if __name__ == "__main__":
     print("=" * 60)
     print(f"Processing data for {MODEL} + {DATASET}...")
     """ Preparing data """
-    resps_ids = set([q["question_id"] for q in resps])
+    resps_ids = {q["question_id"] for q in resps}
     dict_counter_resp = {
         q_idx: next(r["response"] for r in counter_resps if r["question_id"] == q_idx)
         for q_idx in resps_ids
@@ -441,7 +438,7 @@ if __name__ == "__main__":
     rk_graphs = make_nx_graphs(resps)
     img_ids = list(rk_graphs.keys())
     print(f"Loaded {len(rk_graphs)} samples.")
-    print(f"Duplicate ids: {set([x for x in img_ids if img_ids.count(x) > 1])}")
+    print(f"Duplicate ids: { {x for x in img_ids if img_ids.count(x) > 1} }")
 
     # Add to each graph a node corresponding to the outcome variable 'y'
     for rk in rk_graphs.values():
@@ -460,7 +457,7 @@ if __name__ == "__main__":
     # Load data currently available
     if causal_out_path.exists():
         old_data = data_io.load_jsonl(causal_out_path)
-        old_ids = set([od["question_id"] for od in old_data])
+        old_ids = {od["question_id"] for od in old_data}
     else:
         print("First run.")
         old_ids = []
