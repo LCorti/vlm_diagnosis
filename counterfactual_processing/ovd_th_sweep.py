@@ -2,6 +2,7 @@ import hashlib
 import json
 import sys
 from pathlib import Path
+from statistics import median
 
 import torch
 from PIL import Image
@@ -129,7 +130,7 @@ def compute_similarity(model: SentenceTransformer, text_a: str, text_b: str) -> 
 
 def has_similar_concept(
     emb_model: SentenceTransformer, concept: str, list_search: list[dict]
-) -> bool:
+) -> tuple[bool, float | None]:
     sim_th = 0.7
     for elem in list_search:
         sim_from_concept = compute_similarity(
@@ -140,18 +141,29 @@ def has_similar_concept(
         sim_to_concept = compute_similarity(
             emb_model, concept, elem["to_concept"]["bb_label"]["bb_label_text"]
         )
-        if sim_from_concept > sim_th or sim_to_concept > sim_th:
-            return True
+        max_similarity = max(sim_from_concept, sim_to_concept)
+        if max_similarity > sim_th:
+            return True, max_similarity
 
-    return False
+    return False, None
 
 
 def has_semantic_match(
     emb_model: SentenceTransformer, rk_rel: dict, sk_relations: list[dict]
-) -> bool:
-    return has_similar_concept(
+) -> tuple[bool, list[float]]:
+    from_match, from_similarity = has_similar_concept(
         emb_model, rk_rel["from_concept"], sk_relations
-    ) and has_similar_concept(emb_model, rk_rel["to_concept"], sk_relations)
+    )
+    similarities = [from_similarity] if from_similarity is not None else []
+    if not from_match:
+        return False, similarities
+
+    to_match, to_similarity = has_similar_concept(
+        emb_model, rk_rel["to_concept"], sk_relations
+    )
+    if to_similarity is not None:
+        similarities.append(to_similarity)
+    return to_match, similarities
 
 
 if __name__ == "__main__":
@@ -242,9 +254,10 @@ if __name__ == "__main__":
                 evaluation["ovd_scores"] = [
                     predictions.get(text, {}).get("score") for text in texts
                 ]
-                evaluation["semantic_match"] = has_semantic_match(
-                    emb_model, rk_rel, curr_sk["relations"]
-                )
+                (
+                    evaluation["semantic_match"],
+                    evaluation["semantic_similarities"],
+                ) = has_semantic_match(emb_model, rk_rel, curr_sk["relations"])
                 evaluations.append(evaluation)
 
     for ovd_th in all_ovd_ths:
@@ -260,6 +273,9 @@ if __name__ == "__main__":
                 for ds in ds_list
             }
             for model in model_list
+        }
+        semantic_similarities = {
+            model: {ds: [] for ds in ds_list} for model in model_list
         }
         for evaluation in evaluations:
             model = evaluation["model"]
@@ -282,8 +298,19 @@ if __name__ == "__main__":
                 for score in evaluation["ovd_scores"]
             ):
                 counters["with_ovd_match"] += 1
-            elif evaluation["semantic_match"]:
-                counters["with_sim_match"] += 1
+            else:
+                semantic_similarities[model][ds].extend(
+                    evaluation["semantic_similarities"]
+                )
+                if evaluation["semantic_match"]:
+                    counters["with_sim_match"] += 1
+
+        for model, datasets in counts.items():
+            for ds, counters in datasets.items():
+                similarity_values = semantic_similarities[model][ds]
+                counters["semantic_similarity_median"] = (
+                    median(similarity_values) if similarity_values else None
+                )
 
         print(counts)
         out_data = {"th": int(ovd_th * 10), "data": counts}

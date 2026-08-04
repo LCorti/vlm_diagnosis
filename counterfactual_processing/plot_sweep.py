@@ -14,6 +14,7 @@ REQUIRED_COUNTS = {
     "with_ovd_match",
     "with_sim_match",
 }
+SIMILARITY_MEDIAN_KEY = "semantic_similarity_median"
 
 
 def parse_args() -> argparse.Namespace:
@@ -118,11 +119,11 @@ def validate_counts(records: list[dict]) -> None:
                     raise TypeError(
                         f"Counts for '{model}/{dataset}' must be an object."
                     )
-                missing = REQUIRED_COUNTS - counts.keys()
+                missing = (REQUIRED_COUNTS | {SIMILARITY_MEDIAN_KEY}) - counts.keys()
                 if missing:
                     raise ValueError(
-                        f"Missing counts for '{model}/{dataset}' at th={record['th']}: "
-                        f"{', '.join(sorted(missing))}."
+                        f"Missing measurements for '{model}/{dataset}' at "
+                        f"th={record['th']}: {', '.join(sorted(missing))}."
                     )
                 if any(
                     not isinstance(counts[key], (int, float)) for key in REQUIRED_COUNTS
@@ -130,6 +131,14 @@ def validate_counts(records: list[dict]) -> None:
                     raise ValueError(
                         f"All counts for '{model}/{dataset}' at th={record['th']} "
                         "must be numeric."
+                    )
+                similarity_median = counts[SIMILARITY_MEDIAN_KEY]
+                if similarity_median is not None and not isinstance(
+                    similarity_median, (int, float)
+                ):
+                    raise ValueError(
+                        f"'{SIMILARITY_MEDIAN_KEY}' for '{model}/{dataset}' at "
+                        f"th={record['th']} must be numeric or null."
                     )
 
         if combinations is None:
@@ -188,7 +197,14 @@ def plot_sweep(
     line_specs = [
         ("with_exact_match", "Exact match", "tab:blue", ".", ":", 1.8),
         ("with_ovd_match", "OVD match", "tab:orange", "o", "-", 1.8),
-        ("with_sim_match", "Similarity fallback", "tab:green", "^", "-", 1.8),
+        (
+            "with_sim_match",
+            "Similarity fallback (median labels)",
+            "tab:green",
+            "^",
+            "-",
+            1.8,
+        ),
     ]
 
     for row, model in enumerate(models):
@@ -212,6 +228,29 @@ def plot_sweep(
                     linestyle=line_style,
                     linewidth=line_width,
                     markersize=4,
+                )
+
+            similarity_medians = [
+                record["data"][model][dataset][SIMILARITY_MEDIAN_KEY]
+                for record in records
+            ]
+            for threshold, similarity_count, similarity_median in zip(
+                thresholds,
+                count_series["with_sim_match"],
+                similarity_medians,
+            ):
+                median_label = (
+                    "N/A" if similarity_median is None else f"{similarity_median:.2f}"
+                )
+                axis.annotate(
+                    median_label,
+                    xy=(threshold, similarity_count),
+                    xytext=(2, -6),
+                    textcoords="offset points",
+                    color="black",
+                    fontsize=7,
+                    ha="center",
+                    va="top",
                 )
 
             total_matched = [
