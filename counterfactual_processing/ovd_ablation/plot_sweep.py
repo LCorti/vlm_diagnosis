@@ -57,9 +57,18 @@ def parse_args() -> argparse.Namespace:
         help="Only plot these datasets (default: all datasets).",
     )
     parser.add_argument(
-        "--show",
-        action="store_true",
-        help="Open the figure after saving it.",
+        "--show-medians",
+        action=argparse.BooleanOptionalAction,
+        default=False,
+        help="Display similarity median labels (default: disabled).",
+    )
+    parser.add_argument(
+        "--individual-output-dir",
+        type=Path,
+        help=(
+            "Also save each model/dataset plot and a standalone legend "
+            "to this directory."
+        ),
     )
     return parser.parse_args()
 
@@ -167,12 +176,115 @@ def select_names(
     return requested
 
 
+def _plot_combination(
+    axis,
+    records: list[dict],
+    thresholds: list[float],
+    model: str,
+    dataset: str,
+    show_medians: bool,
+    show_xlabel: bool,
+    show_ylabel: bool,
+) -> None:
+    line_specs = [
+        ("with_exact_match", "Exact match", "tab:blue", ".", ":", 1.8),
+        ("with_ovd_match", "OVD match", "tab:orange", "o", "-", 1.8),
+        (
+            "with_sim_match",
+            (
+                "Similarity fallback (median labels)"
+                if show_medians
+                else "Similarity fallback"
+            ),
+            "tab:green",
+            "^",
+            "-",
+            1.8,
+        ),
+    ]
+    count_series = {
+        key: [record["data"][model][dataset][key] for record in records]
+        for key in REQUIRED_COUNTS
+    }
+    for key, label, color, marker, line_style, line_width in line_specs:
+        axis.plot(
+            thresholds,
+            count_series[key],
+            label=label,
+            color=color,
+            marker=marker,
+            linestyle=line_style,
+            linewidth=line_width,
+            markersize=4,
+        )
+
+    if show_medians:
+        similarity_medians = [
+            record["data"][model][dataset][SIMILARITY_MEDIAN_KEY] for record in records
+        ]
+        for threshold, similarity_count, similarity_median in zip(
+            thresholds,
+            count_series["with_sim_match"],
+            similarity_medians,
+        ):
+            median_label = (
+                "N/A" if similarity_median is None else f"{similarity_median:.2f}"
+            )
+            axis.annotate(
+                median_label,
+                xy=(threshold, similarity_count),
+                xytext=(2, -6),
+                textcoords="offset points",
+                color="black",
+                fontsize=7,
+                ha="center",
+                va="top",
+            )
+
+    total_matched = [
+        exact + ovd + similarity
+        for exact, ovd, similarity in zip(
+            count_series["with_exact_match"],
+            count_series["with_ovd_match"],
+            count_series["with_sim_match"],
+        )
+    ]
+    axis.plot(
+        thresholds,
+        total_matched,
+        label="Total matched",
+        color="tab:red",
+        marker="s",
+        linewidth=2.2,
+        markersize=4,
+    )
+    axis.plot(
+        thresholds,
+        count_series["initial"],
+        label="Initial relations",
+        color="#29D8D7",
+        linestyle="--",
+        linewidth=1.3,
+    )
+
+    axis.set_title(f"{MODEL_MAP[model]} / {DS_MAP[dataset]}", fontsize=10)
+    axis.grid(alpha=0.25)
+    axis.set_xticks(thresholds)
+    axis.tick_params(axis="x", labelrotation=45)
+    if show_ylabel:
+        axis.set_ylabel("Count")
+    if show_xlabel:
+        axis.set_xlabel("OWLv2 threshold")
+
+
 def plot_sweep(
     records: list[dict],
     output_path: Path,
     threshold_divisor: float,
     requested_models: list[str] | None,
     requested_datasets: list[str] | None,
+    show_medians: bool = True,
+    individual_output_dir: Path | None = None,
 ) -> plt.Figure:
     if threshold_divisor == 0:
         raise ValueError("--threshold-divisor cannot be zero.")
@@ -194,18 +306,9 @@ def plot_sweep(
         squeeze=False,
     )
 
-    line_specs = [
-        ("with_exact_match", "Exact match", "tab:blue", ".", ":", 1.8),
-        ("with_ovd_match", "OVD match", "tab:orange", "o", "-", 1.8),
-        (
-            "with_sim_match",
-            "Similarity fallback (median labels)",
-            "tab:green",
-            "^",
-            "-",
-            1.8,
-        ),
-    ]
+    if individual_output_dir is not None:
+        individual_output_dir.mkdir(parents=True, exist_ok=True)
+    output_suffix = output_path.suffix or ".pdf"
 
     for row, model in enumerate(models):
         for column, dataset in enumerate(datasets):
@@ -214,79 +317,36 @@ def plot_sweep(
                 axis.set_visible(False)
                 continue
 
-            count_series = {
-                key: [record["data"][model][dataset][key] for record in records]
-                for key in REQUIRED_COUNTS
-            }
-            for key, label, color, marker, line_style, line_width in line_specs:
-                axis.plot(
+            _plot_combination(
+                axis,
+                records,
+                thresholds,
+                model,
+                dataset,
+                show_medians,
+                show_xlabel=row == len(models) - 1,
+                show_ylabel=column == 0,
+            )
+
+            if individual_output_dir is not None:
+                individual_figure, individual_axis = plt.subplots(figsize=(4.6, 3.4))
+                _plot_combination(
+                    individual_axis,
+                    records,
                     thresholds,
-                    count_series[key],
-                    label=label,
-                    color=color,
-                    marker=marker,
-                    linestyle=line_style,
-                    linewidth=line_width,
-                    markersize=4,
+                    model,
+                    dataset,
+                    show_medians,
+                    show_xlabel=True,
+                    show_ylabel=True,
                 )
-
-            similarity_medians = [
-                record["data"][model][dataset][SIMILARITY_MEDIAN_KEY]
-                for record in records
-            ]
-            for threshold, similarity_count, similarity_median in zip(
-                thresholds,
-                count_series["with_sim_match"],
-                similarity_medians,
-            ):
-                median_label = (
-                    "N/A" if similarity_median is None else f"{similarity_median:.2f}"
+                individual_figure.tight_layout()
+                individual_figure.savefig(
+                    individual_output_dir / f"{model}__{dataset}{output_suffix}",
+                    dpi=200,
+                    bbox_inches="tight",
                 )
-                axis.annotate(
-                    median_label,
-                    xy=(threshold, similarity_count),
-                    xytext=(2, -6),
-                    textcoords="offset points",
-                    color="black",
-                    fontsize=7,
-                    ha="center",
-                    va="top",
-                )
-
-            total_matched = [
-                exact + ovd + similarity
-                for exact, ovd, similarity in zip(
-                    count_series["with_exact_match"],
-                    count_series["with_ovd_match"],
-                    count_series["with_sim_match"],
-                )
-            ]
-            axis.plot(
-                thresholds,
-                total_matched,
-                label="Total matched",
-                color="tab:red",
-                marker="s",
-                linewidth=2.2,
-                markersize=4,
-            )
-            axis.plot(
-                thresholds,
-                count_series["initial"],
-                label="Initial relations",
-                color="0.4",
-                linestyle="--",
-                linewidth=1.3,
-            )
-
-            axis.set_title(f"{model} / {dataset}", fontsize=10)
-            axis.grid(alpha=0.25)
-            axis.set_xticks(thresholds)
-            axis.tick_params(axis="x", labelrotation=45)
-            if column == 0:
-                axis.set_ylabel("Count")
-            if row == len(models) - 1:
-                axis.set_xlabel("OWLv2 threshold")
+                plt.close(individual_figure)
 
     visible_axes = [axis for row in axes for axis in row if axis.get_visible()]
     if not visible_axes:
@@ -299,7 +359,25 @@ def plot_sweep(
         ncol=min(len(labels), 5),
         bbox_to_anchor=(0.5, 0.975),
     )
-    figure.suptitle("Matching counts across OWLv2 thresholds", y=0.998)
+
+    # Save the legend as a separate figure when individual charts are asked.
+    if individual_output_dir is not None:
+        legend_figure = plt.figure(figsize=(max(6.0, 1.8 * len(labels)), 1.0))
+        legend_figure.legend(
+            handles,
+            labels,
+            loc="center",
+            ncol=len(labels),
+            frameon=False,
+        )
+        legend_figure.savefig(
+            individual_output_dir / f"legend{output_suffix}",
+            dpi=200,
+            bbox_inches="tight",
+        )
+        plt.close(legend_figure)
+
+    figure.suptitle("OWLv2 Output Threshold Sweep", y=0.998)
     figure.tight_layout(rect=(0, 0, 1, 0.94))
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
@@ -317,6 +395,12 @@ if __name__ == "__main__":
             args.threshold_divisor,
             args.models,
             args.datasets,
+            show_medians=args.show_medians,
+            individual_output_dir=args.individual_output_dir,
         )
+        print(f"Saved plot to {DEFAULT_OUTPUT}")
+        if args.individual_output_dir is not None:
+            print(f"Saved individual plots to {args.individual_output_dir}")
+        plt.close(figure)
     except (OSError, TypeError, ValueError) as error:
         print(f"Error: {error}", file=sys.stderr)
