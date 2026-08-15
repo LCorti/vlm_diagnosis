@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 DEFAULT_INPUT = SCRIPT_DIR / "ovd_th_sweep.jsonl"
-DEFAULT_OUTPUT = SCRIPT_DIR / "ovd_th_sweep.png"
+DEFAULT_OUTPUT = SCRIPT_DIR / "ovd_th_sweep.pdf"
 REQUIRED_COUNTS = {
     "initial",
     "with_exact_match",
@@ -15,6 +15,18 @@ REQUIRED_COUNTS = {
     "with_sim_match",
 }
 SIMILARITY_MEDIAN_KEY = "semantic_similarity_median"
+DS_MAP = {
+    "llava-bench": "LLaVa-Bench",
+    "mmbench": "MMBench",
+    "seed": "SEED-Bench 2",
+    "vqav2": "VQA v2",
+}
+MODEL_MAP = {
+    "internvl2": "InternVL2",
+    "llava-1.6": "LLaVa-1.6",
+    "qwen2_5_vl": "Qwen2.5-VL",
+    "sharegpt4v": "ShareGPT4V",
+}
 
 
 def parse_args() -> argparse.Namespace:
@@ -23,18 +35,6 @@ def parse_args() -> argparse.Namespace:
             "Plot matching counts across OWLv2 thresholds for every "
             "model/dataset combination in a sweep JSONL file."
         )
-    )
-    parser.add_argument(
-        "--input",
-        type=Path,
-        default=DEFAULT_INPUT,
-        help=f"Sweep JSONL file (default: {DEFAULT_INPUT}).",
-    )
-    parser.add_argument(
-        "--output",
-        type=Path,
-        default=DEFAULT_OUTPUT,
-        help=f"Output figure (default: {DEFAULT_OUTPUT}).",
     )
     parser.add_argument(
         "--threshold-divisor",
@@ -307,28 +307,16 @@ def plot_sweep(
     return figure
 
 
-def main() -> int:
+if __name__ == "__main__":
     args = parse_args()
     try:
-        records = load_sweep(args.input)
+        records = load_sweep(DEFAULT_INPUT)
         figure = plot_sweep(
             records,
-            args.output,
+            DEFAULT_OUTPUT,
             args.threshold_divisor,
             args.models,
             args.datasets,
         )
     except (OSError, TypeError, ValueError) as error:
         print(f"Error: {error}", file=sys.stderr)
-        return 1
-
-    print(f"Saved plot to {args.output}")
-    if args.show:
-        plt.show()
-    else:
-        plt.close(figure)
-    return 0
-
-
-if __name__ == "__main__":
-    raise SystemExit(main())
