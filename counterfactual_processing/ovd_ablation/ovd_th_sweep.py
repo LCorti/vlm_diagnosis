@@ -10,7 +10,7 @@ from sentence_transformers import SentenceTransformer
 from tqdm import tqdm
 from transformers import Owlv2ForObjectDetection, Owlv2Processor
 
-module_path = str(Path("..").resolve())
+module_path = str(Path("..", "..").resolve())
 if module_path not in sys.path:
     sys.path.append(module_path)
 
@@ -24,7 +24,7 @@ def load_merge_sk_data(sk_hdl: SKHandler) -> list:
     sk_data = []
     for ds_class in sk_hdl.get_classes():
         sk_hdl.set_curr_class(ds_class)
-        sk_data.extend(load_jsonl(Path("..", sk_hdl.get_sk_exp_path())))
+        sk_data.extend(load_jsonl(Path("..", "..", sk_hdl.get_sk_exp_path())))
     return sk_data
 
 
@@ -215,7 +215,7 @@ if __name__ == "__main__":
         rk_hdl.set_curr_model(model)
         rk_hdl.set_curr_ds(ds)
         rk_parsed_path = Path(
-            "..", str(rk_hdl.get_rk_parsed_path()).format(PROMPT_VERSION)
+            "..", "..", str(rk_hdl.get_rk_parsed_path()).format(PROMPT_VERSION)
         )
         rk_parsed = load_jsonl(rk_parsed_path)
 
@@ -230,7 +230,7 @@ if __name__ == "__main__":
                 break
 
             img_path = Path(
-                "..", curr_sk["img_path"].replace("/imgs/", "/imgs_resized/")
+                "..", "..", curr_sk["img_path"].replace("/imgs/", "/imgs_resized/")
             )
 
             for rk_rel in rk["triple_objs"]:
