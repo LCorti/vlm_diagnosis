@@ -1,8 +1,8 @@
+import sys
+from pathlib import Path
+
 import cv2
 import numpy as np
-import sys
-
-from pathlib import Path
 
 module_path = str(Path("..").resolve())
 if module_path not in sys.path:

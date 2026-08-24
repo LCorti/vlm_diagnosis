@@ -1,5 +1,4 @@
 import sys
-
 from pathlib import Path
 
 module_path = str(Path("..").resolve())
