@@ -377,7 +377,7 @@ def plot_sweep(
         )
         plt.close(legend_figure)
 
-    figure.suptitle("OWLv2 Output Threshold Sweep", y=0.998)
+    # figure.suptitle("OWLv2 Output Threshold Sweep", y=0.998)
     figure.tight_layout(rect=(0, 0, 1, 0.94))
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
