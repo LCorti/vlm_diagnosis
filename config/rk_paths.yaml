@@ -1,123 +1,98 @@
 internvl2:
-  llava-bench: 
+  llava-bench:
     raw: results_v{}.jsonl
     parsed: results_v{}.jsonl
     parsed_pkl: results.pkl
     final: results.jsonl
     final_pkl: results.pkl
-  mmbench: 
+  mmbench:
     raw: results_v{}.jsonl
     parsed: results_v{}.jsonl
     parsed_pkl: results.pkl
     final: results.jsonl
     final_pkl: results.pkl
-  seed: 
+  seed:
     raw: results_v{}.jsonl
     parsed: results_v{}.jsonl
     parsed_pkl: results.pkl
     final: results.jsonl
     final_pkl: results.pkl
-  vqav2: 
+  vqav2:
     raw: results_v{}.jsonl
     parsed: results_v{}.jsonl
     parsed_pkl: results.pkl
     final: results.jsonl
     final_pkl: results.pkl
 llava-1.6:
-  llava-bench: 
+  llava-bench:
     raw: results_v{}.jsonl
     parsed: results_v{}.jsonl
     parsed_pkl: results.pkl
     final: results.jsonl
     final_pkl: results.pkl
-  mmbench: 
+  mmbench:
     raw: results_v{}.jsonl
     parsed: results_v{}.jsonl
     parsed_pkl: results.pkl
     final: results.jsonl
     final_pkl: results.pkl
-  seed: 
+  seed:
     raw: results_v{}.jsonl
     parsed: results_v{}.jsonl
     parsed_pkl: results.pkl
     final: results.jsonl
     final_pkl: results.pkl
-  vqav2: 
-    raw: results_v{}.jsonl
-    parsed: results_v{}.jsonl
-    parsed_pkl: results.pkl
-    final: results.jsonl
-    final_pkl: results.pkl
-minigpt4:
-  llava-bench: 
-    raw: results_v{}.jsonl
-    parsed: results_v{}.jsonl
-    parsed_pkl: results.pkl
-    final: results.jsonl
-    final_pkl: results.pkl
-  mmbench: 
-    raw: results_v{}.jsonl
-    parsed: results_v{}.jsonl
-    parsed_pkl: results.pkl
-    final: results.jsonl
-    final_pkl: results.pkl
-  seed: 
-    raw: results_v{}.jsonl
-    parsed: results_v{}.jsonl
-    parsed_pkl: results.pkl
-    final: results.jsonl
-    final_pkl: results.pkl
-  vqav2: 
+  vqav2:
     raw: results_v{}.jsonl
     parsed: results_v{}.jsonl
     parsed_pkl: results.pkl
     final: results.jsonl
     final_pkl: results.pkl
 sharegpt4v:
-  llava-bench: 
+  llava-bench:
     raw: results_v{}.jsonl
     parsed: results_v{}.jsonl
     parsed_pkl: results.pkl
     final: results.jsonl
     final_pkl: results.pkl
-  mmbench: 
+  mmbench:
     raw: results_v{}.jsonl
     parsed: results_v{}.jsonl
     parsed_pkl: results.pkl
     final: results.jsonl
     final_pkl: results.pkl
-  seed: 
+  seed:
     raw: results_v{}.jsonl
     parsed: results_v{}.jsonl
     parsed_pkl: results.pkl
     final: results.jsonl
     final_pkl: results.pkl
-  vqav2: 
+  vqav2:
     raw: results_v{}.jsonl
     parsed: results_v{}.jsonl
     parsed_pkl: results.pkl
     final: results.jsonl
     final_pkl: results.pkl
 qwen2_5_vl:
-  llava-bench: 
+  llava-bench:
     raw: results_v{}.jsonl
     parsed: results_v{}.jsonl
     parsed_pkl: results.pkl
     final: results.jsonl
     final_pkl: results.pkl
-  mmbench: 
+  mmbench:
     raw: results_v{}.jsonl
     parsed: results_v{}.jsonl
     parsed_pkl: results.pkl
     final: results.jsonl
     final_pkl: results.pkl
-  seed: 
+  seed:
     raw: results_v{}.jsonl
     parsed: results_v{}.jsonl
     parsed_pkl: results.pkl
     final: results.jsonl
     final_pkl: results.pkl
-  vqav2: 
+  vqav2:
     raw: results_v{}.jsonl
     parsed: results_v{}.jsonl
     parsed_pkl: results.pkl

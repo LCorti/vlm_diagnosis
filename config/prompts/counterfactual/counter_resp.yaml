@@ -12,17 +12,12 @@ question_template:
     seed: "Based on the provided image, analyze the given question and choose the most accurate option from the listed alternatives. Your response should consist solely of the letter corresponding to the correct answer (A, B, C, or D), without any additional explanation."
     # The GT answers from this dataset are made of 1 word only. Instruct the model to answer in that way.
     vqav2: "Based on the given image, answer the question using only one word. Provide no additional text or explanation."
-  llava-1.6: 
+  llava-1.6:
     llava-bench: ""
     mmbench: "Provide a concise and descriptive caption for this image."
     seed: "Based on the provided image, analyze the given question and choose the most accurate option from the listed alternatives. Your response should consist solely of the letter corresponding to the correct answer (A, B, C, or D), without any additional explanation."
     vqav2: "Based on the given image, answer the question using only one word. Provide no additional text or explanation."
-  minigpt4: 
-    llava-bench: ""
-    mmbench: "Provide a concise and descriptive caption for this image."
-    seed: "Based on the provided image and question, choose the most accurate answer from the listed alternatives: A, B, C, or D. Only provide the answer, no explanation whatsoever."
-    vqav2: "Based on the given image, answer the question using only one word. Provide no additional text or explanation."
-  sharegpt4v: 
+  sharegpt4v:
     llava-bench: ""
     mmbench: "Provide a concise and descriptive caption for this image."
     seed: "Based on the provided image, analyze the given question and choose the most accurate option from the listed alternatives. Your response must consist solely of the answer you believe is correct, without any additional explanation."
@@ -30,5 +25,4 @@ question_template:
 constraint_template:
   internvl2: "When answering the question, only consider the following concepts:"
   llava-1.6: "When answering the question, only consider the following concepts:"
-  minigpt4: "When answering the question, only consider the following concepts:"
   sharegpt4v: "When answering the question, only consider the following concepts:"

@@ -17,15 +17,10 @@ question_template:
     mmbench: "Provide a concise and descriptive caption for this image."
     seed: "Based on the provided image, analyze the given question and choose the most accurate option from the listed alternatives. Your response should consist solely of the letter corresponding to the correct answer (A, B, C, or D), without any additional explanation."
     vqav2: "Based on the given image, answer the question using only one word. Provide no additional text or explanation."
-  sharegpt4v: 
+  sharegpt4v:
     llava-bench: ""
     mmbench: "Provide a concise and descriptive caption for this image."
     seed: "Based on the provided image, analyze the given question and choose the most accurate option from the listed alternatives. Your response must consist solely of the answer you believe is correct, without any additional explanation."
-    vqav2: "Based on the given image, answer the question using only one word. Provide no additional text or explanation."
-  minigpt4: 
-    llava-bench: ""
-    mmbench: "Provide a concise and descriptive caption for this image."
-    seed: "Based on the provided image and question, choose the most accurate answer from the listed alternatives: A, B, C, or D. Only provide the answer, no explanation whatsoever."
     vqav2: "Based on the given image, answer the question using only one word. Provide no additional text or explanation."
 
 # The rationale templates are the result of prompt engineering done for each model such that
@@ -45,12 +40,6 @@ rationale_template:
     "- Each point should clearly explain the connection between a specific visual element and the given answer."
     "- Avoid general descriptions of the image; focus on visual details that are relevant to the answer."
     "- Keep each point concise and ensure it directly addresses the reasoning behind the answer."
-  minigpt4: |
-    "Review the given answer by carefully analyzing the image. Identify and describe specific visual elements and concepts that directly support the reasoning behind the answer. Provide your rationale in a structured, bullet-point format by following these rules:"
-    "- Begin each bullet point with the * character."
-    "- Clearly explain how each visual element directly supports the given answer."
-    "- Avoid general or unrelated descriptions of the image; focus only on details relevant to the reasoning."
-    "- Be concise, ensuring each point is clear and directly tied to the answer's justification."
   sharegpt4v: |
     "Review the given answer and carefully analyze the image. Identify and describe the key visual elements and concepts in the image that directly support your reasoning and answer. For each point, clearly explain how that visual element contributes to the answer, and ensure every point is directly linked to the reasoning behind the answer."
     "Present your rationale in a structured, bullet-point format with the following guidelines:"
@@ -100,28 +89,6 @@ out_format_template:
     "  - (Entity: dog, Relationship: playing with, Entity: ball)"
     "  - (Entity: dog, Relationship: near, Entity: tree)"
     "  - (Entity: tree, Relationship: part of, Entity: landscape)"
-  minigpt4: |
-    "Carefully analyze each point in the list above and extract distinct pairs of entities and their relationships. Follow these instructions to ensure clarity and consistency:"
-    "1. Extraction Format: Use the following exact format for every extraction: * (Entity: [entity_1], Relationship: [relationship], Entity: [entity_2])"
-    "2. Entity Guidelines: "
-    "   - Always identify two distinct entities in each extraction."
-    "   - Do not refer to the image itself (e.g., 'image,' 'picture,' 'photo') as an entity."
-    "   - Entities can include physical objects, people, animals, abstract concepts, etc."
-    "3. Relationship Guidelines:"
-    "   - Focus on meaningful, context-specific relationships (e.g., 'forms,' 'comprises,' 'is part of,' 'affects,' or 'is near')."
-    "   - The relationship must clearly describe the connection or interaction between the entities. Consider types such as causality, containment, spatial/temporal arrangement, or part-whole structures."
-    "4. Output Rules:"
-    "   - Each extraction must have exactly two entities and one relationship. Avoid incomplete extractions."
-    "   - Break down points with multiple entities or relationships into separate pairs."
-    "   - Avoid duplicate pairs across all extractions."
-    "5. Clarity and Relevance:"
-    "   - Ensure all extractions are contextually accurate and relevant to the list above."
-    "   - Prioritize clear, precise descriptions of how entities are connected."
-    "Example:"
-    " - Original Sentence: "A dog is playing with a ball near the tree.""
-    " - Extractions:"
-    "   - (Entity: dog, Relationship: playing with, Entity: ball)"
-    "   - (Entity: dog, Relationship: near, Entity: tree)"
   sharegpt4v: |
     "Carefully analyze each point in the list above and extract distinct pairs of entities and their relationships. Follow these instructions to ensure clarity and consistency:"
     "1. Extraction Format: Use the following exact format for every extraction: * (Entity: [entity_1], Relationship: [relationship], Entity: [entity_2])"

@@ -8,11 +8,6 @@ llava-1.6:
   mmbench: eval_res.json
   seed: eval_res.json
   vqav2: eval_res.json
-minigpt4:
-  llava-bench: eval_res.json
-  mmbench: eval_res.json
-  seed: eval_res.json
-  vqav2: eval_res.json
 sharegpt4v:
   llava-bench: eval_res.json
   mmbench: eval_res.json

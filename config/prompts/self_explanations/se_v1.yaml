@@ -13,13 +13,6 @@ question_template:
       "Given the image, answer the following question by indicating which option is the correct one between the alternatives listed."
       "Only provide the letter (A, B, C, or D) referring to the option you think is the correct answer."
     vqav2: "Given the image, answer the following question by using only one word. Nothing else should be included."
-  minigpt4:
-    llava-bench: ""
-    mmbench: "Provide a concise and descriptive caption for this image."
-    seed: |
-      "Given the image, answer the following question by indicating which option is the correct one between the alternatives listed."
-      "Only provide the letter (A, B, C, or D) referring to the option you think is the correct answer."
-    vqav2: "Given the image, answer the following question by using only one word. Nothing else should be included."
   sharegpt4v:
     llava-bench: ""
     mmbench: "Provide a concise and descriptive caption for this image."
@@ -36,13 +29,6 @@ rationale_template:
     "- Avoid general descriptions of the image; focus on visual details that are relevant to the answer."
     "- Keep each point concise and ensure it directly addresses the reasoning behind the answer."
   llava-1.6: |
-    "Review the given answer and carefully analyze the image. Identify and describe the key visual elements and concepts in the image that directly support your reasoning and answer. For each point, clearly explain how that visual element contributes to the answer, and ensure every point is directly linked to the reasoning behind the answer."
-    "Present your rationale in a structured, bullet-point format with the following guidelines:"
-    "- Each bullet point must begin with the * character."
-    "- Each point should clearly explain the connection between a specific visual element and the given answer."
-    "- Avoid general descriptions of the image; focus on visual details that are relevant to the answer."
-    "- Keep each point concise and ensure it directly addresses the reasoning behind the answer."
-  minigpt4: |
     "Review the given answer and carefully analyze the image. Identify and describe the key visual elements and concepts in the image that directly support your reasoning and answer. For each point, clearly explain how that visual element contributes to the answer, and ensure every point is directly linked to the reasoning behind the answer."
     "Present your rationale in a structured, bullet-point format with the following guidelines:"
     "- Each bullet point must begin with the * character."
@@ -77,25 +63,6 @@ out_format_template:
     "  - (Entity: dog, Relationship: near, Entity: tree)"
     "  - (Entity: tree, Relationship: part of, Entity: landscape)"
   llava-1.6: |
-    "Carefully analyze each point in the list above and extract distinct pairs of entities and their relationships. For each point, identify exactly two distinct entities at a time, along with a detailed and context-specific relationship between them (e.g., action, spatial position, interaction, causality, part-whole relationship, etc.). For each extraction, you must use the following format exactly: (Entity: [entity_1], Relationship: [relationship], Entity: [entity_2])."
-    "Additional guidelines:"
-    "- Both entities must always be present: Ensure that each extraction contains two distinct entities in the format provided."
-    "- Do not include references to the image itself (e.g., 'image,' 'picture,' 'photo') as an entity."
-    "- Avoid overly simplistic relationships (e.g., 'located in' or 'visible in'). Focus on specific interactions or connections, such as 'forms,' 'comprises,' 'is part of,' 'affects,' or 'is near.'"
-    "- Focus on distinct entity pairs, avoiding duplicates across all points."
-    "- If a point contains multiple entities or relationships, break them down into separate pairs."
-    "- Entities can refer to physical objects, people, animals, abstract concepts, etc."
-    "- Relationships should reflect more complex interactions or spatial/temporal arrangements."
-    "- Ensure the relationship clearly reflects how the entities are connected in context. Consider relationships like causality, containment, or part-whole structure."
-    "- Prioritize clarity and contextual relevance in your extractions."
-    "- Each extraction must contain two distinct entities; avoid incomplete extractions with only one entity."
-    "Example:"
-    "- Original sentence: 'A dog is playing with a ball near the tree.'"
-    "- Output:"
-    "  - (Entity: dog, Relationship: playing with, Entity: ball)"
-    "  - (Entity: dog, Relationship: near, Entity: tree)"
-    "  - (Entity: tree, Relationship: part of, Entity: landscape)"
-  minigpt4: |
     "Carefully analyze each point in the list above and extract distinct pairs of entities and their relationships. For each point, identify exactly two distinct entities at a time, along with a detailed and context-specific relationship between them (e.g., action, spatial position, interaction, causality, part-whole relationship, etc.). For each extraction, you must use the following format exactly: (Entity: [entity_1], Relationship: [relationship], Entity: [entity_2])."
     "Additional guidelines:"
     "- Both entities must always be present: Ensure that each extraction contains two distinct entities in the format provided."
