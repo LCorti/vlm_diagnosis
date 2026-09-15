@@ -36,8 +36,8 @@ db_backups
 *.pt
 *.ts
 
-# Folder with extra data
-backups
+# Causal (median) estimates
+median_estimates
 
 # Temporary
-0_stats
+backups
