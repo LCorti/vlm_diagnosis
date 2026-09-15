@@ -3,19 +3,18 @@ import warnings
 warnings.simplefilter(action="ignore")
 
 import json
-import numpy as np
-import pandas as pd
 import sys
-
 from pathlib import Path
 from typing import Tuple
+
+import numpy as np
+import pandas as pd
 
 module_path = str(Path("..").resolve())
 if module_path not in sys.path:
     sys.path.append(module_path)
 
 import utils.data_io as data_io
-
 from config_handlers.eval_handler import EvalHandler
 
 
@@ -89,8 +88,6 @@ if __name__ == "__main__":
     # Setup
     eval_hdl = EvalHandler()
     model_list = eval_hdl.get_model_list()
-    """ Skipping MiniGPT4 as we have incomplete data. """
-    model_list.remove("minigpt4")
     eval_hdl.set_curr_model(model_list[0])
     ds_list = eval_hdl.get_ds_list()
 

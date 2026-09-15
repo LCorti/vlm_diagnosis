@@ -1,8 +1,8 @@
+import sys
+from pathlib import Path
+
 import networkx as nx
 import numpy as np
-import sys
-
-from pathlib import Path
 from sentence_transformers import SentenceTransformer
 
 module_path = str(Path("..").resolve())
@@ -83,8 +83,6 @@ if __name__ == "__main__":
     emb_model = SentenceTransformer(emb_model_path)
     ds_list = sk_hdl.get_ds_list()
     model_list = rk_hdl.get_model_list()
-    """ Skipping MiniGPT4 as we have incomplete data. """
-    model_list.remove("minigpt4")
     all_datasets = ds_list * len(model_list)
     all_models = model_list * len(ds_list)
     all_models.sort()

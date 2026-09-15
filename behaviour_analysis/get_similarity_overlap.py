@@ -1,9 +1,9 @@
-import networkx as nx
-import numpy as np
 import sys
-
 from collections import OrderedDict
 from pathlib import Path
+
+import networkx as nx
+import numpy as np
 from sentence_transformers import SentenceTransformer
 
 module_path = str(Path("..").resolve())
@@ -94,7 +94,7 @@ def compute_cosine(
     """
     - |RK|=|SK|: This is the good one, all of the RK should get a matching SK
     - |RK|<|SK|: Here, the model is definitely missing out on some specs
-    - |RK|>|SK|: Here the model has more behaviours than it should. Note that these 
+    - |RK|>|SK|: Here the model has more behaviours than it should. Note that these
         "extra" behaviours are among the least similar ones and they might be wrong.
     """
     for rk_idx, sk_idx in ordered_rk_ids.items():
@@ -144,8 +144,6 @@ if __name__ == "__main__":
     emb_model = SentenceTransformer(emb_model_path)
     ds_list = sk_hdl.get_ds_list()
     model_list = rk_hdl.get_model_list()
-    """ Skipping MiniGPT4 as we have incomplete data. """
-    model_list.remove("minigpt4")
     all_datasets = ds_list * len(model_list)
     all_models = model_list * len(ds_list)
     all_models.sort()
