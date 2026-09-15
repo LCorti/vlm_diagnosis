@@ -174,8 +174,6 @@ if __name__ == "__main__":
     rk_hdl = RKHandler()
     ds_list = sk_hdl.get_ds_list()
     model_list = rk_hdl.get_model_list()
-    # Skip MiniGPT-4
-    model_list.remove("minigpt4")
     all_ds = ds_list * len(model_list)
     all_models = model_list * len(ds_list)
     all_models.sort()
