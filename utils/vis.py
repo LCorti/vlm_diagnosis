@@ -21,7 +21,6 @@ DS_MAP = {
 MODEL_MAP = {
     "internvl2": "InternVL2",
     "llava-1.6": "LLaVa-1.6",
-    "minigpt4": "MiniGPT4",
     "qwen2_5_vl": "Qwen2.5-VL",
     "sharegpt4v": "ShareGPT4V",
 }
