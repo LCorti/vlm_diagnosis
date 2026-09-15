@@ -2,9 +2,9 @@
 
 [**DiaVLo: Diagnosing the Behaviours of Vision-Language Models**]()
 
-*Lorenzo Corti, Jie Yang*
+*Lorenzo Corti*, Jie Yang
 
-To appear in [Findings of the Association for Computational Linguistics: EMNLP 2026](https://2026.emnlp.org/)
+To appear in [Findings of the Association for Computational Linguistics: EMNLP 2026](https://2026.emnlp.org/).
 
 ## Setup
 > TODO
