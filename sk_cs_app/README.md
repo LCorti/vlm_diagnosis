@@ -69,7 +69,7 @@ Once all the above is in place, run the following command to build and run the c
 There are different docker-compose files, one for each dataset to be annotated.
 
 ~~~~bash
-docker compose -p "crowd_llava" -f docker-compose-llava.yml up -d
+docker compose -p "crowd_llava" -f docker-compose-llavabench.yml up -d
 
 docker compose -p "crowd_mmbench" -f docker-compose-mmbench.yml up -d
 

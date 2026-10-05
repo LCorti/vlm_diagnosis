@@ -7,13 +7,12 @@ if module_path not in sys.path:
 
 from config_handlers.dataset_handler import DatasetHandler
 from config_handlers.sk_handler import SKHandler
-from utils.data_io import load_jsonl, save_jsonl, save_json
-
+from utils.data_io import load_jsonl, save_json, save_jsonl
 
 if __name__ == "__main__":
     # Load DS config
     ds_hdl = DatasetHandler()
-    ds_list = ds_hdl.get_sk_list()
+    ds_list = ds_hdl.get_ds_list()
 
     # Load SK config
     sk_hdl = SKHandler()

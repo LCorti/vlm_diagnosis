@@ -59,7 +59,7 @@ if __name__ == "__main__":
         print(f"Connecting to {ds}...")
         sk_hdl.set_curr_ds(ds)
 
-        database = f"{DATABASE_PREFIX}{ds}")
+        database = f"{DATABASE_PREFIX}{ds}"
         try:
             mydb = mysql.connector.connect(
                 host=HOST, user=USER, password=PASSWORD, database=database

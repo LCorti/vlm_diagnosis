@@ -126,7 +126,6 @@ if __name__ == "__main__":
         # == == == == == == == == == == == == == == == == == == ==
 
         # Save responses to file
-        # TODO: update saving directory.
         print("... Saving data ...")
         save_jsonl(all_responses, "./responses.jsonl")
         print("Data saved.")
