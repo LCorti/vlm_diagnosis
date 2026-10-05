@@ -125,7 +125,7 @@ The steps below follow the pipeline in order. Replace `<model>` and `<dataset>` 
 ### 2. Should-Knows (SK)
 
 1. `sk_processing/preproc_sgg_dict.py` computes concept and predicate frequencies from `data/common/sgg_dicts.json`. The result is saved to `data/common/sgg_freqs.json` and used for the information-content statistics in `utils/graph_stats.py`.
-2. A scene-graph generator produces the raw scene graphs (`sg_raw.json`). That step happens outside this repo.
+2. A scene-graph generator, IETrans, produces the raw scene graphs (`sg_raw.json`). That step happens outside this repo; see [implementation here](https://github.com/LCorti/IETrans-SGG-A10).
 3. `clean_raw_sg.py` cleans the raw scene graphs, and `merge_sg_bboxes.py` clusters overlapping boxes and merges relations into unique relation clusters.
 4. `sample_crowd_sg.py` samples the graphs to show to crowd workers (`sg_crowd.jsonl`). `sample_crowd_questions.py` produces the matching questions (`q_*_sample.jsonl`, `q_crowd.json`).
 5. Run the crowdsourcing app (`sk_cs_app/`, see its README). It has a validation step and an annotation step.
